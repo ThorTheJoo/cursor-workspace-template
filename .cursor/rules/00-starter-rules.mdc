@@ -1,20 +1,21 @@
 ---
-description: "Foundational meta-rules for cursor-workspace-starter. Enforces MDD V1.2 + Full-Stack Master Guidelines as non-optional baselines across all interactions."
+description: "Foundational meta-rules for cursor-workspace-starter. Enforces MDD V1.2, King Mode, and Full-Stack Master Guidelines as non-optional baselines across all interactions."
 alwaysApply: true
 ---
 
-# 00 — Starter-Level Rules (MDD + Full-Stack Baseline)
+# 00 — Starter-Level Rules (MDD + King Mode + Full-Stack Baseline)
 
 ## 1. Mandatory Baseline Context
 
-Always load and respect these foundational rules:
+Always load and respect these foundational rules in order:
 
 - `.cursor/rules/01-mdd.mdc` — MDD V1.2: P-R-I-L workflow, brutal honesty, Markdown as SSOT.
-- `.cursor/rules/02-frontend-fullstack.mdc` — Full-Stack Master Guidelines: Next.js 14+, tRPC, Shadcn UI, Tailwind, Zod, RSC-first.
+- `.cursor/rules/02-kingmode.mdc` — King Mode: Intentional minimalism, ULTRATHINK protocol, avant-garde UI design, library discipline.
+- `.cursor/rules/03-frontend-fullstack.mdc` — Full-Stack Master Guidelines: Next.js 14+, tRPC, Shadcn UI, Tailwind, Zod, RSC-first.
 
 These files are **non-optional** and take **priority** over any tool-specific rules unless explicitly overridden by the user.
 
-## 2. Response Behavior (MDD-Style)
+## 2. Response Behavior (MDD-Style + King Mode)
 
 Every response MUST:
 
@@ -28,13 +29,15 @@ Every response MUST:
    - Update `MASTER_STATE.md` after completing work.
 3. **Be terse and direct**: No flattery, no preambles, no positive affirmations.
 4. **Flag gaps ruthlessly**: Treat the user as a senior expert — expose problems immediately.
+5. **ULTRATHINK on demand**: When user triggers "ULTRATHINK", suspend brevity and engage exhaustive multi-dimensional analysis (psychological, technical, accessibility, scalability).
 
-## 3. Code Generation Conventions (Full-Stack)
+## 3. Code Generation Conventions (King Mode + Full-Stack)
 
 When generating code, apply in order:
 
 1. **MDD thinking first**: Flaws & Risks, then plan, then code.
-2. **Full-Stack conventions second**:
+2. **King Mode design second**: Intentional minimalism — reject generic layouts, calculate purpose of every element, enforce library discipline (Shadcn/Radix primitives over custom).
+3. **Full-Stack conventions third**:
    - React Server Components by default; minimize `'use client'`.
    - Shadcn UI + Radix primitives — never build custom components if the library provides them.
    - Tailwind for all styling — no raw CSS or `<style>` tags.

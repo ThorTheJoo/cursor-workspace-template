@@ -204,7 +204,7 @@ done
 # ── Verify foundational rules ──────────────────────────────────────
 
 echo ""
-RULE_FILES=("00-starter-rules.mdc" "01-mdd.mdc" "02-frontend-fullstack.mdc")
+RULE_FILES=("00-starter-rules.mdc" "01-mdd.mdc" "02-kingmode.mdc" "03-frontend-fullstack.mdc")
 for rf in "${RULE_FILES[@]}"; do
     if [[ -f "$CURSOR_DIR/rules/$rf" ]]; then
         ok "Rule verified: $rf"

@@ -19,8 +19,9 @@ The bootstrapper reads `tools/manifest.json`, presents an interactive checklist,
 | Component | Purpose |
 |---|---|
 | `.cursor/rules/01-mdd.mdc` | MDD Protocol V1.2 — P-R-I-L workflow, brutal honesty, Markdown as SSOT |
-| `.cursor/rules/02-frontend-fullstack.mdc` | Full-Stack conventions — Next.js 14+, tRPC, Shadcn, Tailwind, Zod, RSC-first |
-| `.cursor/rules/00-starter-rules.mdc` | Meta-rules enforcing the above two as non-optional baselines |
+| `.cursor/rules/02-kingmode.mdc` | King Mode — Intentional minimalism, ULTRATHINK protocol, library discipline |
+| `.cursor/rules/03-frontend-fullstack.mdc` | Full-Stack conventions — Next.js 14+, tRPC, Shadcn, Tailwind, Zod, RSC-first |
+| `.cursor/rules/00-starter-rules.mdc` | Meta-rules enforcing the above three as non-optional baselines |
 | `tools/manifest.json` | Single source of truth for all GitHub tools you collect |
 | `setup-tools.ps1` / `setup-tools.sh` | Cross-platform interactive bootstrapper |
 | `.devcontainer/devcontainer.json` | Ubuntu Dev Container with git, jq, fzf, Node LTS pre-installed |
@@ -28,7 +29,7 @@ The bootstrapper reads `tools/manifest.json`, presents an interactive checklist,
 
 ## Pre-Configured Tools
 
-The manifest ships with four tools ready to install:
+The manifest ships with five tools ready to install:
 
 | Tool | Type | Install Method |
 |---|---|---|
@@ -36,6 +37,7 @@ The manifest ships with four tools ready to install:
 | [GSD](https://github.com/gsd-build/get-shit-done) | Plugin | `npx get-shit-done-cursor --cursor --local` |
 | [Anthropic Skills](https://github.com/anthropics/skills) | Skills | Clone + copy into `.cursor/skills/` |
 | [Autoresearch](https://github.com/karpathy/autoresearch) | Research | `uv sync` (requires NVIDIA GPU) |
+| [King Mode](https://github.com/aicodeking/yt-tutorial) | Rules | Already embedded as `02-kingmode.mdc`; source repo for reference |
 
 ## Adding a New Tool
 
@@ -81,13 +83,14 @@ git merge template/main --allow-unrelated-histories
 
 Cursor 2.6+ loads `.mdc` files from `.cursor/rules/` based on frontmatter:
 
-- `alwaysApply: true` — Active in every chat session (rules 00 and 01).
-- `globs: [...]` — Active only when matching files are open (rule 02 activates on `.ts`, `.tsx`, `.js`, `.jsx`, `.css`, `.html`).
+- `alwaysApply: true` — Active in every chat session (rules 00, 01, and 02).
+- `globs: [...]` — Active only when matching files are open (rule 03 activates on `.ts`, `.tsx`, `.js`, `.jsx`, `.css`, `.html`).
 
 The starter enforces this hierarchy:
 1. MDD V1.2 thinking first (Flaws & Risks, P-R-I-L workflow).
-2. Full-Stack conventions second (RSC, Shadcn, Tailwind, Zod, tRPC).
-3. Tool-specific rules third (from anything installed via the bootstrapper).
+2. King Mode design second (intentional minimalism, ULTRATHINK, library discipline).
+3. Full-Stack conventions third (RSC, Shadcn, Tailwind, Zod, tRPC).
+4. Tool-specific rules fourth (from anything installed via the bootstrapper).
 
 ## Pro Tips for Cursor 2.6+
 
@@ -102,7 +105,7 @@ The starter enforces this hierarchy:
 ```
 .
 ├── .cursor/
-│   ├── rules/               # AI rules (always committed)
+│   ├── rules/               # AI rules (4 foundational .mdc files, always committed)
 │   ├── bin/                  # Tool binaries (populated by bootstrapper)
 │   ├── skills/              # Agent skills (populated by bootstrapper)
 │   └── mcp/                 # MCP server configs

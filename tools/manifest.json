@@ -46,6 +46,14 @@
       "type": "research",
       "requiresGpu": true
     }
+    {
+      "name": "kingmode",
+      "repo": "https://github.com/aicodeking/yt-tutorial",
+      "description": "King Mode — Senior Frontend Architect behavioral protocol with ULTRATHINK deep reasoning, intentional minimalism design philosophy, and strict library discipline. Source .md rule file.",
+      "installCmd": "echo 'King Mode rule already embedded as .cursor/rules/02-kingmode.mdc. Source repo cloned for reference and updates.'",
+      "platform": "both",
+      "type": "rules"
+    }
   ],
   "_template": {
     "_comment": "Copy this object into the 'tools' array above, fill in your values, and re-run the bootstrapper.",

@@ -8,9 +8,10 @@ zero-global-pollution foundation for every new Cursor workspace.
 ```
 .
 ├── .cursor/rules/                 # Foundational AI rules (always active)
-│   ├── 00-starter-rules.mdc      # Meta-rules: enforces MDD + Full-Stack baselines
+│   ├── 00-starter-rules.mdc      # Meta-rules: enforces MDD + King Mode + Full-Stack baselines
 │   ├── 01-mdd.mdc                # MDD Protocol V1.2 (P-R-I-L, brutal honesty, SSOT)
-│   └── 02-frontend-fullstack.mdc  # Full-Stack: Next.js, tRPC, Shadcn, Tailwind, Zod
+│   ├── 02-kingmode.mdc           # King Mode (intentional minimalism, ULTRATHINK, library discipline)
+│   └── 03-frontend-fullstack.mdc  # Full-Stack: Next.js, tRPC, Shadcn, Tailwind, Zod
 ├── .cursor/bin/                   # Tool binaries (populated by bootstrapper)
 ├── .cursor/skills/                # Agent skills (populated by bootstrapper)
 ├── .cursor/mcp/                   # MCP server configs (future use)
@@ -24,11 +25,12 @@ zero-global-pollution foundation for every new Cursor workspace.
 
 ## Rule Hierarchy
 
-1. `00-starter-rules.mdc` — Always loaded. Enforces that rules 01 and 02 are active.
+1. `00-starter-rules.mdc` — Always loaded. Enforces that rules 01, 02, and 03 are active.
 2. `01-mdd.mdc` — MDD V1.2. Always loaded. Governs all planning, analysis, and documentation.
-3. `02-frontend-fullstack.mdc` — Activates on code files (`.ts`, `.tsx`, `.js`, `.jsx`, `.css`, `.html`).
+3. `02-kingmode.mdc` — King Mode. Always loaded. Governs design philosophy, ULTRATHINK protocol, and frontend behavioral standards.
+4. `03-frontend-fullstack.mdc` — Activates on code files (`.ts`, `.tsx`, `.js`, `.jsx`, `.css`, `.html`). Governs Next.js, tRPC, Shadcn, Tailwind, Zod conventions.
 
-Rules 01 and 02 take precedence over tool-specific rules unless explicitly overridden.
+Rules 01, 02, and 03 take precedence over tool-specific rules unless explicitly overridden.
 
 ## Tool Management
 
@@ -40,6 +42,7 @@ Rules 01 and 02 take precedence over tool-specific rules unless explicitly overr
 ## Conventions
 
 - Every response starts with **Flaws & Risks** (MDD directive).
-- Code generation follows Full-Stack conventions: RSC-first, Shadcn/Tailwind, Zod validation, kebab-case files.
+- **ULTRATHINK** triggers exhaustive multi-dimensional analysis (King Mode).
+- Code generation follows Intentional Minimalism (King Mode) + Full-Stack conventions: RSC-first, Shadcn/Tailwind, Zod validation, kebab-case files.
 - P-R-I-L workflow: Plan → Review → Implement → Log.
 - Markdown files in `docs/_ai_context/` are SSOT for all project state and decisions.

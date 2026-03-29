@@ -193,7 +193,7 @@ foreach ($tool in $selectedTools) {
 
 # ── Verify foundational rules exist ────────────────────────────────
 
-$ruleFiles = @("00-starter-rules.mdc", "01-mdd.mdc", "02-frontend-fullstack.mdc")
+$ruleFiles = @("00-starter-rules.mdc", "01-mdd.mdc", "02-kingmode.mdc", "03-frontend-fullstack.mdc")
 $rulesDir = Join-Path $ScriptDir ".cursor\rules"
 
 foreach ($rf in $ruleFiles) {
