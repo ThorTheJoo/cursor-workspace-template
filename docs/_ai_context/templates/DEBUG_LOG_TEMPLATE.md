@@ -10,6 +10,10 @@ traceability_id: ""
 
 # Debug Log: [Error/Bug Short Name]
 
+## Pre-Investigation Check
+
+> Before forming hypotheses, scan `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md` for known failure patterns. Most production bugs match one of the 8 data/contract patterns.
+
 ## Symptoms
 
 * **Observed behavior:** [what happened]
@@ -81,3 +85,4 @@ traceability_id: ""
 * **How to prevent this class of bug:** [systemic fix, not just this instance]
 * **Monitoring/alerting added?** YES / NO — [details]
 * **Documentation updated?** YES / NO — [where]
+* **New anti-pattern?** If this bug represents a new failure class, propose addition to `knowledge/ANTI_PATTERNS_CATALOG.md` per the Continuous Improvement Protocol.

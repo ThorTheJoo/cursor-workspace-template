@@ -1,6 +1,6 @@
-<#
+﻿<#
 .SYNOPSIS
-    Cursor Workspace Starter — PowerShell Tool Bootstrapper
+    Cursor Workspace Starter â€” PowerShell Tool Bootstrapper
 .DESCRIPTION
     Parses tools/manifest.json, validates it, presents an interactive selection
     menu, clones selected repos into .tools-cache/, runs install commands,
@@ -17,12 +17,12 @@ Set-StrictMode -Version Latest
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $ScriptDir
 
-# ── Colors & helpers ────────────────────────────────────────────────
+# â”€â”€ Colors & helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function Write-Banner {
     Write-Host ""
     Write-Host "  ========================================" -ForegroundColor Cyan
-    Write-Host "   Cursor Workspace Starter — Bootstrapper" -ForegroundColor Cyan
+    Write-Host "   Cursor Workspace Starter â€” Bootstrapper" -ForegroundColor Cyan
     Write-Host "  ========================================" -ForegroundColor Cyan
     Write-Host ""
 }
@@ -43,7 +43,7 @@ function Write-Err([string]$msg) {
     Write-Host "[!!] $msg" -ForegroundColor Red
 }
 
-# ── Preflight checks ───────────────────────────────────────────────
+# â”€â”€ Preflight checks â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 Write-Banner
 
@@ -61,7 +61,7 @@ if (-not (Test-Path $manifestPath)) {
     exit 1
 }
 
-# ── Validate manifest JSON ─────────────────────────────────────────
+# â”€â”€ Validate manifest JSON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 Write-Step "Validating manifest JSON..."
 
@@ -105,14 +105,14 @@ if ($validationErrors -gt 0) {
 Write-Ok "Manifest validated: $($tools.Count) tool(s), 0 errors."
 Write-Host ""
 
-# ── Interactive selection ───────────────────────────────────────────
+# â”€â”€ Interactive selection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $selectedTools = @()
 
 foreach ($tool in $tools) {
     $platformOk = ($tool.platform -eq "both") -or ($tool.platform -eq "win")
     if (-not $platformOk) {
-        Write-Skip "$($tool.name) — unix-only, skipping on Windows."
+        Write-Skip "$($tool.name) â€” unix-only, skipping on Windows."
         continue
     }
 
@@ -121,7 +121,7 @@ foreach ($tool in $tools) {
         $gpuRequired = $tool.requiresGpu
     }
 
-    $label = "$($tool.name) — $($tool.description)"
+    $label = "$($tool.name) â€” $($tool.description)"
     if ($gpuRequired) { $label += " [REQUIRES GPU]" }
 
     Write-Host "  $label" -ForegroundColor White
@@ -142,7 +142,7 @@ if ($selectedTools.Count -eq 0) {
     Write-Step "No tools selected. Ensuring directory structure only."
 }
 
-# ── Ensure .cursor directories ──────────────────────────────────────
+# â”€â”€ Ensure .cursor directories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $cursorDirs = @(
     ".cursor\rules",
@@ -160,7 +160,7 @@ foreach ($d in $cursorDirs) {
     }
 }
 
-# ── Ensure MDD docs directories ────────────────────────────────────
+# â”€â”€ Ensure MDD docs directories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $docsDirs = @(
     "docs\_ai_context\state",
@@ -178,14 +178,14 @@ foreach ($d in $docsDirs) {
     }
 }
 
-# ── Ensure .tools-cache exists ──────────────────────────────────────
+# â”€â”€ Ensure .tools-cache exists â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $cachePath = Join-Path $ScriptDir ".tools-cache"
 if (-not (Test-Path $cachePath)) {
     New-Item -ItemType Directory -Path $cachePath -Force | Out-Null
 }
 
-# ── Clone and install selected tools ────────────────────────────────
+# â”€â”€ Clone and install selected tools â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $installedCount = 0
 $failedCount = 0
@@ -197,7 +197,7 @@ foreach ($tool in $selectedTools) {
     $cloneDir = Join-Path $cachePath $tool.name
 
     if (Test-Path $cloneDir) {
-        Write-Skip "$($tool.name) already cloned at $cloneDir — skipping clone."
+        Write-Skip "$($tool.name) already cloned at $cloneDir â€” skipping clone."
     }
     else {
         Write-Step "Cloning $($tool.repo)..."
@@ -246,7 +246,7 @@ foreach ($tool in $selectedTools) {
     }
 }
 
-# ── Verify foundational rules exist ────────────────────────────────
+# â”€â”€ Verify foundational rules exist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $ruleFiles = @("00-starter-rules.mdc", "01-mdd.mdc", "02-kingmode.mdc", "03-frontend-fullstack.mdc")
 $rulesDir = Join-Path $ScriptDir ".cursor\rules"
@@ -259,18 +259,18 @@ foreach ($rf in $ruleFiles) {
         $rulesOk++
     }
     else {
-        Write-Err "Missing rule file: $rf — your workspace may be incomplete."
+        Write-Err "Missing rule file: $rf â€” your workspace may be incomplete."
     }
 }
 
-# ── Detect environment ──────────────────────────────────────────────
+# â”€â”€ Detect environment â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 $isDevContainer = $false
 if ($env:REMOTE_CONTAINERS -or $env:CODESPACES) {
     $isDevContainer = $true
 }
 
-# ── Final banner ────────────────────────────────────────────────────
+# â”€â”€ Final banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 Write-Host ""
 Write-Host "  ========================================" -ForegroundColor Green
@@ -283,7 +283,7 @@ if ($failedCount -gt 0) {
     Write-Host "  Failed:          $failedCount" -ForegroundColor Red
 }
 Write-Host "  Rules verified:  $rulesOk / $($ruleFiles.Count) foundational .mdc files" -ForegroundColor White
-Write-Host "  MDD dirs:        5 (state, analysis, templates, prompts, knowledge)" -ForegroundColor White
+Write-Host "  MDD dirs:        11 (full V1.3 structure)" -ForegroundColor White
 Write-Host ""
 
 if ($isDevContainer) {

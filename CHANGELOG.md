@@ -2,6 +2,33 @@
 
 All notable changes to the Cursor Workspace Starter template.
 
+## [2.1.0] - 2026-03-29
+
+### Added
+* **Continuous Improvement Protocol** (`knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md`): 6-item learning checklist with routing decision tree. Turns P-R-I-L into P-R-I-L-L.
+* **Context Manifest** (`prompts/phases/CONTEXT_MANIFEST.md`): Navigation map and agent contract for Sniper Mode.
+* 9 templates: Medium Plan, Complex Pre-Plan, Phase Completion, Debug Log, Runbook, 3 Response Formats (Ask/Plan/Agent).
+* 5 knowledge docs: Complexity Triage Matrix, Mode Transition Rules, Anti-Patterns Catalog (24 patterns), Governance Policy, Session Start prompts.
+* 3 governance pipeline seeds: `PENDING_UPDATES.yaml`, `UPDATE_HISTORY.yaml`, `ROLLBACK_LOG.yaml`.
+* `repo-manifest.schema.json` for Sniper Mode manifest validation.
+* `.gitkeep` files for empty directories that need to survive `git clone`.
+
+### Changed
+* **01-mdd.mdc**: Sections 3, 4, 5, 9, 11, 15 now cross-reference their full knowledge/template docs. Section 11 expanded from "Skills Extraction" to "Continuous Improvement" with 6-item checklist. P-R-I-L Log step now includes Learn sub-step.
+* **setup-tools.sh / setup-tools.ps1**: Now create all 11 MDD subdirs (was 5). Removed orphan `.cursor/automations`.
+* **AGENTS.md**: Complete artifact inventory (30+ entries across 5 categories).
+* **BACKLOG.md**: Groomed — 6 items resolved, moved to Resolved section.
+* **MASTER_STATE.md**: Updated to v2.1.0 with wiring summary table.
+* **PROMPT_INDEX.md**: Updated as full discovery hub for all artifacts.
+* **DEBUG_LOG_TEMPLATE.md**: Wired to Anti-Patterns Catalog (pre-investigation check) and improvement loop.
+* **PHASE_COMPLETION_TEMPLATE.md**: Added continuous improvement checklist.
+
+### Fixed
+* Ghost reference: Rule Section 1 referenced `CONTEXT_MANIFEST.md` but file didn't exist.
+* Bootstrappers created only 5/11 MDD directories — fresh clones would miss nested structure.
+* Orphan `.cursor/automations` created by bootstrappers but undocumented.
+* Stale backlog items listed as open but already completed.
+
 ## [2.0.0] - 2026-03-29
 
 ### Added

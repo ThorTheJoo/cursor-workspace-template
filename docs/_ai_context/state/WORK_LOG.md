@@ -54,3 +54,37 @@ Chronological record of all significant workspace changes.
   - Parallel chat sessions created V1.3 independently - required merge reconciliation.
   - Rule duplication was significant across 4 files - consolidated to zero overlap.
 * **Next Steps:** Commit to master. Test bootstrapper.
+
+
+---
+
+## 2026-03-29 - V1.3 Artifact Suite + Cohesion Audit (v2.1.0)
+
+* **Scope:** Implemented all MDD V1.3 feature spec artifacts (templates, knowledge, governance). Then performed forensic cohesion audit: identified 16 gaps in cross-references, wiring, feedback loops, and stale state. Fixed all 16.
+* **Status:** COMPLETE
+* **Duration:** ~2 hours
+* **Changes Made:**
+
+| File | Change |
+|---|---|
+| 01-mdd.mdc | Wired Sections 3/4/5/9/11/15 to knowledge/template files. Expanded Learn Step to Continuous Improvement. P-R-I-L -> P-R-I-L-L. |
+| setup-tools.sh / setup-tools.ps1 | Create all 11 MDD dirs (was 5). Removed orphan .cursor/automations. |
+| AGENTS.md | Complete artifact inventory (was 8 entries, now 30+). |
+| BACKLOG.md | Groomed: 6 items resolved, 3 remain. |
+| MASTER_STATE.md | Updated to v2.1.0 with wiring summary. |
+| CHANGELOG.md | Added v2.1.0 entry. |
+| templates/DEBUG_LOG_TEMPLATE.md | Wired to ANTI_PATTERNS_CATALOG pre-check + improvement loop. |
+| templates/PHASE_COMPLETION_TEMPLATE.md | Added continuous improvement checklist. |
+| prompts/PROMPT_INDEX.md | Updated with all new artifacts. |
+| NEW: knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md | Feedback loop: 6-item learning checklist + routing decision tree. |
+| NEW: prompts/phases/CONTEXT_MANIFEST.md | Navigation map + agent contract (was ghost reference in rule). |
+| NEW: 9 templates, 5 knowledge docs, 3 governance seeds, 1 schema | Full V1.3 artifact suite. |
+
+* **Validation Results:** All cross-references verified. Rule -> knowledge -> template -> governance pipeline wired end-to-end. Bootstrappers create full directory structure.
+* **Regression Risk:** LOW - additive changes only. No existing behavior removed.
+* **Lessons Learned:**
+  - Bootstrappers only creating 5/11 dirs was a silent gap - fresh clones would miss nested structure.
+  - Rule file needs explicit cross-references to knowledge docs or agents never discover them.
+  - The Learn step was described but never operationalized - CONTINUOUS_IMPROVEMENT_PROTOCOL.md closes this loop.
+  - CONTEXT_MANIFEST.md was referenced in the rule (Section 1 Priority 2) but never created - ghost references are a real risk.
+* **Next Steps:** None immediate. P1 backlog: repo-manifest.json generator.

@@ -47,16 +47,56 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 
 ## MDD V1.3 Context Paths
 
+### State (read-write)
+
 | Path | Content | V1.3 Role |
 |---|---|---|
 | `docs/_ai_context/state/MASTER_STATE.md` | Current workspace snapshot | Read first every session (Sniper Mode) |
 | `docs/_ai_context/state/WORK_LOG.md` | Chronological change log | Enhanced template (Section 8) |
 | `docs/_ai_context/state/BACKLOG.md` | Prioritized backlog (P0-P3) | First-class artifact (Feature 10) |
 | `docs/_ai_context/state/repo-manifest.json` | Machine-readable file index | Sniper Mode navigation (Feature 1) |
-| `docs/_ai_context/analysis/` | Plans and debug logs | Medium complexity artifacts |
-| `docs/_ai_context/prompts/phases/` | Phase execution plans | Complex work (Feature 4) |
-| `docs/_ai_context/knowledge/` | Canonical domain data | Rank 1 authority (Feature 5) |
-| `docs/_ai_context/templates/ADR_TEMPLATE.md` | Decision record scaffold | MADR format |
+
+### Decision Support (read-only reference)
+
+| Path | Content | V1.3 Role |
+|---|---|---|
+| `docs/_ai_context/knowledge/COMPLEXITY_TRIAGE_MATRIX.md` | Simple/Medium/Complex decision rules | Section 4 |
+| `docs/_ai_context/knowledge/MODE_TRANSITION_RULES.md` | Ask/Plan/Agent state machine | Section 3 |
+| `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md` | 24 failure patterns (institutional memory) | Section 9 |
+| `docs/_ai_context/knowledge/governance/GOVERNANCE_POLICY.md` | Metadata, compliance, knowledge protections | Features 5/9 |
+| `docs/_ai_context/knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md` | Learning loop routing checklist | Section 11 |
+
+### Templates (artifact generation)
+
+| Path | When to Use |
+|---|---|
+| `docs/_ai_context/templates/MEDIUM_PLAN_TEMPLATE.md` | Medium complexity tasks (3-5 steps) |
+| `docs/_ai_context/templates/COMPLEX_PREPLAN_TEMPLATE.md` | Complex tasks (6+ steps) |
+| `docs/_ai_context/templates/PHASE_COMPLETION_TEMPLATE.md` | After completing any phase |
+| `docs/_ai_context/templates/DEBUG_LOG_TEMPLATE.md` | Bug investigation |
+| `docs/_ai_context/templates/RUNBOOK_TEMPLATE.md` | Operational procedures |
+| `docs/_ai_context/templates/ADR_TEMPLATE.md` | Architectural decisions (MADR) |
+| `docs/_ai_context/templates/RESPONSE_FORMAT_ASK.md` | Ask mode output format |
+| `docs/_ai_context/templates/RESPONSE_FORMAT_PLAN.md` | Plan mode output format |
+| `docs/_ai_context/templates/RESPONSE_FORMAT_AGENT.md` | Agent mode output format |
+
+### Prompts and Navigation
+
+| Path | Content | V1.3 Role |
+|---|---|---|
+| `docs/_ai_context/prompts/PROMPT_INDEX.md` | Discovery entry point for all prompts | All modes |
+| `docs/_ai_context/prompts/SESSION_START.md` | Copy-paste session initialization | Feature 1 |
+| `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Navigation map + agent contract | Sniper Mode |
+| `docs/_ai_context/prompts/phases/MULTI_PHASE_EXECUTION_GUIDELINES.md` | Phase execution protocol | Feature 4 |
+
+### Governance Pipeline
+
+| Path | Content |
+|---|---|
+| `docs/_ai_context/knowledge/governance/PENDING_UPDATES.yaml` | Proposed knowledge changes |
+| `docs/_ai_context/knowledge/governance/UPDATE_HISTORY.yaml` | Applied changes log |
+| `docs/_ai_context/knowledge/governance/ROLLBACK_LOG.yaml` | Reverted changes log |
+| `docs/_ai_context/knowledge/schemas/repo-manifest.schema.json` | JSON Schema for repo manifest |
 
 ## Tool Management
 

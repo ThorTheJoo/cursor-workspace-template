@@ -50,6 +50,16 @@ traceability_id: ""
 * [Warnings about edge cases encountered]
 * [Deviations from original plan, if any]
 
+## Continuous Improvement Checklist
+
+> Run per `docs/_ai_context/knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md`
+
+- [ ] New anti-pattern discovered? -> Propose to `knowledge/ANTI_PATTERNS_CATALOG.md`
+- [ ] Reusable pattern (>= 3x)? -> Extract to `prompts/` or `.cursor/skills/`
+- [ ] Process gap? -> `knowledge/governance/PENDING_UPDATES.yaml` or `state/BACKLOG.md`
+- [ ] Domain knowledge gained? -> `knowledge/staging/`
+- [ ] Template/governance refinement needed? -> `knowledge/governance/PENDING_UPDATES.yaml`
+
 ## Git Commit
 
 ```

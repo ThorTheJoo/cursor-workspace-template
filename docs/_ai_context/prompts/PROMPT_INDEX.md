@@ -18,6 +18,7 @@ Single entry point for discovering all reusable prompts, phase plans, and mode-s
 | Phase | File | Status | Description |
 |---|---|---|---|
 | Guidelines | `phases/MULTI_PHASE_EXECUTION_GUIDELINES.md` | ACTIVE | How to plan, execute, and complete multi-phase work |
+| Context | `phases/CONTEXT_MANIFEST.md` | ACTIVE | Navigation map and agent contract for Sniper Mode |
 
 > Add phase files here as complex work is decomposed: `phases/PHASE_XX_NAME.md`
 
@@ -48,6 +49,7 @@ Single entry point for discovering all reusable prompts, phase plans, and mode-s
 | Mode Transitions | `../knowledge/MODE_TRANSITION_RULES.md` | State machine for Ask / Plan / Agent |
 | Anti-Patterns | `../knowledge/ANTI_PATTERNS_CATALOG.md` | Full failure pattern catalog |
 | Governance Policy | `../knowledge/governance/GOVERNANCE_POLICY.md` | Metadata, compliance, knowledge protections |
+| Continuous Improvement | `../knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md` | Learning loop routing (P-R-I-L-L) |
 
 ## Reusable Prompts
 

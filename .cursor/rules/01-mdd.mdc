@@ -1,10 +1,10 @@
----
-description: "MDD Protocol V1.3 – Agentic Critical Edition (Generic Portable). Markdown-Driven Development methodology for any workspace. Governs context loading, operational modes, phase execution, governance, and documentation authority."
+﻿---
+description: "MDD Protocol V1.3 â€“ Agentic Critical Edition (Generic Portable). Markdown-Driven Development methodology for any workspace. Governs context loading, operational modes, phase execution, governance, and documentation authority."
 globs: "**/*"
 alwaysApply: true
 ---
 
-# MDD Protocol V1.3 – Generic Portable Edition
+# MDD Protocol V1.3 â€“ Generic Portable Edition
 
 **Primary constraint:** Agentic Markdown-Driven Development (MDD).
 Agents own **execution**; humans own **intent** and **final sign-off**.
@@ -14,7 +14,7 @@ Agents own **execution**; humans own **intent** and **final sign-off**.
 
 ---
 
-## 1. Context Loading (Sniper Protocol) — MANDATORY FIRST STEP
+## 1. Context Loading (Sniper Protocol) â€” MANDATORY FIRST STEP
 
 **Every session MUST begin here.** Load context via manifest, not guessing.
 
@@ -28,8 +28,8 @@ Agents own **execution**; humans own **intent** and **final sign-off**.
 
 **Rules:**
 - NEVER read full large files (>500 lines) without targeting specific sections
-- NEVER guess file paths — use the manifest or search tools
-- NEVER reinvent functionality — check existing capabilities first
+- NEVER guess file paths â€” use the manifest or search tools
+- NEVER reinvent functionality â€” check existing capabilities first
 - Prefer targeted section reads over full file loads
 
 ---
@@ -57,11 +57,13 @@ Truth has a strict precedence order. Violations are critical errors.
 
 Three modes, each with distinct behavior and response format.
 
+> **Detailed references:** Full response templates at `docs/_ai_context/templates/RESPONSE_FORMAT_ASK.md`, `RESPONSE_FORMAT_PLAN.md`, `RESPONSE_FORMAT_AGENT.md`. Mode transition state machine at `docs/_ai_context/knowledge/MODE_TRANSITION_RULES.md`.
+
 ### 3a. Ask Mode (Investigation / Sniper)
 
 **Trigger:** Questions about where/how/what/status.
 
-**Workflow:** Parse query → manifest lookup → targeted section read → structured response.
+**Workflow:** Parse query â†’ manifest lookup â†’ targeted section read â†’ structured response.
 
 **Response format:**
 ```
@@ -79,7 +81,7 @@ If the answer identifies out-of-scope work, suggest adding to `docs/_ai_context/
 
 **Trigger:** Complex tasks, architecture decisions, multi-step operations.
 
-**Workflow:** Complexity triage → plan file → validation gates → human review.
+**Workflow:** Complexity triage â†’ plan file â†’ validation gates â†’ human review.
 
 **Response format:**
 ```
@@ -94,13 +96,13 @@ VALIDATION:
 READY FOR REVIEW: YES/NO
 ```
 
-When deferring work, append to `BACKLOG.md`: `- [ ] Title – one line. (source: <plan id>).`
+When deferring work, append to `BACKLOG.md`: `- [ ] Title â€“ one line. (source: <plan id>).`
 
 ### 3c. Agent Mode (Execution)
 
 **Trigger:** Implementation after plan approval.
 
-**Workflow:** P-R-I-L → atomic changes → update WORK_LOG.
+**Workflow:** P-R-I-L â†’ atomic changes â†’ update WORK_LOG.
 
 **Response format:**
 ```
@@ -115,13 +117,15 @@ VALIDATION: [how to verify]
 
 Assess complexity BEFORE starting work. This determines required artifacts.
 
+> **Detailed reference:** Full decision matrix with escalation triggers and overrides at `docs/_ai_context/knowledge/COMPLEXITY_TRIAGE_MATRIX.md`.
+
 | Complexity | Criteria | Required Artifact | Location |
 |------------|----------|-------------------|----------|
-| Simple | 1-2 steps, <30 min | No formal plan | — |
+| Simple | 1-2 steps, <30 min | No formal plan | â€” |
 | Medium | 3-5 steps, <2 hrs | Analysis file | `docs/_ai_context/analysis/YYYY-MM-DD_NAME_PLAN.md` |
 | Complex | 6+ steps, 2+ hrs, validation gates | Multi-phase plan | `docs/_ai_context/prompts/phases/PHASE_XX_NAME.md` |
 
-**Quick rule:** >2 hours OR >5 steps OR intermediate validation needed → multi-phase.
+**Quick rule:** >2 hours OR >5 steps OR intermediate validation needed â†’ multi-phase.
 
 **Jumping to code for complex tasks without a plan file is a governance violation.**
 
@@ -129,12 +133,12 @@ Assess complexity BEFORE starting work. This determines required artifacts.
 
 ## 5. P-R-I-L Workflow
 
-All non-trivial work follows Plan → Review → Implement → Log.
+All non-trivial work follows Plan â†’ Review â†’ Implement â†’ Log.
 
 ### Plan
 - Simple: inline plan in response
 - Medium: single analysis file in `docs/_ai_context/analysis/`
-- Complex: pre-plan with numbered todos → individual `PHASE_XX_NAME.md` files
+- Complex: pre-plan with numbered todos â†’ individual `PHASE_XX_NAME.md` files
 - For execution-style specs: include code snippets, validation commands, and exact file paths per step
 
 ### Review
@@ -143,7 +147,7 @@ All non-trivial work follows Plan → Review → Implement → Log.
 
 ### Implement
 - Atomic changes scoped strictly to the plan
-- Stop on validation failure — do not proceed
+- Stop on validation failure â€” do not proceed
 - No scope creep beyond what the plan specifies
 
 ### Log
@@ -156,7 +160,7 @@ All non-trivial work follows Plan → Review → Implement → Log.
 
 ## 6. Phase Execution Protocol
 
-For complex (multi-phase) work. Reference: `docs/_ai_context/prompts/phases/MULTI_PHASE_EXECUTION_GUIDELINES.md` (create if missing).
+For complex (multi-phase) work. Reference: `docs/_ai_context/prompts/phases/MULTI_PHASE_EXECUTION_GUIDELINES.md`.
 
 ### YAML Front-Matter Contract (every phase file)
 ```yaml
@@ -174,12 +178,12 @@ estimated_duration: "X-Y hours"
 Every phase includes: "This Phase Creates" and "This Phase Requires" tables with exact paths, plus "Files to Read (On-Demand)" with targeted section guidance.
 
 ### Core Principles
-1. **Context Independence** — Each phase in a fresh session; the plan file IS the context
-2. **Explicit Handoffs** — Output from Phase N becomes input for Phase N+1; always specify paths
-3. **Validation Gates** — Named gates that must pass before marking complete
-4. **Atomic Commits** — Each phase = one logical commit; enables rollback
-5. **Kickoff Prompts** — Every phase ends with a copy-paste prompt for the next phase
-6. **Parallel Markers** — Use `⚡ with Phase X` for phases that can run independently
+1. **Context Independence** â€” Each phase in a fresh session; the plan file IS the context
+2. **Explicit Handoffs** â€” Output from Phase N becomes input for Phase N+1; always specify paths
+3. **Validation Gates** â€” Named gates that must pass before marking complete
+4. **Atomic Commits** â€” Each phase = one logical commit; enables rollback
+5. **Kickoff Prompts** â€” Every phase ends with a copy-paste prompt for the next phase
+6. **Parallel Markers** â€” Use `âš¡ with Phase X` for phases that can run independently
 
 ### Phase Completion (MANDATORY for all multi-phase work)
 Create `docs/_ai_context/analysis/PHASE_XX_COMPLETION.md`:
@@ -189,7 +193,7 @@ Create `docs/_ai_context/analysis/PHASE_XX_COMPLETION.md`:
 - Lessons Learned
 
 ### After Completion Checklist
-- [ ] Update phase index (status → COMPLETE)
+- [ ] Update phase index (status â†’ COMPLETE)
 - [ ] Update `WORK_LOG.md`
 - [ ] Create completion doc
 - [ ] Run project tests
@@ -197,9 +201,9 @@ Create `docs/_ai_context/analysis/PHASE_XX_COMPLETION.md`:
 - [ ] Append deferred items to `BACKLOG.md`
 
 ### Error Recovery
-- **Step failure:** Document error → attempt fix → if unfixable, rollback + create analysis file
-- **Gate failure:** Identify failing check → fix → re-run → do NOT proceed until pass
-- **Abandonment:** Document progress → commit with `WIP:` prefix → create analysis for next attempt
+- **Step failure:** Document error â†’ attempt fix â†’ if unfixable, rollback + create analysis file
+- **Gate failure:** Identify failing check â†’ fix â†’ re-run â†’ do NOT proceed until pass
+- **Abandonment:** Document progress â†’ commit with `WIP:` prefix â†’ create analysis for next attempt
 
 ---
 
@@ -215,10 +219,10 @@ Code duplication is a critical error. Reuse > Rewrite.
 
 ### 7b. Automatic MDD Updates
 MDD documentation MUST be updated automatically (no user prompt needed) when:
-- New scripts or modules created → update `MASTER_STATE.md` and registries
-- Errors resolved → create/update analysis in `docs/_ai_context/analysis/`
-- Phase completed → update phase index, `WORK_LOG.md`, completion doc
-- Patterns discovered → update relevant state files
+- New scripts or modules created â†’ update `MASTER_STATE.md` and registries
+- Errors resolved â†’ create/update analysis in `docs/_ai_context/analysis/`
+- Phase completed â†’ update phase index, `WORK_LOG.md`, completion doc
+- Patterns discovered â†’ update relevant state files
 
 **Cascade rule:** If update to one file affects another, update all dependents.
 
@@ -236,7 +240,7 @@ After implementation: run validation, document field changes.
 3. DO NOT modify knowledge/reference files without human approval
 4. DO NOT leave MDD documentation inconsistent after changes
 5. DO NOT bypass validation gates
-6. DO NOT guess file paths — use manifest or search
+6. DO NOT guess file paths â€” use manifest or search
 7. DO NOT create duplicate functionality
 
 ### 7e. Required Actions
@@ -276,7 +280,7 @@ All WORK_LOG entries MUST include these fields:
   - [What went well]
   - [What went wrong / unexpected]
   - [What to do differently next time]
-  - [Regression risk: HIGH/MEDIUM/LOW — what could regress]
+  - [Regression risk: HIGH/MEDIUM/LOW â€” what could regress]
 ```
 
 ### Regression Categories
@@ -289,6 +293,8 @@ All WORK_LOG entries MUST include these fields:
 | Silent Fallback | Script degrades without warning | Fail loud, don't degrade silently |
 
 ### Anti-Patterns (NEVER do these)
+
+> **Full catalog:** 24 patterns (10 session + 8 data/contract + 6 process) at `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md`. The table below is a condensed summary.
 | Anti-Pattern | Why It Fails | Instead |
 |--------------|--------------|---------|
 | "Continue from where we left off" | New session has no memory | Reference specific file paths |
@@ -304,9 +310,9 @@ All WORK_LOG entries MUST include these fields:
 
 Before any meaningful action, agents MUST include:
 
-1. **Flaws & Risks** — Quantified blast radius: what files, services, or humans are affected. One concrete alternative and its trade-off.
-2. **Self-critique** — "What is the weakest part of this plan? How could it fail?"
-3. **Self-verification** — Run tests/lint/validation if they exist. Record results. If skipping, flag explicitly and explain why.
+1. **Flaws & Risks** â€” Quantified blast radius: what files, services, or humans are affected. One concrete alternative and its trade-off.
+2. **Self-critique** â€” "What is the weakest part of this plan? How could it fail?"
+3. **Self-verification** â€” Run tests/lint/validation if they exist. Record results. If skipping, flag explicitly and explain why.
 
 Zero flattery. Brutal honesty. Terse and direct. No moralizing except for non-obvious safety.
 
@@ -326,9 +332,9 @@ After completing work:
 
 `docs/_ai_context/state/BACKLOG.md` is actively maintained:
 - **Priority labels:** P0 (blocking), P1 (next sprint), P2 (backlog), P3 (wishlist)
-- **Format:** `- [ ] Title – one line. (source: <origin>).`
+- **Format:** `- [ ] Title â€“ one line. (source: <origin>).`
 - **Source attribution:** Every item must have source
-- **Age-out:** Items >90 days without activity → re-prioritize or close with reason
+- **Age-out:** Items >90 days without activity â†’ re-prioritize or close with reason
 - **No duplicates:** Search existing items before adding
 - **Resolved items:** Move completed items to `## Resolved` section
 
@@ -337,10 +343,10 @@ After completing work:
 ## 13. Analysis Archival
 
 Keep `docs/_ai_context/analysis/` navigable:
-- Superseded files → move to `docs/_ai_context/analysis/archive/`
-- Files >90 days old with no active references → candidate for archive
-- Pre-plans expanded into phase files → archive the pre-plan
-- NEVER delete archived files — always move
+- Superseded files â†’ move to `docs/_ai_context/analysis/archive/`
+- Files >90 days old with no active references â†’ candidate for archive
+- Pre-plans expanded into phase files â†’ archive the pre-plan
+- NEVER delete archived files â€” always move
 - NEVER archive: active state files, completion docs, currently-referenced files
 
 ---

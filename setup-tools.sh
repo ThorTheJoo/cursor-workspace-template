@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 #
-# Cursor Workspace Starter — Bash Tool Bootstrapper
+# Cursor Workspace Starter â€” Bash Tool Bootstrapper
 #
 # Parses tools/manifest.json, validates it, presents interactive selection
 # (fzf if available, else yes/no prompts), clones selected repos into
@@ -22,7 +22,7 @@ CACHE_DIR=".tools-cache"
 CURSOR_DIR=".cursor"
 DOCS_DIR="docs/_ai_context"
 
-# ── Colors ──────────────────────────────────────────────────────────
+# â”€â”€ Colors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -31,13 +31,13 @@ CYAN='\033[0;36m'
 DIM='\033[2m'
 RESET='\033[0m'
 
-banner()  { echo -e "\n${CYAN}  ========================================${RESET}"; echo -e "${CYAN}   Cursor Workspace Starter — Bootstrapper${RESET}"; echo -e "${CYAN}  ========================================${RESET}\n"; }
+banner()  { echo -e "\n${CYAN}  ========================================${RESET}"; echo -e "${CYAN}   Cursor Workspace Starter â€” Bootstrapper${RESET}"; echo -e "${CYAN}  ========================================${RESET}\n"; }
 step()    { echo -e "${YELLOW}[>>]${RESET} $1"; }
 ok()      { echo -e "${GREEN}[OK]${RESET} $1"; }
 skip()    { echo -e "${DIM}[--] $1${RESET}"; }
 err()     { echo -e "${RED}[!!]${RESET} $1"; }
 
-# ── Preflight ───────────────────────────────────────────────────────
+# â”€â”€ Preflight â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 banner
 
@@ -58,7 +58,7 @@ if [[ ! -f "$MANIFEST" ]]; then
     exit 1
 fi
 
-# ── Validate manifest JSON ─────────────────────────────────────────
+# â”€â”€ Validate manifest JSON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 step "Validating manifest JSON..."
 
@@ -100,7 +100,7 @@ fi
 
 ok "Manifest validated: $TOOL_COUNT tool(s), 0 errors."
 
-# ── Parse manifest ──────────────────────────────────────────────────
+# â”€â”€ Parse manifest â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 if [[ "$TOOL_COUNT" -eq 0 ]]; then
     err "No tools in manifest. Add entries to tools/manifest.json first."
@@ -109,14 +109,14 @@ fi
 
 echo ""
 
-# ── Interactive selection ───────────────────────────────────────────
+# â”€â”€ Interactive selection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 SELECTED=()
 
 has_fzf() { command -v fzf &>/dev/null; }
 
 if has_fzf; then
-    step "fzf detected — launching multi-select (TAB to toggle, ENTER to confirm)..."
+    step "fzf detected â€” launching multi-select (TAB to toggle, ENTER to confirm)..."
     echo ""
 
     FZF_INPUT=""
@@ -130,7 +130,7 @@ if has_fzf; then
             continue
         fi
 
-        label="$name — $desc"
+        label="$name â€” $desc"
         if [[ "$gpu" == "true" ]]; then
             label="$label [REQUIRES GPU]"
         fi
@@ -155,11 +155,11 @@ else
         gpu=$(jq -r ".tools[$i].requiresGpu // false" "$MANIFEST")
 
         if [[ "$platform" == "win" ]]; then
-            skip "$name — windows-only, skipping."
+            skip "$name â€” windows-only, skipping."
             continue
         fi
 
-        label="$name — $desc"
+        label="$name â€” $desc"
         if [[ "$gpu" == "true" ]]; then
             label="$label [REQUIRES GPU]"
         fi
@@ -181,16 +181,16 @@ if [[ ${#SELECTED[@]} -eq 0 ]]; then
     step "No tools selected. Ensuring directory structure only."
 fi
 
-# ── Ensure .cursor directories ──────────────────────────────────────
+# â”€â”€ Ensure .cursor directories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
-for dir in "$CURSOR_DIR/rules" "$CURSOR_DIR/bin" "$CURSOR_DIR/skills" "$CURSOR_DIR/mcp" "$CURSOR_DIR/automations"; do
+for dir in "$CURSOR_DIR/rules" "$CURSOR_DIR/bin" "$CURSOR_DIR/skills" "$CURSOR_DIR/mcp"; do
     if [[ ! -d "$dir" ]]; then
         mkdir -p "$dir"
         ok "Created $dir"
     fi
 done
 
-# ── Ensure MDD docs directories ────────────────────────────────────
+# â”€â”€ Ensure MDD docs directories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 for dir in "$DOCS_DIR/state" "$DOCS_DIR/analysis" "$DOCS_DIR/templates" "$DOCS_DIR/prompts" "$DOCS_DIR/knowledge"; do
     if [[ ! -d "$dir" ]]; then
@@ -201,7 +201,7 @@ done
 
 mkdir -p "$CACHE_DIR"
 
-# ── Clone and install ───────────────────────────────────────────────
+# â”€â”€ Clone and install â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 INSTALLED_COUNT=0
 FAILED_COUNT=0
@@ -218,7 +218,7 @@ for idx in "${SELECTED[@]}"; do
     clone_dir="$CACHE_DIR/$name"
 
     if [[ -d "$clone_dir" ]]; then
-        skip "$name already cloned at $clone_dir — skipping clone."
+        skip "$name already cloned at $clone_dir â€” skipping clone."
     else
         step "Cloning $repo..."
         if git clone --depth 1 "$repo" "$clone_dir" 2>/dev/null; then
@@ -256,7 +256,7 @@ for idx in "${SELECTED[@]}"; do
     fi
 done
 
-# ── Verify foundational rules ──────────────────────────────────────
+# â”€â”€ Verify foundational rules â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 echo ""
 RULE_FILES=("00-starter-rules.mdc" "01-mdd.mdc" "02-kingmode.mdc" "03-frontend-fullstack.mdc")
@@ -266,18 +266,18 @@ for rf in "${RULE_FILES[@]}"; do
         ok "Rule verified: $rf"
         RULES_OK=$((RULES_OK + 1))
     else
-        err "Missing rule: $rf — workspace may be incomplete."
+        err "Missing rule: $rf â€” workspace may be incomplete."
     fi
 done
 
-# ── Detect environment ──────────────────────────────────────────────
+# â”€â”€ Detect environment â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 IS_DEVCONTAINER=false
 if [[ -n "${REMOTE_CONTAINERS:-}" ]] || [[ -n "${CODESPACES:-}" ]] || [[ -f "/.dockerenv" ]]; then
     IS_DEVCONTAINER=true
 fi
 
-# ── Final banner ────────────────────────────────────────────────────
+# â”€â”€ Final banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 echo ""
 echo -e "${GREEN}  ========================================${RESET}"
@@ -290,7 +290,7 @@ if [[ "$FAILED_COUNT" -gt 0 ]]; then
     echo -e "  ${RED}Failed:        $FAILED_COUNT${RESET}"
 fi
 echo -e "  Rules verified:  $RULES_OK / ${#RULE_FILES[@]} foundational .mdc files"
-echo -e "  MDD dirs:        5 (state, analysis, templates, prompts, knowledge)"
+echo -e "  MDD dirs:        11 (full V1.3 structure)"
 echo ""
 
 if $IS_DEVCONTAINER; then
