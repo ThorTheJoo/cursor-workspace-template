@@ -1,7 +1,7 @@
 ﻿---
 description: "Meta-rules for cursor-workspace-starter. Defines rule loading order, priority hierarchy, and workspace-local conventions. Does NOT duplicate content from 01/02/03."
 alwaysApply: true
-version: "2.0.0"
+version: "2.1.0"
 ---
 
 # 00 - Starter Meta-Rules
@@ -40,6 +40,19 @@ When rules conflict:
 * `docs/_ai_context/templates/` - Artifact format definitions (ADR_TEMPLATE.md)
 * `docs/_ai_context/prompts/` - Reusable prompt library (phases/ for complex work)
 * `docs/_ai_context/knowledge/` - Canonical domain knowledge (governance/, schemas/, versions/, staging/)
+
+## Worktree Safety (CRITICAL)
+
+When operating inside a **git worktree** (path contains `.cursor/worktrees/`), the `Write` tool is restricted to the worktree directory. However, the **canonical project files live in the main workspace**, not the worktree.
+
+**Mandatory behavior:**
+* **NEVER** use the `Write` tool to create or edit project files — it writes to the worktree, not the main workspace.
+* **ALWAYS** use `Shell` with PowerShell (`Set-Content`) or bash (`cat >`) to write files directly to the main workspace path.
+* The main workspace path is the git root visible via `git rev-parse --show-toplevel` run from the main workspace (not the worktree).
+* Before any file write, verify the target path resolves to the **main workspace**, not the worktree.
+* If you need to read a file, you can read from either location — but all writes go to main.
+
+**Detection:** If `$env:CURSOR_WORKSPACE` or the working directory contains `\.cursor\worktrees\`, you are in a worktree. Act accordingly.
 
 ## Cursor 2.6+ Conventions
 

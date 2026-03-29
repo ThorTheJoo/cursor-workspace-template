@@ -60,7 +60,7 @@ The starter enforces this hierarchy with zero duplication:
 +-- .cursor/
 |   +-- rules/               # AI rules (4 foundational .mdc files)
 |   +-- bin/                  # Tool binaries (populated by bootstrapper)
-|   +-- skills/              # Agent skills (populated by bootstrapper)
+|   +-- skills/              # 8 curated agent skills (committed, available on clone)
 |   +-- mcp/                 # MCP server configs
 +-- docs/
 |   +-- _ai_context/         # MDD V1.3 SSOT
@@ -94,6 +94,19 @@ The starter enforces this hierarchy with zero duplication:
 2. Copy the `_template` object into the `tools` array.
 3. Fill in `name`, `repo`, `description`, `installCmd`, `platform`, and `type`.
 4. Run the bootstrapper again - it validates the JSON and skips already-installed tools.
+
+Example entry:
+
+```json
+{
+  "name": "my-tool",
+  "repo": "https://github.com/org/my-tool",
+  "description": "What it does inside Cursor.",
+  "installCmd": "npm install -g my-tool-cli",
+  "platform": "both",
+  "type": "cli"
+}
+```
 
 ## Making This a GitHub Template
 
