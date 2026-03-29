@@ -2,9 +2,9 @@
 .SYNOPSIS
     Cursor Workspace Starter — PowerShell Tool Bootstrapper
 .DESCRIPTION
-    Parses tools/manifest.json, presents an interactive selection menu,
-    clones selected repos into .tools-cache/, runs install commands,
-    and ensures .cursor/ directories are properly structured.
+    Parses tools/manifest.json, validates it, presents an interactive selection
+    menu, clones selected repos into .tools-cache/, runs install commands,
+    and ensures .cursor/ and docs/ directories are properly structured.
     Idempotent: safe to run multiple times.
 .NOTES
     Requires: git, PowerShell 5.1+
@@ -61,17 +61,48 @@ if (-not (Test-Path $manifestPath)) {
     exit 1
 }
 
-# ── Parse manifest ──────────────────────────────────────────────────
+# ── Validate manifest JSON ─────────────────────────────────────────
 
-$manifest = Get-Content $manifestPath -Raw | ConvertFrom-Json
+Write-Step "Validating manifest JSON..."
+
+$manifest = $null
+try {
+    $manifest = Get-Content $manifestPath -Raw | ConvertFrom-Json
+}
+catch {
+    Write-Err "tools/manifest.json contains invalid JSON: $_"
+    exit 1
+}
+
 $tools = $manifest.tools
-
-if ($tools.Count -eq 0) {
+if (-not $tools -or $tools.Count -eq 0) {
     Write-Err "No tools found in manifest. Add entries to tools/manifest.json first."
     exit 1
 }
 
-Write-Ok "Found $($tools.Count) tool(s) in manifest."
+$validationErrors = 0
+for ($i = 0; $i -lt $tools.Count; $i++) {
+    $tool = $tools[$i]
+    if (-not $tool.name) {
+        Write-Err "Tool at index $i is missing required field 'name'."
+        $validationErrors++
+    }
+    if (-not $tool.repo) {
+        Write-Err "Tool '$($tool.name)' (index $i) is missing required field 'repo'."
+        $validationErrors++
+    }
+    elseif ($tool.repo -notmatch '^https://github\.com/') {
+        Write-Err "Tool '$($tool.name)' has non-GitHub repo URL: $($tool.repo)"
+        $validationErrors++
+    }
+}
+
+if ($validationErrors -gt 0) {
+    Write-Err "Manifest has $validationErrors validation error(s). Fix them before proceeding."
+    exit 1
+}
+
+Write-Ok "Manifest validated: $($tools.Count) tool(s), 0 errors."
 Write-Host ""
 
 # ── Interactive selection ───────────────────────────────────────────
@@ -113,7 +144,7 @@ if ($selectedTools.Count -eq 0) {
 
 # ── Ensure .cursor directories ──────────────────────────────────────
 
-$dirs = @(
+$cursorDirs = @(
     ".cursor\rules",
     ".cursor\bin",
     ".cursor\skills",
@@ -121,7 +152,25 @@ $dirs = @(
     ".cursor\automations"
 )
 
-foreach ($d in $dirs) {
+foreach ($d in $cursorDirs) {
+    $fullPath = Join-Path $ScriptDir $d
+    if (-not (Test-Path $fullPath)) {
+        New-Item -ItemType Directory -Path $fullPath -Force | Out-Null
+        Write-Ok "Created $d"
+    }
+}
+
+# ── Ensure MDD docs directories ────────────────────────────────────
+
+$docsDirs = @(
+    "docs\_ai_context\state",
+    "docs\_ai_context\analysis",
+    "docs\_ai_context\templates",
+    "docs\_ai_context\prompts",
+    "docs\_ai_context\knowledge"
+)
+
+foreach ($d in $docsDirs) {
     $fullPath = Join-Path $ScriptDir $d
     if (-not (Test-Path $fullPath)) {
         New-Item -ItemType Directory -Path $fullPath -Force | Out-Null
@@ -138,13 +187,15 @@ if (-not (Test-Path $cachePath)) {
 
 # ── Clone and install selected tools ────────────────────────────────
 
+$installedCount = 0
+$failedCount = 0
+
 foreach ($tool in $selectedTools) {
     Write-Host ""
     Write-Step "Installing $($tool.name)..."
 
     $cloneDir = Join-Path $cachePath $tool.name
 
-    # Idempotency: skip clone if dir exists
     if (Test-Path $cloneDir) {
         Write-Skip "$($tool.name) already cloned at $cloneDir — skipping clone."
     }
@@ -157,11 +208,11 @@ foreach ($tool in $selectedTools) {
         catch {
             Write-Err "Failed to clone $($tool.name): $_"
             Write-Err "Skipping install for $($tool.name)."
+            $failedCount++
             continue
         }
     }
 
-    # Run install command
     if ($tool.installCmd) {
         Write-Step "Running install: $($tool.installCmd)"
         $originalDir = Get-Location
@@ -169,17 +220,21 @@ foreach ($tool in $selectedTools) {
             Set-Location $cloneDir
             Invoke-Expression $tool.installCmd
             Write-Ok "Installed $($tool.name)"
+            $installedCount++
         }
         catch {
             Write-Err "Install failed for $($tool.name): $_"
             Write-Err "You may need to install manually. Check the tool's README."
+            $failedCount++
         }
         finally {
             Set-Location $originalDir
         }
     }
+    else {
+        $installedCount++
+    }
 
-    # Post-install: copy skills if type is "skills"
     if ($tool.type -eq "skills") {
         $skillsSource = Join-Path $cloneDir "skills"
         $skillsDest = Join-Path $ScriptDir ".cursor\skills"
@@ -195,11 +250,13 @@ foreach ($tool in $selectedTools) {
 
 $ruleFiles = @("00-starter-rules.mdc", "01-mdd.mdc", "02-kingmode.mdc", "03-frontend-fullstack.mdc")
 $rulesDir = Join-Path $ScriptDir ".cursor\rules"
+$rulesOk = 0
 
 foreach ($rf in $ruleFiles) {
     $rulePath = Join-Path $rulesDir $rf
     if (Test-Path $rulePath) {
         Write-Ok "Rule file verified: $rf"
+        $rulesOk++
     }
     else {
         Write-Err "Missing rule file: $rf — your workspace may be incomplete."
@@ -220,8 +277,13 @@ Write-Host "  ========================================" -ForegroundColor Green
 Write-Host "   Setup Complete" -ForegroundColor Green
 Write-Host "  ========================================" -ForegroundColor Green
 Write-Host ""
-Write-Host "  Tools installed: $($selectedTools.Count) / $($tools.Count)" -ForegroundColor White
-Write-Host "  Rules verified:  $($ruleFiles.Count) foundational .mdc files" -ForegroundColor White
+Write-Host "  Tools selected:  $($selectedTools.Count) / $($tools.Count)" -ForegroundColor White
+Write-Host "  Installed OK:    $installedCount" -ForegroundColor White
+if ($failedCount -gt 0) {
+    Write-Host "  Failed:          $failedCount" -ForegroundColor Red
+}
+Write-Host "  Rules verified:  $rulesOk / $($ruleFiles.Count) foundational .mdc files" -ForegroundColor White
+Write-Host "  MDD dirs:        5 (state, analysis, templates, prompts, knowledge)" -ForegroundColor White
 Write-Host ""
 
 if ($isDevContainer) {

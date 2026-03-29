@@ -2,9 +2,10 @@
 #
 # Cursor Workspace Starter — Bash Tool Bootstrapper
 #
-# Parses tools/manifest.json, presents interactive selection (fzf if available,
-# else yes/no prompts), clones selected repos into .tools-cache/, runs install
-# commands, and ensures .cursor/ directories are properly structured.
+# Parses tools/manifest.json, validates it, presents interactive selection
+# (fzf if available, else yes/no prompts), clones selected repos into
+# .tools-cache/, runs install commands, and ensures .cursor/ and docs/
+# directories are properly structured.
 #
 # Idempotent: safe to run multiple times.
 #
@@ -19,6 +20,7 @@ cd "$SCRIPT_DIR"
 MANIFEST="tools/manifest.json"
 CACHE_DIR=".tools-cache"
 CURSOR_DIR=".cursor"
+DOCS_DIR="docs/_ai_context"
 
 # ── Colors ──────────────────────────────────────────────────────────
 
@@ -56,16 +58,55 @@ if [[ ! -f "$MANIFEST" ]]; then
     exit 1
 fi
 
-# ── Parse manifest ──────────────────────────────────────────────────
+# ── Validate manifest JSON ─────────────────────────────────────────
 
+step "Validating manifest JSON..."
+
+if ! jq empty "$MANIFEST" 2>/dev/null; then
+    err "tools/manifest.json contains invalid JSON. Fix syntax errors and retry."
+    exit 1
+fi
+
+if ! jq -e '.tools | type == "array"' "$MANIFEST" >/dev/null 2>&1; then
+    err "tools/manifest.json is missing a 'tools' array at the root level."
+    exit 1
+fi
+
+VALIDATION_ERRORS=0
 TOOL_COUNT=$(jq '.tools | length' "$MANIFEST")
+
+for i in $(seq 0 $((TOOL_COUNT - 1))); do
+    name=$(jq -r ".tools[$i].name // empty" "$MANIFEST")
+    repo=$(jq -r ".tools[$i].repo // empty" "$MANIFEST")
+
+    if [[ -z "$name" ]]; then
+        err "Tool at index $i is missing required field 'name'."
+        VALIDATION_ERRORS=$((VALIDATION_ERRORS + 1))
+    fi
+
+    if [[ -z "$repo" ]]; then
+        err "Tool '$name' (index $i) is missing required field 'repo'."
+        VALIDATION_ERRORS=$((VALIDATION_ERRORS + 1))
+    elif [[ ! "$repo" =~ ^https://github\.com/ ]]; then
+        err "Tool '$name' has non-GitHub repo URL: $repo (expected https://github.com/...)."
+        VALIDATION_ERRORS=$((VALIDATION_ERRORS + 1))
+    fi
+done
+
+if [[ "$VALIDATION_ERRORS" -gt 0 ]]; then
+    err "Manifest has $VALIDATION_ERRORS validation error(s). Fix them before proceeding."
+    exit 1
+fi
+
+ok "Manifest validated: $TOOL_COUNT tool(s), 0 errors."
+
+# ── Parse manifest ──────────────────────────────────────────────────
 
 if [[ "$TOOL_COUNT" -eq 0 ]]; then
     err "No tools in manifest. Add entries to tools/manifest.json first."
     exit 1
 fi
 
-ok "Found $TOOL_COUNT tool(s) in manifest."
 echo ""
 
 # ── Interactive selection ───────────────────────────────────────────
@@ -149,9 +190,21 @@ for dir in "$CURSOR_DIR/rules" "$CURSOR_DIR/bin" "$CURSOR_DIR/skills" "$CURSOR_D
     fi
 done
 
+# ── Ensure MDD docs directories ────────────────────────────────────
+
+for dir in "$DOCS_DIR/state" "$DOCS_DIR/analysis" "$DOCS_DIR/templates" "$DOCS_DIR/prompts" "$DOCS_DIR/knowledge"; do
+    if [[ ! -d "$dir" ]]; then
+        mkdir -p "$dir"
+        ok "Created $dir"
+    fi
+done
+
 mkdir -p "$CACHE_DIR"
 
 # ── Clone and install ───────────────────────────────────────────────
+
+INSTALLED_COUNT=0
+FAILED_COUNT=0
 
 for idx in "${SELECTED[@]}"; do
     name=$(jq -r ".tools[$idx].name" "$MANIFEST")
@@ -164,7 +217,6 @@ for idx in "${SELECTED[@]}"; do
 
     clone_dir="$CACHE_DIR/$name"
 
-    # Idempotency: skip clone if exists
     if [[ -d "$clone_dir" ]]; then
         skip "$name already cloned at $clone_dir — skipping clone."
     else
@@ -173,23 +225,26 @@ for idx in "${SELECTED[@]}"; do
             ok "Cloned $name"
         else
             err "Failed to clone $name. Skipping install."
+            FAILED_COUNT=$((FAILED_COUNT + 1))
             continue
         fi
     fi
 
-    # Run install command from the cloned directory
     if [[ -n "$install_cmd" && "$install_cmd" != "null" ]]; then
         step "Running: $install_cmd"
         pushd "$clone_dir" > /dev/null
         if eval "$install_cmd"; then
             ok "Installed $name"
+            INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
         else
             err "Install failed for $name. Check the tool's README for manual steps."
+            FAILED_COUNT=$((FAILED_COUNT + 1))
         fi
         popd > /dev/null
+    else
+        INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
     fi
 
-    # Post-install: copy skills if type is "skills"
     if [[ "$tool_type" == "skills" ]]; then
         skills_src="$clone_dir/skills"
         skills_dest="$CURSOR_DIR/skills"
@@ -205,9 +260,11 @@ done
 
 echo ""
 RULE_FILES=("00-starter-rules.mdc" "01-mdd.mdc" "02-kingmode.mdc" "03-frontend-fullstack.mdc")
+RULES_OK=0
 for rf in "${RULE_FILES[@]}"; do
     if [[ -f "$CURSOR_DIR/rules/$rf" ]]; then
         ok "Rule verified: $rf"
+        RULES_OK=$((RULES_OK + 1))
     else
         err "Missing rule: $rf — workspace may be incomplete."
     fi
@@ -227,8 +284,13 @@ echo -e "${GREEN}  ========================================${RESET}"
 echo -e "${GREEN}   Setup Complete${RESET}"
 echo -e "${GREEN}  ========================================${RESET}"
 echo ""
-echo -e "  Tools installed: ${#SELECTED[@]} / $TOOL_COUNT"
-echo -e "  Rules verified:  ${#RULE_FILES[@]} foundational .mdc files"
+echo -e "  Tools selected:  ${#SELECTED[@]} / $TOOL_COUNT"
+echo -e "  Installed OK:    $INSTALLED_COUNT"
+if [[ "$FAILED_COUNT" -gt 0 ]]; then
+    echo -e "  ${RED}Failed:        $FAILED_COUNT${RESET}"
+fi
+echo -e "  Rules verified:  $RULES_OK / ${#RULE_FILES[@]} foundational .mdc files"
+echo -e "  MDD dirs:        5 (state, analysis, templates, prompts, knowledge)"
 echo ""
 
 if $IS_DEVCONTAINER; then

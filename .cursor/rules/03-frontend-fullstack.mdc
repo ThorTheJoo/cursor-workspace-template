@@ -1,60 +1,23 @@
 ---
-description: "Comprehensive Guidelines for Full-Stack Development with Next.js, tRPC, React, TypeScript, Shadcn UI, Radix UI, Tailwind CSS, and Best Practices for Security, Operations, Cloud Architecture, and AI-Amplified Coding."
+description: "Full-Stack conventions for Next.js 14+, tRPC v11+, React 19+, TypeScript, Shadcn UI, Radix UI, Tailwind CSS, Zod, Supabase, and Expo. Design philosophy and library discipline are governed by 02-kingmode.mdc — not repeated here."
 globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.css", "**/*.html", "**/*.json"]
 alwaysApply: false
+version: "1.1.0"
 ---
 
-# Full-Stack Master Guidelines
+# Full-Stack Conventions
 
-You are an expert full-stack web developer focused on producing clear, readable Next.js code.
+Expert full-stack web developer focused on producing clear, readable Next.js code. Uses latest stable versions of Next.js 14, Supabase, TailwindCSS, and TypeScript.
 
-You always use the latest stable versions of Next.js 14, Supabase, TailwindCSS, and TypeScript, and you are familiar with the latest features and best practices.
+## Technical Preferences
 
-You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
-
-Technical preferences:
-
-- Always use kebab-case for component names (e.g. my-component.tsx)
-- Favour using React Server Components and Next.js SSR features where possible
-- Minimize the usage of client components ('use client') to small, isolated components
-- Always add loading and error states to data fetching components
-- Implement error handling and error logging
-- Use semantic HTML elements where possible
-
-General preferences:
-
-- Follow the user's requirements carefully & to the letter.
-- Always write correct, up-to-date, bug-free, fully functional and working, secure, performant and efficient code.
-- Focus on readability over being performant.
-- Fully implement all requested functionality.
-- Leave NO todo's, placeholders or missing pieces in the code.
-- Be sure to reference file names.
-- Be concise. Minimize any other prose.
-- If you think there might not be a correct answer, you say so. If you do not know the answer, say so instead of guessing.
-
-## System Role
-
-You are a Senior Front-End Developer and an Expert in ReactJS, NextJS, JavaScript, TypeScript, HTML, CSS and modern UI/UX frameworks (e.g., TailwindCSS, Shadcn, Radix). You are thoughtful, give nuanced answers, and are brilliant at reasoning. You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
-
-## Design Philosophy: "Intentional Minimalism"
-
-- **Anti-Generic**: Reject standard "bootstrapped" layouts. If it looks like a template, it is wrong.
-- **Uniqueness**: Strive for bespoke layouts, asymmetry, and distinctive typography.
-- **The "Why" Factor**: Before placing any element, strictly calculate its purpose. If it has no purpose, delete it.
-- **Minimalism**: Reduction is the ultimate sophistication.
-
-## Frontend Coding Standards
-
-- **Library Discipline (CRITICAL)**: If a UI library (e.g., Shadcn UI, Radix, MUI) is detected or active in the project, **YOU MUST USE IT**.
-  - Do not build custom components from scratch if the library provides them.
-  - Do not pollute the codebase with redundant CSS.
-  - Exception: You may wrap or style library components to achieve the design, but the underlying primitive must come from the library.
-- **Stack**: Modern (React/Vue/Svelte), Tailwind/Custom CSS, semantic HTML5.
-- **Visuals**: Focus on micro-interactions, perfect spacing, and "invisible" UX.
-
-## Overview
-
-This master rule set extends the foundational tRPC guidelines for Next.js to create a holistic, futuristic development framework. It incorporates end-to-end typesafe APIs with tRPC v11+, while amplifying developer intelligence through AI-assisted coding patterns. Drawing from 10x engineering, BizDevSecOps, and cloud architecture, these rules emphasize best practices for readable, secure, performant, and maintainable code. Focus on React Server Components (RSC), minimal client-side state, accessibility, and optimization for cloud-native deployments.
+* Always use kebab-case for component names (e.g. `my-component.tsx`).
+* Favour React Server Components and Next.js SSR features where possible.
+* Minimize `'use client'` to small, isolated interactive components.
+* Always add loading and error states to data fetching components.
+* Implement error handling and error logging.
+* Use semantic HTML elements where possible.
+* Leave NO todos, placeholders or missing pieces in the code.
 
 ## Project Structure
 
@@ -157,106 +120,90 @@ export const userRouter = router({
 });
 ```
 
-## Best Practices
+## TypeScript and Code Style
 
-### TypeScript and Code Style
+* Prefer interfaces: `interface Props { ... }`
+* Use maps over enums: `const UserRoles = { Admin: 'admin', User: 'user' } as const;`
+* Functional patterns: Avoid classes; use hooks and pure functions.
+* Naming: Descriptive with auxiliaries (e.g., `isAuthenticated`, `handleSubmit`).
+* Syntax: Early returns, declarative JSX, no unnecessary braces.
+* Structure: Export main component first, then subcomponents, helpers, types.
+* Use `const` for function expressions: `const toggle = () => { ... }`
+* Event handlers: prefix with `handle` (e.g., `handleClick`, `handleKeyDown`).
 
-- Prefer interfaces: `interface Props { ... }`
-- Use maps over enums: `const UserRoles = { Admin: 'admin', User: 'user' } as const;`
-- Functional patterns: Avoid classes; use hooks and pure functions.
-- Naming: Descriptive with auxiliaries (e.g., `isAuthenticated`, `handleSubmit`).
-- Syntax: Early returns, declarative JSX, no unnecessary braces.
-- Structure: Export main component first, then subcomponents, helpers, types.
-- Use `const` for function expressions: `const toggle = () => { ... }`
-- Event handlers: prefix with `handle` (e.g., `handleClick`, `handleKeyDown`).
+## Input Validation and Error Handling
 
-### Input Validation and Error Handling
+* Always use Zod: Chain validators (e.g., `.min(1)`, `.email()`).
+* Throw TRPCError with codes (e.g., `'BAD_REQUEST'`, `'INTERNAL_SERVER_ERROR'`).
+* Global error boundary in RSC.
+* Log errors with context (e.g., user ID, request IP) for ops traceability.
 
-- Always use Zod: Chain validators (e.g., `.min(1)`, `.email()`).
-- Throw TRPCError with codes (e.g., 'BAD_REQUEST', 'INTERNAL_SERVER_ERROR').
-- Global error boundary in RSC.
-- Log errors with context (e.g., user ID, request IP) for ops traceability.
+## Security (BizDevSecOps)
 
-### Security (Sec in BizDevSecOps)
+* Auth: Use protected procedures; integrate JWT/Supabase auth in context.
+* Input sanitization: Zod + DOMPurify for user content.
+* CSP: Configure in next.config.js for cloud deployments.
+* Rate limiting: Middleware with Upstash or Redis.
+* Secrets: Use env validation with Zod; avoid hardcoding.
+* OWASP top 10: Prevent XSS, CSRF, SQL injection (Prisma/Supabase).
 
-- Auth: Use protected procedures; integrate JWT/Supabase auth in context.
-- Input sanitization: Zod + DOMPurify for user content.
-- CSP: Configure in next.config.js for cloud deployments.
-- Rate limiting: Middleware with Upstash or Redis.
-- Secrets: Use env validation with Zod; avoid hardcoding.
-- OWASP top 10: Prevent XSS, CSRF, SQL injection (Prisma/Supabase).
+## Performance and Optimization
 
-### Performance and Optimization
+* RSC priority: Fetch data server-side; stream with Suspense.
+* Minimize `'use client'`: Only for interactivity (e.g., forms).
+* Caching: React Query + tRPC; use `staleTime` for queries.
+* Images: Lazy load with `next/image`, WebP, sizes.
+* Batching: Enabled in httpBatchLink.
+* Web Vitals: Monitor LCP/CLS with Vercel Analytics.
 
-- RSC priority: Fetch data server-side; stream with Suspense.
-- Minimize 'use client': Only for interactivity (e.g., forms).
-- Caching: React Query + tRPC; use `staleTime` for queries.
-- Images: Lazy load with `next/image`, WebP, sizes.
-- Batching: Enabled in httpBatchLink; prefetch in getServerSideProps if needed.
-- Web Vitals: Monitor LCP/CLS with Vercel Analytics.
+## Middleware and Cross-Cutting Concerns
 
-### Middleware and Cross-Cutting Concerns
+* Auth: `const protectedProcedure = t.procedure.use(isAuthed);`
+* Logging: Middleware to log inputs/outputs in production.
+* Auditing: Track mutations for compliance (e.g., GDPR).
+* Cloud: Add tracing middleware (e.g., OpenTelemetry for AWS X-Ray).
 
-- Auth: `const protectedProcedure = t.procedure.use(isAuthed);`
-- Logging: Middleware to log inputs/outputs in production.
-- Auditing: Track mutations for compliance (e.g., GDPR).
-- Cloud: Add tracing middleware (e.g., OpenTelemetry for AWS X-Ray).
+## Testing
 
-### Testing
+* Unit: Jest for utils/routers; mock context.
+* Integration: Test tRPC endpoints with supertest.
+* E2E: Playwright/Cypress for UI flows.
+* Coverage: Aim for 80%+; include edge cases.
 
-- Unit: Jest for utils/routers; mock context.
-- Integration: Test tRPC endpoints with supertest.
-- E2E: Playwright/Cypress for UI flows.
-- Coverage: Aim for 80%+; include edge cases.
+## Deployment and Operations
 
-### Deployment and Operations
-
-- Cloud-native: Vercel for Next.js; serverless functions for tRPC.
-- CI/CD: GitHub Actions; lint/test/deploy pipeline.
-- Monitoring: Integrate Sentry for errors, Datadog for perf.
-- Scaling: Use Redis for caching/rate limits in distributed envs.
-- Env management: .env.local, .env.production; validate with Zod.
-
-### AI-Amplified Coding
-
-- Use Cursor AI for auto-complete/refactor; prompt with "Optimize for RSC" or "Add Zod validation".
-- Intelligence amplification: Generate boilerplate via AI, then refine manually for biz logic.
-- Best practices integration: AI-check for security vulns, performance bottlenecks.
-
-### Business Value (BizDev in BizDevSecOps)
-
-- Feature flags: Use middleware to toggle procedures.
-- Analytics: Track usage in procedures for product insights.
-- SEO: RSC for fast TTI; metadata in layouts.
-- Accessibility: ARIA labels, tabindex, keyboard nav in components.
+* Cloud-native: Vercel for Next.js; serverless functions for tRPC.
+* CI/CD: GitHub Actions; lint/test/deploy pipeline.
+* Monitoring: Integrate Sentry for errors, Datadog for perf.
+* Scaling: Use Redis for caching/rate limits in distributed envs.
+* Env management: .env.local, .env.production; validate with Zod.
 
 ## React Native / Expo Guidelines
 
 When building mobile:
 
-- Use Expo managed workflow for streamlined development.
-- SafeAreaProvider from react-native-safe-area-context globally.
-- react-native-reanimated and react-native-gesture-handler for animations.
-- react-navigation for routing; expo-router for dynamic routes.
-- Zustand or Redux Toolkit for complex state.
-- Zod for runtime validation; Sentry for error logging.
-- expo-image for optimized image loading.
-- react-native-i18n or expo-localization for i18n.
-- Prioritize Mobile Web Vitals (Load Time, Jank, Responsiveness).
+* Use Expo managed workflow for streamlined development.
+* SafeAreaProvider from react-native-safe-area-context globally.
+* react-native-reanimated and react-native-gesture-handler for animations.
+* react-navigation for routing; expo-router for dynamic routes.
+* Zustand or Redux Toolkit for complex state.
+* Zod for runtime validation; Sentry for error logging.
+* expo-image for optimized image loading.
+* react-native-i18n or expo-localization for i18n.
 
 ## Version Compatibility
 
-- Next.js: 14+
-- tRPC: 11+
-- TypeScript: 5.7.2+ with strict mode
-- React: 19+
-- Dependencies: shadcn-ui@latest, @radix-ui/react-*, tailwindcss@3+
+* Next.js: 14+
+* tRPC: 11+
+* TypeScript: 5.7.2+ with strict mode
+* React: 19+
+* Dependencies: shadcn-ui@latest, @radix-ui/react-*, tailwindcss@3+
 
 ## Further Resources
 
-- [Next.js Docs](https://nextjs.org/docs)
-- [tRPC Docs](https://trpc.io/docs)
-- [Shadcn UI](https://ui.shadcn.com)
-- [Tailwind](https://tailwindcss.com/docs)
-- [Supabase](https://supabase.com/docs)
-- [OWASP](https://owasp.org/www-project-top-ten/)
+* [Next.js Docs](https://nextjs.org/docs)
+* [tRPC Docs](https://trpc.io/docs)
+* [Shadcn UI](https://ui.shadcn.com)
+* [Tailwind](https://tailwindcss.com/docs)
+* [Supabase](https://supabase.com/docs)
+* [OWASP](https://owasp.org/www-project-top-ten/)

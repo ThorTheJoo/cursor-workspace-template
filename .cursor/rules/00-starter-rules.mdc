@@ -1,63 +1,48 @@
----
-description: "Foundational meta-rules for cursor-workspace-starter. Enforces MDD V1.2, King Mode, and Full-Stack Master Guidelines as non-optional baselines across all interactions."
+﻿---
+description: "Meta-rules for cursor-workspace-starter. Defines rule loading order, priority hierarchy, and workspace-local conventions. Does NOT duplicate content from 01/02/03."
 alwaysApply: true
+version: "2.0.0"
 ---
 
-# 00 — Starter-Level Rules (MDD + King Mode + Full-Stack Baseline)
+# 00 - Starter Meta-Rules
 
-## 1. Mandatory Baseline Context
+## Rule Loading Order (Mandatory)
 
-Always load and respect these foundational rules in order:
+Always load and respect these foundational rules in priority order:
 
-- `.cursor/rules/01-mdd.mdc` — MDD V1.2: P-R-I-L workflow, brutal honesty, Markdown as SSOT.
-- `.cursor/rules/02-kingmode.mdc` — King Mode: Intentional minimalism, ULTRATHINK protocol, avant-garde UI design, library discipline.
-- `.cursor/rules/03-frontend-fullstack.mdc` — Full-Stack Master Guidelines: Next.js 14+, tRPC, Shadcn UI, Tailwind, Zod, RSC-first.
+1. `.cursor/rules/01-mdd.mdc` - MDD V1.3: Sniper Mode, Ask/Plan/Agent modes, P-R-I-L, 14 governance rules.
+2. `.cursor/rules/02-kingmode.mdc` - King Mode: ULTRATHINK, intentional minimalism, library discipline.
+3. `.cursor/rules/03-frontend-fullstack.mdc` - Stack conventions: Next.js, tRPC, Shadcn, Tailwind, Zod.
 
-These files are **non-optional** and take **priority** over any tool-specific rules unless explicitly overridden by the user.
+These are **non-optional** and take **priority** over any tool-specific or project-specific rules unless the user explicitly overrides.
 
-## 2. Response Behavior (MDD-Style + King Mode)
+## Priority Resolution
 
-Every response MUST:
+When rules conflict:
 
-1. **Start with "Flaws & Risks"** before any solution:
-   - Quantify blast radius (files, services, users, data).
-   - Propose 1-2 concrete alternatives.
-   - If uncertain, suggest a spike/PoC instead of full implementation.
-2. **Follow P-R-I-L** (Plan → Review → Implement → Log):
-   - Never jump to code for non-trivial tasks.
-   - Create analysis files in `docs/_ai_context/analysis/` before implementation.
-   - Update `MASTER_STATE.md` after completing work.
-3. **Be terse and direct**: No flattery, no preambles, no positive affirmations.
-4. **Flag gaps ruthlessly**: Treat the user as a senior expert — expose problems immediately.
-5. **ULTRATHINK on demand**: When user triggers "ULTRATHINK", suspend brevity and engage exhaustive multi-dimensional analysis (psychological, technical, accessibility, scalability).
+* MDD workflow (01) wins on process decisions (plan-before-code, state logging, governance, operational modes).
+* King Mode (02) wins on design and behavioral decisions (minimalism, ULTRATHINK, response format).
+* Full-Stack (03) wins on implementation details (which API, which library, which pattern).
 
-## 3. Code Generation Conventions (King Mode + Full-Stack)
+## Workspace-Local Tool Management
 
-When generating code, apply in order:
+* `tools/manifest.json` is the **single source of truth** for all GitHub-based tools.
+* Cloned repos live in `.tools-cache/` (gitignored, never committed).
+* Installed binaries go into `.cursor/bin/`.
+* Installed skills go into `.cursor/skills/`.
+* MCP server configs go into `.cursor/mcp/`.
+* Never pollute global Cursor settings - everything stays workspace-local.
 
-1. **MDD thinking first**: Flaws & Risks, then plan, then code.
-2. **King Mode design second**: Intentional minimalism — reject generic layouts, calculate purpose of every element, enforce library discipline (Shadcn/Radix primitives over custom).
-3. **Full-Stack conventions third**:
-   - React Server Components by default; minimize `'use client'`.
-   - Shadcn UI + Radix primitives — never build custom components if the library provides them.
-   - Tailwind for all styling — no raw CSS or `<style>` tags.
-   - Zod for all validation; tRPC for API layer.
-   - TypeScript strict mode; interfaces over types; maps over enums.
-   - Kebab-case for directories and component file names.
-   - Early returns, descriptive variable names (`isLoading`, `hasError`, `handleClick`).
-   - Semantic HTML with ARIA attributes, `tabindex`, keyboard handlers.
+## MDD V1.3 Context Paths
 
-## 4. Tool Management
+* `docs/_ai_context/state/` - MASTER_STATE.md, WORK_LOG.md, BACKLOG.md, repo-manifest.json
+* `docs/_ai_context/analysis/` - Plans, debug logs, completion docs, ADRs (archive/ for superseded)
+* `docs/_ai_context/templates/` - Artifact format definitions (ADR_TEMPLATE.md)
+* `docs/_ai_context/prompts/` - Reusable prompt library (phases/ for complex work)
+* `docs/_ai_context/knowledge/` - Canonical domain knowledge (governance/, schemas/, versions/, staging/)
 
-- `tools/manifest.json` is the **single source of truth** for all GitHub-based tools.
-- Cloned tool repos live in `.tools-cache/` (gitignored, never committed).
-- Installed binaries go into `.cursor/bin/`.
-- Installed skills go into `.cursor/skills/`.
-- Never pollute global Cursor settings — everything stays workspace-local.
+## Cursor 2.6+ Conventions
 
-## 5. Cursor 2.6+ Capabilities
-
-- Prefer **dynamic context discovery** and **AGENTS.md** over manual `@file` references.
-- Use Composer 2 multi-file awareness when working across the codebase.
-- Reference `.cursor/skills/` for any installed agent skills.
-- Reference `.cursor/mcp/` for any configured MCP server integrations.
+* Prefer **dynamic context discovery** and **AGENTS.md** over manual `@file` references.
+* Use Composer 2 multi-file awareness when working across the codebase.
+* Reference `.cursor/skills/` for any installed agent skills.

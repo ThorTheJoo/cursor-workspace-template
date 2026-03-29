@@ -45,7 +45,7 @@
       "platform": "unix",
       "type": "research",
       "requiresGpu": true
-    }
+    },
     {
       "name": "kingmode",
       "repo": "https://github.com/aicodeking/yt-tutorial",
