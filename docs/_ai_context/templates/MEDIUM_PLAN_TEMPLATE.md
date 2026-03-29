@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: PLAN
 status: DRAFT
 date: YYYY-MM-DD
@@ -37,6 +37,20 @@ traceability_id: ""
 
 - [ ] Gate 1: [description - how to verify]
 - [ ] Gate 2: [description - how to verify]
+
+## Security Review
+
+> Required if this plan touches auth, secrets, user data, external APIs, file uploads, or infrastructure. Reference: `knowledge/governance/SECURITY_CONTROLS.md` Section 2.3.
+
+- [ ] No secrets hardcoded in source
+- [ ] User input validated and sanitized
+- [ ] Auth checks on all protected routes/procedures
+- [ ] Error messages don't leak internal details
+- [ ] Dependencies checked for known CVEs
+- [ ] HTTPS enforced for all external calls
+- [ ] Rate limiting on public endpoints
+- [ ] Logging excludes sensitive values
+- [ ] N/A - this plan does not touch security-sensitive domains
 
 ## Self-Critique
 

@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: COMPLETION
 phase: XX
 status: COMPLETE
@@ -49,6 +49,17 @@ traceability_id: ""
 * [Context the next phase needs to know]
 * [Warnings about edge cases encountered]
 * [Deviations from original plan, if any]
+
+## Security Validation
+
+> Required if this phase touched auth, secrets, user data, external APIs, or infrastructure. Reference: `knowledge/governance/SECURITY_CONTROLS.md`.
+
+- [ ] No secrets committed (checked staged files)
+- [ ] User input validation in place
+- [ ] Auth checks verified on protected endpoints
+- [ ] No security features disabled
+- [ ] Dependencies audited for CVEs
+- [ ] N/A - this phase did not touch security-sensitive code
 
 ## Continuous Improvement Checklist
 

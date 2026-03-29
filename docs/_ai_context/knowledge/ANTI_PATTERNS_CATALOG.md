@@ -57,6 +57,24 @@ Consult this catalog when debugging failures, reviewing plans, or onboarding new
 
 ---
 
+## Security Anti-Patterns
+
+Reference: MDD V1.3 Section 7d, `SECURITY_CONTROLS.md`. These patterns are the most dangerous because they often cause **irrecoverable** damage (secrets in git history cannot be fully purged from shared repos).
+
+| # | Anti-Pattern | Why It Fails | Correct Alternative | Severity |
+|---|--------------|--------------|---------------------|----------|
+| 1 | **Hardcoded secrets in source** | Secrets persist in git history permanently; rotation requires code change + deploy | Use `process.env.VAR_NAME`; store in `.env` (gitignored); reference `.env.example` for names | CRITICAL |
+| 2 | **Committing .env files** | Entire credential set exposed in one file; often contains production secrets | Add to `.gitignore`; use `.env.example` with empty values; use vault for production | CRITICAL |
+| 3 | **Placeholder secrets that look real** (`sk-xxxx`, `ghp_abc123`) | Developers and scanners learn to ignore patterns that resemble real tokens; real leaks go unnoticed | Use descriptive placeholders: `YOUR_STRIPE_KEY_HERE`, `REPLACE_WITH_JWT_SECRET` | HIGH |
+| 4 | **Disabling TLS verification** (`NODE_TLS_REJECT_UNAUTHORIZED=0`) | Opens man-in-the-middle attack surface; often left in production code | Fix the certificate chain; use proper CA bundles; never disable in production | CRITICAL |
+| 5 | **CORS wildcard** (`Access-Control-Allow-Origin: *`) | Any website can make authenticated requests to your API | Allowlist specific origins; use environment-based CORS config | HIGH |
+| 6 | **Logging sensitive data** (tokens, passwords, PII in WORK_LOG/console) | Logs are often stored with less protection than source code; PII logging may violate GDPR | Sanitize log output; use structured logging with redaction; never log auth tokens | HIGH |
+| 7 | **Unpinned dependencies** (`"dep": "latest"` or `"dep": "*"`) | Supply chain attack via version hijacking; malicious code injected in patch release | Pin exact versions; commit lock files; audit before upgrading | HIGH |
+| 8 | **eval/Invoke-Expression on external input** | Remote code execution if input is compromised | Allowlist commands; validate input; use structured execution (spawn, not eval) | CRITICAL |
+| 9 | **Skipping pre-commit hooks** (`--no-verify`) | Bypasses all local security gates (secret scanning, linting) | Never use `--no-verify` in normal workflow; if needed, document why in commit message | HIGH |
+| 10 | **Security by obscurity** (hiding API endpoints instead of auth) | Endpoints are discoverable via browser tools, logs, or enumeration | Always enforce authentication + authorization; never rely on URL secrecy | HIGH |
+
+---
 ## How to Use This Catalog
 
 1. **During plan review:** Scan the relevant anti-pattern tables. If the plan has characteristics matching any pattern, flag it.

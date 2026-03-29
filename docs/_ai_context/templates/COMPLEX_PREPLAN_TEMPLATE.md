@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: PRE_PLAN
 status: DRAFT
 date: YYYY-MM-DD
@@ -49,6 +49,17 @@ Sync point: Phase XW (Todo 4) --- requires XY + XZ outputs
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
 | ... | ... | ... | ... |
+
+## Security Review
+
+> Required if any phase touches auth, secrets, user data, external APIs, file uploads, or infrastructure. Reference: `knowledge/governance/SECURITY_CONTROLS.md` Section 2.3.
+
+- [ ] Threat model documented for auth/crypto work
+- [ ] No secrets will be hardcoded in any phase
+- [ ] User input validation planned (Zod, DOMPurify, parameterized queries)
+- [ ] Dependency security audit planned before adding new packages
+- [ ] `.env.example` updated for any new environment variables
+- [ ] N/A - no phases touch security-sensitive domains
 
 ## Self-Critique
 

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bash
+#!/usr/bin/env bash
 #
 # Cursor Workspace Starter â€” Bash Tool Bootstrapper
 #
@@ -218,7 +218,7 @@ for idx in "${SELECTED[@]}"; do
     clone_dir="$CACHE_DIR/$name"
 
     if [[ -d "$clone_dir" ]]; then
-        skip "$name already cloned at $clone_dir â€” skipping clone."
+        skip "$name already cloned at $clone_dir -- skipping clone."
     else
         step "Cloning $repo..."
         if git clone --depth 1 "$repo" "$clone_dir" 2>/dev/null; then
@@ -230,7 +230,40 @@ for idx in "${SELECTED[@]}"; do
         fi
     fi
 
+    # Pin to specific commit if specified in manifest (supply chain security)
+    pinned_commit=$(jq -r ".tools[$idx].commit // empty" "$MANIFEST")
+    if [[ -n "$pinned_commit" ]]; then
+        step "Pinning $name to commit $pinned_commit..."
+        pushd "$clone_dir" > /dev/null
+        if git fetch origin "$pinned_commit" 2>/dev/null && git checkout "$pinned_commit" 2>/dev/null; then
+            ok "Pinned to $pinned_commit"
+        else
+            err "Failed to pin $name to $pinned_commit. Using HEAD."
+        fi
+        popd > /dev/null
+    fi
+
     if [[ -n "$install_cmd" && "$install_cmd" != "null" ]]; then
+        # Security: validate install command against allowlist
+        ALLOWED_PREFIXES=("npm install" "npm ci" "pip install" "uv pip install" "npx" "cargo install" "go install")
+        CMD_ALLOWED=false
+        for prefix in "${ALLOWED_PREFIXES[@]}"; do
+            if [[ "$install_cmd" == "$prefix"* ]]; then
+                CMD_ALLOWED=true
+                break
+            fi
+        done
+
+        if ! $CMD_ALLOWED; then
+            err "SECURITY WARNING: '$install_cmd' is not a recognized install command."
+            read -rp "  Execute anyway? (y/N): " answer
+            if [[ ! "$answer" =~ ^[yY] ]]; then
+                skip "Skipped install for $name (user declined)."
+                FAILED_COUNT=$((FAILED_COUNT + 1))
+                continue
+            fi
+        fi
+
         step "Running: $install_cmd"
         pushd "$clone_dir" > /dev/null
         if eval "$install_cmd"; then

@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: STATE
 status: ACTIVE
 last_groomed: 2026-03-29
@@ -15,9 +15,10 @@ last_groomed: 2026-03-29
 - [ ] Create repo-manifest.json generator script per V1.3 Sniper Mode. (source: MDD V1.3 Section 1.4).
 
 ### P2 - Backlog
-- [ ] Add pre-commit hook (husky/lint-staged) for manifest validation. (source: worktree forensic analysis).
 - [ ] Create .cursor/settings.json with recommended Cursor preferences. (source: improvement plan WS-002).
 - [ ] Add V1.3 migration guide for V1.2 workspaces. (source: WORK_LOG v2.0.0 lessons).
+- [ ] Add GitHub Actions CI template with secret scanning (gitleaks/TruffleHog). (source: security hardening v2.3.0).
+- [ ] Add `npm audit` / dependency scanning step to CI template. (source: security hardening v2.3.0).
 
 ### P3 - Wishlist
 - [ ] Auto-generate AGENTS.md from repo-manifest.json. (source: V1.3 Sniper Mode).
@@ -33,6 +34,7 @@ last_groomed: 2026-03-29
 - [x] Wire continuous improvement / feedback loop into reference architecture. (source: cohesion audit v2.1.0). Resolved: 2026-03-29, CONTINUOUS_IMPROVEMENT_PROTOCOL.md + rule Section 11 wiring.
 - [x] Create CONTEXT_MANIFEST.md referenced by rule Section 1. (source: cohesion audit v2.1.0). Resolved: 2026-03-29, created as prompts/phases/CONTEXT_MANIFEST.md.
 - [x] Fix bootstrappers to create all 11 MDD subdirs (not just 5). (source: cohesion audit v2.1.0). Resolved: 2026-03-29, both scripts updated.
+- [x] Add pre-commit hook guidance (husky/gitleaks) for secret scanning. (source: worktree forensic analysis). Resolved: 2026-03-29, documented in SECURITY_CONTROLS.md Section 1.4. Per-project setup -- template provides instructions and .husky template.
 
 ## Deprecated / Closed
 (none yet)

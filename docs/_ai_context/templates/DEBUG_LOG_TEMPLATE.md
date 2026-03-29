@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: DEBUG
 status: INVESTIGATING
 date: YYYY-MM-DD
@@ -80,9 +80,21 @@ traceability_id: ""
 - [ ] Tests added/updated for this case
 - [ ] Works across all affected environments
 
+## Security Classification
+
+> Was this bug security-related? Reference: `knowledge/governance/SECURITY_CONTROLS.md`.
+
+- [ ] **Not security-related** - skip rest of section
+- [ ] **Secret exposure** - follow rotation protocol (SECURITY_CONTROLS.md Section 1.5)
+- [ ] **Injection / XSS** - add input validation; check ANTI_PATTERNS_CATALOG Security #3-#5
+- [ ] **Auth bypass** - review protected procedures; check access control on all affected routes
+- [ ] **Data leak / PII exposure** - verify logging sanitization; check GDPR obligations
+- [ ] **Dependency vulnerability** - audit with `npm audit` / `pip-audit`; pin fixed version
+
 ## Prevention
 
 * **How to prevent this class of bug:** [systemic fix, not just this instance]
-* **Monitoring/alerting added?** YES / NO — [details]
-* **Documentation updated?** YES / NO — [where]
+* **Monitoring/alerting added?** YES / NO -- [details]
+* **Documentation updated?** YES / NO -- [where]
+* **Security controls updated?** YES / NO -- [`.gitignore`, pre-commit rules, SECURITY_CONTROLS.md]
 * **New anti-pattern?** If this bug represents a new failure class, propose addition to `knowledge/ANTI_PATTERNS_CATALOG.md` per the Continuous Improvement Protocol.

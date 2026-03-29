@@ -1,6 +1,29 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to the Cursor Workspace Starter template.
+
+## [2.3.0] - 2026-03-29
+
+### Added
+* **Defense-in-depth security controls** baked into the reference architecture:
+  * `SECURITY_CONTROLS.md` in `knowledge/governance/` -- full security policy covering secrets management (5-layer defense), agent security controls, supply chain security, OWASP Top 10 alignment, and compliance mapping.
+  * `SECURITY.md` at root -- public security policy with responsible disclosure template.
+  * `.env.example` -- environment variable template convention (committed with descriptions, no values).
+  * 10 **security anti-patterns** added to `ANTI_PATTERNS_CATALOG.md` (hardcoded secrets, .env commits, placeholder secrets, TLS disable, CORS wildcard, PII logging, unpinned deps, eval on external input, skipping pre-commit, security by obscurity).
+* **14 agent security rules** in `01-mdd.mdc` Section 7d: secret prevention (6 rules), agent-specific security (5 rules), supply chain (3 rules).
+* **Security review gates** in `MEDIUM_PLAN_TEMPLATE.md`, `COMPLEX_PREPLAN_TEMPLATE.md`, `PHASE_COMPLETION_TEMPLATE.md`.
+* **Security classification** section in `DEBUG_LOG_TEMPLATE.md` with 6 incident categories.
+* **Security routing** (checklist item #7) in `CONTINUOUS_IMPROVEMENT_PROTOCOL.md` with 6 condition/action pairs.
+* **Bootstrapper hardening**: install command allowlist (npm, pip, cargo, go, npx, uv) with user prompt for unrecognized commands. Commit pinning support via `commit` field in manifest.
+
+### Changed
+* **`.gitignore`**: Expanded from 3 env patterns to 40+ secret/credential file patterns (private keys, SSH keys, credential files, auth configs, cloud provider configs, Terraform state).
+* **`01-mdd.mdc`**: Sections 7d/7e/7f restructured -- 7d is now Security Rules, 7e Prohibited Actions (3 new items), 7f Required Actions (2 new items).
+* **`ANTI_PATTERNS_CATALOG.md`**: Expanded from 24 to 34 patterns (new Security section).
+* **`CONTINUOUS_IMPROVEMENT_PROTOCOL.md`**: Expanded from 6 to 7 checklist items. Updated routing decision tree.
+* **`setup-tools.ps1`**: Removed orphan `.cursor/automations` directory creation. Added commit pinning + command allowlist.
+* **`setup-tools.sh`**: Added commit pinning + command allowlist.
+* **`AGENTS.md`**: Added Security context paths section. Updated conventions with security summary.
 
 ## [2.2.0] - 2026-03-29
 

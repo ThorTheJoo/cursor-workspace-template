@@ -108,3 +108,42 @@ Chronological record of all significant workspace changes.
   - The Learn step was described but never operationalized - CONTINUOUS_IMPROVEMENT_PROTOCOL.md closes this loop.
   - CONTEXT_MANIFEST.md was referenced in the rule (Section 1 Priority 2) but never created - ghost references are a real risk.
 * **Next Steps:** None immediate. P1 backlog: repo-manifest.json generator.
+
+
+---
+
+## 2026-03-29 - Security Hardening (v2.3.0)
+
+* **Scope:** Defense-in-depth security controls baked into the reference architecture. 14 agent security rules, 10 security anti-patterns, comprehensive .gitignore, bootstrapper hardening, security review gates in all templates, continuous improvement security routing.
+* **Status:** COMPLETE
+* **Duration:** ~1.5 hours
+* **Changes Made:**
+
+| File | Change |
+|---|---|
+| .gitignore | Added 40+ secret/credential file patterns (keys, certs, cloud creds, auth configs) |
+| 01-mdd.mdc | New Section 7d (14 security rules: secrets, agent, supply chain). 7e/7f renumbered with security additions. |
+| SECURITY_CONTROLS.md (NEW) | Full security policy: 5-layer defense-in-depth, OWASP alignment, compliance mapping, pre-commit guidance |
+| ANTI_PATTERNS_CATALOG.md | Added 10 security anti-patterns (secrets, TLS, CORS, eval, supply chain) |
+| MEDIUM_PLAN_TEMPLATE.md | Added Security Review section with 9-item checklist |
+| COMPLEX_PREPLAN_TEMPLATE.md | Added Security Review section with 6-item checklist |
+| PHASE_COMPLETION_TEMPLATE.md | Added Security Validation section with 6-item checklist |
+| DEBUG_LOG_TEMPLATE.md | Added Security Classification section (6 categories) + security controls update in Prevention |
+| CONTINUOUS_IMPROVEMENT_PROTOCOL.md | Added checklist item #7 (Security Finding) with routing table. Updated decision tree. |
+| setup-tools.ps1 | Removed orphan .cursor/automations. Added commit pinning support. Added install command allowlist with user prompt for unrecognized commands. |
+| setup-tools.sh | Added commit pinning support. Added install command allowlist with user prompt. |
+| .env.example (NEW) | Environment variable template (no secrets, descriptions only) |
+| SECURITY.md (NEW) | Public security policy with disclosure contact and controls summary |
+| AGENTS.md | Added Security section in context paths. Updated anti-pattern count. Updated conventions. |
+| MASTER_STATE.md | Updated to v2.3.0 with security wiring layer. |
+| CHANGELOG.md | Added v2.3.0 entry. |
+
+* **Validation Results:** All cross-references verified. Security rules wired into: rule -> templates -> governance -> continuous improvement loop. Bootstrappers hardened.
+* **Regression Risk:** LOW - additive changes only. No existing behavior removed. Bootstrapper command allowlist may cause false positives for exotic install commands (mitigated by user prompt).
+* **Lessons Learned:**
+  - .gitignore only covering .env* was a critical gap - credential files come in 40+ formats
+  - Agent behavioral rules are necessary but not sufficient - need pre-commit hooks (L3) and CI scanning (L4) for defense-in-depth
+  - Bootstrapper Invoke-Expression/eval was a genuine RCE vector from manifest - allowlisting common package managers is a pragmatic control
+  - Security anti-patterns are distinct from process anti-patterns - they have different severity profiles (many are CRITICAL/irrecoverable)
+  - Templates need security gates or they become invisible - embedding checklists in the workflow surface where developers already look
+* **Next Steps:** Set up actual pre-commit hooks with gitleaks when a project starts using this template. Consider adding GitHub Actions secret scanning to CI template.

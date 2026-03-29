@@ -1,4 +1,4 @@
-﻿# AGENTS.md - Cursor Workspace Starter
+# AGENTS.md - Cursor Workspace Starter
 
 A portable, zero-global-pollution workspace template for Cursor IDE. Every new workspace inherits foundational AI rules (MDD V1.3 + King Mode + Full-Stack) and on-demand GitHub tool management.
 
@@ -39,6 +39,8 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 +-- setup-tools.ps1                # Windows/PowerShell bootstrapper
 +-- setup-tools.sh                 # Bash/WSL/DevContainer bootstrapper
 +-- .devcontainer/devcontainer.json
++-- .env.example                   # Env var template (no secrets)
++-- SECURITY.md                    # Security policy + disclosure
 +-- CHANGELOG.md
 +-- AGENTS.md
 +-- README.md
@@ -70,9 +72,10 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 |---|---|---|
 | `docs/_ai_context/knowledge/COMPLEXITY_TRIAGE_MATRIX.md` | Simple/Medium/Complex decision rules | Section 4 |
 | `docs/_ai_context/knowledge/MODE_TRANSITION_RULES.md` | Ask/Plan/Agent state machine | Section 3 |
-| `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md` | 24 failure patterns (institutional memory) | Section 9 |
+| `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md` | 34 failure patterns incl. 10 security (institutional memory) | Section 9 |
 | `docs/_ai_context/knowledge/governance/GOVERNANCE_POLICY.md` | Metadata, compliance, knowledge protections | Features 5/9 |
-| `docs/_ai_context/knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md` | Learning loop routing checklist | Section 11 |
+| `docs/_ai_context/knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md` | Learning loop routing checklist (7 items incl. security) | Section 11 |
+| `docs/_ai_context/knowledge/governance/SECURITY_CONTROLS.md` | Security policy: secrets, supply chain, OWASP, agent controls | Section 7d |
 
 ### Templates (artifact generation)
 
@@ -96,6 +99,15 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 | `docs/_ai_context/prompts/SESSION_START.md` | Copy-paste session initialization | Feature 1 |
 | `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Navigation map + agent contract | Sniper Mode |
 | `docs/_ai_context/prompts/phases/MULTI_PHASE_EXECUTION_GUIDELINES.md` | Phase execution protocol | Feature 4 |
+
+### Security
+
+| Path | Content | V1.3 Role |
+|---|---|---|
+| `docs/_ai_context/knowledge/governance/SECURITY_CONTROLS.md` | Full security policy (secrets, supply chain, OWASP) | Section 7d detailed reference |
+| `SECURITY.md` | Public security policy and disclosure | Root-level security contact |
+| `.env.example` | Environment variable template (no secrets) | Section 7d.6 convention |
+| `.gitignore` | 40+ sensitive file patterns blocked | Section 7d L1 defense |
 
 ### Governance Pipeline
 
@@ -136,3 +148,5 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 * Flaws & Risks before any meaningful action.
 * ULTRATHINK triggers exhaustive multi-dimensional analysis.
 * Code follows Intentional Minimalism + Full-Stack conventions.
+* Security baked in: 14 agent security rules (7d), 10 security anti-patterns, 5-layer defense-in-depth for secrets.
+* Bootstrappers hardened: install command allowlist + commit pinning for supply chain security.

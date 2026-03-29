@@ -10,7 +10,7 @@ traceability_id: "WS-001-cursor-workspace-starter"
 # MASTER_STATE.md
 
 **Last Updated:** 2026-03-29
-**Version:** 2.2.0
+**Version:** 2.3.0
 
 ## Current Workspace State
 
@@ -49,6 +49,7 @@ Priority: MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (0
 | Templates (artifact generation) | 9 templates (plan, pre-plan, completion, debug, runbook, ADR, 3 response formats) | Used by P-R-I-L-L workflow |
 | Prompts (reusable) | SESSION_START, PROMPT_INDEX, CONTEXT_MANIFEST, MULTI_PHASE_GUIDELINES | Referenced by rules + knowledge |
 | State (SSOT) | MASTER_STATE, WORK_LOG, BACKLOG, repo-manifest.json | Updated by every non-trivial task |
+| Security (defense-in-depth) | SECURITY_CONTROLS.md, 10 security anti-patterns, .gitignore (40+ patterns), .env.example, SECURITY.md, bootstrapper hardening | Enforced by 01-mdd.mdc 7d + wired into all templates |
 | Governance (feedback loop) | CONTINUOUS_IMPROVEMENT_PROTOCOL, PENDING_UPDATES, UPDATE_HISTORY, ROLLBACK_LOG, GOVERNANCE_POLICY | Triggered after every task (Learn step) |
 | Skills (agent capabilities) | 8 SKILL.md files (skill-creator, doc-coauthoring, frontend-design, webapp-testing, mcp-builder, docx, pdf, xlsx) | Triggered by description match; wired to King Mode, MDD Learn Step, MCP dir |
 | Bootstrappers | setup-tools.sh/ps1 | Create all 11 dirs + validate manifest + install tools |

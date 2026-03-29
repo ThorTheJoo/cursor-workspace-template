@@ -148,8 +148,7 @@ $cursorDirs = @(
     ".cursor\rules",
     ".cursor\bin",
     ".cursor\skills",
-    ".cursor\mcp",
-    ".cursor\automations"
+    ".cursor\mcp"
 )
 
 foreach ($d in $cursorDirs) {
@@ -197,7 +196,7 @@ foreach ($tool in $selectedTools) {
     $cloneDir = Join-Path $cachePath $tool.name
 
     if (Test-Path $cloneDir) {
-        Write-Skip "$($tool.name) already cloned at $cloneDir â€” skipping clone."
+        Write-Skip "$($tool.name) already cloned at $cloneDir -- skipping clone."
     }
     else {
         Write-Step "Cloning $($tool.repo)..."
@@ -213,7 +212,42 @@ foreach ($tool in $selectedTools) {
         }
     }
 
+    # Pin to specific commit if specified in manifest (supply chain security)
+    if ($tool.PSObject.Properties.Name -contains "commit" -and $tool.commit) {
+        $pinnedCommit = $tool.commit
+        Write-Step "Pinning $($tool.name) to commit $pinnedCommit..."
+        $originalDir = Get-Location
+        try {
+            Set-Location $cloneDir
+            git fetch origin $pinnedCommit 2>&1 | Out-Null
+            git checkout $pinnedCommit 2>&1 | Out-Null
+            Write-Ok "Pinned to $pinnedCommit"
+        }
+        catch {
+            Write-Err "Failed to pin $($tool.name) to commit $pinnedCommit. Using HEAD."
+        }
+        finally {
+            Set-Location $originalDir
+        }
+    }
+
     if ($tool.installCmd) {
+        # Security: validate install command against allowlist
+        $allowedPrefixes = @("npm install", "npm ci", "pip install", "uv pip install", "npx", "cargo install", "go install")
+        $cmdAllowed = $false
+        foreach ($prefix in $allowedPrefixes) {
+            if ($tool.installCmd.StartsWith($prefix)) { $cmdAllowed = $true; break }
+        }
+        if (-not $cmdAllowed) {
+            Write-Err "SECURITY WARNING: '$($tool.installCmd)' is not a recognized install command."
+            $answer = Read-Host "  Execute anyway? (y/N)"
+            if ($answer -notmatch "^[yY]") {
+                Write-Skip "Skipped install for $($tool.name) (user declined)."
+                $failedCount++
+                continue
+            }
+        }
+
         Write-Step "Running install: $($tool.installCmd)"
         $originalDir = Get-Location
         try {

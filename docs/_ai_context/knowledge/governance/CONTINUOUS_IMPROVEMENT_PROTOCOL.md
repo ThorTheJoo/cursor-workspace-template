@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: GOVERNANCE
 status: ACTIVE
 version: "1.0.0"
@@ -89,13 +89,28 @@ Run through this checklist. If ANY item applies, execute the routing action.
 
 **Route:** `state/WORK_LOG.md` or `analysis/` or `state/BACKLOG.md`
 
+### 7. Security Finding
+
+> Did we encounter a security issue, near-miss, or discover a gap in security controls?
+
+| Condition | Action |
+|-----------|--------|
+| Secret accidentally staged or committed | **IMMEDIATELY** rotate credential; follow `SECURITY_CONTROLS.md` Section 1.5 |
+| New security anti-pattern observed | Propose to `knowledge/ANTI_PATTERNS_CATALOG.md` Security section |
+| Missing `.gitignore` pattern for sensitive file type | Add pattern to `.gitignore`; update `SECURITY_CONTROLS.md` Section 1.2 |
+| Dependency CVE discovered | Pin fixed version; log in WORK_LOG; add to `BACKLOG.md` if widespread |
+| Auth/access control gap found | Document in debug log; propose fix via `PENDING_UPDATES.yaml` |
+| Security control proved insufficient | Propose amendment to `SECURITY_CONTROLS.md` via `PENDING_UPDATES.yaml` |
+
+**Route:** `knowledge/governance/SECURITY_CONTROLS.md` or `ANTI_PATTERNS_CATALOG.md` or `.gitignore`
+
 ## Routing Decision Tree
 
 ```
 After completing work and updating WORK_LOG:
   |
   v
-[Run through 6 checklist items]
+[Run through 7 checklist items]
   |
   +-- New anti-pattern?
   |     YES --> Propose to ANTI_PATTERNS_CATALOG.md
@@ -118,6 +133,11 @@ After completing work and updating WORK_LOG:
   +-- Architecture observation?
   |     YES --> WORK_LOG (minor) or analysis/ (major) or BACKLOG P0 (blocking)
   |
+  +-- Security finding?
+  |     YES --> IMMEDIATELY rotate if secret leak
+  |             Propose to ANTI_PATTERNS_CATALOG.md (Security section)
+  |             Update .gitignore / SECURITY_CONTROLS.md
+  |
   v
 [Update MASTER_STATE.md if project state changed]
   |
@@ -136,6 +156,8 @@ This protocol is triggered by:
 | `templates/DEBUG_LOG_TEMPLATE.md` | Prevention section routes here |
 | `knowledge/governance/GOVERNANCE_POLICY.md` | Knowledge Governance Chain: Observe -> Extract -> Classify |
 | `prompts/PROMPT_INDEX.md` | Reusable Prompts section explains extraction criteria |
+| `knowledge/governance/SECURITY_CONTROLS.md` | Secret rotation protocol, security review gates |
+| `.gitignore` | Updated when new sensitive file patterns discovered |
 
 ## Promotion Pipeline
 
