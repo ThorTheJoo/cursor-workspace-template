@@ -1,0 +1,12 @@
+﻿# Knowledge Governance: Rollback Log
+# Reference: MDD V1.3 Feature Spec F9
+# Records reverted changes with reason and restore point.
+
+rollbacks: []
+  # Example entry:
+  # - id: "ROLLBACK-2026-03-29-001"
+  #   original_update: "UPDATE-2026-03-29-001"
+  #   rollback_date: "2026-03-29"
+  #   reason: "Taxonomy term was incorrect — source data was misclassified"
+  #   rolled_back_to: "v1.0.0"
+  #   executed_by: "human"

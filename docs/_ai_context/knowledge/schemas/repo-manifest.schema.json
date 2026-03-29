@@ -1,0 +1,123 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Repo Manifest Schema",
+  "description": "Schema for the machine-readable file/capability index used by MDD V1.3 Sniper Mode (F1). Validate with: any JSON Schema validator against this file.",
+  "type": "object",
+  "required": ["_meta", "files"],
+  "properties": {
+    "_meta": {
+      "type": "object",
+      "description": "Manifest metadata",
+      "required": ["generated", "version", "file_count"],
+      "properties": {
+        "generated": {
+          "type": "string",
+          "description": "ISO-8601 timestamp of when this manifest was generated"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of the manifest format"
+        },
+        "file_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of files indexed"
+        },
+        "generator": {
+          "type": "string",
+          "description": "Path to the script that generated this manifest"
+        }
+      }
+    },
+    "files": {
+      "type": "object",
+      "description": "Map of file paths to their metadata",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["script", "config", "doc", "test", "template", "state", "knowledge", "schema", "rule", "skill"],
+            "description": "Classification of the file"
+          },
+          "functions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Exported function names"
+          },
+          "classes": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Exported class names"
+          },
+          "phase_owner": {
+            "type": ["string", "null"],
+            "description": "Phase that owns/created this file, or null"
+          },
+          "last_modified": {
+            "type": "string",
+            "description": "ISO-8601 timestamp of last modification"
+          },
+          "loc": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Lines of code"
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "description": "Map of capability names to their definitions",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["command", "script"],
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "Shell command to execute this capability"
+          },
+          "script": {
+            "type": "string",
+            "description": "Path to the script file"
+          },
+          "output": {
+            "type": "string",
+            "description": "Description of what the capability produces"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Required dependencies"
+          }
+        }
+      }
+    },
+    "phases": {
+      "type": "object",
+      "description": "Map of phase identifiers to their status",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["COMPLETE", "IN_PROGRESS", "PLANNED", "BLOCKED"],
+            "description": "Current phase status"
+          },
+          "plan_file": {
+            "type": "string",
+            "description": "Path to the phase plan file"
+          },
+          "outputs": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Paths to files produced by this phase"
+          }
+        }
+      }
+    }
+  }
+}

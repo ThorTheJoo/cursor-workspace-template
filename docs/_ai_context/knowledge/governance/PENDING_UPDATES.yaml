@@ -1,0 +1,20 @@
+﻿# Knowledge Governance: Pending Updates
+# Reference: MDD V1.3 Feature Spec F9
+# This file tracks proposed changes to canonical knowledge files.
+# All proposals require human review before application.
+
+pending_updates: []
+  # Example entry:
+  # - id: "UPDATE-2026-03-29-001"
+  #   proposed_by: "agent"
+  #   date: "2026-03-29"
+  #   target_file: "docs/_ai_context/knowledge/domain-terms.yaml"
+  #   change_type: "ADD"
+  #   change_description: "Add new taxonomy term discovered during Phase 05"
+  #   evidence:
+  #     - source: "docs/_ai_context/analysis/PHASE_05_COMPLETION.md"
+  #       relevance: "Term appeared in 3+ data sources"
+  #   affected_consumers:
+  #     - "src/lib/validators/taxonomy.ts"
+  #   status: "PENDING"
+  #   reviewer_notes: ""
