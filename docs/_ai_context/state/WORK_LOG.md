@@ -13,6 +13,26 @@ Chronological record of all significant workspace changes.
 
 ---
 
+## 2026-03-29 — v2.2.0: Curated Agent Skills
+
+**What:** Added 8 curated agent skills from [anthropics/skills](https://github.com/anthropics/skills) committed directly into `.cursor/skills/`. Skills are available immediately on fresh clone — no bootstrapper dependency.
+
+**Skills added:**
+| Skill | License | Architecture Role |
+|---|---|---|
+| skill-creator | Apache 2.0 | Closes Gap 13 (skill seed); makes Learn Step actionable |
+| doc-coauthoring | Apache 2.0 | Operationalizes Plan mode for structured documents |
+| frontend-design | Apache 2.0 | Complements King Mode design execution |
+| webapp-testing | Apache 2.0 | Closes self-verification gap (MDD Section 10) |
+| mcp-builder | Apache 2.0 | Makes `.cursor/mcp/` actionable |
+| docx | Proprietary | Enterprise document generation |
+| pdf | Proprietary | PDF processing and manipulation |
+| xlsx | Proprietary | Spreadsheet creation and analysis |
+
+**Docs updated:** AGENTS.md (skills inventory), MASTER_STATE.md (v2.2.0), CHANGELOG.md, PROMPT_INDEX.md (skills discovery section), WORK_LOG.md.
+
+---
+
 ## 2026-03-29 - Initial Template Execution (v1.0.0)
 
 * **Scope:** Repository bootstrapped from plan cursor_workspace_starter_c7daa92f.plan.md

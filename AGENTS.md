@@ -24,7 +24,15 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 |   +-- 02-kingmode.mdc           # King Mode (ULTRATHINK, intentional minimalism)
 |   +-- 03-frontend-fullstack.mdc # Next.js/tRPC/Shadcn/Tailwind/Zod conventions
 +-- .cursor/bin/                   # Tool binaries (populated by bootstrapper)
-+-- .cursor/skills/                # Agent skills (populated by bootstrapper)
++-- .cursor/skills/                # Curated agent skills (committed, available on clone)
+|   +-- skill-creator/SKILL.md    # Create and iterate on new skills
+|   +-- doc-coauthoring/SKILL.md  # Structured doc co-authoring workflow
+|   +-- frontend-design/SKILL.md  # Distinctive, production-grade UI design
+|   +-- webapp-testing/SKILL.md   # Playwright-based web app testing
+|   +-- mcp-builder/SKILL.md      # MCP server development guide
+|   +-- docx/SKILL.md             # Word document creation/editing
+|   +-- pdf/SKILL.md              # PDF processing and manipulation
+|   +-- xlsx/SKILL.md             # Excel/spreadsheet operations
 +-- .cursor/mcp/                   # MCP server configs (future use)
 +-- tools/manifest.json            # SSOT: all GitHub tools available for install
 +-- .tools-cache/                  # Cloned tool repos (gitignored)
@@ -104,6 +112,21 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 * Both bootstrappers validate manifest JSON before proceeding.
 * Run `setup-tools.ps1` (Windows) or `./setup-tools.sh` (Bash) to interactively select and install.
 * Cloned repos go into `.tools-cache/` (gitignored, never committed).
+
+## Curated Skills
+
+8 agent skills sourced from [anthropics/skills](https://github.com/anthropics/skills), committed directly into the template. Available immediately on every fresh clone — no bootstrapper required.
+
+| Skill | Trigger | License | Architecture Role |
+|---|---|---|---|
+| `skill-creator` | "create a skill", "improve this skill" | Apache 2.0 | Closes Gap 13 (skill seed); makes Learn Step actionable |
+| `doc-coauthoring` | "write a doc", "draft a spec", "PRD" | Apache 2.0 | Operationalizes Plan mode for structured documents |
+| `frontend-design` | "build a page", "style this UI", "landing page" | Apache 2.0 | Complements King Mode (02-kingmode.mdc) design execution |
+| `webapp-testing` | "test this app", "verify the UI", Playwright | Apache 2.0 | Closes self-verification gap (MDD Section 10) |
+| `mcp-builder` | "build an MCP server", "integrate API" | Apache 2.0 | Makes `.cursor/mcp/` actionable |
+| `docx` | "Word doc", ".docx", "report as Word" | Proprietary | Enterprise document generation |
+| `pdf` | ".pdf", "merge PDFs", "extract text from PDF" | Proprietary | PDF processing and manipulation |
+| `xlsx` | ".xlsx", "spreadsheet", "Excel file" | Proprietary | Spreadsheet creation and analysis |
 
 ## Conventions
 

@@ -15,10 +15,48 @@ out/
 build/
 *.tsbuildinfo
 
-# ── Environment variables ───────────────────────────────────────────
+# ── Environment variables & secrets ─────────────────────────────────
 .env
 .env.local
 .env.*.local
+.env.production
+.env.staging
+
+# ── Private keys & certificates ────────────────────────────────────
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.cert
+*.crt
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.gpg
+
+# ── Credential files ──────────────────────────────────────────────
+credentials.json
+serviceAccountKey.json
+service-account*.json
+gcloud-service-key.json
+*-credentials.json
+*.credential
+.htpasswd
+.netrc
+.npmrc
+.pypirc
+.docker/config.json
+
+# ── Cloud provider configs with secrets ────────────────────────────
+.aws/credentials
+.azure/accessTokens.json
+kubeconfig
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
 
 # ── OS artifacts ────────────────────────────────────────────────────
 .DS_Store

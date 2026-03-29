@@ -10,11 +10,11 @@ traceability_id: "WS-001-cursor-workspace-starter"
 # MASTER_STATE.md
 
 **Last Updated:** 2026-03-29
-**Version:** 2.1.0
+**Version:** 2.2.0
 
 ## Current Workspace State
 
-**Cursor Workspace Starter** template repository (v2.1.0). Portable, zero-global-pollution foundation for Cursor IDE workspaces. Powered by MDD V1.3 (Agentic Critical Edition) with full artifact suite and continuous improvement loop.
+**Cursor Workspace Starter** template repository (v2.1.0). Portable, zero-global-pollution foundation for Cursor IDE workspaces. Powered by MDD V1.3 (Agentic Critical Edition) with full artifact suite, continuous improvement loop, and 8 curated agent skills.
 
 ### Core Components
 
@@ -26,6 +26,7 @@ traceability_id: "WS-001-cursor-workspace-starter"
 | `.cursor/rules/03-frontend-fullstack.mdc` | Active | 1.1.0 | Stack conventions only (no duplication) |
 | `tools/manifest.json` | Valid | - | 5 tools defined, JSON validated |
 | `setup-tools.sh` / `setup-tools.ps1` | Enhanced | - | Creates all 11 MDD dirs + validates manifest |
+| `.cursor/skills/` | Complete | - | 8 curated skills (committed, not bootstrapper-dependent) |
 | `docs/_ai_context/` | Complete | - | Full V1.3 structure (11 subdirs, 35+ artifacts) |
 
 ### Rule Hierarchy (Zero Duplication)
@@ -49,6 +50,7 @@ Priority: MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (0
 | Prompts (reusable) | SESSION_START, PROMPT_INDEX, CONTEXT_MANIFEST, MULTI_PHASE_GUIDELINES | Referenced by rules + knowledge |
 | State (SSOT) | MASTER_STATE, WORK_LOG, BACKLOG, repo-manifest.json | Updated by every non-trivial task |
 | Governance (feedback loop) | CONTINUOUS_IMPROVEMENT_PROTOCOL, PENDING_UPDATES, UPDATE_HISTORY, ROLLBACK_LOG, GOVERNANCE_POLICY | Triggered after every task (Learn step) |
+| Skills (agent capabilities) | 8 SKILL.md files (skill-creator, doc-coauthoring, frontend-design, webapp-testing, mcp-builder, docx, pdf, xlsx) | Triggered by description match; wired to King Mode, MDD Learn Step, MCP dir |
 | Bootstrappers | setup-tools.sh/ps1 | Create all 11 dirs + validate manifest + install tools |
 
 ### Architecture Decisions

@@ -2,6 +2,24 @@
 
 All notable changes to the Cursor Workspace Starter template.
 
+## [2.2.0] - 2026-03-29
+
+### Added
+* **8 curated agent skills** committed directly into `.cursor/skills/` (available on fresh clone, no bootstrapper needed):
+  * `skill-creator` (Apache 2.0) - Create, iterate, and optimize new skills with eval/benchmark loop
+  * `doc-coauthoring` (Apache 2.0) - 3-stage structured workflow for collaborative document creation
+  * `frontend-design` (Apache 2.0) - Distinctive, production-grade UI design guidelines (complements King Mode)
+  * `webapp-testing` (Apache 2.0) - Playwright-based web app testing toolkit
+  * `mcp-builder` (Apache 2.0) - MCP server development guide (TypeScript/Python)
+  * `docx` (Proprietary) - Word document creation, editing, and analysis via docx-js and XML
+  * `pdf` (Proprietary) - PDF processing: merge, split, extract, OCR, watermark, encrypt
+  * `xlsx` (Proprietary) - Excel/spreadsheet creation, editing, formula verification
+
+### Changed
+* **AGENTS.md**: Added Curated Skills section with 8-skill inventory table and architecture role mapping.
+* **MASTER_STATE.md**: Updated to v2.2.0 with skills wiring layer.
+* **PROMPT_INDEX.md**: Added skills discovery section.
+
 ## [2.1.0] - 2026-03-29
 
 ### Added

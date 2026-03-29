@@ -51,6 +51,23 @@ Single entry point for discovering all reusable prompts, phase plans, and mode-s
 | Governance Policy | `../knowledge/governance/GOVERNANCE_POLICY.md` | Metadata, compliance, knowledge protections |
 | Continuous Improvement | `../knowledge/governance/CONTINUOUS_IMPROVEMENT_PROTOCOL.md` | Learning loop routing (P-R-I-L-L) |
 
+## Curated Agent Skills
+
+Skills are located in `.cursor/skills/` and trigger automatically based on their description metadata.
+
+| Skill | Location | Trigger Context |
+|---|---|---|
+| Skill Creator | `../../.cursor/skills/skill-creator/SKILL.md` | Creating or improving agent skills |
+| Doc Co-Authoring | `../../.cursor/skills/doc-coauthoring/SKILL.md` | Writing docs, specs, proposals, decision docs |
+| Frontend Design | `../../.cursor/skills/frontend-design/SKILL.md` | Building web UI, components, landing pages |
+| Webapp Testing | `../../.cursor/skills/webapp-testing/SKILL.md` | Testing web apps with Playwright |
+| MCP Builder | `../../.cursor/skills/mcp-builder/SKILL.md` | Building MCP servers for API integration |
+| DOCX | `../../.cursor/skills/docx/SKILL.md` | Word document creation/editing |
+| PDF | `../../.cursor/skills/pdf/SKILL.md` | PDF processing, merging, extraction |
+| XLSX | `../../.cursor/skills/xlsx/SKILL.md` | Excel/spreadsheet operations |
+
+> Source: [anthropics/skills](https://github.com/anthropics/skills). Apache 2.0 (skill-creator, doc-coauthoring, frontend-design, webapp-testing, mcp-builder) and Proprietary (docx, pdf, xlsx).
+
 ## Reusable Prompts
 
 > Add extracted prompt patterns here as they emerge (per MDD V1.3 Section 11 - Learn Step).
