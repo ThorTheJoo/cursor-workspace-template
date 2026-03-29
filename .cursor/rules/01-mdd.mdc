@@ -1,7 +1,8 @@
-﻿---
+---
 description: "MDD Protocol V1.3 â€“ Agentic Critical Edition (Generic Portable). Markdown-Driven Development methodology for any workspace. Governs context loading, operational modes, phase execution, governance, and documentation authority."
 globs: "**/*"
 alwaysApply: true
+version: "1.3.0"
 ---
 
 # MDD Protocol V1.3 â€“ Generic Portable Edition
@@ -234,16 +235,43 @@ Before code that reads/writes structured data:
 
 After implementation: run validation, document field changes.
 
-### 7d. Prohibited Actions
+### 7d. Security Rules
+
+> **Detailed reference:** Full security controls at `docs/_ai_context/knowledge/governance/SECURITY_CONTROLS.md`. Security anti-patterns at `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md` (Security section).
+
+**Secret Prevention (CRITICAL -- violations are irrecoverable):**
+1. NEVER write secrets, API keys, tokens, passwords, or private keys into source files, config files, documentation, WORK_LOG, or any committed artifact
+2. NEVER hardcode connection strings, database URLs with credentials, or auth tokens
+3. NEVER commit `.env` files, credential JSON files, PEM/key files, or cloud provider credential files
+4. NEVER log or print sensitive values (tokens, passwords, PII) in any output -- including debug templates and analysis files
+5. ALWAYS use environment variable references (`process.env.VAR_NAME`) for secrets, never literal values
+6. ALWAYS reference `.env.example` for variable names without values; never create `.env` with real values
+
+**Agent-Specific Security:**
+7. Before generating code that handles auth, encryption, or user data: state the threat model in the plan
+8. NEVER generate placeholder secrets (e.g., `sk-xxxx`, `ghp_abc123`, `password123`) -- use descriptive placeholders like `YOUR_API_KEY_HERE`
+9. ALWAYS validate that generated code sanitizes user input (Zod, DOMPurify, parameterized queries)
+10. NEVER disable security features in generated code (e.g., `--no-verify`, `NODE_TLS_REJECT_UNAUTHORIZED=0`, CORS `*`)
+11. Flag any dependency with known CVEs during implementation; propose alternatives
+
+**Supply Chain:**
+12. NEVER run `eval` or `Invoke-Expression` on untrusted input; bootstrapper install commands must be from the committed manifest only
+13. Pin dependencies to specific versions in package.json/requirements.txt; avoid `*` or `latest`
+14. When adding new dependencies, check for known vulnerabilities first
+
+### 7e. Prohibited Actions
 1. DO NOT create scripts/modules without searching for existing ones
 2. DO NOT skip validation for output files
 3. DO NOT modify knowledge/reference files without human approval
 4. DO NOT leave MDD documentation inconsistent after changes
 5. DO NOT bypass validation gates
-6. DO NOT guess file paths â€” use manifest or search
+6. DO NOT guess file paths -- use manifest or search
 7. DO NOT create duplicate functionality
+8. DO NOT commit secrets, credentials, or private keys (see 7d)
+9. DO NOT generate code that disables security controls
+10. DO NOT skip security review for auth/crypto/data-handling changes
 
-### 7e. Required Actions
+### 7f. Required Actions
 1. ALWAYS search codebase before writing new code
 2. ALWAYS validate output before declaring done
 3. ALWAYS update MDD documentation after changes
@@ -252,9 +280,10 @@ After implementation: run validation, document field changes.
 6. ALWAYS validate contracts for structured data changes
 7. ALWAYS log lessons learned after non-trivial work
 8. ALWAYS create completion docs for multi-phase work
+9. ALWAYS run security checklist for plans touching auth, secrets, user data, or external APIs
+10. ALWAYS use `.env.example` pattern for any new environment variables
 
 ---
-
 ## 8. Enhanced WORK_LOG Template
 
 All WORK_LOG entries MUST include these fields:
