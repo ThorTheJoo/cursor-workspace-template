@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "purpose": "Single source of truth for GitHub-based tools loaded into the Cursor workspace.",
+    "usage": "Add new tools by copying any entry in the 'tools' array. Then run setup-tools.ps1 (Windows) or setup-tools.sh (Bash/WSL).",
+    "fields": {
+      "name": "Short unique identifier (kebab-case)",
+      "repo": "Full GitHub HTTPS URL to clone",
+      "description": "What this tool provides inside Cursor",
+      "installCmd": "Shell command run after cloning (cwd is the cloned repo dir)",
+      "platform": "win | unix | both — which bootstrapper supports this tool",
+      "type": "cli | skills | plugin | research — how the tool integrates",
+      "requiresGpu": "Optional boolean — flags tools needing GPU hardware"
+    }
+  },
+  "tools": [
+    {
+      "name": "kilo-cli",
+      "repo": "https://github.com/Kilo-Org/kilocode",
+      "description": "Kilo CLI — agentic engineering platform with 500+ AI models, code generation, and multi-mode agents (Architect, Coder, Debugger).",
+      "installCmd": "npm install -g @kilocode/cli",
+      "platform": "both",
+      "type": "cli"
+    },
+    {
+      "name": "gsd",
+      "repo": "https://github.com/gsd-build/get-shit-done",
+      "description": "Get Shit Done — meta-prompting, context engineering, and spec-driven development system for Cursor. Installs slash commands into .cursor/commands/gsd/.",
+      "installCmd": "npx get-shit-done-cursor --cursor --local",
+      "platform": "both",
+      "type": "plugin"
+    },
+    {
+      "name": "anthropics-skills",
+      "repo": "https://github.com/anthropics/skills",
+      "description": "Official Anthropic agent skills — folders of instructions and scripts that improve AI performance on specialized tasks (creative, technical, enterprise workflows).",
+      "installCmd": "echo 'Skills cloned. Copy desired skill folders from .tools-cache/anthropics-skills/skills/ into .cursor/skills/ manually or via the bootstrapper.'",
+      "platform": "both",
+      "type": "skills"
+    },
+    {
+      "name": "autoresearch",
+      "repo": "https://github.com/karpathy/autoresearch",
+      "description": "Karpathy's autonomous ML research agent — modifies code, trains for 5min, checks improvement, repeats. Requires single NVIDIA GPU + Python 3.10+ + uv.",
+      "installCmd": "uv sync",
+      "platform": "unix",
+      "type": "research",
+      "requiresGpu": true
+    }
+  ],
+  "_template": {
+    "_comment": "Copy this object into the 'tools' array above, fill in your values, and re-run the bootstrapper.",
+    "name": "your-tool-name",
+    "repo": "https://github.com/your-org/your-repo",
+    "description": "What this tool does inside your Cursor workspace.",
+    "installCmd": "npm install -g your-cli-name",
+    "platform": "both",
+    "type": "cli"
+  }
+}

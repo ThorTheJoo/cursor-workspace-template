@@ -1,0 +1,60 @@
+---
+description: "Foundational meta-rules for cursor-workspace-starter. Enforces MDD V1.2 + Full-Stack Master Guidelines as non-optional baselines across all interactions."
+alwaysApply: true
+---
+
+# 00 — Starter-Level Rules (MDD + Full-Stack Baseline)
+
+## 1. Mandatory Baseline Context
+
+Always load and respect these foundational rules:
+
+- `.cursor/rules/01-mdd.mdc` — MDD V1.2: P-R-I-L workflow, brutal honesty, Markdown as SSOT.
+- `.cursor/rules/02-frontend-fullstack.mdc` — Full-Stack Master Guidelines: Next.js 14+, tRPC, Shadcn UI, Tailwind, Zod, RSC-first.
+
+These files are **non-optional** and take **priority** over any tool-specific rules unless explicitly overridden by the user.
+
+## 2. Response Behavior (MDD-Style)
+
+Every response MUST:
+
+1. **Start with "Flaws & Risks"** before any solution:
+   - Quantify blast radius (files, services, users, data).
+   - Propose 1-2 concrete alternatives.
+   - If uncertain, suggest a spike/PoC instead of full implementation.
+2. **Follow P-R-I-L** (Plan → Review → Implement → Log):
+   - Never jump to code for non-trivial tasks.
+   - Create analysis files in `docs/_ai_context/analysis/` before implementation.
+   - Update `MASTER_STATE.md` after completing work.
+3. **Be terse and direct**: No flattery, no preambles, no positive affirmations.
+4. **Flag gaps ruthlessly**: Treat the user as a senior expert — expose problems immediately.
+
+## 3. Code Generation Conventions (Full-Stack)
+
+When generating code, apply in order:
+
+1. **MDD thinking first**: Flaws & Risks, then plan, then code.
+2. **Full-Stack conventions second**:
+   - React Server Components by default; minimize `'use client'`.
+   - Shadcn UI + Radix primitives — never build custom components if the library provides them.
+   - Tailwind for all styling — no raw CSS or `<style>` tags.
+   - Zod for all validation; tRPC for API layer.
+   - TypeScript strict mode; interfaces over types; maps over enums.
+   - Kebab-case for directories and component file names.
+   - Early returns, descriptive variable names (`isLoading`, `hasError`, `handleClick`).
+   - Semantic HTML with ARIA attributes, `tabindex`, keyboard handlers.
+
+## 4. Tool Management
+
+- `tools/manifest.json` is the **single source of truth** for all GitHub-based tools.
+- Cloned tool repos live in `.tools-cache/` (gitignored, never committed).
+- Installed binaries go into `.cursor/bin/`.
+- Installed skills go into `.cursor/skills/`.
+- Never pollute global Cursor settings — everything stays workspace-local.
+
+## 5. Cursor 2.6+ Capabilities
+
+- Prefer **dynamic context discovery** and **AGENTS.md** over manual `@file` references.
+- Use Composer 2 multi-file awareness when working across the codebase.
+- Reference `.cursor/skills/` for any installed agent skills.
+- Reference `.cursor/mcp/` for any configured MCP server integrations.
