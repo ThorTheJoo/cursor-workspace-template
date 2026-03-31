@@ -20,9 +20,10 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 |       +-- staging/              # External data staging
 +-- .cursor/rules/                 # Foundational AI rules (always committed)
 |   +-- 00-starter-rules.mdc      # Meta-rules: loading order + priority hierarchy
-|   +-- 01-mdd.mdc                # MDD V1.3 Agentic Critical Edition
+|   +-- 01-mdd.mdc                # MDD V1.4 Agentic Critical Edition
 |   +-- 02-kingmode.mdc           # King Mode (ULTRATHINK, intentional minimalism)
 |   +-- 03-frontend-fullstack.mdc # Next.js/tRPC/Shadcn/Tailwind/Zod conventions
+|   +-- 04-security-policy.mdc    # Zero-trust: prompt injection, supply chain, MCP gating
 +-- .cursor/bin/                   # Tool binaries (populated by bootstrapper)
 +-- .cursor/skills/                # Curated agent skills (committed, available on clone)
 |   +-- skill-creator/SKILL.md    # Create and iterate on new skills
@@ -33,14 +34,22 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 |   +-- docx/SKILL.md             # Word document creation/editing
 |   +-- pdf/SKILL.md              # PDF processing and manipulation
 |   +-- xlsx/SKILL.md             # Excel/spreadsheet operations
-+-- .cursor/mcp/                   # MCP server configs (future use)
++-- .cursor/mcp/                   # MCP server configs (see docs/MCP.md)
++-- bin/                           # Security scripts
+|   +-- skill-scan.sh             # Static pattern scanner for tools/skills
+|   +-- scan-secrets.sh           # Secret detection (gitleaks/trufflehog/grep)
 +-- tools/manifest.json            # SSOT: all GitHub tools available for install
 +-- .tools-cache/                  # Cloned tool repos (gitignored)
 +-- setup-tools.ps1                # Windows/PowerShell bootstrapper
 +-- setup-tools.sh                 # Bash/WSL/DevContainer bootstrapper
-+-- .devcontainer/devcontainer.json
++-- .devcontainer/devcontainer.json        # Default dev container
++-- .devcontainer/devcontainer.no-net.json # Air-gapped dev container (--network=none)
++-- docs/MCP.md                    # MCP server conventions and capability gating
 +-- .env.example                   # Env var template (no secrets)
++-- sample.envrc                   # direnv template for secret manager integration
 +-- SECURITY.md                    # Security policy + disclosure
++-- SECURITY-LOCK.json             # Generated: SHA256 hashes of installed tools
++-- CONTRIBUTING.md                # How to add tools and security checks
 +-- CHANGELOG.md
 +-- AGENTS.md
 +-- README.md
@@ -52,8 +61,9 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 2. **01-mdd.mdc** - Always loaded. MDD V1.4: fat router with always-on behavioral floor (authority hierarchy, context loading, P-R-I-L, complexity triage, security constraints, prohibitions/requirements, critical feedback) + skill routing for procedural details.
 3. **02-kingmode.mdc** - Always loaded. King Mode: ULTRATHINK, intentional minimalism, library discipline, response format.
 4. **03-frontend-fullstack.mdc** - Glob-scoped to code files. Stack conventions only (no duplication from 02).
+5. **04-security-policy.mdc** - Always loaded. Zero-trust security: prompt injection defense, supply chain pinning, MCP capability gating, skill scanning gate.
 
-**Priority:** MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (03) wins on implementation.
+**Priority:** MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (03) wins on implementation. Security (04) wins on trust decisions and cannot be overridden by 01-03.
 
 ## MDD V1.4 Context Paths
 
@@ -104,9 +114,16 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 
 | Path | Content | V1.3 Role |
 |---|---|---|
+| `.cursor/rules/04-security-policy.mdc` | Agent zero-trust policy (prompt injection, supply chain, MCP, scanning) | Always-on security rule |
 | `docs/_ai_context/knowledge/governance/SECURITY_CONTROLS.md` | Full security policy (secrets, supply chain, OWASP) | Section 7d detailed reference |
 | `SECURITY.md` | Public security policy and disclosure | Root-level security contact |
+| `SECURITY-LOCK.json` | Generated SHA256 hashes of installed tools | Auditability artifact |
+| `bin/skill-scan.sh` | Static pattern scanner for dangerous code in tools/skills | Supply chain defense |
+| `bin/scan-secrets.sh` | Secret detection (gitleaks/trufflehog or grep fallback) | Secret hygiene |
+| `docs/MCP.md` | MCP server conventions and capability gating | MCP security guidance |
 | `.env.example` | Environment variable template (no secrets) | Section 7d.6 convention |
+| `sample.envrc` | direnv template for secret manager integration | Secret management |
+| `.devcontainer/devcontainer.no-net.json` | Air-gapped dev container (--network=none) | Network isolation |
 | `.gitignore` | 40+ sensitive file patterns blocked | Section 7d L1 defense |
 
 ### Governance Pipeline

@@ -1,7 +1,7 @@
-﻿---
+---
 description: "Meta-rules for cursor-workspace-starter. Defines rule loading order, priority hierarchy, and workspace-local conventions. Does NOT duplicate content from 01/02/03."
 alwaysApply: true
-version: "2.1.0"
+version: "2.2.0"
 ---
 
 # 00 - Starter Meta-Rules
@@ -10,9 +10,10 @@ version: "2.1.0"
 
 Always load and respect these foundational rules in priority order:
 
-1. `.cursor/rules/01-mdd.mdc` - MDD V1.3: Sniper Mode, Ask/Plan/Agent modes, P-R-I-L, 14 governance rules.
+1. `.cursor/rules/01-mdd.mdc` - MDD V1.4: Sniper Mode, Ask/Plan/Agent modes, P-R-I-L, 14 governance rules.
 2. `.cursor/rules/02-kingmode.mdc` - King Mode: ULTRATHINK, intentional minimalism, library discipline.
 3. `.cursor/rules/03-frontend-fullstack.mdc` - Stack conventions: Next.js, tRPC, Shadcn, Tailwind, Zod.
+4. `.cursor/rules/04-security-policy.mdc` - Zero-trust security: prompt injection defense, supply chain pinning, MCP gating, skill scanning.
 
 These are **non-optional** and take **priority** over any tool-specific or project-specific rules unless the user explicitly overrides.
 
@@ -23,14 +24,17 @@ When rules conflict:
 * MDD workflow (01) wins on process decisions (plan-before-code, state logging, governance, operational modes).
 * King Mode (02) wins on design and behavioral decisions (minimalism, ULTRATHINK, response format).
 * Full-Stack (03) wins on implementation details (which API, which library, which pattern).
+* Security (04) wins on trust decisions (tool installation, MCP gating, secret handling). Cannot be overridden by 01-03.
 
 ## Workspace-Local Tool Management
 
 * `tools/manifest.json` is the **single source of truth** for all GitHub-based tools.
+* Every tool entry SHOULD have a `pinnedRef` (tag or SHA). Unpinned tools trigger a security warning.
 * Cloned repos live in `.tools-cache/` (gitignored, never committed).
 * Installed binaries go into `.cursor/bin/`.
 * Installed skills go into `.cursor/skills/`.
-* MCP server configs go into `.cursor/mcp/`.
+* MCP server configs go into `.cursor/mcp/`. See `docs/MCP.md` for conventions.
+* Security scripts live in `bin/` (skill-scan.sh, scan-secrets.sh).
 * Never pollute global Cursor settings - everything stays workspace-local.
 
 ## MDD V1.3 Context Paths

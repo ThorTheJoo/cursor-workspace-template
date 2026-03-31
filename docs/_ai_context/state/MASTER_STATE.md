@@ -10,24 +10,30 @@ traceability_id: "WS-001-cursor-workspace-starter"
 # MASTER_STATE.md
 
 **Last Updated:** 2026-03-31
-**Version:** 2.5.0
+**Version:** 2.6.0
 
 ## Current Workspace State
 
-**Cursor Workspace Starter** template repository (v2.5.0). Portable, zero-global-pollution foundation for Cursor IDE workspaces. Powered by MDD V1.4 (fat router + skills) with full artifact suite, continuous improvement loop, 8 curated agent skills, and 9 portable MDD methodology skills.
+**Cursor Workspace Starter** template repository (v2.6.0). Portable, zero-global-pollution foundation for Cursor IDE workspaces. Powered by MDD V1.4 (fat router + skills) with full artifact suite, continuous improvement loop, 8 curated agent skills, 9 portable MDD methodology skills, and zero-trust security hardening.
 
 ### Core Components
 
 | Component | Status | Version | Notes |
 |---|---|---|---|
-| `.cursor/rules/00-starter-rules.mdc` | Active | 2.0.0 | Thin orchestrator: loading order + priority resolution |
+| `.cursor/rules/00-starter-rules.mdc` | Active | 2.2.0 | Thin orchestrator: loading order + priority resolution |
 | `.cursor/rules/01-mdd.mdc` | Active | 1.4.0 | Fat router: always-on behavioral floor + security constraints + skill routing |
 | `.cursor/rules/02-kingmode.mdc` | Active | 1.1.0 | King Mode: ULTRATHINK, intentional minimalism |
 | `.cursor/rules/03-frontend-fullstack.mdc` | Active | 1.1.0 | Stack conventions only (no duplication) |
-| `tools/manifest.json` | Valid | - | 5 tools defined, JSON validated |
-| `setup-tools.sh` / `setup-tools.ps1` | Enhanced | - | Creates all 11 MDD dirs + validates manifest |
+| `.cursor/rules/04-security-policy.mdc` | Active | 1.0.0 | Zero-trust: prompt injection, supply chain, MCP gating, skill scanning |
+| `tools/manifest.json` | Valid | - | 5 tools + pinnedRef/requiresApproval/skillScan fields |
+| `setup-tools.sh` / `setup-tools.ps1` | Enhanced | - | --help, --dry-run, --preset, --all, --none flags + SECURITY-LOCK.json |
+| `bin/skill-scan.sh` | Active | 1.0.0 | Static pattern scanner for dangerous code in tools/skills |
+| `bin/scan-secrets.sh` | Active | 1.0.0 | Secret detection (gitleaks/trufflehog/grep fallback) |
 | `.cursor/skills/` | Complete | - | 8 curated skills + 9 portable MDD skills (committed) |
 | `docs/_ai_context/` | Complete | - | Full V1.4 structure (11 subdirs, 35+ artifacts) |
+| `CONTRIBUTING.md` | Active | - | How to add tools and security checks |
+| `docs/MCP.md` | Active | - | MCP server conventions and capability gating |
+| `.devcontainer/devcontainer.no-net.json` | Active | - | Air-gapped dev container (--network=none) |
 
 ### Rule Hierarchy (Zero Duplication)
 
@@ -36,20 +42,21 @@ traceability_id: "WS-001-cursor-workspace-starter"
   +-- 01-mdd.mdc       (process: V1.4 fat router — behavioral floor + security + skill routing)
   +-- 02-kingmode.mdc   (design: minimalism, ULTRATHINK, library discipline)
   +-- 03-frontend-fullstack.mdc  (implementation: Next.js, tRPC, Shadcn, Zod)
+  +-- 04-security-policy.mdc     (trust: zero-trust, supply chain, MCP gating)
 ```
 
-Priority: MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (03) wins on implementation.
+Priority: MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (03) wins on implementation. Security (04) wins on trust decisions.
 
 ### Wiring Summary
 
 | Layer | Artifacts | Wired To |
 |---|---|---|
-| Rules (behavioral) | 4 .mdc files | Cross-reference knowledge/templates via inline refs |
+| Rules (behavioral) | 5 .mdc files | Cross-reference knowledge/templates via inline refs |
 | Knowledge (reference) | 7 docs (triage, modes, anti-patterns, governance, improvement, manifest spec, feature spec) | Referenced by rules + templates |
 | Templates (artifact generation) | 9 templates (plan, pre-plan, completion, debug, runbook, ADR, 3 response formats) | Used by P-R-I-L-L workflow |
 | Prompts (reusable) | SESSION_START, PROMPT_INDEX, CONTEXT_MANIFEST, MULTI_PHASE_GUIDELINES | Referenced by rules + knowledge |
 | State (SSOT) | MASTER_STATE, WORK_LOG, BACKLOG, repo-manifest.json | Updated by every non-trivial task |
-| Security (defense-in-depth) | SECURITY_CONTROLS.md, 10 security anti-patterns, .gitignore (40+ patterns), .env.example, SECURITY.md, bootstrapper hardening | Enforced by 01-mdd.mdc Section 6 (always-on) + wired into all templates |
+| Security (defense-in-depth) | 04-security-policy.mdc, SECURITY_CONTROLS.md, 10 security anti-patterns, .gitignore (40+ patterns), .env.example, SECURITY.md, SECURITY-LOCK.json, bin/skill-scan.sh, bin/scan-secrets.sh, devcontainer.no-net.json, bootstrapper hardening | Enforced by 01-mdd.mdc Section 6 + 04-security-policy.mdc (always-on) + wired into all templates |
 | Governance (feedback loop) | CONTINUOUS_IMPROVEMENT_PROTOCOL, PENDING_UPDATES, UPDATE_HISTORY, ROLLBACK_LOG, GOVERNANCE_POLICY | Triggered after every task (Learn step) |
 | Skills (agent capabilities) | 17 SKILL.md files (8 curated + 9 portable MDD methodology skills) | Triggered by description match; portable MDD skills provide on-demand workflow depth |
 | Bootstrappers | setup-tools.sh/ps1 | Create MDD directory structure + seed state files from skill assets + validate manifest + install tools |

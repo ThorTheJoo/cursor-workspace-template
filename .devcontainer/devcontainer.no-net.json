@@ -1,0 +1,29 @@
+{
+  "name": "Cursor Workspace Starter (Air-Gapped)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--network=none"],
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "chmod +x setup-tools.sh && echo '\\n[OK] Air-gapped container ready. Network is disabled.\\nRun: ./setup-tools.sh --preset=airgapped\\n'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "typescript.preferences.importModuleSpecifier": "non-relative"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

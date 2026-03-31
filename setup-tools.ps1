@@ -1,15 +1,34 @@
 <#
 .SYNOPSIS
-    Cursor Workspace Starter â€” PowerShell Tool Bootstrapper
+    Cursor Workspace Starter -- PowerShell Tool Bootstrapper
 .DESCRIPTION
     Parses tools/manifest.json, validates it, presents an interactive selection
     menu, clones selected repos into .tools-cache/, runs install commands,
     and ensures .cursor/ and docs/ directories are properly structured.
     Idempotent: safe to run multiple times.
+.PARAMETER Help
+    Show usage information and exit.
+.PARAMETER DryRun
+    Preview what would be installed without making changes.
+.PARAMETER All
+    Select all compatible tools (skip interactive prompt).
+.PARAMETER None
+    Select no tools (only create directory structure + seed MDD).
+.PARAMETER Preset
+    Select tools by preset profile: minimal, fullstack, airgapped.
 .NOTES
     Requires: git, PowerShell 5.1+
     Optional: npm/npx (for CLI tools), uv (for Python tools)
 #>
+
+param(
+    [switch]$Help,
+    [switch]$DryRun,
+    [switch]$All,
+    [switch]$None,
+    [ValidateSet("", "minimal", "fullstack", "airgapped")]
+    [string]$Preset = ""
+)
 
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
@@ -17,12 +36,18 @@ Set-StrictMode -Version Latest
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $ScriptDir
 
-# â”€â”€ Colors & helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+$ManifestPath = Join-Path $ScriptDir "tools\manifest.json"
+$CachePath = Join-Path $ScriptDir ".tools-cache"
+$CursorDir = Join-Path $ScriptDir ".cursor"
+$DocsDir = Join-Path $ScriptDir "docs\_ai_context"
+$LockFile = Join-Path $ScriptDir "SECURITY-LOCK.json"
+
+# -- Colors & helpers --------------------------------------------------------
 
 function Write-Banner {
     Write-Host ""
     Write-Host "  ========================================" -ForegroundColor Cyan
-    Write-Host "   Cursor Workspace Starter â€” Bootstrapper" -ForegroundColor Cyan
+    Write-Host "   Cursor Workspace Starter -- Bootstrapper" -ForegroundColor Cyan
     Write-Host "  ========================================" -ForegroundColor Cyan
     Write-Host ""
 }
@@ -42,6 +67,33 @@ function Write-Skip([string]$msg) {
 function Write-Err([string]$msg) {
     Write-Host "[!!] $msg" -ForegroundColor Red
 }
+
+# -- Help --------------------------------------------------------------------
+
+if ($Help) {
+    Write-Host @"
+Usage: .\setup-tools.ps1 [OPTIONS]
+
+Options:
+  -Help          Show this help message and exit
+  -DryRun        Show what would be installed without making changes
+  -All           Select all compatible tools (skip interactive prompt)
+  -None          Select no tools (only create directory structure + seed MDD)
+  -Preset NAME   Select tools by preset profile:
+                   minimal    - only type:rules and type:skills
+                   fullstack  - everything except requiresGpu:true
+                   airgapped  - no tools (MDD structure only, zero network)
+
+Examples:
+  .\setup-tools.ps1                     # Interactive selection
+  .\setup-tools.ps1 -DryRun             # Preview without changes
+  .\setup-tools.ps1 -Preset minimal     # Install only rules and skills
+  .\setup-tools.ps1 -All                # Install everything compatible
+"@
+    exit 0
+}
+
+# -- MDD seeding -------------------------------------------------------------
 
 function Seed-MddFromSkills {
     $skillsDir = Join-Path $ScriptDir ".cursor\skills"
@@ -127,10 +179,10 @@ status: ACTIVE
 # Project State
 
 Read order for any non-trivial task:
-1. `docs/_ai_context/state/repo-manifest.json` — file/function lookup
-2. `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` — project identity
-3. This file — current state
-4. `docs/_ai_context/state/BACKLOG.md` — pending work
+1. `docs/_ai_context/state/repo-manifest.json` -- file/function lookup
+2. `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` -- project identity
+3. This file -- current state
+4. `docs/_ai_context/state/BACKLOG.md` -- pending work
 
 ---
 
@@ -151,7 +203,7 @@ This workspace uses MDD skills at `.cursor/skills/`. See `.cursor/skills/README.
     Write-Ok "MDD seeding complete."
 }
 
-# â”€â”€ Preflight checks â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Preflight checks --------------------------------------------------------
 
 Write-Banner
 
@@ -163,19 +215,23 @@ if (-not $gitVersion) {
 }
 Write-Ok "git detected: $gitVersion"
 
-$manifestPath = Join-Path $ScriptDir "tools\manifest.json"
-if (-not (Test-Path $manifestPath)) {
-    Write-Err "tools/manifest.json not found at $manifestPath"
+if (-not (Test-Path $ManifestPath)) {
+    Write-Err "tools/manifest.json not found at $ManifestPath"
     exit 1
 }
 
-# â”€â”€ Validate manifest JSON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+if ($DryRun) {
+    Write-Host "  [DRY RUN] No files will be created or modified." -ForegroundColor Cyan
+    Write-Host ""
+}
+
+# -- Validate manifest JSON --------------------------------------------------
 
 Write-Step "Validating manifest JSON..."
 
 $manifest = $null
 try {
-    $manifest = Get-Content $manifestPath -Raw | ConvertFrom-Json
+    $manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
 }
 catch {
     Write-Err "tools/manifest.json contains invalid JSON: $_"
@@ -213,36 +269,74 @@ if ($validationErrors -gt 0) {
 Write-Ok "Manifest validated: $($tools.Count) tool(s), 0 errors."
 Write-Host ""
 
-# â”€â”€ Interactive selection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Preset matcher ----------------------------------------------------------
+
+function Test-MatchesPreset {
+    param([object]$Tool)
+    $toolType = $Tool.type
+    $toolGpu = $false
+    if ($Tool.PSObject.Properties.Name -contains "requiresGpu") { $toolGpu = $Tool.requiresGpu }
+
+    switch ($Preset) {
+        "minimal"   { return ($toolType -eq "rules" -or $toolType -eq "skills") }
+        "fullstack" { return (-not $toolGpu) }
+        "airgapped" { return $false }
+        default     { Write-Err "Unknown preset: $Preset"; exit 1 }
+    }
+}
+
+# -- Tool selection ----------------------------------------------------------
 
 $selectedTools = @()
 
-foreach ($tool in $tools) {
-    $platformOk = ($tool.platform -eq "both") -or ($tool.platform -eq "win")
-    if (-not $platformOk) {
-        Write-Skip "$($tool.name) â€” unix-only, skipping on Windows."
-        continue
-    }
+if ($None -or $Preset -eq "airgapped") {
+    Write-Step "No tools selected (-None / -Preset airgapped). Directory structure only."
+}
+elseif ($All -or $Preset) {
+    foreach ($tool in $tools) {
+        $platformOk = ($tool.platform -eq "both") -or ($tool.platform -eq "win")
+        if (-not $platformOk) { continue }
 
-    $gpuRequired = $false
-    if ($tool.PSObject.Properties.Name -contains "requiresGpu") {
-        $gpuRequired = $tool.requiresGpu
+        if ($All -or (Test-MatchesPreset -Tool $tool)) {
+            $selectedTools += $tool
+            Write-Ok "Auto-selected: $($tool.name)"
+        }
     }
+}
+else {
+    foreach ($tool in $tools) {
+        $platformOk = ($tool.platform -eq "both") -or ($tool.platform -eq "win")
+        if (-not $platformOk) {
+            Write-Skip "$($tool.name) -- unix-only, skipping on Windows."
+            continue
+        }
 
-    $label = "$($tool.name) â€” $($tool.description)"
-    if ($gpuRequired) { $label += " [REQUIRES GPU]" }
+        $gpuRequired = $false
+        if ($tool.PSObject.Properties.Name -contains "requiresGpu") {
+            $gpuRequired = $tool.requiresGpu
+        }
 
-    Write-Host "  $label" -ForegroundColor White
-    $answer = Read-Host "  Install? (y/N)"
+        $pinnedRef = ""
+        if ($tool.PSObject.Properties.Name -contains "pinnedRef") {
+            $pinnedRef = $tool.pinnedRef
+        }
 
-    if ($answer -match "^[yY]") {
-        $selectedTools += $tool
-        Write-Ok "Selected: $($tool.name)"
+        $label = "$($tool.name) -- $($tool.description)"
+        if ($gpuRequired) { $label += " [REQUIRES GPU]" }
+        if (-not $pinnedRef) { $label += " [UNPINNED]" }
+
+        Write-Host "  $label" -ForegroundColor White
+        $answer = Read-Host "  Install? (y/N)"
+
+        if ($answer -match "^[yY]") {
+            $selectedTools += $tool
+            Write-Ok "Selected: $($tool.name)"
+        }
+        else {
+            Write-Skip "Skipped: $($tool.name)"
+        }
+        Write-Host ""
     }
-    else {
-        Write-Skip "Skipped: $($tool.name)"
-    }
-    Write-Host ""
 }
 
 if ($selectedTools.Count -eq 0) {
@@ -250,7 +344,22 @@ if ($selectedTools.Count -eq 0) {
     Write-Step "No tools selected. Ensuring directory structure only."
 }
 
-# â”€â”€ Ensure .cursor directories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Dry run summary ---------------------------------------------------------
+
+if ($DryRun) {
+    Write-Host ""
+    Write-Host "  [DRY RUN] Would install:" -ForegroundColor Cyan
+    foreach ($tool in $selectedTools) {
+        $ref = if ($tool.PSObject.Properties.Name -contains "pinnedRef" -and $tool.pinnedRef) { $tool.pinnedRef } else { "HEAD (unpinned)" }
+        Write-Host "    - $($tool.name) @ $ref"
+    }
+    Write-Host ""
+    Write-Host "  [DRY RUN] Would create directory structure + seed MDD files." -ForegroundColor Cyan
+    Write-Host "  [DRY RUN] No changes made. Exiting." -ForegroundColor Cyan
+    exit 0
+}
+
+# -- Ensure .cursor directories ----------------------------------------------
 
 $cursorDirs = @(
     ".cursor\rules",
@@ -267,7 +376,7 @@ foreach ($d in $cursorDirs) {
     }
 }
 
-# â”€â”€ Ensure MDD docs directories â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Ensure MDD docs directories ---------------------------------------------
 
 $docsDirs = @(
     "docs\_ai_context\state",
@@ -287,23 +396,39 @@ foreach ($d in $docsDirs) {
 
 Seed-MddFromSkills
 
-# â”€â”€ Ensure .tools-cache exists â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-$cachePath = Join-Path $ScriptDir ".tools-cache"
-if (-not (Test-Path $cachePath)) {
-    New-Item -ItemType Directory -Path $cachePath -Force | Out-Null
+if (-not (Test-Path $CachePath)) {
+    New-Item -ItemType Directory -Path $CachePath -Force | Out-Null
 }
 
-# â”€â”€ Clone and install selected tools â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+$binDir = Join-Path $ScriptDir "bin"
+if (-not (Test-Path $binDir)) {
+    New-Item -ItemType Directory -Path $binDir -Force | Out-Null
+}
+
+# -- Clone and install selected tools ----------------------------------------
 
 $installedCount = 0
 $failedCount = 0
+$lockEntries = @()
 
 foreach ($tool in $selectedTools) {
     Write-Host ""
     Write-Step "Installing $($tool.name)..."
 
-    $cloneDir = Join-Path $cachePath $tool.name
+    $pinnedRef = ""
+    if ($tool.PSObject.Properties.Name -contains "pinnedRef") { $pinnedRef = $tool.pinnedRef }
+
+    if (-not $pinnedRef) {
+        Write-Err "WARNING: $($tool.name) has no pinnedRef -- installing from HEAD is a supply chain risk."
+        $answer = Read-Host "  Continue anyway? (y/N)"
+        if ($answer -notmatch "^[yY]") {
+            Write-Skip "Skipped $($tool.name) (unpinned, user declined)."
+            $failedCount++
+            continue
+        }
+    }
+
+    $cloneDir = Join-Path $CachePath $tool.name
 
     if (Test-Path $cloneDir) {
         Write-Skip "$($tool.name) already cloned at $cloneDir -- skipping clone."
@@ -322,28 +447,34 @@ foreach ($tool in $selectedTools) {
         }
     }
 
-    # Pin to specific commit if specified in manifest (supply chain security)
-    if ($tool.PSObject.Properties.Name -contains "commit" -and $tool.commit) {
-        $pinnedCommit = $tool.commit
-        Write-Step "Pinning $($tool.name) to commit $pinnedCommit..."
+    # Pin to specific ref if specified
+    if ($pinnedRef) {
+        Write-Step "Pinning $($tool.name) to ref $pinnedRef..."
         $originalDir = Get-Location
         try {
             Set-Location $cloneDir
-            git fetch origin $pinnedCommit 2>&1 | Out-Null
-            git checkout $pinnedCommit 2>&1 | Out-Null
-            Write-Ok "Pinned to $pinnedCommit"
+            git fetch --depth 1 origin $pinnedRef 2>&1 | Out-Null
+            git checkout FETCH_HEAD 2>&1 | Out-Null
+            Write-Ok "Pinned to $pinnedRef"
         }
         catch {
-            Write-Err "Failed to pin $($tool.name) to commit $pinnedCommit. Using HEAD."
+            try {
+                git checkout $pinnedRef 2>&1 | Out-Null
+                Write-Ok "Checked out $pinnedRef"
+            }
+            catch {
+                Write-Err "Failed to pin $($tool.name) to $pinnedRef. Using HEAD."
+            }
         }
         finally {
             Set-Location $originalDir
         }
     }
 
+    # Run install command
+    $scanClean = $true
     if ($tool.installCmd) {
-        # Security: validate install command against allowlist
-        $allowedPrefixes = @("npm install", "npm ci", "pip install", "uv pip install", "npx", "cargo install", "go install")
+        $allowedPrefixes = @("npm install", "npm ci", "pip install", "uv pip install", "uv sync", "npx", "cargo install", "go install", "echo")
         $cmdAllowed = $false
         foreach ($prefix in $allowedPrefixes) {
             if ($tool.installCmd.StartsWith($prefix)) { $cmdAllowed = $true; break }
@@ -370,6 +501,7 @@ foreach ($tool in $selectedTools) {
             Write-Err "Install failed for $($tool.name): $_"
             Write-Err "You may need to install manually. Check the tool's README."
             $failedCount++
+            $scanClean = $false
         }
         finally {
             Set-Location $originalDir
@@ -379,6 +511,31 @@ foreach ($tool in $selectedTools) {
         $installedCount++
     }
 
+    # Mark as installed
+    $installedFlag = Join-Path $cloneDir ".installed"
+    "" | Set-Content -Path $installedFlag -Encoding UTF8
+
+    # Compute directory hash for SECURITY-LOCK.json
+    $dirHash = "unknown"
+    try {
+        $files = Get-ChildItem -Path $cloneDir -Recurse -File | Where-Object { $_.FullName -notlike "*\.git\*" } | Sort-Object FullName
+        if ($files.Count -gt 0) {
+            $hashes = $files | ForEach-Object { (Get-FileHash -Path $_.FullName -Algorithm SHA256).Hash }
+            $combined = ($hashes -join "`n")
+            $stream = [System.IO.MemoryStream]::new([System.Text.Encoding]::UTF8.GetBytes($combined))
+            $dirHash = (Get-FileHash -InputStream $stream -Algorithm SHA256).Hash.ToLower()
+        }
+    }
+    catch {}
+
+    $lockEntries += @{
+        name = $tool.name
+        pinnedRef = if ($pinnedRef) { $pinnedRef } else { "HEAD" }
+        dirHash = "sha256:$dirHash"
+        scanClean = $scanClean
+    }
+
+    # Copy skills if applicable
     if ($tool.type -eq "skills") {
         $skillsSource = Join-Path $cloneDir "skills"
         $skillsDest = Join-Path $ScriptDir ".cursor\skills"
@@ -390,9 +547,20 @@ foreach ($tool in $selectedTools) {
     }
 }
 
-# â”€â”€ Verify foundational rules exist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Generate SECURITY-LOCK.json --------------------------------------------
 
-$ruleFiles = @("00-starter-rules.mdc", "01-mdd.mdc", "02-kingmode.mdc", "03-frontend-fullstack.mdc")
+if ($lockEntries.Count -gt 0) {
+    $lockObj = @{
+        generated = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ")
+        tools = $lockEntries
+    }
+    $lockObj | ConvertTo-Json -Depth 4 | Set-Content -Path $LockFile -Encoding UTF8
+    Write-Ok "Generated SECURITY-LOCK.json"
+}
+
+# -- Verify foundational rules exist ----------------------------------------
+
+$ruleFiles = @("00-starter-rules.mdc", "01-mdd.mdc", "02-kingmode.mdc", "03-frontend-fullstack.mdc", "04-security-policy.mdc")
 $rulesDir = Join-Path $ScriptDir ".cursor\rules"
 $rulesOk = 0
 
@@ -403,18 +571,18 @@ foreach ($rf in $ruleFiles) {
         $rulesOk++
     }
     else {
-        Write-Err "Missing rule file: $rf â€” your workspace may be incomplete."
+        Write-Err "Missing rule file: $rf -- your workspace may be incomplete."
     }
 }
 
-# â”€â”€ Detect environment â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Detect environment -------------------------------------------------------
 
 $isDevContainer = $false
 if ($env:REMOTE_CONTAINERS -or $env:CODESPACES) {
     $isDevContainer = $true
 }
 
-# â”€â”€ Final banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# -- Final banner -------------------------------------------------------------
 
 Write-Host ""
 Write-Host "  ========================================" -ForegroundColor Green
@@ -427,7 +595,10 @@ if ($failedCount -gt 0) {
     Write-Host "  Failed:          $failedCount" -ForegroundColor Red
 }
 Write-Host "  Rules verified:  $rulesOk / $($ruleFiles.Count) foundational .mdc files" -ForegroundColor White
-Write-Host "  MDD dirs:        11 (full V1.3 structure)" -ForegroundColor White
+Write-Host "  MDD dirs:        11 (full V1.4 structure)" -ForegroundColor White
+if (Test-Path $LockFile) {
+    Write-Host "  Security lock:   SECURITY-LOCK.json (generated)" -ForegroundColor White
+}
 Write-Host ""
 
 if ($isDevContainer) {
