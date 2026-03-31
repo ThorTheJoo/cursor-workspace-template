@@ -3,13 +3,44 @@ document_type: STATE
 status: ACTIVE
 reviewer:
   accountable: "thagra01"
-compliance_tags: ["MDD-V1.3"]
+compliance_tags: ["MDD-V1.4"]
 traceability_id: "WS-001-cursor-workspace-starter"
 ---
 
 # WORK_LOG
 
 Chronological record of all significant workspace changes.
+
+---
+
+## 2026-03-31 — v2.5.0: MDD V1.4 Fat Router + Security Floor
+
+* **Scope:** Replaced slim 01-mdd.mdc router (~54 lines, ~540 tokens) with fat router V1.4 (~165 lines, ~2K tokens). Restores always-on behavioral floor (authority hierarchy, context loading, P-R-I-L, complexity triage, prohibitions, required actions, critical feedback) that the slim router had incorrectly delegated to voluntary skill activation. Added Section 6 with compact security constraints (secret prevention, agent security, supply chain) that were entirely absent from the slim router. Archived slim router alongside previously archived V1.3 full rule.
+* **Status:** COMPLETE
+* **Duration:** ~30 min
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `.cursor/rules/01-mdd.mdc` | Replaced slim router with fat router V1.4 (~165 lines) |
+| `docs/_ai_context/analysis/archive/01-mdd-v1.3-slim-router.mdc` | Archived slim router for reference |
+| `docs/_ai_context/state/MASTER_STATE.md` | Bumped to v2.5.0, updated rule description + version refs |
+| `AGENTS.md` | Updated rule hierarchy description to V1.4 |
+| `docs/_ai_context/state/WORK_LOG.md` | This entry |
+
+* **Validation Results:**
+  - Fat router line count within target range (160-200)
+  - All 9 skills referenced in routing table
+  - All behavioral keywords present (Authority Hierarchy, P-R-I-L, Complexity Triage, Prohibited, Required, Critical Feedback, Context Loading, MDD_ROOT, BACKLOG)
+  - Security section present with secret prevention, agent security, supply chain rules
+  - `alwaysApply: true` + `globs: "**/*"` in frontmatter
+* **Regression Risk:** LOW — additive vs slim router (restores constraints). 75% reduction vs full V1.3 (removes only procedural detail now covered by skills).
+* **Lessons Learned:**
+  - Slim router was architecturally wrong: skills are discovery-based, not enforcement-based. Behavioral constraints must live in always-applied rules.
+  - Security rules must be in the always-on floor — delegating them to on-demand skills means they don't apply to routine tasks.
+  - The user rule containing the full MDD masked the slim router's gaps during development; template consumers wouldn't have that safety net.
+  - Fat router design principle: **rules enforce behavior, skills provide procedures.**
+* **Next Steps:** Consider slimming personal user rule (full MDD V1.3) now that workspace fat router covers the behavioral floor.
 
 ---
 

@@ -1,0 +1,53 @@
+---
+description: "MDD Protocol — slim router delegating to .cursor/skills/ for detailed methodology"
+alwaysApply: true
+---
+
+# MDD Protocol (Router)
+
+This workspace uses **Markdown-Driven Development (MDD)**. All non-trivial work follows **Plan → Review → Implement → Log**. Keep the always-loaded rule minimal; load detailed methodology on-demand via skills.
+
+## Authority Hierarchy (Truth Precedence)
+
+| Rank | Source | Role |
+|---|---|---|
+| 1 | `docs/_ai_context/knowledge/` | Canonical domain truth |
+| 2 | `docs/_ai_context/state/` | Current execution state |
+| 3 | Manifests & indexes | Navigation only |
+| 4 | `.cursor/rules/` + `.cursor/skills/` | Behavioral guidance |
+
+## Skill Activation (When to Use What)
+
+| When you are… | Use this skill |
+|---|---|
+| Setting up MDD conventions / governance | `.cursor/skills/mdd-workflow` |
+| Creating plans / phase specs | `.cursor/skills/plan-generation` |
+| Executing a phase plan / running documented steps | `.cursor/skills/phase-execution` |
+| Parsing data files / consuming structured data | `.cursor/skills/data-verification` |
+| Starting a session / loading context efficiently | `.cursor/skills/context-loading` |
+| Managing canonical knowledge repositories | `.cursor/skills/knowledge-repo` |
+| Managing backlog and priorities | `.cursor/skills/backlog-management` |
+| Logging work + lessons learned | `.cursor/skills/work-logging` |
+| Improving prompts / workflow efficiency | `.cursor/skills/prompt-optimization` |
+
+## Directory Convention
+
+**MDD_ROOT = `docs/_ai_context`**
+
+- `docs/_ai_context/state/`: `MASTER_STATE.md`, `WORK_LOG.md`, `BACKLOG.md`, `repo-manifest.json`
+- `docs/_ai_context/analysis/`: plans, debug logs, completion docs (`archive/` for superseded)
+- `docs/_ai_context/prompts/`: reusable prompts (including `phases/`)
+- `docs/_ai_context/knowledge/`: canonical reference data (human approval for changes)
+- `docs/_ai_context/templates/`: standardized artifact templates
+
+To change the root path across skill files, run:
+
+```bash
+.cursor/skills/scripts/set-mdd-root.sh "your/custom/path/"
+```
+
+## Quick Prohibitions (Keep You Honest)
+
+- Don’t guess file paths; use manifests or search.
+- Don’t skip validation; run the gate checks you claim.
+- Don’t duplicate existing functionality; reuse before writing new code.

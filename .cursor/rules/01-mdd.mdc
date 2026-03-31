@@ -1,53 +1,188 @@
 ---
-description: "MDD Protocol — slim router delegating to .cursor/skills/ for detailed methodology"
+description: "MDD Protocol V1.4 — Always-on behavioral floor with skill routing. Enforces authority hierarchy, P-R-I-L, context loading, security constraints, and governance. Delegates procedural details to .cursor/skills/."
+globs: "**/*"
 alwaysApply: true
+version: "1.4.0"
 ---
 
-# MDD Protocol (Router)
+# MDD Protocol V1.4 (Behavioral Floor + Skill Router)
 
-This workspace uses **Markdown-Driven Development (MDD)**. All non-trivial work follows **Plan → Review → Implement → Log**. Keep the always-loaded rule minimal; load detailed methodology on-demand via skills.
+This workspace uses **Markdown-Driven Development (MDD)**: structured documentation as a
+first-class engineering artifact. AI agents lose context between sessions — MDD documentation
+IS the context. Plans, state files, and knowledge repos persist what agents need across sessions.
 
-## Authority Hierarchy (Truth Precedence)
+> **MDD_ROOT = `docs/_ai_context`** — All MDD files live under this path.
+> Change it with: `.cursor/skills/scripts/set-mdd-root.sh "your/path/"`
 
-| Rank | Source | Role |
-|---|---|---|
-| 1 | `docs/_ai_context/knowledge/` | Canonical domain truth |
-| 2 | `docs/_ai_context/state/` | Current execution state |
-| 3 | Manifests & indexes | Navigation only |
-| 4 | `.cursor/rules/` + `.cursor/skills/` | Behavioral guidance |
+---
 
-## Skill Activation (When to Use What)
+## 1. Authority Hierarchy (Non-Negotiable)
 
-| When you are… | Use this skill |
-|---|---|
-| Setting up MDD conventions / governance | `.cursor/skills/mdd-workflow` |
-| Creating plans / phase specs | `.cursor/skills/plan-generation` |
-| Executing a phase plan / running documented steps | `.cursor/skills/phase-execution` |
-| Parsing data files / consuming structured data | `.cursor/skills/data-verification` |
-| Starting a session / loading context efficiently | `.cursor/skills/context-loading` |
-| Managing canonical knowledge repositories | `.cursor/skills/knowledge-repo` |
-| Managing backlog and priorities | `.cursor/skills/backlog-management` |
-| Logging work + lessons learned | `.cursor/skills/work-logging` |
-| Improving prompts / workflow efficiency | `.cursor/skills/prompt-optimization` |
+When sources conflict, higher rank wins. This is constitutional — no exception.
 
-## Directory Convention
+| Rank | Source | Location | Rule |
+|------|--------|----------|------|
+| 1 | Knowledge Repository | `docs/_ai_context/knowledge/` | Canonical domain truth — human approval to change |
+| 2 | State Files | `docs/_ai_context/state/` | Current execution state — read before modifying |
+| 3 | Manifests & Indexes | `repo-manifest.json`, `CONTEXT_MANIFEST.md` | Navigation only — points to truth, doesn't define it |
+| 4 | Rules & Skills | `.cursor/rules/`, `.cursor/skills/` | Behavioral guidance — overridden by ranks 1-3 |
 
-**MDD_ROOT = `docs/_ai_context`**
+If a skill says "term X means Y" but a knowledge file says "term X means Z," the knowledge file wins.
 
-- `docs/_ai_context/state/`: `MASTER_STATE.md`, `WORK_LOG.md`, `BACKLOG.md`, `repo-manifest.json`
-- `docs/_ai_context/analysis/`: plans, debug logs, completion docs (`archive/` for superseded)
-- `docs/_ai_context/prompts/`: reusable prompts (including `phases/`)
-- `docs/_ai_context/knowledge/`: canonical reference data (human approval for changes)
-- `docs/_ai_context/templates/`: standardized artifact templates
+---
 
-To change the root path across skill files, run:
+## 2. Context Loading (Mandatory First Step)
 
-```bash
-.cursor/skills/scripts/set-mdd-root.sh "your/custom/path/"
+**Every session MUST begin with context loading.** Do not answer questions or write code
+until you have loaded the minimum context for the task.
+
+| Priority | File | When to Read |
+|----------|------|-------------|
+| 1 | `docs/_ai_context/state/repo-manifest.json` | Every session — file/function lookup |
+| 2 | `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Every session — project identity |
+| 3 | `docs/_ai_context/state/MASTER_STATE.md` | When implementing or investigating |
+| 4 | Target-specific files (on-demand) | Only what the current task needs |
+
+**Rules:**
+- NEVER read files over 500 lines without targeting a specific section
+- NEVER guess file paths — use the manifest or search tools
+- NEVER reinvent functionality — check existing capabilities first
+
+For the full context loading protocol: read `.cursor/skills/context-loading/SKILL.md`
+
+---
+
+## 3. P-R-I-L Workflow (Required for Non-Trivial Work)
+
+Every non-trivial change follows **Plan → Review → Implement → Log**.
+
+| Step | What Happens | Artifact |
+|------|-------------|----------|
+| **Plan** | Write a plan document appropriate to complexity | See triage below |
+| **Review** | Human checkpoint before implementation | Explicit approval for complex work |
+| **Implement** | Atomic changes scoped strictly to the plan | No scope creep |
+| **Log** | Update WORK_LOG.md, commit, create completion doc | Institutional memory |
+
+Skip P-R-I-L only for truly trivial changes (typo fixes, single-line config updates).
+
+---
+
+## 4. Complexity Triage (Assess Before Starting)
+
+| Complexity | Criteria | Required Artifact |
+|------------|----------|-------------------|
+| **Simple** | 1-2 steps, < 30 min | No formal plan |
+| **Medium** | 3-5 steps, < 2 hrs | Analysis file in `docs/_ai_context/analysis/` |
+| **Complex** | 6+ steps, 2+ hrs, validation gates | Phase plan in `docs/_ai_context/prompts/phases/` |
+
+**Quick rule:** > 2 hours OR > 5 steps OR intermediate validation needed → multi-phase plan.
+Jumping to code for a complex task without a plan is a governance violation.
+
+For plan writing: read `.cursor/skills/plan-generation/SKILL.md`
+For phase execution: read `.cursor/skills/phase-execution/SKILL.md`
+
+---
+
+## 5. Behavioral Constraints (Always Enforced)
+
+### Prohibited
+
+- Do NOT guess file paths — use the manifest or search tools
+- Do NOT skip validation gates — run every validation command before declaring done
+- Do NOT create scripts/modules without searching for existing ones (code reuse mandate)
+- Do NOT modify knowledge repository files without human approval (Rank 1 authority)
+- Do NOT leave MDD documentation inconsistent after changes
+- Do NOT bypass completion gates on phase work
+- Do NOT use `except: pass` or silent fallbacks on critical paths
+- Do NOT claim checks passed without actually running them
+
+### Required
+
+- ALWAYS search the codebase before writing new code
+- ALWAYS validate output before declaring done
+- ALWAYS update MDD docs (WORK_LOG, BACKLOG, state) after non-trivial changes
+- ALWAYS follow P-R-I-L for non-trivial work
+- ALWAYS use manifest or search for file navigation
+- ALWAYS verify data schemas before writing parsing code
+- ALWAYS log lessons learned after non-trivial work
+
+---
+
+## 6. Security Constraints (Always Enforced)
+
+**Secret prevention — violations are irrecoverable:**
+- NEVER write secrets, API keys, tokens, passwords, or private keys into any committed file
+- NEVER hardcode connection strings, database URLs with credentials, or auth tokens
+- NEVER generate placeholder secrets (e.g., `sk-xxxx`, `ghp_abc123`) — use `YOUR_API_KEY_HERE`
+- ALWAYS use environment variable references for secrets; use `.env.example` for templates
+
+**Agent security:**
+- NEVER disable security features in generated code (`--no-verify`, `NODE_TLS_REJECT_UNAUTHORIZED=0`, CORS `*`)
+- ALWAYS validate that generated code sanitizes user input (Zod, DOMPurify, parameterized queries)
+- Flag any dependency with known CVEs during implementation; propose alternatives
+
+**Supply chain:**
+- NEVER run `eval` or `Invoke-Expression` on untrusted input
+- Pin dependencies to specific versions; avoid `*` or `latest`
+
+> Full security policy: `docs/_ai_context/knowledge/governance/SECURITY_CONTROLS.md`
+> Security anti-patterns: `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md`
+
+---
+
+## 7. Critical Feedback (Before Any Meaningful Action)
+
+Before any meaningful action, include honest self-assessment:
+
+1. **Flaws & Risks** — Quantify blast radius. Name one alternative and its trade-off.
+2. **Self-critique** — What is the weakest part of this approach? How could it fail?
+3. **Self-verification** — Run tests/validation if they exist. Record results.
+
+No flattery. Direct and terse. If skipping verification, flag explicitly and explain why.
+
+---
+
+## 8. MDD Directory Structure
+
+```
+docs/_ai_context/
+├── state/              # MASTER_STATE, WORK_LOG, BACKLOG, indexes
+├── analysis/           # Plans, debug logs, completion docs
+│   └── archive/        # Superseded files (never delete, always move)
+├── prompts/            # Reusable prompts, workflow templates
+│   └── phases/         # Phase plans (PHASE_XX_NAME.md)
+├── knowledge/          # Canonical domain knowledge (Rank 1 authority)
+│   └── reference/      # Taxonomies, catalogs, schemas
+└── templates/          # Standardized output templates
 ```
 
-## Quick Prohibitions (Keep You Honest)
+---
 
-- Don’t guess file paths; use manifests or search.
-- Don’t skip validation; run the gate checks you claim.
-- Don’t duplicate existing functionality; reuse before writing new code.
+## 9. Skill Activation (On-Demand Deep Dives)
+
+For detailed procedures, templates, and scripts, activate the relevant skill:
+
+| When you need to... | Read this skill |
+|---------------------|----------------|
+| Set up a project with MDD, understand governance details | `mdd-workflow` |
+| Write a self-contained plan or phase spec | `plan-generation` |
+| Execute a plan file with pre-flight checks | `phase-execution` |
+| Write code that parses CSV, JSON, or extends data structures | `data-verification` |
+| Optimize context loading or create manifests | `context-loading` |
+| Create or govern a knowledge repository | `knowledge-repo` |
+| Track deferred work, groom priorities | `backlog-management` |
+| Log completed work with lessons learned | `work-logging` |
+| Improve prompts, plans, or skill descriptions | `prompt-optimization` |
+
+Skills live in `.cursor/skills/[name]/SKILL.md`. Read the SKILL.md file to activate.
+
+---
+
+## 10. Deferred Work
+
+Any discovered work that is out of current scope must go to `docs/_ai_context/state/BACKLOG.md`:
+- Format: `- [ ] [P1] Title – description. (source: <origin>).`
+- Priorities: P0 (blocking), P1 (next sprint), P2 (backlog), P3 (wishlist)
+- P0 items block the current phase. P1 items escalate to P0 after 2 phases.
+
+For backlog grooming and aging rules: read `.cursor/skills/backlog-management/SKILL.md`

@@ -49,13 +49,13 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 ## Rule Hierarchy
 
 1. **00-starter-rules.mdc** - Always loaded. Orchestrator: loading order, priority resolution, workspace paths. Zero behavioral content.
-2. **01-mdd.mdc** - Always loaded. MDD V1.3: Sniper Mode context loading, Ask/Plan/Agent modes, P-R-I-L, complexity triage, 14 governance rules, phase execution, authority hierarchy.
+2. **01-mdd.mdc** - Always loaded. MDD V1.4: fat router with always-on behavioral floor (authority hierarchy, context loading, P-R-I-L, complexity triage, security constraints, prohibitions/requirements, critical feedback) + skill routing for procedural details.
 3. **02-kingmode.mdc** - Always loaded. King Mode: ULTRATHINK, intentional minimalism, library discipline, response format.
 4. **03-frontend-fullstack.mdc** - Glob-scoped to code files. Stack conventions only (no duplication from 02).
 
 **Priority:** MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (03) wins on implementation.
 
-## MDD V1.3 Context Paths
+## MDD V1.4 Context Paths
 
 ### State (read-write)
 
