@@ -1,6 +1,11 @@
 {
   "name": "Cursor Workspace Starter",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  // Network isolation: uncomment the next line to disable all network access.
+  // For a fully pre-configured air-gapped variant, use devcontainer.no-net.json instead.
+  // "runArgs": ["--network=none"],
+
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"

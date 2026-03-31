@@ -39,6 +39,19 @@ This project implements defense-in-depth security controls documented in:
 | OWASP Top 10 alignment | Documented in SECURITY_CONTROLS.md Section 4 |
 | Air-gapped dev container | Available (devcontainer.no-net.json) |
 
+## Residual Risks
+
+These risks are mitigated but **not eliminated** by the controls above. Transparency is intentional.
+
+| Risk | Mitigation | What Could Still Go Wrong |
+|------|-----------|---------------------------|
+| Obfuscated payloads in skills/tools | `bin/skill-scan.sh` grep-based scanner | Sophisticated encoding or indirect exfil bypasses pattern matching |
+| SECURITY-LOCK.json tampering | SHA256 hashes of installed tool directories | Lockfile is not cryptographically signed (no GPG/cosign) |
+| MCP server data exfiltration | `requiresApproval` manifest field + manual-confirm guidance | No runtime network monitoring; a compromised server with `network` approval can phone home |
+| Prompt injection via external context | `04-security-policy.mdc` context validation rules | Agent rules are advisory; a sufficiently crafted injection could override them |
+| `eval` in bootstrapper install step | Install command allowlist (prefix-match) | Allowlisted commands (e.g., `npm install`) can themselves pull malicious packages |
+| Persistent memory poisoning | Session-scoped context only; MDD state files are human-reviewable | Long-lived agents accumulating context across sessions may carry forward tainted data |
+
 ## Dependencies
 
 When adding dependencies:
