@@ -88,8 +88,9 @@ for arg in "$@"; do
 done
 
 # -- Root guard --------------------------------------------------------------
+# Skip on MSYS/MinGW (Git Bash on Windows) where id -u falsely reports 0.
 
-if [[ "${EUID:-$(id -u)}" -eq 0 ]]; then
+if [[ "${MSYSTEM:-}" == "" && "${EUID:-$(id -u)}" -eq 0 ]]; then
     err "Do not run this script as root. It does not require elevated privileges."
     exit 1
 fi

@@ -1,4 +1,4 @@
-﻿# Cursor Workspace Starter
+# Cursor Workspace Starter
 
 A portable, zero-global-pollution workspace template for Cursor IDE. Every new workspace built from this template inherits foundational AI rules (MDD V1.3 + King Mode + Full-Stack) and on-demand access to your collected GitHub tools.
 
@@ -13,6 +13,16 @@ chmod +x setup-tools.sh && ./setup-tools.sh
 ```
 
 The bootstrapper validates `tools/manifest.json`, creates the MDD documentation structure, presents an interactive checklist, and installs only what you select. Restart Cursor after setup.
+
+## Prerequisites
+
+| Tool | PowerShell | Bash / WSL / Git Bash | Install |
+|------|:----------:|:---------------------:|---------|
+| Git | Required | Required | [git-scm.com](https://git-scm.com) |
+| jq | — | Required | `winget install jqlang.jq` / `brew install jq` / `apt install jq` |
+| fzf | — | Optional (multi-select UI) | `winget install junegunn.fzf` / `brew install fzf` |
+
+> **Windows users:** The PowerShell bootstrapper (`setup-tools.ps1`) has no extra dependencies beyond Git. The Bash bootstrapper requires `jq` — install it via `winget install jqlang.jq` and restart your terminal.
 
 ## What's Included
 
