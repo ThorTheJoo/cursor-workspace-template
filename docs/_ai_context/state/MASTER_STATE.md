@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: STATE
 status: APPROVED
 reviewer:
@@ -9,8 +9,8 @@ traceability_id: "WS-001-cursor-workspace-starter"
 
 # MASTER_STATE.md
 
-**Last Updated:** 2026-03-29
-**Version:** 2.3.0
+**Last Updated:** 2026-03-31
+**Version:** 2.4.0
 
 ## Current Workspace State
 
@@ -21,12 +21,12 @@ traceability_id: "WS-001-cursor-workspace-starter"
 | Component | Status | Version | Notes |
 |---|---|---|---|
 | `.cursor/rules/00-starter-rules.mdc` | Active | 2.0.0 | Thin orchestrator: loading order + priority resolution |
-| `.cursor/rules/01-mdd.mdc` | Active | 1.3.0 | MDD V1.3 with cross-referenced knowledge/templates |
+| `.cursor/rules/01-mdd.mdc` | Active | 1.3.0 | Slim MDD router; delegates detailed methodology to `.cursor/skills/` |
 | `.cursor/rules/02-kingmode.mdc` | Active | 1.1.0 | King Mode: ULTRATHINK, intentional minimalism |
 | `.cursor/rules/03-frontend-fullstack.mdc` | Active | 1.1.0 | Stack conventions only (no duplication) |
 | `tools/manifest.json` | Valid | - | 5 tools defined, JSON validated |
 | `setup-tools.sh` / `setup-tools.ps1` | Enhanced | - | Creates all 11 MDD dirs + validates manifest |
-| `.cursor/skills/` | Complete | - | 8 curated skills (committed, not bootstrapper-dependent) |
+| `.cursor/skills/` | Complete | - | 8 curated skills + 9 portable MDD skills (committed) |
 | `docs/_ai_context/` | Complete | - | Full V1.3 structure (11 subdirs, 35+ artifacts) |
 
 ### Rule Hierarchy (Zero Duplication)
@@ -51,8 +51,8 @@ Priority: MDD (01) wins on process. King Mode (02) wins on design. Full-Stack (0
 | State (SSOT) | MASTER_STATE, WORK_LOG, BACKLOG, repo-manifest.json | Updated by every non-trivial task |
 | Security (defense-in-depth) | SECURITY_CONTROLS.md, 10 security anti-patterns, .gitignore (40+ patterns), .env.example, SECURITY.md, bootstrapper hardening | Enforced by 01-mdd.mdc 7d + wired into all templates |
 | Governance (feedback loop) | CONTINUOUS_IMPROVEMENT_PROTOCOL, PENDING_UPDATES, UPDATE_HISTORY, ROLLBACK_LOG, GOVERNANCE_POLICY | Triggered after every task (Learn step) |
-| Skills (agent capabilities) | 8 SKILL.md files (skill-creator, doc-coauthoring, frontend-design, webapp-testing, mcp-builder, docx, pdf, xlsx) | Triggered by description match; wired to King Mode, MDD Learn Step, MCP dir |
-| Bootstrappers | setup-tools.sh/ps1 | Create all 11 dirs + validate manifest + install tools |
+| Skills (agent capabilities) | 17 SKILL.md files (8 curated + 9 portable MDD methodology skills) | Triggered by description match; portable MDD skills provide on-demand workflow depth |
+| Bootstrappers | setup-tools.sh/ps1 | Create MDD directory structure + seed state files from skill assets + validate manifest + install tools |
 
 ### Architecture Decisions
 

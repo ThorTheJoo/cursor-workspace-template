@@ -1,0 +1,475 @@
+---
+description: "MDD Protocol V1.3 â€“ Agentic Critical Edition (Generic Portable). Markdown-Driven Development methodology for any workspace. Governs context loading, operational modes, phase execution, governance, and documentation authority."
+globs: "**/*"
+alwaysApply: true
+version: "1.3.0"
+---
+
+# MDD Protocol V1.3 â€“ Generic Portable Edition
+
+**Primary constraint:** Agentic Markdown-Driven Development (MDD).
+Agents own **execution**; humans own **intent** and **final sign-off**.
+
+> **Setup:** Copy this file to `.cursor/rules/01-mdd.mdc` in your workspace.
+> Search-replace `[PROJECT]` with your project name. Customize Section 14 for your domain.
+
+---
+
+## 1. Context Loading (Sniper Protocol) â€” MANDATORY FIRST STEP
+
+**Every session MUST begin here.** Load context via manifest, not guessing.
+
+| Priority | File | Purpose |
+|----------|------|---------|
+| 1 | `docs/_ai_context/state/repo-manifest.json` | Machine-readable index (files, functions, capabilities) |
+| 2 | `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Navigation, metrics, agent contract |
+| 3 | `docs/_ai_context/state/MASTER_STATE.md` | Global project state and constraints |
+
+> **If these files don't exist yet:** Create `MASTER_STATE.md` first (project name, current status, key constraints, architecture overview). The manifest and context manifest can be built incrementally.
+
+**Rules:**
+- NEVER read full large files (>500 lines) without targeting specific sections
+- NEVER guess file paths â€” use the manifest or search tools
+- NEVER reinvent functionality â€” check existing capabilities first
+- Prefer targeted section reads over full file loads
+
+---
+
+## 2. Authority Hierarchy (Constitution)
+
+Truth has a strict precedence order. Violations are critical errors.
+
+| Rank | Source | Authority | Rule |
+|------|--------|-----------|------|
+| 1 | `docs/_ai_context/knowledge/` (YAML/JSON reference files) | Canonical domain truth | NEVER contradict; human approval required for changes |
+| 2 | `docs/_ai_context/state/` files | Current execution state | Read before modifying |
+| 3 | Manifests and indexes | Navigation only | Do NOT define truth, only point to it |
+| 4 | This rule file + `.cursor/skills/` | Behavioral guidance | Overridden by ranks 1-3 |
+
+**Non-negotiable constraints:**
+- Knowledge files are constituted authority for domain semantics
+- MDD documentation is ephemeral project state (not authoritative for domain content)
+- Human-in-the-loop for all knowledge file updates
+- Config (YAML/JSON) over code: if a change can live in a config file, propose it there first
+
+---
+
+## 3. Operational Modes
+
+Three modes, each with distinct behavior and response format.
+
+> **Detailed references:** Full response templates at `docs/_ai_context/templates/RESPONSE_FORMAT_ASK.md`, `RESPONSE_FORMAT_PLAN.md`, `RESPONSE_FORMAT_AGENT.md`. Mode transition state machine at `docs/_ai_context/knowledge/MODE_TRANSITION_RULES.md`.
+
+### 3a. Ask Mode (Investigation / Sniper)
+
+**Trigger:** Questions about where/how/what/status.
+
+**Workflow:** Parse query â†’ manifest lookup â†’ targeted section read â†’ structured response.
+
+**Response format:**
+```
+FINDING: [1-2 sentence direct answer]
+EVIDENCE:
+- File: [exact path]
+- Function: [name if applicable]
+NEXT STEPS: [numbered actions if needed]
+```
+
+Max 3 paragraphs prose. Use tables for comparisons, file lists, metrics.
+If the answer identifies out-of-scope work, suggest adding to `docs/_ai_context/state/BACKLOG.md`.
+
+### 3b. Plan Mode
+
+**Trigger:** Complex tasks, architecture decisions, multi-step operations.
+
+**Workflow:** Complexity triage â†’ plan file â†’ validation gates â†’ human review.
+
+**Response format:**
+```
+PLAN: [Topic]
+Complexity: [Simple/Medium/Complex]
+CHANGES:
+| File | Change | LOC |
+|------|--------|-----|
+VALIDATION:
+- [ ] Gate 1
+- [ ] Gate 2
+READY FOR REVIEW: YES/NO
+```
+
+When deferring work, append to `BACKLOG.md`: `- [ ] Title â€“ one line. (source: <plan id>).`
+
+### 3c. Agent Mode (Execution)
+
+**Trigger:** Implementation after plan approval.
+
+**Workflow:** P-R-I-L â†’ atomic changes â†’ update WORK_LOG.
+
+**Response format:**
+```
+CHANGE: [what was done]
+FILES: [paths modified]
+VALIDATION: [how to verify]
+```
+
+---
+
+## 4. Complexity Triage
+
+Assess complexity BEFORE starting work. This determines required artifacts.
+
+> **Detailed reference:** Full decision matrix with escalation triggers and overrides at `docs/_ai_context/knowledge/COMPLEXITY_TRIAGE_MATRIX.md`.
+
+| Complexity | Criteria | Required Artifact | Location |
+|------------|----------|-------------------|----------|
+| Simple | 1-2 steps, <30 min | No formal plan | â€” |
+| Medium | 3-5 steps, <2 hrs | Analysis file | `docs/_ai_context/analysis/YYYY-MM-DD_NAME_PLAN.md` |
+| Complex | 6+ steps, 2+ hrs, validation gates | Multi-phase plan | `docs/_ai_context/prompts/phases/PHASE_XX_NAME.md` |
+
+**Quick rule:** >2 hours OR >5 steps OR intermediate validation needed â†’ multi-phase.
+
+**Jumping to code for complex tasks without a plan file is a governance violation.**
+
+---
+
+## 5. P-R-I-L Workflow
+
+All non-trivial work follows Plan â†’ Review â†’ Implement â†’ Log.
+
+### Plan
+- Simple: inline plan in response
+- Medium: single analysis file in `docs/_ai_context/analysis/`
+- Complex: pre-plan with numbered todos â†’ individual `PHASE_XX_NAME.md` files
+- For execution-style specs: include code snippets, validation commands, and exact file paths per step
+
+### Review
+- Human checkpoint before implementation
+- Complex plans require explicit approval before any code changes
+
+### Implement
+- Atomic changes scoped strictly to the plan
+- Stop on validation failure â€” do not proceed
+- No scope creep beyond what the plan specifies
+
+### Log
+- Update `docs/_ai_context/state/WORK_LOG.md` using enhanced template (Section 8)
+- Structured lessons-learned capture (Section 9)
+- Conventional commit: `feat(scope): [summary]`
+- Create `docs/_ai_context/analysis/PHASE_XX_COMPLETION.md` for multi-phase work
+
+---
+
+## 6. Phase Execution Protocol
+
+For complex (multi-phase) work. Reference: `docs/_ai_context/prompts/phases/MULTI_PHASE_EXECUTION_GUIDELINES.md`.
+
+### YAML Front-Matter Contract (every phase file)
+```yaml
+---
+document_type: PHASE_SPECIFICATION
+name: Phase X - [Descriptive Name]
+depends_on: [list of files/outputs from prior phases]
+outputs_for_next_phase: [explicit paths this phase creates]
+validation_gate: [criteria that MUST pass]
+estimated_duration: "X-Y hours"
+---
+```
+
+### Context Manifest per Phase
+Every phase includes: "This Phase Creates" and "This Phase Requires" tables with exact paths, plus "Files to Read (On-Demand)" with targeted section guidance.
+
+### Core Principles
+1. **Context Independence** â€” Each phase in a fresh session; the plan file IS the context
+2. **Explicit Handoffs** â€” Output from Phase N becomes input for Phase N+1; always specify paths
+3. **Validation Gates** â€” Named gates that must pass before marking complete
+4. **Atomic Commits** â€” Each phase = one logical commit; enables rollback
+5. **Kickoff Prompts** â€” Every phase ends with a copy-paste prompt for the next phase
+6. **Parallel Markers** â€” Use `âš¡ with Phase X` for phases that can run independently
+
+### Phase Completion (MANDATORY for all multi-phase work)
+Create `docs/_ai_context/analysis/PHASE_XX_COMPLETION.md`:
+- Files Created/Modified (table)
+- Validation Results (pass/fail per gate)
+- Metrics before/after (if applicable)
+- Lessons Learned
+
+### After Completion Checklist
+- [ ] Update phase index (status â†’ COMPLETE)
+- [ ] Update `WORK_LOG.md`
+- [ ] Create completion doc
+- [ ] Run project tests
+- [ ] Commit with conventional prefix
+- [ ] Append deferred items to `BACKLOG.md`
+
+### Error Recovery
+- **Step failure:** Document error â†’ attempt fix â†’ if unfixable, rollback + create analysis file
+- **Gate failure:** Identify failing check â†’ fix â†’ re-run â†’ do NOT proceed until pass
+- **Abandonment:** Document progress â†’ commit with `WIP:` prefix â†’ create analysis for next attempt
+
+---
+
+## 7. Governance Rules
+
+### 7a. Code Reuse Mandate
+Before writing ANY new code:
+1. Search existing codebase (grep, glob, semantic search)
+2. Check script registries and state files
+3. Read existing implementations that might cover the need
+
+Code duplication is a critical error. Reuse > Rewrite.
+
+### 7b. Automatic MDD Updates
+MDD documentation MUST be updated automatically (no user prompt needed) when:
+- New scripts or modules created â†’ update `MASTER_STATE.md` and registries
+- Errors resolved â†’ create/update analysis in `docs/_ai_context/analysis/`
+- Phase completed â†’ update phase index, `WORK_LOG.md`, completion doc
+- Patterns discovered â†’ update relevant state files
+
+**Cascade rule:** If update to one file affects another, update all dependents.
+
+### 7c. Contract-First Validation
+Before code that reads/writes structured data:
+1. Identify the contract (schema, type definition, YAML structure)
+2. Verify field names match between producer and consumer
+3. Check for renamed/deprecated fields in recent WORK_LOG
+
+After implementation: run validation, document field changes.
+
+### 7d. Security Rules
+
+> **Detailed reference:** Full security controls at `docs/_ai_context/knowledge/governance/SECURITY_CONTROLS.md`. Security anti-patterns at `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md` (Security section).
+
+**Secret Prevention (CRITICAL -- violations are irrecoverable):**
+1. NEVER write secrets, API keys, tokens, passwords, or private keys into source files, config files, documentation, WORK_LOG, or any committed artifact
+2. NEVER hardcode connection strings, database URLs with credentials, or auth tokens
+3. NEVER commit `.env` files, credential JSON files, PEM/key files, or cloud provider credential files
+4. NEVER log or print sensitive values (tokens, passwords, PII) in any output -- including debug templates and analysis files
+5. ALWAYS use environment variable references (`process.env.VAR_NAME`) for secrets, never literal values
+6. ALWAYS reference `.env.example` for variable names without values; never create `.env` with real values
+
+**Agent-Specific Security:**
+7. Before generating code that handles auth, encryption, or user data: state the threat model in the plan
+8. NEVER generate placeholder secrets (e.g., `sk-xxxx`, `ghp_abc123`, `password123`) -- use descriptive placeholders like `YOUR_API_KEY_HERE`
+9. ALWAYS validate that generated code sanitizes user input (Zod, DOMPurify, parameterized queries)
+10. NEVER disable security features in generated code (e.g., `--no-verify`, `NODE_TLS_REJECT_UNAUTHORIZED=0`, CORS `*`)
+11. Flag any dependency with known CVEs during implementation; propose alternatives
+
+**Supply Chain:**
+12. NEVER run `eval` or `Invoke-Expression` on untrusted input; bootstrapper install commands must be from the committed manifest only
+13. Pin dependencies to specific versions in package.json/requirements.txt; avoid `*` or `latest`
+14. When adding new dependencies, check for known vulnerabilities first
+
+### 7e. Prohibited Actions
+1. DO NOT create scripts/modules without searching for existing ones
+2. DO NOT skip validation for output files
+3. DO NOT modify knowledge/reference files without human approval
+4. DO NOT leave MDD documentation inconsistent after changes
+5. DO NOT bypass validation gates
+6. DO NOT guess file paths -- use manifest or search
+7. DO NOT create duplicate functionality
+8. DO NOT commit secrets, credentials, or private keys (see 7d)
+9. DO NOT generate code that disables security controls
+10. DO NOT skip security review for auth/crypto/data-handling changes
+
+### 7f. Required Actions
+1. ALWAYS search codebase before writing new code
+2. ALWAYS validate output before declaring done
+3. ALWAYS update MDD documentation after changes
+4. ALWAYS follow P-R-I-L for non-trivial work
+5. ALWAYS use manifest/search for navigation
+6. ALWAYS validate contracts for structured data changes
+7. ALWAYS log lessons learned after non-trivial work
+8. ALWAYS create completion docs for multi-phase work
+9. ALWAYS run security checklist for plans touching auth, secrets, user data, or external APIs
+10. ALWAYS use `.env.example` pattern for any new environment variables
+
+---
+## 8. Enhanced WORK_LOG Template
+
+All WORK_LOG entries MUST include these fields:
+
+| Field | Required | Purpose |
+|-------|----------|---------|
+| Scope | Yes | What was done |
+| Status | Yes | COMPLETE / IN PROGRESS / BLOCKED |
+| Duration | Yes | Approximate time spent |
+| Changes Made | Yes | File-level change table |
+| Validation Results | Yes | What was verified and outcome |
+| Regression Risk | Yes | HIGH/MEDIUM/LOW + description |
+| Lessons Learned | Yes (non-trivial) | Per Section 9 |
+| Next Steps | Yes | What comes next, or "None" |
+
+---
+
+## 9. Lessons-Learned & Anti-Patterns
+
+### Structured Lessons-Learned (add to every non-trivial WORK_LOG entry)
+```
+* **Lessons Learned:**
+  - [What went well]
+  - [What went wrong / unexpected]
+  - [What to do differently next time]
+  - [Regression risk: HIGH/MEDIUM/LOW â€” what could regress]
+```
+
+### Regression Categories
+| Category | Description | Prevention |
+|----------|-------------|------------|
+| Field Mismatch | Producer/consumer field name drift | Pin names in schema/contract |
+| Version Confusion | Stale data read by newer code | Version field in all schemas |
+| Baseline Drift | Metrics compared to wrong baseline | Timestamp all baselines |
+| Template Divergence | Output format drifts from template | Template compliance checks |
+| Silent Fallback | Script degrades without warning | Fail loud, don't degrade silently |
+
+### Anti-Patterns (NEVER do these)
+
+> **Full catalog:** 24 patterns (10 session + 8 data/contract + 6 process) at `docs/_ai_context/knowledge/ANTI_PATTERNS_CATALOG.md`. The table below is a condensed summary.
+| Anti-Pattern | Why It Fails | Instead |
+|--------------|--------------|---------|
+| "Continue from where we left off" | New session has no memory | Reference specific file paths |
+| "Use the data we extracted earlier" | Agent doesn't know what/where | Provide exact path + line numbers |
+| "Same as before" | Ambiguous | Repeat the specification |
+| Loading entire large files | Blows context window | Read specific sections on-demand |
+| Implicit validation | Silent failures | Explicit validation steps |
+| Claiming checks passed without running | False confidence | Execute command, paste output |
+
+---
+
+## 10. Critical Feedback & Honesty
+
+Before any meaningful action, agents MUST include:
+
+1. **Flaws & Risks** â€” Quantified blast radius: what files, services, or humans are affected. One concrete alternative and its trade-off.
+2. **Self-critique** â€” "What is the weakest part of this plan? How could it fail?"
+3. **Self-verification** â€” Run tests/lint/validation if they exist. Record results. If skipping, flag explicitly and explain why.
+
+Zero flattery. Brutal honesty. Terse and direct. No moralizing except for non-obvious safety.
+
+---
+
+## 11. Learn Step (Skills Extraction)
+
+After completing work:
+- If a pattern appears >= 3 times across sessions, extract it into `.cursor/skills/[pattern-name]/SKILL.md`
+- Structure: trigger conditions, context loading, key commands, response style, constraints
+- Update WORK_LOG with the extracted pattern
+- Update `AGENTS.md` or skill registries if they exist
+
+---
+
+## 12. Backlog Management
+
+`docs/_ai_context/state/BACKLOG.md` is actively maintained:
+- **Priority labels:** P0 (blocking), P1 (next sprint), P2 (backlog), P3 (wishlist)
+- **Format:** `- [ ] Title â€“ one line. (source: <origin>).`
+- **Source attribution:** Every item must have source
+- **Age-out:** Items >90 days without activity â†’ re-prioritize or close with reason
+- **No duplicates:** Search existing items before adding
+- **Resolved items:** Move completed items to `## Resolved` section
+
+---
+
+## 13. Analysis Archival
+
+Keep `docs/_ai_context/analysis/` navigable:
+- Superseded files â†’ move to `docs/_ai_context/analysis/archive/`
+- Files >90 days old with no active references â†’ candidate for archive
+- Pre-plans expanded into phase files â†’ archive the pre-plan
+- NEVER delete archived files â€” always move
+- NEVER archive: active state files, completion docs, currently-referenced files
+
+---
+
+## 14. Domain-Specific Rules (CUSTOMIZE FOR YOUR PROJECT)
+
+> **Instructions:** Replace this section with rules specific to your project domain.
+> Examples: quality thresholds, API conventions, framework constraints, deployment rules.
+
+### Quality Requirements
+| Metric | Minimum | Target |
+|--------|---------|--------|
+| [Your metric 1] | [value] | [value] |
+| [Your metric 2] | [value] | [value] |
+
+### Script Registry
+| Domain | Location | Purpose |
+|--------|----------|---------|
+| [Domain 1] | `scripts/[domain]/` | [Purpose] |
+| [Domain 2] | `scripts/[domain]/` | [Purpose] |
+
+### Knowledge Files
+| File | Purpose | Authority |
+|------|---------|-----------|
+| [Your knowledge file] | [Purpose] | Canonical / Reference / Staging |
+
+---
+
+## 15. Architectural Structure
+
+The agent MUST be aware of this directory structure:
+
+| Path | Role | Phase |
+|------|------|-------|
+| `docs/_ai_context/state/MASTER_STATE.md` | Agent-updated project state | All |
+| `docs/_ai_context/state/WORK_LOG.md` | Change log with lessons-learned | Log |
+| `docs/_ai_context/state/BACKLOG.md` | Groomed backlog | All |
+| `docs/_ai_context/state/repo-manifest.json` | Machine-readable file/function index | All |
+| `docs/_ai_context/analysis/` | Plans, debug logs, completion docs | Analysis/Debug |
+| `docs/_ai_context/analysis/archive/` | Superseded analysis files | Archival |
+| `docs/_ai_context/prompts/` | Reusable prompts and phase specs | All |
+| `docs/_ai_context/prompts/phases/` | Phase execution plans | Implementation |
+| `docs/_ai_context/prompts/PROMPT_INDEX.md` | Single entry point for prompt discovery | All |
+| `docs/_ai_context/knowledge/` | Canonical domain knowledge (YAML/JSON) | All |
+| `docs/_ai_context/templates/` | Standardized output templates | Implementation |
+| `.cursor/rules/` | Project rules (this file) | All |
+| `.cursor/skills/` | Reusable agent skills | All |
+
+> **Bootstrap:** If these directories don't exist, create: `docs/_ai_context/state/`, `docs/_ai_context/analysis/`, `docs/_ai_context/prompts/phases/`, `docs/_ai_context/knowledge/`, `docs/_ai_context/templates/`, and seed `MASTER_STATE.md` with project identity and current status.
+
+---
+
+## 16. YAML Front-Matter Standard
+
+All MDD markdown documents should include front-matter for agent filtering:
+
+```yaml
+---
+document_type: [PLAN | DEBUG | COMPLETION | STATE | PROMPT | SKILL | GOVERNANCE]
+status: [DRAFT | ACTIVE | APPROVED | DEPRECATED]
+reviewer:
+  accountable: "[person or role]"
+compliance_tags: ["tag1", "tag2"]
+traceability_id: "[ticket-id or plan-ref]"
+---
+```
+
+Agents must respect `document_type` and `status` when selecting context.
+
+---
+
+## 17. Git Conventions
+
+### Standard commits
+```
+feat(scope): [summary]
+fix(scope): [summary]
+docs(scope): [summary]
+refactor(scope): [summary]
+```
+
+### Phase commits
+```
+feat(pipeline): Phase XX - [summary]
+- [Key deliverable 1]
+- [Key deliverable 2]
+- [Validation results]
+```
+
+### Partial / blocked work
+```
+WIP: Phase XX partial - [what's done]
+- [Completed items]
+- [Blocked on: specific issue]
+```
+
+Attach `traceability_id` (JIRA, GitHub issue) when available.

@@ -1,0 +1,51 @@
+# Master Knowledge Repository Index
+# This file is the root index for all knowledge in this repository.
+# Customize the domains and files for your project.
+
+version: "1.0.0"
+last_updated: "[YYYY-MM-DD]"
+maintainer: "[team or role]"
+
+domains:
+  # Add your project's knowledge domains here.
+  # Each domain groups related reference files.
+
+  architecture:
+    description: "System architecture and component definitions"
+    authority: "canonical"
+    files:
+      - path: "reference/COMPONENT_CANONICALS.yaml"
+        purpose: "Official system/component names and aliases"
+      - path: "reference/API_CATALOG.yaml"
+        purpose: "API identifiers, versions, and descriptions"
+
+  terminology:
+    description: "Domain terminology and definitions"
+    authority: "canonical"
+    files:
+      - path: "reference/GLOSSARY.yaml"
+        purpose: "Canonical term definitions"
+      - path: "reference/SYNONYMS.yaml"
+        purpose: "Term equivalence mappings"
+
+  classification:
+    description: "Categorization and taxonomy"
+    authority: "canonical"
+    files:
+      - path: "domain/TAXONOMY.yaml"
+        purpose: "Category hierarchy"
+
+governance:
+  policy: "governance/GOVERNANCE_POLICY.md"
+  pending_queue: "governance/PENDING_UPDATES.yaml"
+  update_history: "governance/UPDATE_HISTORY.yaml"
+  rollback_log: "governance/ROLLBACK_LOG.yaml"
+
+validation:
+  schemas_directory: "schemas/"
+  validation_script: "../../.cursor/skills/knowledge-repo/scripts/validate_knowledge_repo.py"
+
+versioning:
+  current_version_file: "CURRENT_VERSION"
+  versions_directory: "versions/"
+  changelog: "CHANGELOG.md"

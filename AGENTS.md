@@ -140,6 +140,27 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 | `pdf` | ".pdf", "merge PDFs", "extract text from PDF" | Proprietary | PDF processing and manipulation |
 | `xlsx` | ".xlsx", "spreadsheet", "Excel file" | Proprietary | Spreadsheet creation and analysis |
 
+## Skills Framework
+
+9 portable MDD methodology skills at `.cursor/skills/`:
+
+| Skill | Trigger Keywords |
+|-------|-----------------|
+| mdd-workflow | project setup, MDD, P-R-I-L, governance |
+| plan-generation | create plan, write phase, break down task |
+| phase-execution | execute plan, run phase, implement spec |
+| data-verification | CSV parsing, JSON access, schema validation |
+| context-loading | session start, codebase exploration, manifest |
+| knowledge-repo | knowledge management, taxonomy, glossary |
+| backlog-management | backlog, deferred items, priorities |
+| work-logging | work log, lessons learned, change tracking |
+| prompt-optimization | prompt improvement, workflow optimization |
+
+Skills follow the [Anthropic Agent Skills spec](https://agentskills.io/specification).
+Each skill is a self-contained folder with `SKILL.md` + `references/` + `assets/`.
+
+MDD_ROOT: `docs/_ai_context/` — changeable via `.cursor/skills/scripts/set-mdd-root.sh`
+
 ## Conventions
 
 * MDD V1.3 Sniper Mode: load context from manifest, not guessing.

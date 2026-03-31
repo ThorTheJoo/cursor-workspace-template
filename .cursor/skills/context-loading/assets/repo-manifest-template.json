@@ -1,0 +1,55 @@
+{
+  "generated_at": "[ISO8601 timestamp]",
+  "repo_root": "[absolute path to repo]",
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": "[relative/path/to/file]",
+      "type": "[script|model|config|test|template|state|analysis]",
+      "purpose": "[one-line description]",
+      "functions": []
+    }
+  ],
+  "knowledge_repo": {
+    "root": "docs/_ai_context/knowledge",
+    "file_count": 0,
+    "files": []
+  },
+  "phases": {
+    "current": "[Phase N - Name]",
+    "completed": [],
+    "planned": []
+  },
+  "capabilities": {
+    "tests": {
+      "script": "tests/",
+      "command": "[your test command]",
+      "description": "Run test suite"
+    }
+  },
+  "state_files": [
+    {"path": "docs/_ai_context/state/MASTER_STATE.md", "name": "MASTER_STATE"},
+    {"path": "docs/_ai_context/state/BACKLOG.md", "name": "BACKLOG"},
+    {"path": "docs/_ai_context/state/WORK_LOG.md", "name": "WORK_LOG"},
+    {"path": "docs/_ai_context/state/repo-manifest.json", "name": "repo-manifest"}
+  ],
+  "prompts": {
+    "root": "docs/_ai_context/prompts",
+    "phases_directory": "docs/_ai_context/prompts/phases",
+    "phases_index": "docs/_ai_context/prompts/phases/PHASES_INDEX.md",
+    "context_manifest": "docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md"
+  },
+  "analysis": {
+    "root": "docs/_ai_context/analysis",
+    "plan_pattern": "*_PLAN.md",
+    "debug_pattern": "*_DEBUG.md"
+  },
+  "templates": {
+    "root": "docs/_ai_context/templates",
+    "auto_discover": true
+  },
+  "extension_points": {
+    "hooks": [],
+    "plugins": []
+  }
+}

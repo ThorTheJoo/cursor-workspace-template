@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Cursor Workspace Starter â€” PowerShell Tool Bootstrapper
 .DESCRIPTION
@@ -41,6 +41,114 @@ function Write-Skip([string]$msg) {
 
 function Write-Err([string]$msg) {
     Write-Host "[!!] $msg" -ForegroundColor Red
+}
+
+function Seed-MddFromSkills {
+    $skillsDir = Join-Path $ScriptDir ".cursor\skills"
+    $mddRoot = Join-Path $ScriptDir "docs\_ai_context"
+
+    Write-Step "Seeding MDD state files from skill assets..."
+
+    $seedDirs = @(
+        "docs\_ai_context\state",
+        "docs\_ai_context\analysis\archive",
+        "docs\_ai_context\prompts\phases",
+        "docs\_ai_context\templates",
+        "docs\_ai_context\knowledge\governance",
+        "docs\_ai_context\knowledge\reference",
+        "docs\_ai_context\knowledge\schemas",
+        "docs\_ai_context\knowledge\staging",
+        "docs\_ai_context\knowledge\versions",
+        "docs\_ai_context\knowledge\glossary"
+    )
+
+    foreach ($d in $seedDirs) {
+        $fullPath = Join-Path $ScriptDir $d
+        if (-not (Test-Path $fullPath)) { New-Item -ItemType Directory -Path $fullPath -Force | Out-Null }
+    }
+
+    $backlogTemplate = Join-Path $skillsDir "backlog-management\assets\BACKLOG_TEMPLATE.md"
+    $backlogDest = Join-Path $mddRoot "state\BACKLOG.md"
+    if ((Test-Path $backlogTemplate) -and (-not (Test-Path $backlogDest))) {
+        Copy-Item -Path $backlogTemplate -Destination $backlogDest -Force
+        Write-Ok "Created docs/_ai_context/state/BACKLOG.md"
+    }
+
+    $workLogTemplate = Join-Path $skillsDir "work-logging\assets\WORK_LOG_TEMPLATE.md"
+    $workLogDest = Join-Path $mddRoot "state\WORK_LOG.md"
+    if ((Test-Path $workLogTemplate) -and (-not (Test-Path $workLogDest))) {
+        Copy-Item -Path $workLogTemplate -Destination $workLogDest -Force
+        Write-Ok "Created docs/_ai_context/state/WORK_LOG.md"
+    }
+
+    $manifestTemplate = Join-Path $skillsDir "context-loading\assets\repo-manifest-template.json"
+    $manifestDest = Join-Path $mddRoot "state\repo-manifest.json"
+    if ((Test-Path $manifestTemplate) -and (-not (Test-Path $manifestDest))) {
+        Copy-Item -Path $manifestTemplate -Destination $manifestDest -Force
+        Write-Ok "Created docs/_ai_context/state/repo-manifest.json"
+    }
+
+    $contextManifestTemplate = Join-Path $skillsDir "context-loading\assets\CONTEXT_MANIFEST_TEMPLATE.md"
+    $contextManifestDest = Join-Path $mddRoot "prompts\phases\CONTEXT_MANIFEST.md"
+    if ((Test-Path $contextManifestTemplate) -and (-not (Test-Path $contextManifestDest))) {
+        Copy-Item -Path $contextManifestTemplate -Destination $contextManifestDest -Force
+        Write-Ok "Created docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md"
+    }
+
+    $phasesIndexTemplate = Join-Path $skillsDir "phase-execution\assets\PHASES_INDEX_TEMPLATE.md"
+    $phasesIndexDest = Join-Path $mddRoot "prompts\phases\PHASES_INDEX.md"
+    if ((Test-Path $phasesIndexTemplate) -and (-not (Test-Path $phasesIndexDest))) {
+        Copy-Item -Path $phasesIndexTemplate -Destination $phasesIndexDest -Force
+        Write-Ok "Created docs/_ai_context/prompts/phases/PHASES_INDEX.md"
+    }
+
+    $knowledgeTemplate = Join-Path $skillsDir "knowledge-repo\assets\MASTER_KNOWLEDGE_REPO_TEMPLATE.yaml"
+    $knowledgeDest = Join-Path $mddRoot "knowledge\MASTER_KNOWLEDGE_REPOSITORY.yaml"
+    if ((Test-Path $knowledgeTemplate) -and (-not (Test-Path $knowledgeDest))) {
+        Copy-Item -Path $knowledgeTemplate -Destination $knowledgeDest -Force
+        Write-Ok "Created docs/_ai_context/knowledge/MASTER_KNOWLEDGE_REPOSITORY.yaml"
+    }
+
+    $glossaryTemplate = Join-Path $skillsDir "knowledge-repo\assets\TERMINOLOGY_INDEX_TEMPLATE.yaml"
+    $glossaryDest = Join-Path $mddRoot "knowledge\glossary\TERMINOLOGY_INDEX.yaml"
+    if ((Test-Path $glossaryTemplate) -and (-not (Test-Path $glossaryDest))) {
+        Copy-Item -Path $glossaryTemplate -Destination $glossaryDest -Force
+        Write-Ok "Created docs/_ai_context/knowledge/glossary/TERMINOLOGY_INDEX.yaml"
+    }
+
+    $masterStateDest = Join-Path $mddRoot "state\MASTER_STATE.md"
+    if (-not (Test-Path $masterStateDest)) {
+        $content = @'
+---
+document_type: STATE
+status: ACTIVE
+---
+
+# Project State
+
+Read order for any non-trivial task:
+1. `docs/_ai_context/state/repo-manifest.json` — file/function lookup
+2. `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` — project identity
+3. This file — current state
+4. `docs/_ai_context/state/BACKLOG.md` — pending work
+
+---
+
+## Skills Framework
+
+This workspace uses MDD skills at `.cursor/skills/`. See `.cursor/skills/README.md`.
+
+---
+
+## Recent Changes
+
+(Add entries as work progresses)
+'@
+        Set-Content -Path $masterStateDest -Value $content -Encoding UTF8
+        Write-Ok "Created docs/_ai_context/state/MASTER_STATE.md"
+    }
+
+    Write-Ok "MDD seeding complete."
 }
 
 # â”€â”€ Preflight checks â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -176,6 +284,8 @@ foreach ($d in $docsDirs) {
         Write-Ok "Created $d"
     }
 }
+
+Seed-MddFromSkills
 
 # â”€â”€ Ensure .tools-cache exists â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 

@@ -1,0 +1,59 @@
+# Evidence Source Registry Template
+# Tracks the authority and provenance of knowledge sources.
+# Customize for your project's documentation landscape.
+
+version: "1.0.0"
+last_updated: "[YYYY-MM-DD]"
+
+authority_levels:
+  high:
+    description: "Official standards, specifications, and authoritative documentation"
+    trust_score: 0.95
+    examples:
+      - "Industry standards (ISO, IEEE, RFC)"
+      - "Official vendor documentation"
+      - "Signed architecture decision records"
+
+  medium:
+    description: "Internal documentation, verified analysis, peer-reviewed content"
+    trust_score: 0.75
+    examples:
+      - "Internal design documents"
+      - "Peer-reviewed analysis reports"
+      - "Verified wiki pages with known authors"
+
+  low:
+    description: "Unverified sources, community content, inferred knowledge"
+    trust_score: 0.40
+    examples:
+      - "Community forums and blog posts"
+      - "AI-generated suggestions (unverified)"
+      - "Legacy documentation with unknown currency"
+
+sources:
+  # Register each evidence source your project relies on.
+
+  - id: "SRC-001"
+    name: "[Source Name]"
+    type: "[specification|documentation|analysis|wiki|external]"
+    authority: "[high|medium|low]"
+    location: "[URL or file path]"
+    last_verified: "[YYYY-MM-DD]"
+    notes: "[Any caveats or context about this source]"
+
+  # Example:
+  # - id: "SRC-001"
+  #   name: "API Design Guidelines v2"
+  #   type: "specification"
+  #   authority: "high"
+  #   location: "docs/standards/api_design_v2.md"
+  #   last_verified: "2026-03-15"
+  #   notes: "Approved by architecture review board 2026-02"
+
+  # - id: "SRC-002"
+  #   name: "System Integration Wiki"
+  #   type: "wiki"
+  #   authority: "medium"
+  #   location: "https://wiki.internal/integration"
+  #   last_verified: "2026-01-20"
+  #   notes: "Some pages outdated — verify before citing"

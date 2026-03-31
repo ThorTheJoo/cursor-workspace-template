@@ -1,4 +1,4 @@
-﻿---
+---
 document_type: STATE
 status: ACTIVE
 reviewer:
@@ -10,6 +10,38 @@ traceability_id: "WS-001-cursor-workspace-starter"
 # WORK_LOG
 
 Chronological record of all significant workspace changes.
+
+---
+
+## 2026-03-31 — v2.4.0: Portable MDD Skills Framework
+
+* **Scope:** Integrated 9 portable MDD methodology skills (Anthropic Agent Skills format). Added `MDD_ROOT` customization script, slimmed `.cursor/rules/01-mdd.mdc` into a router, enhanced both bootstrappers to seed MDD state files from skill assets, and updated `AGENTS.md`. Archived the prior full `01-mdd.mdc`.
+* **Status:** COMPLETE
+* **Duration:** ~1.5 hours
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `.cursor/skills/*` | Added 9 portable MDD skills + root docs (`README.md`, `SKILLS_INDEX.md`) |
+| `.cursor/skills/scripts/set-mdd-root.sh` | Added MDD_ROOT path replacement helper (git executable) |
+| `.cursor/rules/01-mdd.mdc` | Replaced full rule with slim router delegating to skills |
+| `docs/_ai_context/analysis/archive/01-mdd-v1.3-full.mdc` | Archived previous full 01-mdd rule |
+| `setup-tools.sh` / `setup-tools.ps1` | Added seeding of MDD state files from skill assets |
+| `AGENTS.md` | Added Skills Framework section (9 portable MDD skills) |
+| `docs/_ai_context/state/MASTER_STATE.md` | Updated to v2.4.0 (skills count + router + seeding) |
+| `docs/_ai_context/state/WORK_LOG.md` | Added this entry |
+
+* **Validation Results:**
+  - 9 MDD skill folders present, 9/9 MDD `SKILL.md` present
+  - All `SKILL.md` `name:` fields match directory names
+  - All `SKILL.md` files < 500 lines
+  - `.cursor/rules/01-mdd.mdc` is slim (< 100 lines)
+  - `set-mdd-root.sh` marked executable in git
+* **Regression Risk:** MEDIUM — bootstrappers and always-loaded rule routing changed (mitigated: additive seeding + archived full rule).
+* **Lessons Learned:**
+  - Skill payload metadata can drift from the extracted directory set; validate indexes/README against actual folders.
+  - Marking shell scripts executable should be done via git mode checks on Windows.
+* **Next Steps:** None.
 
 ---
 

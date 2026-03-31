@@ -37,6 +37,105 @@ ok()      { echo -e "${GREEN}[OK]${RESET} $1"; }
 skip()    { echo -e "${DIM}[--] $1${RESET}"; }
 err()     { echo -e "${RED}[!!]${RESET} $1"; }
 
+seed_mdd_from_skills() {
+    local skills_dir="$CURSOR_DIR/skills"
+    local mdd_root="$DOCS_DIR"
+
+    step "Seeding MDD state files from skill assets..."
+
+    # Create directory structure
+    mkdir -p "$mdd_root"/{state,analysis/archive,prompts/phases,templates}
+    mkdir -p "$mdd_root"/knowledge/{governance,reference,schemas,staging,versions,glossary}
+
+    # Seed from backlog-management
+    if [[ -f "$skills_dir/backlog-management/assets/BACKLOG_TEMPLATE.md" ]]; then
+        [[ -f "$mdd_root/state/BACKLOG.md" ]] || {
+            cp "$skills_dir/backlog-management/assets/BACKLOG_TEMPLATE.md" "$mdd_root/state/BACKLOG.md"
+            ok "Created $mdd_root/state/BACKLOG.md"
+        }
+    fi
+
+    # Seed from work-logging
+    if [[ -f "$skills_dir/work-logging/assets/WORK_LOG_TEMPLATE.md" ]]; then
+        [[ -f "$mdd_root/state/WORK_LOG.md" ]] || {
+            cp "$skills_dir/work-logging/assets/WORK_LOG_TEMPLATE.md" "$mdd_root/state/WORK_LOG.md"
+            ok "Created $mdd_root/state/WORK_LOG.md"
+        }
+    fi
+
+    # Seed from context-loading
+    if [[ -f "$skills_dir/context-loading/assets/repo-manifest-template.json" ]]; then
+        [[ -f "$mdd_root/state/repo-manifest.json" ]] || {
+            cp "$skills_dir/context-loading/assets/repo-manifest-template.json" "$mdd_root/state/repo-manifest.json"
+            ok "Created $mdd_root/state/repo-manifest.json"
+        }
+    fi
+
+    if [[ -f "$skills_dir/context-loading/assets/CONTEXT_MANIFEST_TEMPLATE.md" ]]; then
+        [[ -f "$mdd_root/prompts/phases/CONTEXT_MANIFEST.md" ]] || {
+            cp "$skills_dir/context-loading/assets/CONTEXT_MANIFEST_TEMPLATE.md" "$mdd_root/prompts/phases/CONTEXT_MANIFEST.md"
+            ok "Created $mdd_root/prompts/phases/CONTEXT_MANIFEST.md"
+        }
+    fi
+
+    # Seed from phase-execution
+    if [[ -f "$skills_dir/phase-execution/assets/PHASES_INDEX_TEMPLATE.md" ]]; then
+        [[ -f "$mdd_root/prompts/phases/PHASES_INDEX.md" ]] || {
+            cp "$skills_dir/phase-execution/assets/PHASES_INDEX_TEMPLATE.md" "$mdd_root/prompts/phases/PHASES_INDEX.md"
+            ok "Created $mdd_root/prompts/phases/PHASES_INDEX.md"
+        }
+    fi
+
+    # Seed from knowledge-repo
+    if [[ -f "$skills_dir/knowledge-repo/assets/MASTER_KNOWLEDGE_REPO_TEMPLATE.yaml" ]]; then
+        [[ -f "$mdd_root/knowledge/MASTER_KNOWLEDGE_REPOSITORY.yaml" ]] || {
+            cp "$skills_dir/knowledge-repo/assets/MASTER_KNOWLEDGE_REPO_TEMPLATE.yaml" "$mdd_root/knowledge/MASTER_KNOWLEDGE_REPOSITORY.yaml"
+            ok "Created $mdd_root/knowledge/MASTER_KNOWLEDGE_REPOSITORY.yaml"
+        }
+    fi
+
+    if [[ -f "$skills_dir/knowledge-repo/assets/TERMINOLOGY_INDEX_TEMPLATE.yaml" ]]; then
+        [[ -f "$mdd_root/knowledge/glossary/TERMINOLOGY_INDEX.yaml" ]] || {
+            mkdir -p "$mdd_root/knowledge/glossary"
+            cp "$skills_dir/knowledge-repo/assets/TERMINOLOGY_INDEX_TEMPLATE.yaml" "$mdd_root/knowledge/glossary/TERMINOLOGY_INDEX.yaml"
+            ok "Created $mdd_root/knowledge/glossary/TERMINOLOGY_INDEX.yaml"
+        }
+    fi
+
+    # Seed MASTER_STATE.md if it doesn't exist
+    [[ -f "$mdd_root/state/MASTER_STATE.md" ]] || {
+        cat > "$mdd_root/state/MASTER_STATE.md" << 'MASTER_EOF'
+---
+document_type: STATE
+status: ACTIVE
+---
+
+# Project State
+
+Read order for any non-trivial task:
+1. `docs/_ai_context/state/repo-manifest.json` — file/function lookup
+2. `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` — project identity
+3. This file — current state
+4. `docs/_ai_context/state/BACKLOG.md` — pending work
+
+---
+
+## Skills Framework
+
+This workspace uses MDD skills at `.cursor/skills/`. See `.cursor/skills/README.md`.
+
+---
+
+## Recent Changes
+
+(Add entries as work progresses)
+MASTER_EOF
+        ok "Created $mdd_root/state/MASTER_STATE.md"
+    }
+
+    ok "MDD seeding complete."
+}
+
 # â”€â”€ Preflight â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 banner
@@ -198,6 +297,8 @@ for dir in "$DOCS_DIR/state" "$DOCS_DIR/analysis" "$DOCS_DIR/templates" "$DOCS_D
         ok "Created $dir"
     fi
 done
+
+seed_mdd_from_skills
 
 mkdir -p "$CACHE_DIR"
 
