@@ -1,0 +1,15 @@
+{
+  "report_type": "debtors_age_analysis",
+  "points": [
+    {
+      "content_key": "debtors_age_analysis|file:Debtors Age Analysis - By AC Name with Deposits",
+      "source_file": "Debtors Age Analysis - By AC Name with Deposits.TXT",
+      "path": "Additional/Debtors Age Analysis - By AC Name with Deposits.TXT",
+      "modified": "2026-05-25 13:06",
+      "summary": {
+        "report_type": "debtors_age_analysis"
+      },
+      "ingest_id": "20260525-ee90d38d721f321e"
+    }
+  ]
+}

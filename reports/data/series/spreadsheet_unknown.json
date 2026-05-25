@@ -1,0 +1,15 @@
+{
+  "report_type": "spreadsheet_unknown",
+  "points": [
+    {
+      "content_key": "spreadsheet_unknown|file:invoice_ledger",
+      "source_file": "invoice_ledger.xlsx",
+      "path": "Starter Docs/invoice_ledger.xlsx",
+      "modified": "2026-05-24 17:21",
+      "summary": {
+        "report_type": "spreadsheet_unknown"
+      },
+      "ingest_id": "20260525-b533e602583a1064"
+    }
+  ]
+}

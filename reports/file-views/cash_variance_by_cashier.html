@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>cash_variance_by_cashier — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>cash_variance_by_cashier</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Cash Variance - Selected EOD by Cashier</h1>
+      <p class="meta"><span class="tag tag-pos_system">Pos System</span>
+        Frequency: <strong>Daily</strong> ·
+        <span class="badge-pending">classified only</span> ·
+        1 period(s) in series · 10 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/cash_variance_by_cashier.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>Cash Variance - Selected EOD by Cashier</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-pending">classified only</span></p>
+<p>Per-cashier till variance by tender type — accountability.</p>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Repeat offender cashiers</li>
+<li>Safe drops vs theoretical</li>
+</ul></div></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Daily)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier.TXT'><td class='nowrap'><strong>—</strong></td><td>—</td><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (4).TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier (4).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (5).TXT' data-ingest='20260525-6504486694fac326'><td><code>Cash Variance - Selected EOD by Cashier (5).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>19,220</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (3).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (2).TXT' data-ingest='20260525-2ce1bc99613b79f5'><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:05</td><td class='num'>13,027</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-24 16:40</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier (1).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>dup</td><td>2026-05-24 16:40</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (1).TXT' data-ingest='20260525-6504486694fac326'><td><code>Cash Variance - Selected EOD by Cashier (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>19,220</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier.TXT' data-ingest='20260525-0d56c09e2c534596'><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-23 11:17</td><td class='num'>16,330</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-2ce1bc99613b79f5",
+    "path": "Additional/Cash Variance - Selected EOD by Cashier (2).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (2).TXT",
+    "folder": "Additional",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 13027,
+    "modified": "2026-05-25 13:05",
+    "sha256_prefix": "2ce1bc99613b79f5",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-7029f6b4b6eac837",
+    "path": "Additional/Cash Variance - Selected EOD by Cashier (3).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (3).TXT",
+    "folder": "Additional",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 16328,
+    "modified": "2026-05-25 13:07",
+    "sha256_prefix": "7029f6b4b6eac837",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-3b447b0bb656da06",
+    "path": "Additional/Cash Variance - Selected EOD by Cashier (4).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (4).TXT",
+    "folder": "Additional",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 19217,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "3b447b0bb656da06",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-6504486694fac326",
+    "path": "Additional/Cash Variance - Selected EOD by Cashier (5).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (5).TXT",
+    "folder": "Additional",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 19220,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "6504486694fac326",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-6504486694fac326",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (1).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": true,
+    "size_bytes": 19220,
+    "modified": "2026-05-24 12:28",
+    "sha256_prefix": "6504486694fac326",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-7029f6b4b6eac837",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (2).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 16328,
+    "modified": "2026-05-24 16:40",
+    "sha256_prefix": "7029f6b4b6eac837",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-3b447b0bb656da06",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (3).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 19217,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "3b447b0bb656da06",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-0d56c09e2c534596",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 16330,
+    "modified": "2026-05-23 11:17",
+    "sha256_prefix": "0d56c09e2c534596",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-7029f6b4b6eac837",
+    "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier (1).TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": true,
+    "size_bytes": 16328,
+    "modified": "2026-05-24 16:40",
+    "sha256_prefix": "7029f6b4b6eac837",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  },
+  {
+    "ingest_id": "20260525-3b447b0bb656da06",
+    "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT",
+    "filename": "Cash Variance - Selected EOD by Cashier.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Cash Variance - Selected EOD by Cashier",
+    "report_type": "cash_variance_by_cashier",
+    "source_type": "pos_system",
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "is_duplicate_copy": false,
+    "size_bytes": 19217,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "3b447b0bb656da06",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "source_file": "Cash Variance - Selected EOD by Cashier.TXT",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
+    "modified": "2026-05-23 11:17",
+    "summary": {
+      "report_type": "cash_variance_by_cashier"
+    },
+    "ingest_id": "20260525-0d56c09e2c534596"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

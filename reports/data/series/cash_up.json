@@ -1,0 +1,15 @@
+{
+  "report_type": "cash_up",
+  "points": [
+    {
+      "content_key": "cash_up|file:CASH UP APRIL 26",
+      "source_file": "CASH UP APRIL 26.xlsx",
+      "path": "Starter Docs/CASH UP APRIL 26.xlsx",
+      "modified": "2026-05-24 12:44",
+      "summary": {
+        "report_type": "cash_up"
+      },
+      "ingest_id": "20260525-974a30e3b55bd0da"
+    }
+  ]
+}

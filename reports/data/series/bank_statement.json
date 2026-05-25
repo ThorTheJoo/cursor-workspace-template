@@ -1,0 +1,15 @@
+{
+  "report_type": "bank_statement",
+  "points": [
+    {
+      "content_key": "bank|account:62848015857|file:62848015857.ofx",
+      "source_file": "62848015857.ofx",
+      "path": "Starter Docs/62848015857.ofx",
+      "modified": "2026-05-24 17:22",
+      "summary": {
+        "report_type": "bank_statement"
+      },
+      "ingest_id": "20260525-adace4af16e974a6"
+    }
+  ]
+}

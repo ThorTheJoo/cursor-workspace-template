@@ -1,0 +1,15 @@
+{
+  "report_type": "eft_summary_by_shift",
+  "points": [
+    {
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "source_file": "EFT Summary By EOD Batch & Shift.TXT",
+      "path": "Starter Docs/EFT Summary By EOD Batch & Shift.TXT",
+      "modified": "2026-05-23 11:16",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "ingest_id": "20260525-a5b848a2673344ff"
+    }
+  ]
+}

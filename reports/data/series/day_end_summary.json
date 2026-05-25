@@ -1,0 +1,90 @@
+{
+  "report_type": "day_end_summary",
+  "points": [
+    {
+      "content_key": "day_end|batch:141|date:18/05/2026",
+      "source_file": "Day End Summary (3).TXT",
+      "path": "Starter Docs/Day End Summary (3).TXT",
+      "modified": "2026-05-24 16:39",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 141,
+        "batch_date": "18/05/2026",
+        "nett_takings": 185823.99,
+        "fuel_total": 169798.8,
+        "shop_total_incl": 16690.4,
+        "fuel_volume": 5788.51,
+        "cash_variance": 0.0
+      },
+      "ingest_id": "20260525-2a17fb67760eda32"
+    },
+    {
+      "content_key": "day_end|batch:142|date:19/05/2026",
+      "source_file": "Day End Summary (4).TXT",
+      "path": "Starter Docs/Day End Summary (4).TXT",
+      "modified": "2026-05-24 16:39",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 142,
+        "batch_date": "19/05/2026",
+        "nett_takings": 104790.45,
+        "fuel_total": 88895.6,
+        "shop_total_incl": 15794.85,
+        "fuel_volume": 3191.23,
+        "cash_variance": 0.0
+      },
+      "ingest_id": "20260525-4828f159bf3b703f"
+    },
+    {
+      "content_key": "day_end|batch:143|date:20/05/2026",
+      "source_file": "Day End Summary (2).TXT",
+      "path": "Starter Docs/Day End Summary (2).TXT",
+      "modified": "2026-05-24 12:29",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 143,
+        "batch_date": "20/05/2026",
+        "nett_takings": 162197.44,
+        "fuel_total": 146041.85,
+        "shop_total_incl": 16754.8,
+        "fuel_volume": 5000.67,
+        "cash_variance": 0.0
+      },
+      "ingest_id": "20260525-e39ead78c622bdfe"
+    },
+    {
+      "content_key": "day_end|batch:145|date:22/05/2026",
+      "source_file": "Day End Summary.TXT",
+      "path": "Starter Docs/Day End Summary.TXT",
+      "modified": "2026-05-23 11:15",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 145,
+        "batch_date": "22/05/2026",
+        "nett_takings": 183805.24,
+        "fuel_total": 162086.3,
+        "shop_total_incl": 21909.15,
+        "fuel_volume": 5479.85,
+        "cash_variance": 19.56
+      },
+      "ingest_id": "20260525-b05a8274f9bca9dd"
+    },
+    {
+      "content_key": "day_end|batch:147|date:24/05/2026",
+      "source_file": "Day End Summary (2).TXT",
+      "path": "Additional/Day End Summary (2).TXT",
+      "modified": "2026-05-25 13:05",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 147,
+        "batch_date": "24/05/2026",
+        "nett_takings": 71895.05,
+        "fuel_total": 65643.9,
+        "shop_total_incl": 6056.15,
+        "fuel_volume": 2287.27,
+        "cash_variance": 0.0
+      },
+      "ingest_id": "20260525-f7333e236acd4d86"
+    }
+  ]
+}

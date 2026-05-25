@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>stock_cost_sell_price — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>stock_cost_sell_price</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>stock_cost_sell_price</h1>
+      <p class="meta"><span class="tag tag-inventory">Inventory</span>
+        Frequency: <strong></strong> ·
+        <span class="badge-none">unknown</span> ·
+        1 period(s) in series · 3 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/stock_cost_sell_price.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><p>No catalog entry for this report type.</p></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Daily)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Stock Cost &amp; Selling Price Listing  - By Category.TXT'><td class='nowrap'><strong>—</strong></td><td>—</td><td><code>Stock Cost &amp; Selling Price Listing  - By Category.TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Stock Cost &amp; Selling Price Listing  - By Category (2).TXT' data-ingest='20260525-43cfda627abd414b'><td><code>Stock Cost &amp; Selling Price Listing  - By Category (2).TXT</code></td><td>Additional</td><td class='nowrap'>stock_cost_sell_price|file:Stock Cost &amp; Selling Price Listing  - By Category</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>237,787</td></tr><tr class='clickable' data-path='Additional/Stock Cost &amp; Selling Price Listing  - By Category (1).TXT' data-ingest='20260525-3f1759a6a850816a'><td><code>Stock Cost &amp; Selling Price Listing  - By Category (1).TXT</code></td><td>Additional</td><td class='nowrap'>stock_cost_sell_price|file:Stock Cost &amp; Selling Price Listing  - By Category</td><td>dup</td><td>2026-05-25 13:06</td><td class='num'>237,792</td></tr><tr class='clickable' data-path='Additional/Stock Cost &amp; Selling Price Listing  - By Category.TXT' data-ingest='20260525-c0141d389687a706'><td><code>Stock Cost &amp; Selling Price Listing  - By Category.TXT</code></td><td>Additional</td><td class='nowrap'>stock_cost_sell_price|file:Stock Cost &amp; Selling Price Listing  - By Category</td><td>primary</td><td>2026-05-25 13:06</td><td class='num'>1,558</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-3f1759a6a850816a",
+    "path": "Additional/Stock Cost & Selling Price Listing  - By Category (1).TXT",
+    "filename": "Stock Cost & Selling Price Listing  - By Category (1).TXT",
+    "folder": "Additional",
+    "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+    "report_type": "stock_cost_sell_price",
+    "source_type": "inventory",
+    "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+    "is_duplicate_copy": true,
+    "size_bytes": 237792,
+    "modified": "2026-05-25 13:06",
+    "sha256_prefix": "3f1759a6a850816a",
+    "summary": {
+      "report_type": "stock_cost_sell_price"
+    },
+    "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price"
+  },
+  {
+    "ingest_id": "20260525-43cfda627abd414b",
+    "path": "Additional/Stock Cost & Selling Price Listing  - By Category (2).TXT",
+    "filename": "Stock Cost & Selling Price Listing  - By Category (2).TXT",
+    "folder": "Additional",
+    "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+    "report_type": "stock_cost_sell_price",
+    "source_type": "inventory",
+    "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+    "is_duplicate_copy": false,
+    "size_bytes": 237787,
+    "modified": "2026-05-25 13:07",
+    "sha256_prefix": "43cfda627abd414b",
+    "summary": {
+      "report_type": "stock_cost_sell_price"
+    },
+    "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price"
+  },
+  {
+    "ingest_id": "20260525-c0141d389687a706",
+    "path": "Additional/Stock Cost & Selling Price Listing  - By Category.TXT",
+    "filename": "Stock Cost & Selling Price Listing  - By Category.TXT",
+    "folder": "Additional",
+    "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+    "report_type": "stock_cost_sell_price",
+    "source_type": "inventory",
+    "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+    "is_duplicate_copy": false,
+    "size_bytes": 1558,
+    "modified": "2026-05-25 13:06",
+    "sha256_prefix": "c0141d389687a706",
+    "summary": {
+      "report_type": "stock_cost_sell_price"
+    },
+    "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+    "source_file": "Stock Cost & Selling Price Listing  - By Category.TXT",
+    "path": "Additional/Stock Cost & Selling Price Listing  - By Category.TXT",
+    "modified": "2026-05-25 13:06",
+    "summary": {
+      "report_type": "stock_cost_sell_price"
+    },
+    "ingest_id": "20260525-c0141d389687a706"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

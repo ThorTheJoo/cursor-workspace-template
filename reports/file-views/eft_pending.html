@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>eft_pending — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>eft_pending</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>EFT Transactions Not Yet Sent to Bank</h1>
+      <p class="meta"><span class="tag tag-pos_system">Pos System</span>
+        Frequency: <strong>Daily</strong> ·
+        <span class="badge-integrated">integrated</span> ·
+        1 period(s) in series · 7 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/eft_pending.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>EFT Transactions Not Yet Sent to Bank</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Card trx captured at Day End but not yet in an EFT batch — explains timing gap to bank.
+</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>pending_total</code></li>
+<li><code>transaction_count</code></li>
+</ul></dd></dl></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Daily)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th class='num'>Pending Total</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT'><td class='nowrap'><strong>—</strong></td><td>—</td><td class='num'>R 3,056.05</td><td><code>EFT Transactions Not Yet Sent to Bank.TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/EFT Transactions Not Yet Sent to Bank (2).TXT' data-ingest='20260525-037eafa2ea6fbd02'><td><code>EFT Transactions Not Yet Sent to Bank (2).TXT</code></td><td>Additional</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>2,698</td></tr><tr class='clickable' data-path='Additional/EFT Transactions Not Yet Sent to Bank (3).TXT' data-ingest='20260525-fb02617ef0d6537b'><td><code>EFT Transactions Not Yet Sent to Bank (3).TXT</code></td><td>Additional</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>2,834</td></tr><tr class='clickable' data-path='Additional/EFT Transactions Not Yet Sent to Bank (1).TXT' data-ingest='20260525-6c5b4e496d44f9de'><td><code>EFT Transactions Not Yet Sent to Bank (1).TXT</code></td><td>Additional</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>dup</td><td>2026-05-25 13:04</td><td class='num'>3,523</td></tr><tr class='clickable' data-path='Starter Docs/EFT Transactions Not Yet Sent to Bank (2).TXT' data-ingest='20260525-037eafa2ea6fbd02'><td><code>EFT Transactions Not Yet Sent to Bank (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>2,698</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/EFT Transactions Not Yet Sent to Bank.TXT' data-ingest='20260525-037eafa2ea6fbd02'><td><code>EFT Transactions Not Yet Sent to Bank.TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>2,698</td></tr><tr class='clickable' data-path='Starter Docs/EFT Transactions Not Yet Sent to Bank (1).TXT' data-ingest='20260525-fb02617ef0d6537b'><td><code>EFT Transactions Not Yet Sent to Bank (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>2,834</td></tr><tr class='clickable' data-path='Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT' data-ingest='20260525-57fbf068fb527678'><td><code>EFT Transactions Not Yet Sent to Bank.TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_pending|file:EFT Transactions Not Yet Sent to Bank</td><td>primary</td><td>2026-05-23 11:15</td><td class='num'>2,698</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-6c5b4e496d44f9de",
+    "path": "Additional/EFT Transactions Not Yet Sent to Bank (1).TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": true,
+    "size_bytes": 3523,
+    "modified": "2026-05-25 13:04",
+    "sha256_prefix": "6c5b4e496d44f9de",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+      "pending_total": 1977.9,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  },
+  {
+    "ingest_id": "20260525-037eafa2ea6fbd02",
+    "path": "Additional/EFT Transactions Not Yet Sent to Bank (2).TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": false,
+    "size_bytes": 2698,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "037eafa2ea6fbd02",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+      "pending_total": 929.9,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  },
+  {
+    "ingest_id": "20260525-fb02617ef0d6537b",
+    "path": "Additional/EFT Transactions Not Yet Sent to Bank (3).TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank (3).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": false,
+    "size_bytes": 2834,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "fb02617ef0d6537b",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank (3).TXT",
+      "pending_total": 3121.4,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  },
+  {
+    "ingest_id": "20260525-fb02617ef0d6537b",
+    "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (1).TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": true,
+    "size_bytes": 2834,
+    "modified": "2026-05-24 12:28",
+    "sha256_prefix": "fb02617ef0d6537b",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+      "pending_total": 3121.4,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  },
+  {
+    "ingest_id": "20260525-037eafa2ea6fbd02",
+    "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (2).TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": false,
+    "size_bytes": 2698,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "037eafa2ea6fbd02",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+      "pending_total": 929.9,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  },
+  {
+    "ingest_id": "20260525-57fbf068fb527678",
+    "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": false,
+    "size_bytes": 2698,
+    "modified": "2026-05-23 11:15",
+    "sha256_prefix": "57fbf068fb527678",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+      "pending_total": 3056.05,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  },
+  {
+    "ingest_id": "20260525-037eafa2ea6fbd02",
+    "path": "Starter Docs/Refresh/EFT Transactions Not Yet Sent to Bank.TXT",
+    "filename": "EFT Transactions Not Yet Sent to Bank.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+    "report_type": "eft_pending",
+    "source_type": "pos_system",
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "is_duplicate_copy": false,
+    "size_bytes": 2698,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "037eafa2ea6fbd02",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+      "pending_total": 929.9,
+      "transaction_count": 0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_pending"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+    "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+    "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT",
+    "modified": "2026-05-23 11:15",
+    "summary": {
+      "report_type": "eft_pending",
+      "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+      "pending_total": 3056.05,
+      "transaction_count": 0
+    },
+    "ingest_id": "20260525-57fbf068fb527678"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

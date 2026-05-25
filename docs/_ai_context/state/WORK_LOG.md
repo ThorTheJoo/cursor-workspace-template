@@ -13,7 +13,168 @@ Chronological record of all significant workspace changes.
 
 ---
 
-## 2026-03-31 — v2.5.0: MDD V1.4 Fat Router + Security Floor
+## 2026-05-25 — Phase 2: file drill-down pages + help guides
+
+* **Scope:** Per-report-type HTML views with history/trends/file detail; help from catalog; dashboard links; series dedupe fix.
+* **Status:** COMPLETE
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `scripts/management/generate_file_views.py` | NEW — 29 file views + 29 help pages |
+| `scripts/management/catalog_loader.py` | NEW — YAML catalog loader |
+| `reports/file-views/`, `reports/help/`, `reports/assets/site.css` | Drill-down UI |
+| `scripts/management/build_file_repo.py` | Series dedupe by content_key; (1)-only duplicate flag |
+| `scripts/management/generate_dashboard.py` | Nav bar, file repo links, runs file views |
+| `docs/_ai_context/prompts/HANDOFF_OPTIMIZATION_REFACTOR.md` | Model handoff prompt |
+| `docs/_ai_context/state/repo-manifest.json` | Machine index |
+| `analysis/2026-05-25_PHASE2_FILE_DRILLDOWN_COMPLETION.md` | Completion doc |
+
+* **Validation:** day_end series 5 batches; file-views/day_end_summary.html trend + click detail works
+* **Next Steps:** Parsers for cash variance, fuel control; git private remote Experiment-JP
+
+---
+
+## 2026-05-24 — File repository, catalog specs, Additional folder ingest
+
+* **Scope:** Build file-type MDD catalog; ingest ledger + time-series; process `inputs/Additional/` (43 files); dashboard drill-down; comprehensive interpretation + dashboard specs.
+* **Status:** COMPLETE
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `docs/_ai_context/knowledge/reference/file-type-catalog.yaml` | Per-report-type business + technical spec |
+| `FILE_INGESTION_ARCHITECTURE.md` | 3-layer model; critique JSON-per-file |
+| `MANAGEMENT_DASHBOARD_SPECIFICATION.md` | Full dashboard spec |
+| `guides/DATA_INTERPRETATION_GUIDE.md` | Owner guide with sample correlations |
+| `scripts/management/build_file_repo.py` | Ledger + series + index |
+| `scripts/management/file_classifier.py` | 28 report type patterns |
+| `parse_reports.py` | Scan Additional/; fix latest day = max batch |
+| `generate_dashboard.py` | File Repository section |
+| `inputs/Additional/` | 22 report patterns classified; B147 Day End |
+
+* **Validation:** 145 files ledger; 93 primary; day_end series includes B147; dashboard File Repository table
+* **Regression Risk:** LOW — additive; latest day now B147 (was B145)
+* **Lessons Learned:**
+  - Filename `(2)` in Additional ≠ duplicate — use batch number for latest day
+  - JSON per report *type* series beats JSON per physical file
+* **Next Steps:** Phase 2 parsers (cash variance, fuel control, accounting) per BACKLOG
+
+---
+
+## 2026-05-24 — Refresh folder POS drop (Batches 141–142)
+
+* **Scope:** Ingest 10 refreshed POS `.TXT` files from `inputs/Refresh/`; extend daily timeline; validate vs OCR WhatsApp fuel volumes.
+* **Status:** COMPLETE
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `docs/_ai_context/inputs/Refresh/` | 10 POS exports — B141 (18 May), B142 (19 May) + EFT/cash |
+| `scripts/management/parse_reports.py` | Multi-folder scan (Starter Docs + Refresh), batch dedupe |
+| `reports/data/canonical-latest.json` | daily_history now 4 batches: 141, 142, 143, 145 |
+| `docs/_ai_context/analysis/2026-05-24_REFRESH_POS_DROP.md` | Refresh analysis + OCR match |
+
+* **Validation:** B141/B142 fuel litres match OCR WhatsApp exactly; dashboard timeline extended
+* **Gap:** Batch 144 (21 May) still missing — OCR only
+
+---
+
+## 2026-05-24 — OCR WhatsApp multi-source reconciliation + dashboard source tags
+
+* **Scope:** Process DeepSeek OCR synthesis of WhatsApp report photos; add 5th source layer; build cross-source reconciliation matrix; tag every dashboard section with data origin + tooltips.
+* **Status:** COMPLETE
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `scripts/management/parse_ocr_whatsapp.py` | NEW — OCR parser + reconciliation builder |
+| `scripts/management/generate_dashboard.py` | Source legend, recon matrix, OCR sections, purple tags |
+| `scripts/management/kpi_tooltips.py` | Tooltips for ATG, CIT, recon matrix, source legend |
+| `docs/_ai_context/knowledge/reference/input-source-registry.yaml` | `ocr_whatsapp` source type |
+| `docs/_ai_context/analysis/2026-05-24_OCR_WHATSAPP_DISCOVERY.md` | Discovery phase analysis |
+| `reports/management-dashboard.html` | Refreshed with multi-source view |
+
+* **Validation:** 20 May fuel + shop OCR vs POS Batch 143 = MATCH; B144 pump-tank REVIEW flagged
+* **Next Steps:** Fresh bank transactions + invoices (user next prompt); extend POS daily history
+
+---
+
+## 2026-05-24 — New inputs refresh: bank OFX, payroll x2, manual recons, tooltips
+
+* **Scope:** Process 6 new/refreshed input files; classify by source type; test payroll CSV generation for both Nett Pay Lists; add plain-language KPI tooltips to management dashboard.
+* **Status:** COMPLETE
+* **Duration:** ~1 hr
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `docs/_ai_context/inputs/62848015857.ofx` | Parsed — bank_feed, Apr 2026, 327 trx |
+| `Nett Pay List - 140526.xls` / `210526.xlsx` | payroll_system — Payment CSVs generated |
+| `CASH UP APRIL 26.xlsx` | manual_recon — metadata on dashboard |
+| `Schedule of Accounts Invoice T.xlsx` | manual_recon — 25 invoices, R15,636.85 |
+| `scripts/management/kpi_tooltips.py` | Detailed tooltips for all KPI sections |
+| `scripts/management/parse_external_inputs.py` | Source classification + inventory skip rules |
+| `docs/_ai_context/knowledge/reference/input-source-registry.yaml` | Concrete file entries + recon chains |
+| `reports/payroll/Payment_140526.csv` | 16 staff · R32,095.27 · pay date 14-05-2026 |
+| `reports/payroll/Payment_210526.csv` | 16 staff · R31,449.03 · pay date 21-05-2026 |
+
+* **Validation Results:**
+  - Payroll `--all`: both files OK; totals match source Nett Pay columns
+  - Dashboard regenerated with bank, supplier, payroll, input registry sections
+  - Source tags: pos_system / payroll_system / bank_feed / manual_recon
+* **Regression Risk:** LOW — additive parsers and display; POS logic unchanged
+* **Lessons Learned:**
+  - Duplicate `(1)` copies must be de-prioritised in parsers and registry
+  - Non-data files (`.tar.gz`, templates) need explicit inventory exclusion
+  - Source type is prerequisite for future EFT↔bank and payroll↔bank recons
+* **Next Steps:** Deep-parse Cash Up petty cash totals; build recon workflows; drop new Day End files for daily history
+
+---
+
+## 2026-05-24 — Starter Docs forensic analysis + management dashboard + payroll CSV
+
+* **Scope:** Analysed 21 POS/payroll/banking starter files; built parsers, FNB payment CSV converter, HTML management dashboard.
+* **Status:** COMPLETE
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `docs/_ai_context/analysis/2026-05-24_STARTER_DOCS_FORENSIC_ANALYSIS.md` | Full file inventory + canonical model |
+| `scripts/management/parse_reports.py` | POS TXT → canonical JSON |
+| `scripts/management/generate_dashboard.py` | HTML dashboard generator |
+| `scripts/payroll/netpay_to_payment_csv.py` | Nett Pay List → FNB BinSol CSV |
+| `config/site.yaml` | Site + banking config |
+| `reports/management-dashboard.html` | Live dashboard output |
+| `reports/payroll/Payment_140526.csv` | 16 employees · R32,095.27 |
+
+* **Validation:** Payroll CSV matches FNB template; Batch 145 KPIs parsed; wet stock 3 grades correct
+* **Next Steps:** Update `config/site.yaml` nominated account; drop new reports and re-run refresh
+
+---
+
+* **Scope:** Cloned cursor-workspace-template, ran bootstrapper, installed 31 domain skills for inventory, finance, retail, fuel/C-store operations.
+* **Status:** COMPLETE
+* **Duration:** ~45 min
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| Template clone | From `ThorTheJoo/cursor-workspace-template` |
+| `.cursor/skills/` | +22 domain skills from writer/skills, agent-skills-ops, ecommerce-retail |
+| `.cursor/skills/` | +3 custom: fuel-station-operations, convenience-store-operations, fuel-petrochemical-inventory |
+| `tools/manifest.json` | Added writer-skills, agent-skills-ops, ecommerce-retail-skills entries |
+| `.cursor/skills/DOMAIN_SKILLS_INDEX.md` | Domain skill catalog |
+| `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Project identity → Experiment JP |
+
+* **Validation Results:** 40 skills with SKILL.md; bootstrapper MDD seed PASS; 5/5 rules verified
+* **Regression Risk:** LOW-LOW — new workspace bootstrap
+* **Lessons Learned:**
+  - Bootstrapper clone failures are PowerShell stderr false positives; repos in `.tools-cache/` were valid
+  - No public fuel-station-specific skill repos found; custom SKILL.md files created
+* **Next Steps:** Restart Cursor; optionally customize `docs/_ai_context/knowledge/` with site-specific data
+
+---
 
 * **Scope:** Replaced slim 01-mdd.mdc router (~54 lines, ~540 tokens) with fat router V1.4 (~165 lines, ~2K tokens). Restores always-on behavioral floor (authority hierarchy, context loading, P-R-I-L, complexity triage, prohibitions, required actions, critical feedback) that the slim router had incorrectly delegated to voluntary skill activation. Added Section 6 with compact security constraints (secret prevention, agent security, supply chain) that were entirely absent from the slim router. Archived slim router alongside previously archived V1.3 full rule.
 * **Status:** COMPLETE

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>cash_up — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>cash_up</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>CASH UP</h1>
+      <p class="meta"><span class="tag tag-manual_recon">Manual Recon</span>
+        Frequency: <strong>Monthly</strong> ·
+        <span class="badge-pending">metadata only</span> ·
+        1 period(s) in series · 1 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/cash_up.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>CASH UP</h3>
+<p><strong>Frequency:</strong> Monthly · <strong>Parser:</strong> <span class="badge-pending">metadata only</span></p>
+<p>Site month-end cash reconciliation workbook (petty, drops, banking).</p></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Monthly)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/CASH UP APRIL 26.xlsx'><td class='nowrap'><strong>—</strong></td><td>—</td><td><code>CASH UP APRIL 26.xlsx</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/CASH UP APRIL 26.xlsx' data-ingest='20260525-974a30e3b55bd0da'><td><code>CASH UP APRIL 26.xlsx</code></td><td>Starter Docs</td><td class='nowrap'>cash_up|file:CASH UP APRIL 26</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>477,695</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-974a30e3b55bd0da",
+    "path": "Starter Docs/CASH UP APRIL 26.xlsx",
+    "filename": "CASH UP APRIL 26.xlsx",
+    "folder": "Starter Docs",
+    "pattern_name": "CASH UP APRIL 26",
+    "report_type": "cash_up",
+    "source_type": "manual_recon",
+    "content_key": "cash_up|file:CASH UP APRIL 26",
+    "is_duplicate_copy": false,
+    "size_bytes": 477695,
+    "modified": "2026-05-24 12:44",
+    "sha256_prefix": "974a30e3b55bd0da",
+    "summary": {
+      "report_type": "cash_up"
+    },
+    "catalog_ref": "file-type-catalog.yaml#cash_up"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "cash_up|file:CASH UP APRIL 26",
+    "source_file": "CASH UP APRIL 26.xlsx",
+    "path": "Starter Docs/CASH UP APRIL 26.xlsx",
+    "modified": "2026-05-24 12:44",
+    "summary": {
+      "report_type": "cash_up"
+    },
+    "ingest_id": "20260525-974a30e3b55bd0da"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

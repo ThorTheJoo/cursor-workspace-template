@@ -1,0 +1,15 @@
+{
+  "report_type": "monthly_category_summary",
+  "points": [
+    {
+      "content_key": "monthly_category_summary|file:Monthly Summary Forecourt & Shop - By Category",
+      "source_file": "Monthly Summary Forecourt & Shop - By Category.TXT",
+      "path": "Starter Docs/Monthly Summary Forecourt & Shop - By Category.TXT",
+      "modified": "2026-05-24 12:28",
+      "summary": {
+        "report_type": "monthly_category_summary"
+      },
+      "ingest_id": "20260525-9c567bbca71d8c5e"
+    }
+  ]
+}

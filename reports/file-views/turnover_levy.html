@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>turnover_levy — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>turnover_levy</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Turnover Levy Report</h1>
+      <p class="meta"><span class="tag tag-accounting">Accounting</span>
+        Frequency: <strong>Monthly</strong> ·
+        <span class="badge-none">not implemented</span> ·
+        1 period(s) in series · 1 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/turnover_levy.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>Turnover Levy Report</h3>
+<p><strong>Frequency:</strong> Monthly · <strong>Parser:</strong> <span class="badge-none">not implemented</span></p>
+<p>Head-office levy on turnover by HO category — franchise reporting.</p></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Monthly)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT'><td class='nowrap'><strong>—</strong></td><td>—</td><td><code>Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT' data-ingest='20260525-e7e3c4b825ab55eb'><td><code>Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT</code></td><td>Additional</td><td class='nowrap'>turnover_levy|file:Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories</td><td>primary</td><td>2026-05-25 13:06</td><td class='num'>13,453</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-e7e3c4b825ab55eb",
+    "path": "Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+    "filename": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+    "folder": "Additional",
+    "pattern_name": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+    "report_type": "turnover_levy",
+    "source_type": "accounting",
+    "content_key": "turnover_levy|file:Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+    "is_duplicate_copy": false,
+    "size_bytes": 13453,
+    "modified": "2026-05-25 13:06",
+    "sha256_prefix": "e7e3c4b825ab55eb",
+    "summary": {
+      "report_type": "turnover_levy"
+    },
+    "catalog_ref": "file-type-catalog.yaml#turnover_levy"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "turnover_levy|file:Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+    "source_file": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+    "path": "Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+    "modified": "2026-05-25 13:06",
+    "summary": {
+      "report_type": "turnover_levy"
+    },
+    "ingest_id": "20260525-e7e3c4b825ab55eb"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

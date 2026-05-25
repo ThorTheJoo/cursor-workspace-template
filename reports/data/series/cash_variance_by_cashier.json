@@ -1,0 +1,15 @@
+{
+  "report_type": "cash_variance_by_cashier",
+  "points": [
+    {
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier.TXT",
+      "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
+      "modified": "2026-05-23 11:17",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "ingest_id": "20260525-0d56c09e2c534596"
+    }
+  ]
+}

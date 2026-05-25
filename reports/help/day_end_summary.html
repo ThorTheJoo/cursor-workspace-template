@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><title>Help — day_end_summary</title>
+<link rel="stylesheet" href="../assets/site.css"/></head>
+<body>
+<nav class="top-nav">
+  <a href="../management-dashboard.html">Dashboard</a>
+  <a href="../file-views/day_end_summary.html">Dataset</a>
+  <strong>Help</strong>
+</nav>
+<div class="wrap"><div class="card"><h3>Day End Summary</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Single source of truth for one trading day: combined forecourt + shop sales, fuel volume, GP%, cashier exceptions, wet-stock EOD, and nett takings.
+</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>batch_number</code></li>
+<li><code>batch_date</code></li>
+<li><code>nett_takings</code></li>
+<li><code>fuel_total</code></li>
+<li><code>fuel_volume</code></li>
+<li><code>shop_total_incl</code></li>
+<li><code>cash_variance</code></li>
+<li><code>fuel_grades (pump vs tank variance)</code></li>
+<li><code>top_categories</code></li>
+</ul></dd></dl>
+<dl><dt>Valuable insights</dt><dd><ul>
+<li>Daily revenue trend and day-on-day deltas</li>
+<li>Fuel litres sold vs wet-stock variance (loss/theft/dip error)</li>
+<li>Shop category mix and GP%</li>
+<li>Cash control at shift close</li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Cash variance &gt; R50 — investigate cashier/till</li>
+<li>Fuel pump-tank variance &gt; ±25 L per grade — wet stock alert</li>
+<li>Nett takings drop &gt;30% vs prior day — trading anomaly (Sunday, supply, outage)</li>
+</ul></div>
+<p><strong>Reconciles with:</strong> eft_batch_summary, bank_feed.speedpoint, ocr_whatsapp.fuel_volume</p>
+<p class="meta">Catalog: file-type-catalog.yaml#day_end_summary</p></div></div>
+</body></html>

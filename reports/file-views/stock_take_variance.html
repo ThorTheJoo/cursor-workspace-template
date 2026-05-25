@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>stock_take_variance — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>stock_take_variance</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Stock Take Variance</h1>
+      <p class="meta"><span class="tag tag-inventory">Inventory</span>
+        Frequency: <strong>Periodic</strong> ·
+        <span class="badge-integrated">integrated summary only</span> ·
+        1 period(s) in series · 2 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/stock_take_variance.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>Stock Take Variance</h3>
+<p><strong>Frequency:</strong> Periodic · <strong>Parser:</strong> <span class="badge-integrated">integrated summary only</span></p>
+<p>Stock count vs theoretical — shrink at SKU level.</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>stock_take_date</code></li>
+<li><code>sku_variances</code></li>
+<li><code>variance_value_at_cost</code></li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>High-value SKU variances — theft or receiving error</li>
+</ul></div></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Periodic)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th class='num'>Sku Variances</th><th class='num'>Variance Value At Cost</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/Stock Take Variance - For Date  By Category &amp; Stock Code w POS Sales.TXT'><td class='nowrap'><strong>20/05/2026</strong></td><td>—</td><td class='num'>89</td><td class='num'>R 349.42</td><td><code>Stock Take Variance - For Date  By Category &amp; Stock Code w POS Sales.TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Stock Take Variance - For Date  By Category &amp; Stock Code w POS Sales.TXT' data-ingest='20260525-9504e7d7010b73f6'><td><code>Stock Take Variance - For Date  By Category &amp; Stock Code w POS Sales.TXT</code></td><td>Additional</td><td class='nowrap'>stock_take|date:20/05/2026</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>37,706</td></tr><tr class='clickable' data-path='Starter Docs/Stock Take Variance - For Date  By Category &amp; Stock Code w POS Sales.TXT' data-ingest='20260525-9504e7d7010b73f6'><td><code>Stock Take Variance - For Date  By Category &amp; Stock Code w POS Sales.TXT</code></td><td>Starter Docs</td><td class='nowrap'>stock_take|date:20/05/2026</td><td>primary</td><td>2026-05-24 12:29</td><td class='num'>37,706</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-9504e7d7010b73f6",
+    "path": "Additional/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "filename": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "folder": "Additional",
+    "pattern_name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales",
+    "report_type": "stock_take_variance",
+    "source_type": "inventory",
+    "content_key": "stock_take|date:20/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 37706,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "9504e7d7010b73f6",
+    "summary": {
+      "report_type": "stock_take_variance",
+      "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "stock_take_date": "20/05/2026",
+      "sku_variances": 89,
+      "variance_value_at_cost": 349.42
+    },
+    "catalog_ref": "file-type-catalog.yaml#stock_take_variance"
+  },
+  {
+    "ingest_id": "20260525-9504e7d7010b73f6",
+    "path": "Starter Docs/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "filename": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales",
+    "report_type": "stock_take_variance",
+    "source_type": "inventory",
+    "content_key": "stock_take|date:20/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 37706,
+    "modified": "2026-05-24 12:29",
+    "sha256_prefix": "9504e7d7010b73f6",
+    "summary": {
+      "report_type": "stock_take_variance",
+      "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "stock_take_date": "20/05/2026",
+      "sku_variances": 89,
+      "variance_value_at_cost": 349.42
+    },
+    "catalog_ref": "file-type-catalog.yaml#stock_take_variance"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "stock_take|date:20/05/2026",
+    "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "path": "Starter Docs/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "modified": "2026-05-24 12:29",
+    "summary": {
+      "report_type": "stock_take_variance",
+      "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "stock_take_date": "20/05/2026",
+      "sku_variances": 89,
+      "variance_value_at_cost": 349.42
+    },
+    "ingest_id": "20260525-9504e7d7010b73f6"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

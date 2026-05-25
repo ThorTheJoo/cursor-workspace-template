@@ -1,0 +1,48 @@
+ENGEN JET PARK SERVICE STATION                         13/05/2026 07:05 - April 2026
+------------------------------------------------------------------------------------
+Stock Purchases Summary - By Category Summarized
+------------------------------------------------------------------------------------
+From Category :  005
+To   Category :  VV
+------------------------------------------------------------------------------------
+Cat            Cat Description                   Purch Amt   Vat Amount  Amount Incl
+---            ---------------                   ---------   ----------  -----------
+BAKERY         BAKERY                             12088.01      1813.29     13901.30
+BAKPRE         BAKERY N PREP FOOD                 48671.60      6152.75     54824.35
+BARIST         BARISTA                             3980.75       534.11      4514.86
+BEVCDK         BEVERAGE COOLDRINKS                38026.15      5704.04     43730.19
+BEVHGH         BEVERAGES - HIGH ENERGY            36236.04      5435.50     41671.54
+BEVJCS         JUICES - BEVERAGE                   4166.03       624.90      4790.93
+BEVWTR         BEVERAGES - WATERS                 16706.43      2506.02     19212.45
+BKYBRD         BAKRY BREAD                         5483.69       470.03      5953.72
+CAR CA         CAR CARE                            2636.45       395.49      3031.94
+CHSIM          CHIPS - SIMBA                       6308.50       946.32      7254.82
+CHWILL         CHIPS - WILLARDS                    1096.13       164.42      1260.55
+CLEAN          CLEANING                            1916.00       287.40      2203.40
+CONBEA         CONFECTIONARY - BEACON              4897.31       734.61      5631.92
+CONCAD         CONFECTIONARY - CADBURY'S           6296.26       944.44      7240.70
+CONFEC         CONFECTIONARY                      11562.23      1734.38     13296.61
+CONNES         CONFECTIONARY - NESTLE              1485.60       222.84      1708.44
+DAIRY          DAIRY                               4608.87       445.35      5054.22
+EDIBLE         EDIBLE GROCERIES EDIBLE             1238.47       185.80      1424.27
+FROZEN         FROZEN FOODS                         787.50         0.00       787.50
+FUEL           FUEL                             2591881.31         0.00   2591881.31
+ICE CR         ICE CREAM                           3906.23       585.93      4492.16
+LUBES          LUBES                              11962.90      1794.46     13757.36
+NON-ED         NON-EDIBLE GROCERIES                1145.64       171.85      1317.49
+PACKAG         PACKAGING                           3807.17       571.08      4378.25
+PHARMA         PHARMACY ITEMS                      1504.16       225.63      1729.79
+SNACK          SNACK FOODS                         1282.71       192.41      1475.12
+SNKBIS         SNACK - BISCUITS                    3914.77       587.27      4502.04
+SNKBTG         BILTONG PRODUCTS                    4576.00       686.40      5262.40
+SNKNTS         NUTS - SNACKS                       1059.00       158.85      1217.85
+SPECIA         SPECIALS                              22.06         3.31        25.37
+STATIO         STATIONARY                          3391.52       508.72      3900.24
+TOBACC         TOBACCO                            10480.39      1572.03     12052.42
+TOBCIG         CIGARETTES                         32954.95      4943.28     37898.23
+TOILET         TOILETRIES & HEALTH                 2958.35       443.74      3402.09
+UNDECL         UNDECLARED ITEMS                      51.96         0.03        51.99
+                                              ------------ ------------ ------------
+                                                2883091.14     41746.68   2924837.82
+<--- Ver: 5.46k ---------------- * Page: 1 * ----------------- Rpt Type: System --->
+<< Page Break >>

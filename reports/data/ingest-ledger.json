@@ -1,0 +1,2770 @@
+{
+  "entries": [
+    {
+      "ingest_id": "20260525-2ce1bc99613b79f5",
+      "path": "Additional/Cash Variance - Selected EOD by Cashier (2).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 13027,
+      "modified": "2026-05-25 13:05",
+      "sha256_prefix": "2ce1bc99613b79f5",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-7029f6b4b6eac837",
+      "path": "Additional/Cash Variance - Selected EOD by Cashier (3).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (3).TXT",
+      "folder": "Additional",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 16328,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "7029f6b4b6eac837",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-3b447b0bb656da06",
+      "path": "Additional/Cash Variance - Selected EOD by Cashier (4).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (4).TXT",
+      "folder": "Additional",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 19217,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "3b447b0bb656da06",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-6504486694fac326",
+      "path": "Additional/Cash Variance - Selected EOD by Cashier (5).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (5).TXT",
+      "folder": "Additional",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 19220,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "6504486694fac326",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-794888d815229887",
+      "path": "Additional/Creditors Purchases - Detail by AC Name.TXT",
+      "filename": "Creditors Purchases - Detail by AC Name.TXT",
+      "folder": "Additional",
+      "pattern_name": "Creditors Purchases - Detail by AC Name",
+      "report_type": "creditors_purchases_detail",
+      "source_type": "accounting",
+      "content_key": "creditors_purchases_detail|file:Creditors Purchases - Detail by AC Name",
+      "is_duplicate_copy": false,
+      "size_bytes": 253750,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "794888d815229887",
+      "summary": {
+        "report_type": "creditors_purchases_detail"
+      },
+      "catalog_ref": "file-type-catalog.yaml#creditors_purchases_detail"
+    },
+    {
+      "ingest_id": "20260525-f7333e236acd4d86",
+      "path": "Additional/Day End Summary (2).TXT",
+      "filename": "Day End Summary (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:147|date:24/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 53763,
+      "modified": "2026-05-25 13:05",
+      "sha256_prefix": "f7333e236acd4d86",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 147,
+        "batch_date": "24/05/2026",
+        "nett_takings": 71895.05,
+        "fuel_total": 65643.9,
+        "shop_total_incl": 6056.15,
+        "fuel_volume": 2287.27,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-2a17fb67760eda32",
+      "path": "Additional/Day End Summary (3).TXT",
+      "filename": "Day End Summary (3).TXT",
+      "folder": "Additional",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:141|date:18/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 51945,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "2a17fb67760eda32",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 141,
+        "batch_date": "18/05/2026",
+        "nett_takings": 185823.99,
+        "fuel_total": 169798.8,
+        "shop_total_incl": 16690.4,
+        "fuel_volume": 5788.51,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-4828f159bf3b703f",
+      "path": "Additional/Day End Summary (4).TXT",
+      "filename": "Day End Summary (4).TXT",
+      "folder": "Additional",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:142|date:19/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 52746,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "4828f159bf3b703f",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 142,
+        "batch_date": "19/05/2026",
+        "nett_takings": 104790.45,
+        "fuel_total": 88895.6,
+        "shop_total_incl": 15794.85,
+        "fuel_volume": 3191.23,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-e39ead78c622bdfe",
+      "path": "Additional/Day End Summary (5).TXT",
+      "filename": "Day End Summary (5).TXT",
+      "folder": "Additional",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:143|date:20/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 52657,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "e39ead78c622bdfe",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 143,
+        "batch_date": "20/05/2026",
+        "nett_takings": 162197.44,
+        "fuel_total": 146041.85,
+        "shop_total_incl": 16754.8,
+        "fuel_volume": 5000.67,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-9cd949c46a59427e",
+      "path": "Additional/Day End Summary (6).TXT",
+      "filename": "Day End Summary (6).TXT",
+      "folder": "Additional",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:143|date:20/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 52790,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "9cd949c46a59427e",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 143,
+        "batch_date": "20/05/2026",
+        "nett_takings": 162197.44,
+        "fuel_total": 146041.85,
+        "shop_total_incl": 16754.8,
+        "fuel_volume": 5000.67,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-0068187edca48950",
+      "path": "Additional/Debtors Age Analysis - By AC Name with Deposits (1).TXT",
+      "filename": "Debtors Age Analysis - By AC Name with Deposits (1).TXT",
+      "folder": "Additional",
+      "pattern_name": "Debtors Age Analysis - By AC Name with Deposits",
+      "report_type": "debtors_age_analysis",
+      "source_type": "accounting",
+      "content_key": "debtors_age_analysis|file:Debtors Age Analysis - By AC Name with Deposits",
+      "is_duplicate_copy": true,
+      "size_bytes": 2164,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "0068187edca48950",
+      "summary": {
+        "report_type": "debtors_age_analysis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#debtors_age_analysis"
+    },
+    {
+      "ingest_id": "20260525-ee90d38d721f321e",
+      "path": "Additional/Debtors Age Analysis - By AC Name with Deposits.TXT",
+      "filename": "Debtors Age Analysis - By AC Name with Deposits.TXT",
+      "folder": "Additional",
+      "pattern_name": "Debtors Age Analysis - By AC Name with Deposits",
+      "report_type": "debtors_age_analysis",
+      "source_type": "accounting",
+      "content_key": "debtors_age_analysis|file:Debtors Age Analysis - By AC Name with Deposits",
+      "is_duplicate_copy": false,
+      "size_bytes": 2164,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "ee90d38d721f321e",
+      "summary": {
+        "report_type": "debtors_age_analysis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#debtors_age_analysis"
+    },
+    {
+      "ingest_id": "20260525-2edc9a6e633c8c6d",
+      "path": "Additional/EFT Batch Summary By EFT Batch Date (1).TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date (1).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:24/05/2026",
+      "is_duplicate_copy": true,
+      "size_bytes": 2000,
+      "modified": "2026-05-25 13:05",
+      "sha256_prefix": "2edc9a6e633c8c6d",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date (1).TXT",
+        "batch_date": "24/05/2026",
+        "total_trx": 117,
+        "total_amount": 51429.5,
+        "forecourt_amount": 49143.95,
+        "retail_amount": 2267.55
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-12d8b8e391952535",
+      "path": "Additional/EFT Batch Summary By EFT Batch Date (2).TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:18/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 2000,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "12d8b8e391952535",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date (2).TXT",
+        "batch_date": "18/05/2026",
+        "total_trx": 384,
+        "total_amount": 143267.2,
+        "forecourt_amount": 133161.4,
+        "retail_amount": 9989.3
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-54035db78e8dbf10",
+      "path": "Additional/EFT Batch Summary By EFT Batch Date (3).TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date (3).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:20/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 2000,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "54035db78e8dbf10",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date (3).TXT",
+        "batch_date": "20/05/2026",
+        "total_trx": 374,
+        "total_amount": 121361.05,
+        "forecourt_amount": 110120.65,
+        "retail_amount": 10617.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-e86047d92efc3634",
+      "path": "Additional/EFT Detail - By EOD Batch Number & Shift (2).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 21646,
+      "modified": "2026-05-25 13:05",
+      "sha256_prefix": "e86047d92efc3634",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-7d01be25d174e28f",
+      "path": "Additional/EFT Detail - By EOD Batch Number & Shift (3).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (3).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 59106,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "7d01be25d174e28f",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-517221b049c124be",
+      "path": "Additional/EFT Detail - By EOD Batch Number & Shift (4).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (4).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 43818,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "517221b049c124be",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-afe8be881bc1dd79",
+      "path": "Additional/EFT Detail - By EOD Batch Number & Shift (5).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (5).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 57010,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "afe8be881bc1dd79",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-04a9aa81530867d6",
+      "path": "Additional/EFT Summary By EOD Batch & Shift (2).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 2031,
+      "modified": "2026-05-25 13:05",
+      "sha256_prefix": "04a9aa81530867d6",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-235db5f531d22a5d",
+      "path": "Additional/EFT Summary By EOD Batch & Shift (3).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (3).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 2096,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "235db5f531d22a5d",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-2342eb28ab4ad46f",
+      "path": "Additional/EFT Summary By EOD Batch & Shift (4).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (4).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 1901,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "2342eb28ab4ad46f",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-586f2ac56e50d947",
+      "path": "Additional/EFT Summary By EOD Batch & Shift (5).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (5).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 2096,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "586f2ac56e50d947",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-6c5b4e496d44f9de",
+      "path": "Additional/EFT Transactions Not Yet Sent to Bank (1).TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": true,
+      "size_bytes": 3523,
+      "modified": "2026-05-25 13:04",
+      "sha256_prefix": "6c5b4e496d44f9de",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+        "pending_total": 1977.9,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-037eafa2ea6fbd02",
+      "path": "Additional/EFT Transactions Not Yet Sent to Bank (2).TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": false,
+      "size_bytes": 2698,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "037eafa2ea6fbd02",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+        "pending_total": 929.9,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-fb02617ef0d6537b",
+      "path": "Additional/EFT Transactions Not Yet Sent to Bank (3).TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank (3).TXT",
+      "folder": "Additional",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": false,
+      "size_bytes": 2834,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "fb02617ef0d6537b",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank (3).TXT",
+        "pending_total": 3121.4,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-0203af2f4642d456",
+      "path": "Additional/EOM By Category & Sub-Category Detail (Std Report).TXT",
+      "filename": "EOM By Category & Sub-Category Detail (Std Report).TXT",
+      "folder": "Additional",
+      "pattern_name": "EOM By Category & Sub-Category Detail (Std Report)",
+      "report_type": "eom_category_detail",
+      "source_type": "pos_system",
+      "content_key": "eom_category_detail|file:EOM By Category & Sub-Category Detail (Std Report)",
+      "is_duplicate_copy": false,
+      "size_bytes": 2667,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "0203af2f4642d456",
+      "summary": {
+        "report_type": "eom_category_detail"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eom_category_detail"
+    },
+    {
+      "ingest_id": "20260525-98cab127e70d518a",
+      "path": "Additional/Fuel Sales Control - Control Report - ATG.TXT",
+      "filename": "Fuel Sales Control - Control Report - ATG.TXT",
+      "folder": "Additional",
+      "pattern_name": "Fuel Sales Control - Control Report - ATG",
+      "report_type": "fuel_control_atg",
+      "source_type": "pos_system",
+      "content_key": "fuel_control_atg|file:Fuel Sales Control - Control Report - ATG",
+      "is_duplicate_copy": false,
+      "size_bytes": 11217,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "98cab127e70d518a",
+      "summary": {
+        "report_type": "fuel_control_atg"
+      },
+      "catalog_ref": "file-type-catalog.yaml#fuel_control_atg"
+    },
+    {
+      "ingest_id": "20260525-deab0fcc22fd98b8",
+      "path": "Additional/Fuel Sales Control - MTD By Product.TXT",
+      "filename": "Fuel Sales Control - MTD By Product.TXT",
+      "folder": "Additional",
+      "pattern_name": "Fuel Sales Control - MTD By Product",
+      "report_type": "fuel_control_mtd_by_product",
+      "source_type": "pos_system",
+      "content_key": "fuel_control_mtd_by_product|file:Fuel Sales Control - MTD By Product",
+      "is_duplicate_copy": false,
+      "size_bytes": 12840,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "deab0fcc22fd98b8",
+      "summary": {
+        "report_type": "fuel_control_mtd_by_product"
+      },
+      "catalog_ref": "file-type-catalog.yaml#fuel_control_mtd_by_product"
+    },
+    {
+      "ingest_id": "20260525-28ebe0891956c21e",
+      "path": "Additional/Fuel Sales Control - MTD Summary.TXT",
+      "filename": "Fuel Sales Control - MTD Summary.TXT",
+      "folder": "Additional",
+      "pattern_name": "Fuel Sales Control - MTD Summary",
+      "report_type": "fuel_control_mtd_summary",
+      "source_type": "pos_system",
+      "content_key": "fuel_control_mtd_summary|file:Fuel Sales Control - MTD Summary",
+      "is_duplicate_copy": false,
+      "size_bytes": 16975,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "28ebe0891956c21e",
+      "summary": {
+        "report_type": "fuel_control_mtd_summary"
+      },
+      "catalog_ref": "file-type-catalog.yaml#fuel_control_mtd_summary"
+    },
+    {
+      "ingest_id": "20260525-453dcd0610950510",
+      "path": "Additional/Month End Detail.TXT",
+      "filename": "Month End Detail.TXT",
+      "folder": "Additional",
+      "pattern_name": "Month End Detail",
+      "report_type": "month_end_detail",
+      "source_type": "pos_system",
+      "content_key": "month_end_detail|file:Month End Detail",
+      "is_duplicate_copy": false,
+      "size_bytes": 158204,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "453dcd0610950510",
+      "summary": {
+        "report_type": "month_end_detail"
+      },
+      "catalog_ref": "file-type-catalog.yaml#month_end_detail"
+    },
+    {
+      "ingest_id": "20260525-c59c860754b1cee8",
+      "path": "Additional/Month End Summary (1).TXT",
+      "filename": "Month End Summary (1).TXT",
+      "folder": "Additional",
+      "pattern_name": "Month End Summary",
+      "report_type": "month_end_summary",
+      "source_type": "pos_system",
+      "content_key": "month_end_summary|file:Month End Summary",
+      "is_duplicate_copy": true,
+      "size_bytes": 15767,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "c59c860754b1cee8",
+      "summary": {
+        "report_type": "month_end_summary"
+      },
+      "catalog_ref": "file-type-catalog.yaml#month_end_summary"
+    },
+    {
+      "ingest_id": "20260525-f58d1eb25d1c410a",
+      "path": "Additional/Month End Summary.TXT",
+      "filename": "Month End Summary.TXT",
+      "folder": "Additional",
+      "pattern_name": "Month End Summary",
+      "report_type": "month_end_summary",
+      "source_type": "pos_system",
+      "content_key": "month_end_summary|file:Month End Summary",
+      "is_duplicate_copy": false,
+      "size_bytes": 15767,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "f58d1eb25d1c410a",
+      "summary": {
+        "report_type": "month_end_summary"
+      },
+      "catalog_ref": "file-type-catalog.yaml#month_end_summary"
+    },
+    {
+      "ingest_id": "20260525-444ab86d8dc5a944",
+      "path": "Additional/Monthly Summary Forecourt & Shop - By Category.TXT",
+      "filename": "Monthly Summary Forecourt & Shop - By Category.TXT",
+      "folder": "Additional",
+      "pattern_name": "Monthly Summary Forecourt & Shop - By Category",
+      "report_type": "monthly_category_summary",
+      "source_type": "pos_system",
+      "content_key": "monthly_category_summary|file:Monthly Summary Forecourt & Shop - By Category",
+      "is_duplicate_copy": false,
+      "size_bytes": 5832,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "444ab86d8dc5a944",
+      "summary": {
+        "report_type": "monthly_category_summary"
+      },
+      "catalog_ref": "file-type-catalog.yaml#monthly_category_summary"
+    },
+    {
+      "ingest_id": "20260525-3f1759a6a850816a",
+      "path": "Additional/Stock Cost & Selling Price Listing  - By Category (1).TXT",
+      "filename": "Stock Cost & Selling Price Listing  - By Category (1).TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+      "report_type": "stock_cost_sell_price",
+      "source_type": "inventory",
+      "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+      "is_duplicate_copy": true,
+      "size_bytes": 237792,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "3f1759a6a850816a",
+      "summary": {
+        "report_type": "stock_cost_sell_price"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price"
+    },
+    {
+      "ingest_id": "20260525-43cfda627abd414b",
+      "path": "Additional/Stock Cost & Selling Price Listing  - By Category (2).TXT",
+      "filename": "Stock Cost & Selling Price Listing  - By Category (2).TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+      "report_type": "stock_cost_sell_price",
+      "source_type": "inventory",
+      "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+      "is_duplicate_copy": false,
+      "size_bytes": 237787,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "43cfda627abd414b",
+      "summary": {
+        "report_type": "stock_cost_sell_price"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price"
+    },
+    {
+      "ingest_id": "20260525-c0141d389687a706",
+      "path": "Additional/Stock Cost & Selling Price Listing  - By Category.TXT",
+      "filename": "Stock Cost & Selling Price Listing  - By Category.TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+      "report_type": "stock_cost_sell_price",
+      "source_type": "inventory",
+      "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+      "is_duplicate_copy": false,
+      "size_bytes": 1558,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "c0141d389687a706",
+      "summary": {
+        "report_type": "stock_cost_sell_price"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price"
+    },
+    {
+      "ingest_id": "20260525-5cd95e1df174c301",
+      "path": "Additional/Stock On Hand with Unit Cost - by Category.TXT",
+      "filename": "Stock On Hand with Unit Cost - by Category.TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock On Hand with Unit Cost - by Category",
+      "report_type": "stock_on_hand",
+      "source_type": "inventory",
+      "content_key": "stock_on_hand|file:Stock On Hand with Unit Cost - by Category",
+      "is_duplicate_copy": false,
+      "size_bytes": 137020,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "5cd95e1df174c301",
+      "summary": {
+        "report_type": "stock_on_hand"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_on_hand"
+    },
+    {
+      "ingest_id": "20260525-d98260f9ad1c836f",
+      "path": "Additional/Stock Purchases Summary - By Category Summarized.TXT",
+      "filename": "Stock Purchases Summary - By Category Summarized.TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Purchases Summary - By Category Summarized",
+      "report_type": "stock_purchases_summarized",
+      "source_type": "inventory",
+      "content_key": "stock_purchases_summarized|file:Stock Purchases Summary - By Category Summarized",
+      "is_duplicate_copy": false,
+      "size_bytes": 3895,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "d98260f9ad1c836f",
+      "summary": {
+        "report_type": "stock_purchases_summarized"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_purchases_summarized"
+    },
+    {
+      "ingest_id": "20260525-be9c3e06bd41e261",
+      "path": "Additional/Stock Purchases Summary - By Category.TXT",
+      "filename": "Stock Purchases Summary - By Category.TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Purchases Summary - By Category",
+      "report_type": "stock_purchases_by_category",
+      "source_type": "inventory",
+      "content_key": "stock_purchases_by_category|file:Stock Purchases Summary - By Category",
+      "is_duplicate_copy": false,
+      "size_bytes": 72478,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "be9c3e06bd41e261",
+      "summary": {
+        "report_type": "stock_purchases_by_category"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_purchases_by_category"
+    },
+    {
+      "ingest_id": "20260525-427b0a7ed2489af3",
+      "path": "Additional/Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
+      "filename": "Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Shrinkage Analysis - MTD by Category @ Latest Cost",
+      "report_type": "stock_shrinkage_mtd",
+      "source_type": "inventory",
+      "content_key": "stock_shrinkage_mtd|file:Stock Shrinkage Analysis - MTD by Category @ Latest Cost",
+      "is_duplicate_copy": false,
+      "size_bytes": 5994,
+      "modified": "2026-05-25 13:07",
+      "sha256_prefix": "427b0a7ed2489af3",
+      "summary": {
+        "report_type": "stock_shrinkage_mtd"
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_shrinkage_mtd"
+    },
+    {
+      "ingest_id": "20260525-9504e7d7010b73f6",
+      "path": "Additional/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "filename": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "folder": "Additional",
+      "pattern_name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales",
+      "report_type": "stock_take_variance",
+      "source_type": "inventory",
+      "content_key": "stock_take|date:20/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 37706,
+      "modified": "2026-05-25 13:08",
+      "sha256_prefix": "9504e7d7010b73f6",
+      "summary": {
+        "report_type": "stock_take_variance",
+        "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "stock_take_date": "20/05/2026",
+        "sku_variances": 89,
+        "variance_value_at_cost": 349.42
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_take_variance"
+    },
+    {
+      "ingest_id": "20260525-e7e3c4b825ab55eb",
+      "path": "Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+      "filename": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+      "folder": "Additional",
+      "pattern_name": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+      "report_type": "turnover_levy",
+      "source_type": "accounting",
+      "content_key": "turnover_levy|file:Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+      "is_duplicate_copy": false,
+      "size_bytes": 13453,
+      "modified": "2026-05-25 13:06",
+      "sha256_prefix": "e7e3c4b825ab55eb",
+      "summary": {
+        "report_type": "turnover_levy"
+      },
+      "catalog_ref": "file-type-catalog.yaml#turnover_levy"
+    },
+    {
+      "ingest_id": "20260525-adace4af16e974a6",
+      "path": "Starter Docs/62848015857.ofx",
+      "filename": "62848015857.ofx",
+      "folder": "Starter Docs",
+      "pattern_name": "62848015857",
+      "report_type": "bank_statement",
+      "source_type": "bank_feed",
+      "content_key": "bank|account:62848015857|file:62848015857.ofx",
+      "is_duplicate_copy": false,
+      "size_bytes": 38955,
+      "modified": "2026-05-24 17:22",
+      "sha256_prefix": "adace4af16e974a6",
+      "summary": {
+        "report_type": "bank_statement"
+      },
+      "catalog_ref": "file-type-catalog.yaml#bank_statement"
+    },
+    {
+      "ingest_id": "20260525-974a30e3b55bd0da",
+      "path": "Starter Docs/CASH UP APRIL 26.xlsx",
+      "filename": "CASH UP APRIL 26.xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "CASH UP APRIL 26",
+      "report_type": "cash_up",
+      "source_type": "manual_recon",
+      "content_key": "cash_up|file:CASH UP APRIL 26",
+      "is_duplicate_copy": false,
+      "size_bytes": 477695,
+      "modified": "2026-05-24 12:44",
+      "sha256_prefix": "974a30e3b55bd0da",
+      "summary": {
+        "report_type": "cash_up"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_up"
+    },
+    {
+      "ingest_id": "20260525-6504486694fac326",
+      "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (1).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": true,
+      "size_bytes": 19220,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "6504486694fac326",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-7029f6b4b6eac837",
+      "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (2).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 16328,
+      "modified": "2026-05-24 16:40",
+      "sha256_prefix": "7029f6b4b6eac837",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-3b447b0bb656da06",
+      "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (3).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 19217,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "3b447b0bb656da06",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-0d56c09e2c534596",
+      "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 16330,
+      "modified": "2026-05-23 11:17",
+      "sha256_prefix": "0d56c09e2c534596",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-9cd949c46a59427e",
+      "path": "Starter Docs/Day End Summary (1).TXT",
+      "filename": "Day End Summary (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:143|date:20/05/2026",
+      "is_duplicate_copy": true,
+      "size_bytes": 52790,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "9cd949c46a59427e",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 143,
+        "batch_date": "20/05/2026",
+        "nett_takings": 162197.44,
+        "fuel_total": 146041.85,
+        "shop_total_incl": 16754.8,
+        "fuel_volume": 5000.67,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-e39ead78c622bdfe",
+      "path": "Starter Docs/Day End Summary (2).TXT",
+      "filename": "Day End Summary (2).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:143|date:20/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 52657,
+      "modified": "2026-05-24 12:29",
+      "sha256_prefix": "e39ead78c622bdfe",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 143,
+        "batch_date": "20/05/2026",
+        "nett_takings": 162197.44,
+        "fuel_total": 146041.85,
+        "shop_total_incl": 16754.8,
+        "fuel_volume": 5000.67,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-2a17fb67760eda32",
+      "path": "Starter Docs/Day End Summary (3).TXT",
+      "filename": "Day End Summary (3).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:141|date:18/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 51945,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "2a17fb67760eda32",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 141,
+        "batch_date": "18/05/2026",
+        "nett_takings": 185823.99,
+        "fuel_total": 169798.8,
+        "shop_total_incl": 16690.4,
+        "fuel_volume": 5788.51,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-4828f159bf3b703f",
+      "path": "Starter Docs/Day End Summary (4).TXT",
+      "filename": "Day End Summary (4).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:142|date:19/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 52746,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "4828f159bf3b703f",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 142,
+        "batch_date": "19/05/2026",
+        "nett_takings": 104790.45,
+        "fuel_total": 88895.6,
+        "shop_total_incl": 15794.85,
+        "fuel_volume": 3191.23,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-b05a8274f9bca9dd",
+      "path": "Starter Docs/Day End Summary.TXT",
+      "filename": "Day End Summary.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:145|date:22/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 53300,
+      "modified": "2026-05-23 11:15",
+      "sha256_prefix": "b05a8274f9bca9dd",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 145,
+        "batch_date": "22/05/2026",
+        "nett_takings": 183805.24,
+        "fuel_total": 162086.3,
+        "shop_total_incl": 21909.15,
+        "fuel_volume": 5479.85,
+        "cash_variance": 19.56
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-f5405f7f66b68219",
+      "path": "Starter Docs/deepseek_text_20260524_26b077.txt",
+      "filename": "deepseek_text_20260524_26b077.txt",
+      "folder": "Starter Docs",
+      "pattern_name": "deepseek_text_20260524_26b077",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:deepseek_text_20260524_26b077",
+      "is_duplicate_copy": false,
+      "size_bytes": 9379,
+      "modified": "2026-05-24 14:52",
+      "sha256_prefix": "f5405f7f66b68219",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-54035db78e8dbf10",
+      "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (1).TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:20/05/2026",
+      "is_duplicate_copy": true,
+      "size_bytes": 2000,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "54035db78e8dbf10",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date (1).TXT",
+        "batch_date": "20/05/2026",
+        "total_trx": 374,
+        "total_amount": 121361.05,
+        "forecourt_amount": 110120.65,
+        "retail_amount": 10617.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-12d8b8e391952535",
+      "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date (2).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:18/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 2000,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "12d8b8e391952535",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date (2).TXT",
+        "batch_date": "18/05/2026",
+        "total_trx": 384,
+        "total_amount": 143267.2,
+        "forecourt_amount": 133161.4,
+        "retail_amount": 9989.3
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-f82b985c372633a4",
+      "path": "Starter Docs/EFT Batch Summary By EFT Batch Date.TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:22/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 2000,
+      "modified": "2026-05-23 11:15",
+      "sha256_prefix": "f82b985c372633a4",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date.TXT",
+        "batch_date": "22/05/2026",
+        "total_trx": 429,
+        "total_amount": 134855.45,
+        "forecourt_amount": 119978.45,
+        "retail_amount": 14704.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-afe8be881bc1dd79",
+      "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (1).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": true,
+      "size_bytes": 57010,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "afe8be881bc1dd79",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-7d01be25d174e28f",
+      "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (2).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (2).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 59106,
+      "modified": "2026-05-24 16:40",
+      "sha256_prefix": "7d01be25d174e28f",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-517221b049c124be",
+      "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (3).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (3).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 43818,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "517221b049c124be",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-45df6ef9e852aeca",
+      "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift.TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 65426,
+      "modified": "2026-05-23 11:16",
+      "sha256_prefix": "45df6ef9e852aeca",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-586f2ac56e50d947",
+      "path": "Starter Docs/EFT Summary By EOD Batch & Shift (1).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": true,
+      "size_bytes": 2096,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "586f2ac56e50d947",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-235db5f531d22a5d",
+      "path": "Starter Docs/EFT Summary By EOD Batch & Shift (2).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (2).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 2096,
+      "modified": "2026-05-24 16:40",
+      "sha256_prefix": "235db5f531d22a5d",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-2342eb28ab4ad46f",
+      "path": "Starter Docs/EFT Summary By EOD Batch & Shift (3).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (3).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 1901,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "2342eb28ab4ad46f",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-a5b848a2673344ff",
+      "path": "Starter Docs/EFT Summary By EOD Batch & Shift.TXT",
+      "filename": "EFT Summary By EOD Batch & Shift.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 2356,
+      "modified": "2026-05-23 11:16",
+      "sha256_prefix": "a5b848a2673344ff",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-fb02617ef0d6537b",
+      "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (1).TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": true,
+      "size_bytes": 2834,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "fb02617ef0d6537b",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+        "pending_total": 3121.4,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-037eafa2ea6fbd02",
+      "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (2).TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": false,
+      "size_bytes": 2698,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "037eafa2ea6fbd02",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+        "pending_total": 929.9,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-57fbf068fb527678",
+      "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": false,
+      "size_bytes": 2698,
+      "modified": "2026-05-23 11:15",
+      "sha256_prefix": "57fbf068fb527678",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+        "pending_total": 3056.05,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-b533e602583a1064",
+      "path": "Starter Docs/invoice_ledger.xlsx",
+      "filename": "invoice_ledger.xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "invoice_ledger",
+      "report_type": "spreadsheet_unknown",
+      "source_type": "manual_recon",
+      "content_key": "spreadsheet_unknown|file:invoice_ledger",
+      "is_duplicate_copy": false,
+      "size_bytes": 6809,
+      "modified": "2026-05-24 17:21",
+      "sha256_prefix": "b533e602583a1064",
+      "summary": {
+        "report_type": "spreadsheet_unknown"
+      },
+      "catalog_ref": "file-type-catalog.yaml#spreadsheet_unknown"
+    },
+    {
+      "ingest_id": "20260525-c59c860754b1cee8",
+      "path": "Starter Docs/Month End Summary.TXT",
+      "filename": "Month End Summary.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Month End Summary",
+      "report_type": "month_end_summary",
+      "source_type": "pos_system",
+      "content_key": "month_end_summary|file:Month End Summary",
+      "is_duplicate_copy": false,
+      "size_bytes": 15767,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "c59c860754b1cee8",
+      "summary": {
+        "report_type": "month_end_summary"
+      },
+      "catalog_ref": "file-type-catalog.yaml#month_end_summary"
+    },
+    {
+      "ingest_id": "20260525-9c567bbca71d8c5e",
+      "path": "Starter Docs/Monthly Summary Forecourt & Shop - By Category.TXT",
+      "filename": "Monthly Summary Forecourt & Shop - By Category.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Monthly Summary Forecourt & Shop - By Category",
+      "report_type": "monthly_category_summary",
+      "source_type": "pos_system",
+      "content_key": "monthly_category_summary|file:Monthly Summary Forecourt & Shop - By Category",
+      "is_duplicate_copy": false,
+      "size_bytes": 5832,
+      "modified": "2026-05-24 12:28",
+      "sha256_prefix": "9c567bbca71d8c5e",
+      "summary": {
+        "report_type": "monthly_category_summary"
+      },
+      "catalog_ref": "file-type-catalog.yaml#monthly_category_summary"
+    },
+    {
+      "ingest_id": "20260525-765b25db1d4bcd33",
+      "path": "Starter Docs/Nett Pay List - 140526 (1).xls",
+      "filename": "Nett Pay List - 140526 (1).xls",
+      "folder": "Starter Docs",
+      "pattern_name": "Nett Pay List - 140526",
+      "report_type": "nett_pay_list",
+      "source_type": "payroll_system",
+      "content_key": "payroll|period:140526",
+      "is_duplicate_copy": true,
+      "size_bytes": 33280,
+      "modified": "2026-05-23 11:26",
+      "sha256_prefix": "765b25db1d4bcd33",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+    },
+    {
+      "ingest_id": "20260525-a8074b476a40832a",
+      "path": "Starter Docs/Nett Pay List - 140526 (2).xls",
+      "filename": "Nett Pay List - 140526 (2).xls",
+      "folder": "Starter Docs",
+      "pattern_name": "Nett Pay List - 140526",
+      "report_type": "nett_pay_list",
+      "source_type": "payroll_system",
+      "content_key": "payroll|period:140526",
+      "is_duplicate_copy": false,
+      "size_bytes": 60416,
+      "modified": "2026-05-24 12:44",
+      "sha256_prefix": "a8074b476a40832a",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+    },
+    {
+      "ingest_id": "20260525-765b25db1d4bcd33",
+      "path": "Starter Docs/Nett Pay List - 140526.xls",
+      "filename": "Nett Pay List - 140526.xls",
+      "folder": "Starter Docs",
+      "pattern_name": "Nett Pay List - 140526",
+      "report_type": "nett_pay_list",
+      "source_type": "payroll_system",
+      "content_key": "payroll|period:140526",
+      "is_duplicate_copy": false,
+      "size_bytes": 33280,
+      "modified": "2026-05-15 15:52",
+      "sha256_prefix": "765b25db1d4bcd33",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+    },
+    {
+      "ingest_id": "20260525-7b22d00076b1a38b",
+      "path": "Starter Docs/Nett Pay List - 210526.xlsx",
+      "filename": "Nett Pay List - 210526.xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "Nett Pay List - 210526",
+      "report_type": "nett_pay_list",
+      "source_type": "payroll_system",
+      "content_key": "payroll|period:210526",
+      "is_duplicate_copy": false,
+      "size_bytes": 25009,
+      "modified": "2026-05-24 12:44",
+      "sha256_prefix": "7b22d00076b1a38b",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+    },
+    {
+      "ingest_id": "20260525-adace4af16e974a6",
+      "path": "Starter Docs/Refresh/62848015857.ofx",
+      "filename": "62848015857.ofx",
+      "folder": "Starter Docs",
+      "pattern_name": "62848015857",
+      "report_type": "bank_statement",
+      "source_type": "bank_feed",
+      "content_key": "bank|account:62848015857|file:62848015857.ofx",
+      "is_duplicate_copy": false,
+      "size_bytes": 38955,
+      "modified": "2026-05-24 17:22",
+      "sha256_prefix": "adace4af16e974a6",
+      "summary": {
+        "report_type": "bank_statement"
+      },
+      "catalog_ref": "file-type-catalog.yaml#bank_statement"
+    },
+    {
+      "ingest_id": "20260525-7029f6b4b6eac837",
+      "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier (1).TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": true,
+      "size_bytes": 16328,
+      "modified": "2026-05-24 16:40",
+      "sha256_prefix": "7029f6b4b6eac837",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-3b447b0bb656da06",
+      "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT",
+      "filename": "Cash Variance - Selected EOD by Cashier.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+      "is_duplicate_copy": false,
+      "size_bytes": 19217,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "3b447b0bb656da06",
+      "summary": {
+        "report_type": "cash_variance_by_cashier"
+      },
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
+    },
+    {
+      "ingest_id": "20260525-2a17fb67760eda32",
+      "path": "Starter Docs/Refresh/Day End Summary (1).TXT",
+      "filename": "Day End Summary (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:141|date:18/05/2026",
+      "is_duplicate_copy": true,
+      "size_bytes": 51945,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "2a17fb67760eda32",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 141,
+        "batch_date": "18/05/2026",
+        "nett_takings": 185823.99,
+        "fuel_total": 169798.8,
+        "shop_total_incl": 16690.4,
+        "fuel_volume": 5788.51,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-4828f159bf3b703f",
+      "path": "Starter Docs/Refresh/Day End Summary.TXT",
+      "filename": "Day End Summary.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Day End Summary",
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "content_key": "day_end|batch:142|date:19/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 52746,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "4828f159bf3b703f",
+      "summary": {
+        "report_type": "day_end_summary",
+        "batch": 142,
+        "batch_date": "19/05/2026",
+        "nett_takings": 104790.45,
+        "fuel_total": 88895.6,
+        "shop_total_incl": 15794.85,
+        "fuel_volume": 3191.23,
+        "cash_variance": 0.0
+      },
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+    },
+    {
+      "ingest_id": "20260525-12d8b8e391952535",
+      "path": "Starter Docs/Refresh/EFT Batch Summary By EFT Batch Date.TXT",
+      "filename": "EFT Batch Summary By EFT Batch Date.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "content_key": "eft_batch|date:18/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 2000,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "12d8b8e391952535",
+      "summary": {
+        "report_type": "eft_batch_summary",
+        "source_file": "EFT Batch Summary By EFT Batch Date.TXT",
+        "batch_date": "18/05/2026",
+        "total_trx": 384,
+        "total_amount": 143267.2,
+        "forecourt_amount": 133161.4,
+        "retail_amount": 9989.3
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+    },
+    {
+      "ingest_id": "20260525-7d01be25d174e28f",
+      "path": "Starter Docs/Refresh/EFT Detail - By EOD Batch Number & Shift (1).TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": true,
+      "size_bytes": 59106,
+      "modified": "2026-05-24 16:40",
+      "sha256_prefix": "7d01be25d174e28f",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-517221b049c124be",
+      "path": "Starter Docs/Refresh/EFT Detail - By EOD Batch Number & Shift.TXT",
+      "filename": "EFT Detail - By EOD Batch Number & Shift.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_detail_by_shift|file:EFT Detail - By EOD Batch Number & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 43818,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "517221b049c124be",
+      "summary": {
+        "report_type": "eft_detail_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift"
+    },
+    {
+      "ingest_id": "20260525-235db5f531d22a5d",
+      "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift (1).TXT",
+      "filename": "EFT Summary By EOD Batch & Shift (1).TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": true,
+      "size_bytes": 2096,
+      "modified": "2026-05-24 16:40",
+      "sha256_prefix": "235db5f531d22a5d",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-2342eb28ab4ad46f",
+      "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift.TXT",
+      "filename": "EFT Summary By EOD Batch & Shift.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+      "is_duplicate_copy": false,
+      "size_bytes": 1901,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "2342eb28ab4ad46f",
+      "summary": {
+        "report_type": "eft_summary_by_shift"
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+    },
+    {
+      "ingest_id": "20260525-037eafa2ea6fbd02",
+      "path": "Starter Docs/Refresh/EFT Transactions Not Yet Sent to Bank.TXT",
+      "filename": "EFT Transactions Not Yet Sent to Bank.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "is_duplicate_copy": false,
+      "size_bytes": 2698,
+      "modified": "2026-05-24 16:39",
+      "sha256_prefix": "037eafa2ea6fbd02",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+        "pending_total": 929.9,
+        "transaction_count": 0
+      },
+      "catalog_ref": "file-type-catalog.yaml#eft_pending"
+    },
+    {
+      "ingest_id": "20260525-b533e602583a1064",
+      "path": "Starter Docs/Refresh/invoice_ledger.xlsx",
+      "filename": "invoice_ledger.xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "invoice_ledger",
+      "report_type": "spreadsheet_unknown",
+      "source_type": "manual_recon",
+      "content_key": "spreadsheet_unknown|file:invoice_ledger",
+      "is_duplicate_copy": false,
+      "size_bytes": 6809,
+      "modified": "2026-05-24 17:21",
+      "sha256_prefix": "b533e602583a1064",
+      "summary": {
+        "report_type": "spreadsheet_unknown"
+      },
+      "catalog_ref": "file-type-catalog.yaml#spreadsheet_unknown"
+    },
+    {
+      "ingest_id": "20260525-49ccfcd5d226151b",
+      "path": "Starter Docs/Schedule of Accounts Invoice T (1).xlsx",
+      "filename": "Schedule of Accounts Invoice T (1).xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "Schedule of Accounts Invoice T",
+      "report_type": "supplier_schedule",
+      "source_type": "manual_recon",
+      "content_key": "supplier_schedule|file:Schedule of Accounts Invoice T",
+      "is_duplicate_copy": true,
+      "size_bytes": 215325,
+      "modified": "2026-05-24 12:44",
+      "sha256_prefix": "49ccfcd5d226151b",
+      "summary": {
+        "report_type": "supplier_schedule"
+      },
+      "catalog_ref": "file-type-catalog.yaml#supplier_schedule"
+    },
+    {
+      "ingest_id": "20260525-49ccfcd5d226151b",
+      "path": "Starter Docs/Schedule of Accounts Invoice T (2).xlsx",
+      "filename": "Schedule of Accounts Invoice T (2).xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "Schedule of Accounts Invoice T",
+      "report_type": "supplier_schedule",
+      "source_type": "manual_recon",
+      "content_key": "supplier_schedule|file:Schedule of Accounts Invoice T",
+      "is_duplicate_copy": false,
+      "size_bytes": 215325,
+      "modified": "2026-05-24 12:33",
+      "sha256_prefix": "49ccfcd5d226151b",
+      "summary": {
+        "report_type": "supplier_schedule"
+      },
+      "catalog_ref": "file-type-catalog.yaml#supplier_schedule"
+    },
+    {
+      "ingest_id": "20260525-49ccfcd5d226151b",
+      "path": "Starter Docs/Schedule of Accounts Invoice T.xlsx",
+      "filename": "Schedule of Accounts Invoice T.xlsx",
+      "folder": "Starter Docs",
+      "pattern_name": "Schedule of Accounts Invoice T",
+      "report_type": "supplier_schedule",
+      "source_type": "manual_recon",
+      "content_key": "supplier_schedule|file:Schedule of Accounts Invoice T",
+      "is_duplicate_copy": false,
+      "size_bytes": 215325,
+      "modified": "2026-05-24 12:33",
+      "sha256_prefix": "49ccfcd5d226151b",
+      "summary": {
+        "report_type": "supplier_schedule"
+      },
+      "catalog_ref": "file-type-catalog.yaml#supplier_schedule"
+    },
+    {
+      "ingest_id": "20260525-9504e7d7010b73f6",
+      "path": "Starter Docs/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "filename": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "folder": "Starter Docs",
+      "pattern_name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales",
+      "report_type": "stock_take_variance",
+      "source_type": "inventory",
+      "content_key": "stock_take|date:20/05/2026",
+      "is_duplicate_copy": false,
+      "size_bytes": 37706,
+      "modified": "2026-05-24 12:29",
+      "sha256_prefix": "9504e7d7010b73f6",
+      "summary": {
+        "report_type": "stock_take_variance",
+        "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "stock_take_date": "20/05/2026",
+        "sku_variances": 89,
+        "variance_value_at_cost": 349.42
+      },
+      "catalog_ref": "file-type-catalog.yaml#stock_take_variance"
+    },
+    {
+      "ingest_id": "20260525-ad58904b56e5b938",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
+      "filename": "WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-15 at 08.22.51",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.22.51",
+      "is_duplicate_copy": false,
+      "size_bytes": 90681,
+      "modified": "2026-05-24 14:37",
+      "sha256_prefix": "ad58904b56e5b938",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-52d49f67d32016c9",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.01.jpeg",
+      "filename": "WhatsApp Image 2026-05-15 at 08.23.01.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-15 at 08.23.01",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.23.01",
+      "is_duplicate_copy": false,
+      "size_bytes": 171640,
+      "modified": "2026-05-24 14:37",
+      "sha256_prefix": "52d49f67d32016c9",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-9dc779dd300e4ad0",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.02 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-15 at 08.23.02 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-15 at 08.23.02",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.23.02",
+      "is_duplicate_copy": false,
+      "size_bytes": 201073,
+      "modified": "2026-05-24 14:37",
+      "sha256_prefix": "9dc779dd300e4ad0",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-78b6d1aba01b2c8d",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.02.jpeg",
+      "filename": "WhatsApp Image 2026-05-15 at 08.23.02.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-15 at 08.23.02",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.23.02",
+      "is_duplicate_copy": false,
+      "size_bytes": 403645,
+      "modified": "2026-05-24 14:37",
+      "sha256_prefix": "78b6d1aba01b2c8d",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-e680a1dff629d9c3",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 14.15.42.jpeg",
+      "filename": "WhatsApp Image 2026-05-15 at 14.15.42.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-15 at 14.15.42",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 14.15.42",
+      "is_duplicate_copy": false,
+      "size_bytes": 118165,
+      "modified": "2026-05-24 14:37",
+      "sha256_prefix": "e680a1dff629d9c3",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-b9e5855dfde3a8f9",
+      "path": "Starter Docs/WhatsApp Image 2026-05-16 at 12.00.09.jpeg",
+      "filename": "WhatsApp Image 2026-05-16 at 12.00.09.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-16 at 12.00.09",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-16 at 12.00.09",
+      "is_duplicate_copy": false,
+      "size_bytes": 76057,
+      "modified": "2026-05-24 14:37",
+      "sha256_prefix": "b9e5855dfde3a8f9",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-084892568f19861c",
+      "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.00.jpeg",
+      "filename": "WhatsApp Image 2026-05-17 at 06.50.00.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-17 at 06.50.00",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-17 at 06.50.00",
+      "is_duplicate_copy": false,
+      "size_bytes": 61367,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "084892568f19861c",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-4fe224c18835f266",
+      "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.01 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-17 at 06.50.01 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-17 at 06.50.01",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-17 at 06.50.01",
+      "is_duplicate_copy": false,
+      "size_bytes": 100844,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "4fe224c18835f266",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-d11a3d0d334fa499",
+      "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.01.jpeg",
+      "filename": "WhatsApp Image 2026-05-17 at 06.50.01.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-17 at 06.50.01",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-17 at 06.50.01",
+      "is_duplicate_copy": false,
+      "size_bytes": 178215,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "d11a3d0d334fa499",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-d97be4f4ca4eb1f2",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 06.25.39 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-18 at 06.25.39 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-18 at 06.25.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 06.25.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 369454,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "d97be4f4ca4eb1f2",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-d97be4f4ca4eb1f2",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 06.25.39.jpeg",
+      "filename": "WhatsApp Image 2026-05-18 at 06.25.39.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-18 at 06.25.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 06.25.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 369454,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "d97be4f4ca4eb1f2",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-5adbcd641fa08c83",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 07.33.39 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-18 at 07.33.39 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-18 at 07.33.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 07.33.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 160791,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "5adbcd641fa08c83",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-5adbcd641fa08c83",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 07.33.39.jpeg",
+      "filename": "WhatsApp Image 2026-05-18 at 07.33.39.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-18 at 07.33.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 07.33.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 160791,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "5adbcd641fa08c83",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-970ede5013e519ce",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 08.20.00.jpeg",
+      "filename": "WhatsApp Image 2026-05-18 at 08.20.00.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-18 at 08.20.00",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 08.20.00",
+      "is_duplicate_copy": false,
+      "size_bytes": 98367,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "970ede5013e519ce",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-4753f47db5200188",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.48 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 07.40.48 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 07.40.48",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 07.40.48",
+      "is_duplicate_copy": false,
+      "size_bytes": 381700,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "4753f47db5200188",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-9053ec187a93c25f",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.48.jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 07.40.48.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 07.40.48",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 07.40.48",
+      "is_duplicate_copy": false,
+      "size_bytes": 203475,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "9053ec187a93c25f",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1284ded2c380a169",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.49 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 07.40.49 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 07.40.49",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 07.40.49",
+      "is_duplicate_copy": false,
+      "size_bytes": 105355,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "1284ded2c380a169",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1284ded2c380a169",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.49.jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 07.40.49.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 07.40.49",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 07.40.49",
+      "is_duplicate_copy": false,
+      "size_bytes": 105355,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "1284ded2c380a169",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1692207ef2cce337",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 10.33.54 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 10.33.54",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 10.33.54",
+      "is_duplicate_copy": false,
+      "size_bytes": 121930,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "1692207ef2cce337",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1692207ef2cce337",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54 (2).jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 10.33.54 (2).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 10.33.54",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 10.33.54",
+      "is_duplicate_copy": false,
+      "size_bytes": 121930,
+      "modified": "2026-05-24 14:36",
+      "sha256_prefix": "1692207ef2cce337",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1a4b1dca4f73e4c0",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54.jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 10.33.54.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 10.33.54",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 10.33.54",
+      "is_duplicate_copy": false,
+      "size_bytes": 136811,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "1a4b1dca4f73e4c0",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-ea1e97d804cb29c5",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 11.27.20.jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 11.27.20.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 11.27.20",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 11.27.20",
+      "is_duplicate_copy": false,
+      "size_bytes": 466582,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "ea1e97d804cb29c5",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-d3682a48c6aa90e9",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 16.44.59.jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 16.44.59.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 16.44.59",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 16.44.59",
+      "is_duplicate_copy": false,
+      "size_bytes": 75225,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "d3682a48c6aa90e9",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-9ee5875f3db1600d",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 16.59.32.jpeg",
+      "filename": "WhatsApp Image 2026-05-19 at 16.59.32.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-19 at 16.59.32",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 16.59.32",
+      "is_duplicate_copy": false,
+      "size_bytes": 74591,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "9ee5875f3db1600d",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1819df5d769c949b",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 07.51.26 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 07.51.26",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 07.51.26",
+      "is_duplicate_copy": false,
+      "size_bytes": 188072,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "1819df5d769c949b",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-a506ed1827010788",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26 (2).jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 07.51.26 (2).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 07.51.26",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 07.51.26",
+      "is_duplicate_copy": false,
+      "size_bytes": 377903,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "a506ed1827010788",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-bc2cba183c6a59d8",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26.jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 07.51.26.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 07.51.26",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 07.51.26",
+      "is_duplicate_copy": false,
+      "size_bytes": 103382,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "bc2cba183c6a59d8",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-ab613ce93e292a8b",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 08.11.22.jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 08.11.22.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 08.11.22",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 08.11.22",
+      "is_duplicate_copy": false,
+      "size_bytes": 479634,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "ab613ce93e292a8b",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-c604629a50289f9a",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 08.37.42.jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 08.37.42.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 08.37.42",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 08.37.42",
+      "is_duplicate_copy": false,
+      "size_bytes": 120990,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "c604629a50289f9a",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-0fbd1cad41905557",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 16.20.54.jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 16.20.54.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 16.20.54",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 16.20.54",
+      "is_duplicate_copy": false,
+      "size_bytes": 392844,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "0fbd1cad41905557",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-12170d008b305f9a",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 16.20.55.jpeg",
+      "filename": "WhatsApp Image 2026-05-20 at 16.20.55.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-20 at 16.20.55",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 16.20.55",
+      "is_duplicate_copy": false,
+      "size_bytes": 402780,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "12170d008b305f9a",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-df6138054aa5647f",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 06.40.39.jpeg",
+      "filename": "WhatsApp Image 2026-05-21 at 06.40.39.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-21 at 06.40.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 06.40.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 356606,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "df6138054aa5647f",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-21a5d5af1d076734",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 06.40.40.jpeg",
+      "filename": "WhatsApp Image 2026-05-21 at 06.40.40.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-21 at 06.40.40",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 06.40.40",
+      "is_duplicate_copy": false,
+      "size_bytes": 105840,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "21a5d5af1d076734",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-c218776033a30f29",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 08.24.40.jpeg",
+      "filename": "WhatsApp Image 2026-05-21 at 08.24.40.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-21 at 08.24.40",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 08.24.40",
+      "is_duplicate_copy": false,
+      "size_bytes": 128638,
+      "modified": "2026-05-24 14:35",
+      "sha256_prefix": "c218776033a30f29",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-81b6725f86bba5b5",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 08.24.41.jpeg",
+      "filename": "WhatsApp Image 2026-05-21 at 08.24.41.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-21 at 08.24.41",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 08.24.41",
+      "is_duplicate_copy": false,
+      "size_bytes": 195863,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "81b6725f86bba5b5",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-0201891af81d57b4",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 06.17.14.jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 06.17.14.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 06.17.14",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 06.17.14",
+      "is_duplicate_copy": false,
+      "size_bytes": 398455,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "0201891af81d57b4",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-846d44a26785a1f2",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.51.jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 08.18.51.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 08.18.51",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 08.18.51",
+      "is_duplicate_copy": false,
+      "size_bytes": 212940,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "846d44a26785a1f2",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-804aa1add21ae9fd",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.52 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 08.18.52 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 08.18.52",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 08.18.52",
+      "is_duplicate_copy": false,
+      "size_bytes": 89172,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "804aa1add21ae9fd",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-57e3bc5240993d90",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.52.jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 08.18.52.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 08.18.52",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 08.18.52",
+      "is_duplicate_copy": false,
+      "size_bytes": 107930,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "57e3bc5240993d90",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-927a38ff123a7188",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.14 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 09.03.14 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 09.03.14",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 09.03.14",
+      "is_duplicate_copy": false,
+      "size_bytes": 370084,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "927a38ff123a7188",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-7180455a515e0e97",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.14.jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 09.03.14.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 09.03.14",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 09.03.14",
+      "is_duplicate_copy": false,
+      "size_bytes": 449768,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "7180455a515e0e97",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-778e08ba7820a477",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.15.jpeg",
+      "filename": "WhatsApp Image 2026-05-22 at 09.03.15.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-22 at 09.03.15",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 09.03.15",
+      "is_duplicate_copy": false,
+      "size_bytes": 419271,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "778e08ba7820a477",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-7155737664278407",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 07.09.39 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-23 at 07.09.39 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-23 at 07.09.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 07.09.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 319510,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "7155737664278407",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-de1d909cfa417c29",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 07.09.39.jpeg",
+      "filename": "WhatsApp Image 2026-05-23 at 07.09.39.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-23 at 07.09.39",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 07.09.39",
+      "is_duplicate_copy": false,
+      "size_bytes": 342099,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "de1d909cfa417c29",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-1c58b66614d6aa17",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 08.18.26.jpeg",
+      "filename": "WhatsApp Image 2026-05-23 at 08.18.26.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-23 at 08.18.26",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 08.18.26",
+      "is_duplicate_copy": false,
+      "size_bytes": 207196,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "1c58b66614d6aa17",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-3ad07c3965747091",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 08.18.27.jpeg",
+      "filename": "WhatsApp Image 2026-05-23 at 08.18.27.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-23 at 08.18.27",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 08.18.27",
+      "is_duplicate_copy": false,
+      "size_bytes": 101227,
+      "modified": "2026-05-24 14:34",
+      "sha256_prefix": "3ad07c3965747091",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-c32475ab5abd8769",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.35.12.jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 07.35.12.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 07.35.12",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.35.12",
+      "is_duplicate_copy": false,
+      "size_bytes": 481032,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "c32475ab5abd8769",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-3df57ce92e10f722",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.36 (1).jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 07.48.36 (1).jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 07.48.36",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.48.36",
+      "is_duplicate_copy": false,
+      "size_bytes": 108357,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "3df57ce92e10f722",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-fad66764c80cbc8f",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.36.jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 07.48.36.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 07.48.36",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.48.36",
+      "is_duplicate_copy": false,
+      "size_bytes": 124449,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "fad66764c80cbc8f",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-8b172e66aa64da42",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.37.jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 07.48.37.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 07.48.37",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.48.37",
+      "is_duplicate_copy": false,
+      "size_bytes": 437327,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "8b172e66aa64da42",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-07ed0f270ad17e7c",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 08.59.20.jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 08.59.20.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 08.59.20",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 08.59.20",
+      "is_duplicate_copy": false,
+      "size_bytes": 215955,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "07ed0f270ad17e7c",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-c4cd995656a32001",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 10.19.08.jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 10.19.08.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 10.19.08",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 10.19.08",
+      "is_duplicate_copy": false,
+      "size_bytes": 143053,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "c4cd995656a32001",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    },
+    {
+      "ingest_id": "20260525-da698f8b0883e01b",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 12.19.51.jpeg",
+      "filename": "WhatsApp Image 2026-05-24 at 12.19.51.jpeg",
+      "folder": "Starter Docs",
+      "pattern_name": "WhatsApp Image 2026-05-24 at 12.19.51",
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 12.19.51",
+      "is_duplicate_copy": false,
+      "size_bytes": 361907,
+      "modified": "2026-05-24 14:33",
+      "sha256_prefix": "da698f8b0883e01b",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis"
+    }
+  ],
+  "count": 145
+}

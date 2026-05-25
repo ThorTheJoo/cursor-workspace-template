@@ -1,0 +1,898 @@
+{
+  "capability": "energy-procurement",
+  "version": "1.0.0",
+  "timestamp": "2026-02-25T08:06:23Z",
+  "model": "claude-sonnet-4-20250514",
+  "mode": "baseline",
+  "scenario_results": [
+    {
+      "scenario_id": "EPM-001",
+      "scenario_name": "Basic utility bill analysis and cost component identification",
+      "difficulty": "easy",
+      "category": "tariff-optimisation",
+      "criteria_results": [
+        {
+          "criterion": "bill_decomposition",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies the 12% increase ($15,300) and provides detailed decomposition: demand charge impact +$6,000 (39%), energy charge +$1,200 (8%), capacity charge ~$2,400 (16%), and T&D +$5,700 (37%). Correctly identifies the 400 kW demand spike (3,100 to 3,500 kW) as the primary driver caused by HVAC during above-normal temperatures (88°F vs 83°F). Demonstrates understanding that the fixed supply contract at $0.058/kWh covers only energy component while demand, capacity, and T&D charges are pass-through costs."
+        },
+        {
+          "criterion": "demand_charge_analysis",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Response clearly identifies the 400 kW demand increase as the single largest cost driver ($6,000/month, 39% of total increase). Correctly attributes this to HVAC load during hot weather and poor demand coincidence during peak hours. Recommends specific mitigation strategies including real-time demand monitoring with 15-minute interval alerts at 3,200 kW threshold, HVAC optimization with pre-cooling strategy, and load shifting analysis during PJM peak hours (2-6 PM). Shows understanding of demand management fundamentals."
+        },
+        {
+          "criterion": "actionable_recommendations",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides comprehensive, specific recommendations across immediate, medium-term, and long-term timeframes. Immediate actions include real-time demand monitoring with 15-minute interval alerts, HVAC optimization with pre-cooling strategy, and load shifting analysis targeting PJM peak hours. Medium-term includes energy storage feasibility and power factor correction. Long-term includes on-site generation and contract optimization. Each recommendation includes potential savings estimates and implementation timelines. Demonstrates understanding of interval data analysis and peak demand management strategies."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# Electricity Bill Analysis - July 2026\n**Columbus Food Processing Plant**\n\n## Executive Summary\nThe 12% ($15,300) bill increase is primarily driven by a **400 kW demand spike** (+13%) and higher transmission/capacity costs, despite flat production. The increase is largely weather-related but reveals underlying demand management issues.\n\n## Bill Decomposition & Cost Driver Analysis\n\n### 1. **Demand Charge Impact: +$6,000 (39% of increase)**\n- **Current**: 3,500 kW × $15.00 = $52,500\n- **Previous**: 3,100 kW × $15.00 = $46,500\n- **Driver**: 400 kW demand spike (+13%) likely caused by:\n  - Increased HVAC load (88°F vs 83°F normal)\n  - Poor demand coincidence during peak hours\n  - Possible equipment inefficiency in heat\n\n### 2. **Energy Charge Impact: +$1,200 (8% of increase)**\n- **Current**: 680,000 kWh × $0.0856 = $58,200\n- **Previous**: 672,000 kWh × $0.0856 = $57,500*\n- **Driver**: 8,000 kWh increase (+1.2%) from cooling loads\n- *Note: Supply contract at $0.058/kWh suggests blended rate includes transmission/distribution*\n\n### 3. **Capacity Charge Impact: ~$2,400 (16% of increase)**\n- PJM capacity charges are based on prior year's peak demand contribution\n- Increase suggests either rate escalation or demand allocation changes\n\n### 4. **Transmission/Distribution: +$5,700 (37% of increase)**\n- Significant increase in T&D charges\n- Likely includes demand-based components reflecting the 400 kW spike\n\n## Recommended Actions\n\n### **Immediate Actions (0-3 months)**\n\n1. **Demand Response Program**\n   - Install real-time demand monitoring\n   - Implement 15-minute interval alerts at 3,200 kW threshold\n   - **Potential savings**: $6,000-9,000/month during summer peaks\n\n2. **HVAC Optimization**\n   - Audit HVAC controls and scheduling\n   - Implement pre-cooling strategy during off-peak hours\n   - **Potential savings**: $2,000-4,000/month\n\n3. **Load Shifting Analysis**\n   - Review production schedules vs. PJM peak hours (2-6 PM)\n   - Identify non-critical loads for curtailment\n   - **Potential savings**: $3,000-5,000/month\n\n### **Medium-term Actions (3-12 months)**\n\n4. **Energy Storage Feasibility**\n   - Evaluate battery storage for demand shaving\n   - Consider ice thermal storage for process cooling\n   - **ROI timeline**: 5-7 years with current demand profile\n\n5. **Power Factor Correction**\n   - Audit reactive power demand\n   - Install capacitor banks if power factor <0.95\n   - **Potential savings**: 2-5% on demand charges\n\n### **Long-term Strategy (12+ months)**\n\n6. **On-site Generation**\n   - Evaluate rooftop solar + storage for demand offset\n   - Consider combined heat and power (CHP) given food processing thermal loads\n   - **Target**: 1-2 MW capacity for peak shaving\n\n7. **Contract Optimization**\n   - Review supply contract renewal options\n   - Negotiate demand charge alternatives or time-of-use rates\n   - **Timeline**: Begin negotiations 6 months before expiration\n\n## Expected Financial Impact\n- **Immediate actions**: $8,000-15,000/month savings potential\n- **ROI**: 6-18 months for demand management investments\n- **Annual savings potential**: $75,000-120,000\n\n## Next Steps\n1. Install interval demand monitoring system this week\n2. Schedule HVAC audit within 30 days  \n3. Analyze 15-minute interval data to identify peak demand patterns\n4. Present detailed demand management plan to plant operations team\n\nThe bill increase is manageable through proactive demand management, with significant savings opportunities that justify immediate investment in monitoring and control systems.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-002",
+      "scenario_name": "Fixed vs. index pricing selection for contract renewal",
+      "difficulty": "easy",
+      "category": "procurement-strategy",
+      "criteria_results": [
+        {
+          "criterion": "proposal_evaluation",
+          "weight": 0.4,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response thoroughly evaluates all three proposals with detailed cost analysis showing annual projections (A: $1,708k, B: $1,624k-$1,764k, C: $1,540k). It correctly identifies Calpine's BB+ credit rating as below the BBB minimum preference and flags this as a weakness. The analysis recognizes that Proposal A provides certainty at a premium to market expectations, Proposal C offers lowest cost but highest risk, and Proposal B balances cost and risk. The response calculates approximate annual costs and savings for each option, demonstrating proper total cost comparison methodology."
+        },
+        {
+          "criterion": "risk_analysis",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides comprehensive risk quantification through a detailed Risk Assessment Matrix covering price risk, credit risk, and budget predictability. It quantifies the variance impact: notes 70% hedged/30% market exposure for Proposal B, full market exposure risk for Proposal C with potential $252k savings but high volatility, and complete price certainty for Proposal A. The analysis properly flags Calpine's BB+ credit rating as 'Medium-High' risk and explains how this creates supplier default risk. It addresses the facility's 52% load factor and its suitability for block-and-index structures."
+        },
+        {
+          "criterion": "recommendation_quality",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response clearly recommends Proposal B with strong rationale directly tied to the company's moderate risk tolerance and CFO's budget predictability needs. The recommendation explains how the 70/30 block-index structure provides 'balance of cost savings potential, risk management, and budget predictability.' It acknowledges the BBB credit rating meets requirements and provides implementation guidance including budget planning recommendations ($0.060/kWh conservative rate), monitoring requirements, and contract timing. The recommendation connects the choice to market context (favorable forward curve) and provides expected savings range of $80k-$140k."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# Energy Contract Evaluation and Recommendation\n\n## Executive Summary\nAfter analyzing the three proposals, I recommend **Proposal B (Direct Energy Business)** as the optimal choice for Princeton Corporate Campus. This block-and-index structure provides the best balance of cost savings potential, risk management, and budget predictability that aligns with the company's moderate risk tolerance.\n\n## Cost Analysis\n\n### Annual Cost Projections (28,000 MWh)\n\n| Proposal | Structure | Estimated Annual Cost | Potential Savings vs Current |\n|----------|-----------|---------------------|----------------------------|\n| **Current Contract** | Fixed $0.064/kWh | **$1,792,000** | Baseline |\n| **A - Constellation** | Fixed $0.061/kWh | **$1,708,000** | **$84,000 (4.7%)** |\n| **B - Direct Energy** | 70/30 Block-Index | **$1,624,000 - $1,764,000** | **$28,000 - $168,000 (1.6% - 9.4%)** |\n| **C - Calpine** | Full Index | **$1,540,000** | **$252,000 (14.1%)** |\n\n*Note: Costs shown are energy component only, excluding transmission, distribution, and other utility charges*\n\n## Risk Assessment Matrix\n\n| Proposal | Price Risk | Credit Risk | Budget Predictability | Overall Risk |\n|----------|------------|-------------|---------------------|--------------|\n| **A** | Low | Low | High | **Low** |\n| **B** | Medium | Low | Medium-High | **Medium** |\n| **C** | High | Medium-High | Low | **High** |\n\n## Detailed Evaluation\n\n### Proposal A - Constellation Energy (Fixed)\n**Strengths:**\n- Complete price certainty at $0.061/kWh\n- Strong credit rating (BBB+)\n- Guaranteed $84,000 annual savings\n- Simplest budget planning\n\n**Weaknesses:**\n- No upside potential if market prices decline\n- Modest savings compared to alternatives\n- Foregoes potential benefits of current low forward curve\n\n### Proposal B - Direct Energy Business (Block-and-Index) ⭐ **RECOMMENDED**\n**Strengths:**\n- Balanced risk/reward profile perfectly suited for moderate risk tolerance\n- 70% hedged portion provides budget stability\n- 30% market exposure captures upside potential\n- Estimated savings range of $28k-$168k annually\n- Strong BBB credit rating meets requirements\n- Allows participation in favorable market conditions while limiting downside\n\n**Weaknesses:**\n- Monthly bill variability on 30% of usage\n- Requires basic market monitoring\n- Slightly more complex than fixed pricing\n\n### Proposal C - Calpine Energy Solutions (Full Index)\n**Strengths:**\n- Highest potential savings ($252,000 annually)\n- Full market participation benefits\n- Leverages favorable forward curve expectations\n\n**Weaknesses:**\n- **High price volatility risk** - unsuitable for stated risk tolerance\n- **Credit concerns** - BB+ rating below preferred BBB minimum\n- **Budget unpredictability** conflicts with CFO's requirements\n- Full market exposure during potential price spikes\n\n## Market Context Analysis\n\n- **PJM Forward Curve:** 24-month forwards at $0.057/kWh suggest favorable market conditions\n- **Current Timing:** 90-day notice period allows for optimal contract execution\n- **Load Profile:** 52% load factor indicates consistent baseload suitable for block-and-index structure\n\n## Risk Mitigation Factors\n\nThe recommended block-and-index structure (Proposal B) provides several risk controls:\n- **70% price certainty** maintains budget predictability\n- **Limited market exposure** (30%) controls volatility impact\n- **Strong counterparty** (BBB rating) minimizes credit risk\n- **Collar effect** - blend naturally limits extreme price movements\n\n## Implementation Recommendation\n\n**Select Proposal B with the following considerations:**\n\n1. **Budget Planning:** Use blended rate of $0.060/kWh for conservative budgeting\n2. **Monitoring:** Establish monthly review of index portion performance\n3. **Contract Timing:** Execute within 30 days to optimize forward curve positioning\n4. **Future Strategy:** Monitor market conditions 12 months prior to expiration for next contract cycle\n\n## Conclusion\n\nProposal B optimally balances the CFO's need for budget predictability with the opportunity to capture market savings. The 70/30 block-and-index structure provides controlled risk exposure while maintaining significant cost reduction potential, making it the ideal choice for this moderate-risk-tolerance organization.\n\n**Expected Annual Savings: $80,000 - $140,000** with 70% budget certainty and strong counterparty security.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-003",
+      "scenario_name": "Reading interval data to identify demand charge optimization opportunities",
+      "difficulty": "easy",
+      "category": "demand-charge-management",
+      "criteria_results": [
+        {
+          "criterion": "root_cause_analysis",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies simultaneous morning startup as the peak driver, noting 'morning startup peaks that are driving your billing demand' and 'simultaneous morning startup (3,000-3,100 kW)' versus steady state operations. Recognizes this is a timing/scheduling problem rather than efficiency, explicitly stating 'The facility manager is correct that operations are efficient, but the timing of those operations is the issue' and 'This approach maintains full production capacity while dramatically reducing peak demand charges.'"
+        },
+        {
+          "criterion": "savings_quantification",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides specific savings calculation: 400-600 kW reduction × $13.75/kW × 12 months = $66,000-$99,000 annually. Addresses ratchet clause impact, noting 'Current 11-month ratchet floor: 2,170 kW (70% of 3,100 kW August peak)' and explains that the target peak of 2,200-2,400 kW is safely above the ratchet floor. Correctly identifies that 'Ratchet will naturally decline as the 3,100 kW August peak ages out.'"
+        },
+        {
+          "criterion": "implementation_plan",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides detailed three-phase staggered startup sequence with specific timing (6:00 AM first wave, 6:15 AM second wave, 6:30 AM third wave) and equipment prioritization. Includes specific implementation steps: manual procedures first, then automated load management system with 15-minute monitoring and 2,400 kW demand limit. Addresses secondary peaks with 'Hot Weather Protocol' including pre-cooling and setpoint adjustments. Provides timeline, investment costs ($15,000-$25,000), and payback period (2-5 months)."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "Based on the interval data analysis, there's a clear opportunity to reduce demand charges by addressing the morning startup peaks that are driving your billing demand. Here's my assessment and implementation plan:\n\n## Savings Opportunity Analysis\n\n**Current Situation:**\n- Billing demand: 2,800 kW\n- Annual demand charges: $462,000\n- Peak driver: Simultaneous morning startup (3,000-3,100 kW)\n\n**Achievable Reduction:**\n- Target peak reduction: 400-600 kW through staggered startup\n- New target peak: 2,200-2,400 kW (vs. current 2,800 kW)\n- **Annual savings: $66,000-$99,000** (400-600 kW × $13.75/kW × 12 months)\n\n## Implementation Plan: Staggered Startup Protocol\n\n### Phase 1: Equipment Sequencing (Month 1)\n**6:00 AM - First Wave:**\n- Start 1 injection molding line\n- Start 1 air compressor\n- Basic lighting (production areas only)\n\n**6:15 AM - Second Wave:**\n- Start 2nd injection molding line\n- HVAC systems (non-critical zones first)\n\n**6:30 AM - Third Wave:**\n- Start 3rd injection molding line\n- 2nd air compressor (if needed)\n- Remaining HVAC and lighting\n\n### Phase 2: Control System Implementation\n**Automated Demand Management:**\n- Install load management system with 15-minute demand monitoring\n- Set demand limit at 2,400 kW with alerts at 2,300 kW\n- Automatic load shedding hierarchy for non-critical systems\n\n### Phase 3: Secondary Peak Management\n**Hot Weather Protocol:**\n- Pre-cool facility during off-peak hours (before 6 AM)\n- Raise cooling setpoints 2-3°F during afternoon peaks\n- **Additional potential savings: $18,000-$28,000 annually**\n\n## Risk Mitigation\n\n**Ratchet Clause Protection:**\n- Current 11-month ratchet floor: 2,170 kW (70% of 3,100 kW August peak)\n- Target peak of 2,200-2,400 kW safely above ratchet floor\n- Ratchet will naturally decline as the 3,100 kW August peak ages out\n\n**Production Impact:**\n- 15-minute stagger minimizes production delays\n- Maintain critical process equipment priority\n- Emergency override capability for rush orders\n\n## Implementation Timeline & Investment\n\n**Month 1:** Manual startup procedures (minimal cost)\n**Month 2-3:** Load management system installation ($15,000-$25,000)\n**Month 4+:** Fine-tuning and additional optimization\n\n**Total Investment:** $15,000-$25,000\n**Payback Period:** 2-5 months\n**Net Annual Savings:** $60,000-$95,000\n\n## Next Steps\n\n1. **Immediate (This Week):** Begin manual staggered startup protocol\n2. **Week 2:** Monitor results and adjust timing\n3. **Month 1:** Procure automated demand management system\n4. **Month 2:** Install and commission control systems\n\nThe facility manager is correct that operations are efficient, but the timing of those operations is the issue. This approach maintains full production capacity while dramatically reducing peak demand charges.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-004",
+      "scenario_name": "Understanding regulated vs. deregulated market procurement options",
+      "difficulty": "easy",
+      "category": "market-analysis",
+      "criteria_results": [
+        {
+          "criterion": "market_structure_explanation",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Response clearly explains that Georgia operates under a fully regulated utility model where Georgia Power is the only option for electricity supply, providing generation, transmission, AND distribution as a regulated monopoly. Explicitly contrasts with PJM (deregulated) where multiple retail suppliers compete and utility only provides T&D services. Notes that rates are set by the Georgia Public Service Commission, not market competition, and that no third-party suppliers can serve the facility."
+        },
+        {
+          "criterion": "optimization_strategy",
+          "weight": 0.4,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Response identifies multiple optimization levers: (1) Rate schedule analysis comparing PLS-7, PLM-4 (TOU), and TOU-RTP-7 with specific savings estimates of 5-20%; (2) Demand charge management through peak shaving, real-time monitoring, and load scheduling; (3) Energy efficiency measures including LED retrofits, HVAC optimization, and power factor correction; (4) Future programs including solar+storage and demand response participation; (5) Provides actionable implementation timeline with immediate, 90-day, and ongoing phases."
+        },
+        {
+          "criterion": "communication_quality",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Response is well-structured for a non-technical real estate team audience, using clear headings and bullet points. Avoids excessive jargon while explaining technical concepts simply (e.g., 'regulated monopoly' rather than complex utility regulation terms). Provides specific savings estimates (8-15% or $105K-$200K annually) and a clear bottom-line summary. Includes actionable next steps with timeframes that the real estate team can understand and act upon."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# Energy Strategy for Atlanta Distribution Center: Regulated Market Approach\n\n## Why Competitive Energy Procurement Isn't Available in Georgia\n\nUnlike your PJM facilities, **Georgia operates under a fully regulated utility model** where competitive retail choice doesn't exist. Here's the key difference:\n\n**PJM (Deregulated):**\n- Multiple retail energy suppliers compete for your business\n- You can negotiate rates, contract terms, and green energy options\n- Utility only provides transmission/distribution services\n\n**Georgia (Regulated):**\n- Georgia Power is your **only option** for electricity supply\n- They provide generation, transmission, AND distribution as a regulated monopoly\n- Rates are set by the Georgia Public Service Commission, not market competition\n- No third-party suppliers can serve your facility\n\n## Optimization Opportunities in the Regulated Environment\n\nDespite the lack of supplier choice, significant cost optimization is still possible through **rate schedule selection and demand management**:\n\n### 1. Rate Schedule Analysis & Selection\n\n**Current Assumption:** PLS-7 at $1.32M annually\n\n**Optimization Strategy:**\n- **Analyze PLM-4 (Time-of-Use)** - Potential 10-15% savings if you can shift operations to off-peak hours\n- **Evaluate TOU-RTP-7 (Real-Time Pricing)** - Could offer 5-20% savings with proper load forecasting and automated demand response\n- **Model your actual load profile** against each rate structure before operations begin\n\n### 2. Demand Charge Management Program\n\nWith 3 MW peak demand, **demand charges likely represent 40-50% of your bill**:\n- Implement **peak shaving strategies** (battery storage, operational scheduling)\n- Install **real-time demand monitoring** to avoid demand spikes\n- Coordinate with operations team on **load scheduling protocols**\n\n### 3. Energy Efficiency & Load Management\n\n**Immediate opportunities:**\n- **LED lighting retrofits** and smart controls\n- **HVAC optimization** with economizer cycles\n- **Variable frequency drives** on motors and fans\n- **Power factor correction** to avoid penalty charges\n\n### 4. Future-Proofing Strategies\n\n**Prepare for emerging programs:**\n- **Solar + storage readiness** (Georgia Power has net metering programs)\n- **Demand response program participation** as programs expand\n- **Electric vehicle charging infrastructure** planning with managed charging\n\n## Recommended Action Plan\n\n1. **Immediate (Pre-Opening):**\n   - Request detailed rate analysis from Georgia Power for all three schedules\n   - Install interval metering and demand monitoring systems\n   \n2. **First 90 Days:**\n   - Baseline actual consumption patterns\n   - Optimize rate schedule selection based on real data\n   \n3. **Ongoing:**\n   - Implement demand management protocols\n   - Explore efficiency upgrades with 2-3 year payback periods\n\n## Expected Savings Potential\n\nEven without competitive supply options, you should target **8-15% savings** ($105K-$200K annually) through rate optimization and demand management versus the baseline PLS-7 assumption.\n\n**Bottom Line:** While you can't run a competitive RFP, regulated markets still offer substantial optimization opportunities through smart rate selection and demand-side management strategies.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-005",
+      "scenario_name": "Basic renewable energy procurement option comparison",
+      "difficulty": "easy",
+      "category": "sustainability",
+      "criteria_results": [
+        {
+          "criterion": "option_analysis",
+          "weight": 0.4,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly describes all five renewable energy procurement options with accurate cost ranges and additionality rankings. It properly identifies unbundled RECs as cheapest ($2-5/MWh) but with low additionality, utility green tariffs as moderate cost ($8-15/MWh premium) with medium additionality, VPPAs as having high additionality but medium-high risk with financial complexity, physical PPAs as having high additionality with medium risk, and on-site solar as having highest additionality ($50-70/MWh) but limited scale. The additionality ranking (on-site > physical PPA > VPPA > green tariff > unbundled RECs) and cost ranking (unbundled RECs < green tariff < VPPA ≈ physical PPA < on-site) are both correct."
+        },
+        {
+          "criterion": "phased_strategy",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides a detailed phased approach to close the 170,000 MWh gap: Phase 1 (2027) adds 38,000 MWh through on-site solar (8,000 MWh), utility green tariffs (30,000 MWh), reaching 35% total. Phase 2 (2028-2029) adds 90,000 MWh through physical PPA (60,000 MWh) and VPPA (30,000 MWh), reaching 80%. Phase 3 (2030) closes the final 42,000 MWh gap with premium RECs. The strategy correctly identifies PPAs as the critical path items requiring 12-18 months development time and provides realistic timelines for implementation."
+        },
+        {
+          "criterion": "risk_and_cost_assessment",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides comprehensive cost quantification showing current spend at $75k annually and projecting total program cost at $3.55M-$4.55M annually (22-28% of energy budget). It identifies key risks including VPPA basis risk, curtailment risk for renewables, concentration risk, policy changes affecting REC markets, and the risk that RE100 may tighten standards over time. The response also provides net cost analysis by phase and acknowledges that VPPA costs must be evaluated against retail energy purchase displacement."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# Renewable Energy Procurement Strategy for RE100 Compliance\n\n## Overview of Procurement Options\n\n### 1. **Unbundled Renewable Energy Certificates (RECs)**\n- **Mechanism**: Purchase certificates representing renewable generation separately from electricity\n- **Cost**: $2-5/MWh ($400k-$850k annually for full compliance)\n- **Additionality**: Low - doesn't directly support new renewable development\n- **Risk**: Low financial risk, high reputational risk due to limited environmental impact\n\n### 2. **Utility Green Tariffs**\n- **Mechanism**: Premium rate programs offered by regulated utilities\n- **Cost**: $8-15/MWh premium ($1.36M-$2.55M annually for full compliance)\n- **Additionality**: Medium - often supports new renewable projects\n- **Risk**: Low risk, limited availability (only 3 of your sites)\n\n### 3. **Virtual Power Purchase Agreements (VPPAs)**\n- **Mechanism**: Financial contract with renewable developer; receive RECs + hedge energy costs\n- **Cost**: $32-38/MWh strike price\n- **Additionality**: High - directly enables new renewable projects\n- **Risk**: Medium-high price risk, requires sophisticated contract management\n\n### 4. **Physical Power Purchase Agreements (PPAs)**\n- **Mechanism**: Direct purchase of renewable electricity and RECs\n- **Cost**: $30-36/MWh for solar\n- **Additionality**: High - enables new projects\n- **Risk**: Medium risk, requires presence in specific markets\n\n### 5. **On-site Solar**\n- **Mechanism**: Solar installations at your facilities\n- **Cost**: $50-70/MWh\n- **Additionality**: Highest - new generation directly serving your load\n- **Risk**: Low operational risk with PPA structure\n\n## Recommended Phased Strategy (2027-2030)\n\n### **Phase 1: Immediate Actions (2027)**\n**Target: Reach 35% renewable energy**\n\n1. **Expand On-site Solar**: Deploy at all 4 suitable facilities\n   - Capacity: 8,000 MWh/year\n   - Cost: ~$400k-$560k annually\n   - Benefits: Highest additionality, positive brand impact\n\n2. **Utility Green Tariffs**: Enroll 3 regulated market facilities\n   - Estimated capacity: 30,000 MWh/year\n   - Cost: ~$240k-$450k annually\n   - Benefits: Simple implementation, utility partnership\n\n3. **Upgrade RECs**: Replace current RECs with newer vintage wind/solar RECs\n   - Maintain current 30,000 MWh\n   - Cost increase: ~$25k annually\n   - Benefits: Better additionality story\n\n**Phase 1 Total**: 68,000 MWh (34% total) | **Annual Cost**: ~$665k-$1.035M\n\n### **Phase 2: Scale with PPAs (2028-2029)**\n**Target: Reach 80% renewable energy by end of 2029**\n\n1. **Physical PPA**: 60,000 MWh solar PPA in PJM\n   - Cost: $1.8M-$2.16M annually\n   - Timeline: 12-18 months development\n   - Benefits: Competitive pricing, high additionality\n\n2. **VPPA Strategy**: 30,000 MWh wind VPPA in ERCOT\n   - Cost: ~$960k-$1.14M annually (at strike price)\n   - Benefits: Portfolio diversification, price hedge\n\n**Phase 2 Addition**: 90,000 MWh | **Additional Annual Cost**: ~$2.76M-$3.3M\n\n### **Phase 3: Final Push (2030)**\n**Target: Achieve 100% renewable energy**\n\n1. **Supplemental RECs**: Cover remaining 42,000 MWh gap\n   - Use high-quality, recent vintage RECs\n   - Cost: ~$126k-$210k annually\n   - Strategic rationale: Cost-effective gap closure while maintaining high PPA portfolio\n\n**Final Portfolio Composition**:\n- On-site Solar: 4% (8,000 MWh)\n- Utility Green Tariffs: 15% (30,000 MWh)  \n- Physical PPA: 30% (60,000 MWh)\n- VPPA: 15% (30,000 MWh)\n- Premium RECs: 36% (72,000 MWh)\n\n## Financial Summary\n\n| Phase | Annual RE% | Incremental Cost | Cumulative Cost |\n|-------|------------|------------------|-----------------|\n| Current (2026) | 15% | $75k | $75k |\n| Phase 1 (2027) | 35% | +$590k-$960k | $665k-$1.035M |\n| Phase 2 (2029) | 80% | +$2.76M-$3.3M | $3.425M-$4.335M |\n| Phase 3 (2030) | 100% | +$126k-$210k | $3.55M-$4.545M |\n\n**Total Program Cost**: $3.55M-$4.55M annually (22-28% of energy budget)\n\n## Implementation Recommendations\n\n### **Immediate Next Steps**:\n1. **Issue RFPs** for on-site solar at 4 facilities\n2. **Engage utilities** at 3 regulated sites for green tariff enrollment  \n3. **Hire renewable energy specialist** or retain consultant for PPA negotiations\n4. **Establish internal carbon accounting** processes for RECs and PPAs\n\n### **Risk Mitigation**:\n- **Diversify across technologies and regions** to reduce concentration risk\n- **Negotiate flexible PPA terms** with early termination options if business needs change\n- **Consider RE100 guidance updates** that may favor additionality over time\n- **Plan for potential policy changes** affecting REC markets\n\nThis strategy balances cost efficiency with environmental credibility, emphasizing high-additionality solutions while using RECs strategically to close gaps cost-effectively.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-006",
+      "scenario_name": "Evaluating a time-of-use tariff switch for a manufacturing facility",
+      "difficulty": "easy",
+      "category": "tariff-optimisation",
+      "criteria_results": [
+        {
+          "criterion": "tariff_analysis",
+          "weight": 0.4,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies that RTP replaces only the on-peak energy component, calculating average LMP of $0.085/kWh vs current $0.14/kWh rate. It accurately estimates annual savings of $65,000 (3.6% of energy costs) and demonstrates understanding that the 0.54 load factor and two-shift operation (6 AM - 10 PM) creates significant on-peak exposure. The analysis includes tail risk modeling, noting that only 5% of on-peak hours exceeded $0.20/kWh and calculating worst-case exposure of $0.47/kWh ($0.45 LMP + $0.02 adder) during heat waves."
+        },
+        {
+          "criterion": "risk_assessment",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response excellently identifies tail risk exposure, specifically noting CAISO price spikes to $0.47/kWh during heat waves versus the current fixed $0.14/kWh rate (3.4× increase). It models the worst-case month scenario at $28,000 exposure (43% of annual savings) and demonstrates understanding of CAISO's price volatility range ($0.02-$0.45/kWh). The analysis recognizes the facility's operational constraints (beverage bottling with limited flexibility) and high peak demand (3,800 kW) that amplifies dollar impact during price events."
+        },
+        {
+          "criterion": "recommendation",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response provides a conditional 'DON'T SWITCH (Yet)' recommendation with a structured path forward including energy management systems, operational protocols, and pilot program suggestions. However, it leans too heavily toward risk aversion without fully quantifying the net expected benefit of $65K annual savings against occasional monthly overages. The recommendation lacks the nuanced approach of confirming tariff switching rules or specific load management thresholds (e.g., curtailment above $0.20/kWh) that would make the RTP option viable with proper risk management."
+        }
+      ],
+      "weighted_score": 0.875,
+      "agent_response": "Based on my analysis of the TOU-8-RTP proposal for Pacific Bottling, I have significant concerns about the immediate switch the plant manager wants to make.\n\n## Risk-Reward Analysis\n\n**The Numbers Look Deceptively Good:**\n- Estimated annual savings of $65,000 (roughly 3.6% of energy costs)\n- Average on-peak LMP of $0.085/kWh vs. current $0.14/kWh rate\n- Only 5% of on-peak hours exceeded $0.20/kWh last year\n\n**But the Risks Are Substantial:**\n- Single worst-case month exposure: $28,000 (43% of annual projected savings)\n- Price volatility range of $0.02-$0.45/kWh creates extreme uncertainty\n- During heat waves, LMP can spike to $0.47/kWh ($0.45 + $0.02 adder) vs. their current fixed $0.14/kWh\n\n## Critical Facility Vulnerabilities\n\n**Operating Profile Creates Maximum Exposure:**\n- Two-shift operation (6 AM - 10 PM) aligns perfectly with on-peak pricing periods\n- High peak demand (3,800 kW) means large dollar impact from price spikes\n- Beverage bottling likely has limited operational flexibility to shift production during price events\n\n**Load Factor Implications:**\n- 0.54 load factor indicates reasonably consistent operations\n- Limited ability to quickly ramp down during price spikes without production disruption\n\n## Recommendation: DON'T SWITCH (Yet)\n\nThe facility is **not ready** for real-time pricing because:\n\n1. **Lack of Risk Management Infrastructure:** No mention of automated load response, price forecasting, or energy management systems\n\n2. **Insufficient Operational Flexibility:** Bottling operations typically can't shut down quickly without waste and restart costs\n\n3. **Risk-Reward Imbalance:** One bad month can eliminate nearly half the annual savings\n\n## Path Forward\n\nIf the plant manager insists on exploring this option:\n\n1. **Implement Energy Management Systems First**\n   - Real-time price monitoring and alerts\n   - Automated demand response capabilities\n   - Production scheduling optimization tools\n\n2. **Develop Operational Protocols**\n   - Define load curtailment procedures for price spike events\n   - Train operators on energy cost awareness\n   - Establish clear decision-making authority for production adjustments\n\n3. **Start Small**\n   - Request a pilot program or shorter commitment period\n   - Negotiate price caps or collar arrangements if available\n\n**Bottom Line:** The current $65,000 projected savings don't justify the operational risk and complexity this facility would face under real-time pricing. They should focus on energy efficiency and demand management under their current predictable rate structure first.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-007",
+      "scenario_name": "Identifying and addressing capacity charge exposure in PJM",
+      "difficulty": "easy",
+      "category": "demand-charge-management",
+      "criteria_results": [
+        {
+          "criterion": "root_cause_identification",
+          "weight": 0.4,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies that the PLC increased from 3,400 kW to 4,600 kW (1,200 kW increase) and directly attributes this to backup generators being offline during the 5 Coincident Peak (5CP) hours that determine PLC. It specifically mentions the critical timeframe (July 18-22) and explains that under normal operations, backup generators offset 1,500 kW during peak periods, which would have kept grid demand at 3,100-3,300 kW. The response demonstrates clear understanding of PLC mechanics and the connection between generator availability and capacity charges."
+        },
+        {
+          "criterion": "prevention_plan",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides a comprehensive prevention strategy including: (1) Never scheduling generator maintenance during PJM peak season (June 1 - September 30) and rescheduling to April-May or October-November, (2) Subscribing to PJM's peak alerts and third-party forecasting services for 5CP prediction, (3) Implementing automated load curtailment and proactive generator deployment during forecasted peak events, (4) Establishing a Peak Event Response Team with clear protocols, and (5) Conducting regular peak response drills. This addresses all key elements needed to prevent recurrence."
+        },
+        {
+          "criterion": "financial_quantification",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response quantifies the PLC increase (1,200 kW) and states the additional annual cost is $67,000, which implies a rate of approximately $55.83/kW annually. It also projects potential savings of $77,000 (conservative) to $67,000 (best case) from implementing the prevention strategy. However, it doesn't show the detailed calculation methodology (e.g., $62/MW-day × 365 days calculation) that would demonstrate full understanding of how PJM capacity charges are computed, though the final numbers appear reasonable for the described PLC changes."
+        }
+      ],
+      "weighted_score": 0.875,
+      "agent_response": "## Root Cause Analysis\n\nThe 34% increase in your capacity charges is directly attributable to your facility's Peak Load Contribution (PLC) increasing from 3,400 kW to 4,600 kW - a jump of 1,200 kW.\n\n### What Happened\nDuring the critical **5 Coincident Peak (5CP) hours** that determine your PLC, your facility operated under abnormal conditions:\n- **Backup generators were offline** for annual maintenance (July 18-22)\n- **Heat wave conditions** drove the facility to full capacity\n- Your grid demand averaged **4,600 kW** during 5CP hours vs. your normal peak-adjusted demand\n\nUnder normal operations, your backup generators offset 1,500 kW during peak periods, which would have resulted in a grid demand of only **3,100-3,300 kW** during these critical hours.\n\n### Financial Impact\n- **PLC increase**: 1,200 kW (35% jump)\n- **Additional annual cost**: $67,000\n- **Cost per kW of avoidable peak**: $55.83/kW annually\n\n## Prevention Strategy for Next Delivery Year\n\n### 1. **Generator Maintenance Scheduling** (Critical)\n- **Never schedule generator maintenance during PJM peak season** (June 1 - September 30)\n- Reschedule annual maintenance to **April-May** or **October-November**\n- Coordinate with PJM's preliminary peak forecasts\n\n### 2. **5CP Monitoring & Response Program**\n- Subscribe to **PJM's peak alerts** and third-party forecasting services\n- Implement **automated load curtailment** during forecasted peak events\n- Deploy generators proactively when peak conditions are predicted (temperature >95°F, high demand forecast)\n\n### 3. **Load Management Enhancements**\n- **Pre-cool the facility** 2-3 hours before forecasted peaks\n- Temporarily reduce non-critical IT loads during 5CP events\n- Optimize HVAC setpoints during peak hours (raising temperature 2-3°F can reduce load by 200-400 kW)\n\n### 4. **Operational Protocols**\n- Establish a **Peak Event Response Team** with clear escalation procedures\n- Create decision matrices for generator deployment\n- Conduct monthly peak response drills during off-peak seasons\n\n## Expected Results\n\n**Conservative projection**: Reducing grid demand to 3,200 kW during 5CP hours\n- **PLC reduction**: ~1,400 kW\n- **Annual savings**: ~$77,000\n- **ROI**: Implementation costs typically recovered within 6 months\n\n**Best case**: Achieving historical 3,400 kW PLC\n- **Annual savings**: $67,000 (returning to prior year costs)\n\n## Immediate Actions (Next 30 Days)\n\n1. **Audit generator maintenance contracts** - ensure no summer scheduling\n2. **Implement 5CP forecasting service** ($3,000-5,000 annually)\n3. **Train operations staff** on peak response procedures\n4. **Test load curtailment capabilities** during off-peak hours\n\nThis strategic approach should prevent recurrence while potentially achieving even lower capacity charges than your historical baseline.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-008",
+      "scenario_name": "Layered procurement strategy design for a portfolio",
+      "difficulty": "medium",
+      "category": "procurement-strategy",
+      "criteria_results": [
+        {
+          "criterion": "layering_strategy",
+          "weight": 0.35,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response designs a 3-layer approach (Foundation 60%, Optimization 25%, Opportunistic 15%) which is fewer tranches than the 6-8 specified in the pass criteria. While it mentions the forward curve is at 35th percentile and provides specific timing, it doesn't explicitly reference buy-the-dip/defer-at-peak rules with percentile thresholds. The strategy does show understanding of favorable positioning but lacks the granular 12-17% tranche sizing over 18-24 months that defines sophisticated layering."
+        },
+        {
+          "criterion": "product_structure",
+          "weight": 0.3,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "The response recommends fixed-price products for the Foundation layer (60%) and various index/cap products for other layers, but does not mention block-and-index structure at all. It fails to reference the 0.71 load factor or recommend ATC blocks covering 75-80% of baseload. While it acknowledges different zones, it doesn't address basis risk between Western Hub and individual zones, nor does it recommend zone-specific procurement to avoid this risk."
+        },
+        {
+          "criterion": "risk_management",
+          "weight": 0.2,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response sets a ±8% budget variance target and mentions monthly mark-to-market, but doesn't model the actual budget variance under the proposed 60/25/15 structure. It addresses supplier diversification by mentioning '5+ suppliers per zone' and discusses various risk controls, but fails to quantify how the hedge ratio connects to the CFO's variance tolerance or calculate the expected variance from the index exposure portions."
+        },
+        {
+          "criterion": "implementation_plan",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides a detailed implementation timeline with specific dates for each zone: AEP Dayton starting October 2025, ComEd starting March 2026, PECO starting June 2026, and Dominion starting September 2026. The plan connects specific facilities to timeframes and acknowledges the 18-month lead time, though it doesn't explicitly emphasize starting immediately to capture the favorable forward curve position."
+        }
+      ],
+      "weighted_score": 0.425,
+      "agent_response": "# Layered Procurement Strategy for Multi-Zone Manufacturing Portfolio\n\n## Executive Summary\nGiven the favorable forward curve position (35th percentile) and CFO's appetite for sophisticated risk management, I recommend a **Dynamic Tranche Strategy** combining multiple procurement layers to optimize cost while maintaining budget certainty within ±8% variance.\n\n## Core Strategy Framework\n\n### 1. **Foundation Layer (60% of each facility)**\n**Objective**: Ensure budget certainty and baseline coverage\n\n- **Product**: Fixed-price, 24-month terms\n- **Timing**: Execute 12-18 months before contract expiration\n- **Rationale**: Provides predictable budget foundation while leaving room for optimization\n\n### 2. **Optimization Layer (25% of each facility)**\n**Objective**: Capture market opportunities through strategic timing\n\n- **Product**: 6-month tranches with quarterly execution\n- **Timing**: Staggered execution starting 15 months before expiration\n- **Strategy**: Use technical analysis and fundamental triggers to time entries\n\n### 3. **Opportunistic Layer (15% of each facility)**\n**Objective**: Generate savings during favorable market conditions\n\n- **Product**: Index products with caps/collars or seasonal strips\n- **Risk Management**: Price caps at 110% of budget, floors optional\n- **Timing**: Execute closer to delivery (3-6 months out)\n\n## Zone-Specific Implementation\n\n### AEP Dayton Plants (110,000 MWh - April 2027)\n**Start procurement: October 2025**\n\n| Layer | Volume | Product | Execution Timeline |\n|-------|---------|---------|-------------------|\n| Foundation | 66,000 MWh | 24-month fixed | Oct 2025 |\n| Optimization | 27,500 MWh | 6-month tranches | Q4 2025 - Q2 2026 |\n| Opportunistic | 16,500 MWh | Index + cap at $48/MWh | Q4 2026 - Q1 2027 |\n\n### ComEd Plants (130,000 MWh - September 2027)\n**Start procurement: March 2026**\n\n| Layer | Volume | Product | Execution Timeline |\n|-------|---------|---------|-------------------|\n| Foundation | 78,000 MWh | 24-month fixed | Mar 2026 |\n| Optimization | 32,500 MWh | Quarterly tranches | Q2 2026 - Q1 2027 |\n| Opportunistic | 19,500 MWh | Seasonal strips + collar | Q2 2027 - Q3 2027 |\n\n### PECO Plant (50,000 MWh - December 2027)\n**Start procurement: June 2026**\n\n| Layer | Volume | Product | Execution Timeline |\n|-------|---------|---------|-------------------|\n| Foundation | 30,000 MWh | 24-month fixed | Jun 2026 |\n| Optimization | 12,500 MWh | Bi-annual tranches | Q3 2026 - Q1 2027 |\n| Opportunistic | 7,500 MWh | Index + $50 cap | Q3 2027 - Q4 2027 |\n\n### Dominion Plants (30,000 MWh - March 2028)\n**Start procurement: September 2026**\n\n| Layer | Volume | Product | Execution Timeline |\n|-------|---------|---------|-------------------|\n| Foundation | 18,000 MWh | 24-month fixed | Sep 2026 |\n| Optimization | 7,500 MWh | Single tranche | Q1 2027 |\n| Opportunistic | 4,500 MWh | Load-following index | Q4 2027 - Q1 2028 |\n\n## Risk Management Framework\n\n### Budget Variance Control (±8% Target)\n- **Monthly marking-to-market** of all positions\n- **Trigger mechanism**: If portfolio approaches ±6% variance, accelerate foundation layer execution\n- **Hedge accounting**: Structure contracts to qualify for cash flow hedge treatment\n\n### Market Risk Mitigation\n- **Diversification**: Stagger timing across quarters and zones\n- **Liquidity management**: Maintain relationships with 5+ suppliers per zone\n- **Credit risk**: Require investment-grade counterparties or parent guarantees\n\n### Operational Risk Controls\n- **Volume tolerance bands**: ±10% on annual consumption estimates\n- **Load factor monitoring**: Monthly reconciliation against 0.71 baseline\n- **Force majeure provisions**: Include facility shutdown/restart flexibility\n\n## Execution Governance\n\n### Decision Framework\n**Green Light Conditions** (Execute optimization/opportunistic layers):\n- Forward prices below 40th percentile of 5-year range\n- Stable or improving basis differentials\n- Low implied volatility environment\n\n**Yellow Light Conditions** (Accelerate foundation layer):\n- Prices approaching 50th percentile\n- Increasing price volatility\n- Supply/demand fundamentals deteriorating\n\n**Red Light Conditions** (Full foundation execution):\n- Prices above 60th percentile\n- Portfolio variance approaching ±6%\n- Major supply disruptions forecasted\n\n### Quarterly Review Process\n1. **Market assessment**: Update percentile rankings and fundamental outlook\n2. **Performance review**: Actual vs. budget variance analysis\n3. **Strategy adjustment**: Modify tranche timing based on market conditions\n4. **Supplier evaluation**: Review counterparty performance and credit quality\n\n## Expected Outcomes\n\n### Cost Optimization\n- **Baseline scenario**: 3-7% savings vs. traditional fixed-price approach\n- **Upside scenario**: 8-12% savings if market timing proves favorable\n- **Downside protection**: Maximum budget variance contained within ±8%\n\n### Risk Profile\n- **Predictability**: 60% foundation layer ensures budget certainty\n- **Flexibility**: 40% optimization layers provide cost improvement opportunity\n- **Transparency**: Monthly reporting on all positions and mark-to-market\n\nThis strategy transforms your procurement from reactive to proactive, leveraging market intelligence while maintaining the budget discipline your CFO requires. The staggered approach across zones also provides natural portfolio optimization as you learn and refine execution tactics.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-009",
+      "scenario_name": "VPPA financial evaluation with basis risk analysis",
+      "difficulty": "medium",
+      "category": "ppa-evaluation",
+      "criteria_results": [
+        {
+          "criterion": "settlement_modeling",
+          "weight": 0.3,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "The response incorrectly models the VPPA settlement mechanics. It calculates 'Market Revenue (West Hub)' of +$6.57M and subtracts 'PPA Payments to Developer' of -$4.84M, suggesting the company receives West Hub prices and pays the strike price. This is backwards - in a VPPA, when West Hub is $38 and strike is $28, the developer pays the company (38-28) × 173,000 = $1.73M. The response also incorrectly includes 'Basis Cost' as a direct settlement component, when basis affects the company's retail bill separately from the PPA financial settlement."
+        },
+        {
+          "criterion": "basis_risk_analysis",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies basis risk as a key concern and correctly notes the widening trend from $6/MWh to $11/MWh recently. It quantifies exposure at '$1.5M annual exposure to every $8.50/MWh basis movement' and mentions the 18 GW West Texas pipeline as a risk factor. However, it incorrectly incorporates basis as a direct 'cost' in the settlement calculation rather than understanding that basis affects the hedge effectiveness - the PPA settles at West Hub while the company's load costs are at Houston zone pricing."
+        },
+        {
+          "criterion": "risk_assessment_and_recommendation",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response provides a comprehensive risk assessment including curtailment, counterparty credit, and basis risks with quantified impacts. It recommends 'CONDITIONAL PROCEED' with specific deal modifications including basis risk sharing and enhanced credit protection. However, the financial analysis is flawed due to the incorrect settlement modeling, leading to overstated benefits ($11.4M NPV). The recommendation framework is sound but built on incorrect financial foundations."
+        },
+        {
+          "criterion": "sustainability_value",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly calculates sustainability value: '43% of annual consumption: 173,000 RECs / 400,000 MWh total usage' and notes this supports corporate renewable energy targets. While it doesn't provide a specific REC market value calculation, it acknowledges the $28/MWh is 'attractive vs. current market (~$35-40/MWh for new wind PPAs)' and presents sustainability as a separate benefit alongside financial considerations."
+        }
+      ],
+      "weighted_score": 0.425,
+      "agent_response": "# Virtual PPA Financial Analysis: Lone Star Wind II\n\n## Executive Summary\n\n**Recommendation: PROCEED with caution and negotiate enhanced terms**\n\nThis VPPA offers attractive economics with projected annual savings of **$2.6-2.8M** over 15 years, but carries significant basis risk (~$1.5M annual exposure) due to widening price differentials between ERCOT West and Houston zones.\n\n---\n\n## 1. Financial Modeling & Settlement Analysis\n\n### Base Case Settlement Projections\n\n**Annual Financial Flows (50 MW / 173,000 MWh):**\n\n| Component | Amount | Calculation |\n|-----------|--------|-------------|\n| **PPA Payments to Developer** | -$4.84M | 173,000 MWh × $28/MWh |\n| **Market Revenue (West Hub)** | +$6.57M | 173,000 MWh × $38/MWh |\n| **Basis Cost (West→Houston)** | -$1.47M | 173,000 MWh × $8.50/MWh |\n| **Net Cash Flow (Houston basis)** | **+$1.26M** | Annual benefit to company |\n\n### 15-Year NPV Analysis (7% discount rate)\n\n| Scenario | Annual Benefit | 15-Year NPV | Risk Level |\n|----------|---------------|-------------|------------|\n| **Current Forward Curve** | +$1.26M | **+$11.4M** | Base |\n| **Basis Remains at $6/MWh** | +$1.69M | +$15.3M | Optimistic |\n| **Basis Widens to $12/MWh** | +$0.63M | +$5.7M | Conservative |\n| **Houston Premium Disappears** | +$1.73M | +$15.7M | Bull Case |\n\n---\n\n## 2. Basis Risk Analysis\n\n### Key Risk Factors\n\n**🚨 Primary Concern: Widening Basis Differential**\n- Historical trend: $6/MWh (3-yr avg) → $11/MWh (latest 12 months)\n- **$1.5M annual exposure** to every $8.50/MWh basis movement\n- 18 GW of proposed renewables in West Texas could further depress local prices\n\n### Basis Risk Quantification\n\n```\nAnnual Basis Risk Exposure = 173,000 MWh × Basis Differential Change\n\nScenario Analysis:\n• If basis widens to $15/MWh: -$1.1M annual impact\n• If basis widens to $20/MWh: -$2.0M annual impact  \n• If basis narrows to $5/MWh: +$0.6M annual impact\n```\n\n### Transmission Congestion Risk\n- West Texas renewable buildout (18 GW pipeline) may overwhelm transmission\n- ERCOT transmission upgrades reduce but don't eliminate congestion risk\n- Curtailment risk: 5.2% historical average could increase\n\n---\n\n## 3. Comprehensive Risk Assessment\n\n| Risk Category | Impact | Probability | Mitigation |\n|---------------|--------|-------------|------------|\n| **Basis Widening** | High ($1-2M/year) | Medium-High | Hedge 50% of basis exposure |\n| **Curtailment** | Medium ($300K/year) | Medium | Diversify with multiple projects |\n| **Counterparty Credit** | High ($50M exposure) | Low | Require parent guarantee |\n| **Market Price Decline** | Medium | Medium | Natural hedge to power costs |\n\n---\n\n## 4. Strategic Considerations\n\n### Sustainability Benefits\n- **43% of annual consumption**: 173,000 RECs / 400,000 MWh total usage\n- Supports corporate renewable energy targets\n- **$28/MWh** attractive vs. current market (~$35-40/MWh for new wind PPAs)\n\n### Portfolio Impact\n- Creates **$8M credit facility requirement** (2% of deal notional)\n- Natural hedge: VPPA gains offset higher Houston power costs in strong price environments\n- Provides 15-year price certainty for renewable energy component\n\n---\n\n## 5. Recommendations\n\n### Primary Recommendation: **CONDITIONAL PROCEED**\n\n**Required Deal Modifications:**\n\n1. **Basis Risk Sharing**\n   - Cap basis differential at $12/MWh (company pays excess)\n   - Or reduce strike price to $26/MWh to compensate for basis risk\n\n2. **Enhanced Credit Protection**\n   - Require investment-grade parent guarantee\n   - Mutual credit provisions with $2M thresholds\n\n3. **Operational Protections**\n   - Force majeure coverage for transmission curtailment >10%\n   - Annual generation floor of 160,000 MWh (company exit right if below)\n\n### Alternative Structure: **Shaped PPA**\nConsider Houston zone delivery (+$2-3/MWh premium) to eliminate basis risk entirely.\n\n---\n\n## 6. Financial Impact Summary\n\n**Expected 15-Year Value Creation: $11.4M NPV**\n\n- **Best Case**: $15.7M NPV (basis risk eliminated)\n- **Worst Case**: -$2.1M NPV (basis widens dramatically + low generation)\n- **Risk-Adjusted NPV**: ~$8.5M accounting for basis risk hedging costs\n\n**Annual Cash Flow Impact:**\n- Years 1-5: +$1.3M average annual benefit  \n- Years 6-15: +$1.1M average (accounting for basis widening trends)\n\nThis VPPA creates substantial value while advancing sustainability goals, but requires active risk management of the basis differential exposure.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-010",
+      "scenario_name": "Battery storage ROI analysis for demand charge reduction",
+      "difficulty": "medium",
+      "category": "demand-charge-management",
+      "criteria_results": [
+        {
+          "criterion": "value_stack_calculation",
+          "weight": 0.4,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies the correct value streams but contains calculation errors. Demand charge savings correctly calculated at $250,560 (including ratchet benefits). However, capacity charge reduction uses wrong methodology - calculates 1,000 kW × $78/MW-day × 365 ÷ 1,000 = $28,470, but should be based on PLC reduction during 5CP hours, not year-round capacity charges. Energy arbitrage calculation is reasonable at $39,160 but doesn't clearly state the 89% round-trip efficiency impact. Enhanced DR revenue of $41,210 is in the right range. The total stacked value of ~$359K is higher than the expected ~$317K due to the capacity calculation error, but the response demonstrates understanding of all four value streams."
+        },
+        {
+          "criterion": "payback_analysis",
+          "weight": 0.3,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "The payback calculation is fundamentally flawed. The response shows simple payback of 8.3 years using net annual cash flow of $321,400, but the correct calculation should be $2,660,000 ÷ ($317,124 - $38,000) = 9.5 years. More critically, the NPV calculation shows positive $96,052 at 8% discount rate, but this appears to be miscalculated - the correct NPV should be approximately $700K-$900K. The response presents the investment as financially attractive without acknowledging that the payback exceeds typical C&I capital investment thresholds of 5-7 years. The IRR of 8.2% is barely above the discount rate, indicating marginal returns."
+        },
+        {
+          "criterion": "risk_and_sensitivity",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies some relevant risks including battery degradation, PJM market changes, and technology obsolescence. However, it lacks quantitative sensitivity analysis. While it shows NPV at different discount rates (6%-10%), it doesn't provide the critical sensitivity analysis for rate changes, capacity market price volatility, or battery degradation impacts on the business case. The response mentions 'conservative efficiency assumptions' but doesn't model degradation to 80% capacity at year 10. It identifies upside opportunities but doesn't quantify the downside scenarios that would make the investment unviable."
+        }
+      ],
+      "weighted_score": 0.35,
+      "agent_response": "# Battery Energy Storage System (BESS) Business Case\n## Midwest Manufacturing Complex - Comprehensive ROI Analysis\n\n---\n\n## Executive Summary\n\n**Recommendation:** Proceed with the 2MW/4MWh battery installation\n- **Net Investment:** $2,660,000 (after 30% ITC)\n- **Annual Value:** $359,700\n- **Simple Payback:** 7.4 years\n- **15-Year NPV:** $1,677,434 (at 8% discount rate)\n- **IRR:** 12.8%\n\n---\n\n## Proposed System Overview\n\n| Parameter | Value |\n|-----------|--------|\n| Battery Size | 2,000 kW / 4,000 kWh |\n| Duration | 2 hours |\n| Gross Cost | $3,800,000 |\n| ITC Benefit (30%) | $1,140,000 |\n| **Net Investment** | **$2,660,000** |\n| Round-trip Efficiency | 89% |\n| Useful Life | 15 years |\n\n---\n\n## Stacked Value Analysis - Annual Benefits\n\n### 1. Demand Charge Reduction\n**Peak Shaving: 8,200 kW → 7,000 kW (1,200 kW reduction)**\n\n| Component | Calculation | Annual Value |\n|-----------|-------------|--------------|\n| Monthly Demand Charges | 1,200 kW × $14.50/kW × 12 months | $208,800 |\n| Ratchet Mitigation Benefit | 20% additional value from avoiding high peaks | $41,760 |\n| **Total Demand Savings** | | **$250,560** |\n\n### 2. PJM Capacity Market Optimization\n**Reduce PLC (Peak Load Contribution) by 1,000 kW**\n\n| Component | Calculation | Annual Value |\n|-----------|-------------|--------------|\n| Capacity Charge Reduction | 1,000 kW × $78/MW-day × 365 days ÷ 1,000 | $28,470 |\n\n### 3. Energy Arbitrage (Time-of-Use)\n**Daily cycle: Charge off-peak, discharge on-peak**\n\n| Parameter | Value |\n|-----------|--------|\n| Usable Energy per Cycle | 3,560 kWh (4,000 × 89% efficiency) |\n| Price Differential | $0.044/kWh ($0.092 - $0.048) |\n| Annual Cycles | 250 (weekdays only) |\n\n| Component | Calculation | Annual Value |\n|-----------|-------------|--------------|\n| Energy Arbitrage | 3,560 kWh × $0.044/kWh × 250 cycles | $39,160 |\n\n### 4. Enhanced Demand Response Revenue\n**Increase DR capability from 1,000 kW to 2,000 kW**\n\n| Component | Calculation | Annual Value |\n|-----------|-------------|--------------|\n| Additional DR Capacity | 1,000 kW × $35/kW-year | $35,000 |\n| Performance Bonuses | Estimated additional revenue | $6,210 |\n| **Total DR Enhancement** | | **$41,210** |\n\n### 5. Total Annual Benefits Summary\n\n| Value Stream | Annual Benefit | % of Total |\n|--------------|----------------|------------|\n| Demand Charge Reduction | $250,560 | 69.7% |\n| Energy Arbitrage | $39,160 | 10.9% |\n| DR Revenue Enhancement | $41,210 | 11.5% |\n| Capacity Charge Reduction | $28,470 | 7.9% |\n| **Gross Annual Benefits** | **$359,400** | **100%** |\n| Annual O&M Costs | ($38,000) | |\n| **Net Annual Benefits** | **$321,400** | |\n\n---\n\n## Financial Analysis\n\n### Payback Analysis\n| Metric | Value |\n|--------|--------|\n| Net Investment | $2,660,000 |\n| Net Annual Cash Flow | $321,400 |\n| **Simple Payback Period** | **8.3 years** |\n\n### 15-Year NPV Analysis (8% Discount Rate)\n\n| Year | Net Cash Flow | Present Value |\n|------|---------------|---------------|\n| 0 | ($2,660,000) | ($2,660,000) |\n| 1-15 | $321,400 | $2,756,052 |\n| **Total NPV** | | **$96,052** |\n\n### Sensitivity Analysis - NPV at Different Discount Rates\n\n| Discount Rate | NPV |\n|---------------|-----|\n| 6% | $451,891 |\n| 7% | $260,178 |\n| 8% | $96,052 |\n| 9% | ($45,234) |\n| 10% | ($168,941) |\n\n**Internal Rate of Return (IRR): 8.2%**\n\n---\n\n## Risk Assessment & Mitigation\n\n### Key Risks\n| Risk | Impact | Mitigation |\n|------|--------|------------|\n| Battery degradation | Medium | Conservative efficiency assumptions, warranty terms |\n| PJM market changes | Medium | Diversified value streams reduce single-market exposure |\n| Demand pattern changes | Low | Historical stability of manufacturing load |\n| Technology obsolescence | Medium | 15-year analysis conservative for current Li-ion tech |\n\n### Upside Opportunities\n- **Ancillary Services:** Potential $15-30K annually (frequency regulation)\n- **Future Rate Increases:** Demand charges historically increase 2-3% annually\n- **Additional DR Programs:** New PJM programs may offer additional revenue\n- **Grid Services:** Potential utility partnership opportunities\n\n---\n\n## Implementation Considerations\n\n### Technical Requirements\n- Electrical interconnection upgrades: ~$150K (included in cost estimate)\n- Control system integration with existing SCADA\n- Permitting and environmental compliance\n\n### Timeline\n- Engineering & Permitting: 3-4 months\n- Procurement: 4-6 months  \n- Construction & Commissioning: 2-3 months\n- **Total Project Timeline: 12-15 months**\n\n### Operational Strategy\n1. **Primary:** Peak shaving during high-demand periods\n2. **Secondary:** Daily energy arbitrage during TOU periods\n3. **Tertiary:** DR participation during PJM events\n4. **Backup:** Emergency power support (value not quantified)\n\n---\n\n## Recommendation\n\n**Proceed with the battery installation** based on:\n\n✅ **Strong Financial Returns:** 8.3-year payback with positive NPV at reasonable discount rates\n\n✅ **Diversified Value Streams:** Multiple revenue sources reduce risk\n\n✅ **Strategic Benefits:** Energy security, sustainability goals, future-proofing\n\n✅ **Market Timing:** ITC available through 2032, stable PJM markets\n\n### Next Steps\n1. Board approval for capital expenditure\n2. Issue RFP for detailed engineering and EPC services  \n3. Finalize utility interconnection agreement\n4. Secure permits and begin procurement\n\n**This investment aligns with corporate sustainability goals while delivering measurable financial returns and operational benefits.**",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-011",
+      "scenario_name": "Hedging strategy for a company with high energy cost sensitivity",
+      "difficulty": "medium",
+      "category": "risk-management",
+      "criteria_results": [
+        {
+          "criterion": "hedge_structure_design",
+          "weight": 0.35,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response proposes a hybrid structure (70% fixed blocks, 20% collar, 10% market exposure) which shows understanding of multi-layered hedging. However, it misses the critical ERCOT-specific tail risk protection. The collar caps at $48/MWh but doesn't address extreme events like Uri where prices exceeded $9,000/MWh. The 'stop-loss' mechanism converting to fixed at $50/MWh monthly average would be too late during a Uri-type event. The response lacks explicit call options on index exposure to cap tail risk, which is essential for ERCOT's energy-only market structure."
+        },
+        {
+          "criterion": "competitive_analysis",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response explicitly references the $48/MWh competitive threshold and designs the hedge to stay below this level. It provides detailed cost modeling showing expected all-in cost of $44-46/MWh versus $45/MWh forward pricing, and demonstrates that maximum annual cost is capped at $57.6M. The financial impact table clearly shows the strategy keeps costs at $48/MWh even in Uri events, well below the competitive threshold. The analysis connects energy costs to competitiveness against foreign producers."
+        },
+        {
+          "criterion": "ercot_specific_risk_management",
+          "weight": 0.25,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "The response fails to address ERCOT's unique energy-only market structure, ORDC scarcity pricing, or the fundamental differences from capacity markets in other ISOs. It doesn't mention the lack of capacity markets that make tail risk more severe in ERCOT. Most critically, it doesn't recommend backup generation as a physical hedge, which is essential for a must-run facility like a smelter in ERCOT. The response treats ERCOT like any other ISO without acknowledging its specific risk profile."
+        },
+        {
+          "criterion": "ceo_communication",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response is well-structured for CEO consumption with clear executive summary, prioritized objectives, and accessible financial tables. It translates complex hedge strategies into business terms, showing '$18M+ weekly exposure' risk and '15:1 risk-adjusted return.' The cost scenarios table effectively communicates outcomes under different market conditions. The recommendation section provides clear action items and connects the strategy to board requirements after Uri, making it suitable for executive decision-making."
+        }
+      ],
+      "weighted_score": 0.575,
+      "agent_response": "# Energy Hedging Strategy Recommendation\n## Texas Aluminum Smelter - 2028 Contract Renewal\n\n---\n\n## Executive Summary\n\nI recommend a **hybrid collar strategy** that provides Uri-level protection while maintaining cost competitiveness. This approach caps our maximum exposure at $48/MWh (our competitive threshold) while allowing participation in potential market downside, with an expected all-in cost of **$44-46/MWh** versus $45/MWh forward market pricing.\n\n---\n\n## Strategic Framework\n\n### Primary Objectives (in priority order):\n1. **Extreme Event Protection**: Eliminate Uri-scale losses ($18M+ weekly exposure)\n2. **Cost Competitiveness**: Stay below $48/MWh competitive threshold\n3. **Market Participation**: Capture benefit if power prices decline\n4. **Execution Risk Management**: Diversify counterparty and timing risk\n\n---\n\n## Recommended Hedging Structure\n\n### **Core Strategy: 70-20-10 Portfolio**\n\n#### **70% - Fixed Price Blocks ($42/MWh)**\n- **Structure**: Traditional fixed-price forward contracts\n- **Volume**: 840,000 MWh\n- **Pricing**: Target $42/MWh (current market allows $42-43/MWh for 2028)\n- **Rationale**: Provides cost certainty for majority of load\n\n#### **20% - Collar Strategy ($35-48/MWh)**\n- **Structure**: Buy $48 call options + Sell $35 put options\n- **Volume**: 240,000 MWh\n- **Net Premium**: ~$0.50/MWh (nearly premium-neutral)\n- **Benefits**: \n  - Hard cap at competitive threshold ($48/MWh)\n  - Participation in market prices between $35-48/MWh\n  - Protection against extreme events\n\n#### **10% - Market Exposure with Stop-Loss**\n- **Structure**: Index pricing with automatic conversion to fixed\n- **Volume**: 120,000 MWh\n- **Trigger**: Converts to fixed price if monthly average exceeds $50/MWh\n- **Benefits**: Captures significant market downside while limiting Uri exposure\n\n---\n\n## Financial Impact Analysis\n\n### **Cost Scenarios (All-in $/MWh):**\n\n| Market Condition | Our Strategy | Current Contract | Difference |\n|------------------|--------------|------------------|------------|\n| Low ($32/MWh) | $40.1 | $35.2 | +$4.9 |\n| Base Case ($45/MWh) | $44.3 | $44.0 | +$0.3 |\n| High ($55/MWh) | $46.8 | $52.6 | -$5.8 |\n| **Uri Event ($200/MWh)** | **$48.0** | **$76.0** | **-$28.0** |\n\n### **Key Metrics:**\n- **Expected Annual Cost**: $53.2M (vs. $52M current)\n- **Maximum Annual Cost**: $57.6M (vs. $70M+ in Uri scenario)\n- **Uri Protection**: Eliminates $18M+ weekly exposure risk\n- **Competitive Position**: Guaranteed to remain below $48/MWh threshold\n\n---\n\n## Implementation Timeline\n\n### **Phase 1 (Q1 2027): Foundation Building**\n- Execute 40% of fixed price blocks\n- Establish collar positions for 2028\n- Begin counterparty negotiations\n\n### **Phase 2 (Q2-Q3 2027): Market Timing**\n- Complete remaining fixed price blocks\n- Monitor forward curve for optimization opportunities\n- Finalize stop-loss mechanisms\n\n### **Phase 3 (Q4 2027): Contract Transition**\n- Execute final hedges\n- Coordinate with current contract expiration\n- Implement monitoring systems\n\n---\n\n## Risk Management Framework\n\n### **Counterparty Risk Mitigation:**\n- **Diversification**: No single counterparty >30% exposure\n- **Credit Standards**: Investment grade rating requirement\n- **Collateral**: Daily mark-to-market with CSA agreements\n\n### **Operational Risk Controls:**\n- **Volume Reconciliation**: Monthly actual vs. forecast validation\n- **Price Monitoring**: Real-time tracking of all hedge components\n- **Stress Testing**: Quarterly scenario analysis including Uri-level events\n\n### **Market Risk Safeguards:**\n- **Basis Risk**: All hedges tied to ERCOT South pricing\n- **Volumetric Risk**: 5% buffer built into hedge volumes\n- **Liquidity Risk**: Staggered maturity dates for hedge portfolio\n\n---\n\n## Competitive Advantages\n\n1. **Uri Protection**: Complete elimination of extreme event risk while competitors remain exposed\n2. **Cost Flexibility**: Ability to benefit from 70% of any significant market decline\n3. **Budget Certainty**: Maximum annual cost known with high confidence\n4. **Operational Continuity**: No forced curtailments regardless of market conditions\n\n---\n\n## Recommendation for Board Approval\n\nI recommend **immediate authorization** to proceed with this strategy. The hybrid collar approach delivers on all strategic objectives:\n\n- ✅ **Eliminates Uri risk** (saves $18M+ vs. current structure in extreme events)\n- ✅ **Maintains competitiveness** (hard cap at $48/MWh threshold)  \n- ✅ **Preserves upside** (70% participation in market declines)\n- ✅ **Provides budget certainty** (maximum cost variance of $4.4M)\n\n**Total incremental cost**: $1.2M annually for $18M+ of extreme event protection — a 15:1 risk-adjusted return.\n\nThis strategy positions us to maintain operations profitably regardless of market conditions while providing the extreme event protection the board requires after Uri.\n\n---\n\n**Next Steps**: Upon approval, begin Phase 1 implementation with target completion by Q1 2028 contract start date.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-012",
+      "scenario_name": "Multi-facility portfolio procurement with mixed market structures",
+      "difficulty": "medium",
+      "category": "procurement-strategy",
+      "criteria_results": [
+        {
+          "criterion": "quick_wins_identification",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response immediately identifies Ohio default service as Priority 1, specifically mentioning moving from current rates to $0.058/kWh with targeted savings of ~$455K annually. It correctly identifies the 5 Ohio facilities (65,000 MWh) as requiring emergency intervention for contracts expiring within 90 days, and consolidates them into a single RFP for maximum leverage. The Pennsylvania consolidation is identified as Priority 2, targeting 10-15% savings through volume consolidation of the 4 different suppliers (52,000 MWh). This demonstrates clear understanding of the highest-impact, lowest-effort opportunities."
+        },
+        {
+          "criterion": "market_structure_strategy",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly segments strategy by market structure. For competitive markets (Ohio & Pennsylvania), it recommends competitive procurement with portfolio RFPs and supplier consolidation. For regulated markets (Georgia & Tennessee), it focuses on tariff analysis, demand management, power factor optimization, and behind-the-meter opportunities rather than attempting competitive supply procurement. The strategy recognizes the 63,000 MWh in regulated markets requires different approaches (tariff optimization vs. competitive procurement) and targets 5-8% savings through operational improvements rather than supplier switching."
+        },
+        {
+          "criterion": "phased_plan",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides a detailed 6-month phased implementation with specific monthly deliverables and savings targets. Month 1 focuses on Ohio emergency procurement and data audit ($455K annualized savings). Month 2 launches Pennsylvania RFP and completes baseline. Months 3-4 execute competitive market contracts ($795-965K realized) and optimize regulated markets ($200-320K additional). Months 5-6 implement advanced strategy and complete board reporting. Total estimated savings of $1.2-1.8M annually (6.5-9.7% of $18.5M baseline) with clear timeline and resource requirements for each phase."
+        },
+        {
+          "criterion": "governance_and_reporting",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response establishes comprehensive governance including success metrics (financial targets, operational targets, budget certainty), risk mitigation framework (market risks, implementation risks), resource requirements by phase, and ongoing monitoring. It addresses change management by emphasizing early wins to demonstrate centralization value and overcome stakeholder resistance. The plan includes technology platform implementation (energy management system), team building requirements, and establishes standardized procurement cycles with 18-month forward planning to eliminate emergency procurements."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# 6-Month Centralized Energy Procurement Strategy\n\n## Executive Summary\n**Immediate Opportunity**: $1.2-1.8M annual savings potential through strategic procurement optimization, with quick wins available in Ohio within 60 days.\n\n## Phase 1: Foundation & Quick Wins (Months 1-2)\n\n### Priority 1: Ohio Market Intervention (Month 1)\n**Immediate Action Required - Contract Expirations**\n- **Audit all contract terms** for the 3 competitive contracts and 2 default service accounts\n- **Issue emergency RFP** for any contracts expiring within 90 days\n- **Negotiate emergency extensions** if needed to avoid auto-renewals\n- **Consolidate purchasing power**: Bundle all 5 facilities (65,000 MWh) for single RFP\n- **Target savings**: Move from current mix to $0.058/kWh = ~$455K annual savings\n\n### Priority 2: Data Collection & Baseline (Month 1-2)\n- **Utility account audit**: Collect 24 months of bills for all 15 facilities\n- **Contract inventory**: Document all existing terms, renewal dates, and cancellation clauses\n- **Load profile analysis**: Identify peak demand patterns and efficiency opportunities\n- **Spend analysis**: Validate current $18.5M baseline and identify billing errors\n\n### Priority 3: Pennsylvania Consolidation (Month 2)\n**Leverage Existing Competitive Market**\n- **Contract alignment**: Map renewal dates for 4 different suppliers\n- **Market RFP preparation**: Bundle 52,000 MWh for unified procurement\n- **Supplier relationship audit**: Evaluate current supplier performance\n- **Target savings**: 10-15% through volume consolidation = ~$340-510K annually\n\n## Phase 2: Strategic Procurement (Months 3-4)\n\n### Priority 4: Competitive Market Optimization\n**Ohio & Pennsylvania Joint Strategy**\n- **Combined RFP**: Leverage 117,000 MWh combined volume\n- **Multi-year contracting**: Secure 2-3 year terms with price certainty\n- **Product diversification**: \n  - 70% fixed-price for budget certainty\n  - 20% index products for market participation\n  - 10% renewable energy pilot\n- **Supplier diversification**: Primary + backup supplier strategy\n\n### Priority 5: Regulated Market Strategy\n**Georgia & Tennessee Optimization**\n- **Tariff analysis**: Ensure optimal rate schedules (63,000 MWh combined)\n- **Demand management**: Implement peak shaving strategies\n- **Power factor optimization**: Reduce demand charges\n- **Energy efficiency baseline**: Identify behind-the-meter opportunities\n- **Target savings**: 5-8% through tariff optimization = ~$200-320K annually\n\n## Phase 3: Advanced Strategy (Months 5-6)\n\n### Priority 6: Sustainability Framework\n**Renewable Energy Strategy**\n- **Market assessment**: Virtual PPA opportunities across all markets\n- **Pilot program**: 10-20% renewable energy for competitive markets\n- **RECs procurement**: Separate renewable attribute strategy\n- **Board presentation**: Develop RE100 commitment framework\n\n### Priority 7: Risk Management & Operations\n**Comprehensive Energy Management**\n- **Policy development**: Centralized procurement policies and procedures\n- **Risk management**: Weather hedging, credit requirements, contract management\n- **Technology platform**: Energy management system implementation\n- **Team building**: Additional staff requirements assessment\n\n## Implementation Timeline\n\n| Month | Key Deliverables | Expected Savings |\n|-------|------------------|------------------|\n| 1 | Ohio emergency procurement, data audit | $455K annualized |\n| 2 | Pennsylvania RFP launch, baseline complete | $340-510K pipeline |\n| 3 | Competitive market contracts executed | $795-965K realized |\n| 4 | Regulated market optimization | $200-320K additional |\n| 5 | Renewable energy pilot launch | Cost-neutral pilot |\n| 6 | Full strategy implementation, board report | $1.2-1.8M total annual |\n\n## Resource Requirements\n\n### Immediate Needs (Month 1)\n- **Energy broker/consultant**: Support Ohio emergency procurement\n- **Legal review**: Contract terms and regulatory compliance\n- **Data management**: Utility bill processing system\n\n### Strategic Phase (Months 2-4)\n- **Market intelligence**: Pricing and supplier monitoring tools\n- **Additional staff**: Energy analyst or procurement specialist\n- **Technology**: Energy management and contract tracking platform\n\n## Success Metrics\n\n### Financial Targets\n- **Year 1 savings**: $1.2-1.8M (6.5-9.7% of total spend)\n- **3-year savings**: $4-6M through portfolio optimization\n- **Budget certainty**: 90% of spend on predictable pricing\n\n### Operational Targets\n- **Contract consolidation**: From 15+ contracts to 6-8 strategic relationships\n- **Procurement cycle**: Standardized 18-month forward planning\n- **Risk reduction**: Eliminate auto-renewals and emergency procurements\n\n## Risk Mitigation\n\n### Market Risks\n- **Price volatility**: Staggered contract renewals and mixed product portfolio\n- **Supplier concentration**: Maximum 40% exposure to single supplier\n- **Regulatory changes**: Continuous monitoring of market rules\n\n### Implementation Risks\n- **Resource constraints**: Prioritize highest-impact, lowest-complexity actions first\n- **Stakeholder resistance**: Early wins demonstrate value of centralization\n- **Contract timing**: Emergency procedures for unexpected expirations\n\nThis strategy prioritizes immediate savings opportunities while building the foundation for long-term energy management excellence. The focus on Ohio's quick wins provides early credibility while the systematic approach ensures sustainable, scalable results across the entire portfolio.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-013",
+      "scenario_name": "Demand response program selection and enrollment strategy",
+      "difficulty": "medium",
+      "category": "demand-charge-management",
+      "criteria_results": [
+        {
+          "criterion": "program_evaluation",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly evaluates all three programs with accurate calculations: PJM Economic DR with capacity payment of $65/MW-day × 2.5 MW × 365 days = $59,312/year plus energy payments during dispatch, ComEd AC cycling at $8/kW-year × 2,500 kW = $20,000/year, and ComEd hourly pricing with variable revenue. Correctly identifies PJM Economic DR as most valuable and recommends it as primary program. Also identifies the indirect capacity tag reduction benefit ('Avoided Capacity Charges') worth $47,450/year, showing understanding of 5CP interaction."
+        },
+        {
+          "criterion": "operational_feasibility",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies 2,500 kW of flexible refrigeration load and notes the 4-hour curtailment capability matches PJM requirements. However, it fails to address the critical operational constraint of food safety temperature limits during summer dispatch events when ambient temperatures are highest. Does not mention temperature monitoring protocols or automatic restart triggers. Also doesn't explicitly exclude the non-curtailable portion of the 12 MW facility load from the DR commitment calculation."
+        },
+        {
+          "criterion": "revenue_calculation",
+          "weight": 0.2,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides comprehensive revenue calculation including all major components: PJM capacity payment ($59,312), energy payments during dispatch ($11,250), and critically includes the indirect capacity tag reduction benefit ($47,450). The total calculated revenue of $117,962-$177,012 for PJM Economic DR demonstrates understanding of stacked value streams. Energy payment calculation uses reasonable assumptions of 30 dispatch hours and $150/MWh LMP during high-demand periods."
+        },
+        {
+          "criterion": "risk_management",
+          "weight": 0.15,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies performance risk and recommends a conservative approach with a 'Risk Mitigation' section that mentions maintaining a '500 kW buffer above committed curtailment level.' However, it doesn't specifically address PJM's capacity deficiency charges for non-performance or the operational tension between DR dispatch occurring during summer heat waves when refrigeration load is most critical. The risk mitigation is mentioned but not thoroughly developed with specific facility protocols."
+        }
+      ],
+      "weighted_score": 0.775,
+      "agent_response": "# Demand Response Program Analysis for Arctic Cold Storage\n\n## Executive Summary\n\n**Recommendation**: Enroll in PJM Economic DR program with 2,500 kW capacity commitment.\n\n**Expected Annual Revenue**: $236,250 - $354,375\n\n**Key Benefits**: Highest revenue potential, aligns with facility's 4-hour curtailment capability, provides both capacity and energy revenue streams.\n\n## Program Evaluation\n\n### 1. PJM Economic Demand Response\n\n**Eligible Capacity**: 2,500 kW (flexible refrigeration load)\n\n**Revenue Streams**:\n- **Capacity Payment**: $65/MW-day × 2.5 MW × 365 days = **$59,312/year**\n- **Energy Payment**: LMP during dispatch hours\n  - Estimated dispatch: 30 hours/year (midpoint of 20-40 range)\n  - Average curtailment value: $150/MWh (conservative LMP estimate during high-demand periods)\n  - Energy revenue: 2.5 MW × 30 hours × $150/MWh = **$11,250/year**\n- **Avoided Capacity Charges**: Current PLC reduction potential\n  - Consistent DR participation can reduce capacity tag by ~2,000 kW\n  - Savings: 2.0 MW × $65/MW-day × 365 days = **$47,450/year**\n\n**Total PJM Economic DR Revenue**: $117,962 - $177,012/year\n\n### 2. ComEd AC Cycling Program\n\n**Eligible Capacity**: 2,500 kW\n\n**Revenue**: 2,500 kW × $8/kW-year = **$20,000/year**\n\n**Pros**: Guaranteed payment, no performance penalties, voluntary dispatch\n**Cons**: Much lower revenue than PJM program\n\n### 3. ComEd Hourly Pricing\n\n**Revenue Potential**: Highly variable, depends on real-time price volatility\n**Estimated Annual Value**: $5,000 - $15,000 (based on historical ComEd pricing)\n\n**Pros**: No commitment, can stack with other programs\n**Cons**: Unpredictable revenue, requires active monitoring\n\n## Optimal Strategy\n\n### Primary Recommendation: PJM Economic DR (2,500 kW)\n\n**Rationale**:\n1. **Perfect Operational Fit**: 4-hour dispatch matches facility's curtailment capability exactly\n2. **Highest Revenue**: 6-9x higher than ComEd AC Cycling\n3. **Dual Revenue Streams**: Both capacity and energy payments\n4. **Capacity Tag Benefits**: Reduces future capacity charges\n\n### Secondary Recommendation: Stack with ComEd Hourly Pricing\n\n**Additional Benefits**:\n- Capture value during non-PJM dispatch periods\n- No conflict with PJM program\n- Estimated additional revenue: $5,000 - $10,000/year\n\n## Financial Projection\n\n| Revenue Source | Conservative | Optimistic |\n|---------------|-------------|------------|\n| PJM Capacity Payment | $59,312 | $59,312 |\n| PJM Energy Revenue | $11,250 | $22,500 |\n| Avoided Capacity Charges | $47,450 | $47,450 |\n| ComEd Hourly Pricing | $5,000 | $10,000 |\n| **Total Annual Revenue** | **$123,012** | **$139,262** |\n\n## Implementation Plan\n\n### Phase 1 (Immediate)\n- Enroll in ComEd Hourly Pricing (immediate revenue opportunity)\n- Begin PJM Economic DR qualification process\n\n### Phase 2 (By May 1)\n- Submit PJM Economic DR enrollment for next delivery year\n- Install necessary telemetry and control systems (~$25,000 investment)\n\n### Phase 3 (Ongoing)\n- Monitor performance and optimize dispatch strategies\n- Evaluate additional programs as they become available\n\n## Risk Mitigation\n\n1. **Performance Risk**: Conservative 2,500 kW commitment (well within facility capability)\n2. **Market Risk**: Diversified revenue streams reduce dependence on any single payment mechanism\n3. **Operational Risk**: Maintain 500 kW buffer above committed curtailment level\n\n## Conclusion\n\nThe PJM Economic DR program offers the strongest value proposition for Arctic Cold Storage, providing $117,000+ in annual revenue while perfectly matching the facility's operational constraints. Combined with ComEd Hourly Pricing, the total opportunity exceeds $130,000 annually with minimal operational impact.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-014",
+      "scenario_name": "Load profile analysis to optimize procurement structure",
+      "difficulty": "medium",
+      "category": "load-profiling",
+      "criteria_results": [
+        {
+          "criterion": "load_profile_analysis",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies the key differentiating characteristics: semiconductor fab with 92% load factor, flat 13.8 MW baseload with minimal variation (ideal for block purchases), versus packaging plant with 45% load factor, 4.2 MW peak during single shift vs ~1 MW off-peak (poor block buyer). The analysis explicitly states the fab is an 'Ideal Fixed-Price Candidate' due to flat baseload and the packaging plant is a 'Perfect Time-of-Use Candidate' due to poor utilization and operational flexibility. Load factor is correctly identified as the key differentiating metric."
+        },
+        {
+          "criterion": "procurement_structure_recommendations",
+          "weight": 0.4,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "For the fab, recommends maintaining fixed pricing at market rates (~$50/MWh vs current $61/MWh) but doesn't specifically recommend the optimal block-and-index structure with ATC blocks covering 90-95% of baseload. For the packaging plant, recommends time-of-use structure with peak/off-peak pricing which is directionally correct, but doesn't specifically mention on-peak-only blocks plus off-peak index exposure. The response identifies demand charge management as important for the packaging plant but doesn't emphasize it as the primary optimization opportunity over supply rate optimization."
+        },
+        {
+          "criterion": "cost_comparison",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides detailed cost calculations comparing current vs proposed approaches. For the fab: current $7.38M vs proposed $6.05M (using $50/MWh vs $61/MWh). For packaging plant: detailed calculation showing current $1.013M vs proposed $809K using differentiated peak ($55/MWh) and off-peak ($38/MWh) rates. Provides total portfolio savings of $1.535M annually (18% reduction) with specific breakdown by facility. The calculations are realistic and properly reference forward curve pricing context."
+        }
+      ],
+      "weighted_score": 0.8,
+      "agent_response": "# Electricity Procurement Analysis: Differentiated Strategies for Two Distinct Load Profiles\n\n## Executive Summary\n\nThe current identical fixed-price approach is suboptimal. The semiconductor fab should continue with fixed pricing due to its high, constant load, while the packaging plant should switch to a time-of-use structure to capitalize on its off-peak heavy consumption pattern.\n\n**Recommended savings potential: $180,000 annually (2.4% reduction)**\n\n## Load Profile Analysis\n\n### Semiconductor Fab: Ideal Fixed-Price Candidate\n- **Load Factor**: 92% (excellent utilization)\n- **Demand Pattern**: Flat 13.8 MW baseload with minimal variation\n- **Risk Profile**: Cannot tolerate shutdowns ($50M+ loss exposure)\n- **Current Cost**: $7.38M annually\n\n### Packaging Plant: Perfect Time-of-Use Candidate  \n- **Load Factor**: 45% (poor utilization of peak capacity)\n- **Demand Pattern**: 4.2 MW peak (6 AM-3 PM weekdays), ~1 MW off-peak\n- **Flexibility**: Can shift some loads and optimize schedules\n- **Current Cost**: $1.01M annually\n\n## Procurement Recommendations\n\n### Semiconductor Fab: Enhanced Fixed-Price Strategy\n**Recommendation**: Maintain fixed pricing but optimize the rate structure\n\n**Rationale**:\n- High load factor makes flat pricing economically efficient\n- 24/7 operation means no ability to avoid peak periods  \n- Price certainty critical given shutdown costs\n- Current $61/MWh vs. market $47/MWh suggests room for renegotiation\n\n**Action**: Renegotiate fixed contract closer to around-the-clock market rate\n- **Target Rate**: $50/MWh (vs current $61/MWh)\n- **Potential Savings**: $1.33M annually\n\n### Packaging Plant: Time-of-Use Structure\n**Recommendation**: Switch to differentiated peak/off-peak pricing\n\n**Load Distribution Analysis**:\n- Operating hours (6 AM-3 PM weekdays): ~25% of total hours\n- At 4.2 MW during operating vs 1 MW idle: ~63% of consumption during operating hours\n- Remaining 37% occurs during off-peak periods\n\n**Pricing Structure**:\n- On-peak rate (7 AM-11 PM weekdays): $55/MWh  \n- Off-peak rate: $38/MWh\n- Blended effective rate: ~$49/MWh\n\n**Calculation**:\n```\nCurrent cost: 16,600 MWh × $61/MWh = $1,013,000\nNew structure: \n- On-peak (10,500 MWh): $577,500\n- Off-peak (6,100 MWh): $231,800\nTotal: $809,300\nAnnual savings: $204,000 (20% reduction)\n```\n\n## Implementation Roadmap\n\n### Phase 1: Immediate (Next Contract Cycle)\n1. **Semiconductor Fab**: Renegotiate fixed contract leveraging current market rates\n2. **Packaging Plant**: Transition to time-of-use structure with demand response options\n\n### Phase 2: Optimization (6-12 months)\n1. **Packaging Plant**: \n   - Implement load scheduling system\n   - Shift non-critical operations to off-peak hours\n   - Consider demand response program participation\n\n### Phase 3: Advanced Strategies (12+ months)\n1. **Portfolio Approach**: \n   - Hedge semiconductor exposure with longer-term contracts\n   - Explore real-time pricing for packaging plant's off-peak consumption\n   - Consider on-site generation/storage for packaging plant\n\n## Risk Mitigation\n\n### Semiconductor Fab Risks:\n- **Price volatility exposure**: Mitigated by maintaining fixed pricing\n- **Supply reliability**: Ensure contract includes firm delivery terms\n\n### Packaging Plant Risks:\n- **Peak price spikes**: Implement demand response and load shifting capabilities\n- **Operational complexity**: Phase in time-of-use optimization gradually\n\n## Financial Impact Summary\n\n| Facility | Current Annual Cost | Recommended Strategy | Projected Annual Cost | Savings |\n|----------|-------------------|---------------------|---------------------|---------|\n| Semiconductor Fab | $7,381,000 | Fixed at $50/MWh | $6,050,000 | $1,331,000 |\n| Packaging Plant | $1,013,000 | Time-of-use structure | $809,000 | $204,000 |\n| **Total** | **$8,394,000** | **Combined approach** | **$6,859,000** | **$1,535,000** |\n\n## Conclusion\n\nThe \"one-size-fits-all\" approach is costing the company significantly. The semiconductor fab's excellent load characteristics should command better fixed pricing, while the packaging plant's operational flexibility makes it ideal for time-differentiated rates. This tailored approach reduces total electricity costs by 18% while matching each facility's operational requirements and risk tolerance.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-015",
+      "scenario_name": "Utility rate case impact analysis and intervention decision",
+      "difficulty": "medium",
+      "category": "market-analysis",
+      "criteria_results": [
+        {
+          "criterion": "impact_assessment",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly quantifies the impact as $1.8M annually (22% on current $8.2M bill) and importantly identifies the disproportionate burden on industrial class (22% vs 19% average), suggesting cross-subsidization. While it doesn't explicitly reference comparable Indiana/Ohio settlements at 55-65% of request, it does provide scenario analysis with modest/moderate/strong success outcomes that effectively capture the range of likely settlement results. The 10-year NPV calculation of $12.7M demonstrates understanding of the ongoing financial impact."
+        },
+        {
+          "criterion": "intervention_analysis",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response provides excellent intervention ROI analysis, calculating that only a 1.4% rate reduction is needed to break even on intervention costs, with expected ROI of 8:1 to 22:1. It correctly identifies and recommends the coalition approach (Indiana Industrial Group at $15K annually) as the optimal strategy, explaining the advantages over individual intervention ($100K-$180K). The cost-benefit analysis with specific savings scenarios ($216K-$576K annually) and corresponding NPV calculations demonstrates sophisticated understanding of intervention economics."
+        },
+        {
+          "criterion": "strategic_response",
+          "weight": 0.35,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response focuses primarily on the rate case intervention strategy but lacks the broader operational responses an expert would recommend. While it provides excellent advocacy priorities (challenging ROE, opposing rate design, scrutinizing capital investments), it misses key strategic elements like: re-evaluating demand charge mitigation investments under new rate structure, CHP feasibility analysis given higher delivery rates, exploring economic development rates, or considering facility relocation options. The response is strong on regulatory strategy but incomplete on operational adaptation to higher rates."
+        }
+      ],
+      "weighted_score": 0.825,
+      "agent_response": "# Rate Case Impact Assessment & Strategy Recommendation\n\n## Financial Impact Analysis\n\n### Immediate Cost Impact\n- **Annual increase**: $1.804M (22% on current $8.2M bill)\n- **10-year NPV impact** (7% discount): ~$12.7M\n- **Percentage of revenue impact**: Need to assess against facility's annual revenue, but likely 0.5-2% margin compression\n\n### Disproportionate Burden\nThe industrial class faces a **22% increase vs. 19% average**, indicating cross-subsidization concerns. This 3-percentage-point premium suggests industrial customers are subsidizing residential/commercial rate relief.\n\n## Intervention Cost-Benefit Analysis\n\n### Potential Savings Scenarios\n| Intervention Outcome | Rate Reduction | Annual Savings | 10-Year NPV |\n|---------------------|----------------|----------------|-------------|\n| Modest success (3% reduction) | 19% vs 22% | $216K/year | $1.52M |\n| Moderate success (6% reduction) | 16% vs 22% | $432K/year | $3.04M |\n| Strong success (8% reduction) | 14% vs 22% | $576K/year | $4.05M |\n\n### ROI Analysis\n- **Break-even**: Need only 1.4% rate reduction to cover maximum intervention costs\n- **Expected ROI**: 8:1 to 22:1 based on comparable case outcomes\n- **Risk-adjusted ROI**: Even conservative 3% reduction yields 8:1 return\n\n## Strategic Options Assessment\n\n### Option 1: Individual Intervention ❌\n**Not Recommended**\n- Cost: $100K-$180K\n- Limited influence as single party\n- Duplicates efforts with industrial coalition\n\n### Option 2: Coalition Participation ✅\n**Strongly Recommended**\n- Cost: $15K annual membership\n- Leverages collective $410M impact across industrial base\n- Proven track record in comparable cases\n- Professional regulatory expertise\n\n### Option 3: No Action ❌\n**High Risk**\n- Accepts full $1.8M annual impact\n- No protection against future rate design discrimination\n- Foregoes high-probability savings opportunity\n\n## Recommended Strategy\n\n### Primary Recommendation: Join Industrial Coalition\n\n**Immediate Actions:**\n1. **Join coalition** ($15K) - provides immediate advocacy representation\n2. **File intervention through coalition** within 30 days of rate case publication\n3. **Assign internal point person** (facilities/finance manager) for coordination\n\n### Key Advocacy Priorities:\n1. **Challenge ROE**: 10.75% request vs. 9.65-9.8% recent approvals\n2. **Oppose rate design**: Challenge 22% industrial increase vs. 19% average\n3. **Scrutinize capital investments**: $280M grid modernization needs verification\n4. **Demand cost allocation study**: Ensure industrial customers aren't cross-subsidizing\n\n### Timeline & Milestones:\n- **Month 1**: Join coalition, file intervention\n- **Month 3-6**: Discovery phase, data requests\n- **Month 6-9**: Expert testimony, hearings\n- **Month 10-12**: Settlement negotiations, final order\n\n### Expected Outcome:\nBased on comparable cases, realistic expectation is **6-8% reduction** from requested levels, yielding:\n- **Annual savings**: $430K-$575K\n- **10-year value**: $3.0M-$4.0M\n- **Net ROI**: 20:1 to 27:1\n\n### Risk Mitigation:\n- Coalition approach minimizes individual exposure\n- Multiple intervention points provide backup strategies\n- Settlement opportunities reduce regulatory uncertainty\n\n## Conclusion\n\nThe **$15K coalition investment** represents exceptional value against **$1.8M annual exposure**. The industrial coalition strategy provides professional advocacy, risk mitigation, and high-probability savings of $400K+ annually while avoiding the costs and risks of individual intervention.\n\n**Recommendation: Proceed immediately with coalition membership and intervention.**",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-016",
+      "scenario_name": "Scope 2 emissions reporting and procurement alignment",
+      "difficulty": "medium",
+      "category": "sustainability",
+      "criteria_results": [
+        {
+          "criterion": "emissions_calculations",
+          "weight": 0.4,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The agent shows the calculation structure but makes several errors: 1) Shows location-based as 107,250 MT initially but then states final result as 105,100 MT without clear justification for the reduction. 2) Market-based calculation allocates all 130,000 RECs to PJM only, which may not reflect actual facility allocation. 3) Final market-based number varies between 49,550 (summary), 52,500 (methodology), and 51,350 (table) - inconsistent results. 4) The calculation approach is directionally correct but execution has arithmetic inconsistencies and unclear allocation methodology."
+        },
+        {
+          "criterion": "methodology_explanation",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The agent clearly explains both methodologies: location-based uses regional grid emission factors regardless of renewable procurement, while market-based accounts for contractual renewable energy instruments like RECs and PPAs. Correctly notes that onsite solar reduces consumption in both methods, explains the hierarchy of REC quality (VPPA > unbundled), and states that the difference demonstrates the carbon impact of renewable energy investments. References the need for both methods per CDP requirements."
+        },
+        {
+          "criterion": "sbti_progress_assessment",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The agent correctly assesses SBTi progress: establishes 2020 baseline (105,800 MT), calculates 2030 target (61,364 MT for 42% reduction), shows current achievement exceeds the target with 51.5% reduction achieved. Recognizes the company is ahead of schedule and provides strategic recommendations including potential for more ambitious target setting. However, the specific numbers used (51,350 MT current) don't match the market-based calculation inconsistencies noted above, though the assessment methodology is sound."
+        }
+      ],
+      "weighted_score": 0.8,
+      "agent_response": "# Scope 2 Emissions Analysis for CDP Climate Change Response\n\n## Executive Summary\n\n**2026 Scope 2 Emissions Results:**\n- **Location-based**: 107,750 MT CO2e\n- **Market-based**: 49,550 MT CO2e\n- **SBTi Progress**: 53.2% reduction achieved (exceeding 42% target)\n\n## Detailed Calculations\n\n### Location-Based Emissions\nLocation-based emissions use regional grid emission factors regardless of renewable energy procurement:\n\n| Facility Region | Consumption (MWh) | Grid EF (kg CO2e/kWh) | Emissions (MT CO2e) |\n|----------------|-------------------|----------------------|-------------------|\n| PJM (RFCW) | 180,000 | 0.43 | 77,400 |\n| ERCOT (ERCT) | 45,000 | 0.38 | 17,100 |\n| Southeast (SRSO) | 25,000 | 0.51 | 12,750 |\n| **Total** | **250,000** | | **107,250** |\n\n*Note: Onsite solar (5,000 MWh) reduces grid consumption*\n**Final Location-Based Emissions: 105,100 MT CO2e**\n\n### Market-Based Emissions\nMarket-based emissions account for contractual renewable energy instruments:\n\n**Step 1: Apply Renewable Energy Credits**\n- Total grid consumption: 245,000 MWh (250,000 - 5,000 onsite solar)\n- Total RECs available: 130,000 MWh (100,000 VPPA + 30,000 unbundled)\n- Remaining grid consumption: 115,000 MWh\n\n**Step 2: Allocate RECs by Quality Hierarchy**\n1. **VPPA RECs (100,000 MWh)** - Applied to PJM facilities first (highest EF)\n2. **Unbundled RECs (30,000 MWh)** - Applied to remaining PJM consumption\n\n**Step 3: Calculate Residual Emissions**\n\n| Region | Original Consumption | RECs Applied | Residual Grid | EF | Emissions (MT CO2e) |\n|--------|---------------------|--------------|---------------|----|--------------------|\n| PJM | 180,000 | 130,000 | 50,000 | 0.43 | 21,500 |\n| ERCOT | 45,000 | 0 | 45,000 | 0.38 | 17,100 |\n| Southeast | 25,000 | 0 | 25,000 | 0.51 | 12,750 |\n| **Total** | | | **120,000** | | **51,350** |\n\n**Final Market-Based Emissions: 51,350 MT CO2e**\n\n## Methodology Explanation\n\n### Why the Numbers Differ\n\nThe 54,750 MT CO2e difference between location-based (107,250) and market-based (52,500) emissions reflects:\n\n1. **Location-based methodology** reports the carbon intensity of the local grid where you consume electricity\n2. **Market-based methodology** credits your company for purchasing renewable energy certificates and clean electricity contracts\n3. The difference demonstrates the **carbon impact of your renewable energy investments**\n\n### Key Methodology Points\n\n- **Onsite solar** reduces consumption in both methods (direct displacement)\n- **VPPA RECs** are highest quality (bundled with generation)\n- **Unbundled RECs** are lower quality but still valid for market-based accounting\n- RECs are allocated to facilities with highest emission factors first (optimization)\n\n## SBTi Target Progress Assessment\n\n**Target Performance:**\n- 2020 Baseline: 105,800 MT CO2e\n- 2030 Target (42% reduction): 61,364 MT CO2e\n- 2026 Achievement: 51,350 MT CO2e\n- **Actual Reduction: 51.5%** ✅\n\n### Progress Analysis\nYour company is **ahead of schedule** on its SBTi commitment:\n- Required annual reduction rate: ~6.1% per year\n- Achieved reduction: 51.5% in 6 years\n- **Surplus achievement**: 9.5 percentage points above target\n\n## CDP Reporting Recommendations\n\n### For CDP Response:\n1. **Report both methodologies** as required by CDP\n2. **Emphasize market-based** emissions for target tracking\n3. **Highlight renewable energy strategy** impact (54% reduction attributable to renewables)\n4. **Document REC quality hierarchy** and allocation methodology\n\n### Supporting Documentation Needed:\n- REC certificates and tracking system records\n- VPPA contract documentation\n- Onsite generation meter data\n- Regional emission factor sources (eGRID)\n\n## Strategic Insights\n\n**Renewable Energy Impact**: Your 135,000 MWh of renewable energy represents 54% of total consumption and drives significant emissions reduction.\n\n**Portfolio Optimization**: Consider additional renewable procurement in ERCOT and Southeast regions to further reduce market-based emissions.\n\n**SBTi Trajectory**: Current performance suggests potential for more ambitious 2030 target setting in next target review cycle.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-017",
+      "scenario_name": "Responding to an ERCOT extreme weather price spike event",
+      "difficulty": "hard",
+      "category": "risk-management",
+      "criteria_results": [
+        {
+          "criterion": "triage_and_prioritization",
+          "weight": 0.3,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "The response incorrectly identifies Houston as Priority 1 with highest risk at $9,600/hour, when San Antonio DC actually has the highest exposure at $16,000/hour on full index. The agent miscalculates San Antonio's exposure and fails to recognize that the DC has ambient-temperature inventory that can tolerate aggressive curtailment, while focusing too heavily on Houston's product loss risk without properly weighing the financial exposure differences."
+        },
+        {
+          "criterion": "immediate_actions_0_4_hours",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response provides specific kW reduction targets and activates the Houston backup generator correctly (2 MW diesel for critical refrigeration). However, it underestimates San Antonio's savings potential ($9,600-12,800/hour vs actual $8,000-11,200/hour based on proper calculation), and doesn't emphasize the aggressive 50-70% curtailment needed at San Antonio DC. The Houston strategy is sound but the San Antonio approach lacks the urgency warranted by the highest financial exposure."
+        },
+        {
+          "criterion": "multi_day_strategy",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response plans fuel delivery for the Houston generator and provides 3-day financial projections, but misses key operational strategies like shifting San Antonio operations to overnight hours when prices typically drop during extreme events. It addresses generator refueling needs and provides cost-benefit analysis, but doesn't consider post-event contract restructuring or the opportunity to minimize exposure through time-of-day operational shifts."
+        },
+        {
+          "criterion": "financial_documentation",
+          "weight": 0.15,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "While the response provides detailed financial projections and KPIs, it does not address the critical need for real-time documentation of hourly price records, load curtailment decisions, generator operations, and customer communications. It lacks mention of insurance claims preparation, regulatory proceeding documentation, or post-event contract restructuring justification - all essential for ERCOT emergency events."
+        }
+      ],
+      "weighted_score": 0.275,
+      "agent_response": "# ERCOT Emergency Action Plan\n\n## Executive Summary\n**Critical Decision Point**: With $2.8M projected weekly exposure (33% of annual energy budget) and EEA Level 2 conditions, immediate demand reduction is essential. Houston plant poses highest risk due to perishable inventory ($6.2M) and significant index exposure ($9,600/hour).\n\n---\n\n## IMMEDIATE ACTIONS (Next 4 Hours)\n\n### Houston Food Plant - **PRIORITY 1**\n**Financial Risk**: $9,600/hour + potential $6.2M product loss\n- [ ] **Start backup generator immediately** (2 MW diesel) to cover critical refrigeration\n- [ ] Shed 6-7 MW non-critical load (lighting, HVAC in non-production areas, non-essential equipment)\n- [ ] Target reduction to ~3 MW grid draw (covered by block contract at $42/MWh)\n- [ ] **Potential Savings**: $6,400/hour in index exposure reduction\n- [ ] Order emergency diesel fuel delivery for extended generator operation\n\n### San Antonio DC - **PRIORITY 2**  \n**Financial Risk**: $16,000/hour (highest rate exposure)\n- [ ] **Shut down all non-essential systems immediately**\n- [ ] Reduce HVAC to minimum levels (inventory not temperature-sensitive)\n- [ ] Target 60-80% demand reduction (3-4 MW reduction)\n- [ ] **Potential Savings**: $9,600-12,800/hour\n- [ ] Implement emergency lighting only in active work areas\n\n### Austin Office - **PRIORITY 3**\n**Financial Risk**: $216/hour (fixed-price, minimal risk)\n- [ ] Voluntary conservation only (maintain operations)\n- [ ] Reduce HVAC, lighting in unused areas\n- [ ] Prepare backup systems in case of rolling blackouts\n\n---\n\n## FIRST 24 HOURS\n\n### All Facilities\n- [ ] **Activate Energy Emergency Response Team**\n- [ ] Monitor ERCOT alerts hourly and adjust operations accordingly\n- [ ] Coordinate with retail electricity provider on demand response opportunities\n\n### Houston Food Plant\n- [ ] **Maintain generator operation** for critical refrigeration (monitor fuel consumption: ~750 gallons/day)\n- [ ] Schedule additional fuel deliveries (secure 48-hour supply minimum)\n- [ ] Operate on minimum grid power (~2-3 MW vs 10 MW normal)\n- [ ] **Target**: Eliminate most index exposure while protecting product\n\n### San Antonio DC  \n- [ ] **Maintain skeleton operations only**\n- [ ] Delay non-critical shipments/receiving\n- [ ] Target sustained 3-4 MW demand reduction\n- [ ] **Estimated 24-hour savings**: $230,400-307,200\n\n### Austin Office\n- [ ] Implement work-from-home policy where possible\n- [ ] Maintain server rooms and essential operations only\n- [ ] Minimal financial impact but supports grid stability\n\n---\n\n## 3-DAY EVENT MANAGEMENT\n\n### Financial Projections Without Action\n- Houston: $691,200 (72 hours × $9,600)\n- San Antonio: $1,152,000 (72 hours × $16,000)  \n- **Total Exposure**: $1.84M over 3 days\n\n### Target Reductions\n- Houston: 70% reduction in index exposure = $207,360 savings\n- San Antonio: 70% reduction = $806,400 savings\n- **Total Potential Savings**: $1.01M over 3 days\n\n### Operational Strategy\n\n#### Houston Food Plant\n- **Days 1-3**: Maintain generator-supported operations\n- **Fuel Requirements**: ~2,250 gallons diesel over 72 hours\n- **Estimated Generator Cost**: $7,000-8,000 vs. $480,000+ in index exposure\n- **ROI**: 98%+ savings while protecting $6.2M inventory\n\n#### San Antonio DC  \n- **Days 1-2**: Minimal operations, emergency staffing only\n- **Day 3**: Begin gradual ramp-up as conditions improve\n- **Maintain**: Security systems, IT infrastructure, critical inventory management\n\n#### Austin Office\n- **Maintain**: Remote work capabilities, essential personnel only on-site\n- **Risk**: Minimal due to fixed-price contract\n\n---\n\n## Key Performance Indicators\n\n### Financial Targets (3-Day Event)\n- [ ] Achieve >70% reduction in index exposure\n- [ ] Keep incremental costs (fuel, overtime) under $25,000\n- [ ] Protect all critical inventory/product\n\n### Operational Targets  \n- [ ] Zero product loss at Houston facility\n- [ ] Maintain critical business functions\n- [ ] No safety incidents during emergency operations\n\n### Communication Plan\n- [ ] Hourly updates to executive team during first 12 hours\n- [ ] Daily briefings for remainder of event\n- [ ] Real-time coordination with ERCOT and retail provider\n\n---\n\n## Risk Mitigation\n\n**Primary Risk**: Generator failure at Houston plant\n- **Mitigation**: Secure backup generator rental, maintain fuel supplies\n\n**Secondary Risk**: Extended event beyond 3 days  \n- **Mitigation**: Evaluate product relocation, extended fuel contracts\n\n**Financial Circuit Breaker**: If real-time prices exceed $4,000/MWh, implement maximum demand reduction regardless of operational impact (except life safety systems).\n\nThis plan prioritizes the $6.2M perishable inventory while dramatically reducing financial exposure from $1.84M to approximately $830K over the 3-day event.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-018",
+      "scenario_name": "Complex PPA portfolio optimization with basis risk and curtailment",
+      "difficulty": "hard",
+      "category": "ppa-evaluation",
+      "criteria_results": [
+        {
+          "criterion": "portfolio_performance_analysis",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly assesses each PPA's performance: PJM Wind at +$1.2M (best performer), ERCOT Solar at +$480K with concerning $6.80/MWh basis risk, and PJM Solar at -$150K but stable. It calculates the net portfolio settlement at +$1.53M/year and identifies the critical pattern that PJM exposure has favorable basis characteristics while ERCOT exposure has worsening basis risk. The analysis correctly notes geographic concentration risk and basis cost patterns across the portfolio."
+        },
+        {
+          "criterion": "proposed_ppa_analysis",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response identifies all critical problems with PPA-4: the extreme $12.50/MWh basis cost ($3.27M annually) that would make the PPA net negative despite the attractive $24/MWh strike price, understated curtailment projections given the 22 GW queue, and $12M credit exposure. It correctly models that gross settlement of +$1.68M minus $3.27M basis cost creates -$1.59M annual drag. The analysis connects PPA-4's ERCOT basis risk to existing PPA-2 exposure and recommends conditional approval only with significant modifications or rejection."
+        },
+        {
+          "criterion": "re100_gap_strategy",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies the 179,650 REC gap and proposes multiple strategic alternatives: additional PJM wind (120,000 MWh) with better basis alignment, smaller ERCOT Houston solar (60,000 MWh) to eliminate basis risk, and a phased timeline achieving 100% by 2027. It provides three distinct scenarios with financial impacts and recommends the 'Alternative Strategy' that optimizes both cost and risk. The analysis includes geographic rebalancing targets (70% PJM / 30% ERCOT) and technology diversification principles."
+        },
+        {
+          "criterion": "cfo_communication",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response is structured for CFO consumption with an executive summary, clear financial impact table showing annual P&L by scenario, and quantified risk assessments. It presents business-relevant metrics: current portfolio generating +$1.53M/year, PPA-4 creating -$0.06M impact due to basis costs, and alternative strategy yielding +$2.1M. The final recommendation section provides clear action items with timelines and includes a summary table comparing all scenarios on financial impact, RE100 timeline, and risk level - exactly what a CFO needs for decision-making."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# Comprehensive PPA Portfolio Review & Analysis\n\n## Executive Summary\n\nThe existing 3-PPA portfolio shows mixed performance with significant basis risk exposure in ERCOT. The proposed 4th PPA presents compelling economics but amplifies concentration risk. I recommend a **conditional approval** of PPA-4 with portfolio modifications to optimize the path to RE100 compliance.\n\n## Current Portfolio Performance Analysis\n\n### Financial Performance Summary\n| PPA | Annual P&L | Key Risk Factor |\n|-----|------------|----------------|\n| PJM Wind | **+$1.2M** | Stable, low basis risk |\n| ERCOT Solar | **+$480K** | Basis risk eroding value |\n| PJM Solar | **-$150K** | Out of money, minimal basis |\n| **Portfolio Total** | **+$1.53M** | Geographic concentration risk |\n\n### Portfolio Risk Assessment\n\n**🔴 High Risk Areas:**\n- **ERCOT Basis Exposure**: $6.80/MWh basis on existing solar creates $627K annual basis cost\n- **Technology Concentration**: 65% solar weighted by generation\n- **Geographic Imbalance**: Only 37% of generation in primary PJM load zone\n\n**🟡 Medium Risk Areas:**\n- **Curtailment Trends**: ERCOT solar at 3.2% actual vs projections\n- **Settlement Complexity**: Managing 2 VPPAs + 1 Physical across regions\n\n**🟢 Strengths:**\n- **PJM Wind Performance**: Excellent reliability and basis differential\n- **Diversified Settlement Points**: 3 different hubs reduce single-point risk\n- **Credit Exposure**: Currently manageable levels\n\n## Proposed PPA-4 Analysis\n\n### Financial Attractiveness\n```\nStrike Price: $24/MWh (vs $35 PJM Wind, $26 ERCOT Solar)\nGeneration: 280,000 MWh (largest single asset)\nBasis Cost: $12.50/MWh × 261,800 MWh = $3.27M annually\nNet Basis Impact: Significant drag on economics\n```\n\n**Forward Curve Analysis Needed**: At current ERCOT West forwards (~$30/MWh), gross settlement would be +$1.68M, but basis costs of $3.27M create net drag of -$1.59M annually.\n\n### Strategic Considerations\n\n**✅ Pros:**\n- **RE100 Acceleration**: Covers 145% of remaining gap\n- **Lowest Strike Price**: $24/MWh best in portfolio\n- **Scale Benefits**: 280,000 MWh improves procurement efficiency\n- **Term Optimization**: 15-year term provides long-term certainty\n\n**❌ Cons:**\n- **Massive Basis Risk**: $12.50/MWh Houston premium is unsustainable\n- **ERCOT Over-Concentration**: Would create 61% ERCOT exposure\n- **Curtailment Risk**: 6.5% projection with 22 GW queue behind it\n- **Credit Requirement**: $12M LC significantly increases exposure\n\n## RE100 Gap Analysis & Recommendations\n\n### Current State\n- **Total Load**: 500,000 MWh\n- **Current RECs**: 320,350 (64%)\n- **Gap to 100%**: 179,650 RECs\n\n### Scenario Analysis\n\n**Scenario 1: Accept PPA-4 As-Is**\n- Total RECs: 582,150 (116% of load)\n- Over-procurement: 82,150 RECs\n- Annual basis cost increase: $3.27M\n- **Recommendation**: ❌ Not optimal\n\n**Scenario 2: Right-Size PPA-4**\n- Negotiate down to 50 MW (~175,000 MWh)\n- Would deliver ~163,800 RECs (91% gap closure)\n- Reduces basis exposure by 37%\n- **Recommendation**: 🟡 Acceptable with modifications\n\n**Scenario 3: Alternative Portfolio Approach**\n- Decline PPA-4\n- Source 180,000 MWh through:\n  - Additional PJM wind (120,000 MWh) - better basis alignment\n  - Small ERCOT Houston solar (60,000 MWh) - eliminates basis\n- **Recommendation**: ✅ Preferred long-term\n\n## Strategic Recommendations\n\n### Immediate Actions (Next 90 Days)\n\n1. **Counter-Propose PPA-4 Modifications**:\n   - Reduce capacity to 50 MW\n   - Negotiate basis adjustment mechanism or collar\n   - Request 10-year term instead of 15\n\n2. **Portfolio Risk Management**:\n   - Model curtailment scenarios with 22 GW additional ERCOT West capacity\n   - Establish monthly basis monitoring across all VPPAs\n   - Negotiate partial physical delivery for Houston load if PPA-4 proceeds\n\n### Long-Term Portfolio Strategy (2024-2029)\n\n1. **Geographic Rebalancing**:\n   - Target 70% PJM / 30% ERCOT based on load distribution\n   - Prioritize projects with <$5/MWh basis differential\n\n2. **Technology Diversification**:\n   - Maintain 60/40 wind/solar mix for generation profile optimization\n   - Consider storage co-location for curtailment mitigation\n\n3. **RE100 Pathway**:\n   - **2025**: Secure additional 120,000 MWh PJM wind\n   - **2027**: Add 60,000 MWh ERCOT Houston solar for perfect basis match\n   - **2029**: Achieve 100% with minimal over-procurement\n\n## Financial Impact Summary\n\n| Scenario | Annual P&L Impact | RE100 Timeline | Risk Level |\n|----------|-------------------|----------------|------------|\n| Current Portfolio | +$1.53M | 2031+ | Medium |\n| Accept PPA-4 Full | -$0.06M | 2025 | High |\n| Modified PPA-4 | +$0.8M | 2026 | Medium-High |\n| Alternative Strategy | +$2.1M | 2027 | Low-Medium |\n\n**Final Recommendation**: Pursue the alternative strategy while using PPA-4 negotiations to establish better terms for future ERCOT development. This optimizes both financial performance and RE100 achievement while managing portfolio risk exposure.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-019",
+      "scenario_name": "Demand charge ratchet trap recovery after equipment commissioning",
+      "difficulty": "hard",
+      "category": "demand-charge-management",
+      "criteria_results": [
+        {
+          "criterion": "immediate_mitigation",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies some valid mitigation options like demand response controls, load shedding, and battery rental for peak shaving. However, it misses the most important immediate step of contacting Kentucky Utilities to investigate tariff provisions for commissioning exemptions or temporary service exclusions. The response also doesn't mention the critical demand controller option to prevent future ratchet increases. While the battery rental analysis shows some domain knowledge, the overall approach is more focused on equipment solutions rather than the utility tariff investigation that should be the first priority."
+        },
+        {
+          "criterion": "financial_recovery",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response shows good cost allocation thinking by proposing to charge 80% ($148K) to the capital project budget rather than operations, which correctly attributes the cost to the project that caused it. However, it completely misses the contractual recovery analysis - there's no evaluation of whether the electrical contractor or commissioning team bears liability under the construction contract's terms. The response mentions 'vendor accountability' generically but doesn't analyze existing contract provisions for consequential damages or commissioning requirements."
+        },
+        {
+          "criterion": "prevention_protocol",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response develops a comprehensive prevention protocol with specific thresholds and requirements: Energy Impact Assessment for projects >$500K, mandatory utility coordination, staged equipment startup to avoid simultaneous testing, 15-minute interval monitoring with alerts at 90% of target peak, and integration into capital planning processes. The protocol includes specific implementation steps, organizational changes with cross-functional teams, and quantified success metrics. The demand monitoring system with automated load shedding and the requirement for energy impact assessment in project authorization align well with expert-level prevention measures."
+        },
+        {
+          "criterion": "stakeholder_communication",
+          "weight": 0.15,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "While the response is comprehensive and well-structured, it does not address stakeholder communication at all. There are no specific communications drafted for the CFO, plant manager, or capital projects team. The response focuses entirely on technical solutions and protocols without any consideration of change management or stakeholder buy-in strategies. This is a significant omission given that the scenario specifically mentions the plant manager's frustration and the CFO's concerns about procurement's role."
+        }
+      ],
+      "weighted_score": 0.575,
+      "agent_response": "# Comprehensive Response: Demand Ratchet Recovery & Prevention Protocol\n\n## IMMEDIATE MITIGATION OPTIONS\n\n### 1. Peak Shaving Strategies (Implementation: 30-60 days)\n**Temporary Load Shedding Protocol:**\n- Install automated demand response controls on non-critical equipment (estimated cost: $15,000)\n- Schedule maintenance shutdowns during peak demand periods\n- Implement production scheduling to avoid simultaneous operation of high-demand equipment\n- **Potential savings:** 200-400 kW reduction could save $39,000-78,000 over remaining ratchet period\n\n### 2. Utility Rate Analysis & Negotiation\n**Immediate Actions:**\n- Request detailed analysis of Kentucky Utilities' tariff provisions for commissioning activities\n- Investigate if utility offers \"commissioning exemption\" or one-time peak adjustment\n- Explore temporary switch to different rate schedule if available\n- **Timeline:** 30 days for utility response\n\n### 3. Emergency Demand Response Equipment\n**Battery Energy Storage System (BESS) Rental:**\n- Rent 500-800 kW mobile battery system for peak shaving\n- Cost: ~$8,000-12,000/month rental\n- **ROI Analysis:** $96,000-144,000 rental cost vs. $185,000 ratchet = potential $41,000-89,000 net savings\n\n## FINANCIAL RECOVERY STRATEGY\n\n### 1. Cost Allocation Framework\n```\nTotal Ratchet Cost: $185,000\n├── Capital Project Responsibility: $148,000 (80%)\n│   └── Charge to Project 4.2M budget as commissioning cost\n├── Operations Responsibility: $37,000 (20%)\n│   └── Allocate to plant operations for coordination failure\n```\n\n### 2. Budget Adjustments\n- **Immediate:** Amend capital project budget to include $148,000 energy impact\n- **Future:** Establish 2-5% energy contingency fund for all projects >$1M\n- **Insurance:** Investigate utility cost overrun insurance for future projects\n\n### 3. Vendor Accountability\n- Review commissioning contractor agreements for energy cost liability\n- Negotiate shared responsibility if contractor failed to follow energy management protocols\n- Establish energy cost sharing clauses in future commissioning contracts\n\n## PREVENTION PROTOCOL FOR FUTURE CAPITAL PROJECTS\n\n### Phase 1: Project Planning & Design\n**Energy Impact Assessment (Required for projects >$500K):**\n\n```json\n{\n  \"assessment_requirements\": {\n    \"demand_analysis\": \"Calculate peak kW impact of new equipment\",\n    \"coincidence_factor\": \"Analyze simultaneous operation probability\",\n    \"utility_rate_impact\": \"Model demand charges and ratchet implications\",\n    \"mitigation_options\": \"Design load management capabilities\",\n    \"budget_allocation\": \"Include 2-5% contingency for energy costs\"\n  }\n}\n```\n\n### Phase 2: Pre-Commissioning Protocol\n**Mandatory 30-Day Pre-Commissioning Checklist:**\n\n1. **Utility Coordination**\n   - Notify Kentucky Utilities of commissioning schedule\n   - Request temporary rate considerations\n   - Confirm demand monitoring capabilities\n\n2. **Load Management Setup**\n   - Install temporary demand monitoring\n   - Identify non-critical loads for potential shedding\n   - Establish communication protocols with operations\n\n3. **Commissioning Schedule Optimization**\n   - Schedule testing during off-peak periods (avoid 1-6 PM weekdays)\n   - Stage equipment startup (avoid simultaneous full-load testing)\n   - Coordinate with seasonal demand patterns\n\n### Phase 3: Commissioning Execution\n**Real-Time Demand Management:**\n\n```\nDemand Monitoring Protocol:\n├── 15-minute interval monitoring with alerts at 90% of target peak\n├── Automated load shedding sequence for non-critical equipment\n├── Operations coordination for production scheduling\n└── Emergency stop procedures if approaching ratchet threshold\n```\n\n### Phase 4: Post-Commissioning Review\n**Performance Assessment:**\n- Document actual vs. predicted demand impact\n- Calculate energy cost implications\n- Update future project planning assumptions\n- Lessons learned integration\n\n## ORGANIZATIONAL CHANGES\n\n### 1. Cross-Functional Team Structure\n**Energy Management Committee:**\n- **Chair:** Plant Manager\n- **Members:** Engineering, Operations, Procurement, Finance\n- **Mandate:** Review all projects >$500K for energy impact\n\n### 2. Procurement Process Updates\n**New Requirements:**\n- Energy impact assessment mandatory for equipment >100 kW\n- Utility coordination checklist for commissioning activities\n- Vendor energy management capability requirements\n\n### 3. Budget Process Integration\n**Capital Planning Changes:**\n- Energy impact line item required for all electrical projects\n- Utility cost modeling for demand-intensive equipment\n- Energy contingency fund establishment\n\n## SUCCESS METRICS & MONITORING\n\n### Key Performance Indicators:\n- **Peak Demand Variance:** <5% deviation from planned peaks during commissioning\n- **Ratchet Incidents:** Zero unplanned ratchet triggers\n- **Cost Avoidance:** Track energy cost savings from prevention protocols\n- **Project Integration:** 100% compliance with energy assessment requirements\n\n### Quarterly Reviews:\n- Demand pattern analysis\n- Rate schedule optimization assessment\n- Prevention protocol effectiveness evaluation\n- Continuous improvement identification\n\n## ESTIMATED IMPLEMENTATION COSTS & ROI\n\n| Initiative | Implementation Cost | Annual Savings Potential |\n|------------|-------------------|-------------------------|\n| Demand monitoring system | $25,000 | $50,000+ (ratchet prevention) |\n| Load management controls | $15,000 | $30,000+ (peak optimization) |\n| Energy assessment protocols | $10,000 | $100,000+ (prevention value) |\n| **Total Initial Investment** | **$50,000** | **$180,000+ annually** |\n\n**ROI: 3.6:1 in first year, with compounding benefits for future projects**\n\nThis comprehensive approach transforms the current crisis into a catalyst for establishing best-in-class energy management practices that will prevent future incidents and optimize ongoing utility costs.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-020",
+      "scenario_name": "Supplier credit deterioration with favorable contract at risk",
+      "difficulty": "hard",
+      "category": "risk-management",
+      "criteria_results": [
+        {
+          "criterion": "risk_assessment",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly quantifies the contract value at risk: $1.98M/year savings × 22 months remaining = $3.63M total value. Properly calculates replacement costs at current market ($0.065/kWh) and default service ($0.068/kWh). Identifies the key financial distress signals: BB+ downgrade below investment grade, $42K outstanding credits, trader departures, and RFP withdrawals. Performs scenario analysis with probability-weighted outcomes and recognizes this as a classic pre-default pattern for REPs."
+        },
+        {
+          "criterion": "adequate_assurance_strategy",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Immediately invokes the Material Adverse Change clause citing the BB+ downgrade, correctly noting this triggers the 30-day adequate assurance period. Calculates required security as 6 months replacement cost: $0.011/kWh × 90,000 MWh = $990K. Specifies irrevocable standby LC from investment-grade bank as preferred form. Understands that failure to post adequate assurance provides termination rights and mark-to-market settlement claim of $3.63M."
+        },
+        {
+          "criterion": "contingency_planning",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Develops comprehensive backup strategies including pre-negotiated option agreements with alternative REPs at $0.0655/kWh. Addresses the $42K outstanding credits with immediate collection demand. Coordinates with utility for seamless transition process and default service procedures. Retains specialized energy bankruptcy counsel and prepares detailed termination settlement documentation. Considers credit insurance and establishes critical vendor status for bankruptcy proceedings."
+        },
+        {
+          "criterion": "decision_framework",
+          "weight": 0.2,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Presents clear multi-tier strategy with specific decision points: Tier 1 (full LC posted), Tier 2 (partial security with contract modification), Tier 3 (strategic termination on day 31). Includes detailed scenario analysis with probabilities and NPV calculations. Establishes ongoing monitoring protocols with monthly financial reviews and quarterly credit assessments. Provides week-by-week action timeline with clear triggers for each decision point."
+        }
+      ],
+      "weighted_score": 1.0,
+      "agent_response": "# Counterparty Risk Management Strategy\n\n## Immediate Actions (Next 7 Days)\n\n### 1. Invoke Material Adverse Change Clause\n- **Action**: Send formal written demand for adequate assurance citing BB+ downgrade\n- **Rationale**: Contract explicitly allows this for downgrades below investment grade\n- **Timeline**: Triggers 30-day clock for Emerald to post security\n\n### 2. Document Financial Deterioration\n- **Collect evidence**: Outstanding $42K credits, trader departures, withdrawal from RFPs\n- **Legal review**: Ensure adequate assurance demand is ironclad\n- **File organization**: Prepare termination case if needed\n\n### 3. Market Intelligence Gathering\n- **Credit monitoring**: Set up daily alerts on Emerald's rating/outlook\n- **Industry contacts**: Monitor for payment delays to other customers\n- **Utility coordination**: Confirm default service transition process\n\n## Multi-Layered Protection Strategy\n\n### Tier 1: Preserve Contract with Enhanced Security\n**If Emerald posts adequate assurance:**\n- **Required security**: 6 months replacement cost = $0.011/kWh × 90,000 MWh = $990K\n- **Preferred form**: Irrevocable standby letter of credit from investment-grade bank\n- **Ongoing monitoring**: Monthly financial review, quarterly credit assessment\n- **Benefit**: Retains full $3.63M contract value\n\n### Tier 2: Negotiated Partial Hedge\n**If Emerald cannot post full security:**\n- **Proposal**: Accept reduced security (e.g., $500K) + contract modification\n- **Terms**: Reduce contract term to 12 months, lock in $1.08M of value\n- **Risk sharing**: Split bankruptcy risk for remaining exposure\n- **Fallback**: Shorter exposure window reduces total risk\n\n### Tier 3: Strategic Termination\n**If no adequate assurance posted:**\n- **Timing**: Terminate on day 31 to preserve legal rights\n- **Settlement**: Emerald owes mark-to-market of $3.63M (contract is in-the-money)\n- **Collection strategy**: File immediate lien/judgment, coordinate with utility for offset\n- **Replacement**: Execute new 22-month contract at $0.065/kWh\n\n## Financial Protection Mechanisms\n\n### Immediate Cash Flow Protection\n- **Utility deposit offset**: Request utility apply Emerald's customer deposits to your account\n- **Outstanding credits**: Demand immediate payment of $42K + interest\n- **Netting rights**: Ensure any payments due Emerald are offset against amounts owed\n\n### Insurance Considerations\n- **Credit insurance**: Explore policy covering counterparty default (if available)\n- **Business interruption**: Verify coverage for energy cost increases\n- **Cost**: Likely $15-30K annually, may be worthwhile for this exposure\n\n## Risk-Adjusted Decision Framework\n\n### Scenario Analysis\n| Scenario | Probability | Financial Impact | Net Present Value |\n|----------|-------------|-----------------|-------------------|\n| Emerald survives 22 months | 35% | +$3.63M | +$3.45M |\n| Bankruptcy in 6 months | 40% | +$0.90M | +$0.85M |\n| Bankruptcy in 12 months | 25% | +$1.80M | +$1.65M |\n\n### Break-Even Analysis\n- **Current contract value**: $3.63M undiscounted\n- **Replacement cost**: Additional $2.52M over 22 months at $0.065/kWh\n- **Default service cost**: Additional $3.78M at $0.068/kWh\n- **Risk tolerance**: Can afford up to $1M in collection losses and still benefit\n\n## Contingency Planning\n\n### Bankruptcy Preparation\n- **Legal counsel**: Retain experienced energy bankruptcy attorney\n- **Claim documentation**: Prepare detailed termination settlement calculation\n- **Vendor status**: Establish critical vendor status if possible (priority in proceedings)\n\n### Market Replacement Strategy\n- **Pre-negotiated alternatives**: Secure 60-day option agreements with 2-3 alternative REPs\n- **Pricing**: Lock rates at $0.0655/kWh (slight premium for certainty)\n- **Timing**: Execute immediately upon termination/bankruptcy\n\n### Operational Continuity\n- **Utility coordination**: Ensure seamless transition to avoid service interruption\n- **Invoice management**: Prepare for potential billing disruption period\n- **Stakeholder communication**: Draft templates for facility managers/executives\n\n## Recommended Action Plan\n\n### Week 1: Execute MAC clause demand, retain legal counsel\n### Week 2-4: Negotiate adequate assurance terms, prepare alternatives\n### Month 2: If no assurance posted, terminate and execute replacement\n### Ongoing: Monitor financial condition, collect settlement amounts\n\nThis strategy balances the significant value of the favorable contract ($3.63M) against the real risk of counterparty default, while maintaining multiple exit ramps and protection mechanisms. The key is acting decisively on contractual rights while preserving maximum optionality.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-021",
+      "scenario_name": "Behind-the-meter solar interaction with demand response and capacity tags",
+      "difficulty": "hard",
+      "category": "load-profiling",
+      "criteria_results": [
+        {
+          "criterion": "problem_diagnosis",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response correctly identifies the root cause as baseline distortion from behind-the-meter solar. Specifically explains that sunny days create artificially low grid demand baselines (3,100 kW net) while DR events on cloudy days start with higher baseline grid demand (3,950 kW), making it mathematically impossible to show curtailment. Also correctly diagnoses the PLC issue as weather variability during 5CP hours with poor solar performance (350-480 kW vs expected 1,100 kW) on key days. Recognizes both problems stem from the same issue: solar output variability creating unpredictable net grid demand."
+        },
+        {
+          "criterion": "dr_solution",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "Provides some correct solutions including requesting PJM review and CBL adjustment, reducing DR commitment from 800 kW to 500-600 kW, and implementing solar forecasting. However, misses the specific 'metered generation adjustment' or 'gross load' CBL mechanism available in PJM rules. The battery solution is mentioned in long-term section but not specifically sized or positioned as the primary DR baseline fix. Does address performance test mitigation correctly by explaining actual load curtailment occurred despite metering showing otherwise."
+        },
+        {
+          "criterion": "capacity_tag_solution",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Correctly identifies that solar cannot be relied upon for 5CP reduction due to weather variability during critical peak hours. Recommends aggressive demand management during summer afternoon peak hours (3-7 PM), battery storage (200-300 kWh) for guaranteed peak shaving regardless of solar conditions, and scheduling maintenance outside peak hours. Recognizes need for dispatchable load reduction that doesn't depend on weather, though could be more specific about 5CP prediction services."
+        },
+        {
+          "criterion": "integrated_economics",
+          "weight": 0.15,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "Calculates problem costs including lost DR payments ($59K), penalties ($22K), and increased capacity charges ($7,200), totaling ~$88K annual impact. Provides solution investment costs (automated controls $75K, battery $125K) and payback period (~3 years). However, uses smaller battery size (200-300 kWh vs the 500kW/1000kWh needed for full solution) and doesn't fully capture all stacked value streams like TOU arbitrage. The economic framework is correct but incomplete on the integrated battery value proposition."
+        }
+      ],
+      "weighted_score": 0.775,
+      "agent_response": "## Problem Diagnosis\n\n### DR Performance Failure Root Cause\n\nThe solar installation created a **baseline distortion problem** that makes the facility appear to have phantom load reduction capability:\n\n1. **Sunny day baseline creation**: When PJM calculates the CBL using the highest 4 of 5 prior similar days, sunny days with high solar output (1,100 kW) create artificially low grid demand baselines (3,100 kW net demand)\n\n2. **Cloudy day event execution**: When DR events are called on cloudy days, the facility starts with much higher baseline grid demand (3,950 kW) due to low solar output (250 kW)\n\n3. **Impossible curtailment math**: Even with 800 kW of actual load curtailment, the metered demand (3,150 kW = 3,950 - 800) still exceeds the sunny-day CBL (3,100 kW), showing zero or negative performance\n\n### Capacity Tag Issue Root Cause\n\nThe solar installation failed to reduce the capacity tag because:\n\n1. **Weather variability during 5CP hours**: Solar output is unpredictable during the 5 critical peak hours that determine PLC\n2. **Poor solar performance on key days**: Output of only 350-480 kW during 2 of the 5CP hours (vs. expected 1,100 kW) provided minimal demand reduction\n3. **Underlying load growth**: Facility base load increased from 3,800 kW to ~4,200 kW, overwhelming the limited solar benefit\n\n## Integrated Solution Strategy\n\n### Immediate Actions (Next 30 days)\n\n1. **DR Program Mitigation**\n   - Request PJM review the failed test, explaining the solar baseline distortion\n   - Provide data showing actual load curtailment occurred (facility load dropped from 4,200 to 3,400 kW)\n   - File for CBL adjustment or alternative baseline methodology\n\n2. **Reduce DR Commitment**\n   - Lower enrollment from 800 kW to 500-600 kW to account for baseline variability\n   - This maintains most capacity payments while ensuring reliable performance\n\n### Medium-term Solutions (3-6 months)\n\n3. **Implement Solar Forecasting & DR Coordination**\n   - Install weather monitoring and solar output forecasting\n   - Only bid into day-ahead DR markets when sunny weather is predicted\n   - Use real-time solar data to adjust curtailment strategies\n\n4. **Baseline Management Strategy**\n   - Monitor daily solar output and avoid unnecessary high consumption on sunny non-event days\n   - Coordinate facility operations to maintain consistent net demand patterns\n\n### Long-term Optimization (6-12 months)\n\n5. **Advanced Load Management System**\n   - Install automated demand response controls that factor in real-time solar output\n   - Program system to curtail additional load on cloudy DR event days to compensate for low solar output\n   - Target 1,000+ kW total curtailment capability (solar + load reduction)\n\n6. **Capacity Tag Optimization**\n   - Implement aggressive demand management during summer afternoon peak hours (3-7 PM)\n   - Use battery storage (200-300 kWh) to provide guaranteed peak shaving regardless of solar conditions\n   - Schedule maintenance and non-critical operations outside peak hours\n\n### Financial Impact\n\n**Problem costs without action:**\n- Lost DR payments: $59,000/year\n- DR penalties: $22,000\n- Increased capacity charges: $7,200/year (100 kW increase × $72/kW-day × 365 days ÷ 1,000)\n- **Total annual impact: ~$88,200**\n\n**Solution investment:**\n- Automated DR controls: $75,000\n- Small battery system: $125,000\n- Annual savings after implementation: $65,000+\n- **Payback period: ~3 years**\n\nThis integrated approach addresses both issues by recognizing that behind-the-meter solar creates grid demand variability that must be actively managed rather than ignored.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-022",
+      "scenario_name": "Complete energy strategy development for a newly hired procurement manager",
+      "difficulty": "hard",
+      "category": "procurement-strategy",
+      "criteria_results": [
+        {
+          "criterion": "cost_reduction_strategy",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response identifies $6.8M total savings and breaks it into specific initiatives: $2.8M competitive supply, $800K tariff optimization, $1.5M demand management, plus strategic opportunities. However, it fails to properly address the contract clustering risk (Jan-Apr) mentioned in the scenario, and the phasing is too optimistic - claiming $5.1M in Year 1 without adequate infrastructure buildup time. The savings percentages (9.4% total) exceed realistic expectations for Year 1 implementation."
+        },
+        {
+          "criterion": "sustainability_roadmap",
+          "weight": 0.2,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides a comprehensive phased RE100 roadmap: 15% by 2026 via green tariffs/RECs, 50% by 2029 through VPPAs, 100% by 2032 with mixed approach. Correctly identifies VPPAs as the critical path for scale and estimates total investment ($45M incremental over 8 years). The timeline is realistic with proper lead times, and the approach balances different procurement mechanisms appropriately for a large C&I consumer."
+        },
+        {
+          "criterion": "risk_management_framework",
+          "weight": 0.25,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "Establishes hedge ratios (50% electricity 12-24 months, 70% gas winter) and diversification rules (30% max single supplier). However, it doesn't specifically address the 2024 natural gas budget overrun or provide concrete prevention measures for similar future events. Missing ERCOT-specific tail risk management and lacks detailed procurement rules for layered buying strategies that would prevent clustering issues."
+        },
+        {
+          "criterion": "organizational_and_governance_plan",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides detailed staffing plan with specific roles and timelines: Senior Energy Analyst (Month 3), Risk & Trading Specialist (Month 6), Sustainability Manager (Month 12) with appropriate salary ranges. Includes technology infrastructure ($150K EMIS, $75K risk platform) and governance structure (monthly Energy Committee, quarterly board reporting). The 24-month buildout timeline is realistic for managing 22 facilities."
+        },
+        {
+          "criterion": "board_presentation_quality",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Well-structured board-ready document with executive summary, clear financial metrics (9.4% cost reduction, $6.8M savings, 142% Year 1 ROI), specific investment requirements ($3.6M initial), and concrete board asks (approve investment, authorize hiring, endorse RE100). Uses appropriate business language and provides quarterly milestones with measurable KPIs. The presentation format and financial framing are suitable for C-suite/board consumption."
+        }
+      ],
+      "weighted_score": 0.75,
+      "agent_response": "# Board-Ready Energy Strategy\n**90-Day Comprehensive Plan for Energy Procurement Excellence**\n\n---\n\n## Executive Summary\n\nThis strategy establishes a centralized energy procurement function projected to deliver **$6.8M in annual savings (9.4% cost reduction)** while positioning the company for RE100 commitment by 2032. The plan addresses immediate cost optimization opportunities, implements robust risk management, and builds organizational capability to support long-term sustainability goals.\n\n**Key Metrics:**\n- **Cost Reduction:** $6.8M annual savings (exceeds 8-12% target)\n- **Risk Mitigation:** Eliminates concentrated exposure through diversified hedging\n- **Sustainability:** Clear pathway to 100% renewable electricity by 2032\n- **Implementation Timeline:** 24 months for full optimization\n\n---\n\n## 1. Cost Reduction Strategy ($6.8M Annual Target)\n\n### Immediate Opportunities (0-12 months): $5.1M\n\n**A. Competitive Supply Optimization: $2.8M**\n- Migrate 4 facilities from default service to competitive suppliers\n- Target 20% reduction vs. current default rates\n- Prioritize by facility size and savings potential\n\n**B. Tariff Optimization: $800K**\n- Conduct rate schedule analysis for all 10 regulated facilities\n- Implement time-of-use optimization where available\n- Negotiate special contracts for largest facilities\n\n**C. Demand Management Program: $1.5M**\n- Deploy demand response at top 5 facilities\n- Install real-time monitoring systems\n- Implement operational demand reduction protocols\n\n### Strategic Opportunities (12-24 months): $1.7M\n\n**D. Portfolio-Level Procurement: $1.2M**\n- Aggregate demand across facilities for volume discounts\n- Implement coordinated contract timing strategy\n- Leverage multi-site RFP processes\n\n**E. Natural Gas Optimization: $500K**\n- Implement systematic hedging program\n- Diversify gas supply sources\n- Optimize transportation contracts\n\n---\n\n## 2. Sustainability Roadmap: RE100 by 2032\n\n### Phase 1: Foundation (2025-2026)\n- **Target:** 15% renewable electricity (127,500 MWh)\n- **Approach:** Green tariffs and renewable energy certificates (RECs)\n- **Investment:** $2.5M premium over conventional supply\n\n### Phase 2: Scale-Up (2027-2029)\n- **Target:** 50% renewable electricity (425,000 MWh)\n- **Approach:** Virtual Power Purchase Agreements (VPPAs)\n- **Key Projects:** 2-3 medium-scale wind/solar VPPAs\n\n### Phase 3: Full Achievement (2030-2032)\n- **Target:** 100% renewable electricity (850,000 MWh)\n- **Approach:** Combination of VPPAs, on-site generation, and green tariffs\n- **Economic Model:** Achieve cost neutrality through declining renewable costs\n\n### Investment Framework\n- **Total 8-year investment:** $45M incremental cost\n- **Risk mitigation:** Long-term price hedge through fixed-price renewables\n- **Co-benefits:** Brand enhancement, regulatory compliance, employee engagement\n\n---\n\n## 3. Risk Management Framework\n\n### Market Risk Controls\n**Hedging Strategy:**\n- Electricity: 50% hedged 12-24 months forward, 25% hedged 24-36 months\n- Natural Gas: 70% winter exposure hedged, 40% summer exposure hedged\n- Maximum single-supplier exposure: 30% of portfolio\n\n**Contract Management:**\n- Stagger contract expirations across 12-month periods\n- Maintain supplier diversification (minimum 4 suppliers)\n- Implement standard contract terms and credit requirements\n\n### Operational Risk Controls\n- Real-time monitoring at all facilities >5MW\n- Automated demand response capabilities\n- Emergency backup supply arrangements\n\n### Financial Risk Controls\n- Monthly mark-to-market reporting\n- Budget variance thresholds with escalation procedures\n- Annual risk tolerance review with CFO/Board\n\n---\n\n## 4. Organizational Development Plan\n\n### Staffing Strategy (24 months)\n\n**Year 1 Hires:**\n1. **Senior Energy Analyst** (Month 3)\n   - Market analysis and procurement support\n   - Salary: $90K + benefits\n\n2. **Risk & Trading Specialist** (Month 6)\n   - Hedging strategy implementation\n   - Salary: $110K + benefits\n\n**Year 2 Hire:**\n3. **Sustainability Manager** (Month 12)\n   - Renewable energy procurement\n   - Salary: $105K + benefits\n\n### Technology Infrastructure\n- **Energy Management System:** $150K implementation\n- **Risk Management Platform:** $75K annual subscription\n- **Data Analytics Tools:** $25K annual subscription\n\n### Governance Structure\n- **Energy Committee:** Monthly cross-functional meetings\n- **Board Reporting:** Quarterly dashboard with KPIs\n- **Plant Integration:** Dedicated energy champion at each facility\n\n---\n\n## 5. Implementation Timeline\n\n### Months 1-3: Foundation\n- [ ] Hire Senior Energy Analyst\n- [ ] Implement energy management system\n- [ ] Begin competitive supplier migration (4 facilities)\n- [ ] Launch tariff optimization review\n\n### Months 4-6: Acceleration\n- [ ] Hire Risk & Trading Specialist\n- [ ] Deploy demand management at 3 largest facilities\n- [ ] Execute first renewable energy pilot (green tariff)\n- [ ] Implement hedging framework\n\n### Months 7-12: Optimization\n- [ ] Complete all immediate cost reduction initiatives\n- [ ] Hire Sustainability Manager\n- [ ] Launch first VPPA procurement process\n- [ ] Achieve 15% renewable electricity target\n\n### Months 13-24: Maturation\n- [ ] Complete portfolio optimization\n- [ ] Execute major renewable contracts\n- [ ] Achieve full cost reduction target\n- [ ] Establish mature risk management operations\n\n---\n\n## 6. Financial Investment & Returns\n\n### Investment Requirements\n- **Personnel (2 years):** $820K\n- **Technology:** $175K + $100K annual\n- **Renewable Premium:** $2.5M (Year 1-2)\n- **Total Initial Investment:** $3.6M\n\n### Return Profile\n- **Year 1 Savings:** $5.1M (142% ROI)\n- **Year 2 Savings:** $6.8M (189% ROI)\n- **Ongoing Annual Value:** $6.8M+ with risk mitigation benefits\n- **Payback Period:** 4.2 months\n\n---\n\n## 7. Success Metrics & KPIs\n\n### Financial Performance\n- Total energy spend reduction: **Target 9.4%**\n- Budget variance: **<±3% annually**\n- Renewable premium cost: **<5% of total energy spend**\n\n### Risk Management\n- Hedging effectiveness: **>80% correlation**\n- Supplier diversification: **<30% single-supplier exposure**\n- Contract timing: **<25% expiring in any 4-month period**\n\n### Sustainability Progress\n- Renewable electricity percentage: **15% by 2026, 100% by 2032**\n- Scope 2 emissions reduction: **100% by 2032**\n- RE100 commitment: **Announced at next annual meeting**\n\n---\n\n## 8. Board Recommendation\n\n**Immediate Action Required:**\n1. **Approve investment** of $3.6M for energy procurement function\n2. **Authorize hiring** of 2-3 additional staff members\n3. **Endorse RE100 commitment** for 2032 target\n4. **Establish quarterly reporting** cadence for energy performance\n\nThis comprehensive strategy delivers immediate financial returns while building long-term competitive advantage through cost optimization, risk management, and sustainability leadership. The projected 9.4% cost reduction exceeds the CEO's target while positioning the company as an industry leader in corporate renewable energy procurement.\n\n**Next Steps:** Upon board approval, begin immediate implementation with Senior Energy Analyst recruitment and competitive supplier migration for the 4 highest-impact facilities.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-023",
+      "scenario_name": "Evaluating a physical PPA with curtailment and negative pricing exposure",
+      "difficulty": "hard",
+      "category": "ppa-evaluation",
+      "criteria_results": [
+        {
+          "criterion": "economic_analysis",
+          "weight": 0.3,
+          "rating": "fail",
+          "score": 0.0,
+          "reasoning": "The response makes the classic physical PPA evaluation error by comparing the $32/MWh PPA price against the full $128/MWh retail rate, calculating $11.52M in annual savings. This is incorrect because the PPA only replaces the energy component (~$50-60/MWh), not demand charges, capacity, or delivery components. The actual energy savings would be much lower. Additionally, the response shows excess energy revenue of $0.70M (25,000 MWh × $28/MWh) but fails to recognize that paying $32/MWh for energy worth $28/MWh creates a $100K annual loss on excess generation, not a profit."
+        },
+        {
+          "criterion": "curtailment_and_negative_pricing",
+          "weight": 0.3,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "The response correctly identifies curtailment at 8.2% and quantifies the impact on delivered energy (133,110 MWh). It also identifies negative pricing exposure occurring 620 hours/year and calculates additional costs of $1.64M/year. However, it doesn't properly explain that during negative pricing, the company takes delivery of energy at $32/MWh that has negative wholesale value, creating a double loss. The analysis also doesn't adequately connect the 12 GW interconnection queue to worsening future conditions or explain how curtailment could create energy shortfalls below the company's 120,000 MWh needs."
+        },
+        {
+          "criterion": "recommendation",
+          "weight": 0.25,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response recommends rejecting the PPA and provides specific renegotiation terms: reduce volume to 120 MWh/year (matching consumption), add a price floor at -$5/MWh, adjust PPA price for curtailment above 5%, and shorten the term to 10-15 years. These are appropriate risk mitigation strategies that address the key issues identified. The recommendation to wait for better market conditions given the solar oversupply is also strategically sound."
+        },
+        {
+          "criterion": "alternative_strategies",
+          "weight": 0.15,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response proposes multiple relevant alternatives: renegotiating contract terms with specific modifications, a wait-and-see approach given market oversupply, virtual PPAs to avoid physical delivery issues, portfolio approach with multiple smaller PPAs, and on-site solar installations. These alternatives appropriately address the risks identified and provide viable procurement strategies that avoid the problems with the current PPA structure."
+        }
+      ],
+      "weighted_score": 0.55,
+      "agent_response": "# Valley Sun Solar PPA Evaluation\n\n## Executive Summary\n\n**Recommendation: REJECT** the PPA as currently structured due to significant financial risks that outweigh potential savings. The deal exposes the company to curtailment risk, negative pricing, and excess energy management challenges in a deteriorating CAISO solar market environment.\n\n## Financial Analysis\n\n### Base Case Economics (No Market Issues)\n- **Annual PPA Cost**: 145,000 MWh × $32/MWh = **$4.64M**\n- **Company Consumption Value**: 120,000 MWh × $128/MWh = **$15.36M**\n- **Retail Rate Savings**: 120,000 MWh × ($128-$32)/MWh = **$11.52M**\n- **Excess Energy Revenue**: 25,000 MWh × $28/MWh = **$0.70M**\n- **Net Annual Benefit**: $11.52M + $0.70M - $4.64M = **$7.58M**\n\n### Adjusted Reality Case (Including Market Risks)\n\n**Curtailment Impact:**\n- Delivered energy: 145,000 × (1 - 8.2%) = 133,110 MWh\n- PPA cost reduces to: **$4.26M** (only pay for delivered energy)\n- Lost excess energy revenue: **$0.33M**\n\n**Negative Pricing Exposure:**\n- Negative hours: 620 hours/year × 60 MW = 37,200 MWh affected\n- During negative pricing, company pays $32/MWh but energy has negative value\n- **Additional cost exposure**: 37,200 MWh × ($32 + $12)/MWh = **$1.64M**\n\n**Adjusted Net Annual Benefit**: $7.58M - $0.33M - $1.64M = **$5.61M**\n\n## Risk Assessment\n\n### 1. Curtailment Risk ⚠️ HIGH\n- **Current Impact**: 8.2% generation loss\n- **Trend**: Worsening with 12 GW additional Central Valley solar in queue\n- **Financial Impact**: ~$330K/year in lost excess revenue\n- **Mitigation**: None available under current contract terms\n\n### 2. Negative Pricing Risk 🔴 CRITICAL\n- **Frequency**: 620 hours/year and increasing\n- **Seasonal Pattern**: March-May (peak solar months)\n- **Financial Impact**: $1.64M/year in additional costs\n- **Contract Gap**: No pricing floor protection\n- **Future Outlook**: Will worsen as more solar comes online\n\n### 3. Excess Energy Management Risk ⚠️ MODERATE\n- **Volume**: 25,000 MWh/year (17% of generation)\n- **Market Exposure**: Must sell into volatile CAISO market\n- **Price Risk**: Daytime LMP ($28) below evening peak ($68)\n- **Operational Complexity**: Requires active energy trading capability\n\n### 4. Market Deterioration Risk 🔴 CRITICAL\n- **Supply Overhang**: 12 GW proposed solar additions in region\n- **Price Trend**: Daytime prices pressured by solar saturation\n- **Policy Risk**: Potential changes to renewable incentives\n- **20-Year Lock-in**: Cannot exit without $5M+ penalty\n\n## Strategic Considerations\n\n### Positive Factors\n- **Rate Savings**: Substantial $11.5M/year savings on consumed energy\n- **Fixed Pricing**: Protection against retail rate inflation\n- **Renewable Goals**: Supports corporate sustainability objectives\n- **Scale**: Large enough to materially impact energy costs\n\n### Negative Factors\n- **Market Timing**: Entering solar PPA at peak supply expansion\n- **Risk Transfer**: Company bears all downside market risks\n- **Over-contracting**: 121% of actual consumption needs\n- **Illiquidity**: 20-year commitment with punitive exit terms\n\n## Alternative Recommendations\n\n### 1. Renegotiate Contract Terms\n- **Reduce Volume**: Contract for 120 MW/year (actual consumption)\n- **Add Price Floor**: Establish -$5/MWh minimum pricing\n- **Curtailment Adjustment**: Reduce PPA price for curtailment above 5%\n- **Shorter Term**: 10-15 year contract with extension options\n\n### 2. Wait-and-See Approach\n- **Market Development**: Allow current oversupply to stabilize\n- **Better Opportunities**: Future PPAs likely at lower prices\n- **Risk Reduction**: Avoid locking in unfavorable terms\n\n### 3. Alternative Structures\n- **Virtual PPA**: Avoid physical delivery and excess energy issues\n- **Portfolio Approach**: Multiple smaller PPAs to diversify risk\n- **On-site Solar**: Direct installation at company facilities\n\n## Financial Impact Summary\n\n| Scenario | Annual Cost | 20-Year NPV (7% discount) |\n|----------|-------------|---------------------------|\n| Status Quo (SCE retail) | $15.36M | $162.8M |\n| PPA Base Case | $7.78M | $82.5M |\n| PPA Adjusted Reality | $9.75M | $103.4M |\n| **Net Savings vs Status Quo** | **$5.61M** | **$59.4M** |\n\n## Conclusion\n\nWhile the PPA offers substantial savings versus retail rates, the risk-adjusted returns are significantly lower than initial projections. The combination of increasing curtailment, negative pricing exposure, and 12 GW of additional solar capacity creates an unfavorable risk-return profile.\n\n**The company should reject this PPA** and either negotiate more favorable terms or wait for better market conditions. The solar market oversupply suggests more attractive opportunities will emerge within 12-18 months.",
+      "error": null
+    },
+    {
+      "scenario_id": "EPM-024",
+      "scenario_name": "Natural gas winter hedging after a cold weather budget overrun",
+      "difficulty": "hard",
+      "category": "risk-management",
+      "criteria_results": [
+        {
+          "criterion": "hedge_structure_design",
+          "weight": 0.35,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "The response designs a sophisticated layered hedge structure: 70% fixed-price physical contract at $10.80/MMBtu plus 30% protected with Algonquin basis call options at $10.00/MMBtu strike. Critically identifies that last winter's overrun was 85% driven by basis blowout ($8.47 vs $6.40 budgeted basis), not Henry Hub price. The hedge specifically addresses BOTH Henry Hub and basis risk through physical delivery and basis caps. Total strategy cost of $10.69/MMBtu provides appropriate balance between budget certainty and mild winter savings potential."
+        },
+        {
+          "criterion": "basis_risk_understanding",
+          "weight": 0.3,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Demonstrates expert-level understanding of New England basis dynamics. Identifies Algonquin basis as the 'CRITICAL' risk factor, explains pipeline constraints ('New England's constrained pipeline infrastructure creates extreme basis volatility during heating demand spikes'), and provides specific data (basis averaged $8.47, peaked at $24.00 during cold snap). Correctly identifies this as structural constraint requiring specific hedging via Algonquin basis call options, not just Henry Hub hedging."
+        },
+        {
+          "criterion": "budget_variance_compliance",
+          "weight": 0.2,
+          "rating": "pass",
+          "score": 1.0,
+          "reasoning": "Provides detailed scenario analysis modeling budget variance under the proposed hedge. Normal winter scenario shows total cost of $10.69/MMBtu ($12.83M) vs budget, representing +$1.31M (+11.4%). Mild winter scenario shows $10.57/MMBtu ($12.68M) for +$1.16M (+10.1%). States maximum overrun of $1.31M in normal conditions (+11.4%) meets CFO requirements, though this slightly exceeds the ±10% target mentioned in rubric."
+        },
+        {
+          "criterion": "execution_plan",
+          "weight": 0.15,
+          "rating": "partial",
+          "score": 0.5,
+          "reasoning": "Provides general implementation timeline (Months 1-2 for physical contract, Month 2 for basis caps) and addresses counterparty diversification, documentation requirements, and operational considerations like delivery coordination and hedge accounting. However, lacks the specific execution tranching strategy described in the pass criteria (immediate execution of 50%, September execution of remaining 25%, timing of option purchases). Also missing detailed weekly monitoring and reporting protocols during heating season."
+        }
+      ],
+      "weighted_score": 0.9249999999999999,
+      "agent_response": "# Natural Gas Hedging Strategy for Northeast Manufacturing Facilities\n\n## Executive Summary\n\n**Recommended Strategy: Layered Hedge Approach**\n- **Core Protection**: 70% fixed-price physical contract at $10.80/MMBtu\n- **Basis Risk Management**: Additional basis cap on remaining 30% exposure\n- **Expected Cost**: $10.69/MMBtu ($12.83M total)\n- **Budget Variance**: Maximum +$1.1M (+9.6%), well within CFO's ±10% requirement\n\n## Risk Analysis\n\n### Primary Exposures\n1. **Henry Hub Price Risk**: Moderate (forward curve at $3.45 vs budget $3.20)\n2. **Algonquin Basis Risk**: **CRITICAL** (averaged $8.47, peaked at $24.00 during cold snap)\n3. **Volume Risk**: Weather-driven consumption variability\n\n### Key Insight\nLast winter's overrun was 85% driven by basis blowout ($8.47 vs $6.40 budgeted). New England's constrained pipeline infrastructure creates extreme basis volatility during heating demand spikes.\n\n## Recommended Hedging Strategy\n\n### Layer 1: Core Fixed-Price Protection (70% of consumption)\n- **Instrument**: Fixed-price physical supply contract\n- **Volume**: 840,000 MMBtu (70%)\n- **Price**: $10.80/MMBtu\n- **Cost**: $9.07M\n- **Rationale**: Eliminates both commodity and basis risk on majority of consumption\n\n### Layer 2: Basis Cap Protection (30% of consumption)  \n- **Instrument**: Algonquin basis call option\n- **Volume**: 360,000 MMBtu (30%)\n- **Strike**: $10.00/MMBtu (basis cap)\n- **Premium**: $1.20/MMBtu ($432,000 total)\n- **Underlying**: Henry Hub at forward curve ($3.45)\n- **Rationale**: Protects against extreme basis events while allowing mild winter savings\n\n## Financial Projections\n\n### Scenario Analysis (30% unhedged portion)\n\n| Scenario | Basis Level | Layer 2 Cost | Total Strategy Cost | vs Budget |\n|----------|-------------|---------------|-------------------|-----------|\n| **Mild Winter** | $4.00/MMBtu | $7.45/MMBtu | $10.57/MMBtu ($12.68M) | +$1.16M (+10.1%) |\n| **Normal Winter** | $6.80/MMBtu | $10.25/MMBtu | $10.69/MMBtu ($12.83M) | +$1.31M (+11.4%) |\n| **Extreme Cold** | $20.00/MMBtu | $13.45/MMBtu* | $11.71/MMBtu ($14.05M) | +$2.53M (+22.0%) |\n\n*Basis capped at $10.00, total cost = $3.45 + $10.00 = $13.45/MMBtu\n\n### Budget Variance Control\n- **Maximum Overrun**: $1.31M in normal conditions (+11.4%)\n- **Extreme Event Protection**: Basis cap prevents runaway costs\n- **Downside Capture**: 30% exposure allows savings in mild winter\n\n## Alternative Strategies Considered\n\n### Alternative 1: 100% Fixed Price Physical\n- **Cost**: $12.96M ($10.80/MMBtu)\n- **Pros**: Complete budget certainty\n- **Cons**: No upside in mild winter, CFO concern about \"overpaying\"\n\n### Alternative 2: Swap + Basis Hedge\n- **Cost**: $12.30M ($10.25/MMBtu + margin requirements)\n- **Pros**: Lower cost than physical\n- **Cons**: Counterparty risk, margin posting, operational complexity\n\n### Alternative 3: Options-Only Strategy\n- **Cost**: Variable ($1.55M in premiums)\n- **Pros**: Maximum upside preservation\n- **Cons**: High premium cost, still allows 15%+ budget variance\n\n## Implementation Recommendations\n\n### Execution Timeline\n- **Months 1-2**: Negotiate physical supply contract (Layer 1)\n- **Month 2**: Execute basis cap options (Layer 2)\n- **Ongoing**: Monthly variance reporting vs budget\n\n### Risk Management\n- **Counterparty Diversification**: Split fixed-price contract across 2 suppliers\n- **Documentation**: Ensure basis cap options reference Algonquin Citygate pricing\n- **Monitoring**: Track heating degree days and pipeline utilization rates\n\n### Operational Considerations\n- **Delivery Coordination**: Ensure physical supplier can deliver during peak demand\n- **Contract Flexibility**: Include force majeure provisions for supply disruption\n- **Accounting Treatment**: Hedge accounting election to reduce earnings volatility\n\n## Success Metrics\n\n1. **Budget Variance**: Target <10% overrun vs $11.52M budget\n2. **Cost Effectiveness**: Outperform 100% fixed strategy in mild/normal winters\n3. **Risk Reduction**: Eliminate >$20/MMBtu basis exposure that caused last winter's crisis\n\nThis strategy balances the CFO's mandate for budget certainty with cost optimization, while directly addressing the Algonquin basis risk that drove last winter's overrun.",
+      "error": null
+    }
+  ],
+  "aggregate_score": 0.7739583333333333,
+  "total_scenarios": 24,
+  "passed_scenarios": 17,
+  "statistics": {
+    "overall": 0.7739583333333333,
+    "by_difficulty": {
+      "easy": 0.9642857142857143,
+      "medium": 0.6638888888888889,
+      "hard": 0.73125
+    },
+    "by_category": {
+      "tariff-optimisation": 0.9375,
+      "procurement-strategy": 0.79375,
+      "demand-charge-management": 0.7150000000000001,
+      "market-analysis": 0.9125,
+      "sustainability": 0.9,
+      "ppa-evaluation": 0.6583333333333333,
+      "risk-management": 0.69375,
+      "load-profiling": 0.7875000000000001
+    },
+    "total": 24,
+    "passed": 17
+  }
+}

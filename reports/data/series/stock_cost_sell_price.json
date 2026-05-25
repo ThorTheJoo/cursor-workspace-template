@@ -1,0 +1,15 @@
+{
+  "report_type": "stock_cost_sell_price",
+  "points": [
+    {
+      "content_key": "stock_cost_sell_price|file:Stock Cost & Selling Price Listing  - By Category",
+      "source_file": "Stock Cost & Selling Price Listing  - By Category.TXT",
+      "path": "Additional/Stock Cost & Selling Price Listing  - By Category.TXT",
+      "modified": "2026-05-25 13:06",
+      "summary": {
+        "report_type": "stock_cost_sell_price"
+      },
+      "ingest_id": "20260525-c0141d389687a706"
+    }
+  ]
+}

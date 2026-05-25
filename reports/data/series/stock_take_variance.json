@@ -1,0 +1,19 @@
+{
+  "report_type": "stock_take_variance",
+  "points": [
+    {
+      "content_key": "stock_take|date:20/05/2026",
+      "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "path": "Starter Docs/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+      "modified": "2026-05-24 12:29",
+      "summary": {
+        "report_type": "stock_take_variance",
+        "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "stock_take_date": "20/05/2026",
+        "sku_variances": 89,
+        "variance_value_at_cost": 349.42
+      },
+      "ingest_id": "20260525-9504e7d7010b73f6"
+    }
+  ]
+}

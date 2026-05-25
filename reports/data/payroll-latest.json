@@ -1,0 +1,314 @@
+[
+  {
+    "source_file": "Nett Pay List - 210526.xlsx",
+    "source_type": "payroll_system",
+    "format": "xlsx",
+    "pay_date": "2026-05-21",
+    "employee_count": 16,
+    "total_net_pay": 31449.03,
+    "hash_total": "062848016516",
+    "output": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_210526.csv",
+    "employees": [
+      {
+        "code": "F0001",
+        "name": "DUMAZILE CONSTANCE MSANE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1329632816",
+        "branch": "470010",
+        "net_pay": 2775.54
+      },
+      {
+        "code": "F0002",
+        "name": "NHLANHLA MAZIBUKO",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1975083669",
+        "branch": "470010",
+        "net_pay": 1821.6
+      },
+      {
+        "code": "F0003",
+        "name": "NKOSINATHI MNGOMEZULU",
+        "pay_method": "ACB",
+        "bank": "First National Bank South Africa",
+        "account": "63169707280",
+        "branch": "250655",
+        "net_pay": 2014.58
+      },
+      {
+        "code": "F0004",
+        "name": "NGOAKA SETUMU",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1536065356",
+        "branch": "470010",
+        "net_pay": 2014.59
+      },
+      {
+        "code": "F0006",
+        "name": "MAMOLOKO CAROLINE RAMARU",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1139125808",
+        "branch": "470010",
+        "net_pay": 2109.72
+      },
+      {
+        "code": "F0007",
+        "name": "MOLOPENA BENSON NKADIMENA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1356184853",
+        "branch": "470010",
+        "net_pay": 2014.58
+      },
+      {
+        "code": "F0008",
+        "name": "TUMELO EVANS MARUMA",
+        "pay_method": "ACB",
+        "bank": "Nedbank South Africa",
+        "account": "1332247741",
+        "branch": "198765",
+        "net_pay": 1994.61
+      },
+      {
+        "code": "F0011",
+        "name": "SHADRACK MAKEKERLANE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1544018191",
+        "branch": "470010",
+        "net_pay": 2218.58
+      },
+      {
+        "code": "F0012",
+        "name": "LUCKY MANAMELA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1232474582",
+        "branch": "470010",
+        "net_pay": 1836.18
+      },
+      {
+        "code": "F0013",
+        "name": "OSCAR MONYETSWALE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "2385510037",
+        "branch": "470010",
+        "net_pay": 2218.57
+      },
+      {
+        "code": "F0014",
+        "name": "ALI MULEYA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1555010936",
+        "branch": "470010",
+        "net_pay": 1767.96
+      },
+      {
+        "code": "F0015",
+        "name": "SIYABONGA SONDEZI",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1837113015",
+        "branch": "470010",
+        "net_pay": 1742.4
+      },
+      {
+        "code": "F0016",
+        "name": "PULEDI MAINETJA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1613008773",
+        "branch": "470010",
+        "net_pay": 1504.8
+      },
+      {
+        "code": "F0017",
+        "name": "TSHIDI MAPTHOMA",
+        "pay_method": "ACB",
+        "bank": "African Bank",
+        "account": "20086674489",
+        "branch": "430000",
+        "net_pay": 1881.0
+      },
+      {
+        "code": "F0019",
+        "name": "SIPHOMANDLA SODIDI",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1489866017",
+        "branch": "470010",
+        "net_pay": 1549.34
+      },
+      {
+        "code": "F0021",
+        "name": "MADIBABE MAKHASANE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1504189785",
+        "branch": "470010",
+        "net_pay": 1984.98
+      }
+    ]
+  },
+  {
+    "source_file": "Nett Pay List - 140526.xls",
+    "source_type": "payroll_system",
+    "format": "xls",
+    "pay_date": "2026-05-14",
+    "employee_count": 16,
+    "total_net_pay": 32095.27,
+    "hash_total": "062848016516",
+    "output": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_140526.csv",
+    "employees": [
+      {
+        "code": "F0001",
+        "name": "DUMAZILE CONSTANCE MSANE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1329632816",
+        "branch": "470010",
+        "net_pay": 2775.54
+      },
+      {
+        "code": "F0002",
+        "name": "NHLANHLA MAZIBUKO",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1975083669",
+        "branch": "470010",
+        "net_pay": 1841.4
+      },
+      {
+        "code": "F0003",
+        "name": "NKOSINATHI MNGOMEZULU",
+        "pay_method": "ACB",
+        "bank": "First National Bank South Africa",
+        "account": "63169707280",
+        "branch": "250655",
+        "net_pay": 2218.59
+      },
+      {
+        "code": "F0004",
+        "name": "NGOAKA SETUMU",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1536065356",
+        "branch": "470010",
+        "net_pay": 2014.58
+      },
+      {
+        "code": "F0006",
+        "name": "MAMOLOKO CAROLINE RAMARU",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1139125808",
+        "branch": "470010",
+        "net_pay": 1913.7
+      },
+      {
+        "code": "F0007",
+        "name": "MOLOPENA BENSON NKADIMENA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1356184853",
+        "branch": "470010",
+        "net_pay": 2237.13
+      },
+      {
+        "code": "F0008",
+        "name": "TUMELO EVANS MARUMA",
+        "pay_method": "ACB",
+        "bank": "Nedbank South Africa",
+        "account": "1332247741",
+        "branch": "198765",
+        "net_pay": 1495.96
+      },
+      {
+        "code": "F0011",
+        "name": "SHADRACK MAKEKERLANE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1544018191",
+        "branch": "470010",
+        "net_pay": 2014.59
+      },
+      {
+        "code": "F0012",
+        "name": "LUCKY MANAMELA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1232474582",
+        "branch": "470010",
+        "net_pay": 2014.59
+      },
+      {
+        "code": "F0013",
+        "name": "OSCAR MONYETSWALE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "2385510037",
+        "branch": "470010",
+        "net_pay": 2014.59
+      },
+      {
+        "code": "F0014",
+        "name": "ALI MULEYA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1555010936",
+        "branch": "470010",
+        "net_pay": 1921.87
+      },
+      {
+        "code": "F0015",
+        "name": "SIYABONGA SONDEZI",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1837113015",
+        "branch": "470010",
+        "net_pay": 1997.94
+      },
+      {
+        "code": "F0016",
+        "name": "PULEDI MAINETJA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1613008773",
+        "branch": "470010",
+        "net_pay": 2707.57
+      },
+      {
+        "code": "F0017",
+        "name": "TSHIDI MAPTHOMA",
+        "pay_method": "ACB",
+        "bank": "African Bank",
+        "account": "20086674489",
+        "branch": "430000",
+        "net_pay": 1782.0
+      },
+      {
+        "code": "F0019",
+        "name": "SIPHOMANDLA SODIDI",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1489866017",
+        "branch": "470010",
+        "net_pay": 1124.6
+      },
+      {
+        "code": "F0021",
+        "name": "MADIBABE MAKHASANE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1504189785",
+        "branch": "470010",
+        "net_pay": 2020.62
+      }
+    ]
+  }
+]

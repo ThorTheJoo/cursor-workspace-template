@@ -1,0 +1,15 @@
+{
+  "report_type": "stock_on_hand",
+  "points": [
+    {
+      "content_key": "stock_on_hand|file:Stock On Hand with Unit Cost - by Category",
+      "source_file": "Stock On Hand with Unit Cost - by Category.TXT",
+      "path": "Additional/Stock On Hand with Unit Cost - by Category.TXT",
+      "modified": "2026-05-25 13:06",
+      "summary": {
+        "report_type": "stock_on_hand"
+      },
+      "ingest_id": "20260525-5cd95e1df174c301"
+    }
+  ]
+}

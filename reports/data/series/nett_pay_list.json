@@ -1,0 +1,25 @@
+{
+  "report_type": "nett_pay_list",
+  "points": [
+    {
+      "content_key": "payroll|period:140526",
+      "source_file": "Nett Pay List - 140526.xls",
+      "path": "Starter Docs/Nett Pay List - 140526.xls",
+      "modified": "2026-05-15 15:52",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "ingest_id": "20260525-765b25db1d4bcd33"
+    },
+    {
+      "content_key": "payroll|period:210526",
+      "source_file": "Nett Pay List - 210526.xlsx",
+      "path": "Starter Docs/Nett Pay List - 210526.xlsx",
+      "modified": "2026-05-24 12:44",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "ingest_id": "20260525-7b22d00076b1a38b"
+    }
+  ]
+}

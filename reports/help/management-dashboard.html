@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><title>Help — Management Dashboard</title>
+<link rel="stylesheet" href="../assets/site.css"/></head>
+<body>
+<nav class="top-nav"><a href="../management-dashboard.html">← Dashboard</a><strong>Help</strong></nav>
+<div class="wrap"><div class="card"><p>document_type: GOVERNANCE</p>
+<p>status: ACTIVE</p>
+<p>traceability_id: &quot;MGMT-DASHBOARD-SPEC-2026-05-24&quot;</p>
+<h1>Management Dashboard — Comprehensive Specification</h1>
+<p>**Output:** `reports/management-dashboard.html`  </p>
+<p>**Generator:** `scripts/management/generate_dashboard.py`  </p>
+<p>**Data:** `reports/data/canonical-latest.json` + payroll runs + `reports/data/file-repo-index.json`</p>
+<h2>Purpose (business)</h2>
+<p>Single HTML view for the **fuel station owner / finance controller** to answer:</p>
+<p>1. How did we trade yesterday and over recent days?</p>
+<p>2. Is cash, card, and payroll reconciled to the bank?</p>
+<p>3. Where are wet-stock, shrink, or cashier risks?</p>
+<p>4. What files fed this view — and can I drill into history by report type?</p>
+<h2>Sections (top to bottom)</h2>
+<table>
+<tr><td>Section</td><td>Primary source</td><td>What it measures</td></tr>
+<tr><td>Primary trading day banner</td><td>POS Day End (latest batch)</td><td>Which day the snapshot KPIs refer to</td></tr>
+<tr><td>Daily Operations Timeline</td><td>POS `daily_history`</td><td>Chronological nett takings, fuel L, shop, cash var, CIT (OCR)</td></tr>
+<tr><td>Snapshot KPI cards</td><td>POS latest Day End + EFT batch file + stock take</td><td>One-day operational pulse</td></tr>
+<tr><td>Data Source Legend</td><td>All source types</td><td>Colour tags: POS, bank, payroll, manual, OCR</td></tr>
+<tr><td>Multi-Source Reconciliation</td><td>OCR + POS + bank + payroll</td><td>Match / review / pending matrix</td></tr>
+<tr><td>Wet Stock EOD</td><td>POS latest Day End fuel grades</td><td>Pump vs tank litres per grade</td></tr>
+<tr><td>Top categories / MTD fuel var</td><td>POS</td><td>Range and loss patterns</td></tr>
+<tr><td>Cashier EOS exceptions</td><td>POS</td><td>Voids and nett by cashier</td></tr>
+<tr><td>Monthly reference</td><td>POS Month End</td><td>April (or loaded month) baseline</td></tr>
+<tr><td>Bank statement</td><td>FNB OFX</td><td>Ledger balance, Speedpoint in, wages out, daily credits</td></tr>
+<tr><td>Supplier schedule</td><td>Manual Excel</td><td>Invoice spend by department</td></tr>
+<tr><td>Cash Up workbook</td><td>Manual Excel</td><td>Sheet list / site title</td></tr>
+<tr><td>OCR sections</td><td>WhatsApp synthesis</td><td>ATG, fuel daily, CIT, alerts</td></tr>
+<tr><td>Daily history table</td><td>POS all batches</td><td>Compact history</td></tr>
+<tr><td>Payroll</td><td>Nett Pay List → CSV</td><td>Latest run + all tested runs</td></tr>
+<tr><td>**File Repository**</td><td>`file-repo-index.json`</td><td>Drill-down index by report type</td></tr>
+<tr><td>Input file registry</td><td>Scan of inputs folder</td><td>Every file path classified</td></tr>
+</table>
+<h2>Calculations &amp; rules</h2>
+<h3>Dates</h3>
+<ul>
+<li>Display: **DD/MM/YYYY** (South African)</li>
+<ul>
+<li>Timeline sorted by trading day; deltas vs previous row</li>
+</ul>
+<h3>Day End — nett takings</h3>
+<ul>
+<li>Parsed from POS Day End Summary grand totals</li>
+<ul>
+<li>**Not** the same as bank deposits (cards settle later; cash may be CIT)</li>
+</ul>
+<h3>EFT batch card</h3>
+<ul>
+<li>From latest `EFT Batch Summary By EFT Batch Date` file (not necessarily same calendar day as latest Day End)</li>
+<ul>
+<li>Context line shows EFT batch date only (no erroneous batch number from Day End)</li>
+</ul>
+<h3>Reconciliation status</h3>
+<table>
+<tr><td>Status</td><td>Rule</td></tr>
+<tr><td>match</td><td>Absolute variance &amp;lt; R0.02 or &amp;lt; 1 L (fuel)</td></tr>
+<tr><td>review</td><td>Variance exceeds threshold</td></tr>
+<tr><td>pending</td><td>Missing counterpart data</td></tr>
+<tr><td>ok / warn</td><td>Internal POS wet-stock ±25 L</td></tr>
+</table>
+<h3>Payroll vs bank</h3>
+<ul>
+<li>Sum `Payment_*.csv` amounts (exclude `(1)` duplicate files)</li>
+<ul>
+<li>Match to bank `wage_runs` within **0–3 days** after pay date</li>
+</ul>
+<h3>EFT vs Speedpoint</h3>
+<ul>
+<li>POS EFT batch total vs bank Speedpoint daily credit within **0–3 days** after batch date (T+1 typical)</li>
+</ul>
+<h2>Key callouts (owner checklist)</h2>
+<p>1. **Cash variance** on latest Day End — target &amp;lt; R50  </p>
+<p>2. **Pump–tank variance** per fuel grade — target ±25 L  </p>
+<p>3. **Reconciliation matrix** — any row not MATCH  </p>
+<p>4. **EFT pending** — large unsent card total at close  </p>
+<p>5. **Bank ledger** — sudden drop vs prior period  </p>
+<p>6. **OCR rows** — confirm before operational decisions  </p>
+<p>7. **Missing batch** in timeline (e.g. B144) — request Day End file  </p>
+<h2>Refresh workflow</h2>
+<p>```powershell</p>
+<p>python scripts/management/build_file_repo.py</p>
+<p>python scripts/management/generate_dashboard.py</p>
+<p>python scripts/payroll/netpay_to_payment_csv.py --all   # optional</p>
+<p>```</p>
+<h2>Dependencies</h2>
+<table>
+<tr><td>Script</td><td>Role</td></tr>
+<tr><td>`parse_reports.py`</td><td>POS TXT → canonical</td></tr>
+<tr><td>`parse_external_inputs.py`</td><td>Bank, Excel, OCR, bank recons</td></tr>
+<tr><td>`parse_ocr_whatsapp.py`</td><td>OCR synthesis</td></tr>
+<tr><td>`build_file_repo.py`</td><td>Ledger + series + index</td></tr>
+<tr><td>`generate_dashboard.py`</td><td>HTML assembly</td></tr>
+<tr><td>`netpay_to_payment_csv.py`</td><td>Payroll CSV</td></tr>
+</table>
+<h2>Future enhancements</h2>
+<ul>
+<li>Per-report-type detail pages with charts from `series/*.json`</li>
+<ul>
+<li>Auto-detect new drops in `inputs/Additional/`</li>
+<ul>
+<li>Parsers for cash variance, fuel ATG, shrinkage (see BACKLOG)</li>
+<p class="meta">Source: MANAGEMENT_DASHBOARD_SPECIFICATION.md</p></div></div>
+</body></html>

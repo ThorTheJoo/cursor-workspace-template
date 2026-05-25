@@ -1,0 +1,15 @@
+{
+  "report_type": "supplier_schedule",
+  "points": [
+    {
+      "content_key": "supplier_schedule|file:Schedule of Accounts Invoice T",
+      "source_file": "Schedule of Accounts Invoice T (2).xlsx",
+      "path": "Starter Docs/Schedule of Accounts Invoice T (2).xlsx",
+      "modified": "2026-05-24 12:33",
+      "summary": {
+        "report_type": "supplier_schedule"
+      },
+      "ingest_id": "20260525-49ccfcd5d226151b"
+    }
+  ]
+}

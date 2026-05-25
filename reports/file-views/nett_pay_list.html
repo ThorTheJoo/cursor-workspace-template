@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>nett_pay_list — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>nett_pay_list</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Nett Pay List</h1>
+      <p class="meta"><span class="tag tag-payroll_system">Payroll System</span>
+        Frequency: <strong>Weekly</strong> ·
+        <span class="badge-integrated">integrated</span> ·
+        2 period(s) in series · 4 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/nett_pay_list.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>Nett Pay List</h3>
+<p><strong>Frequency:</strong> Weekly · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Authoritative net pay per employee → FNB bulk payment CSV.</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>pay_date</code></li>
+<li><code>employee_count</code></li>
+<li><code>total_net_pay</code></li>
+<li><code>output_csv</code></li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Total must match bank wage debits within 3 days</li>
+</ul></div></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Weekly)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th class='num'>Total Net Pay</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526.xls'><td class='nowrap'><strong>—</strong></td><td>—</td><td></td><td><code>Nett Pay List - 140526.xls</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/Nett Pay List - 210526.xlsx'><td class='nowrap'><strong>—</strong></td><td>—</td><td></td><td><code>Nett Pay List - 210526.xlsx</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526 (2).xls' data-ingest='20260525-a8074b476a40832a'><td><code>Nett Pay List - 140526 (2).xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>60,416</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 210526.xlsx' data-ingest='20260525-7b22d00076b1a38b'><td><code>Nett Pay List - 210526.xlsx</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:210526</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>25,009</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526 (1).xls' data-ingest='20260525-765b25db1d4bcd33'><td><code>Nett Pay List - 140526 (1).xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>dup</td><td>2026-05-23 11:26</td><td class='num'>33,280</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526.xls' data-ingest='20260525-765b25db1d4bcd33'><td><code>Nett Pay List - 140526.xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>primary</td><td>2026-05-15 15:52</td><td class='num'>33,280</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-765b25db1d4bcd33",
+    "path": "Starter Docs/Nett Pay List - 140526 (1).xls",
+    "filename": "Nett Pay List - 140526 (1).xls",
+    "folder": "Starter Docs",
+    "pattern_name": "Nett Pay List - 140526",
+    "report_type": "nett_pay_list",
+    "source_type": "payroll_system",
+    "content_key": "payroll|period:140526",
+    "is_duplicate_copy": true,
+    "size_bytes": 33280,
+    "modified": "2026-05-23 11:26",
+    "sha256_prefix": "765b25db1d4bcd33",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+  },
+  {
+    "ingest_id": "20260525-a8074b476a40832a",
+    "path": "Starter Docs/Nett Pay List - 140526 (2).xls",
+    "filename": "Nett Pay List - 140526 (2).xls",
+    "folder": "Starter Docs",
+    "pattern_name": "Nett Pay List - 140526",
+    "report_type": "nett_pay_list",
+    "source_type": "payroll_system",
+    "content_key": "payroll|period:140526",
+    "is_duplicate_copy": false,
+    "size_bytes": 60416,
+    "modified": "2026-05-24 12:44",
+    "sha256_prefix": "a8074b476a40832a",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+  },
+  {
+    "ingest_id": "20260525-765b25db1d4bcd33",
+    "path": "Starter Docs/Nett Pay List - 140526.xls",
+    "filename": "Nett Pay List - 140526.xls",
+    "folder": "Starter Docs",
+    "pattern_name": "Nett Pay List - 140526",
+    "report_type": "nett_pay_list",
+    "source_type": "payroll_system",
+    "content_key": "payroll|period:140526",
+    "is_duplicate_copy": false,
+    "size_bytes": 33280,
+    "modified": "2026-05-15 15:52",
+    "sha256_prefix": "765b25db1d4bcd33",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+  },
+  {
+    "ingest_id": "20260525-7b22d00076b1a38b",
+    "path": "Starter Docs/Nett Pay List - 210526.xlsx",
+    "filename": "Nett Pay List - 210526.xlsx",
+    "folder": "Starter Docs",
+    "pattern_name": "Nett Pay List - 210526",
+    "report_type": "nett_pay_list",
+    "source_type": "payroll_system",
+    "content_key": "payroll|period:210526",
+    "is_duplicate_copy": false,
+    "size_bytes": 25009,
+    "modified": "2026-05-24 12:44",
+    "sha256_prefix": "7b22d00076b1a38b",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "payroll|period:140526",
+    "source_file": "Nett Pay List - 140526.xls",
+    "path": "Starter Docs/Nett Pay List - 140526.xls",
+    "modified": "2026-05-15 15:52",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "ingest_id": "20260525-765b25db1d4bcd33"
+  },
+  {
+    "content_key": "payroll|period:210526",
+    "source_file": "Nett Pay List - 210526.xlsx",
+    "path": "Starter Docs/Nett Pay List - 210526.xlsx",
+    "modified": "2026-05-24 12:44",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "ingest_id": "20260525-7b22d00076b1a38b"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

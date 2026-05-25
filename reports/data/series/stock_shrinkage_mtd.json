@@ -1,0 +1,15 @@
+{
+  "report_type": "stock_shrinkage_mtd",
+  "points": [
+    {
+      "content_key": "stock_shrinkage_mtd|file:Stock Shrinkage Analysis - MTD by Category @ Latest Cost",
+      "source_file": "Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
+      "path": "Additional/Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
+      "modified": "2026-05-25 13:07",
+      "summary": {
+        "report_type": "stock_shrinkage_mtd"
+      },
+      "ingest_id": "20260525-427b0a7ed2489af3"
+    }
+  ]
+}

@@ -65,6 +65,35 @@
       "installCmd": "echo 'King Mode rule already embedded as .cursor/rules/02-kingmode.mdc. Source repo cloned for reference and updates.'",
       "platform": "both",
       "type": "rules"
+    },
+    {
+      "name": "writer-skills",
+      "repo": "https://github.com/writer/skills",
+      "pinnedRef": "main",
+      "description": "200 production-grade agent skills — CPG/Retail inventory, finance, treasury, and operations analytics.",
+      "installCmd": "echo 'Copy selected skills from .tools-cache/writer-skills/skills/ into .cursor/skills/'",
+      "platform": "both",
+      "type": "skills",
+      "skillScan": true
+    },
+    {
+      "name": "agent-skills-ops",
+      "repo": "https://github.com/penglidu0623-dotcom/agent-skills",
+      "pinnedRef": "main",
+      "description": "Operational agent skills — inventory demand planning, energy procurement, returns/reverse logistics.",
+      "installCmd": "echo 'Copy capabilities from .tools-cache/agent-skills-ops/capabilities/ into .cursor/skills/'",
+      "platform": "both",
+      "type": "skills",
+      "skillScan": true
+    },
+    {
+      "name": "ecommerce-retail-skills",
+      "repo": "https://github.com/gracecrusader4893/r03-anthropics-skills-ecommerce",
+      "pinnedRef": "main",
+      "description": "E-commerce & Retail skill suite — inventory forecast, pricing, CRO, customer segmentation commands.",
+      "installCmd": "echo 'Copy to .cursor/skills/ecommerce-retail/'",
+      "platform": "both",
+      "type": "skills"
     }
   ],
   "_template": {

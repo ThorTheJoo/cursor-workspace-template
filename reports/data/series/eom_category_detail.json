@@ -1,0 +1,15 @@
+{
+  "report_type": "eom_category_detail",
+  "points": [
+    {
+      "content_key": "eom_category_detail|file:EOM By Category & Sub-Category Detail (Std Report)",
+      "source_file": "EOM By Category & Sub-Category Detail (Std Report).TXT",
+      "path": "Additional/EOM By Category & Sub-Category Detail (Std Report).TXT",
+      "modified": "2026-05-25 13:06",
+      "summary": {
+        "report_type": "eom_category_detail"
+      },
+      "ingest_id": "20260525-0203af2f4642d456"
+    }
+  ]
+}

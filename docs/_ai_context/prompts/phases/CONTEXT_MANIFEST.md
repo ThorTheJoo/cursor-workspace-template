@@ -12,9 +12,11 @@ Navigation map and agent contract for this workspace. Read this after `repo-mani
 
 | Field | Value |
 |-------|-------|
-| **Name** | Cursor Workspace Starter |
-| **Type** | Template repository |
-| **Purpose** | Portable, zero-global-pollution foundation for Cursor IDE workspaces |
+| **Name** | Experiment JP |
+| **Type** | ENGEN Jet Park — fuel & C-store operations |
+| **Purpose** | POS reporting, bank/payroll recon, management dashboard |
+| **Site** | Fuel Rock (Pty) Ltd / ENGEN JET PARK SERVICE STATION |
+| **Bank account** | FNB 62848015857 (from OFX feed) |
 | **MDD Version** | V1.3 Agentic Critical Edition |
 
 ## Agent Contract

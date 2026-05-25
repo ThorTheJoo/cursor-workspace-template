@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Management Dashboard — ENGEN JET PARK SERVICE STATION</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f4f5f7; color: #1a1a1a; max-width: 1100px; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.25rem; margin: 0 0 .25rem; }
+    h2 { font-size: .95rem; margin: 0 0 .75rem; border-bottom: 1px solid #eee; padding-bottom: .35rem; display: flex; align-items: center; gap: .35rem; }
+    .meta { color: #666; font-size: .85rem; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem; }
+    .card { background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); margin-bottom: .75rem; }
+    .kpi-row { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .kpi .label { display: block; font-size: .7rem; text-transform: uppercase; color: #888; }
+    .kpi .value { font-size: 1.15rem; font-weight: 600; }
+    .kpi .value.small { font-size: .85rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    th, td { padding: .35rem .25rem; border-bottom: 1px solid #f0f0f0; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .warn { color: #c0392b; font-weight: 600; }
+    .ok { color: #27ae60; }
+    .note { font-size: .75rem; color: #666; margin-top: .5rem; }
+    code { background: #eee; padding: .1rem .3rem; border-radius: 3px; }
+    ul.runs { font-size: .8rem; margin: .25rem 0 0 1rem; }
+    .tag { font-size: .65rem; padding: .1rem .35rem; border-radius: 3px; text-transform: uppercase; }
+    .tag-pos_system { background: #dbeafe; color: #1e40af; }
+    .tag-payroll_system { background: #fce7f3; color: #9d174d; }
+    .tag-bank_feed { background: #d1fae5; color: #065f46; }
+    .tag-manual_recon { background: #fef3c7; color: #92400e; }
+    .tag-ocr_whatsapp { background: #ede9fe; color: #5b21b6; }
+    .legend { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; font-size: .75rem; }
+    .card-context { font-size: .72rem; color: #64748b; margin: -.25rem 0 .65rem; line-height: 1.4; }
+    .report-banner { background: #1e293b; color: #f8fafc; padding: .85rem 1rem; border-radius: 8px; margin-bottom: .75rem; }
+    .report-banner strong { color: #fff; }
+    .nowrap { white-space: nowrap; }
+    .latest-day { background: #f0fdf4; }
+    .tag-latest { font-size: .6rem; background: #16a34a; color: #fff; padding: .1rem .3rem; border-radius: 3px; margin-left: .25rem; }
+    .up { color: #16a34a; }
+    .down { color: #dc2626; }
+    .flat { color: #64748b; }
+    .tip { position: relative; display: inline-flex; cursor: help; }
+    .tip-icon { width: 1rem; height: 1rem; border-radius: 50%; background: #64748b; color: #fff; font-size: .65rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+    .tip-body { display: none; position: absolute; left: 1.25rem; top: -.25rem; z-index: 20; width: min(420px, 85vw); background: #1e293b; color: #f8fafc; padding: .65rem .85rem; border-radius: 6px; font-size: .75rem; font-weight: 400; line-height: 1.5; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+    .tip:hover .tip-body, .tip:focus .tip-body, .tip:focus-within .tip-body { display: block; }
+  </style>
+</head>
+<body>
+  <nav style="background:#1a2332;color:#fff;padding:.6rem 1rem;margin:-1rem -1rem 1rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;font-size:.9rem">
+    <strong style="color:#fff">Management Report</strong>
+    <a href="help/management-dashboard.html" style="color:#90caf9" target="_blank">Help guide</a>
+    <a href="file-views/index.html" style="color:#90caf9">File repository (drill-down)</a>
+    <a href="../../docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md" style="color:#90caf9" target="_blank">Data interpretation</a>
+  </nav>
+  <h1>ENGEN JET PARK SERVICE STATION</h1>
+  <div class="report-banner">
+    <strong>Primary trading day:</strong> 24/05/2026 · Day End Batch 147
+    · POS report generated 25/05/2026 07:34
+    · Dashboard refreshed 25/05/2026 14:18
+  </div>
+  <p class="note">All dates use <strong>DD/MM/YYYY</strong> (South African). KPI cards show which trading day they apply to. The timeline below tracks day-on-day changes.</p>
+
+  <section class="card">
+    <h2>Daily Operations Timeline<span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Daily Operations Timeline tells the story day by day in chronological order (oldest at top). Each row is one trading day. Δ (delta) columns show how much changed vs the previous day — green = up, red = down. The highlighted 'Latest' row matches the KPI snapshot cards below. CIT pickup comes from OCR WhatsApp photos; other columns from POS Day End when available.</span></span></h2>
+    <p class="note">Chronological story — each row is one trading day. Δ columns show change vs the previous day. Highlighted row = latest POS Day End.</p>
+    <table><thead><tr>
+      <th>Trading Day</th><th>Batch</th><th class="num">Nett Takings</th><th class="num">Δ Nett</th>
+      <th class="num">Fuel (L)</th><th class="num">Δ Fuel</th><th class="num">Shop</th>
+      <th class="num">Cash Var</th><th class="num">CIT Pickup</th>
+    </tr></thead>
+    <tbody><tr class=''><td class='nowrap'><strong>18/05/2026</strong></td><td>B141</td><td class='num'>R 185,823.99</td><td class='num flat'>—</td><td class='num'>5,788.51 L</td><td class='num flat'>—</td><td class='num'>R 16,690.40</td><td class='num '>R 0.00</td><td class='num'>—</td></tr><tr class=''><td class='nowrap'><strong>19/05/2026</strong></td><td>B142</td><td class='num'>R 104,790.45</td><td class='num down'>R -81,033.54</td><td class='num'>3,191.23 L</td><td class='num down'>-2,597.28 L</td><td class='num'>R 15,794.85</td><td class='num '>R 0.00</td><td class='num'>—</td></tr><tr class=''><td class='nowrap'><strong>20/05/2026</strong></td><td>B143</td><td class='num'>R 162,197.44</td><td class='num up'>+R 57,406.99</td><td class='num'>5,000.67 L</td><td class='num up'>+1,809.44 L</td><td class='num'>R 16,754.80</td><td class='num '>R 0.00</td><td class='num'>—</td></tr><tr class=''><td class='nowrap'><strong>22/05/2026</strong></td><td>B145</td><td class='num'>R 183,805.24</td><td class='num up'>+R 21,607.80</td><td class='num'>5,479.85 L</td><td class='num up'>+479.18 L</td><td class='num'>R 21,909.15</td><td class='num '>R 19.56</td><td class='num'>—</td></tr><tr class='latest-day'><td class='nowrap'><strong>24/05/2026</strong> <span class="tag-latest">Latest</span></td><td>B147</td><td class='num'>R 71,895.05</td><td class='num down'>R -111,910.19</td><td class='num'>2,287.27 L</td><td class='num down'>-3,192.58 L</td><td class='num'>R 6,056.15</td><td class='num '>R 0.00</td><td class='num'>—</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Snapshot — 24/05/2026 <span class="tag tag-pos_system">POS System</span></h2>
+    <p class="card-context">These eight cards summarise the <strong>latest trading day only</strong> (Batch 147). EFT and Stock Take may reference different report dates — see each card.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card"><p class="card-context">As of <strong>24/05/2026</strong> · Batch <strong>B147</strong></p><h2>Daily Nett Takings <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Daily Nett Takings answers: 'How much money should we have collected today?' We read the POS Day End Summary report, section 'Daily Takings Summary', line 'Nett Takings'. The POS adds up: Sales (fuel + shop) + Returns (refunds, shown negative) + Receipts (other money in) + Payouts (money paid out to suppliers, shown negative). Example: if sales were R184,000 and payouts were R665, nett takings ≈ R183,805. This is the figure cashiers and card batches must reconcile to before banking.</span></span></h2><div class="kpi"><span class="value">R 71,895.05</span></div></div>
+    <div class="card"><p class="card-context">As of <strong>24/05/2026</strong> · Batch <strong>B147</strong></p><h2>Fuel Sales <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Fuel Sales is the rand value of all petrol and diesel sold on the forecourt for the day. Source: Day End Summary → EOD Summary by Category → FUEL row → Total Sales column. Litres shown are total pump volume (all grades). GP% is gross profit as a percentage of fuel sales — how much margin remains after fuel cost of sales.</span></span></h2><div class="kpi"><span class="value">R 65,643.90</span><span class="label">2,287.27 L · GP 8.8%</span></div></div>
+    <div class="card"><p class="card-context">As of <strong>24/05/2026</strong> · Batch <strong>B147</strong></p><h2>Shop Sales <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Shop Sales is convenience-store turnover including VAT (inside sales only, not fuel). Source: Day End Summary category subtotal before the FUEL line. GP% shows how much profit the shop made after product cost — higher is better for categories like tobacco and beverages.</span></span></h2><div class="kpi"><span class="value">R 6,056.15</span><span class="label">GP 10.7%</span></div></div>
+    <div class="card"><p class="card-context">As of <strong>24/05/2026</strong> · Batch <strong>B147</strong></p><h2>Cash Variance <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Cash Variance is the difference between cash actually counted (Actual) and what the POS expected (Theoretical) at day end. Source: Day End Summary → Cash Variance section, bottom total Variance column. Positive = over (extra cash). Negative = short. Industry target: investigate if over R50 or 0.25% of takings.</span></span></h2><div class="kpi"><span class="value ok">R 0.00</span><span class="label">Target &lt; R50 · end of shift count</span></div>
+  </section>
+
+  <section class="grid">
+    <div class="card"><p class="card-context">As of <strong>24/05/2026</strong> · Batch <strong>B147</strong> · Customer counts for this trading day</p><h2>Customers <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Number of fuel customers is how many separate fuel transactions occurred — one customer may have multiple line items if they bought different grades. Source: Day End Summary statistics block. Useful for tracking footfall on the forecourt.</span></span></h2>
+      <div class="kpi-row">
+        <div class="kpi"><span class="label">Fuel</span><span class="value">170</span></div>
+        <div class="kpi"><span class="label">Shop</span><span class="value">142</span></div>
+      </div>
+    </div>
+    <div class="card"><p class="card-context">As of <strong>20/05/2026</strong> · Card batch sent to bank on this date — from EFT Batch Summary file</p><h2>EFT Batch (20/05/2026) <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">EFT Batch total is card payments processed and batched for the bank on the batch date. Source: EFT Batch Summary By EFT Batch Date — Forecourt + Retail + General totals. This should eventually match what lands in the bank statement (minus fees and timing).</span></span></h2><div class="kpi"><span class="value">R 121,361.05</span><span class="label">374 transactions</span></div></div>
+    <div class="card"><p class="card-context">As of <strong>24/05/2026</strong> · Batch <strong>B147</strong> · Unsent at Day End close</p><h2>EFT Pending <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">EFT Pending are card transactions from the last shift that have not yet been sent to the bank. Source: EFT Transactions Not Yet Sent to Bank. These will appear in a future batch — normal to see a small amount right after day end.</span></span></h2><div class="kpi"><span class="value">R 3,121.40</span><span class="label">Awaiting next batch</span></div></div>
+    <div class="card"><p class="card-context">As of <strong>20/05/2026</strong> · Stock take report date — may differ from latest trading day</p><h2>Stock Take (20/05/2026) <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Stock Take variance counts SKUs where physical count differed from the system. Source: Stock Take Variance report. 'Variance @ cost' is the rand value of over/under stock at last cost — shrink or counting errors to investigate.</span></span></h2><div class="kpi"><span class="value">89 SKUs</span><span class="label">@ cost R 349.42</span></div>
+  </section>
+
+  <section class="card">
+    <h2>Data Source Legend<span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Every figure on this dashboard is tagged by where it came from. POS (blue) = forecourt system export, highest trust for daily sales. Bank (green) = actual money movement. Payroll (pink) = wages file. Manual recon (amber) = Excel you maintain. OCR WhatsApp (purple) = photos forwarded on WhatsApp, OCR-extracted — useful but should be confirmed against POS or bank when possible.</span></span></h2>
+    <div class="legend"><span class="tag tag-pos_system">POS System</span> <span class="tag tag-bank_feed">Bank Feed</span> <span class="tag tag-payroll_system">Payroll</span> <span class="tag tag-manual_recon">Manual Recon</span> <span class="tag tag-ocr_whatsapp">OCR / WhatsApp</span></div>
+    <p class="note">Each section is tagged with its primary source. Purple OCR data comes from WhatsApp photos — confirm against POS or bank when making decisions.</p>
+  </section>
+
+  <section class="card">
+    <h2>Multi-Source Reconciliation<span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">This table shows what we compared against what, and the result. 'Match' = sources agree. 'Review' = variance exceeds threshold — investigate. 'Pending' = we need more data (e.g. bank statement for the same day as EFT batch). 'Info' = explanatory comparison, not an error. Each row names Source A and Source B so you can see exactly where both numbers came from.</span></span></h2>
+    <p class="note">Sorted chronologically · all dates DD/MM/YYYY · compares Source A vs Source B</p>
+    <table><thead><tr><th>Check</th><th>Trading Day</th><th>Source A</th><th>Source B</th><th class="num">Variance</th><th>Status</th></tr></thead>
+    <tbody><tr><td colspan="6">No comparisons yet</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Wet Stock EOD — 24/05/2026 <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Wet Stock EOD compares fuel sold according to pump meters vs tank dipping (ATG). Source: Day End Summary → Fuel Sales Control EOD Short. Variance in litres: positive = pumps recorded more than tanks lost (possible meter issue or delivery timing); negative = tanks lost more than pumps show (possible leak, theft, or calibration).</span></span></h2>
+    <table><thead><tr><th>Grade</th><th class="num">Pump Vol</th><th class="num">Sales</th><th class="num">Variance</th></tr></thead>
+    <tbody><tr><td>UNLEADED 93</td><td class='num'>155.1 L</td><td class='num'>R 4,113.15</td><td class='num '>+0.11 L</td></tr><tr><td>UNLEADED 95</td><td class='num'>1,525.5 L</td><td class='num'>R 40,619.75</td><td class='num warn'>+41.51 L</td></tr><tr><td>DSL 50PPM</td><td class='num'>606.6 L</td><td class='num'>R 20,911.00</td><td class='num warn'>+6.65 L</td></tr></tbody></table>
+    <p class="note">Pump vs tank variance total: +48.27 L</p>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h2>Top Shop Categories <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Top shop categories ranked by sales value for the day. Source: Day End Summary EOD Summary by Category. GP% = (Sales − Cost of Sales) ÷ Sales × 100. Helps identify which departments drive turnover and margin.</span></span></h2>
+      <table><thead><tr><th>Cat</th><th class="num">Sales</th><th class="num">GP%</th></tr></thead><tbody><tr><td>BEVHGH</td><td class='num'>R 936.70</td><td class='num'>34.3%</td></tr><tr><td>BAKPRE</td><td class='num'>R 836.00</td><td class='num'>42.3%</td></tr><tr><td>TOBCIG</td><td class='num'>R 806.00</td><td class='num'>28.4%</td></tr><tr><td>BEVCDK</td><td class='num'>R 761.30</td><td class='num'>28.5%</td></tr><tr><td>TOBACC</td><td class='num'>R 372.00</td><td class='num'>33.2%</td></tr><tr><td>BEVWTR</td><td class='num'>R 338.00</td><td class='num'>39.7%</td></tr></tbody></table>
+    </div>
+    <div class="card"><h2>MTD Fuel Variance % (May) <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Month-to-date fuel variance % shows cumulative pump-vs-tank difference for each grade since month start. Source: Day End Summary → Fuel Sales Control MTD Summary. Target typically under 0.5%. High diesel variance may indicate delivery or temperature issues.</span></span></h2>
+      <table><thead><tr><th>Grade</th><th class="num">MTD %</th></tr></thead><tbody><tr><td>UL93</td><td class='num'>0.30%</td></tr><tr><td>UL95</td><td class='num'>0.14%</td></tr><tr><td>DSL</td><td class='num'>0.41%</td></tr></tbody></table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Cashier EOS Exceptions <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Cashier EOS (End of Shift) exceptions show each operator's takings, void count and void value for the day. Source: Day End Summary → EOS Exceptions. High voids may indicate training issues, errors, or fraud risk worth reviewing.</span></span></h2>
+    <table><thead><tr><th>Cashier</th><th class="num">Nett Takings</th><th class="num">Voids</th><th class="num">Void Amt</th></tr></thead>
+    <tbody><tr><td>CAROLI</td><td class='num'>R 22,667.15</td><td class='num'>0</td><td class='num'>R 0.00</td></tr><tr><td>OPT</td><td class='num'>R 38,149.05</td><td class='num'>0</td><td class='num'>R 0.00</td></tr><tr><td>SIA</td><td class='num'>R 11,078.85</td><td class='num'>0</td><td class='num'>R 0.00</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Monthly Reference — April 2026 <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Monthly reference figures come from the Month End Summary report (not the daily file). Nett Takings = full month cash + cards + accounts. Banking variance = difference between cash counted and POS theoretical for the whole month.</span></span></h2>
+    <div class="kpi-row">
+      <div class="kpi"><span class="label">Nett Takings</span><span class="value">R 3,511,186.71</span></div>
+      <div class="kpi"><span class="label">Combined Sales</span><span class="value">R 3,521,761.43</span></div>
+      <div class="kpi"><span class="label">Fuel Volume</span><span class="value">121,396 L</span></div>
+      <div class="kpi"><span class="label">Banking Var</span><span class="value warn">R -4,396.10</span></div>
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  <section class="card">
+    <h2>Daily History <span class="tag tag-pos_system">POS System</span><span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">Daily history plots nett takings and cash variance for each Day End batch file found in your inputs folder. Drop new Day End Summary exports to extend this trend.</span></span></h2>
+    <table><thead><tr><th>Date</th><th>Batch</th><th class="num">Nett Takings</th><th class="num">Cash Var</th></tr></thead>
+    <tbody><tr><td class='nowrap'>18/05/2026</td><td>B141</td><td class='num'>R 185,823.99</td><td class='num'>5,788.51 L</td><td class='num'>R 16,690.40</td><td class='num '>R 0.00</td></tr><tr><td class='nowrap'>19/05/2026</td><td>B142</td><td class='num'>R 104,790.45</td><td class='num'>3,191.23 L</td><td class='num'>R 15,794.85</td><td class='num '>R 0.00</td></tr><tr><td class='nowrap'>20/05/2026</td><td>B143</td><td class='num'>R 162,197.44</td><td class='num'>5,000.67 L</td><td class='num'>R 16,754.80</td><td class='num '>R 0.00</td></tr><tr><td class='nowrap'>22/05/2026</td><td>B145</td><td class='num'>R 183,805.24</td><td class='num'>5,479.85 L</td><td class='num'>R 21,909.15</td><td class='num '>R 19.56</td></tr><tr><td class='nowrap'>24/05/2026</td><td>B147</td><td class='num'>R 71,895.05</td><td class='num'>2,287.27 L</td><td class='num'>R 6,056.15</td><td class='num '>R 0.00</td></tr></tbody></table>
+  </section>
+
+  
+
+  
+  <section class="card" id="file-repository">
+    <h2>File Repository — report types & history<span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">File Repository lists each REPORT TYPE (not every duplicate filename). Series points = unique business periods we have extracted (e.g. one row per Day End batch). Full specification: file-type-catalog.yaml. History JSON: reports/data/series/. When you receive a new file, run build_file_repo.py then refresh the dashboard.</span></span></h2>
+    <p class="note">
+      Specs: <code>docs/_ai_context/knowledge/reference/file-type-catalog.yaml</code> ·
+      Guide: <code>docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md</code> ·
+      Ledger: <code>reports/data/ingest-ledger.json</code> ·
+      Series: <code>reports/data/series/</code>
+    </p>
+    <p class="note">Scanned <strong>128</strong> primary files
+      (145 total including duplicate copies).
+      Click a report type to open history, trends, per-file detail, and help.</p>
+    <p class="toolbar" style="margin:.5rem 0">
+      <a class="btn" href="file-views/index.html" style="display:inline-block;padding:.35rem .75rem;background:#e65100;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">Open full File Repository</a>
+    </p>
+    <table><thead><tr>
+      <th>Report type</th><th>Source</th><th>Pattern</th>
+      <th class="num">Files</th><th class="num">Series pts</th><th>Folders</th>
+    </tr></thead>
+    <tbody><tr><td><a href='file-views/bank_statement.html'><code>bank_statement</code></a></td><td><span class="tag tag-bank_feed">Bank Feed</span></td><td>62848015857</td><td class='num'>2</td><td class='num'>1</td><td>Starter Docs</td></tr><tr><td><a href='file-views/cash_up.html'><code>cash_up</code></a></td><td><span class="tag tag-manual_recon">Manual Recon</span></td><td>CASH UP APRIL 26</td><td class='num'>1</td><td class='num'>1</td><td>Starter Docs</td></tr><tr><td><a href='file-views/cash_variance_by_cashier.html'><code>cash_variance_by_cashier</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Cash Variance - Selected EOD by Cashier</td><td class='num'>8</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/creditors_purchases_detail.html'><code>creditors_purchases_detail</code></a></td><td><span class="tag tag-accounting">Accounting</span></td><td>Creditors Purchases - Detail by AC Name</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/day_end_summary.html'><code>day_end_summary</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Day End Summary</td><td class='num'>10</td><td class='num'>5</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/debtors_age_analysis.html'><code>debtors_age_analysis</code></a></td><td><span class="tag tag-accounting">Accounting</span></td><td>Debtors Age Analysis - By AC Name with Deposits</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/eft_batch_summary.html'><code>eft_batch_summary</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>EFT Batch Summary By EFT Batch Date</td><td class='num'>5</td><td class='num'>4</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/eft_detail_by_shift.html'><code>eft_detail_by_shift</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>EFT Detail - By EOD Batch Number & Shift</td><td class='num'>8</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/eft_pending.html'><code>eft_pending</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>EFT Transactions Not Yet Sent to Bank</td><td class='num'>5</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/eft_summary_by_shift.html'><code>eft_summary_by_shift</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>EFT Summary By EOD Batch & Shift</td><td class='num'>8</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/eom_category_detail.html'><code>eom_category_detail</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>EOM By Category & Sub-Category Detail (Std Report)</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/fuel_control_atg.html'><code>fuel_control_atg</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Fuel Sales Control - Control Report - ATG</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/fuel_control_mtd_by_product.html'><code>fuel_control_mtd_by_product</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Fuel Sales Control - MTD By Product</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/fuel_control_mtd_summary.html'><code>fuel_control_mtd_summary</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Fuel Sales Control - MTD Summary</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/month_end_detail.html'><code>month_end_detail</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Month End Detail</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/month_end_summary.html'><code>month_end_summary</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Month End Summary</td><td class='num'>2</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/monthly_category_summary.html'><code>monthly_category_summary</code></a></td><td><span class="tag tag-pos_system">POS System</span></td><td>Monthly Summary Forecourt & Shop - By Category</td><td class='num'>2</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/nett_pay_list.html'><code>nett_pay_list</code></a></td><td><span class="tag tag-payroll_system">Payroll</span></td><td>Nett Pay List - 140526</td><td class='num'>3</td><td class='num'>2</td><td>Starter Docs</td></tr><tr><td><a href='file-views/ocr_synthesis.html'><code>ocr_synthesis</code></a></td><td><span class="tag tag-ocr_whatsapp">OCR / WhatsApp</span></td><td>deepseek_text_20260524_26b077</td><td class='num'>54</td><td class='num'>40</td><td>Starter Docs</td></tr><tr><td><a href='file-views/spreadsheet_unknown.html'><code>spreadsheet_unknown</code></a></td><td><span class="tag tag-manual_recon">Manual Recon</span></td><td>invoice_ledger</td><td class='num'>2</td><td class='num'>1</td><td>Starter Docs</td></tr><tr><td><a href='file-views/stock_cost_sell_price.html'><code>stock_cost_sell_price</code></a></td><td><span class="tag tag-inventory">Inventory</span></td><td>Stock Cost & Selling Price Listing  - By Category</td><td class='num'>2</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/stock_on_hand.html'><code>stock_on_hand</code></a></td><td><span class="tag tag-inventory">Inventory</span></td><td>Stock On Hand with Unit Cost - by Category</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/stock_purchases_by_category.html'><code>stock_purchases_by_category</code></a></td><td><span class="tag tag-inventory">Inventory</span></td><td>Stock Purchases Summary - By Category</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/stock_purchases_summarized.html'><code>stock_purchases_summarized</code></a></td><td><span class="tag tag-inventory">Inventory</span></td><td>Stock Purchases Summary - By Category Summarized</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/stock_shrinkage_mtd.html'><code>stock_shrinkage_mtd</code></a></td><td><span class="tag tag-inventory">Inventory</span></td><td>Stock Shrinkage Analysis - MTD by Category @ Latest Cost</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr><tr><td><a href='file-views/stock_take_variance.html'><code>stock_take_variance</code></a></td><td><span class="tag tag-inventory">Inventory</span></td><td>Stock Take Variance - For Date  By Category & Stock Code w POS Sales</td><td class='num'>2</td><td class='num'>1</td><td>Additional, Starter Docs</td></tr><tr><td><a href='file-views/supplier_schedule.html'><code>supplier_schedule</code></a></td><td><span class="tag tag-manual_recon">Manual Recon</span></td><td>Schedule of Accounts Invoice T</td><td class='num'>2</td><td class='num'>1</td><td>Starter Docs</td></tr><tr><td><a href='file-views/turnover_levy.html'><code>turnover_levy</code></a></td><td><span class="tag tag-accounting">Accounting</span></td><td>Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories</td><td class='num'>1</td><td class='num'>1</td><td>Additional</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Input File Registry<span class="tip" tabindex="0" aria-label="Help"><span class="tip-icon">?</span><span class="tip-body">This table lists every data file found in your inputs folder and how we classify it. Blue = POS system (auto-generated daily exports). Pink = payroll (Nett Pay Lists). Green = bank feed (OFX downloads). Amber = manual recon (Excel workbooks you maintain). Purple = OCR WhatsApp (photos of reports, extracted via OCR). Source type tells future reconciliation workflows which file to trust for each question.</span></span></h2>
+    <p class="note">Each file is classified by source type for future reconciliation workflows.</p>
+    <table><thead><tr><th>Source</th><th>File</th><th>Report</th><th>Modified</th></tr></thead>
+    <tbody><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Cash Variance - Selected EOD by Cashier (2).TXT</td><td>cash_variance</td><td>2026-05-25 13:05</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Cash Variance - Selected EOD by Cashier (3).TXT</td><td>cash_variance</td><td>2026-05-25 13:07</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Cash Variance - Selected EOD by Cashier (4).TXT</td><td>cash_variance</td><td>2026-05-25 13:08</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Cash Variance - Selected EOD by Cashier (5).TXT</td><td>cash_variance</td><td>2026-05-25 13:08</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Day End Summary (2).TXT</td><td>day_end_summary</td><td>2026-05-25 13:05</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Day End Summary (3).TXT</td><td>day_end_summary</td><td>2026-05-25 13:07</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Day End Summary (4).TXT</td><td>day_end_summary</td><td>2026-05-25 13:07</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Day End Summary (5).TXT</td><td>day_end_summary</td><td>2026-05-25 13:08</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>Day End Summary (6).TXT</td><td>day_end_summary</td><td>2026-05-25 13:08</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>EFT Batch Summary By EFT Batch Date (1).TXT</td><td>eft</td><td>2026-05-25 13:05</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>EFT Batch Summary By EFT Batch Date (2).TXT</td><td>eft</td><td>2026-05-25 13:07</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>EFT Batch Summary By EFT Batch Date (3).TXT</td><td>eft</td><td>2026-05-25 13:08</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>EFT Detail - By EOD Batch Number & Shift (2).TXT</td><td>eft</td><td>2026-05-25 13:05</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>EFT Detail - By EOD Batch Number & Shift (3).TXT</td><td>eft</td><td>2026-05-25 13:07</td></tr><tr><td><span class='tag tag-pos_system'>pos_system</span></td><td>EFT Detail - By EOD Batch Number & Shift (4).TXT</td><td>eft</td><td>2026-05-25 13:08</td></tr></tbody></table>
+  </section>
+
+  <p class="meta">Refresh: <code>python scripts/management/generate_dashboard.py</code> · Payroll only: <code>python scripts/payroll/netpay_to_payment_csv.py --all</code></p>
+</body>
+</html>

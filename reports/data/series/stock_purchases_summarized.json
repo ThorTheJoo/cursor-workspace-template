@@ -1,0 +1,15 @@
+{
+  "report_type": "stock_purchases_summarized",
+  "points": [
+    {
+      "content_key": "stock_purchases_summarized|file:Stock Purchases Summary - By Category Summarized",
+      "source_file": "Stock Purchases Summary - By Category Summarized.TXT",
+      "path": "Additional/Stock Purchases Summary - By Category Summarized.TXT",
+      "modified": "2026-05-25 13:06",
+      "summary": {
+        "report_type": "stock_purchases_summarized"
+      },
+      "ingest_id": "20260525-d98260f9ad1c836f"
+    }
+  ]
+}

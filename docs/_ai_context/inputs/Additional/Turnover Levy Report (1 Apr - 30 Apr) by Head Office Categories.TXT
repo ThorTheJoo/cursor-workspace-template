@@ -1,0 +1,170 @@
+ENGEN JET PARK SERVICE STATION                                                                   04/05/2026 17:20
+-----------------------------------------------------------------------------------------------------------------
+Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories
+-----------------------------------------------------------------------------------------------------------------
+From : 01/04/2026
+To   : 30/04/2026
+-----------------------------------------------------------------------------------------------------------------
+Category               Sub Category                 POS Sales    BOS Sales   Total Excl          VAT   Total Incl
+--------               ------------                 ---------    ---------   ----------          ---   ----------
+ALCOHOLIC BEVERAGES    ZERO ALCOHOL DRINKS              62.60         0.00        62.60         9.40        72.00
+CHIPS + SNACKS         BILTONG                        2920.93         0.00      2920.93       438.07      3359.00
+CHIPS + SNACKS         SALTY SNACKS                  16441.23         0.00     16441.23      2463.37     18904.60
+EDIBLE GROCERIES       DRY GROCERIES                  1501.43         0.00      1501.43       225.07      1726.50
+EDIBLE GROCERIES       HOT DRINKS                      419.98         0.00       419.98        63.02       483.00
+FOOD SERVICES IN-HOUSE BURGERS                        1019.57         0.00      1019.57       152.93      1172.50
+FOOD SERVICES IN-HOUSE SANDWICHES                     3571.32         0.00      3571.32       535.68      4107.00
+GROCERIES              PERSONAL PRODUCTS              1351.33         0.00      1351.33       202.67      1554.00
+GROCERIES              PHARMACY                       7457.12         0.00      7457.12      1117.78      8574.90
+NON ALCOHOLIC BEVERAGE CARBONATED                    43664.88         0.00     43664.88      6553.80     50218.68
+NON ALCOHOLIC BEVERAGE ENERGY                        40662.87         0.00     40662.87      6101.33     46764.20
+NON ALCOHOLIC BEVERAGE ICE                             836.67         0.00       836.67       125.33       962.00
+NON ALCOHOLIC BEVERAGE ICED COFFEE + TEA               439.28         0.00       439.28        65.92       505.20
+NON ALCOHOLIC BEVERAGE JUICES                         4762.78         0.00      4762.78       714.79      5477.57
+NON ALCOHOLIC BEVERAGE MINERAL WATER                 18224.90         0.00     18224.90      2734.50     20959.40
+NON ALCOHOLIC BEVERAGE SPECIALITY BEVERAGES            313.04         0.00       313.04        46.96       360.00
+NON ALCOHOLIC BEVERAGE SPORTS                         6301.57         0.00      6301.57       945.43      7247.00
+NON FOOD               CAR CARE                       1204.32         0.00      1204.32       180.68      1385.00
+NON-EDIBLE GROCERIES   PAPER PRODUCTS                   44.36         0.00        44.36         6.64        51.00
+PACKAGED BAKERY        BISCUITS                       3914.80         0.00      3914.80       587.50      4502.30
+PACKAGED BAKERY        BREAD                          6391.50         0.00      6391.50       556.75      6948.25
+PACKAGED BAKERY        CAKES                           354.96         0.00       354.96        53.04       408.00
+PACKAGED BAKERY        ROLLS                           306.13         0.00       306.13        45.87       352.00
+PERISHABLES            DAIRY                          3437.91         0.00      3437.91       465.04      3902.95
+PERISHABLES            DELI                            222.60         0.00       222.60        33.40       256.00
+PERISHABLES            FRESH PRODUCE                    87.00         0.00        87.00        13.00       100.00
+PERISHABLES            ICE CREAM                      3697.46         0.00      3697.46       554.64      4252.10
+SNACKS                 CHEWING GUM                    4319.33         0.00      4319.33       648.67      4968.00
+SNACKS                 CHOCOLATE                     16269.45         0.00     16269.45      2440.15     18709.60
+SNACKS                 SWEETS                         9788.63         0.00      9788.63      1468.87     11257.50
+TOBACCO                ACCESSORIES                    1082.56         0.00      1082.56       162.44      1245.00
+TOBACCO                CIGARETTES                    43397.91         0.00     43397.91      6509.09     49907.00
+TOBACCO                E CIGARETTES                   7420.94         0.00      7420.94      1113.06      8534.00
+TOBACCO                RYO                            1166.23         0.00      1166.23       174.77      1341.00
+TOBACCO                SMOKELESS TOBACCO               639.01         0.00       639.01        95.99       735.00
+                                                 ------------ ------------ ------------ ------------ ------------
+                                                    253696.60         0.00    253696.60     37605.65    291302.25
+
+*****************************************************************************************************************
+
+MISCELLANEOUS          OTHER -MISCELLANEOUS           2888.75         0.00      2888.75       433.25      3322.00
+                                                 ------------ ------------ ------------ ------------ ------------
+                                                      2888.75         0.00      2888.75       433.25      3322.00
+
+*****************************************************************************************************************
+
+BAKERY DEALER ITEMS    BAKERY DEALER ITEMS            1010.02         0.00      1010.02       150.98      1161.00
+BAKERY IS CONFECTIONER BAKERY IS CAKES                1899.04         0.00      1899.04       284.96      2184.00
+BAKERY IS CONFECTIONER BAKERY IS MUFFINS               657.36         0.00       657.36        98.64       756.00
+BAKERY IS PASTRIES     BAKERY IS PLAIN                 813.44         0.00       813.44       122.06       935.50
+BAKERY IS PASTRIES     BAKERY IS SWEET                 256.65         0.00       256.65        38.35       295.00
+BAKERY IS SANDWICHES   BAKERY IS SANDWICHES            476.98         0.00       476.98        71.52       548.50
+BAKERY PP BISCUITS + R BAKERY PP RUSKS                 160.00         0.00       160.00        24.00       184.00
+BAKERY PP BISCUITS + R BAKERY PP SWEET BISC           1023.86         0.00      1023.86       153.74      1177.60
+BAKERY PP BREAD+ROLLS  BAKERY PP ART ROLLS             678.30         0.00       678.30       101.70       780.00
+BAKERY PP CONFECTIONER BAKERY PP CAKES                1602.75         0.00      1602.75       240.65      1843.40
+BTC HOT                BTC HOT COFFEE                 6421.64         0.00      6421.64       962.36      7384.00
+BTC HOT                BTC HOT OTHER                  1674.12         0.00      1674.12       250.88      1925.00
+CAFE 365               CAFE 365 BREAKFAST             2229.46         0.00      2229.46       334.14      2563.60
+CAFE 365               CAFE 365 CHICKEN               2564.28         0.00      2564.28       385.05      2949.33
+ENGINE OILS            PASSENGER CARS                 8671.18         0.00      8671.18      1300.82      9972.00
+FUELS                  DIESEL                      1411319.15         0.00   1411319.15         0.00   1411319.15
+FUELS                  UNLEADED                    1801173.85      2352.94   1803526.79         0.00   1803526.79
+LPG                    BOTTLED GAS                     401.71         0.00       401.71        60.29       462.00
+PACKAGING              PACKAGING                       756.90         0.00       756.90       113.10       870.00
+PREP FOODS DEALER ITEM PREP FOODS DEALER I           35399.33         0.00     35399.33      5310.67     40710.00
+PREP FOODS MEALS       PF KK SNACKING                   17.61         0.00        17.61         2.64        20.25
+PREP FOODS MEALS       PF SNACKING                    1442.48         0.00      1442.48       216.52      1659.00
+PREP FOODS PIES        PF PIES                       37183.72         0.00     37183.72      5573.48     42757.20
+                                                 ------------ ------------ ------------ ------------ ------------
+                                                   3317833.83      2352.94   3320186.77     15796.55   3335983.32
+
+                                                 ~~~~~~~~~~~~ ~~~~~~~~~~~~ ~~~~~~~~~~~~ ~~~~~~~~~~~~ ~~~~~~~~~~~~
+                                                   3574419.18      2352.94   3576772.12     53835.45   3630607.57
+                                                 ============ ============ ============ ============ ============
+
+<< Page Break >>
+ENGEN JET PARK SERVICE STATION                                                                   04/05/2026 17:20
+-----------------------------------------------------------------------------------------------------------------
+Declaration Information
+-----------------------------------------------------------------------------------------------------------------
+From : 01/04/2026
+To   : 30/04/2026
+-----------------------------------------------------------------------------------------------------------------
+Sales Statistics
+----------------
+
+Total POS Sales Excluding VAT                                     3574419.18
+Total BOS Sales Excluding VAT                                        2352.94
+                                                                ------------
+Total Sales Excluding VAT                                         3576772.12 (A)
+
+The above figures include the following (excluding VAT) :
+---------------------------------------------------------
+
+
+Other Sales
+-----------
+
+                                                    Quantity      Sales Excl
+                                                    --------      ----------
+MISCELLANEOUS          OTHER -MISCELLANEOUS                          2888.75
+                                                                ------------
+                                                                     2888.75
+
+
+                                                    Quantity      Sales Excl
+                                                    --------      ----------
+BAKERY DEALER ITEMS                                                  1010.02
+BAKERY IS CONFECTIONER                                               2556.40
+BAKERY IS PASTRIES                                                   1070.09
+BAKERY IS SANDWICHES                                                  476.98
+BAKERY PP BISCUITS + R                                               1183.86
+BAKERY PP BREAD+ROLLS                                                 678.30
+BAKERY PP CONFECTIONER                                               1602.75
+BTC HOT                                                              8095.76
+CAFE 365                                                             4793.74
+PREP FOODS DEALER ITEM                                              35399.33
+PREP FOODS MEALS                                                     1460.09
+PREP FOODS PIES                                                     37183.72
+                                                                ------------
+                                                                    95511.04 (B)
+
+Deductions From Sales (Excl Vat)
+--------------------------------
+
+ENGINE OILS                                           135.00         8671.18
+FUELS                                              126449.39      3214845.94
+LPG                                                    31.00          401.71
+PACKAGING                                                             756.90
+                                                                ============
+Total Deductions from Sales                                       3224675.73 (1)
+
+Other Allowed Deductions
+------------------------
+
+Engen Approved Deduction                                             4500.00
+                                                                ============
+Total Other Allowed Deductions                                       4500.00 (2)
+
+Promotions
+----------
+
+                                                                ============
+Total Promotions                                                        0.00 (3)
+
+                                                                ============
+Total Deductions = 1 + 2 + 3                                      3229175.73 (C)
+
+                                                                ============
+Total Quickshop Sales = A - (B + C)                                252085.35 (T)
+
+
+-----------------------------------------------------------------------------------------------------------------
+                       This declaration is calculated based on your current product codes.
+                      It is still your responsibility to check your codes and this figures
+-----------------------------------------------------------------------------------------------------------------
+
+
+<--- Ver: 5.46k ------------------------------- * Page: 1 * ------------------------------- Rpt Type: System --->
+<< Page Break >>

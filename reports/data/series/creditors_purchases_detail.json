@@ -1,0 +1,15 @@
+{
+  "report_type": "creditors_purchases_detail",
+  "points": [
+    {
+      "content_key": "creditors_purchases_detail|file:Creditors Purchases - Detail by AC Name",
+      "source_file": "Creditors Purchases - Detail by AC Name.TXT",
+      "path": "Additional/Creditors Purchases - Detail by AC Name.TXT",
+      "modified": "2026-05-25 13:07",
+      "summary": {
+        "report_type": "creditors_purchases_detail"
+      },
+      "ingest_id": "20260525-794888d815229887"
+    }
+  ]
+}

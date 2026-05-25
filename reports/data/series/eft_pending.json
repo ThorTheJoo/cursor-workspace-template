@@ -1,0 +1,18 @@
+{
+  "report_type": "eft_pending",
+  "points": [
+    {
+      "content_key": "eft_pending|file:EFT Transactions Not Yet Sent to Bank",
+      "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+      "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT",
+      "modified": "2026-05-23 11:15",
+      "summary": {
+        "report_type": "eft_pending",
+        "source_file": "EFT Transactions Not Yet Sent to Bank.TXT",
+        "pending_total": 3056.05,
+        "transaction_count": 0
+      },
+      "ingest_id": "20260525-57fbf068fb527678"
+    }
+  ]
+}

@@ -12,6 +12,7 @@ Single entry point for discovering all reusable prompts, phase plans, and mode-s
 | Prompt | File | When to Use |
 |---|---|---|
 | Session Start | `SESSION_START.md` | Copy-paste into a new session to initialize MDD context loading |
+| Optimization handoff | `HANDOFF_OPTIMIZATION_REFACTOR.md` | Give Opus/GPT-5+ full context to refactor/optimize the reporting stack |
 
 ## Phase Plans
 

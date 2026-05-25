@@ -1,0 +1,1405 @@
+{
+  "generated_from": [
+    "C:\\Temp\\Experiment JP\\docs\\_ai_context\\inputs\\Starter Docs",
+    "C:\\Temp\\Experiment JP\\docs\\_ai_context\\inputs\\Additional"
+  ],
+  "site": "ENGEN JET PARK SERVICE STATION",
+  "daily": {
+    "source_file": "Day End Summary (2).TXT",
+    "site_name": "ENGEN JET PARK SERVICE STATION",
+    "batch_number": 147,
+    "batch_date": "24/05/2026",
+    "report_generated": "25/05/2026 07:34",
+    "shop_total_incl": 6056.15,
+    "fuel_total": 65643.9,
+    "combined_total": 71895.05,
+    "shop_gp_percent": 10.73,
+    "fuel_gp_percent": 8.75,
+    "nett_takings": 71895.05,
+    "cash_variance": 0.0,
+    "fuel_customers": 170,
+    "shop_customers": 142,
+    "fuel_volume": 2287.27,
+    "fuel_grades": [
+      {
+        "grade_id": "01",
+        "description": "UNLEADED 93",
+        "amount": 4113.15,
+        "pump_volume": 155.11,
+        "tank_volume": 155.0,
+        "variance_litres": 0.11
+      },
+      {
+        "grade_id": "02",
+        "description": "UNLEADED 95",
+        "amount": 40619.75,
+        "pump_volume": 1525.51,
+        "tank_volume": 1484.0,
+        "variance_litres": 41.51
+      },
+      {
+        "grade_id": "03",
+        "description": "DSL 50PPM",
+        "amount": 20911.0,
+        "pump_volume": 606.65,
+        "tank_volume": 600.0,
+        "variance_litres": 6.65
+      }
+    ],
+    "top_categories": [
+      {
+        "category": "BEVHGH",
+        "qty_sold": 44.0,
+        "cost_of_sales": 535.25,
+        "sales_value": 814.43,
+        "tax": 122.27,
+        "total_sales": 936.7,
+        "gp_amount": 279.18,
+        "gp_percent": 34.28
+      },
+      {
+        "category": "BAKPRE",
+        "qty_sold": 26.0,
+        "cost_of_sales": 419.23,
+        "sales_value": 727.0,
+        "tax": 109.0,
+        "total_sales": 836.0,
+        "gp_amount": 307.77,
+        "gp_percent": 42.33
+      },
+      {
+        "category": "TOBCIG",
+        "qty_sold": 18.0,
+        "cost_of_sales": 502.1,
+        "sales_value": 700.88,
+        "tax": 105.12,
+        "total_sales": 806.0,
+        "gp_amount": 198.78,
+        "gp_percent": 28.36
+      },
+      {
+        "category": "BEVCDK",
+        "qty_sold": 37.0,
+        "cost_of_sales": 473.14,
+        "sales_value": 662.0,
+        "tax": 99.3,
+        "total_sales": 761.3,
+        "gp_amount": 188.86,
+        "gp_percent": 28.53
+      },
+      {
+        "category": "TOBACC",
+        "qty_sold": 22.0,
+        "cost_of_sales": 216.04,
+        "sales_value": 323.5,
+        "tax": 48.5,
+        "total_sales": 372.0,
+        "gp_amount": 107.46,
+        "gp_percent": 33.22
+      },
+      {
+        "category": "BEVWTR",
+        "qty_sold": 20.0,
+        "cost_of_sales": 177.15,
+        "sales_value": 293.86,
+        "tax": 44.14,
+        "total_sales": 338.0,
+        "gp_amount": 116.71,
+        "gp_percent": 39.72
+      },
+      {
+        "category": "BARIST",
+        "qty_sold": 14.0,
+        "cost_of_sales": 156.05,
+        "sales_value": 293.08,
+        "tax": 43.92,
+        "total_sales": 337.0,
+        "gp_amount": 137.03,
+        "gp_percent": 46.76
+      },
+      {
+        "category": "BKYBRD",
+        "qty_sold": 10.0,
+        "cost_of_sales": 165.05,
+        "sales_value": 229.22,
+        "tax": 17.58,
+        "total_sales": 246.8,
+        "gp_amount": 64.17,
+        "gp_percent": 27.99
+      }
+    ],
+    "cashiers": [
+      {
+        "cashier": "CAROLI",
+        "nett_takings": 22667.15,
+        "void_qty": 0,
+        "void_amount": 0.0
+      },
+      {
+        "cashier": "OPT",
+        "nett_takings": 38149.05,
+        "void_qty": 0,
+        "void_amount": 0.0
+      },
+      {
+        "cashier": "SIA",
+        "nett_takings": 11078.85,
+        "void_qty": 0,
+        "void_amount": 0.0
+      }
+    ],
+    "payouts": 0.0,
+    "mtd_fuel_variance_pct": {
+      "UL93": 0.3,
+      "UL95": 0.14,
+      "DSL": 0.41
+    }
+  },
+  "daily_history": [
+    {
+      "batch": 141,
+      "date": "18/05/2026",
+      "nett_takings": 185823.99,
+      "fuel_total": 169798.8,
+      "shop_total": 16690.4,
+      "fuel_volume": 5788.51,
+      "cash_variance": 0.0
+    },
+    {
+      "batch": 142,
+      "date": "19/05/2026",
+      "nett_takings": 104790.45,
+      "fuel_total": 88895.6,
+      "shop_total": 15794.85,
+      "fuel_volume": 3191.23,
+      "cash_variance": 0.0
+    },
+    {
+      "batch": 143,
+      "date": "20/05/2026",
+      "nett_takings": 162197.44,
+      "fuel_total": 146041.85,
+      "shop_total": 16754.8,
+      "fuel_volume": 5000.67,
+      "cash_variance": 0.0
+    },
+    {
+      "batch": 145,
+      "date": "22/05/2026",
+      "nett_takings": 183805.24,
+      "fuel_total": 162086.3,
+      "shop_total": 21909.15,
+      "fuel_volume": 5479.85,
+      "cash_variance": 19.56
+    },
+    {
+      "batch": 147,
+      "date": "24/05/2026",
+      "nett_takings": 71895.05,
+      "fuel_total": 65643.9,
+      "shop_total": 6056.15,
+      "fuel_volume": 2287.27,
+      "cash_variance": 0.0
+    }
+  ],
+  "monthly_april": {
+    "source_file": "Month End Summary.TXT",
+    "period": "April 2026",
+    "month_end_date": "05/05/2026",
+    "nett_takings": 3511186.71,
+    "cash_variance_banking": -4396.1,
+    "fuel_volume": 121396.249,
+    "fuel_sales": 3106007.5,
+    "combined_sales": 3521761.43,
+    "combined_gp_pct": 14.81,
+    "fuel_mtd_variance_litres": -342.75,
+    "fuel_mtd_variance_pct": -0.28
+  },
+  "monthly_category_file": {
+    "source": "Monthly Summary Forecourt & Shop - By Category.TXT"
+  },
+  "eft_pending": {
+    "source_file": "EFT Transactions Not Yet Sent to Bank (3).TXT",
+    "pending_total": 3121.4,
+    "transaction_count": 0
+  },
+  "eft_batch": {
+    "source_file": "EFT Batch Summary By EFT Batch Date (3).TXT",
+    "batch_date": "20/05/2026",
+    "total_trx": 374,
+    "total_amount": 121361.05,
+    "forecourt_amount": 110120.65,
+    "retail_amount": 10617.0
+  },
+  "stock_take": {
+    "source_file": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+    "stock_take_date": "20/05/2026",
+    "sku_variances": 89,
+    "variance_value_at_cost": 349.42
+  },
+  "external": {
+    "input_inventory": [
+      {
+        "path": "Additional/Cash Variance - Selected EOD by Cashier (2).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (2).TXT",
+        "size_bytes": 13027,
+        "modified": "2026-05-25 13:05",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Additional/Cash Variance - Selected EOD by Cashier (3).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (3).TXT",
+        "size_bytes": 16328,
+        "modified": "2026-05-25 13:07",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Additional/Cash Variance - Selected EOD by Cashier (4).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (4).TXT",
+        "size_bytes": 19217,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Additional/Cash Variance - Selected EOD by Cashier (5).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (5).TXT",
+        "size_bytes": 19220,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Additional/Creditors Purchases - Detail by AC Name.TXT",
+        "name": "Creditors Purchases - Detail by AC Name.TXT",
+        "size_bytes": 253750,
+        "modified": "2026-05-25 13:07",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Day End Summary (2).TXT",
+        "name": "Day End Summary (2).TXT",
+        "size_bytes": 53763,
+        "modified": "2026-05-25 13:05",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Additional/Day End Summary (3).TXT",
+        "name": "Day End Summary (3).TXT",
+        "size_bytes": 51945,
+        "modified": "2026-05-25 13:07",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Additional/Day End Summary (4).TXT",
+        "name": "Day End Summary (4).TXT",
+        "size_bytes": 52746,
+        "modified": "2026-05-25 13:07",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Additional/Day End Summary (5).TXT",
+        "name": "Day End Summary (5).TXT",
+        "size_bytes": 52657,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Additional/Day End Summary (6).TXT",
+        "name": "Day End Summary (6).TXT",
+        "size_bytes": 52790,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Additional/Debtors Age Analysis - By AC Name with Deposits (1).TXT",
+        "name": "Debtors Age Analysis - By AC Name with Deposits (1).TXT",
+        "size_bytes": 2164,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Debtors Age Analysis - By AC Name with Deposits.TXT",
+        "name": "Debtors Age Analysis - By AC Name with Deposits.TXT",
+        "size_bytes": 2164,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/EFT Batch Summary By EFT Batch Date (1).TXT",
+        "name": "EFT Batch Summary By EFT Batch Date (1).TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-25 13:05",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Batch Summary By EFT Batch Date (2).TXT",
+        "name": "EFT Batch Summary By EFT Batch Date (2).TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-25 13:07",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Batch Summary By EFT Batch Date (3).TXT",
+        "name": "EFT Batch Summary By EFT Batch Date (3).TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Detail - By EOD Batch Number & Shift (2).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (2).TXT",
+        "size_bytes": 21646,
+        "modified": "2026-05-25 13:05",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Detail - By EOD Batch Number & Shift (3).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (3).TXT",
+        "size_bytes": 59106,
+        "modified": "2026-05-25 13:07",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Detail - By EOD Batch Number & Shift (4).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (4).TXT",
+        "size_bytes": 43818,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Detail - By EOD Batch Number & Shift (5).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (5).TXT",
+        "size_bytes": 57010,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Summary By EOD Batch & Shift (2).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (2).TXT",
+        "size_bytes": 2031,
+        "modified": "2026-05-25 13:05",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Summary By EOD Batch & Shift (3).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (3).TXT",
+        "size_bytes": 2096,
+        "modified": "2026-05-25 13:07",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Summary By EOD Batch & Shift (4).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (4).TXT",
+        "size_bytes": 1901,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Summary By EOD Batch & Shift (5).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (5).TXT",
+        "size_bytes": 2096,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Transactions Not Yet Sent to Bank (1).TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+        "size_bytes": 3523,
+        "modified": "2026-05-25 13:04",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Transactions Not Yet Sent to Bank (2).TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+        "size_bytes": 2698,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EFT Transactions Not Yet Sent to Bank (3).TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank (3).TXT",
+        "size_bytes": 2834,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Additional/EOM By Category & Sub-Category Detail (Std Report).TXT",
+        "name": "EOM By Category & Sub-Category Detail (Std Report).TXT",
+        "size_bytes": 2667,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Fuel Sales Control - Control Report - ATG.TXT",
+        "name": "Fuel Sales Control - Control Report - ATG.TXT",
+        "size_bytes": 11217,
+        "modified": "2026-05-25 13:07",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Fuel Sales Control - MTD By Product.TXT",
+        "name": "Fuel Sales Control - MTD By Product.TXT",
+        "size_bytes": 12840,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Fuel Sales Control - MTD Summary.TXT",
+        "name": "Fuel Sales Control - MTD Summary.TXT",
+        "size_bytes": 16975,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Month End Detail.TXT",
+        "name": "Month End Detail.TXT",
+        "size_bytes": 158204,
+        "modified": "2026-05-25 13:06",
+        "source_type": "pos_system",
+        "report": "month_end_summary"
+      },
+      {
+        "path": "Additional/Month End Summary (1).TXT",
+        "name": "Month End Summary (1).TXT",
+        "size_bytes": 15767,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "month_end_summary"
+      },
+      {
+        "path": "Additional/Month End Summary.TXT",
+        "name": "Month End Summary.TXT",
+        "size_bytes": 15767,
+        "modified": "2026-05-25 13:06",
+        "source_type": "pos_system",
+        "report": "month_end_summary"
+      },
+      {
+        "path": "Additional/Monthly Summary Forecourt & Shop - By Category.TXT",
+        "name": "Monthly Summary Forecourt & Shop - By Category.TXT",
+        "size_bytes": 5832,
+        "modified": "2026-05-25 13:07",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Cost & Selling Price Listing  - By Category (1).TXT",
+        "name": "Stock Cost & Selling Price Listing  - By Category (1).TXT",
+        "size_bytes": 237792,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Cost & Selling Price Listing  - By Category (2).TXT",
+        "name": "Stock Cost & Selling Price Listing  - By Category (2).TXT",
+        "size_bytes": 237787,
+        "modified": "2026-05-25 13:07",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Cost & Selling Price Listing  - By Category.TXT",
+        "name": "Stock Cost & Selling Price Listing  - By Category.TXT",
+        "size_bytes": 1558,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock On Hand with Unit Cost - by Category.TXT",
+        "name": "Stock On Hand with Unit Cost - by Category.TXT",
+        "size_bytes": 137020,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Purchases Summary - By Category Summarized.TXT",
+        "name": "Stock Purchases Summary - By Category Summarized.TXT",
+        "size_bytes": 3895,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Purchases Summary - By Category.TXT",
+        "name": "Stock Purchases Summary - By Category.TXT",
+        "size_bytes": 72478,
+        "modified": "2026-05-25 13:07",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
+        "name": "Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
+        "size_bytes": 5994,
+        "modified": "2026-05-25 13:07",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Additional/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "size_bytes": 37706,
+        "modified": "2026-05-25 13:08",
+        "source_type": "pos_system",
+        "report": "stock_take"
+      },
+      {
+        "path": "Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+        "name": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+        "size_bytes": 13453,
+        "modified": "2026-05-25 13:06",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Starter Docs/62848015857.ofx",
+        "name": "62848015857.ofx",
+        "size_bytes": 38955,
+        "modified": "2026-05-24 17:22",
+        "source_type": "bank_feed",
+        "report": "bank_statement"
+      },
+      {
+        "path": "Starter Docs/CASH UP APRIL 26.xlsx",
+        "name": "CASH UP APRIL 26.xlsx",
+        "size_bytes": 477695,
+        "modified": "2026-05-24 12:44",
+        "source_type": "manual_recon",
+        "report": "cash_up"
+      },
+      {
+        "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (1).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (1).TXT",
+        "size_bytes": 19220,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (2).TXT",
+        "size_bytes": 16328,
+        "modified": "2026-05-24 16:40",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (3).TXT",
+        "size_bytes": 19217,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
+        "name": "Cash Variance - Selected EOD by Cashier.TXT",
+        "size_bytes": 16330,
+        "modified": "2026-05-23 11:17",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Starter Docs/Day End Summary (1).TXT",
+        "name": "Day End Summary (1).TXT",
+        "size_bytes": 52790,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/Day End Summary (2).TXT",
+        "name": "Day End Summary (2).TXT",
+        "size_bytes": 52657,
+        "modified": "2026-05-24 12:29",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/Day End Summary (3).TXT",
+        "name": "Day End Summary (3).TXT",
+        "size_bytes": 51945,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/Day End Summary (4).TXT",
+        "name": "Day End Summary (4).TXT",
+        "size_bytes": 52746,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/Day End Summary.TXT",
+        "name": "Day End Summary.TXT",
+        "size_bytes": 53300,
+        "modified": "2026-05-23 11:15",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/deepseek_text_20260524_26b077.txt",
+        "name": "deepseek_text_20260524_26b077.txt",
+        "size_bytes": 9379,
+        "modified": "2026-05-24 14:52",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (1).TXT",
+        "name": "EFT Batch Summary By EFT Batch Date (1).TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT",
+        "name": "EFT Batch Summary By EFT Batch Date (2).TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Batch Summary By EFT Batch Date.TXT",
+        "name": "EFT Batch Summary By EFT Batch Date.TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-23 11:15",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (1).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (1).TXT",
+        "size_bytes": 57010,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (2).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (2).TXT",
+        "size_bytes": 59106,
+        "modified": "2026-05-24 16:40",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (3).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (3).TXT",
+        "size_bytes": 43818,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift.TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift.TXT",
+        "size_bytes": 65426,
+        "modified": "2026-05-23 11:16",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Summary By EOD Batch & Shift (1).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (1).TXT",
+        "size_bytes": 2096,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Summary By EOD Batch & Shift (2).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (2).TXT",
+        "size_bytes": 2096,
+        "modified": "2026-05-24 16:40",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Summary By EOD Batch & Shift (3).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (3).TXT",
+        "size_bytes": 1901,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Summary By EOD Batch & Shift.TXT",
+        "name": "EFT Summary By EOD Batch & Shift.TXT",
+        "size_bytes": 2356,
+        "modified": "2026-05-23 11:16",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (1).TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank (1).TXT",
+        "size_bytes": 2834,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (2).TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank (2).TXT",
+        "size_bytes": 2698,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank.TXT",
+        "size_bytes": 2698,
+        "modified": "2026-05-23 11:15",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/invoice_ledger.xlsx",
+        "name": "invoice_ledger.xlsx",
+        "size_bytes": 6809,
+        "modified": "2026-05-24 17:21",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Starter Docs/Month End Summary.TXT",
+        "name": "Month End Summary.TXT",
+        "size_bytes": 15767,
+        "modified": "2026-05-24 12:28",
+        "source_type": "pos_system",
+        "report": "month_end_summary"
+      },
+      {
+        "path": "Starter Docs/Monthly Summary Forecourt & Shop - By Category.TXT",
+        "name": "Monthly Summary Forecourt & Shop - By Category.TXT",
+        "size_bytes": 5832,
+        "modified": "2026-05-24 12:28",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Starter Docs/Nett Pay List - 140526 (1).xls",
+        "name": "Nett Pay List - 140526 (1).xls",
+        "size_bytes": 33280,
+        "modified": "2026-05-23 11:26",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list"
+      },
+      {
+        "path": "Starter Docs/Nett Pay List - 140526 (2).xls",
+        "name": "Nett Pay List - 140526 (2).xls",
+        "size_bytes": 60416,
+        "modified": "2026-05-24 12:44",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list"
+      },
+      {
+        "path": "Starter Docs/Nett Pay List - 140526.xls",
+        "name": "Nett Pay List - 140526.xls",
+        "size_bytes": 33280,
+        "modified": "2026-05-15 15:52",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list"
+      },
+      {
+        "path": "Starter Docs/Nett Pay List - 210526.xlsx",
+        "name": "Nett Pay List - 210526.xlsx",
+        "size_bytes": 25009,
+        "modified": "2026-05-24 12:44",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list"
+      },
+      {
+        "path": "Starter Docs/Refresh/62848015857.ofx",
+        "name": "62848015857.ofx",
+        "size_bytes": 38955,
+        "modified": "2026-05-24 17:22",
+        "source_type": "bank_feed",
+        "report": "bank_statement"
+      },
+      {
+        "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier (1).TXT",
+        "name": "Cash Variance - Selected EOD by Cashier (1).TXT",
+        "size_bytes": 16328,
+        "modified": "2026-05-24 16:40",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT",
+        "name": "Cash Variance - Selected EOD by Cashier.TXT",
+        "size_bytes": 19217,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "cash_variance"
+      },
+      {
+        "path": "Starter Docs/Refresh/Day End Summary (1).TXT",
+        "name": "Day End Summary (1).TXT",
+        "size_bytes": 51945,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/Refresh/Day End Summary.TXT",
+        "name": "Day End Summary.TXT",
+        "size_bytes": 52746,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "day_end_summary"
+      },
+      {
+        "path": "Starter Docs/Refresh/EFT Batch Summary By EFT Batch Date.TXT",
+        "name": "EFT Batch Summary By EFT Batch Date.TXT",
+        "size_bytes": 2000,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/Refresh/EFT Detail - By EOD Batch Number & Shift (1).TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift (1).TXT",
+        "size_bytes": 59106,
+        "modified": "2026-05-24 16:40",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/Refresh/EFT Detail - By EOD Batch Number & Shift.TXT",
+        "name": "EFT Detail - By EOD Batch Number & Shift.TXT",
+        "size_bytes": 43818,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift (1).TXT",
+        "name": "EFT Summary By EOD Batch & Shift (1).TXT",
+        "size_bytes": 2096,
+        "modified": "2026-05-24 16:40",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift.TXT",
+        "name": "EFT Summary By EOD Batch & Shift.TXT",
+        "size_bytes": 1901,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/Refresh/EFT Transactions Not Yet Sent to Bank.TXT",
+        "name": "EFT Transactions Not Yet Sent to Bank.TXT",
+        "size_bytes": 2698,
+        "modified": "2026-05-24 16:39",
+        "source_type": "pos_system",
+        "report": "eft"
+      },
+      {
+        "path": "Starter Docs/Refresh/invoice_ledger.xlsx",
+        "name": "invoice_ledger.xlsx",
+        "size_bytes": 6809,
+        "modified": "2026-05-24 17:21",
+        "source_type": "unknown",
+        "report": "unknown"
+      },
+      {
+        "path": "Starter Docs/Schedule of Accounts Invoice T (1).xlsx",
+        "name": "Schedule of Accounts Invoice T (1).xlsx",
+        "size_bytes": 215325,
+        "modified": "2026-05-24 12:44",
+        "source_type": "manual_recon",
+        "report": "supplier_schedule"
+      },
+      {
+        "path": "Starter Docs/Schedule of Accounts Invoice T (2).xlsx",
+        "name": "Schedule of Accounts Invoice T (2).xlsx",
+        "size_bytes": 215325,
+        "modified": "2026-05-24 12:33",
+        "source_type": "manual_recon",
+        "report": "supplier_schedule"
+      },
+      {
+        "path": "Starter Docs/Schedule of Accounts Invoice T.xlsx",
+        "name": "Schedule of Accounts Invoice T.xlsx",
+        "size_bytes": 215325,
+        "modified": "2026-05-24 12:33",
+        "source_type": "manual_recon",
+        "report": "supplier_schedule"
+      },
+      {
+        "path": "Starter Docs/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
+        "size_bytes": 37706,
+        "modified": "2026-05-24 12:29",
+        "source_type": "pos_system",
+        "report": "stock_take"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
+        "name": "WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
+        "size_bytes": 90681,
+        "modified": "2026-05-24 14:37",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.01.jpeg",
+        "name": "WhatsApp Image 2026-05-15 at 08.23.01.jpeg",
+        "size_bytes": 171640,
+        "modified": "2026-05-24 14:37",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.02 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-15 at 08.23.02 (1).jpeg",
+        "size_bytes": 201073,
+        "modified": "2026-05-24 14:37",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.02.jpeg",
+        "name": "WhatsApp Image 2026-05-15 at 08.23.02.jpeg",
+        "size_bytes": 403645,
+        "modified": "2026-05-24 14:37",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-15 at 14.15.42.jpeg",
+        "name": "WhatsApp Image 2026-05-15 at 14.15.42.jpeg",
+        "size_bytes": 118165,
+        "modified": "2026-05-24 14:37",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-16 at 12.00.09.jpeg",
+        "name": "WhatsApp Image 2026-05-16 at 12.00.09.jpeg",
+        "size_bytes": 76057,
+        "modified": "2026-05-24 14:37",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.00.jpeg",
+        "name": "WhatsApp Image 2026-05-17 at 06.50.00.jpeg",
+        "size_bytes": 61367,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.01 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-17 at 06.50.01 (1).jpeg",
+        "size_bytes": 100844,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.01.jpeg",
+        "name": "WhatsApp Image 2026-05-17 at 06.50.01.jpeg",
+        "size_bytes": 178215,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-18 at 06.25.39 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-18 at 06.25.39 (1).jpeg",
+        "size_bytes": 369454,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-18 at 06.25.39.jpeg",
+        "name": "WhatsApp Image 2026-05-18 at 06.25.39.jpeg",
+        "size_bytes": 369454,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-18 at 07.33.39 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-18 at 07.33.39 (1).jpeg",
+        "size_bytes": 160791,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-18 at 07.33.39.jpeg",
+        "name": "WhatsApp Image 2026-05-18 at 07.33.39.jpeg",
+        "size_bytes": 160791,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-18 at 08.20.00.jpeg",
+        "name": "WhatsApp Image 2026-05-18 at 08.20.00.jpeg",
+        "size_bytes": 98367,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.48 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 07.40.48 (1).jpeg",
+        "size_bytes": 381700,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.48.jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 07.40.48.jpeg",
+        "size_bytes": 203475,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.49 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 07.40.49 (1).jpeg",
+        "size_bytes": 105355,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.49.jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 07.40.49.jpeg",
+        "size_bytes": 105355,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 10.33.54 (1).jpeg",
+        "size_bytes": 121930,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54 (2).jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 10.33.54 (2).jpeg",
+        "size_bytes": 121930,
+        "modified": "2026-05-24 14:36",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54.jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 10.33.54.jpeg",
+        "size_bytes": 136811,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 11.27.20.jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 11.27.20.jpeg",
+        "size_bytes": 466582,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 16.44.59.jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 16.44.59.jpeg",
+        "size_bytes": 75225,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-19 at 16.59.32.jpeg",
+        "name": "WhatsApp Image 2026-05-19 at 16.59.32.jpeg",
+        "size_bytes": 74591,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 07.51.26 (1).jpeg",
+        "size_bytes": 188072,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26 (2).jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 07.51.26 (2).jpeg",
+        "size_bytes": 377903,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26.jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 07.51.26.jpeg",
+        "size_bytes": 103382,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 08.11.22.jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 08.11.22.jpeg",
+        "size_bytes": 479634,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 08.37.42.jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 08.37.42.jpeg",
+        "size_bytes": 120990,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 16.20.54.jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 16.20.54.jpeg",
+        "size_bytes": 392844,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-20 at 16.20.55.jpeg",
+        "name": "WhatsApp Image 2026-05-20 at 16.20.55.jpeg",
+        "size_bytes": 402780,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-21 at 06.40.39.jpeg",
+        "name": "WhatsApp Image 2026-05-21 at 06.40.39.jpeg",
+        "size_bytes": 356606,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-21 at 06.40.40.jpeg",
+        "name": "WhatsApp Image 2026-05-21 at 06.40.40.jpeg",
+        "size_bytes": 105840,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-21 at 08.24.40.jpeg",
+        "name": "WhatsApp Image 2026-05-21 at 08.24.40.jpeg",
+        "size_bytes": 128638,
+        "modified": "2026-05-24 14:35",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-21 at 08.24.41.jpeg",
+        "name": "WhatsApp Image 2026-05-21 at 08.24.41.jpeg",
+        "size_bytes": 195863,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 06.17.14.jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 06.17.14.jpeg",
+        "size_bytes": 398455,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.51.jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 08.18.51.jpeg",
+        "size_bytes": 212940,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.52 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 08.18.52 (1).jpeg",
+        "size_bytes": 89172,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.52.jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 08.18.52.jpeg",
+        "size_bytes": 107930,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.14 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 09.03.14 (1).jpeg",
+        "size_bytes": 370084,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.14.jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 09.03.14.jpeg",
+        "size_bytes": 449768,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.15.jpeg",
+        "name": "WhatsApp Image 2026-05-22 at 09.03.15.jpeg",
+        "size_bytes": 419271,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-23 at 07.09.39 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-23 at 07.09.39 (1).jpeg",
+        "size_bytes": 319510,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-23 at 07.09.39.jpeg",
+        "name": "WhatsApp Image 2026-05-23 at 07.09.39.jpeg",
+        "size_bytes": 342099,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-23 at 08.18.26.jpeg",
+        "name": "WhatsApp Image 2026-05-23 at 08.18.26.jpeg",
+        "size_bytes": 207196,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-23 at 08.18.27.jpeg",
+        "name": "WhatsApp Image 2026-05-23 at 08.18.27.jpeg",
+        "size_bytes": 101227,
+        "modified": "2026-05-24 14:34",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.35.12.jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 07.35.12.jpeg",
+        "size_bytes": 481032,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.36 (1).jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 07.48.36 (1).jpeg",
+        "size_bytes": 108357,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.36.jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 07.48.36.jpeg",
+        "size_bytes": 124449,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.37.jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 07.48.37.jpeg",
+        "size_bytes": 437327,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 08.59.20.jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 08.59.20.jpeg",
+        "size_bytes": 215955,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 10.19.08.jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 10.19.08.jpeg",
+        "size_bytes": 143053,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      },
+      {
+        "path": "Starter Docs/WhatsApp Image 2026-05-24 at 12.19.51.jpeg",
+        "name": "WhatsApp Image 2026-05-24 at 12.19.51.jpeg",
+        "size_bytes": 361907,
+        "modified": "2026-05-24 14:33",
+        "source_type": "ocr_whatsapp",
+        "report": "ocr_synthesis"
+      }
+    ],
+    "payroll_files": []
+  }
+}

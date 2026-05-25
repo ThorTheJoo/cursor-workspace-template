@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>eft_summary_by_shift — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>eft_summary_by_shift</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>EFT Summary By EOD Batch &amp; Shift</h1>
+      <p class="meta"><span class="tag tag-pos_system">Pos System</span>
+        Frequency: <strong>Daily</strong> ·
+        <span class="badge-none">not implemented</span> ·
+        1 period(s) in series · 10 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/eft_summary_by_shift.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>EFT Summary By EOD Batch &amp; Shift</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-none">not implemented</span></p>
+<p>Shift/till/merchant-type breakdown of card settlements for audit.</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>batch</code></li>
+<li><code>till</code></li>
+<li><code>shift</code></li>
+<li><code>merchant_type</code></li>
+<li><code>amount</code></li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Dispute resolution per shift</li>
+<li>Till-level card reconciliation</li>
+</ul></div></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Daily)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/EFT Summary By EOD Batch &amp; Shift.TXT'><td class='nowrap'><strong>—</strong></td><td>—</td><td><code>EFT Summary By EOD Batch &amp; Shift.TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/EFT Summary By EOD Batch &amp; Shift (4).TXT' data-ingest='20260525-2342eb28ab4ad46f'><td><code>EFT Summary By EOD Batch &amp; Shift (4).TXT</code></td><td>Additional</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>1,901</td></tr><tr class='clickable' data-path='Additional/EFT Summary By EOD Batch &amp; Shift (5).TXT' data-ingest='20260525-586f2ac56e50d947'><td><code>EFT Summary By EOD Batch &amp; Shift (5).TXT</code></td><td>Additional</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>2,096</td></tr><tr class='clickable' data-path='Additional/EFT Summary By EOD Batch &amp; Shift (3).TXT' data-ingest='20260525-235db5f531d22a5d'><td><code>EFT Summary By EOD Batch &amp; Shift (3).TXT</code></td><td>Additional</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>2,096</td></tr><tr class='clickable' data-path='Additional/EFT Summary By EOD Batch &amp; Shift (2).TXT' data-ingest='20260525-04a9aa81530867d6'><td><code>EFT Summary By EOD Batch &amp; Shift (2).TXT</code></td><td>Additional</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-25 13:05</td><td class='num'>2,031</td></tr><tr class='clickable' data-path='Starter Docs/EFT Summary By EOD Batch &amp; Shift (2).TXT' data-ingest='20260525-235db5f531d22a5d'><td><code>EFT Summary By EOD Batch &amp; Shift (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-24 16:40</td><td class='num'>2,096</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/EFT Summary By EOD Batch &amp; Shift (1).TXT' data-ingest='20260525-235db5f531d22a5d'><td><code>EFT Summary By EOD Batch &amp; Shift (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>dup</td><td>2026-05-24 16:40</td><td class='num'>2,096</td></tr><tr class='clickable' data-path='Starter Docs/EFT Summary By EOD Batch &amp; Shift (3).TXT' data-ingest='20260525-2342eb28ab4ad46f'><td><code>EFT Summary By EOD Batch &amp; Shift (3).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>1,901</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/EFT Summary By EOD Batch &amp; Shift.TXT' data-ingest='20260525-2342eb28ab4ad46f'><td><code>EFT Summary By EOD Batch &amp; Shift.TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>1,901</td></tr><tr class='clickable' data-path='Starter Docs/EFT Summary By EOD Batch &amp; Shift (1).TXT' data-ingest='20260525-586f2ac56e50d947'><td><code>EFT Summary By EOD Batch &amp; Shift (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>2,096</td></tr><tr class='clickable' data-path='Starter Docs/EFT Summary By EOD Batch &amp; Shift.TXT' data-ingest='20260525-a5b848a2673344ff'><td><code>EFT Summary By EOD Batch &amp; Shift.TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_summary_by_shift|file:EFT Summary By EOD Batch &amp; Shift</td><td>primary</td><td>2026-05-23 11:16</td><td class='num'>2,356</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-04a9aa81530867d6",
+    "path": "Additional/EFT Summary By EOD Batch & Shift (2).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (2).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 2031,
+    "modified": "2026-05-25 13:05",
+    "sha256_prefix": "04a9aa81530867d6",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-235db5f531d22a5d",
+    "path": "Additional/EFT Summary By EOD Batch & Shift (3).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (3).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 2096,
+    "modified": "2026-05-25 13:07",
+    "sha256_prefix": "235db5f531d22a5d",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-2342eb28ab4ad46f",
+    "path": "Additional/EFT Summary By EOD Batch & Shift (4).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (4).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 1901,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "2342eb28ab4ad46f",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-586f2ac56e50d947",
+    "path": "Additional/EFT Summary By EOD Batch & Shift (5).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (5).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 2096,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "586f2ac56e50d947",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-586f2ac56e50d947",
+    "path": "Starter Docs/EFT Summary By EOD Batch & Shift (1).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": true,
+    "size_bytes": 2096,
+    "modified": "2026-05-24 12:28",
+    "sha256_prefix": "586f2ac56e50d947",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-235db5f531d22a5d",
+    "path": "Starter Docs/EFT Summary By EOD Batch & Shift (2).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (2).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 2096,
+    "modified": "2026-05-24 16:40",
+    "sha256_prefix": "235db5f531d22a5d",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-2342eb28ab4ad46f",
+    "path": "Starter Docs/EFT Summary By EOD Batch & Shift (3).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (3).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 1901,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "2342eb28ab4ad46f",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-a5b848a2673344ff",
+    "path": "Starter Docs/EFT Summary By EOD Batch & Shift.TXT",
+    "filename": "EFT Summary By EOD Batch & Shift.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 2356,
+    "modified": "2026-05-23 11:16",
+    "sha256_prefix": "a5b848a2673344ff",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-235db5f531d22a5d",
+    "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift (1).TXT",
+    "filename": "EFT Summary By EOD Batch & Shift (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": true,
+    "size_bytes": 2096,
+    "modified": "2026-05-24 16:40",
+    "sha256_prefix": "235db5f531d22a5d",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  },
+  {
+    "ingest_id": "20260525-2342eb28ab4ad46f",
+    "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift.TXT",
+    "filename": "EFT Summary By EOD Batch & Shift.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Summary By EOD Batch & Shift",
+    "report_type": "eft_summary_by_shift",
+    "source_type": "pos_system",
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "is_duplicate_copy": false,
+    "size_bytes": 1901,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "2342eb28ab4ad46f",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "eft_summary_by_shift|file:EFT Summary By EOD Batch & Shift",
+    "source_file": "EFT Summary By EOD Batch & Shift.TXT",
+    "path": "Starter Docs/EFT Summary By EOD Batch & Shift.TXT",
+    "modified": "2026-05-23 11:16",
+    "summary": {
+      "report_type": "eft_summary_by_shift"
+    },
+    "ingest_id": "20260525-a5b848a2673344ff"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+---
+document_type: REFERENCE
+status: ACTIVE
+version: "1.0.0"
+updated: "2026-05-24"
+purpose: >
+  Canonical MDD specification per report TYPE (not per physical filename).
+  Pair with ingest-ledger.json (drops) and series/*.json (history).
+accountable: "thagra01"
+
+# ---------------------------------------------------------------------------
+# How to use this catalog
+# ---------------------------------------------------------------------------
+# - report_type: stable id used in parsers, series files, drill-down UI
+# - content_key: business identity (e.g. day_end|batch:147|date:24/05/2026)
+# - Ignore filename suffix (1),(2) — duplicates of same export
+# - See FILE_INGESTION_ARCHITECTURE.md for JSON-per-file critique
+
+report_types:
+
+  day_end_summary:
+    pattern_names: ["Day End Summary"]
+    source_type: pos_system
+    frequency: daily
+    trust: authoritative_for_operations
+    parser: parse_reports.parse_day_end
+    parser_status: integrated
+    pos_version: "ENGEN POS v5.46k"
+    business_purpose: >
+      Single source of truth for one trading day: combined forecourt + shop sales,
+      fuel volume, GP%, cashier exceptions, wet-stock EOD, and nett takings.
+    key_fields:
+      - batch_number
+      - batch_date
+      - nett_takings
+      - fuel_total
+      - fuel_volume
+      - shop_total_incl
+      - cash_variance
+      - fuel_grades (pump vs tank variance)
+      - top_categories
+    valuable_insights:
+      - Daily revenue trend and day-on-day deltas
+      - Fuel litres sold vs wet-stock variance (loss/theft/dip error)
+      - Shop category mix and GP%
+      - Cash control at shift close
+    owner_callouts:
+      - "Cash variance > R50 — investigate cashier/till"
+      - "Fuel pump-tank variance > ±25 L per grade — wet stock alert"
+      - "Nett takings drop >30% vs prior day — trading anomaly (Sunday, supply, outage)"
+    reconciles_with: [eft_batch_summary, bank_feed.speedpoint, ocr_whatsapp.fuel_volume]
+    sample_values:
+      batch_147: { date: "24/05/2026", nett_takings: "~R183k", fuel_litres: "~5,480" }
+    dashboard_use: [daily_timeline, snapshot_kpis, wet_stock_table]
+
+  month_end_summary:
+    pattern_names: ["Month End Summary"]
+    source_type: pos_system
+    frequency: monthly
+    parser: parse_reports.parse_month_end
+    parser_status: integrated_partial
+    business_purpose: >
+      Month-close operational totals: nett takings, combined sales, fuel MTD volume,
+      banking/EFT aggregates, cash variance banking line.
+    key_fields: [period, nett_takings, combined_sales, fuel_volume, cash_variance_banking]
+    owner_callouts:
+      - "Banking variance line — month-end cash-up reconciliation"
+    dashboard_use: [monthly_reference_section]
+
+  eft_batch_summary:
+    pattern_names: ["EFT Batch Summary By EFT Batch Date"]
+    source_type: pos_system
+    frequency: daily
+    parser: parse_reports.parse_eft_batch_summary
+    parser_status: integrated
+    business_purpose: >
+      Card payments batched for bank settlement on EFT batch date (Forecourt + Retail + General).
+    key_fields: [batch_date, total_trx, total_amount, forecourt_amount, retail_amount]
+    owner_callouts:
+      - "Match Speedpoint bank credit T+0 to T+2 after batch date"
+      - "Large gap vs Day End card tender — timing or missing batch"
+    reconciles_with: [bank_feed.speedpoint_daily]
+    sample_values:
+      batch_18may: { pos_total: 143267.20, bank_speedpoint_19may: 143267.20, status: MATCH }
+
+  eft_pending:
+    pattern_names: ["EFT Transactions Not Yet Sent to Bank"]
+    source_type: pos_system
+    frequency: daily
+    parser: parse_reports.parse_eft_pending
+    parser_status: integrated
+    business_purpose: >
+      Card trx captured at Day End but not yet in an EFT batch — explains timing gap to bank.
+    key_fields: [pending_total, transaction_count]
+    dashboard_use: [eft_pending_kpi]
+
+  eft_summary_by_shift:
+    pattern_names: ["EFT Summary By EOD Batch & Shift"]
+    source_type: pos_system
+    frequency: daily
+    parser_status: not_implemented
+    business_purpose: Shift/till/merchant-type breakdown of card settlements for audit.
+    key_fields: [batch, till, shift, merchant_type, amount]
+    owner_callouts: ["Dispute resolution per shift", "Till-level card reconciliation"]
+
+  eft_detail_by_shift:
+    pattern_names: ["EFT Detail - By EOD Batch Number & Shift"]
+    source_type: pos_system
+    frequency: daily
+    parser_status: not_implemented
+    business_purpose: Transaction-level card detail (masked PAN, auth, time) for chargebacks.
+    key_fields: [trx_datetime, amount, till, shift, card_mask]
+
+  cash_variance_by_cashier:
+    pattern_names: ["Cash Variance - Selected EOD by Cashier"]
+    source_type: pos_system
+    frequency: daily
+    parser_status: classified_only
+    business_purpose: Per-cashier till variance by tender type — accountability.
+    owner_callouts: ["Repeat offender cashiers", "Safe drops vs theoretical"]
+
+  stock_take_variance:
+    pattern_names: ["Stock Take Variance"]
+    source_type: inventory
+    frequency: periodic
+    parser: parse_reports.parse_stock_take_summary
+    parser_status: integrated_summary_only
+    business_purpose: Stock count vs theoretical — shrink at SKU level.
+    key_fields: [stock_take_date, sku_variances, variance_value_at_cost]
+    owner_callouts: ["High-value SKU variances — theft or receiving error"]
+
+  stock_shrinkage_mtd:
+    pattern_names: ["Stock Shrinkage Analysis - MTD"]
+    source_type: inventory
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: MTD adjustment % by category at latest cost — trend shrink.
+
+  stock_purchases_by_category:
+    pattern_names: ["Stock Purchases Summary - By Category"]
+    source_type: inventory
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: COGS purchases by category — vendor spend control.
+
+  fuel_control_mtd_summary:
+    pattern_names: ["Fuel Sales Control - MTD Summary"]
+    source_type: pos_system
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: Daily wet-stock control — pump vs tank variance % by grade.
+
+  fuel_control_atg:
+    pattern_names: ["Fuel Sales Control - Control Report - ATG"]
+    source_type: pos_system
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: ATG dips vs pump meters — tank gauge reconciliation.
+
+  monthly_category_summary:
+    pattern_names: ["Monthly Summary Forecourt & Shop - By Category"]
+    source_type: pos_system
+    frequency: month_end
+    parser_status: metadata_only
+    business_purpose: Category sales mix for the month — range review.
+
+  month_end_detail:
+    pattern_names: ["Month End Detail", "EOM By Category"]
+    source_type: pos_system
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: SKU-level month sales and GP — assortment decisions.
+
+  turnover_levy:
+    pattern_names: ["Turnover Levy Report"]
+    source_type: accounting
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: Head-office levy on turnover by HO category — franchise reporting.
+
+  debtors_age_analysis:
+    pattern_names: ["Debtors Age Analysis"]
+    source_type: accounting
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: Customer/debtor aging — credit control, drive-offs.
+
+  creditors_purchases_detail:
+    pattern_names: ["Creditors Purchases - Detail"]
+    source_type: accounting
+    frequency: monthly
+    parser_status: not_implemented
+    business_purpose: Supplier invoice lines vs standard cost — AP variance.
+
+  bank_statement:
+    pattern_names: ["*.ofx"]
+    source_type: bank_feed
+    frequency: weekly_to_monthly
+    parser: parse_external_inputs.parse_ofx
+    parser_status: integrated
+    business_purpose: Actual cash movement — Speedpoint settlements, wages, suppliers, fees.
+    key_fields: [period_start, period_end, ledger_balance, speedpoint_daily, wage_runs, by_category]
+    owner_callouts:
+      - "Ledger balance vs expected float"
+      - "Payroll debit 1-2 days after pay date"
+      - "Speedpoint ≠ POS EFT — check settlement lag"
+    reconciles_with: [nett_pay_list, eft_batch_summary]
+    sample_values:
+      payroll_210526: { csv: 31449.03, bank_22may: 31449.03, status: MATCH }
+
+  nett_pay_list:
+    pattern_names: ["Nett Pay List"]
+    source_type: payroll_system
+    frequency: weekly
+    parser: netpay_to_payment_csv
+    parser_status: integrated
+    business_purpose: Authoritative net pay per employee → FNB bulk payment CSV.
+    key_fields: [pay_date, employee_count, total_net_pay, output_csv]
+    owner_callouts: ["Total must match bank wage debits within 3 days"]
+
+  payment_csv:
+    pattern_names: ["Payment_*.csv"]
+    source_type: payroll_system
+    frequency: per_pay_run
+    parser_status: output_artifact
+    business_purpose: FNB BinSol upload file — debit 62848015857, hash total row 3.
+
+  cash_up:
+    pattern_names: ["CASH UP"]
+    source_type: manual_recon
+    frequency: monthly
+    parser: parse_external_inputs.parse_cash_up
+    parser_status: metadata_only
+    business_purpose: Site month-end cash reconciliation workbook (petty, drops, banking).
+
+  supplier_schedule:
+    pattern_names: ["Schedule of Accounts"]
+    source_type: manual_recon
+    frequency: ongoing
+    parser: parse_external_inputs.parse_schedule_of_accounts
+    parser_status: integrated
+    business_purpose: Supplier invoices by department — spend control.
+
+  ocr_synthesis:
+    pattern_names: ["deepseek_text"]
+    source_type: ocr_whatsapp
+    frequency: ad_hoc
+    parser: parse_ocr_whatsapp
+    parser_status: integrated
+    trust: reference_pending_confirmation
+    business_purpose: Photo extracts — ATG, CIT, pump/tank when POS file missing.
+    owner_callouts: ["Always confirm ATG/CIT against POS or bank before action"]

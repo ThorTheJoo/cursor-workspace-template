@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>eft_batch_summary — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>eft_batch_summary</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>EFT Batch Summary By EFT Batch Date</h1>
+      <p class="meta"><span class="tag tag-pos_system">Pos System</span>
+        Frequency: <strong>Daily</strong> ·
+        <span class="badge-integrated">integrated</span> ·
+        4 period(s) in series · 7 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/eft_batch_summary.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>EFT Batch Summary By EFT Batch Date</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Card payments batched for bank settlement on EFT batch date (Forecourt + Retail + General).
+</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>batch_date</code></li>
+<li><code>total_trx</code></li>
+<li><code>total_amount</code></li>
+<li><code>forecourt_amount</code></li>
+<li><code>retail_amount</code></li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Match Speedpoint bank credit T+0 to T+2 after batch date</li>
+<li>Large gap vs Day End card tender — timing or missing batch</li>
+</ul></div>
+<p><strong>Reconciles with:</strong> bank_feed.speedpoint_daily</p></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Daily)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th class='num'>Total Amount</th><th class='num'>Total Trx</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT'><td class='nowrap'><strong>18/05/2026</strong></td><td>—</td><td class='num'>R 143,267.20</td><td class='num'>384</td><td><code>EFT Batch Summary By EFT Batch Date (2).TXT</code></td></tr>
+<tr class='clickable' data-path='Additional/EFT Batch Summary By EFT Batch Date (3).TXT'><td class='nowrap'><strong>20/05/2026</strong></td><td>—</td><td class='num'>R 121,361.05 <span class='down'>(-21,906.15)</span></td><td class='num'>374 <span class='down'>(-10.00)</span></td><td><code>EFT Batch Summary By EFT Batch Date (3).TXT</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/EFT Batch Summary By EFT Batch Date.TXT'><td class='nowrap'><strong>22/05/2026</strong></td><td>—</td><td class='num'>R 134,855.45 <span class='up'>(+13,494.40)</span></td><td class='num'>429 <span class='up'>(+55.00)</span></td><td><code>EFT Batch Summary By EFT Batch Date.TXT</code></td></tr>
+<tr class='clickable' data-path='Additional/EFT Batch Summary By EFT Batch Date (1).TXT'><td class='nowrap'><strong>24/05/2026</strong></td><td>—</td><td class='num'>R 51,429.50 <span class='down'>(-83,425.95)</span></td><td class='num'>117 <span class='down'>(-312.00)</span></td><td><code>EFT Batch Summary By EFT Batch Date (1).TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/EFT Batch Summary By EFT Batch Date (3).TXT' data-ingest='20260525-54035db78e8dbf10'><td><code>EFT Batch Summary By EFT Batch Date (3).TXT</code></td><td>Additional</td><td class='nowrap'>eft_batch|date:20/05/2026</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>2,000</td></tr><tr class='clickable' data-path='Additional/EFT Batch Summary By EFT Batch Date (2).TXT' data-ingest='20260525-12d8b8e391952535'><td><code>EFT Batch Summary By EFT Batch Date (2).TXT</code></td><td>Additional</td><td class='nowrap'>eft_batch|date:18/05/2026</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>2,000</td></tr><tr class='clickable' data-path='Additional/EFT Batch Summary By EFT Batch Date (1).TXT' data-ingest='20260525-2edc9a6e633c8c6d'><td><code>EFT Batch Summary By EFT Batch Date (1).TXT</code></td><td>Additional</td><td class='nowrap'>eft_batch|date:24/05/2026</td><td>dup</td><td>2026-05-25 13:05</td><td class='num'>2,000</td></tr><tr class='clickable' data-path='Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT' data-ingest='20260525-12d8b8e391952535'><td><code>EFT Batch Summary By EFT Batch Date (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_batch|date:18/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>2,000</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/EFT Batch Summary By EFT Batch Date.TXT' data-ingest='20260525-12d8b8e391952535'><td><code>EFT Batch Summary By EFT Batch Date.TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_batch|date:18/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>2,000</td></tr><tr class='clickable' data-path='Starter Docs/EFT Batch Summary By EFT Batch Date (1).TXT' data-ingest='20260525-54035db78e8dbf10'><td><code>EFT Batch Summary By EFT Batch Date (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_batch|date:20/05/2026</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>2,000</td></tr><tr class='clickable' data-path='Starter Docs/EFT Batch Summary By EFT Batch Date.TXT' data-ingest='20260525-f82b985c372633a4'><td><code>EFT Batch Summary By EFT Batch Date.TXT</code></td><td>Starter Docs</td><td class='nowrap'>eft_batch|date:22/05/2026</td><td>primary</td><td>2026-05-23 11:15</td><td class='num'>2,000</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-2edc9a6e633c8c6d",
+    "path": "Additional/EFT Batch Summary By EFT Batch Date (1).TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date (1).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:24/05/2026",
+    "is_duplicate_copy": true,
+    "size_bytes": 2000,
+    "modified": "2026-05-25 13:05",
+    "sha256_prefix": "2edc9a6e633c8c6d",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (1).TXT",
+      "batch_date": "24/05/2026",
+      "total_trx": 117,
+      "total_amount": 51429.5,
+      "forecourt_amount": 49143.95,
+      "retail_amount": 2267.55
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  },
+  {
+    "ingest_id": "20260525-12d8b8e391952535",
+    "path": "Additional/EFT Batch Summary By EFT Batch Date (2).TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date (2).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:18/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 2000,
+    "modified": "2026-05-25 13:07",
+    "sha256_prefix": "12d8b8e391952535",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (2).TXT",
+      "batch_date": "18/05/2026",
+      "total_trx": 384,
+      "total_amount": 143267.2,
+      "forecourt_amount": 133161.4,
+      "retail_amount": 9989.3
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  },
+  {
+    "ingest_id": "20260525-54035db78e8dbf10",
+    "path": "Additional/EFT Batch Summary By EFT Batch Date (3).TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date (3).TXT",
+    "folder": "Additional",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:20/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 2000,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "54035db78e8dbf10",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (3).TXT",
+      "batch_date": "20/05/2026",
+      "total_trx": 374,
+      "total_amount": 121361.05,
+      "forecourt_amount": 110120.65,
+      "retail_amount": 10617.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  },
+  {
+    "ingest_id": "20260525-54035db78e8dbf10",
+    "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (1).TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:20/05/2026",
+    "is_duplicate_copy": true,
+    "size_bytes": 2000,
+    "modified": "2026-05-24 12:28",
+    "sha256_prefix": "54035db78e8dbf10",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (1).TXT",
+      "batch_date": "20/05/2026",
+      "total_trx": 374,
+      "total_amount": 121361.05,
+      "forecourt_amount": 110120.65,
+      "retail_amount": 10617.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  },
+  {
+    "ingest_id": "20260525-12d8b8e391952535",
+    "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date (2).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:18/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 2000,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "12d8b8e391952535",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (2).TXT",
+      "batch_date": "18/05/2026",
+      "total_trx": 384,
+      "total_amount": 143267.2,
+      "forecourt_amount": 133161.4,
+      "retail_amount": 9989.3
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  },
+  {
+    "ingest_id": "20260525-f82b985c372633a4",
+    "path": "Starter Docs/EFT Batch Summary By EFT Batch Date.TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:22/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 2000,
+    "modified": "2026-05-23 11:15",
+    "sha256_prefix": "f82b985c372633a4",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date.TXT",
+      "batch_date": "22/05/2026",
+      "total_trx": 429,
+      "total_amount": 134855.45,
+      "forecourt_amount": 119978.45,
+      "retail_amount": 14704.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  },
+  {
+    "ingest_id": "20260525-12d8b8e391952535",
+    "path": "Starter Docs/Refresh/EFT Batch Summary By EFT Batch Date.TXT",
+    "filename": "EFT Batch Summary By EFT Batch Date.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "EFT Batch Summary By EFT Batch Date",
+    "report_type": "eft_batch_summary",
+    "source_type": "pos_system",
+    "content_key": "eft_batch|date:18/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 2000,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "12d8b8e391952535",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date.TXT",
+      "batch_date": "18/05/2026",
+      "total_trx": 384,
+      "total_amount": 143267.2,
+      "forecourt_amount": 133161.4,
+      "retail_amount": 9989.3
+    },
+    "catalog_ref": "file-type-catalog.yaml#eft_batch_summary"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "eft_batch|date:18/05/2026",
+    "source_file": "EFT Batch Summary By EFT Batch Date (2).TXT",
+    "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT",
+    "modified": "2026-05-24 16:39",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (2).TXT",
+      "batch_date": "18/05/2026",
+      "total_trx": 384,
+      "total_amount": 143267.2,
+      "forecourt_amount": 133161.4,
+      "retail_amount": 9989.3
+    },
+    "ingest_id": "20260525-12d8b8e391952535"
+  },
+  {
+    "content_key": "eft_batch|date:20/05/2026",
+    "source_file": "EFT Batch Summary By EFT Batch Date (3).TXT",
+    "path": "Additional/EFT Batch Summary By EFT Batch Date (3).TXT",
+    "modified": "2026-05-25 13:08",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (3).TXT",
+      "batch_date": "20/05/2026",
+      "total_trx": 374,
+      "total_amount": 121361.05,
+      "forecourt_amount": 110120.65,
+      "retail_amount": 10617.0
+    },
+    "ingest_id": "20260525-54035db78e8dbf10"
+  },
+  {
+    "content_key": "eft_batch|date:22/05/2026",
+    "source_file": "EFT Batch Summary By EFT Batch Date.TXT",
+    "path": "Starter Docs/EFT Batch Summary By EFT Batch Date.TXT",
+    "modified": "2026-05-23 11:15",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date.TXT",
+      "batch_date": "22/05/2026",
+      "total_trx": 429,
+      "total_amount": 134855.45,
+      "forecourt_amount": 119978.45,
+      "retail_amount": 14704.0
+    },
+    "ingest_id": "20260525-f82b985c372633a4"
+  },
+  {
+    "content_key": "eft_batch|date:24/05/2026",
+    "source_file": "EFT Batch Summary By EFT Batch Date (1).TXT",
+    "path": "Additional/EFT Batch Summary By EFT Batch Date (1).TXT",
+    "modified": "2026-05-25 13:05",
+    "summary": {
+      "report_type": "eft_batch_summary",
+      "source_file": "EFT Batch Summary By EFT Batch Date (1).TXT",
+      "batch_date": "24/05/2026",
+      "total_trx": 117,
+      "total_amount": 51429.5,
+      "forecourt_amount": 49143.95,
+      "retail_amount": 2267.55
+    },
+    "ingest_id": "20260525-2edc9a6e633c8c6d"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

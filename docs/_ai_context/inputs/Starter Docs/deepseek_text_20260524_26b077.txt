@@ -1,0 +1,148 @@
+================================================================================
+FUEL STATION MANAGEMENT DASHBOARD – OCR EXTRACT (MULTI-SOURCE)
+================================================================================
+Source note: Data extracted from WhatsApp images (JPEG) via OCR. Future sources may include Excel, PDF, or direct system reports. All data should map to consistent KPIs and thresholds as shown below.
+
+File references are included per entry. Some values are inferred from partial OCR; where ambiguous, [sic] or '?' is used.
+
+================================================================================
+1. FUEL INVENTORY (ATG TANK LEVELS)
+================================================================================
+Thresholds: Reserve = 1000 L per product (minimum before stockout risk). Days of stock (P/P) calculated using average daily sales.
+
+File: WhatsApp Image 2026-05-20 at 07.51.26.jpeg (20 May 2026 06:00)
+- ULP95 (T1+T5): 10,650 L actual, 10,635 L TC, Reserve 1000 → Available 9,650 L
+- Diesel50 (T2+T4): 9,523 L actual, 9,504 L TC, Reserve 1000 → Available 8,523 L
+- ULP93 (T3): 2,256 L actual, Reserve 1000 → Available 1,256 L
+
+File: WhatsApp Image 2026-05-21 at 06.40.39.jpeg (21 May 2026)
+- ULP95: 17,885 L sub-total, Reserve 1000 → Available 15,885 L
+- Diesel50: 13,676 L sub-total, Reserve 1000 → Available 11,676 L
+- ULP93: 6,679 L, Reserve 1000 → Available 5,679 L
+
+File: WhatsApp Image 2026-05-22 at 06.17.14.jpeg (22 May 2026)
+- ULP95: 15,288 L sub-total, Reserve 1000 → Available 13,288 L
+- Diesel50: 11,403 L sub-total, Reserve 1000 → Available 9,403 L
+- ULP93: 6,238 L, Reserve 1000 → Available 5,238 L
+
+File: WhatsApp Image 2026-05-23 at 07.09.39.jpeg (23 May 2026)
+- ULP95: 12,325 L sub-total, Reserve 1000 → Available 10,325 L
+- Diesel50: 9,359 L sub-total, Reserve 1000 → Available 7,359 L
+- ULP93: 5,789 L, Reserve 1000 → Available 4,789 L
+
+File: WhatsApp Image 2026-05-24 at 07.35.12.jpeg (24 May 2026)
+- ULP95: 10,637 L sub-total, Reserve 1000 → Available 8,637 L
+- Diesel50: 8,952 L sub-total, Reserve 1000 → Available 6,952 L
+- ULP93: 5,515 L, Reserve 1000 → Available 4,515 L
+
+Key KPI: Days fuel in tanks (based on average P/D):
+- ULP95 avg 2500 L/day → 21 May: 6.35 days, 22 May: 5.32 days, 23 May: 4.13 days, 24 May: 3.45 days (below safety threshold of 5 days, order needed)
+- Diesel50 avg 1522 L/day → 21 May: 7.67 days, 22 May: 6.18 days, 23 May: 4.84 days, 24 May: 4.57 days
+- ULP93 avg 376 L/day → 21 May: 15.10 days, 22 May: 13.93 days, 23 May: 12.74 days, 24 May: 12.01 days
+
+================================================================================
+2. FUEL SALES VOLUME (DAILY & MONTHLY)
+================================================================================
+File: WhatsApp Image 2026-05-22 at 09.03.14.jpeg (Daily Sales Per Product)
+- 18-May-26: ULP95 3,176.09 L, ULP93 606.65 L, Diesel 2,005.77 L → Total 5,788.51 L
+- 19-May-26: ULP95 2,234.77 L, ULP93 450.26 L, Diesel 506.20 L → Total 3,191.23 L
+- 20-May-26: ULP95 2,759.53 L, ULP93 589.66 L, Diesel 1,651.48 L → Total 5,000.67 L
+- 21-May-26: ULP95 2,610.51 L, ULP93 444.86 L, Diesel 2,305.69 L → Total 5,361.06 L
+
+File: WhatsApp Image 2026-05-19 at 07.40.48.jpeg (Batch 141 EOD, 18 May 2026)
+- Pump sales: 5,788.51 L, Tank sales: 5,764 L, Variance: +24.51 L (pump over tank) – acceptable.
+
+File: WhatsApp Image 2026-05-22 at 08.18.51.jpeg (Batch 144 EOD, 21 May 2026)
+- Pump sales: 5,361.06 L, Tank sales: 5,401 L, Variance: -39.94 L (tank over pump) – investigate possible dip error or theft.
+
+File: WhatsApp Image 2026-05-24 at 07.48.37.jpeg (MTD summary through 23 May)
+- MTD total fuel sales (L) ≈ 10,576 L? [table ambiguous] – but average per day = 460 L? That conflicts with daily above – likely mis‑OCR. Use daily reported figures.
+
+Threshold: Pump vs Tank variance should be within ±0.5% (approx ±25 L per 5,000 L). +24.5 L is okay, -39.9 L is borderline and needs review.
+
+================================================================================
+3. SHOP & CONVENIENCE STORE SALES (GROSS PROFIT ANALYSIS)
+================================================================================
+File: WhatsApp Image 2026-05-21 at 08.24.41.jpeg (Batch 143, 20 May 2026)
+- Total Shop Sales Value: R19,057.30
+- Gross Profit (Shop): R? (from summary: GP% 14.38% overall for fuel+shop? Actually that file gives fuel+shop combined MTD GP% 14.38%)
+- Top categories by GP%: BAKERY 91.1%, BARISTA 58.3%
+- Top by GP Rand: TOILET R471.77, BEVHGH R599.83
+
+File: WhatsApp Image 2026-05-22 at 08.18.51.jpeg (Batch 144, 21 May 2026)
+- Total Shop Sales Value: R19,057.30 (identical to previous? Possibly duplicate or error)
+- Best GP%: BARISTA 55.86%, PHARMA 44.45%
+- Highest GP Rand: TOBCTG R762.65
+
+File: WhatsApp Image 2026-05-22 at 09.03.15.jpeg (Daily Shop Totals)
+- 18-May: Shop Total R13,194.98, Dry Stock Total R16,639.40, Bakery R4,272.60
+- 19-May: Shop Total R12,435.58, Dry Stock R15,793.95, Bakery R3,838.70
+- 20-May: Shop Total R12,588.83, Dry Stock R16,754.80, Bakery R4,957.50
+- 21-May: Shop Total R14,326.68, Dry Stock R19,057.30, Bakery R5,597.22
+
+KPIs: Average daily shop revenue ≈ R13,136. Daily dry stock value (inventory on hand) ≈ R17,061. Bakery contribution ≈ 33% of shop total.
+
+================================================================================
+4. CASH MANAGEMENT (CIT BAG REMOVALS & DROPS)
+================================================================================
+File: WhatsApp Image 2026-05-15 at 08.22.51.jpeg (15 May) – Total R35,140
+File: WhatsApp Image 2026-05-18 at 08.20.00.jpeg (18 May) – Total R52,900
+File: WhatsApp Image 2026-05-20 at 08.37.42.jpeg (20 May) – Total R30,720
+File: WhatsApp Image 2026-05-21 at 08.24.40.jpeg (21 May) – Total R37,900
+File: WhatsApp Image 2026-05-23 at 08.18.27.jpeg (23 May) – Total R42,940
+
+File: WhatsApp Image 2026-05-15 at 14.15.42.jpeg (Cash Drop Receipt)
+- 15 May 14:07, User CAROLINE, Drop R420 (R20x1, R100x2, R200x1)
+
+Threshold: Daily CIT total should correlate with daily sales (fuel + shop). For 21 May fuel sales R160,783 + shop R14,327 = R175,110. CIT pickup R37,900 is low – indicates multiple pickups or cash kept on site. Need reconciliation.
+
+================================================================================
+5. SHIFT & STAFFING / TILL RECONCILIATION
+================================================================================
+File: WhatsApp Image 2026-05-20 at 16.20.54.jpeg & 16.20.55.jpeg (Current Month shifts)
+- Till variances: Operator SIA on 18 May had +R1,110.25 over – investigate possible over-ring or counting error.
+- All other operators zero variance (good).
+
+File: WhatsApp Image 2026-05-19 at 11.27.20.jpeg (Shift Roster 22-28 May)
+- Cashiers: Day shift coverage 1-2 persons, night shift 0-1 persons. Risk of understaffing during peak.
+- Attendants: Day shift 1-4, night shift 1-2.
+
+KPIs: Staffing level should ensure no single cashier handles >R20,000 without a drop. The R52,900 pickup on 18 May suggests multiple days accumulation.
+
+================================================================================
+6. FINANCIAL METRICS (GROSS PROFIT, MARGINS, SALES VALUE)
+================================================================================
+File: WhatsApp Image 2026-05-21 at 06.40.39.jpeg (Fuel Rand Value 21 May)
+- ULP95: Sell R26.63/L, Cost R24.47 → Gross R2.16/L (8.1% margin)
+- ULP93: Sell R26.52/L, Cost R24.36 → Gross R2.16/L (8.1%)
+- Diesel50: Sell R34.47/L, Cost R32.05 → Gross R2.42/L (7.0%)
+- Total fuel sales value R976,096, cost R901,234 → GP R74,862 (7.7% overall)
+
+File: WhatsApp Image 2026-05-22 at 08.18.51.jpeg (GP Analysis Summary By Group – MTD)
+- Opening Val R834,056, MTD Purch R2,788,513, MTD Sales R2,894,781, Adj -6,535, Closing R1,132,917 → GP R411,665 (14.22% GP%)
+
+This GP% combines fuel and shop. Fuel alone is ~7-8%, so shop must have much higher margin (30-50%) to lift total to 14%.
+
+Thresholds: Target fuel margin > R2.20/L; shop GP% > 25% overall; combined GP% > 12%.
+
+================================================================================
+7. OPERATIONAL ALERTS & SYSTEM STATUS
+================================================================================
+File: WhatsApp Image 2026-05-16 at 12.00.09.jpeg
+- "DELIVERY NEEDED" alarm for ULP95 tank at 11:57 on 16 May.
+- All probes passed 0.8 L/hr leak test.
+
+File: WhatsApp Image 2026-05-22 at 06.17.14.jpeg & others
+- Macros blocked due to untrusted source – indicates Excel reports may be disabled. Need IT to enable.
+
+================================================================================
+8. DATA CONSISTENCY NOTE FOR FUTURE INTEGRATION
+================================================================================
+This extract comes from unstructured images. Future data sources (Excel, CSV, API) should standardise on:
+- Date format: YYYY-MM-DD
+- Tank product codes: ULP95, ULP93, DIESEL50
+- Units: Litres for volume, Rands for value
+- KPIs: daily sales by grade, ATG dips, pump vs tank variance, shop category GP%, CIT totals, staffing hours, variance per shift.
+- Thresholds: Reserve level (1000 L), max variance ±25 L, min days of stock (5 days), cash pickup frequency (daily recommended).
+
+All above data points are now ready for ingestion into the Cursor IDE dashboard.

@@ -1,0 +1,156 @@
+---
+document_type: REFERENCE
+status: ACTIVE
+version: "1.2.0"
+updated: "2026-05-24"
+purpose: >
+  Canonical source classification for all input files. Used by parsers and
+  future reconciliation workflows to determine trust level and match rules.
+
+source_types:
+  pos_system:
+    label: "POS / Forecourt System (auto-generated)"
+    trust: authoritative_for_operations
+    description: >
+      Exported from ENGEN POS v5.46k. Fixed-width TXT. Authoritative for
+      daily sales, wet stock, EFT batches, and shift reconciliation.
+  payroll_system:
+    label: "Payroll System (auto-generated)"
+    trust: authoritative_for_payroll
+    description: >
+      Nett Pay List from payroll provider for Fuel Rock (Pty) Ltd. XLS/XLSX.
+      Authoritative for employee net pay and banking details.
+  bank_feed:
+    label: "Bank Feed (auto-generated)"
+    trust: authoritative_for_cash_movement
+    description: >
+      FNB OFX bank statement download. Authoritative for actual debits/credits
+      hitting the nominated account.
+  manual_recon:
+    label: "Manual Reconciliation (human-maintained)"
+    trust: authoritative_for_adjustments
+    description: >
+      Excel workbooks maintained by site management. Used to reconcile POS/bank
+      with petty cash, supplier invoices, and month-end cash-ups.
+  ocr_whatsapp:
+    label: "OCR / WhatsApp Channel (photo extracts)"
+    trust: reference_pending_confirmation
+    description: >
+      Reports photographed and forwarded via WhatsApp, OCR-extracted and synthesized.
+      Useful for ATG dips, CIT pickups, and trend spotting — confirm against POS
+      or bank exports before treating as authoritative.
+  inventory:
+    label: "Inventory / Stock (POS-generated)"
+    trust: authoritative_for_stock
+    description: >
+      Stock take, shrinkage, purchases, on-hand and price listings from POS/back office.
+  accounting:
+    label: "Accounting / AR-AP (POS-generated)"
+    trust: authoritative_for_finance_period
+    description: >
+      Debtors, creditors, turnover levy — month-end finance and franchise reporting.
+
+catalog: "docs/_ai_context/knowledge/reference/file-type-catalog.yaml"
+architecture: "docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md"
+
+files:
+  - path: "deepseek_text_20260524_26b077.txt"
+    source_type: ocr_whatsapp
+    report: ocr_synthesis
+    channel: "WhatsApp JPEG → DeepSeek OCR"
+    sections: [atg_tank_levels, fuel_volume, cit_pickups, shop_daily, alerts]
+  - path: "Refresh/62848015857.ofx"
+    source_type: bank_feed
+    report: bank_statement
+    period: "2026-04-30 to 2026-05-25"
+    account: "62848015857"
+    ledger_balance: 256236.86
+    note: "Latest FNB OFX — supersedes April-only statement"
+  - path: "Nett Pay List - 140526.xls"
+    source_type: payroll_system
+    report: nett_pay_list
+    pay_date: "2026-05-14"
+    total_net: 32095.27
+    employees: 16
+  - path: "Nett Pay List - 210526.xlsx"
+    source_type: payroll_system
+    report: nett_pay_list
+    pay_date: "2026-05-21"
+    total_net: 31449.03
+    employees: 16
+  - path: "CASH UP APRIL 26.xlsx"
+    source_type: manual_recon
+    report: cash_up
+    period: "2026-04"
+  - path: "Schedule of Accounts Invoice T.xlsx"
+    source_type: manual_recon
+    report: supplier_schedule
+    note: "Prefer this copy over (1) duplicate"
+  - pattern: "Refresh/*.TXT"
+    source_type: pos_system
+    report: pos_refresh_drop
+    refresh: daily
+    note: "Refreshed POS exports — merged with Starter Docs by batch number"
+  - pattern: "Additional/*.TXT"
+    source_type: pos_system
+    report: pos_additional_drop
+    refresh: daily
+    note: "Supplemental POS/accounting/inventory exports — 22 report patterns May 2026"
+  - pattern: "Starter Docs/Day End Summary*.TXT"
+    source_type: pos_system
+    report: day_end_summary
+    refresh: daily
+  - pattern: "Starter Docs/Month End Summary*.TXT"
+    source_type: pos_system
+    report: month_end_summary
+    refresh: monthly
+  - pattern: "Starter Docs/Monthly Summary Forecourt*.TXT"
+    source_type: pos_system
+    report: monthly_category
+    refresh: monthly
+  - pattern: "Starter Docs/EFT *.TXT"
+    source_type: pos_system
+    report: eft
+    refresh: daily
+  - pattern: "Starter Docs/Cash Variance*.TXT"
+    source_type: pos_system
+    report: cash_variance
+    refresh: daily
+  - pattern: "Starter Docs/Stock Take Variance*.TXT"
+    source_type: pos_system
+    report: stock_take
+    refresh: periodic
+  - pattern: "Nett Pay List*.xls*"
+    source_type: payroll_system
+    report: nett_pay_list
+    refresh: weekly
+  - pattern: "*.ofx"
+    source_type: bank_feed
+    report: bank_statement
+    refresh: monthly
+  - pattern: "CASH UP*.xlsx"
+    source_type: manual_recon
+    report: cash_up
+    refresh: monthly
+  - pattern: "Schedule of Accounts*.xlsx"
+    source_type: manual_recon
+    report: supplier_schedule
+    refresh: ongoing
+  - pattern: "Payment_CSV_Template.csv"
+    source_type: bank_feed
+    report: payment_template
+    refresh: static
+
+recon_chain:
+  daily:
+    - pos_system.day_end_summary
+    - pos_system.eft
+    - pos_system.cash_variance
+  monthly:
+    - pos_system.month_end_summary
+    - manual_recon.cash_up
+    - manual_recon.supplier_schedule
+    - bank_feed.bank_statement
+  payroll:
+    - payroll_system.nett_pay_list
+    - bank_feed.bank_statement

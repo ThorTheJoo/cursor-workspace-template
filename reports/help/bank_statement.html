@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><title>Help — bank_statement</title>
+<link rel="stylesheet" href="../assets/site.css"/></head>
+<body>
+<nav class="top-nav">
+  <a href="../management-dashboard.html">Dashboard</a>
+  <a href="../file-views/bank_statement.html">Dataset</a>
+  <strong>Help</strong>
+</nav>
+<div class="wrap"><div class="card"><h3>*.ofx</h3>
+<p><strong>Frequency:</strong> Weekly / Monthly · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Actual cash movement — Speedpoint settlements, wages, suppliers, fees.</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>period_start</code></li>
+<li><code>period_end</code></li>
+<li><code>ledger_balance</code></li>
+<li><code>speedpoint_daily</code></li>
+<li><code>wage_runs</code></li>
+<li><code>by_category</code></li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Ledger balance vs expected float</li>
+<li>Payroll debit 1-2 days after pay date</li>
+<li>Speedpoint ≠ POS EFT — check settlement lag</li>
+</ul></div>
+<p><strong>Reconciles with:</strong> nett_pay_list, eft_batch_summary</p>
+<p class="meta">Catalog: file-type-catalog.yaml#bank_statement</p></div></div>
+</body></html>

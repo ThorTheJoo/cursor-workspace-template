@@ -1,0 +1,357 @@
+{
+  "generated_at": "2026-05-25T12:18:56+00:00",
+  "inputs_root": "C:\\Temp\\Experiment JP\\docs\\_ai_context\\inputs",
+  "catalog_path": "docs/_ai_context/knowledge/reference/file-type-catalog.yaml",
+  "architecture_doc": "docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md",
+  "dashboard_spec": "docs/_ai_context/knowledge/MANAGEMENT_DASHBOARD_SPECIFICATION.md",
+  "interpretation_guide": "docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md",
+  "report_types": [
+    {
+      "report_type": "bank_statement",
+      "source_type": "bank_feed",
+      "pattern_name": "62848015857",
+      "catalog_ref": "file-type-catalog.yaml#bank_statement",
+      "file_count": 2,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "cash_up",
+      "source_type": "manual_recon",
+      "pattern_name": "CASH UP APRIL 26",
+      "catalog_ref": "file-type-catalog.yaml#cash_up",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "cash_variance_by_cashier",
+      "source_type": "pos_system",
+      "pattern_name": "Cash Variance - Selected EOD by Cashier",
+      "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier",
+      "file_count": 10,
+      "primary_count": 8,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "creditors_purchases_detail",
+      "source_type": "accounting",
+      "pattern_name": "Creditors Purchases - Detail by AC Name",
+      "catalog_ref": "file-type-catalog.yaml#creditors_purchases_detail",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "day_end_summary",
+      "source_type": "pos_system",
+      "pattern_name": "Day End Summary",
+      "catalog_ref": "file-type-catalog.yaml#day_end_summary",
+      "file_count": 12,
+      "primary_count": 10,
+      "series_points": 5,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "debtors_age_analysis",
+      "source_type": "accounting",
+      "pattern_name": "Debtors Age Analysis - By AC Name with Deposits",
+      "catalog_ref": "file-type-catalog.yaml#debtors_age_analysis",
+      "file_count": 2,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "eft_batch_summary",
+      "source_type": "pos_system",
+      "pattern_name": "EFT Batch Summary By EFT Batch Date",
+      "catalog_ref": "file-type-catalog.yaml#eft_batch_summary",
+      "file_count": 7,
+      "primary_count": 5,
+      "series_points": 4,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "eft_detail_by_shift",
+      "source_type": "pos_system",
+      "pattern_name": "EFT Detail - By EOD Batch Number & Shift",
+      "catalog_ref": "file-type-catalog.yaml#eft_detail_by_shift",
+      "file_count": 10,
+      "primary_count": 8,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "eft_pending",
+      "source_type": "pos_system",
+      "pattern_name": "EFT Transactions Not Yet Sent to Bank",
+      "catalog_ref": "file-type-catalog.yaml#eft_pending",
+      "file_count": 7,
+      "primary_count": 5,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "eft_summary_by_shift",
+      "source_type": "pos_system",
+      "pattern_name": "EFT Summary By EOD Batch & Shift",
+      "catalog_ref": "file-type-catalog.yaml#eft_summary_by_shift",
+      "file_count": 10,
+      "primary_count": 8,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "eom_category_detail",
+      "source_type": "pos_system",
+      "pattern_name": "EOM By Category & Sub-Category Detail (Std Report)",
+      "catalog_ref": "file-type-catalog.yaml#eom_category_detail",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "fuel_control_atg",
+      "source_type": "pos_system",
+      "pattern_name": "Fuel Sales Control - Control Report - ATG",
+      "catalog_ref": "file-type-catalog.yaml#fuel_control_atg",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "fuel_control_mtd_by_product",
+      "source_type": "pos_system",
+      "pattern_name": "Fuel Sales Control - MTD By Product",
+      "catalog_ref": "file-type-catalog.yaml#fuel_control_mtd_by_product",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "fuel_control_mtd_summary",
+      "source_type": "pos_system",
+      "pattern_name": "Fuel Sales Control - MTD Summary",
+      "catalog_ref": "file-type-catalog.yaml#fuel_control_mtd_summary",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "month_end_detail",
+      "source_type": "pos_system",
+      "pattern_name": "Month End Detail",
+      "catalog_ref": "file-type-catalog.yaml#month_end_detail",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "month_end_summary",
+      "source_type": "pos_system",
+      "pattern_name": "Month End Summary",
+      "catalog_ref": "file-type-catalog.yaml#month_end_summary",
+      "file_count": 3,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "monthly_category_summary",
+      "source_type": "pos_system",
+      "pattern_name": "Monthly Summary Forecourt & Shop - By Category",
+      "catalog_ref": "file-type-catalog.yaml#monthly_category_summary",
+      "file_count": 2,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "nett_pay_list",
+      "source_type": "payroll_system",
+      "pattern_name": "Nett Pay List - 140526",
+      "catalog_ref": "file-type-catalog.yaml#nett_pay_list",
+      "file_count": 4,
+      "primary_count": 3,
+      "series_points": 2,
+      "folders": [
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "ocr_synthesis",
+      "source_type": "ocr_whatsapp",
+      "pattern_name": "deepseek_text_20260524_26b077",
+      "catalog_ref": "file-type-catalog.yaml#ocr_synthesis",
+      "file_count": 54,
+      "primary_count": 54,
+      "series_points": 40,
+      "folders": [
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "spreadsheet_unknown",
+      "source_type": "manual_recon",
+      "pattern_name": "invoice_ledger",
+      "catalog_ref": "file-type-catalog.yaml#spreadsheet_unknown",
+      "file_count": 2,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "stock_cost_sell_price",
+      "source_type": "inventory",
+      "pattern_name": "Stock Cost & Selling Price Listing  - By Category",
+      "catalog_ref": "file-type-catalog.yaml#stock_cost_sell_price",
+      "file_count": 3,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "stock_on_hand",
+      "source_type": "inventory",
+      "pattern_name": "Stock On Hand with Unit Cost - by Category",
+      "catalog_ref": "file-type-catalog.yaml#stock_on_hand",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "stock_purchases_by_category",
+      "source_type": "inventory",
+      "pattern_name": "Stock Purchases Summary - By Category",
+      "catalog_ref": "file-type-catalog.yaml#stock_purchases_by_category",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "stock_purchases_summarized",
+      "source_type": "inventory",
+      "pattern_name": "Stock Purchases Summary - By Category Summarized",
+      "catalog_ref": "file-type-catalog.yaml#stock_purchases_summarized",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "stock_shrinkage_mtd",
+      "source_type": "inventory",
+      "pattern_name": "Stock Shrinkage Analysis - MTD by Category @ Latest Cost",
+      "catalog_ref": "file-type-catalog.yaml#stock_shrinkage_mtd",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    },
+    {
+      "report_type": "stock_take_variance",
+      "source_type": "inventory",
+      "pattern_name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales",
+      "catalog_ref": "file-type-catalog.yaml#stock_take_variance",
+      "file_count": 2,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Additional",
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "supplier_schedule",
+      "source_type": "manual_recon",
+      "pattern_name": "Schedule of Accounts Invoice T",
+      "catalog_ref": "file-type-catalog.yaml#supplier_schedule",
+      "file_count": 3,
+      "primary_count": 2,
+      "series_points": 1,
+      "folders": [
+        "Starter Docs"
+      ]
+    },
+    {
+      "report_type": "turnover_levy",
+      "source_type": "accounting",
+      "pattern_name": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+      "catalog_ref": "file-type-catalog.yaml#turnover_levy",
+      "file_count": 1,
+      "primary_count": 1,
+      "series_points": 1,
+      "folders": [
+        "Additional"
+      ]
+    }
+  ],
+  "total_files": 145,
+  "total_primary": 128
+}

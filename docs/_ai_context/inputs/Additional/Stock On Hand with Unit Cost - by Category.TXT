@@ -1,0 +1,1049 @@
+ENGEN JET PARK SERVICE STATION                                                                        13/05/2026 07:04 - April 2026
+-----------------------------------------------------------------------------------------------------------------------------------
+Stock On Hand with Unit Cost - by Category
+-----------------------------------------------------------------------------------------------------------------------------------
+From Category : 005
+To   Category : VV
+Zero Stock Levels Excluded
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+BAKERY    6001351101778    QS CO RUSK MUSLI 350G          Each         29.870       29.870       29.871         7.000        93.000
+          6001351101792    QS CO RUSK BMLK 350G           Each         29.870       29.870       29.871         4.000        96.000
+          6001351102133    QS CO BURGER ROLLS 6 1EA       Each         14.710       14.710       14.710         6.000        94.000
+          6001351102232    QS CO HOTDOG ROLLS 6 1EA       Each         14.710       14.710       14.710         4.000        96.000
+          6001351111081    QS CO CHELSEA BUNS LARGE 1EA   Each         10.500       10.500       10.500         7.000        93.000
+          6001351111166    QS CO SNOWBALLS RASPBERRY 1EA  Each         10.500       10.500       10.500        11.000        89.000
+          6009801396033    LETTUCE EAT BCNCHKN MAYO ROLL  Each         24.850       23.360       24.850         1.000         0.000
+          6009801396064    LETTUCE EAT LET EGG MAYO 1EA   Each         19.850       18.430       19.850         1.000        99.000
+          6009801396071    LETTUCE EAT CHEESE/TOMATO SDW  Each         19.850       18.960       19.850         2.000        98.000
+          6009801396095    LETTUCE EAT LET CHICKEN MAYO 1 Each         21.570       21.570       21.570         4.000        96.000
+          6009801396118    LETTUCE EAT LET CHKN MAYO ROLL Each         23.840       22.410       23.840         1.000        99.000
+          6009801396217    LETTUCE EAT CRPY BACONCHKN MAY Each         22.570       21.000       22.570         2.000        98.000
+          6009801396224    LETTUCE EAT LET CLUB SANDWICH  Each         37.450       35.370       37.450         2.000        98.000
+          6009801396255    LETTUCE EAT LET TRIO1-CBCM.EGG Each         35.160       33.700       35.160         2.000        98.000
+          6009801396262    LETTUCE EAT BREAKFAST SANDWIC  Each         24.970       65.180       24.970        -5.000       105.000
+          6009801396408    LETTUCE EAT LET BACON CHEESE S Each         24.970       24.720       24.970        -1.000       101.000
+          6009801396439    LETTUCE EAT LET PREGO STEAK RO Each         27.760       24.100       27.760         1.000        99.000
+          6009801396446    LETTUCE EAT CHICKEN PREGO ROLL Each         27.750       27.760       27.760         2.000        98.000
+          6009801396576    LETTUCE EAT RYE BACONCHKN MAYO Each         24.060       24.060       24.060         3.000        97.000
+          781718407038     QS CO BISCUIT CRUNCHIE 70G     Each         13.260       12.410       12.268         8.000        92.000
+          781718407045     QS CO BISCUIT GINGER 70G       Each          3.000       13.260       13.262         5.000        95.000
+          781718407076     QS CO BISCUIT CRUNCHIE 200G    Each         23.928       23.930       23.928         1.000        99.000
+          781718407090     QS CO BISCUIT CHOC CHIP 200G   Each         23.928       24.070       23.928         3.000        97.000
+          781718407106     QS CO BISCUIT VANILLA 200G     Each         25.180       25.190       25.188         3.000        97.000
+          781718407458     QS CO CARROT LOAF 320G 320G    Each         24.538       24.540       24.538         7.000        93.000
+          781718407465     QS CO BANANA LOAF 300G 300G    Each         24.538       24.550       24.538        11.000        89.000
+          781718407472     QS CO LEMONPOP LOAF 300G 300G  Each         25.820       24.720       24.538         3.000        97.000
+          781718407489     QS CO CHOCOLATE LOAF 300G 300G Each         24.538       24.550       24.538        11.000        89.000
+          781718407519     QS CO BLUBERRY LOAF 300G 300G  Each         25.820       24.640       24.538        -1.000       101.000
+          ENG303           MEGA PEPPER STEAK              Each         25.150       26.270       26.490        23.000        77.000
+          ENG405           5LT MAYO QUINNS                Lt            0.000       46.060       46.064        10.000        90.000
+          ENG651           CHILLIE RUSSIAN                Each         18.981       19.140       19.955         9.000        91.000
+          ENG652           RUSSIAN                        Each         17.785       17.880       18.599        20.000        80.000
+BAKPRE    781718407083     QS CO BISCUIT GINGER 200G      Each         23.928       23.930       23.928         2.000        98.000
+          9770             QTR CHICKEN PAP CHAKALAKA      EACH         28.000       28.000       28.000        -1.000         0.000
+          ENG1041          CHAKALAKA                      Kg           47.571       47.570       47.571         2.990         0.000
+          ENG1047          HASH BROWN (120)               Each          4.565        4.560        4.565        19.000         0.000
+          ENG304           ERM PANINI PARBAKED            EACH          0.000        5.700        5.700       170.000         0.000
+          ENG315           ERM HOTDOG ROLL                EACH          0.000        0.000        0.000        -3.000         0.000
+          ENG322           ERM LETTUCE - MIXED 500G       Each          4.000       33.060       24.655        -0.912         0.000
+          ENG323           MEGA STEAK AND KIDNEY          EACH         25.100        2.950       25.100        18.000         0.000
+          ENG331           ERM  MARGARINE                 Each          0.000       52.170       52.165         1.164         0.000
+          ENG334           ERM  SLICED BREAD WHITE        EACH          0.000        0.870        0.884      -105.000         0.000
+          ENG358           ERM WRAP                                     3.690        5.660        5.660        -9.000         0.000
+          ENG363           ERM-RICHS BUTTER CROISSANT     EACH         11.630       16.290       16.292        38.000         0.000
+          ENG370           ERM RICHS MUFFIN BATTER - BLUE Kg           66.660       92.330       92.927         4.050         0.000
+          ENG373           ERM RICHS MUFFIN BATTER - LEMO Kg           75.720       92.930       92.927         4.050         0.000
+          ENG386           ERM UNCOOKED CHIPS  STAY CRISP Each          4.190       18.000       18.000        15.900         0.000
+          ENG404           ERM BEEF STEW                  Each          0.000      107.510      113.000         6.800        93.200
+          ENG489           ERM FLOUR                      Each          0.000       12.720       15.999         8.050         0.000
+          ENG518           ERM RICHS MUFFIN BATTER - RAIS Each         54.100       92.930       92.927         4.050         0.000
+          ENG556           ERM FETA CHEESE                Each          0.000      184.630      184.633         0.200         0.000
+          ENG567           ERM BACK BACON                 Each          2.900       35.230      115.000         3.060         0.000
+          ENG571           ERM FRESH TOMATO               Kg            2.000       24.320       20.360        -0.172         0.000
+          ENG575           ERM MIXED PEPPER (RED AND GREE Each          0.000       49.700       53.579        -0.013         0.000
+          ENG584           ERM GRATED CHEESE              EACH         96.500       94.410       94.410         0.500         0.000
+          ENG587           ERM EGG                        Each          2.500        2.300        2.166        44.976         0.000
+          ENG596           ERM VIENNA LARGE               EACH          0.000        8.690        8.521       232.000         0.000
+          ENG599           ERM CHEESE SLICE               EACH          1.580        1.630        1.637       174.000         0.000
+          ENG632           ERM PAP                        Each          0.000        5.130        4.155        17.000         0.000
+          ENG650           CHEESE GRILLER                 Each         22.855       22.450       22.610        50.000        50.000
+          ENG700           RFG CHICKEN S/ROLL             EACH         14.120       19.480       19.640        31.000         0.000
+          ENG701           RFG SAUSAGE ROLL BEEF          EACH         14.120       20.350       19.640        32.000         0.000
+          ENG702           RFG BEEF & ONION SLICE         EACH         14.120       19.600       19.640        32.000         0.000
+          ENG703           RFG CHS& SMKYBEEF SLICE        EACH         16.018       16.010       16.018        16.000         0.000
+          ENG705           RFG CHICKEN & MUSHROOM         EACH         16.018       16.020       16.018         2.000         0.000
+          ENG707           RFG PEPPER STEAK               EACH         16.018       16.020       16.018         7.000         0.000
+          ENG709           RFG SPARE RIB PIE              EACH         16.018       16.010       16.018        19.000         0.000
+          ENG710           RFG SPINACH&FETA PASTY         EACH         14.120       16.020       16.018        13.000         0.000
+          ENG711           RFG STEAK & KIDNEY             EACH         16.018       16.020       16.018        29.000         0.000
+          ENG712           RFG CORNISH PASTY              EACH         16.018       16.010       16.018        18.000         0.000
+          ENG715           RFG CHEESE GRILLER             EACH         14.120       15.230       15.217         9.000         0.000
+          ENG716           RFG BEEF BURGER PIE            EACH         19.004       19.000       19.004         6.000         0.000
+          ENG718           RFG PEPPER BURGER              EACH         19.004       19.010       19.004         5.000         0.000
+          ENG720           RFG BEEF MINI PIE              EACH          2.570        2.820        2.940         9.000         0.000
+          ENG721           RFG CHEESE MINI PIE            EACH          2.570        2.820        2.940        32.000         0.000
+          ENG722           RFG CHICKEN MINI PIE           EACH          2.940        2.920        2.940        36.000         0.000
+          ENG912           ERM CROISSANT                  EACH         12.910       12.910       12.912        23.000         0.000
+          ENG929           ERM RC CRUMBED CHICKEN STRIPS  Each         65.490       27.940        3.432       173.200         0.000
+          ENG944           ERM RC CRUMBED CHICKEN BURGER  Each         59.770        8.590        5.361       120.000         0.000
+          ENG947           ERM RC SPICY WINGS             EACH         64.500       64.990       65.490        30.000         0.000
+          ENG954           FM SAMOOSA POTATO 100G         EACH          6.920        6.920        6.920        14.000         0.000
+          ENG971           ERM RC CRUMBED CHICKEN FILLET  EACH          3.500        7.870        8.229        66.500         0.000
+          SSB002           ERM HAMBURGER ROLL             EACH          0.000        0.000        0.000        -7.000         0.000
+          SSB030           ERM CHEESE SAUCE QUINNS        Each          0.000       55.860       55.862        15.000         0.000
+          SSB070           ERM WHITE WRAP                 EACH          5.660        5.660        5.660        12.000         0.000
+          SSB077           ERM CHAKALAKA                  Each          0.000       48.760       48.760        -2.800         0.000
+          SSF002           ERM BOEREWORS                  Each          0.000       13.640       10.640        -5.000         0.000
+          SSF003           ERM CHICKEN BREAST             Each          0.000       64.500       64.500         4.992         0.000
+          SSF010           ERM BEEF PATTY 200GR           EACH          0.000       15.240       15.625        44.000         0.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 1 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 2
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+BAKPRE    SSF016           ERM CHICKEN LEG QUARTER        Each          0.000       19.130       19.125        11.000         0.000
+          SSF022           ERM FOMO NO 71                 EACH          0.000        0.000        0.000       -11.000         0.000
+          SSF052           ERM CUCUMBER                   Each          0.000       49.710       43.056        -1.288         0.000
+          SSF070           ERM ONION                      Each          0.000       14.460       12.790       -67.087         0.000
+          SSF114           ERM CHICKEN WINGS              Each          0.000        0.000        0.000        38.000         0.000
+          SSF122           ERM FOMO 2D                    EACH          1.032        1.030        1.032       125.000         0.000
+BARIST    BTC103           TAKE AWAY CUP 350ML            EACH          1.720        1.720        1.720       279.000         0.000
+          BTC104           TAKE AWAY CUP LID 350ML        EACH          0.670        0.700        0.698       297.000         0.000
+          BTC106           STIRRERS                       EACH          0.080        0.120        0.129       773.000         0.000
+          BTC108           FRESH FULL CREAM MILK          LTR           1.300       15.060       15.000         5.375         0.000
+          BTC311           CHOCOLATE DECADENCE POWDER     EACH          5.830       84.450       83.118         7.750         0.000
+          BTC315           BARISTA BLEND BEANS            Each          2.460      364.800      364.802         4.660         0.000
+BEVCDK    5449000000439    COKE 1.5L                      Each         16.848       16.940       16.848        43.000        57.000
+          5449000006271    FANTA ORANGE PET 1L            Each         11.674       11.670       11.674        15.000        85.000
+          5449000009067    COKE 2L ORIGINAL               Each         22.507       22.710       22.507        30.000         0.000
+          5449000010070    FANTA GRAPE 2LT                Each         19.478       19.480       19.478         8.000         0.000
+          5449000014917    SCHWEPPES SODA WATER 1LT       Each         15.108       15.110       15.108        12.000         0.000
+          5449000045515    SCHWEPPES GINGER ALE 1LT       Each         15.108       15.110       15.108         8.000         0.000
+          5449000050809    FANTA ORANGE CAN 500ML         Each          9.636       10.150       10.175        31.000        69.000
+          5449000054227    COKE 1LT ORIGINAL              Each         17.315       15.510       15.108        23.000         0.000
+          5449000060082    TWIST LEMON 2L                 Each          0.000       16.860       16.857         1.000        99.000
+          5449000061768    COKE ZERO 2.25L                Each         18.833       18.830       18.833        11.000        89.000
+          5449000064165    SCHWEPPES LEMONADE 1L                       15.108       15.430       15.108        11.000         0.000
+          5449000098580    SCHWEPPES GRAN TWIST 2LT       Each         18.367       18.370       18.367         6.000         0.000
+          5449000133328    COKE 1LT ZERO                  Each         12.098       11.690       11.674        14.000        86.000
+          5449000172167    SPRITE ZERO 2.25L              Each         17.292       17.290       17.292         6.000        94.000
+          5449000180919    STONEY GINGER BEER 1.5L        Each         14.500       14.500       14.500        24.000        76.000
+          5449000234612    SPRITE 1L                      Each         11.674       11.750       11.674         8.000        92.000
+          5449000234629    SPRITE 1.5L                    Each         14.500       14.500       14.500         7.000        93.000
+          5449000234636    SPRITE LEMON LIME 2L           Each         18.367       19.370       19.478         7.000        93.000
+          5449000234643    SPRITE LEM LIME 440ML          Each         10.877       10.880       10.877         9.000        91.000
+          5449000256805    COKE 300ML CAN                 Each          7.545       10.170       10.366       134.000         0.000
+          5449000256898    COKE 300ML NO SUGAR            Each         11.267       10.810       11.267        48.000        52.000
+          5449000257000    FANTA ORANGE CAN 300 ML        Each         11.267       10.950       11.267        19.000        81.000
+          5449000257222    SPRITE LEMON-LIME 300 ML       Each         11.267       10.950       11.267        22.000        78.000
+          5449000257420    STONEY 300 ML                  Each         10.366       10.590       10.366        31.000        69.000
+          5449000257505    TWIST LEMON 300 ML             Each         11.267       11.060       11.267        15.000        85.000
+          5449000257536    SPARLETTA CREAM SODA 300ML     Each         10.366       10.370       10.366         4.000        96.000
+          5449000257628    SPARLETTA STRAWBERRY 300ML     Each         11.267       11.120       11.267        19.000        81.000
+          5449000284297    SCHWEPPES DRY LEMON 300ML      Each         10.370       10.370       10.370        11.000        89.000
+          5449000284303    SCHWEPPES DRY LEMON 1L         Each         15.025       15.030       15.025        10.000        90.000
+          5449000330574    STONEY ZERO SUGAR 440ML        Each          9.997       10.000        9.997        14.000         0.000
+          5449000341167    APPLETIZER APPLE 300ML         Each         15.950       15.950       15.954        22.000        78.000
+          5449000341181    GRAPETIZER RED GRAPE 300ML     Each         15.950       15.950       15.954         7.000        93.000
+          5449000664686    COKE ORIGINAL PET 440ML        Each         10.880        9.530        9.473       138.000         0.000
+          5449000664693    COKE ZERO 440ML                Each          9.997        9.990        9.997        94.000         6.000
+          5449000664723    FANTA GRAPE 440ML              Each          9.997       10.000        9.997        41.000        59.000
+          5449000664747    FANTA PINEAPPLE 440ML          Each          9.997       10.000        9.997        10.000        90.000
+          5449000664754    FANTA ORANGE RET 440ML         Each          9.473       10.180        9.473        46.000        54.000
+          5449000664808    STONEY 440ML                   Each          9.997       10.210        9.997         6.000        94.000
+          5449000664822    TWIST LEMON 440ML              Each          9.997       10.300        9.997        42.000         0.000
+          5449000664839    TWIST GRANADILLA 440ML         Each          9.997       10.000        9.997        19.000        81.000
+          5449000664846    SPARLETTA CREAM SODA 440ML     Each          9.473        9.510        9.473        33.000        67.000
+          6001134687307    SPARLETTA SPAR B 2LT           Each         16.857       16.980       16.857         6.000         0.000
+          6001134707302    STONEY GINGER BEER 2 L         Each         19.478       19.480       19.478         4.000        96.000
+          6003326015851    CASTLE FREE 330ML              Each         10.110       10.120       10.118        19.000        81.000
+          6003326017565    BRUTAL FRUIT RUBY APPLE 0% 300 Each         11.840       11.850       11.847        24.000        76.000
+          6009510806861    PEPSI 2L                       Each         13.883       13.880       13.883         1.000        99.000
+          6009510806885    PEPSI 2LT ZERO SUGAR           Each         13.883       13.880       13.883        14.000        86.000
+          6009510806908    PEPSI COLA LIGHT 2L            Each         13.883       13.880       13.883         6.000        94.000
+          6009510806960    7-UP LEMONADE 2L               Each         13.883       13.880       13.883         1.000        99.000
+          6009705215089    MIRINDA CAN 500ML              Each          6.677        6.680        6.677        24.000        76.000
+          6009705215096    MOUNTAIN DEW CAN 500ML         Each          6.677        6.680        6.677        24.000        76.000
+          6009705215102    7UP CAN 500ML                  Each          6.677        6.680        6.677        24.000        76.000
+          6009710722848    PEPSI 500 ML                   Each          7.357        7.360        7.357        69.000        31.000
+          6009710722862    PEPSI 500ML MAX                Each          6.661        6.910        6.661        62.000        38.000
+          6009710722886    7UP 500ML LEMON + LIME         Each          6.661        6.970        6.661        22.000        78.000
+          6009710722909    MIRINDA 500ML ORANGE           Each          6.661        7.490        6.661        21.000         0.000
+          6009710722923    MOUNTAIN DEW 500ML             Each          6.661        7.460        6.661        21.000        79.000
+          6009710723685    PEPSI CAN  500ML               Each          6.677        6.680        6.677        24.000        76.000
+          6009888561041    PEPSI COLA REGULAR IMPORT 500M Each          6.661        7.250        6.661       -48.000         0.000
+BEVHGH    5056784900932    MONSTER PEACHY KEEN 500ML      Each         15.699       15.760       15.699        32.000        68.000
+          5056784901069    MONSTER RIO PUNCH 500ML        Each         15.699       15.700       15.699        23.000        77.000
+          5060166698812    MONSTER ENERGY ABSOLUTELY ZERO Each         15.699       15.700       15.699         6.000        94.000
+          5060166698874    MONSTER ORIGINAL CAN 500ML     Each         15.699       15.700       15.699        28.000        72.000
+          5060335632715    MONSTER ENERGY ROSSI 500ML     Each         17.065       17.060       17.065        28.000        72.000
+          5060335634399    MONSTER MEGA GREEN 553ML       Each         22.721       22.720       22.721        21.000        79.000
+          5060337501804    MONSTER ENERGY ULTRA 500ML     Each         17.065       16.960       17.065        17.000         0.000
+          5060517888299    MONSTER ENERGY MUCHO LOCO 500M Each         15.699       16.420       15.699        51.000        49.000
+          5060517888800    MONSTER PIPELINE PUNCH 500ML   Each         15.699       15.700       15.699        46.000        54.000
+          5060751211693    MONSTER PACIFIC PUNCH 500ML    Each         17.065       17.060       17.065        13.000        87.000
+          5060751216551    MONSTER ENERGY MARIPOSA 500 ML Each         15.699       16.300       15.699        42.000        58.000
+          5060896622200    MOSTER ULTRA WATERMELOW 500ML  Each         15.741       15.800       15.741        31.000        69.000
+          5060947540002    MONSTER AUSSIE LEMONADE 500ML  Each         17.065       16.850       17.065        47.000        53.000
+          5060947549517    MONSTER GREEN ZERO 500ML       Each         15.699       16.340       15.699        44.000        56.000
+          5061013962605    POWER PLAY ORIGINAL  500ML     Each         11.261       11.260       11.261        43.000        57.000
+          5061013962810    POWER PLAY PASSION FRUIT  500M Each         11.260       11.260       11.260        28.000        72.000
+          54033764         POWERADE 500ML SPRINGBOK       Each         11.442       11.440       11.442        10.000         0.000
+          5449000665195    POWERADE 500ML MOUNTAIN BLAST  Each         11.442       11.440       11.442        40.000        60.000
+          54490482         POWERADE 500ML MOUNTAIN BLAST  Each         11.442       11.480       11.442        -1.000         0.000
+          6001324217253    ENERGADE 500ML NAARTJIE        Each          8.965        8.970        8.965         9.000         0.000
+          6001324238098    ENERGADE 500ML GRAPE           Each          8.965        8.970        8.965        22.000         0.000
+          6001324238173    ENERGADE 500ML TROPICAL        Each          8.965        8.970        8.965        34.000         0.000
+          6001324254371    ENERGADE 500ML BLUEBERRY       Each          8.965        8.970        8.965        13.000         0.000
+          6001324299556    ENERGADE 500ML MIXED BERRY     Each          8.965        8.970        8.965        27.000         0.000
+          6009544969228    BABALAS RESCUE+ ORIGINAL 300ML Each         26.577       26.580       26.577        21.000        79.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 2 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 3
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+BEVHGH    6009544972099    VITALITY IV SALTED NAARTJIE 30 Each         26.577       26.580       26.577        24.000        76.000
+          6009691358807    REBOOST ENERGY ORIGIONAL 500ML Each          6.467        6.470        6.462        48.000        52.000
+          6009705213740    REBOOST BLACK CURRENT 500ML    Each          5.805        5.880        5.805       -20.000       120.000
+          6009705214051    REBOOST DRY LEMON 500ML        Each          6.462        6.460        6.462        22.000        78.000
+          6009705214310    SUPER C ORIGINAL 500ML         Each          6.638        6.590        6.638        15.000        85.000
+          6009705214402    SUPER C APPLE 500 ML           Each          6.463        6.460        6.465         5.000        95.000
+          6009705214471    SUPER C MIXED BERRY 500ML      Each          6.638        6.640        6.638        16.000        84.000
+          6009708050465    SCORE ORIGINAL ENERGY DRINK 50 Each          7.463        7.980        7.463        57.000        43.000
+          6009708053596    SCORE IMMUNE B BLUEBERRY 500ML Each          9.625        8.430        9.625        42.000        58.000
+          6009708053657    SCORE IMMUNE B MANGO PEA       Each          9.625        9.620        9.625        19.000        81.000
+          6009803982432    SWITCH ELEMENT 500ML           Each          7.174        7.250        7.174        17.000        83.000
+          6009803982449    SWITCH DRY LEMON 500ML         Each          7.500        7.500        7.500         7.000        93.000
+          6009803982470    SWITCH ORIGINAL 500ML          Each          7.174        7.360        7.174        40.000        60.000
+          6009880118489    LUCOZADE APPLE 360ML           Each         13.183       13.180       13.183         8.000        92.000
+          6009880118496    LUCOZADE B/CURRANT 360ML       Each         13.180       13.180       13.183        15.000        85.000
+          6009880118502    LUCOZADE CARIBBEAN FUSION 360M Each         13.183       13.180       13.183        20.000        80.000
+          6009880118519    LUCOZADE ORANGE 360ML          Each         13.183       13.180       13.183        10.000        90.000
+          6009880118526    LUCOZADE ORIGINAL 360ML        Each         13.180       13.180       13.183         4.000        96.000
+          6009880118540    LUCOZADE ORANGE 500ML          Each         17.150       17.150       17.155         3.000        97.000
+          6009880118557    LUCOZADE REGULAR 500ML         Each         17.150       17.150       17.155         3.000        97.000
+          6009881196820    MOFAYA ENERGYX 500ML           Each          8.625        8.630        8.625        15.000        85.000
+          6009900238814    MOFAYA ENERGY ORIGINAL 500ML   Each          8.633        8.630        8.625        28.000         0.000
+          6009907414846    SWITCH MANGO PEACH 500ML       Each          7.174        7.220        7.174        10.000        90.000
+          781159680977     BABALAS RESCUE 200 ML          Each         26.577       26.580       26.577        19.000        81.000
+          9002490100070    RED BULL 250ML ORIGINAL        Each         11.420       11.770       11.420       109.000         0.000
+          9002490200220    RED BULL 250ML SUGAR FREE      Each         11.420       12.620       11.420        14.000         0.000
+          9002490209599    RED BULL 355ML REGULAR         Each         17.670       17.750       17.670        62.000        38.000
+          9002490218638    RED BULL 473ML REGULAR         Each         23.080       23.160       23.080        55.000        45.000
+          9002490227357    RED BULL 355ML SUGAR FREE      Each         17.670       18.020       17.670        19.000        81.000
+          9002490241773    RED BULL 473ML SUGAR FREE      Each         25.000       24.850       25.000        29.000        71.000
+          9002490248604    RED BULL 250ML WATERMELON      Each         11.420       11.480       11.420         7.000        93.000
+          9002490256159    RED BULL 250ML STRAW APRICOT   Each         11.420       11.420       11.420        26.000        74.000
+          9002490283681    RED BULL 250ML WHITE PEACH     Each         11.420       11.490       11.420        37.000        63.000
+          9002490285708    RED BULL 250ML XERO            Each         11.420       11.420       11.420        16.000        84.000
+          9002490285784    RED BULL 250ML YELLOW EDITION  Each         11.420       11.420       11.420        89.000        11.000
+          90492488         POWERADE 500ML JAGGED ICE      Each         11.442       12.070       11.442        45.000         0.000
+          90492501         POWERADE 500ML NAARTJIE        Each         11.442       11.460       11.442        48.000         0.000
+BEVJCS    5449000332271    CAPPY BREAKFAST BLEND 300ML    Each         11.286       11.290       11.286         5.000        95.000
+          5449000332479    CAPPY TROPICAL 300ML           Each         11.286       11.290       11.286        13.000        87.000
+          6001010001586    RHODES MANGO 1L                Each         23.000       23.010       23.008         4.000        96.000
+          6001010001623    RHODES TROPICAL 1LT            Each         23.000       23.010       23.008         7.000        93.000
+          6001010001630    RHODES 100% CRANBERRY 1L       Each         22.271       22.380       22.271        14.000        86.000
+          6001010001654    RHODES PINEAPPLE 1L            Each         23.000       23.010       23.008         3.000        97.000
+          6001048000315    LF 1L ORANGE                   Each         22.827       22.830       22.827         2.000         0.000
+          6001048000339    LIQUI F 1L APPLE CLEAR         Each         25.273       24.920       25.273         9.000         0.000
+          6001048000629    LIQUI FRUIT RED GRAPE 1L       Each         22.820       22.830       22.827         3.000        97.000
+          6001240229781    LIPTON SUGAR FREE ICE TEA 500M Each         12.910       12.910       12.910        15.000        85.000
+          6001240239377    LF BREAKFAST PUNCH 300         Each         10.333       10.330       10.333         6.000        94.000
+          6001240239438    LF CRANBERRY 300ML             Each         10.333       10.330       10.333         4.000        96.000
+          6001240239551    LF PASSION POWER 300ML         Each         12.030       12.030       12.031        20.000        80.000
+          6001240240298    LIQUIFRUIT BREAKFAST PUNCH 200 Each          7.910        7.920        7.917         2.000        98.000
+          6001240240359    LIQUIFRUIT MANGO + ORANGE 200M Each          7.910        7.920        7.917         4.000        96.000
+          6001240240410    LIQUIFRUIT CRANBERRY COOL 200M Each          6.950        6.990        6.950        23.000        77.000
+          6001240430033    FRUITREE GUAVA 350ML           Each          9.665        9.670        9.665         6.000        94.000
+          6001240430057    FRUITREE ORANGE 350ML          Each          9.665        9.670        9.665         7.000        93.000
+          6001240430309    FRUITREE TROPICAL PUNCH 350 ML Each          9.665        9.670        9.665        22.000        78.000
+          6001240500859    LF 1L BREAKFAST PUNCH          Each         25.273       24.780       25.273        12.000         0.000
+          6001240550014    LF 1L CRANBERRY COOLER         Each         25.273       25.270       25.273         8.000         0.000
+          6001299010101    CLOVER KRUSH 500ML ORANGE      Each         16.040       16.040       16.040         7.000        93.000
+          6001299010118    CLOVER KRUSH 500ML MANGO       Each         16.040       16.090       16.040         7.000        93.000
+          6001299010309    CLOVER KRUSH 500ML CRANBERRY   Each         16.040       16.040       16.040         6.000        94.000
+          6001299029035    CLOVER KRUSH MANGO 50% 250ML   Each          7.090        7.090        7.090        10.000        90.000
+          6001299029158    CLOVER KRUSH UHT 1LT CRANBERRY Each         20.080       20.080       20.080         6.000        94.000
+          6001299029219    CLOVER KRUSH UHT 1LT PEACH APR Each         20.080       20.080       20.080         6.000        94.000
+          6001299029745    CLOVER K 300ML CAN APPLE       Each          9.390        9.390        9.390        30.000        70.000
+          6001299029806    CLOVER K 300ML CAN CRANB       Each          9.900        9.490        9.390        24.000        76.000
+          6001299033025    CLOVER K 300ML CAN PASSION     Each          9.900        9.390        9.390        24.000        76.000
+          6001299033063    CLOVER K 300ML CAN SPARK ORANG Each          9.900        9.410        9.390        19.000        81.000
+          6001299049668    CLOVER KRUSH 500ML APPLE       Each         16.040       16.040       16.040         8.000        92.000
+          6001324011202    OROS ORIGINAL ORANGE 1L        Each         20.461       20.460       20.461        12.000        88.000
+          6001324282589    OROS 300ML GUAVA               Each          4.339        4.340        4.339        21.000         0.000
+          6001324283043    OROS 300ML ORANGE              Each          4.339        4.400        4.339        11.000         0.000
+          6009619990010    SNACK A JUICE ORANGE JUICE 500 Each         15.150       15.150       15.150         5.000        95.000
+          6009619990225    SNACK A JUICE COCKTAIL JUICE 5 Each         15.150       15.150       15.150         6.000        94.000
+          6009619990263    SNACK A JUICE MANGO JUICE 500M Each         15.150       15.150       15.150         4.000        96.000
+          6009619994025    SNACK A JUICE CRANBERRY 500ML  Each         15.150       15.150       15.150         6.000        94.000
+          6009619995381    ALOE LITCHI                    Each         16.680       16.680       16.680        11.000        89.000
+          6009619995404    ALOE ORIGINAL                  Each         16.680       16.680       16.680        10.000        90.000
+          6009619995428    ALOE STRAWBERRY                Each         16.680       16.680       16.680        12.000        88.000
+          6009695157147    OROS ORANGE RTD 500ML          Each          6.078        6.100        6.078        31.000        69.000
+          6009695157703    OROS R/D GUAVA  500ML          Each          6.078        6.600        6.078        27.000        73.000
+          658325088632     KAMBUCHA MORINGA AND LIME      Each         18.438       18.440       18.438        12.000        88.000
+          781159871092     KOMBUCHA BEETROOT              Each         18.438       18.440       18.438        10.000        90.000
+BEVWTR    5449000062925    BONAQUA 1.5 STILL WATER        Each         11.203       11.200       11.203        19.000        81.000
+          5449000107664    VALPRE 500ML SPRING WATER      Each          9.130        9.390        9.130        48.000         0.000
+          5449000107749    VALPRE 1L SPARKING             Each         11.942       11.950       11.942         9.000         0.000
+          5449000107787    VALPRE 1.5L STILL              Each         13.348       13.810       13.348         9.000         0.000
+          5449000123268    VALPRE 500ML SPARKLING         Each          9.130        9.090        9.130        52.000         0.000
+          5449000129567    BONAQUA 750ML PUMP STILL       Each         10.326       10.340       10.326       105.000         0.000
+          5449000265609    BONAQUA 750ML PUMP LEMON STILL Each         10.975       10.980       10.975        52.000        48.000
+          5449000265630    BONAQUA 750ML PUMP PEACH STILL Each         10.975       11.060       10.975        53.000         0.000
+          5449000265661    BONAQUA 750ML PUMP BERRY STILL Each         10.975       10.970       10.975        46.000        54.000
+          6001351101983    QS CO STILL 500ML              Each          5.364        5.360        5.364        82.000        18.000
+          6001351101990    QS CO STILL 750ML              Each          8.160        8.160        8.162        26.000        74.000
+          6001351102003    QS CO STILL 1L                 Each          9.278        8.820        8.582        54.000        46.000
+          6001351102010    QS CO STILL 5L                 Each         20.880       20.880       20.875        11.000         0.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 3 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 4
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+BEVWTR    6001351102027    QS CO SPARK 500ML              Each          5.364        5.360        5.364        75.000        25.000
+          6001351102034    QS CO SPARK 1L                 Each          9.278        8.980        8.582        82.000        18.000
+          6001351102041    QS CO VERY BERRY SPARK 500ML   Each          6.780        6.790        6.787        43.000         0.000
+          6001351102058    QS CO NAARTJIE SPARK 500ML     Each          6.780        6.790        6.787        21.000        79.000
+          6001351102065    QS CO LEMON LIME SPARK 500ML   Each          6.780        6.790        6.787        45.000        55.000
+          6001351102072    QS CO 500ML APPLE LITCHI SPARK Each          6.780        6.790        6.787        48.000        52.000
+          6001351110923    QS CO VERY BERRY FLV SPARK 1.5 Each         11.300       11.310       11.308        13.000        87.000
+          6001351110930    QS CO NAARTJIE FLV SPARK 1.5L  Each         11.300       11.310       11.308        19.000        81.000
+          6001351110947    QS CO LEMON FLV SPARK 1.5L     Each         11.300       11.310       11.308         5.000        95.000
+          6001351110954    QS CO 1.5L APPLE LITC FLV SPAR Each         11.308       11.310       11.308        11.000        89.000
+          6001351111562    QS CO MIXER LEMONADE 1L        Each         11.308       11.210       11.308        17.000        83.000
+          6001351111579    QS CO MIXER SODA WATER 1L      Each         11.308       11.230       11.308        18.000        82.000
+          6001351111586    QS CO MIXER GINGER ALE 1L      Each         11.308       11.010       10.761        22.000        78.000
+          6001351111593    QS CO MIXER INDIAN TONIC 1L    Each         10.760       10.920       10.761        25.000        75.000
+          90492853         BONAQUA 500ML STILL            Each          8.260        7.640        7.638         6.000         0.000
+BKYBRD    6001710010192    SASKO PREM WHITE BREAD 700G    Each         16.086       16.090       16.085         9.000        91.000
+          6001710010253    SASKO PREM BRWN BREAD 700G     Each         16.500       16.500       16.500         5.000        95.000
+          6009629181064    BLUE RIBBON CLASSIC WHITE 700G Each         12.960       12.960       12.960         3.000        97.000
+          6009629181071    BLUE RIBBON CLASSIC BROWN 700G Each         14.150       14.150       14.150         3.000        97.000
+          6009692190055    SUNBAKE WHITE SANDWICH 700G    Each         15.480       15.480       15.480         2.000         0.000
+          6009692190222    SUNBAKE BROWN SANDWICH 700G    Each         16.000       16.000       16.000        -1.000       101.000
+          6009692193766    SUNBAKE CHEESE ROLLS 6S        Each         17.390       17.390       17.390         1.000        99.000
+BRAAI     6001351102355    QS CO FIRELIGHTERS 3 X 3 1EA   Each         13.150       13.150       13.154        22.000        78.000
+          781718406116     QS CO BRIQUETTES 4KG           Each         38.713       38.710       38.713         5.000        95.000
+          781718407441     QS CO CHARCOAL 3KG             Each         28.583       28.580       28.585         5.000        95.000
+CAR CA    6001878001513    HAZ TYRE JACK INFLATER + SEALE Each         74.950       74.950       74.950         3.000        97.000
+          6001878002022    HAZ SHIELD FOREST FAN AIRFRE   Each         39.950       39.950       39.950         4.000        96.000
+          6001878002305    HAZ SHIELD PETROL INJECTOR 350 Each         37.950       37.950       37.950         3.000        97.000
+          6001878002312    HAZ SHIELD DIESEL INJECTOR CLE Each         37.950       37.950       37.950         3.000        97.000
+          6001878002350    HAZ RADIAT STOP LEAK 350ML     Each          0.000       37.950       37.950         1.000        99.000
+          6001878003203    HAZ SHIELD 500ML TYRE JACK INF Each          0.000      119.950      119.950         3.000        97.000
+          6001878005924    HAZ SHIELD ICE SENS AIRFRESH   Each         40.950       40.950       40.950         6.000        94.000
+          6001878005955    HAZ SHIELD FIRE ICE AIRFRESH   Each         39.950       39.950       39.950         8.000        92.000
+          6009608170164    HAZ TOW ROPE 3M 3 TON 1EA      Each        139.950      139.950      139.950         3.000        97.000
+          6009608170201    HAZ GLOBES SNGL CONTACT 1EA    Each         23.950       23.950       23.950         6.000        94.000
+          6009608170218    HAZ GLOBES DBLE CONTACT 1EA    Each         23.950       23.950       23.950         6.000        94.000
+          6009608170249    HAZ HEAD LAMP H4 1EA           Each         74.950       74.950       74.950         3.000        97.000
+          6009608170270    HAZ BOOSTER CABLE 400 AM 1EA   Each        240.950      240.950      240.950         2.000        98.000
+          6009608170416    HAZ SPANNER FOR WHEELS 4 1EA   Each        139.950      139.950      139.950         2.000        98.000
+          6009608170447    HAZ HEAD LAMP H3 1EA           Each         74.950       74.950       74.950         3.000        97.000
+          6009608170508    HAZ INSULTN TAPE 10M 1EA       Each         22.950       22.950       22.950         2.000        98.000
+          6009608170546    HAZ CABLE TIES 200MM 1EA       Each         17.950       17.950       17.950         3.000         0.000
+          6009608170553    HAZ SKI ROPE 15M               Each         39.950       39.950       39.950         1.000        99.000
+          6009608170706    HAZ CABLE TIES 300MM 1EA       Each         22.950       22.950       22.950         2.000        98.000
+CHSIM     6001069200312    SIMBA LAYS PLAIN SALTED 36G    Each          6.760        6.760        6.760        53.000         0.000
+          6009510800197    SIMBA GHOST POPS 100G          Each         10.467       10.470       10.467        11.000         0.000
+          6009510800975    SIMBA 120G FRITO BBQ           Each         13.380       13.380       13.375        17.000         0.000
+          6009510800982    SIMBA 120G FRITO TOM           Each         12.660       13.380       13.375        13.000         0.000
+          6009510802542    SIMBA DORITOS SWEET CHIL 45G   Each          6.760        6.750        6.760        77.000        23.000
+          6009510802559    SIMBA DORITOS CHEESE SUPR 45G  Each          6.760        6.760        6.760        32.000        68.000
+          6009510803372    SIMBA FRITOS BBQ 25G           Each          2.667        2.670        2.667        93.000         7.000
+          6009510803389    SIMBA FRITOS SWEET CHILLI 25G  Each          2.666        2.660        2.667        30.000        70.000
+          6009510803396    SIMBA FRITOS TOMATO 25G        Each          2.667        2.670        2.667        40.000        60.000
+          6009510804348    SIMBA MEXICAN CHILLI FLAVOR 36 Each          6.188        6.190        6.188        38.000        62.000
+          6009510804355    SIMBA MRS BALLS CHUTNEY 36G    Each          6.188        6.120        6.188         6.000        94.000
+          6009510804379    SIMBA SMOKED BEEF 36G          Each          6.188        6.170        6.188        46.000        54.000
+          6009510804560    SIMBA LAYS CARIB VIN 36G       Each          6.760        6.760        6.760        34.000        66.000
+          6009510804591    SIMBA LAYS ONION CHEESE 36G    Each          6.760        6.490        6.760        65.000        35.000
+          6009510808643    SIMBA NIKNAKS CHEESE 135G      Each         10.477       10.480       10.477        10.000        90.000
+          6009510808650    SIMBA NIKNAKS CHUTNEY 135G     Each         10.470       10.480       10.477         9.000         0.000
+          6009510809008    SIMBA LAYS SWEET + SMOKY B 36G Each          6.760        6.760        6.760        25.000        75.000
+          6009510809435    SIMBA SALT VINEGAR 120G        Each         14.790       14.790       14.792         5.000        95.000
+          6009510809442    SIMBA MEXICAN CHILLI 120 G     Each         14.790       14.790       14.792        20.000        80.000
+          6009510809459    SIMBA CREAM CHEDDAR 120 G      Each         14.790       14.790       14.792        13.000         0.000
+          6009510809466    SIMBA SMOKED BEEF 120 G        Each         14.790       14.790       14.792        32.000        68.000
+          6009510809473    SIMBA CHUTNEY 120 G            Each         14.790       14.790       14.792        20.000        80.000
+          6009510809497    SIMBA CHEESE ONION 120G        Each         14.790       14.790       14.790         1.000        99.000
+          6009710720585    SIMBA LAYS SPRING ONION 120G   Each         17.600       17.480       17.600        21.000        79.000
+          6009710720608    SIMBA LAYS THAI SWEET CHI 120G Each         17.600       17.510       17.600         7.000        93.000
+          6009710720615    SIMBA LAYS CARIB BAL VIN 120G  Each         17.600       17.510       17.600         9.000        91.000
+          6009710720622    SIMBA LAYS PLAIN SALTED 120G   Each         17.600       17.460       17.600         5.000        95.000
+          6009710720653    SIMBA LAYS SWEET SMOKEY 120G   Each         17.600       17.580       17.600        11.000        89.000
+          6009710721520    SIMBA DORITOS SWEET CHIL 145G  Each         17.600       17.520       17.600         2.000        98.000
+          6009710721537    SIMBA DORITOS CHEESE SUP 145G  Each         17.600       17.560       17.600        12.000         0.000
+          6009710722497    SIMBA NIKNAKS 50G ORIGINAL     Each          4.630        4.640        4.635        41.000        59.000
+          6009710722503    SIMBA NIKNAKS SWEET CHILLI 50G Each          4.635        4.640        4.635        44.000        56.000
+          6009710722510    SIMBA NIKNAKS CHUTNEY 50G      Each          4.635        4.640        4.635        41.000        59.000
+          6009710723197    SIMBA KFC ORGINAL 36G          Each          6.188        6.190        6.188        43.000        57.000
+          6009710723203    SIMBA KFC ORIGINAL 120G        Each         14.790       14.790       14.792        20.000        80.000
+          6009710723562    SIMBA DORITOS GRILLED BBQ 45G  Each          0.000        0.000        0.000        23.000        77.000
+          6009710723586    SIMBA DORITOS GRIL BBQ FL 145G Each         17.600       17.600       17.600         2.000        98.000
+          6009710724347    SIMBA LAYS SOUR CREAM ON 120G  Each         17.600       17.600       17.600        11.000        89.000
+          6009710724354    SIMBA WELLINGTONS TOMATO 36G   Each          6.188        6.190        6.188        45.000        55.000
+          6009710724361    SIMBA WELLINGTONS TOMATO 120 G Each         14.790       14.790       14.792         2.000        98.000
+          6009710729922    SIMBA LAYS MEX MAN SAL 120G    Each         17.600       17.600       17.600        12.000        88.000
+          6009710729939    SIMBA LAYS CAN BUTTER LOB 120G Each         17.600       17.600       17.600         7.000        93.000
+          6009710729946    SIMBA LAYS NASHV HOT CHIC 120G Each         17.600       17.600       17.600        14.000        86.000
+CHWILL    6001032050517    WILLARDS 50G BIG KORN B TOMATO Each          6.500        6.490        6.492        42.000         0.000
+          6001032050531    WILLARDS 50G BIG KORN B BBQ    Each          6.492        6.490        6.492        17.000         0.000
+          6001032050784    WILLARDS 120G BIG KORN BBQ     Each         15.130       15.890       15.889        13.000        87.000
+          6001032050791    WILLARDS 120G BIG KORN TOMATO  Each         15.889       15.660       15.889        12.000        88.000
+          6001032055505    WILLARDS 40G CHEASNAKS CHEESE  Each          6.021        6.000        6.021        34.000        66.000
+          6005606000113    WILLARDS 90G JUMP JACK LIGHT S Each         17.798       17.800       17.798         7.000        93.000
+          6005606000991    WILLARDS 90G JUMP JACK CH GR O Each         18.420       18.420       18.423        11.000        89.000
+          6009702443997    WILLARDS CHEESE CURLS 90G      Each         10.688       10.690       10.688        20.000        80.000
+CONBEA    6001120000363    BEACON 75G DAMASCUS NOUGAT     Each         16.280       18.100       18.178        38.000         0.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 4 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 5
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+CONBEA    6001120016630    BEACON WONDERBAR MILK          Each          5.173        5.170        5.173         8.000         0.000
+          6001120016647    BEACON WONDERBAR MINT          Each          5.173        5.170        5.173        14.000         0.000
+          6001120016661    BEACON WONDERBAR NUT           Each          5.173        5.170        5.173        18.000         0.000
+          6001120018047    MAYNARDS W/GUMS ROLL           Each          7.388        7.380        7.375        24.000         0.000
+          6001120065638    BEACON 17G MALLOW EGGS         Each          2.148        2.150        2.148        87.000        13.000
+          6001120081560    BEACON 75G LIQ ALL SORTS       Each          9.522        9.520        9.522         3.000         0.000
+          6001120081577    BEACON 75G MINT IMPERIALS      Each         10.103       10.100       10.103        14.000         0.000
+          6001120086107    BEACON 200G MINT IMPERIALS     Each         20.608       20.610       20.608         8.000        92.000
+          6001120602673    BEACON 150G LIQ  ALLSORTS      Each         16.348       18.590       18.623        19.000         0.000
+          6001120602871    JUNGLE BAR YOGHURT 40G         Each          9.251        9.250        9.251        13.000         0.000
+          6001120602888    JUNGLE BAR NUT BAR 40G         Each          9.057        9.060        9.057        21.000         0.000
+          6001120602895    JUNGLE BAR BERRIES 40G         Each          9.251        9.240        9.251        21.000        79.000
+          6001120603076    BEACON 75G FRUITY ALLSORTS     Each          9.520        9.570        9.522        28.000         0.000
+          6001120606060    JUNGLE BAR MILK CHOC 40G       Each          9.000        9.120        9.000        65.000        35.000
+          6001120606077    JUNGLE BAR DARK CHOCOLATE 4    Each          6.750        7.210        6.750        49.000        51.000
+          6001120606749    BEACON 100G JEL TOTS ORIGINAL  Each         16.348       16.350       16.348        15.000        85.000
+          6001120609870    BEACON TV BAR MILK 47G         Each          9.557        9.560        9.557        25.000        75.000
+          6001120609894    BEACON TV BAR WHITE 47G        Each          9.557        9.560        9.557        20.000        80.000
+          6001120609955    BEACON 56G NOSH BAR            Each          9.663        9.660        9.663        39.000        61.000
+          6001120616427    BEACON 75G LIQUIRICE TWIST     Each          9.522        9.520        9.522        20.000        80.000
+          6001120621254    JUNGLE BAR PEANUT BUTTER 40G   Each          9.000        9.000        9.000        57.000        43.000
+          6001120621971    MAYNARDS W GUM ROLLS B CUR     Each          7.950        7.950        7.949        12.000        88.000
+          6001120624941    MAYNARDS JELLY BEANS 60G       Each          9.522        9.520        9.522        35.000        65.000
+          6001120624958    MAYNARDS FRUIT PASTILLES 60G   Each          9.522        9.520        9.522        15.000        85.000
+          6001120627041    BEACON MALLOWS PINK WHITE 135G Each         13.870       13.870       13.870        28.000        72.000
+          6001120627089    MAYNARDS JELLY BABIES 100G     Each         18.623       18.600       18.623        16.000        84.000
+          6001120627096    MAYNARDS ENERJELLY JUBES 100G  Each         18.623       18.540       18.623        29.000        71.000
+          6001120627102    MAYNARDS FRUIT JELLY BEANS 100 Each         16.348       16.350       16.348        35.000        65.000
+          6001120627119    MAYNARDS ORIGINAL WINE G 100G  Each         18.624       18.500       18.624        28.000        72.000
+          6001120627164    MAYNARDS WINE GUMS 100G        Each         16.348       16.350       16.348        16.000         0.000
+          6001120627232    MAYNARDS JELLY JUBES 60G       Each          9.522        9.520        9.522        26.000        74.000
+          6001120627249    MAYNARDS JELLY BABIES 60G      Each          9.522        9.520        9.522        12.000        88.000
+          6001120627256    MAYNARDS JELLY TEDDIE 60G      Each          9.522        9.520        9.522        31.000        69.000
+          6001120627270    MAYNARDS SOUR JELLY BAB 60G    Each          9.520        9.520        9.522        20.000        80.000
+          6001120627294    MAYNARDS SOFT YOGURT 60G       Each          9.520        9.520        9.522        28.000        72.000
+          6001120627324    MAYNARDS DUOS WINE GUMS 60G    Each          9.522        9.520        9.522         2.000        98.000
+          6001120627331    MAYNARDS FUNKY FLAVOR 60G      Each          9.520        9.520        9.522        10.000        90.000
+          6001120627348    MAYNARDS JELLY JERSEY 60G      Each          9.522        9.520        9.522        28.000        72.000
+          6001120627355    MAYNARDS ORIGINAL WINE G 60G   Each          9.522        9.520        9.522        49.000        51.000
+CONCAD    6001065034065    CADBURY PS CHOCOLATE 48G       Each          9.060        9.060        9.060        27.000         0.000
+          6001065034089    CADBURY PS CARAMILK 48G        Each          9.451        9.700        9.451        33.000        67.000
+          6001065034324    CADBURY ASTROS 40G             Each          9.451        9.390        9.451        41.000        59.000
+          6001065036427    CADBURY CRUNCHIE 40G           Each          9.060        9.370        9.451        44.000        56.000
+          6001065421902    CADBURY CHOMP LARGE            Each          4.993        4.990        4.993        51.000         0.000
+          6001065600871    CADBURY SLAB CARAMELLO 88G     Each         14.570       14.570       14.570        19.000        81.000
+          6001065600888    CADBURY CARAMELLO 38G          Each         10.742       10.740       10.742        38.000        62.000
+          6001065601007    CADBURY SLAB WHOLENUT 80G      Each         15.733       15.870       15.733        27.000        73.000
+          6001065601014    CADBURY FRUIT NUT 80G          Each         14.570       14.570       14.573        10.000        90.000
+          6001065601021    CADBURY SLAB CASHEW COCO 80G   Each         14.573       14.570       14.573         6.000        94.000
+          6001065601038    CADBURY DREAM CREAM WHITE 80G  Each         15.573       15.570       15.573         9.000        91.000
+          6001065601052    CADBURY DREAM WHITE WITH BISCU Each         14.573       14.570       14.573        22.000        78.000
+          6001065601069    CADBURY SLAB DAIRY MILK 88G    Each         14.573       14.570       14.573        22.000        78.000
+          6001065601076    CADBURY SLAB MINT CRISP 80G    Each         14.573       14.570       14.573        18.000        82.000
+          6001065601083    CADBURY SLAB BISCUIT 80G       Each         14.573       14.570       14.573        26.000        74.000
+          6001065601090    CADBURY SLAB TOP DECK 80G      Each         14.573       14.620       14.573        17.000        83.000
+          6001065601106    CADBURY SLAB RUM RAISIN 80G    Each         14.573       14.570       14.573         5.000        95.000
+          6001065601113    CADB SLAB MINT CRISP 80G       Each         14.573       14.570       14.573        -2.000       102.000
+          6001065601229    CADBURY WHOLENUT 150G          Each         32.850       32.850       32.850        12.000         0.000
+          6001065601267    CADBURY TOP DECK 15OG          Each         32.850       32.850       32.850        13.000        87.000
+          6001065601298    CADBURY BUBBLY TOP DECK 150G   Each         32.970       32.970       32.970        18.000         0.000
+          6001065601304    CADBURY DAIRY MILK CHOC 38G    Each         10.742       10.740       10.742        29.000        71.000
+          6001065601311    CADBURY TOP DECK 38G           Each          9.453        9.820        9.453        54.000        46.000
+          60025265         HALLS CHERRY FLAVOURED  LOZENG Each          7.704        7.850        7.704        14.000        86.000
+          60025272         HALLS EXTRA STRONG 33.5G       Each          7.704        7.700        7.704        13.000        87.000
+          60025296         HALLS MENTHOLYPTUS 33.5G       Each          7.704        7.830        7.704        20.000         0.000
+          60026125         HALLS FRUIT EXPLOSION 33.5G    Each          7.704        7.820        7.704        15.000        85.000
+          7622201139063    CADBURY PS CARAMILK DUO 60G    Each         11.167       11.150       11.167        24.000        76.000
+          7622201433499    CLORETS ELIMINATOR S/FREE BOTT Each         38.480       38.480       38.480         7.000        93.000
+          7622202284489    CADBURY WHISPERS 60G           Each         16.903       16.900       16.903         7.000        93.000
+          7622202284557    CADBURY TUMBL SHORTC 60G       Each         16.900       16.900       16.903        21.000        79.000
+          7622202285271    CADBURY ASTROS 140G            Each         33.856       33.860       33.856         8.000        92.000
+          7622202296888    CADBURY ORIGINAL FLAKE 28G     Each         12.120       12.120       12.120        26.000        74.000
+          7622202299391    CADBURY LUNCH BAR MAX 57G      Each         11.167       11.360       11.421        42.000        58.000
+          7622202299506    CADBURY LUNCH BAR DREAM 44G    Each          9.060        9.370        9.451        33.000        67.000
+          7622202299568    CADBURY LUNCH BAR LARGE 44G    Each          9.451        9.330        9.451        34.000        66.000
+          7622202312601    CADBURY DIPPED FLAKE 28G       Each         12.120       12.120       12.120        39.000        61.000
+          7622210622211    CADBURY 5 STAR 48.5G           Each         10.741       10.670       10.741        37.000        63.000
+          7622210846167    CADBURY BUBBLY 87G             Each         19.570       19.570       19.570        20.000        80.000
+          7622210846389    CADBURY BUBBLY MINT 87G        Each         19.570       19.570       19.570        20.000        80.000
+          7622210846396    CADBURY BUBBLY TOP DECK 87G    Each         19.570       19.570       19.570        16.000        84.000
+          7622210849199    CADBURY BUBBLY OREO 95G        Each         19.570       19.570       19.570        15.000        85.000
+          7622210957375    CADBURY SLAB OREO 95G          Each         19.320       19.320       19.319        24.000        76.000
+CONFEC    4000539363108    LINDT CHOCOLATE 38G            Each         19.060       19.070       19.070        11.000        89.000
+          4009900537445    ORBIT BUB/MINT 46S             Each         38.620       38.630       38.629        11.000        89.000
+          4009900537476    ORBIT PROFESSIONAL STRONG MINT Each         34.767       35.730       34.767        16.000        84.000
+          4009900537506    PASTILHA ELASTICA SPEARMINT 46 Each         38.620       38.630       38.629         8.000        92.000
+          4009900545372    PASTILHA ELASTICA MENTOL AND E Each         40.320       40.320       40.321         2.000        98.000
+          4009900549134    ORBIT SWB GUM BOTTLE 64G       Each         38.620       38.630       38.629         3.000        97.000
+          40111445         M+M PEANUT 45G                 Each         14.470       14.470       14.471        11.000        89.000
+          40111490         M+M CHOCOLATE 45G              Each         14.470       14.470       14.471        13.000        87.000
+          42069829         ORBIT STRAWBERRY 14G           Each          7.690        7.690        7.686        13.000        87.000
+          42070047         WRIGLEY B/C & VITAMIN C        Each          9.840        9.840        9.840        17.000         0.000
+          42101925         AIRWAVES BLACK MIN             Each          8.856        9.210        8.856        47.000        53.000
+          42102120         AIRWAVES CHERRY MENTHOL        Each          8.856        8.860        8.856        27.000         0.000
+          42113270         ORBIT WATERMELON 14G           Each          7.690        7.690        7.686         9.000        91.000
+          42211686         ORBIT STRONG MINT 14G          Each          7.690        7.690        7.686        17.000        83.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 5 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 6
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+CONFEC    42247371         ORBIT BUBBLEMINT 14G           Each          7.690        7.690        7.686        17.000        83.000
+          42247531         ORBIT PROF WHITE SPEARMINT 14G Each          7.690        7.690        7.686        35.000        65.000
+          5000159376655    SKITTLES FRUITS 38G            Each          8.970        8.970        8.971        17.000        83.000
+          5000159558280    BOUNTY DOUBLE 57G              Each         14.580       14.590       14.590        25.000        75.000
+          5000159559065    SNICKERS 2PK 80G               Each         15.840       15.840       15.842        27.000        73.000
+          5000159559485    TWIX TWIN CHOCOLATE 50G        Each         11.840       11.190       11.186        17.000        83.000
+          50173167         AIRWAVES ORIGINAL              Each          8.856        9.180        8.856        43.000         0.000
+          50173204         ORBIT PEPPERMINT 14G           Each          7.690        7.690        7.686        31.000        69.000
+          50173822         ORBIT SPEARMINT 14 G           Each          7.686        7.760        7.686        23.000        77.000
+          5900951311321    MARS CHOCOLATE BAR 51G         Each         11.840       11.650       11.652        22.000        78.000
+          5900951311505    SNICKERS 50G                   Each         11.652       11.650       11.652        15.000        85.000
+          6001065600161    STIMOROL INFINITE TROPICAL GUM Each         16.440       14.120       12.401        27.000        73.000
+          6001065600796    STIMOROL INFINITE MINT GUM 27G Each         16.440       14.080       12.401        24.000         0.000
+          6001065600994    STIMOROL INFINITE BERRY 14 SLA Each         14.091       13.180       12.401        26.000        74.000
+          6001065680927    DENTYNE SPEARMINT GUM 14.5G    Each         10.929       12.150       10.929        36.000        64.000
+          6001065680934    DENTYNE STRAWBERRY GUM 14G     Each         10.930       10.930       10.930        20.000        80.000
+          6001120606855    WILSONS XXX LOZENGES MINTS 2.6 Each          3.356        3.360        3.356        32.000        68.000
+          6001120606862    WILSONS XXX LOZENGES MUSK 2.6G Each          3.356        3.370        3.356        46.000        54.000
+          6001197011248    PVM BLUEBERRY ENERGY 45G       Each         10.730       10.730       10.730        31.000        69.000
+          6001197181002    PVM CARAMEL NUT ENERGY 45G     Each         10.730       10.730       10.730        26.000        74.000
+          6001197181019    PVM STRAWB ENERGY 45G          Each         10.730       10.730       10.730        28.000        72.000
+          6001197181026    PVM CHOC ENERGY 45G            Each         10.730       10.730       10.730        28.000        72.000
+          6001197181033    PVM CHOC STRAWB ENERGY 45G     Each         10.730       10.730       10.730        28.000        72.000
+          6001205736590    MIS SWEET TROPICAL SOURS 60G   Each          9.910        9.910        9.910        18.000        82.000
+          6001253500099    TINKIES STRAWBERRY TINKLE 45G  Each          6.667        6.670        6.667         9.000        91.000
+          6001253500303    TINKIES VANILLA WHIZZ 45G      Each          6.666        6.670        6.667         8.000        92.000
+          6001253500402    TINKIES CHOCOLATE POTION 45G   Each          6.667        6.670        6.667         7.000         0.000
+          6001351111661    QS CO SOFT GUMS 65G            Each          7.930        7.930        7.930         7.000        93.000
+          6001351111678    QS CO SOFT GUMS 110G           Each         14.290       14.300       14.296         9.000        91.000
+          6001351111685    QS CO FIZZY POPS 65G           Each          7.930        7.930        7.930         6.000        94.000
+          6001351111692    QS CO FIZZY POPS 110G          Each         14.290       14.300       14.296        17.000        83.000
+          6001351111708    QS CO FRUIT PASTILLES 65G      Each          7.930        9.340        9.342        22.000        78.000
+          6001351111715    QS CO FRUIT PASTILLES 110G     Each         13.896       13.910       13.896        18.000        82.000
+          6001351111722    QS CO SOUR WORMS 65G           Each          7.930        9.340        9.342        21.000        79.000
+          6001351111739    QS CO SOUR WORMS 110G          Each         14.290       13.900       13.896        23.000        77.000
+          6001351111746    QS CO SWEET PUFFS 65G          Each          7.930        7.930        7.930         5.000        95.000
+          6001351111760    QS CO BERRIES JUBES 65G        Each          7.930        9.280        9.342        32.000        68.000
+          6001351111791    QS CO CHOC PEANUTS 65G         Each         15.750       15.750       15.750        10.000        90.000
+          6001351111807    QS CO CHOC RAISANS 65G         Each         15.750       15.750       15.750        13.000        87.000
+          6001351112026    QS CO CHOC SHORTCAKE 65G       Each         16.265       16.270       16.265        11.000        89.000
+          6001704000161    MIS SWEETS SPEC/EGGS 50G       Each         12.990       12.990       12.990        17.000         0.000
+          6001704002899    MR SWEET RASCALS FRUITY FL 50G Each          8.200        8.200        8.200         9.000        91.000
+          6001704002950    MISTER SWEET RASCALS WILD BERR Each          7.790        7.790        7.790        23.000        77.000
+          6001704003032    MIS SWEET RASCALS SOURS 50G    Each          8.200        8.200        8.200        12.000        88.000
+          6001704005425    MIS SWEET SOFT GUMS 125 G      Each         20.210       20.210       20.210        21.000        79.000
+          6001704006118    MIS SWEET VAMPIRE FANGS 60G    Each          9.908        9.910        9.908         8.000        92.000
+          6001704007443    MIS SWEETS WINE GUMS 60G       Each          9.908        9.910        9.908        18.000        82.000
+          6001704007481    MIS SWEET MOO MILKSHAKE 60     Each          9.415        9.450        9.415        15.000        85.000
+          6001704008051    MIS SWEETS SPECKLED EGGS 12    Each         24.230       24.230       24.228        12.000        88.000
+          6001704009614    MIS SWEETS STRAW FLUFF 60G     Each          9.415        9.470        9.415        25.000        75.000
+          6001704009652    MIS SWEETS SOFTS GUMS 60G      Each          9.908        9.910        9.908        21.000        79.000
+          6001704009812    MIS SWEET JUICY JELLIES 60G    Each          9.415        9.410        9.415        22.000        78.000
+          6001704009898    MIS SWEET SOUR WORM 60G        Each          9.415        9.460        9.415        47.000        53.000
+          6001704010160    MIS SWEET SOUR GLOW WOR 125G   Each         20.210       20.210       20.210         5.000        95.000
+          6001704010184    MIS SWEET STRAWBERRY 125G      Each         20.210       20.210       20.210        27.000        73.000
+          6001704019309    MIS SWEET VAMPIRE FANGS 125G   Each         20.210       20.210       20.210        22.000        78.000
+          60023858         SUPER C SWEETS 12 PIECES       Each          8.640        8.520        8.640        28.000        72.000
+          60024800         STIMOROL WILD CHERRY 14G       Each          7.920        7.920        7.920        20.000        80.000
+          60024817         STIMOROL SPEARMINT 14G         Each          8.450        8.450        8.450        36.000        64.000
+          60024824         STIMOROL AIRRUSH MENTHOL 14G   Each          8.892        9.240        8.892        49.000        51.000
+          6009518602205    TINKIES FUDGE SWIRL 45G        Each          6.660        6.670        6.667         3.000        97.000
+          6009802700006    ORIGINAL SWEETS FUDGE 50G      Each         11.730       12.180       11.730        -2.000       102.000
+          6009802700556    ORIGINAL COCONUT ICE           Each         11.730       11.730       11.730         5.000        95.000
+          6009802700778    ORIGINAL SWEETS CARAMEL CONE   Each         13.730       13.730       13.730        -4.000       104.000
+          648              ORIGINAL CARAMEL CONE          Each         13.730        6.870       13.730        10.000        90.000
+          649              ORIGINGAL PEANUT CLUSTER       Each          7.740        7.740        7.740         8.000        92.000
+          653              ORIGINAL PEANUT BRITTLE        Each          7.550        7.550        7.550        10.000        90.000
+          655              ORIGINAL FUDGE                 Each         12.340       12.340       12.340         8.000        92.000
+          6921211112600    MENTOS GRAPE MIX 37.5G         Each          7.810        7.810        7.813        30.000        70.000
+          6921211118954    MENTOS INCREDIBLE STRAWBERRY 4 Each         10.000       10.000       10.000         7.000        93.000
+          695              CHAPPIES                       Each          0.000        0.000        0.000       144.000         0.000
+          7622201522834    ENDEARMINTS ORIGINAL 100G      Each         19.650       19.650       19.650        27.000        73.000
+          7622201522872    ENDEARMINTS SPEARMINT 100G     Each         14.240       14.240       14.240        36.000        64.000
+          7622210626134    DENTYNE PEPPERMINT GUM 14G     Each         10.920       11.070       11.068        24.000        76.000
+          7622210814777    STIMOROL SPEARMINT BOTTLE 84G  Each         38.480       38.480       38.480         4.000        96.000
+          7895144611471    MENTOS RAINBOW 37.5G           Each          7.810        7.810        7.813        24.000        76.000
+          80050278         FERRERO ROCHER T3 37.5G        Each         23.830       23.840       23.838        13.000        87.000
+          80052760         KINDER BUENO 43G               Each         13.090       13.100       13.097        28.000        72.000
+          80761761         KINDER BUENO WHITE 37G         Each         13.100       13.100       13.097        23.000        77.000
+          87108019         MENTOS MINT                    Each          7.813        7.810        7.813        32.000         0.000
+          87108040         MENTOS SPEARMINT               Each          7.813        7.810        7.813        26.000         0.000
+          87108262         MENTOS FRUIT                   Each          7.810        7.810        7.813        21.000         0.000
+          8935001723486    MENTOS FULL FRESH FRESH MINT 1 Each          8.470        8.470        8.472         6.000        94.000
+          8935001724247    MENTOS FULL FRESH WINTERGREEN  Each          8.470        8.470        8.472        14.000        86.000
+          8935001724995    MENTOS FULL FRESH STRAWBERRY 1 Each          8.470        8.470        8.472         7.000        93.000
+CONNES    6001025177207    NES TEX LARGE                  Each          9.904        9.880        9.900        45.000         0.000
+          6001068592401    NESTLE SMARTIES 40G            Each          9.904        9.810        9.904        41.000        59.000
+          6001068592500    NESTLE ROLO 48G                Each         13.200       13.200       13.200        14.000        86.000
+          6001068642908    NESTLE MILKY BAR 80G           Each         16.200       16.200       16.200        15.000        85.000
+          6001068691500    NESTLE SMARTIES 70G            Each         14.100       14.000       14.100        23.000        77.000
+          60058041         NES PEPPERMINT CRISP LARGE     Each         13.200       13.200       13.200        17.000         0.000
+          6009188000080    NESTLE AERO MILK 85G           Each         18.900       18.900       18.900        11.000        89.000
+          6009188000097    NESTLE AERO PEPPERMINT 85G     Each         18.900       18.900       18.900        16.000        84.000
+          6009188001209    NESTLE AERO MILK 40G           Each         10.500       10.500       10.500        29.000        71.000
+          6009188001216    NESTLE AERO PEPPERMINT 40G     Each         10.500       10.500       10.500        28.000        72.000
+          6009188002176    NESTLE KIT KAT 4F DARK 41.5G   Each          9.700        9.700        9.700         9.000        91.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 6 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 7
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+CONNES    6009188002213    NESTLE KIT KAT 4F COCOA PLAN 4 Each          9.900       10.030        9.900        57.000        43.000
+          6009188004132    NESTLE TEX 58G                 Each         14.100       13.450       14.100        23.000        77.000
+          6009188006266    NESTLE BAR ONE 52G             Each          9.000        9.230        9.000        21.000        79.000
+          6009188006273    NESTLE BAR ONE 84G             Each         12.300       12.600       12.300        21.000        79.000
+          6009188006914    NESTLE KIT KAT 4F MINT TART 41 Each          9.700        9.700        9.700        33.000        67.000
+          6009188009069    NESTLE KIT KAT CREME BRULEE 41 Each          9.700        9.700        9.700        15.000        85.000
+          8801055708161    NESCAFE CAPPUCINO STICK 18G    Each          5.580        5.580        5.580        97.000         3.000
+          8801055708215    NESCAFE HAZELNUT CAPP 10X18G   Each          5.930        5.930        5.930         1.000        99.000
+          8801055708239    NESCAFE CAPP WHITE CHOC        Each          5.930        5.930        5.930        -3.000         0.000
+DAIRY     6001260100039    CLOVER MAGEU CART 500ML CREAM  Each         10.370       10.370       10.370         4.000        96.000
+          6001260100046    CLOVER MAGEU CART 500ML BANA   Each         11.900       10.420       10.370         5.000        95.000
+          6001260342019    CLOVER MAGEU SMTH CRM VAN 500  Each         11.900       11.900       11.900         6.000        94.000
+          6001260342033    CLOVER MAGEU SMTH BANA CUS 500 Each         11.900       11.900       11.900         8.000        92.000
+          6001299000270    CLOVER 2LT F/C MILK BOTTLE     Each         30.000       30.000       30.000         5.000         0.000
+          6001299002212    CLOVER UHT F/C MILK 500ML      Each         12.300       12.300       12.300        17.000        83.000
+          6001299007965    CLOVER TROPIKA 500ML ORANGE    Each         12.470       12.470       12.470        13.000         0.000
+          6001299007972    CLOVER TROPIKA 500ML PINEAPPLE Each         12.470       12.470       12.470         8.000         0.000
+          6001299015274    CLOVER UHT F/C MILK 1LT        Each         18.170       18.170       18.170        13.000        87.000
+          6001299015281    CLOVER UHT L/F MILK 1L         Each         18.170       18.170       18.170        13.000        87.000
+          6001299025402    CLOVER 1L FULL CREAM           Each         19.170       19.180       19.170         1.000         0.000
+          6001299026898    CLOVER 150G FOF FCTAIL FC YOG  Each          8.250        9.900        9.900         6.000        94.000
+          6001299027222    CLOVER 150G DBL PLAIN YOG      Each          9.960       12.140       12.144         8.000        92.000
+          6001299027635    CLOVER BLISS 150G DBL PAVLOVA  Each          8.250        8.250        8.250        12.000        88.000
+          6001299027833    CLOVER TROPIKA CAN 300ML ORANG Each          9.900        9.490        9.390        30.000        70.000
+          6001299027864    CLOVER TROPIKA CAN 300ML PINEA Each          9.900        9.480        9.390        29.000        71.000
+          6001299027895    CLOVER TROPIKA CAN 300ML MANGO Each          9.900        9.410        9.390        21.000        79.000
+          6001299029042    CLOVER CLAS CUST VANILLA 1LT   Each         22.610       22.610       22.610         6.000        94.000
+          6001299029943    CLOVER TROPIKA 250ML DY STRAWB Each          8.250        8.250        8.250         9.000        91.000
+          6001299029974    CLOVER TROPIKA 250G DY GRANAD  Each          8.250        8.250        8.250        15.000        85.000
+          6001299030130    CLOVER BLISS 250G DRINK Y C-CH Each          8.250        8.250        8.250         5.000        95.000
+          6001299030154    CLOVER BLISS 250G DRINK Y SBER Each          8.250        8.250        8.250         2.000        98.000
+          6001299030161    CLOVER 100G CHEDAR SLICES      Each         13.910       13.910       13.910        21.000        79.000
+          6001299030185    CLOVER 100G GOUDA SLICES       Each         13.910       13.910       13.910        19.000        81.000
+          6001299032295    CLOVER SUPER M 300ML LEMON CR  Each         12.170       12.170       12.170         8.000        92.000
+          6001299032363    CLOVER TROPIKA 250ML DY CHOCOL Each          8.250        8.250        8.250         8.000        92.000
+          6001299041334    CLOVER TROPIKA 500ML MANGO/PEA Each         12.470       12.580       12.470        11.000         0.000
+          6001299044519    CLOVER SUPER M 300ML STRAWBERY Each         12.170       12.170       12.170        23.000         0.000
+          6001299044601    CLOVER SUPER M 300ML  CHOC     Each         12.170       12.170       12.170        49.000         0.000
+          6001299044663    CLOVER SUPER M 300ML CRM SODA  Each         12.170       12.170       12.170        32.000        68.000
+          6001299240539    CLOVER BLISS 150G DBL STRAWB   Each          8.250        8.370        8.250        10.000        90.000
+          6001299240577    CLOVER BLISS 150G DBL CHOC     Each          9.900        9.630        9.900         5.000        95.000
+          6001415001631    STERI STUMPIE BANANA 350ML     Each         12.130       12.130       12.130        19.000        81.000
+          6001415001648    STERI STUMPIE CHOCOLATE 350 ML Each         12.130       12.140       12.130        16.000        84.000
+          6001415001655    STERI STUMPIE CREAM SODA 350ML Each         12.130       12.200       12.130        22.000        78.000
+          6001415001662    STERI STUMPIE STRAWBERRY 350 M Each         12.130       12.130       12.130        27.000        73.000
+          6001415003659    STERI STUMPIE BUBBLEGUM 350 ML Each         12.130       12.550       12.130        13.000        87.000
+          6002100014004    PARMALAT FULL CREAM            Each         21.698       20.130       21.698        22.000        78.000
+          6002100014011    PARMALAT LOW FAT               Each         21.698       20.290       21.698        19.000        81.000
+          60067999         CLOVER BUTRO MANTEIGA 250G     Each         45.650       45.650       45.650        17.000        83.000
+DELI      6001336120701    ESKORT RED VIENNAS 25G         Each          9.930        9.930        9.930         4.000        96.000
+EDIBLE    50084470         FISHERMANS FRIEND B/CURRANT 25 Each         17.750       17.750       17.751         1.000        99.000
+          5053990101573    PRINGLES ORIGINAL 165 G        Each         47.590       47.590       47.593        13.000        87.000
+          5053990101580    PRINGLES SALT + VINEGAR 165G   Each         47.590       47.590       47.593        11.000        89.000
+          5053990101597    PRINGLES  SOUR CREAM + ONION 1 Each         47.560       47.590       47.590         9.000         0.000
+          5053990107339    PRINGLES ORIGINAL 40G          Each         14.934       14.890       14.934        13.000        87.000
+          5053990107353    PRINGLES SALT + VINEGAR 40G    Each         14.930       14.930       14.933        10.000        90.000
+          5053990107384    PRINGLES SOUR CREAM + ONION 40 Each         14.933       14.920       14.933         2.000        98.000
+          5063305006127    JOKO PURE ROOIBOS              Each         17.370       17.380       17.375         3.000        97.000
+          50819485         FISHERMAN`S FRIEND ORIGINAL 25 Each         17.750       17.750       17.751         1.000        99.000
+          5711953156779    STARBUCKS FRAP COFFEE 2        Each         29.354       33.470       33.471         4.000        96.000
+          5711953156816    STARBUCKS FRAP CARAMEL         Each         29.120       31.820       33.471         9.000        91.000
+          6001021023010    CEREBOS 500G IODATED SALT      Each          7.750        7.750        7.750         3.000         0.000
+          6001049110686    MELROSE CHEDDAR SPRD 1EA       Each         43.200       43.200       43.200         3.000        97.000
+          6001052001018    WEETBIX 450g                   Each         25.610       28.730       28.950         3.000         0.000
+          6001068312108    GOLD CROSS CONDENSED MILK 385G Each         31.600       31.600       31.600         6.000        94.000
+          6001068312702    NES 360G TREAT CARAMEL         Each         32.300       32.300       32.300         5.000         0.000
+          6001068379101    NESTLE 250GR HOT CHOCOLATE     Each         46.800       46.800       46.800        12.000        88.000
+          6001089001104    KNORR CAS CHICKEN + MUSHROOM 8 Each         18.200       18.200       18.200         1.000        99.000
+          6001092500052    MRS BALLS 470G CHUTNEY         Each         30.010       30.010       30.010         7.000         0.000
+          6001115001535    LUCKY STAR PILCHARDS IN TOMATO Each         25.820       25.830       25.833        12.000        88.000
+          6001115001542    LUCKY STAR HOT CHILLI 400 G    Each         25.830       25.830       25.833        11.000        89.000
+          6001231000276    TASTIC RICE 1KG                Each         24.000       24.000       24.000        10.000        90.000
+          6001275000003    JUNGLE OATSBOX 1KG             Each         41.250       41.250       41.250         2.000        98.000
+          6001330000146    BULL BRAND CORNED MEAT 300G    Each         32.480       32.490       32.485         6.000        94.000
+          60019585         ALL GOLD TOMOTO SAUCE 350ML    Each         32.830       32.840       32.837         5.000        95.000
+          6005044000379    RHODES BAKE BEANS IN TOMATO SA Each         12.440       12.450       12.448         5.000        95.000
+          6005044000478    RHODES TOMATO + ONION 400G     Each         17.220       17.220       17.223        15.000        85.000
+          6005044005299    RHODES CHAKALAKA MILD 410G     Each         20.025       19.900       20.025        25.000        75.000
+          6009188000349    NESCAFE RICOFFY 100G           Each         28.900       28.900       28.900         3.000        97.000
+          6009188005719    NESTLE RICOFFY 3 IN 1 18G      Each          2.483        2.480        2.483         2.000         0.000
+          6009522300098    FATTIS + MONIS SPAGHETTI 500G  Each         15.250       15.250       15.250         4.000        96.000
+          6009522300111    KOO CHAKALAKA HOT + SPICY 410G Each         15.200       15.200       15.200         4.000        96.000
+          6009522310271    BLACKCAT SMOOTH PEANUT BUTTER  Each         26.292       26.270       26.292         6.000        94.000
+          6009679326071    FUTURELIFE CEREAL ORIG 500G    Each         39.750       39.750       39.750         3.000        97.000
+          6009702441481    HUG IN A MUG CAPPUCCINO CREAMY Each          7.738        7.740        7.740         7.000        93.000
+          6009702443744    FRESHPAK PURE ROOIBOS TAGLESS  Each         18.650       18.660       18.657         1.000        99.000
+          6009702444277    HUG IN MUG ICED CREAMY CAPPUCC Each          7.064        7.060        7.064         3.000        97.000
+          6009704170761    BAKERS MINI BLUE LABEL MARIE   Each          6.300        6.590        6.604        38.000        62.000
+FROZEN    783              3KG ICE                        Each         10.500       10.500       10.500        75.000        25.000
+FUEL      9910301          ENGEN PRIMAX UNLEADED 95       Lt           18.139       21.110       21.199      3934.010         0.000
+          9910403          ENGEN DYNAMIC DIESEL 50PPM     Lt           19.265       26.740       26.775     13223.410         0.000
+          9910901          ENGEN PRIMAX UNLEADED 93       Lt           18.029       20.920       21.089      6085.460         0.000
+GEN ME    5000394147195    DURACELL AAA BATTERIES         Each         42.820       42.820       42.820         2.000        98.000
+ICE CR    5900130044286    JIVE STRAWBERRY YOGURT 90ML    Each         28.250       28.250       28.250        21.000        79.000
+          6001087376761    MAGNUM DEATH BY CHOCOLATE 100M Each         22.710       22.710       22.714        35.000        65.000
+          6001087376778    OLA MAGNUM CLASSIC 100ML       Each         22.710       22.710       22.714        15.000        85.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 7 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 8
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+ICE CR    6001087376792    MAGNUM WHITE ALMOND 100ML      Each         22.710       22.710       22.714        25.000        75.000
+          6001087376808    OLA MAGNUM MINT 100ML          Each         22.710       22.710       22.714        21.000        79.000
+          6001087382236    OLA CHOC + VANILLA 125 ML      Each         10.300       10.310       10.309        15.000        85.000
+          6001087397391    MAGNUM CHOC COOKIE 90ML        Each         22.710       22.710       22.714        27.000        73.000
+          6001087399289    OLA CORNETTO CHOCOLATE 110ML   Each         13.940       13.950       13.947        21.000        79.000
+          6001087399296    OLA CORNETTO CLASSIC 110ML     Each         13.940       13.950       13.947        19.000        81.000
+          6001087399364    MAGNUM CHOC BROWNIE 90ML       Each         22.710       22.710       22.714        23.000        77.000
+          6009198000339    NESTLE KING CONE BAR ONE 125ML Each         28.250       28.250       28.250        32.000        68.000
+          6009198000513    NESTLE KIT KAT VANILLA CHOC 11 Each         17.000       17.000       17.000        14.000        86.000
+          6009198001091    KING CONE CLASSIC VANILLA ICEC Each         16.170       16.570       16.804        35.000        65.000
+          6009198001114    CADBURY FLAKE CONE 125 ML      Each         28.250       28.250       28.250        12.000        88.000
+          6009198001893    OREO SANDWICH VANILLA 110 ML   Each         26.800       26.800       26.800        15.000        85.000
+          6009198001992    CADBURY 5 STAR 80ML            Each         22.000       22.000       22.000        21.000        79.000
+          6009198002111    OREO STICK ICE 90 G            Each         23.480       22.940       22.800        16.000        84.000
+          6222020805296    CADBURY DAIRY MILK HAZELNUT 90 Each         23.480       22.230       22.170         1.000        99.000
+          6222020805319    DAIRY MILK VANNILA ICE CREAM 9 Each         23.480       23.480       23.480         6.000        94.000
+          6222020805333    CADBURY CRUNCHIE BLAST ICE CRE Each         23.480       22.470       22.170        18.000        82.000
+          6222020806002    ZOOTY POP ORANGE 55 ML         Each          6.500        6.500        6.500        39.000        61.000
+          6222020806040    ZOOTYPIE CHOCSTICK             Each         11.400       11.400       11.400        50.000        50.000
+          6222020806569    ZOOTY FRUITY TROPICAL SPLASH 8 Each         13.500       14.380       14.700        43.000        57.000
+          6909493101208    PADDLE POP TUBES ORANGE + MANG Each          9.390        9.390        9.395        25.000        75.000
+          6909493101215    PADDLE POP RASPBERRY 90ML      Each          9.390        9.390        9.395        13.000        87.000
+LUBES     6001351000521    ENG 200ML SUP BRAKEFLUID       Each         20.500       20.500       20.496        60.000         0.000
+          6001351000606    ENG 500ML SUP BREAKFLUID       Each         53.030       53.030       53.030        23.000         0.000
+          6001351100061    ENG 500ML DIESELUBE  700 SUPER Each         48.670       47.940       48.670        47.000         0.000
+          6001351100092    ENG DIESELL 700 SUPER 5L       Each        301.000      301.000      301.000         4.000        96.000
+          6001351100726    ENG 1LT ANTIFREEZE             Each         74.330       74.330       74.330        24.000         0.000
+          6001351169679    ENG 1LT READYMIX COOLANT       Each         41.450       41.450       41.450        23.000        77.000
+          6001351176387    ENG GEAR LUBE HP80W-90         Each         43.230       43.230       43.230        17.000        83.000
+          6001351176752    ENG XTREME S10 15W-40 500ML    Each         40.330       35.080       35.075        26.000        74.000
+          6001351176851    ENG 500ML XTREME S10 5W40      Each         44.300       44.310       44.305         7.000        93.000
+          6001351414120    ENG 200ML 2/STROKE SELFMIX     Each         15.450       13.440       13.442        50.000         0.000
+          6001351461100    ENG 500ML SUPER 2/STROKE       Each         27.780       27.780       27.775        16.000         0.000
+          6001351525307    ENG 500ML ATF 22D              Each         30.548       30.550       30.548        44.000         0.000
+NON-ED    6001206413742    DOOM 180ML SUPER               Each         23.090       23.090       23.092         5.000         0.000
+          6001351103239    QS CO ROLLER TOWEL SINGLE 1EA  Each         11.220       11.230       11.227        10.000        90.000
+          6001351111531    QS CO LD FOIL 1EA              Each         17.130       17.130       17.130        10.000        90.000
+          6001351111555    QS CO CLINGWRAP 1EA            Each         16.410       16.410       16.410         9.000         0.000
+          6009879616248    CANDLE LIGHT HOUSE 400G        Each         25.400       25.400       25.400         4.000        96.000
+          781718406017     QS CO PAPER PLATES 10S         Each          6.230        6.240        6.239         7.000        93.000
+          781718406024     QS CO PAPER CUPS 6S            Each          9.680        5.550        5.550        17.000         0.000
+          781718406031     QS CO EVRYDAY SERVIETTE 2P 20S Each          5.650        5.660        5.658        11.000         0.000
+          781718407960     QS CO SHOP BAG PLS RECYCLE 24L Each          1.146        1.150        1.146      1871.000         0.000
+PACKAG    ENG359           ERM WRAP PUNNET                EACH          1.890        1.890        1.890       -69.000         0.000
+          ENG389           ERM MUFFIN CUP BROWN TULIP (SM EACH          0.490        2.990        2.990        26.000         0.000
+          ENG462           ERM QS BAG PIE STD GP2         EACH          0.210        0.130        0.293     -1077.000         0.000
+          ENG463           ERM GP3 BAG                    EACH          0.390        0.390        0.390      -407.000         0.000
+          ENG523           ERM QS SERVIETTES 1PLY 300 X 3 EACH          0.090        0.020        0.237     -2583.000         0.000
+          SSF023           ERM FOMO NO 73                 EACH          0.756        0.760        0.756      1000.000         0.000
+PHARMA    6009695584912    BIOPLUS SACHETS ORIGINAL 10ML  Each          3.478        3.480        3.482       133.000         0.000
+          6009695584936    BIOPLUS SACHETS STRAWBERRY 10M Each          3.480        3.480        3.482        94.000         0.000
+          6009801801018    BANG BANG TABLET 10`S          Each         30.000       30.000       30.000        33.000         0.000
+          700083154378     QS RAPID ENERGY P 1EA          Each          1.487        1.490        1.487        15.000        85.000
+SNACK     6001056414494    BAKERS MINI CHEDDARS CHEESE +  Each          0.000        0.000        0.000        24.000        76.000
+          6005606000076    DIDDLE DAD  CARAMEL 150G       Each         21.333       21.130       21.333        10.000        90.000
+          6005606001189    DIDDLE DADDLE CARAMEL 45G      Each          6.100        6.190        6.205        30.000        70.000
+          6007099000304    FOXI SALT VINEGAR 75G          Each          6.040        6.040        6.040         7.000        93.000
+          6007099000359    FOXI SNAX AMERICAN BBQ 75G     Each          6.040        6.030        6.040        17.000        83.000
+          6007099000465    FOXI FRUIT CHUTNEY 75G         Each          4.880        5.930        6.040         4.000        96.000
+          6009707010248    SPOOKIES SWEET CHILLI 50G      Each          4.037        4.030        4.037        31.000        69.000
+          6009707010507    SPOOKIES SWT CHIL 100G         Each          7.188        7.200        7.188         7.000        93.000
+          6009707010729    FLYERS SWT CHIL 100G           Each          7.188        7.200        7.188        13.000         0.000
+          6009707011405    STANTON BIGGLEY CHS CHV 90G    Each          9.300        9.300        9.304         5.000         0.000
+          6009707014413    STANTON BIGLEY WHITE CHEDDAR 9 Each          9.300        9.300        9.304        -2.000       102.000
+          6009707014536    FLYERS SALT + VINEGAR 100G     Each          7.190        7.190        7.188        17.000        83.000
+          6009801460505    SPOOKIES CHEESY SCREAMS 50G    Each          3.930        3.930        3.930        19.000        81.000
+          6009801460888    SPOOKIES CHS 100G              Each          7.180        7.190        7.188        16.000        84.000
+          6009801460901    FLYERS CHEESE + CHIVES 100G    Each          7.188        7.190        7.188        12.000        88.000
+SNKBIS    6001056036702    BAKERS ZOO VANILLA FLAVOURED I Each         38.790       38.790       38.792        10.000        90.000
+          6001056119009    BAKERS 200G CHOC KITS          Each         30.333       30.330       30.333         3.000         0.000
+          6001056201001    BAKERS 200G EET-SUM-MOR        Each         27.500       26.960       27.500         9.000         0.000
+          6001056411004    BAKERS 200G LEMON CREAMS       Each         20.208       20.190       20.208        11.000         0.000
+          6001056412919    BAKERS TOPPER CHOC BISC 125G   Each          9.212        9.210        9.212         3.000        97.000
+          6001056412933    BAKERS TOPPER VAN BISCS 125G   Each          9.212        9.220        9.212        13.000        87.000
+          6001056412940    BAKERS TOPPER CUSTARD EXP 125G Each          9.212        9.220        9.212        14.000        86.000
+          6001056414425    SALTICRAX 200G                 Each         24.580       24.580       24.582        12.000        88.000
+          6001056414449    MINI CHEDDARS BACON SNA        Each          5.186        5.190        5.186        20.000        80.000
+          6001056414517    MINI CHEDDARS CHEESE SINGLES 3 Each          5.708        5.680        5.708        32.000        68.000
+          6001056414531    MINI CHEDDARS FRUITY CH        Each          5.708        5.690        5.708        30.000        70.000
+          6001056453004    BAKERS 200G MARIE BLUE LABEL   Each         16.458       16.430       16.458        12.000         0.000
+          6001056662000    BAKERS 200G TENNIS BISCUITS    Each         22.375       22.380       22.375        14.000         0.000
+          6001351102645    QS CO BISCUIT CHOC CHIP 70G    Each          0.000        0.000        0.000         8.000         0.000
+          6004873001588    RISI MARIE150G                 Each          6.540        6.740        6.742        11.000        89.000
+          6004873002141    RISI SIX LOVE COCONUT 200G     Each         10.267       10.200       10.267        13.000        87.000
+          6004873002547    RISI LEMON CREAM               Each          9.000        9.160        9.183        13.000        87.000
+          6004873003124    RISI SHORTBREAD BOLACHAS AMANT Each         10.200       10.200       10.200         1.000        99.000
+          6009702444093    BAKERS ZOO ZOO 125G            Each         13.300       13.300       13.300        15.000        85.000
+          6009704170136    BAKERS TOPPERS MINT CHOC 125G  Each          9.212        9.210        9.212        13.000        87.000
+          6009704170686    BAKERS MINI EET SUM-MOR  40G   Each          6.604        6.600        6.604        35.000        65.000
+          6009704170693    BAKERS MINI TENNIS 40G         Each          6.604        6.580        6.604        34.000        66.000
+          7622201699031    OREO ORIGINAL 128G             Each         12.146       12.150       12.146        19.000        81.000
+          7622201699383    OREO GOLDEN 128G               Each         12.146       12.150       12.146        33.000        67.000
+SNKBTG    6001651010237    CRACKLYS SLICED CHILLI  50GR   Each         26.600       26.600       26.600        10.000        90.000
+          6001651031089    CRACKLYS BEEF CHILLI BITES 40G Each         26.600       26.600       26.600        12.000        88.000
+          6004514000154    TAKIS SALAMI STICK TRAD 40G    Each         14.800       14.800       14.800        23.000        77.000
+          6004514000284    TAKIS DROEWORS PERI 40G        Each         14.800       14.800       14.800        24.000        76.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 8 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                  Page: 9
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+SNKBTG    6004514000307    TAKIS DROEWORS TRAD 40G        Each         14.800       14.800       14.800        23.000        77.000
+          6004514000727    TAKIS BEEF SLICE TRAD 50G      Each         27.000       27.000       27.000        15.000        85.000
+          6004514000734    TAKIS BEEF SLICE PERI 50G      Each         27.000       27.000       27.000        10.000        90.000
+          6004514000796    TAKIS DRY WORS STRIPS TRAD 60G Each         27.000       27.000       27.000         7.000        93.000
+          6004514001182    TAKIS BEEF STOKKIES PLAIN 40G  Each         27.000       27.000       27.000         8.000        92.000
+          6004514001199    TAKIS BEEF STOKKIES CHILLI 40G Each         27.000       27.000       27.000        10.000        90.000
+          6004514012058    TAKIS BEEF SLICE BBQ 50G       Each         27.000       27.000       27.000        -1.000       101.000
+          6004514015516    TAKIS BABALAS BTNG MIX 50G     Each         27.000       27.000       27.000         5.000        95.000
+          6009811550166    CRACKLYS PEPPER STICKS 40G     Each         26.600       26.600       26.600         2.000        98.000
+          6009811550456    CRACKLYS SALAMI STICK TRAD 40G Each         13.400       13.400       13.400        10.000        90.000
+          6009811550715    CRACKLYS DROEWORS 40G          Each         13.400       13.400       13.400        13.000        87.000
+          6009880273355    CRACKLYS CHILLI MIX 50G        Each         26.600       26.600       26.600        12.000        88.000
+          6009880273591    CRACKLYS SHISA BITES S/PACK 40 Each         26.600       26.600       26.600         9.000        91.000
+          6009880273621    CRACKLYS SLICED BBQ 50G        Each         26.600       26.600       26.600         7.000        93.000
+SNKNTS    6001052011833    SAFARI PEANUTS + RAISINS 60G   Each          8.390        8.390        8.388        19.000        81.000
+          6001052011864    SAFARI PEANUTS SALTED 60G      Each          8.390        8.390        8.388        26.000        74.000
+          6001052012175    SAFARI BBQ PEANUT 55G          Each          8.380        8.380        8.380         5.000         0.000
+          6001704000406    MIS SWEET PEANUT LARGE 100G    Each         23.370       23.370       23.370         4.000         0.000
+          6009510802924    SIMBA PEANUTS 50G              Each          4.230        4.240        4.236        28.000        72.000
+          6009510802931    SIMBA PEAN RAISIN 50 G         Each          4.240        4.240        4.236        45.000        55.000
+          6009510803624    SIMBA PEANUTS 150G             Each         16.880       16.880       16.875        11.000        89.000
+          6009510803655    SIMBA P NUTS + RAISINS 150G    Each         16.880       16.880       16.875        21.000        79.000
+          6009510805963    SIMBA PEANUTS SALTED 60 G      Each          6.920        6.920        6.917        16.000        84.000
+          6009510805970    SIMBA PEANUTS RAISINS 60G      Each          6.920        6.920        6.917        33.000        67.000
+SPECIA    7693             CADBURY ECLAIRS                Each          0.441        0.440        0.441         9.000        91.000
+TOBACC    3086120600020    BIC LIGHTER LARGE              Each         10.087        9.990       10.087        82.000         0.000
+          3086120600051    BIC LIGHTER SMALL              Each          8.696        8.700        8.696        52.000        48.000
+          50974009         RIZLA K/S CIG PAPER            Each          5.360        5.360        5.360        34.000         0.000
+          5704420029980    ZYN BLACK CHERRY 20 11MG       Each         28.782       28.780       28.782         3.000        97.000
+          5704420033253    ZYN COOL MINT SLIM 20 11MG     Each         28.782       28.780       28.782         8.000        92.000
+          5704420033260    ZYN SPEARMINT SLIM 20 11MG     Each         28.780       28.780       28.782         9.000        91.000
+          6001237052668    VUSE GO 700 CLSC PEACH 3% 1EA  Each         67.830       67.830       67.826        -1.000       101.000
+          6001237053702    VELO 6GM BRIGHSPR 15S          Each         26.986       24.190       26.986         3.000        97.000
+          6001237053726    VELO 6GM BRIGHSPR 20S          Each         26.990        7.710       26.990         3.000        97.000
+          6001237053764    VELO 10GM ICY BRY 20S          Each         26.990       26.990       26.986         2.000        98.000
+          6001237054105    VELO FROSTY LEMON 20EA         Each         26.986       26.990       26.986         5.000        95.000
+          6001237054129    VELO 8GM WINTRY WATERMELON     Each         26.986       27.750       26.986         1.000        99.000
+          6001237054143    VUSE GO 1K BLUEBRRY RASPB 1EA  Each         74.610       74.610       74.609         9.000        91.000
+          6001237054204    VUSE GO 1K BERRY BLEND 1EA     Each         74.609       74.610       74.609         7.000        93.000
+          6001237054266    VUSE GO 1K MINT ICE 1EA        Each         74.609       74.610       74.609        12.000        88.000
+          6001237054327    VUSE GO 1K GRAPE ICE 1EA       Each         74.600       74.610       74.609        15.000        85.000
+          6001237054723    VUSE GO 3K DARK CHERRY 1EA     Each        149.217      149.220      149.217         9.000        91.000
+          6001237054785    VUSE GO 3K GRAPE ICE 1EA       Each        149.220      149.220      149.217         9.000        91.000
+          6001237054808    VUSE GO 3K BERRY BLEND 1EA     Each        149.220      149.220      149.217         9.000        91.000
+          6001237055188    VELO 6MG PUNCHY LIME           Each         21.390       21.390       21.392         3.000        97.000
+          6001237055249    VELO 14MG BREEZY MANGO         Each         33.734       33.730       33.734         3.000        97.000
+          6001237055263    VELO 14MG MIGHTY P/MINT        Each         33.734       33.730       33.734         5.000        95.000
+          6001237055287    VELO 8MG SIMPLY SPEARMINT      Each         26.990       26.990       26.986         4.000        96.000
+          6001237055669    VELO TROPICAL ICE 8MG ORIGINAL Each         26.986       26.990       26.986         5.000        95.000
+          60069795         MATCHES                        Each          0.826        0.990        0.826        88.000         0.000
+          723              LOSE CIGARETTES                Each          2.000        2.000        2.000       306.000         0.000
+          7311250042720    ZYN BLACK CHERRY 20 6MG        Each         14.780       19.930       23.026         3.000        97.000
+          7311250042768    ZYN PEACH MINI 15 6MG          Each         23.030       23.030       23.026         4.000        96.000
+          7311250047640    ZYN CITRUS MINI 15 6MG         Each         23.260       23.030       23.026         4.000        96.000
+          747              NTSU SNUFF                     Each         10.869        9.850       10.869        28.000        72.000
+          748              TAXI MENTHOL SNUFF             Each         11.840       11.850       11.848         8.000        92.000
+          9551023478594    NASTY 9K MANGO                 Each        167.540      167.540      167.540         1.000        99.000
+          9551023478600    VAPE NASTY WATERMELON ICE 9K   Each        167.540      167.540      167.540         1.000        99.000
+          9551023478617    NASTY 9K PEACH ICE             Each        167.540      167.540      167.540         1.000        99.000
+          9551023478624    NASTY 9K STRAWBERRY ICE        Each        167.540      151.170      167.540        -1.000       101.000
+          9551023478631    VAPE NASTY PASS FRU 9K         Each        167.540      167.540      167.540         1.000        99.000
+          9551023478648    NASTY VAPE 9K PMGRNT BERRY 1EA Each        167.540      167.540      167.540         1.000        99.000
+          9551023478662    NASTY VAPE 9K HONEYDEW 1EA     Each        167.540      167.540      167.540         1.000        99.000
+          9551023478679    NASTY 9K ALOE GRAPE            Each        167.540      167.540      167.540         1.000        99.000
+          9551023478686    NASTY 9K RED ENERGY            Each        167.540      167.540      167.540         1.000        99.000
+          9551023478693    NASTY VAPE 9K FIZZY CHERRY 1EA Each        167.540      167.540      167.540         1.000        99.000
+          9551023478709    NASTY 9K BLUE RASPBERRY        Each        167.540      167.540      167.540         1.000        99.000
+          9551023478716    VAPE NASTY KIWI PASS FRUIT G 9 Each        167.540      167.540      167.540         1.000        99.000
+          9551023479898    NASTY 9K GUMMY BEAR            Each        167.540      167.540      167.540         2.000        98.000
+          9551025164754    NASTY VAPE 9K BLACKCURRENT 1EA Each        167.540      167.540      167.540         1.000        99.000
+          9551028391478    NASTY 9K STRWBRY CHEESECKE 1EA Each        153.000      153.000      153.000        -1.000       101.000
+          9551028391485    NASTY 9K BLKBRY CRNBRY ICE 1EA Each        167.540      167.540      167.540         1.000        99.000
+          9551029930003    NASTY 9K  SNSHNE PNCH ICE 1EA  Each        167.540      167.540      167.540         2.000        98.000
+          9551029930010    NASTY 9K PEACH PARADISE        Each        167.540      167.540      167.540         2.000         0.000
+          9551029930027    NASTY 9K SUNSHINE PUNCH ICE 1E Each        167.540      167.540      167.540         1.000        99.000
+          9551029930041    NASTY 9K WATER MELON           Each        167.540      167.540      167.540         1.000        99.000
+TOBCIG    08035238         CAMEL 20'S LIGHTS BLUE BOX     Each         50.870       53.220       53.217        10.000         0.000
+          08035335         CAMEL 20'S CLASSIC BOX         Each         54.780       54.780       54.783        12.000         0.000
+          4032900125206    CAMEL 10S DOUBLE PURPLE        Each         20.279       20.280       20.279        38.000        62.000
+          4032900168760    CAMEL 20S SENSO RED            Each         35.923       37.700       35.923        16.000        84.000
+          40329055         CAMEL FILTER CURVE 20`S        Each         50.870       55.420       53.217        19.000        81.000
+          40329253         WINSTON ARCTIC COOL            Each         32.905       33.640       34.435        17.000         0.000
+          40329345         WINSTON PURPLE REMIX           Each         32.910       32.910       32.905        17.000         0.000
+          4033100018312    WINSTON RED 20S                Each         28.877       28.880       28.877        21.000        79.000
+          4033100018343    WINSTON BLUE 20`S              Each         28.877       28.880       28.877        12.000        88.000
+          4033100057885    CAMEL 20S DBL PURPLE           Each         39.027       40.540       40.558        20.000        80.000
+          42139126         CAMEL 20S ONE                  Each         50.870       50.870       50.870        17.000        83.000
+          42139430         CAMEL 20S SENSO BLUE           Each         35.920       39.520       41.324        11.000        89.000
+          42139447         CAMEL 20S SENSO PLATINUM       Each         35.920       38.760       41.324        13.000        87.000
+          42139621         CAMEL 20S ACTIVATE MINT        Each         35.960       35.970       35.966        27.000        73.000
+          46014429         MARLBORO RED                   Each         52.660       52.660       52.660        17.000         0.000
+          46014436         MARLBORO GOLD BOX              Each         50.300       50.300       50.302        17.000         0.000
+          46014450         MARLBORO BLUE ICE              Each         52.660       52.220       52.660         7.000         0.000
+          6001060100826    PETER STUYV BOOST 20S          Each         39.780       39.780       39.783         4.000        96.000
+          6001060160813    PETER STUYV  BOOST 10S         Each         19.890       19.890       19.892        10.000        90.000
+          6001060177811    DUNHILL COURTLEIGH 10S         Each         23.807       24.080       23.807        37.000        63.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 9 * ---------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                 Page: 10
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+TOBCIG    6001060313813    PETER STUYV FILTER 10S         Each         19.518       20.150       20.289        11.000         0.000
+          6001060314810    PETER STUYV BLUE 10S           Each         22.980       21.550       22.980        47.000         0.000
+          6001060317811    ROTHMANS RED 10S               Each         15.950       15.950       15.948        16.000         0.000
+          6001060359828    KENT SPECIAL 20S               Each         48.800       49.470       50.400        17.000        83.000
+          6001060360824    KENT WHITE 20S                 Each         48.800       48.800       48.800        27.000        73.000
+          6001060381829    DUNHILL BLUE FINE CUT          Each         55.748       55.750       55.748        10.000        90.000
+          6001060496820    DUNHILL COURTL FLIP TOP 20     Each         46.820       46.650       46.820        38.000        62.000
+          6001060563829    PALL MALL RED  20S             Each         27.531       28.440       28.619        12.000        88.000
+          6001060565823    PALL MALL BLUE 20S             Each         28.619       28.620       28.619        25.000        75.000
+          6001060603815    DUNHILL CRAVEN A 10S           Each         19.970       19.980       19.975        24.000        76.000
+          6001060665820    B & H BLUE SWITCH 20S          Each         33.976       33.180       33.976        21.000        79.000
+          6001060684821    B & H SPECIAL RED 20S          Each         33.976       33.610       33.976        29.000        71.000
+          6001060685828    B & H SMOOTH BLUE 20S          Each         33.976       33.960       33.976        21.000        79.000
+          6001060686825    B & H MENTHOL 20S              Each         32.560       34.570       32.560        18.000        82.000
+          6001060880827    PALL MALL XL ZEST 20S          Each         28.577       29.360       28.577        24.000         0.000
+          6001060884825    PALL MALL XL BOOST PMP 20S     Each         29.292       29.190       29.292        20.000        80.000
+          6001060886829    PALL MALL XL PULSE 20S         Each         28.179       28.940       28.179        19.000        81.000
+          6001060944826    B & H PLATINUM SWITCH 20S      Each         33.976       33.960       33.976        18.000        82.000
+          6001060953811    PALL MALL  BLUE 10S            Each         17.520       15.390       17.520        59.000        41.000
+          6001060954818    PALL MALL RED 10S              Each         14.310       14.250       14.310        56.000        44.000
+          6001060967825    DUNHILL SWITCH                 Each         46.820       46.110       46.820        18.000        82.000
+          6001060968822    DUNHILL ZEST                   Each         45.230       46.170       46.820        15.000        85.000
+          6001060969829    DUNHILL BOOST                  Each         45.230       45.230       45.233        14.000        86.000
+          6001237001901    PALL MALL SWITCH 20S           Each         28.577       29.250       29.292        19.000        81.000
+          6001237004148    DUNHILL ECLIPSE DOUBLE PULSE 2 Each         31.915       31.960       31.915        37.000        63.000
+          6001237004421    DUNHILL ECLIPSE DOUBLE COOL 20 Each         31.910       31.920       31.915        13.000        87.000
+          6001237004445    DUNHILL ECLIPSE DBL PULSE 10EA Each         15.603       16.120       15.603        42.000        58.000
+          6001237004483    PETER STUYV RED LIM 20S        Each         39.783       40.080       40.578        13.000        87.000
+          6001237010828    PETER STUYV FILTER BOX 20S     Each         40.578       40.520       40.578        13.000         0.000
+          6001237012822    PETER STUYV RED SOFT 20S       Each         40.578       40.110       40.578        10.000         0.000
+          6001237015823    PETER STUYV BLUE BOX 20S       Each         39.036       40.320       40.578        28.000         0.000
+          6001237212826    DUNHILL BLUE EV 20`S           Each         46.820       46.220       46.820        35.000        65.000
+          6001335051822    ROTHMANS BLUE 20S              Each         40.578       29.750       27.826        13.000         0.000
+          6001335054823    ROTHMANS RED 20S               Each         40.578       29.150       27.826        13.000         0.000
+          6001335065829    DUNHILL CRAVEN 'A' 20'S MENTHO Each         40.578       39.783       39.950        26.000         0.000
+          6001335303822    VOGUE LUXURY SLIMS 20F         Each         54.160       54.160       54.155        15.000         0.000
+          6001697000872    CHESTERFIELD TUNED AQUA        Each         28.610       29.660       30.383        15.000        85.000
+          6009800476248    CHESTERFIELD RED 20S           Each         43.530       45.260       45.866        26.000        74.000
+          6009800476255    CHESTERFIELD BLUE 2OS          Each         43.530       45.090       45.866        27.000        73.000
+          6009800476927    MARLBORO BEYOND RED            Each         32.609       32.630       32.609        20.000        80.000
+          6009800476958    MARLBORO BEYOND BLUE           Each         32.609       32.530       32.609        12.000        88.000
+          6009802927380    CHESTERFIELD REMIX PURPLE      Each         29.370       31.530       31.902        17.000        83.000
+          6009802927397    CHESTERFIELD REMIX SUMMER      Each         31.902       31.900       31.902        21.000        79.000
+          6009802927403    CHESTERFIELD COOL TASTE        Each         30.380       31.330       31.902        16.000        84.000
+TOILET    4015400267607    ALWAYS PADS MAXI               Each         17.500       17.500       17.500         3.000        97.000
+          4015400267669    ALWAYS MAXI PAD 9              Each         20.400       18.470       17.500         3.000        97.000
+          5010232953994    DUREX FEATHER LITE CONDOMS     Each         40.960       40.960       40.960        13.000        87.000
+          5010232965096    DUREX EXTRA SAFE CONDOMS       Each         37.560       37.560       37.561         9.000        91.000
+          5011831076855    BAREBACK ULTRA THIN CONDOMS 3S Each         43.280       43.280       43.280         4.000        96.000
+          5011831076862    ROUGH RIDER FLAVOURS CONDOMS   Each         43.280       43.280       43.280         2.000        98.000
+          5011831076893    CONTEMPO WET N WILD CONDOMS    Each         43.280       43.280       43.280         6.000        94.000
+          5011831092107    SKYN ORIGINAL CONDOMS          Each         36.700       36.700       36.700         4.000        96.000
+          6001019905212    BABY SOFT TOILET PAPER FRESH W Each          9.429        9.430        9.429        12.000        88.000
+          6001019909500    KOTEX ALL NIGHTER MAXI 8 EXTRA Each         15.000       15.000       14.998         1.000        99.000
+          6001070100298    TWINSAVER ECONO 1PLY           Each          0.000        0.000        0.000        45.000        55.000
+          6001070480659    TWINSAVER TOILET PAPER         Each          6.793        6.160        5.979        20.000         0.000
+          6001076001018    AQUAFRESH FRESH + MINTY 50ML   Each         13.906       13.910       13.906         7.000        93.000
+          6001076003531    GRAND-PA HEADACHE RELIEF 12EA  Each         34.780       34.860       34.971        11.000        89.000
+          6001076027025    MED LEMON 8's                  Each         62.920       62.920       62.921        12.000         0.000
+          6001076515003    ENO REGULAR                    Each         55.650       55.660       55.658         4.000        96.000
+          6001087358088    SHIELD DEOAP M ORIGINAL 150ML  Each         33.705       33.710       33.705         3.000        97.000
+          6001087363525    SHIELD DEO ANTIPERSPIRANT W CL Each         33.705       33.710       33.705         6.000        94.000
+          6001087398084    LUX SOAP 150G                  Each         16.010       16.020       16.017         3.000        97.000
+          6001106116545    STREPSILS ORANGE WITH VIT C    Each          5.840        5.850        5.848        10.000         0.000
+          6001106120771    DISPRIN EXTRA STRENTH          Each          1.371        1.270        1.371        99.000         1.000
+          6001106123888    DETTOL SOAP ORIGINAL 175G      Each         14.000       14.000       14.000        15.000        85.000
+          6001106127695    STREPSILS HONEY + LEMON        Each         37.340       37.340       37.344         8.000        92.000
+          6001106127701    STREPSILS ORANGE 8             Each         37.340       37.340       37.344        10.000        90.000
+          6001106224110    DETTOL HYG WIPES ORIG          Each         12.760       12.760       12.761        14.000        86.000
+          60015990         MED-LEMON SATCHES 6.1G         Each          7.005        7.000        7.005        72.000        28.000
+          60026231         FRESHEN CONSTIPATION MEDS 8.5  Each          3.067        3.070        3.067        72.000        28.000
+          60026392         CITRO SODA 4G                  Each          3.575        3.710        3.575        10.000        90.000
+          60029782         ANADIN TABS                    Each          2.580        2.580        2.575        14.000        86.000
+          6003787133026    RENNIE PEPPERMINT 24EA         Each         21.970       21.970       21.971         1.000        99.000
+          6004586000427    KITTEN SOFT 2PLY 4ROLLVIRG 4EA Each         25.550       25.550       25.550         6.000        94.000
+          60050205         ENO 5G FRUIT SALT REGULAR      Each          3.864        3.890        3.905        79.000         0.000
+          60050274         DETTOL 125ML  ANTICEPTIC LIQUI Each         25.250       25.250       25.250         6.000         0.000
+          6005591400097    AQUAFRESH TOOTHB MED 12 FAMI   Each         13.210       13.210       13.211         6.000        94.000
+          6007013000014    CONDOMS - LOVERS PLUS          Each         20.466       20.470       20.466         5.000         0.000
+          6007013000304    TRUST CONDOMS SMOOTH 3S        Each          9.500        9.510        9.508        15.000        85.000
+          60091574         LIP ICE SPEARMINT              Each         17.310       17.310       17.310         9.000         0.000
+          60091581         LIP ICE REGULAR                Each         17.310       17.310       17.310         5.000         0.000
+          60091604         LIP ICE MUSK                   Each         17.310       17.310       17.310         3.000         0.000
+          60091611         LIP ICE BUBBLEGUM              Each         17.310       17.310       17.310         3.000         0.000
+          6009508400385    DOVE EAR BUDS 100              Each         13.560       13.560       13.560         3.000        97.000
+          6009508400446    LILLETS 10'S MINI              Each          9.615        9.620        9.615         5.000         0.000
+          6009508400637    LIL LETS 10'S REGULAR          Each          9.615       10.200        9.615         4.000         0.000
+          6009508400712    LIL LETS 10'S SUPER            Each         16.025       16.030       16.025         3.000         0.000
+          6009695584516    COMPRAL TABLETS 2              Each          1.820        1.820        1.820        26.000        74.000
+          6009695584578    REGMAKERS 150MG                Each         28.110       28.110       28.110         3.000        97.000
+          6009695585223    PANADA 2 TABLETS SACHETS 1EA   Each          1.980        1.870        2.015        99.000         1.000
+          6009697610398    ZAMBUK CHERRY L/BALM 7G        Each          6.180        6.180        6.183        11.000        89.000
+          6009697612996    ZAM BUK 7G                     Each          7.861        7.500        7.861        53.000        47.000
+          60097866         SHIELD DRY OG 50ML             Each         18.067       18.070       18.067         3.000        97.000
+          60097927         SHIELD ROLL ON DRY CLASSIC 50M Each         18.067       18.070       18.067         4.000        96.000
+          60099983         GRAND PA EACH                  Each          2.125        2.150        2.149       306.000         0.000
+<--- Ver: 5.46k ---------------------------------------- * Page: 10 * --------------------------------------- Rpt Type: System --->
+<< Page Break >>
+Stock On Hand with Unit Cost - by Category                                                                                 Page: 11
+-----------------------------------------------------------------------------------------------------------------------------------
+                                                                     Standard      Average       Latest       Stock
+Cat       Stock Code       Stock Description              Units      Cost          Cost          Cost         on Hand     Order Qty
+---       ----------       -----------------              -----      --------      -------       ------       -------     ---------
+TOILET    61600416         VICKS VAPORUB 10G              Each         11.100       10.070       11.100        60.000        40.000
+          8006540339244    ACTA PLUS COUGH SYRUP 50ML     Each         34.930       34.930       34.930         2.000        98.000
+          8006540684931    VICKS VAPORUB 50G              Each         53.870       53.870       53.870         6.000        94.000
+          899              MCNABS SUPERCHARGE SHOT        Each          6.250        6.250        6.250        31.000        69.000
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Stock Valued at 1. Standard Cost               709819.17
+                2. Latest   Cost               832391.20
+                3. Average  Cost               834757.84
+                4. Selling  Excl              1002098.70
+                5. Selling  Incl              1059429.29
+<--- Ver: 5.46k ---------------------------------------- * Page: 11 * --------------------------------------- Rpt Type: System --->
+<< Page Break >>

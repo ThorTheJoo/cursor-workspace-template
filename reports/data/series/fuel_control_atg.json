@@ -1,0 +1,15 @@
+{
+  "report_type": "fuel_control_atg",
+  "points": [
+    {
+      "content_key": "fuel_control_atg|file:Fuel Sales Control - Control Report - ATG",
+      "source_file": "Fuel Sales Control - Control Report - ATG.TXT",
+      "path": "Additional/Fuel Sales Control - Control Report - ATG.TXT",
+      "modified": "2026-05-25 13:07",
+      "summary": {
+        "report_type": "fuel_control_atg"
+      },
+      "ingest_id": "20260525-98cab127e70d518a"
+    }
+  ]
+}

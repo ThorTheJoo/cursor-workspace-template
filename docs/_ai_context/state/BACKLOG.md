@@ -12,6 +12,12 @@ last_groomed: 2026-03-29
 (none)
 
 ### P1 - Next Sprint
+- [ ] Parser: Cash Variance by Cashier → series + dashboard drill-down. (source: 2026-05-24_ADDITIONAL_FOLDER_AND_FILE_REPO.md).
+- [ ] Parser: Fuel Sales Control MTD + ATG → wet-stock trend series. (source: same).
+- [ ] Parser: Stock Shrinkage MTD + Purchases → inventory KPI section. (source: same).
+- [ ] Parser: EFT Summary/Detail by shift — optional txn-level audit. (source: same).
+- [ ] Parser: Debtors / Creditors / Turnover Levy — accounting month-end panel. (source: same).
+- [ ] File drill-down UI: sparklines from `reports/data/series/*.json` per report type. (source: FILE_INGESTION_ARCHITECTURE.md Phase 2).
 - [ ] Create repo-manifest.json generator script per V1.3 Sniper Mode. (source: MDD V1.3 Section 1.4).
 
 ### P2 - Backlog

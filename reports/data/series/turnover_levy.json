@@ -1,0 +1,15 @@
+{
+  "report_type": "turnover_levy",
+  "points": [
+    {
+      "content_key": "turnover_levy|file:Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories",
+      "source_file": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+      "path": "Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
+      "modified": "2026-05-25 13:06",
+      "summary": {
+        "report_type": "turnover_levy"
+      },
+      "ingest_id": "20260525-e7e3c4b825ab55eb"
+    }
+  ]
+}

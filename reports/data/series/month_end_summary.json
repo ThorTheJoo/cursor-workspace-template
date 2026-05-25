@@ -1,0 +1,15 @@
+{
+  "report_type": "month_end_summary",
+  "points": [
+    {
+      "content_key": "month_end_summary|file:Month End Summary",
+      "source_file": "Month End Summary.TXT",
+      "path": "Starter Docs/Month End Summary.TXT",
+      "modified": "2026-05-24 12:28",
+      "summary": {
+        "report_type": "month_end_summary"
+      },
+      "ingest_id": "20260525-c59c860754b1cee8"
+    }
+  ]
+}

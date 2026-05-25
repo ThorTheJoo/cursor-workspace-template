@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>day_end_summary — File View</title>
+  <link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../management-dashboard.html">Management Report</a>
+    <a href="index.html">File Repository</a>
+    <strong>day_end_summary</strong>
+  </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Day End Summary</h1>
+      <p class="meta"><span class="tag tag-pos_system">Pos System</span>
+        Frequency: <strong>Daily</strong> ·
+        <span class="badge-integrated">integrated</span> ·
+        5 period(s) in series · 12 file(s) on disk
+      </p>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
+        <a class="btn" href="../help/day_end_summary.html" target="_blank">Full help page</a>
+        <a class="btn" href="../../docs/_ai_context/knowledge/reference/file-type-catalog.yaml" target="_blank">YAML spec</a>
+      </div>
+      <div id="helpPanel" class="help-panel"><h3>Day End Summary</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Single source of truth for one trading day: combined forecourt + shop sales, fuel volume, GP%, cashier exceptions, wet-stock EOD, and nett takings.
+</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>batch_number</code></li>
+<li><code>batch_date</code></li>
+<li><code>nett_takings</code></li>
+<li><code>fuel_total</code></li>
+<li><code>fuel_volume</code></li>
+<li><code>shop_total_incl</code></li>
+<li><code>cash_variance</code></li>
+<li><code>fuel_grades (pump vs tank variance)</code></li>
+<li><code>top_categories</code></li>
+</ul></dd></dl>
+<dl><dt>Valuable insights</dt><dd><ul>
+<li>Daily revenue trend and day-on-day deltas</li>
+<li>Fuel litres sold vs wet-stock variance (loss/theft/dip error)</li>
+<li>Shop category mix and GP%</li>
+<li>Cash control at shift close</li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Cash variance &gt; R50 — investigate cashier/till</li>
+<li>Fuel pump-tank variance &gt; ±25 L per grade — wet stock alert</li>
+<li>Nett takings drop &gt;30% vs prior day — trading anomaly (Sunday, supply, outage)</li>
+</ul></div>
+<p><strong>Reconciles with:</strong> eft_batch_summary, bank_feed.speedpoint, ocr_whatsapp.fuel_volume</p></div>
+    </div>
+
+    <div class="card">
+      <h2>Historic trend (Daily)</h2>
+      <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
+      <table id="trendTable">
+        <thead><tr><th>Period</th><th>Batch</th><th class='num'>Nett Takings</th><th class='num'>Fuel Volume</th><th class='num'>Cash Variance</th><th class='num'>Shop Total Incl</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/Day End Summary (3).TXT'><td class='nowrap'><strong>18/05/2026</strong></td><td>B141</td><td class='num'>R 185,823.99</td><td class='num'>5,788.51 L</td><td class='num'>R 0.00</td><td class='num'>R 16,690.40</td><td><code>Day End Summary (3).TXT</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/Day End Summary (4).TXT'><td class='nowrap'><strong>19/05/2026</strong></td><td>B142</td><td class='num'>R 104,790.45 <span class='down'>(-81,033.54)</span></td><td class='num'>3,191.23 L <span class='down'>(-2,597.28)</span></td><td class='num'>R 0.00 <span class=''>(+0.00)</span></td><td class='num'>R 15,794.85 <span class='down'>(-895.55)</span></td><td><code>Day End Summary (4).TXT</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/Day End Summary (2).TXT'><td class='nowrap'><strong>20/05/2026</strong></td><td>B143</td><td class='num'>R 162,197.44 <span class='up'>(+57,406.99)</span></td><td class='num'>5,000.67 L <span class='up'>(+1,809.44)</span></td><td class='num'>R 0.00 <span class=''>(+0.00)</span></td><td class='num'>R 16,754.80 <span class='up'>(+959.95)</span></td><td><code>Day End Summary (2).TXT</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/Day End Summary.TXT'><td class='nowrap'><strong>22/05/2026</strong></td><td>B145</td><td class='num'>R 183,805.24 <span class='up'>(+21,607.80)</span></td><td class='num'>5,479.85 L <span class='up'>(+479.18)</span></td><td class='num'>R 19.56 <span class='up'>(+19.56)</span></td><td class='num'>R 21,909.15 <span class='up'>(+5,154.35)</span></td><td><code>Day End Summary.TXT</code></td></tr>
+<tr class='clickable' data-path='Additional/Day End Summary (2).TXT'><td class='nowrap'><strong>24/05/2026</strong></td><td>B147</td><td class='num'>R 71,895.05 <span class='down'>(-111,910.19)</span></td><td class='num'>2,287.27 L <span class='down'>(-3,192.58)</span></td><td class='num'>R 0.00 <span class='down'>(-19.56)</span></td><td class='num'>R 6,056.15 <span class='down'>(-15,853.00)</span></td><td><code>Day End Summary (2).TXT</code></td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>All physical files loaded</h2>
+      <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
+      <table id="filesTable">
+        <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Additional/Day End Summary (5).TXT' data-ingest='20260525-e39ead78c622bdfe'><td><code>Day End Summary (5).TXT</code></td><td>Additional</td><td class='nowrap'>day_end|batch:143|date:20/05/2026</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>52,657</td></tr><tr class='clickable' data-path='Additional/Day End Summary (6).TXT' data-ingest='20260525-9cd949c46a59427e'><td><code>Day End Summary (6).TXT</code></td><td>Additional</td><td class='nowrap'>day_end|batch:143|date:20/05/2026</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>52,790</td></tr><tr class='clickable' data-path='Additional/Day End Summary (3).TXT' data-ingest='20260525-2a17fb67760eda32'><td><code>Day End Summary (3).TXT</code></td><td>Additional</td><td class='nowrap'>day_end|batch:141|date:18/05/2026</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>51,945</td></tr><tr class='clickable' data-path='Additional/Day End Summary (4).TXT' data-ingest='20260525-4828f159bf3b703f'><td><code>Day End Summary (4).TXT</code></td><td>Additional</td><td class='nowrap'>day_end|batch:142|date:19/05/2026</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>52,746</td></tr><tr class='clickable' data-path='Additional/Day End Summary (2).TXT' data-ingest='20260525-f7333e236acd4d86'><td><code>Day End Summary (2).TXT</code></td><td>Additional</td><td class='nowrap'>day_end|batch:147|date:24/05/2026</td><td>primary</td><td>2026-05-25 13:05</td><td class='num'>53,763</td></tr><tr class='clickable' data-path='Starter Docs/Day End Summary (3).TXT' data-ingest='20260525-2a17fb67760eda32'><td><code>Day End Summary (3).TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:141|date:18/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>51,945</td></tr><tr class='clickable' data-path='Starter Docs/Day End Summary (4).TXT' data-ingest='20260525-4828f159bf3b703f'><td><code>Day End Summary (4).TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:142|date:19/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>52,746</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Day End Summary (1).TXT' data-ingest='20260525-2a17fb67760eda32'><td><code>Day End Summary (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:141|date:18/05/2026</td><td>dup</td><td>2026-05-24 16:39</td><td class='num'>51,945</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Day End Summary.TXT' data-ingest='20260525-4828f159bf3b703f'><td><code>Day End Summary.TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:142|date:19/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>52,746</td></tr><tr class='clickable' data-path='Starter Docs/Day End Summary (2).TXT' data-ingest='20260525-e39ead78c622bdfe'><td><code>Day End Summary (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:143|date:20/05/2026</td><td>primary</td><td>2026-05-24 12:29</td><td class='num'>52,657</td></tr><tr class='clickable' data-path='Starter Docs/Day End Summary (1).TXT' data-ingest='20260525-9cd949c46a59427e'><td><code>Day End Summary (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:143|date:20/05/2026</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>52,790</td></tr><tr class='clickable' data-path='Starter Docs/Day End Summary.TXT' data-ingest='20260525-b05a8274f9bca9dd'><td><code>Day End Summary.TXT</code></td><td>Starter Docs</td><td class='nowrap'>day_end|batch:145|date:22/05/2026</td><td>primary</td><td>2026-05-23 11:15</td><td class='num'>53,300</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="fileDetail" class="file-detail" style="display:none">
+      <h3>File detail</h3>
+      <p id="fileMeta" class="meta"></p>
+      <pre id="fileJson" class="json"></pre>
+    </div>
+  </div>
+  <script>
+    const LEDGER = [
+  {
+    "ingest_id": "20260525-f7333e236acd4d86",
+    "path": "Additional/Day End Summary (2).TXT",
+    "filename": "Day End Summary (2).TXT",
+    "folder": "Additional",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:147|date:24/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 53763,
+    "modified": "2026-05-25 13:05",
+    "sha256_prefix": "f7333e236acd4d86",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 147,
+      "batch_date": "24/05/2026",
+      "nett_takings": 71895.05,
+      "fuel_total": 65643.9,
+      "shop_total_incl": 6056.15,
+      "fuel_volume": 2287.27,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-2a17fb67760eda32",
+    "path": "Additional/Day End Summary (3).TXT",
+    "filename": "Day End Summary (3).TXT",
+    "folder": "Additional",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:141|date:18/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 51945,
+    "modified": "2026-05-25 13:07",
+    "sha256_prefix": "2a17fb67760eda32",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "nett_takings": 185823.99,
+      "fuel_total": 169798.8,
+      "shop_total_incl": 16690.4,
+      "fuel_volume": 5788.51,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-4828f159bf3b703f",
+    "path": "Additional/Day End Summary (4).TXT",
+    "filename": "Day End Summary (4).TXT",
+    "folder": "Additional",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:142|date:19/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 52746,
+    "modified": "2026-05-25 13:07",
+    "sha256_prefix": "4828f159bf3b703f",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "nett_takings": 104790.45,
+      "fuel_total": 88895.6,
+      "shop_total_incl": 15794.85,
+      "fuel_volume": 3191.23,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-e39ead78c622bdfe",
+    "path": "Additional/Day End Summary (5).TXT",
+    "filename": "Day End Summary (5).TXT",
+    "folder": "Additional",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:143|date:20/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 52657,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "e39ead78c622bdfe",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "nett_takings": 162197.44,
+      "fuel_total": 146041.85,
+      "shop_total_incl": 16754.8,
+      "fuel_volume": 5000.67,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-9cd949c46a59427e",
+    "path": "Additional/Day End Summary (6).TXT",
+    "filename": "Day End Summary (6).TXT",
+    "folder": "Additional",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:143|date:20/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 52790,
+    "modified": "2026-05-25 13:08",
+    "sha256_prefix": "9cd949c46a59427e",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "nett_takings": 162197.44,
+      "fuel_total": 146041.85,
+      "shop_total_incl": 16754.8,
+      "fuel_volume": 5000.67,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-9cd949c46a59427e",
+    "path": "Starter Docs/Day End Summary (1).TXT",
+    "filename": "Day End Summary (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:143|date:20/05/2026",
+    "is_duplicate_copy": true,
+    "size_bytes": 52790,
+    "modified": "2026-05-24 12:28",
+    "sha256_prefix": "9cd949c46a59427e",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "nett_takings": 162197.44,
+      "fuel_total": 146041.85,
+      "shop_total_incl": 16754.8,
+      "fuel_volume": 5000.67,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-e39ead78c622bdfe",
+    "path": "Starter Docs/Day End Summary (2).TXT",
+    "filename": "Day End Summary (2).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:143|date:20/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 52657,
+    "modified": "2026-05-24 12:29",
+    "sha256_prefix": "e39ead78c622bdfe",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "nett_takings": 162197.44,
+      "fuel_total": 146041.85,
+      "shop_total_incl": 16754.8,
+      "fuel_volume": 5000.67,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-2a17fb67760eda32",
+    "path": "Starter Docs/Day End Summary (3).TXT",
+    "filename": "Day End Summary (3).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:141|date:18/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 51945,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "2a17fb67760eda32",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "nett_takings": 185823.99,
+      "fuel_total": 169798.8,
+      "shop_total_incl": 16690.4,
+      "fuel_volume": 5788.51,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-4828f159bf3b703f",
+    "path": "Starter Docs/Day End Summary (4).TXT",
+    "filename": "Day End Summary (4).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:142|date:19/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 52746,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "4828f159bf3b703f",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "nett_takings": 104790.45,
+      "fuel_total": 88895.6,
+      "shop_total_incl": 15794.85,
+      "fuel_volume": 3191.23,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-b05a8274f9bca9dd",
+    "path": "Starter Docs/Day End Summary.TXT",
+    "filename": "Day End Summary.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:145|date:22/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 53300,
+    "modified": "2026-05-23 11:15",
+    "sha256_prefix": "b05a8274f9bca9dd",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 145,
+      "batch_date": "22/05/2026",
+      "nett_takings": 183805.24,
+      "fuel_total": 162086.3,
+      "shop_total_incl": 21909.15,
+      "fuel_volume": 5479.85,
+      "cash_variance": 19.56
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-2a17fb67760eda32",
+    "path": "Starter Docs/Refresh/Day End Summary (1).TXT",
+    "filename": "Day End Summary (1).TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:141|date:18/05/2026",
+    "is_duplicate_copy": true,
+    "size_bytes": 51945,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "2a17fb67760eda32",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "nett_takings": 185823.99,
+      "fuel_total": 169798.8,
+      "shop_total_incl": 16690.4,
+      "fuel_volume": 5788.51,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  },
+  {
+    "ingest_id": "20260525-4828f159bf3b703f",
+    "path": "Starter Docs/Refresh/Day End Summary.TXT",
+    "filename": "Day End Summary.TXT",
+    "folder": "Starter Docs",
+    "pattern_name": "Day End Summary",
+    "report_type": "day_end_summary",
+    "source_type": "pos_system",
+    "content_key": "day_end|batch:142|date:19/05/2026",
+    "is_duplicate_copy": false,
+    "size_bytes": 52746,
+    "modified": "2026-05-24 16:39",
+    "sha256_prefix": "4828f159bf3b703f",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "nett_takings": 104790.45,
+      "fuel_total": 88895.6,
+      "shop_total_incl": 15794.85,
+      "fuel_volume": 3191.23,
+      "cash_variance": 0.0
+    },
+    "catalog_ref": "file-type-catalog.yaml#day_end_summary"
+  }
+];
+    const SERIES = [
+  {
+    "content_key": "day_end|batch:141|date:18/05/2026",
+    "source_file": "Day End Summary (3).TXT",
+    "path": "Starter Docs/Day End Summary (3).TXT",
+    "modified": "2026-05-24 16:39",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "nett_takings": 185823.99,
+      "fuel_total": 169798.8,
+      "shop_total_incl": 16690.4,
+      "fuel_volume": 5788.51,
+      "cash_variance": 0.0
+    },
+    "ingest_id": "20260525-2a17fb67760eda32"
+  },
+  {
+    "content_key": "day_end|batch:142|date:19/05/2026",
+    "source_file": "Day End Summary (4).TXT",
+    "path": "Starter Docs/Day End Summary (4).TXT",
+    "modified": "2026-05-24 16:39",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "nett_takings": 104790.45,
+      "fuel_total": 88895.6,
+      "shop_total_incl": 15794.85,
+      "fuel_volume": 3191.23,
+      "cash_variance": 0.0
+    },
+    "ingest_id": "20260525-4828f159bf3b703f"
+  },
+  {
+    "content_key": "day_end|batch:143|date:20/05/2026",
+    "source_file": "Day End Summary (2).TXT",
+    "path": "Starter Docs/Day End Summary (2).TXT",
+    "modified": "2026-05-24 12:29",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "nett_takings": 162197.44,
+      "fuel_total": 146041.85,
+      "shop_total_incl": 16754.8,
+      "fuel_volume": 5000.67,
+      "cash_variance": 0.0
+    },
+    "ingest_id": "20260525-e39ead78c622bdfe"
+  },
+  {
+    "content_key": "day_end|batch:145|date:22/05/2026",
+    "source_file": "Day End Summary.TXT",
+    "path": "Starter Docs/Day End Summary.TXT",
+    "modified": "2026-05-23 11:15",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 145,
+      "batch_date": "22/05/2026",
+      "nett_takings": 183805.24,
+      "fuel_total": 162086.3,
+      "shop_total_incl": 21909.15,
+      "fuel_volume": 5479.85,
+      "cash_variance": 19.56
+    },
+    "ingest_id": "20260525-b05a8274f9bca9dd"
+  },
+  {
+    "content_key": "day_end|batch:147|date:24/05/2026",
+    "source_file": "Day End Summary (2).TXT",
+    "path": "Additional/Day End Summary (2).TXT",
+    "modified": "2026-05-25 13:05",
+    "summary": {
+      "report_type": "day_end_summary",
+      "batch": 147,
+      "batch_date": "24/05/2026",
+      "nett_takings": 71895.05,
+      "fuel_total": 65643.9,
+      "shop_total_incl": 6056.15,
+      "fuel_volume": 2287.27,
+      "cash_variance": 0.0
+    },
+    "ingest_id": "20260525-f7333e236acd4d86"
+  }
+];
+    function toggleHelp() {
+      document.getElementById('helpPanel').classList.toggle('open');
+    }
+    function showFile(path) {
+      const row = LEDGER.find(e => e.path === path) || SERIES.find(p => p.path === path);
+      if (!row) return;
+      const el = document.getElementById('fileDetail');
+      el.style.display = 'block';
+      document.getElementById('fileMeta').textContent = row.path + ' · modified ' + (row.modified || '');
+      document.getElementById('fileJson').textContent = JSON.stringify(row.summary || row, null, 2);
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('tr.clickable').forEach(tr => {
+      tr.addEventListener('click', () => {
+        document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+        tr.classList.add('selected');
+        showFile(tr.dataset.path);
+      });
+    });
+  </script>
+</body>
+</html>

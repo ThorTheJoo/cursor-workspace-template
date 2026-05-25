@@ -1,0 +1,405 @@
+{
+  "report_type": "ocr_synthesis",
+  "points": [
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.35.12",
+      "source_file": "WhatsApp Image 2026-05-24 at 07.35.12.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.35.12.jpeg",
+      "modified": "2026-05-24 14:33",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-c32475ab5abd8769"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.48.36",
+      "source_file": "WhatsApp Image 2026-05-24 at 07.48.36 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.36 (1).jpeg",
+      "modified": "2026-05-24 14:33",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-3df57ce92e10f722"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 07.48.37",
+      "source_file": "WhatsApp Image 2026-05-24 at 07.48.37.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 07.48.37.jpeg",
+      "modified": "2026-05-24 14:33",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-8b172e66aa64da42"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 08.59.20",
+      "source_file": "WhatsApp Image 2026-05-24 at 08.59.20.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 08.59.20.jpeg",
+      "modified": "2026-05-24 14:33",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-07ed0f270ad17e7c"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 10.19.08",
+      "source_file": "WhatsApp Image 2026-05-24 at 10.19.08.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 10.19.08.jpeg",
+      "modified": "2026-05-24 14:33",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-c4cd995656a32001"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-24 at 12.19.51",
+      "source_file": "WhatsApp Image 2026-05-24 at 12.19.51.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-24 at 12.19.51.jpeg",
+      "modified": "2026-05-24 14:33",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-da698f8b0883e01b"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 08.24.41",
+      "source_file": "WhatsApp Image 2026-05-21 at 08.24.41.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 08.24.41.jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-81b6725f86bba5b5"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 06.17.14",
+      "source_file": "WhatsApp Image 2026-05-22 at 06.17.14.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 06.17.14.jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-0201891af81d57b4"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 08.18.51",
+      "source_file": "WhatsApp Image 2026-05-22 at 08.18.51.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.51.jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-846d44a26785a1f2"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 08.18.52",
+      "source_file": "WhatsApp Image 2026-05-22 at 08.18.52 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 08.18.52 (1).jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-804aa1add21ae9fd"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 09.03.14",
+      "source_file": "WhatsApp Image 2026-05-22 at 09.03.14 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.14 (1).jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-927a38ff123a7188"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-22 at 09.03.15",
+      "source_file": "WhatsApp Image 2026-05-22 at 09.03.15.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-22 at 09.03.15.jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-778e08ba7820a477"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 07.09.39",
+      "source_file": "WhatsApp Image 2026-05-23 at 07.09.39 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 07.09.39 (1).jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-7155737664278407"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 08.18.26",
+      "source_file": "WhatsApp Image 2026-05-23 at 08.18.26.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 08.18.26.jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-1c58b66614d6aa17"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-23 at 08.18.27",
+      "source_file": "WhatsApp Image 2026-05-23 at 08.18.27.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-23 at 08.18.27.jpeg",
+      "modified": "2026-05-24 14:34",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-3ad07c3965747091"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 07.40.48",
+      "source_file": "WhatsApp Image 2026-05-19 at 07.40.48.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.48.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-9053ec187a93c25f"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 07.40.49",
+      "source_file": "WhatsApp Image 2026-05-19 at 07.40.49.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 07.40.49.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-1284ded2c380a169"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 10.33.54",
+      "source_file": "WhatsApp Image 2026-05-19 at 10.33.54 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 10.33.54 (1).jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-1692207ef2cce337"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 11.27.20",
+      "source_file": "WhatsApp Image 2026-05-19 at 11.27.20.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 11.27.20.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-ea1e97d804cb29c5"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 16.44.59",
+      "source_file": "WhatsApp Image 2026-05-19 at 16.44.59.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 16.44.59.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-d3682a48c6aa90e9"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-19 at 16.59.32",
+      "source_file": "WhatsApp Image 2026-05-19 at 16.59.32.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-19 at 16.59.32.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-9ee5875f3db1600d"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 07.51.26",
+      "source_file": "WhatsApp Image 2026-05-20 at 07.51.26 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 07.51.26 (1).jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-1819df5d769c949b"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 08.11.22",
+      "source_file": "WhatsApp Image 2026-05-20 at 08.11.22.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 08.11.22.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-ab613ce93e292a8b"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 08.37.42",
+      "source_file": "WhatsApp Image 2026-05-20 at 08.37.42.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 08.37.42.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-c604629a50289f9a"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 16.20.54",
+      "source_file": "WhatsApp Image 2026-05-20 at 16.20.54.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 16.20.54.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-0fbd1cad41905557"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-20 at 16.20.55",
+      "source_file": "WhatsApp Image 2026-05-20 at 16.20.55.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-20 at 16.20.55.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-12170d008b305f9a"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 06.40.39",
+      "source_file": "WhatsApp Image 2026-05-21 at 06.40.39.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 06.40.39.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-df6138054aa5647f"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 06.40.40",
+      "source_file": "WhatsApp Image 2026-05-21 at 06.40.40.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 06.40.40.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-21a5d5af1d076734"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-21 at 08.24.40",
+      "source_file": "WhatsApp Image 2026-05-21 at 08.24.40.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-21 at 08.24.40.jpeg",
+      "modified": "2026-05-24 14:35",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-c218776033a30f29"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-17 at 06.50.00",
+      "source_file": "WhatsApp Image 2026-05-17 at 06.50.00.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.00.jpeg",
+      "modified": "2026-05-24 14:36",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-084892568f19861c"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-17 at 06.50.01",
+      "source_file": "WhatsApp Image 2026-05-17 at 06.50.01 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-17 at 06.50.01 (1).jpeg",
+      "modified": "2026-05-24 14:36",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-4fe224c18835f266"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 06.25.39",
+      "source_file": "WhatsApp Image 2026-05-18 at 06.25.39 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 06.25.39 (1).jpeg",
+      "modified": "2026-05-24 14:36",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-d97be4f4ca4eb1f2"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 07.33.39",
+      "source_file": "WhatsApp Image 2026-05-18 at 07.33.39 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 07.33.39 (1).jpeg",
+      "modified": "2026-05-24 14:36",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-5adbcd641fa08c83"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-18 at 08.20.00",
+      "source_file": "WhatsApp Image 2026-05-18 at 08.20.00.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-18 at 08.20.00.jpeg",
+      "modified": "2026-05-24 14:36",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-970ede5013e519ce"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.22.51",
+      "source_file": "WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
+      "modified": "2026-05-24 14:37",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-ad58904b56e5b938"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.23.01",
+      "source_file": "WhatsApp Image 2026-05-15 at 08.23.01.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.01.jpeg",
+      "modified": "2026-05-24 14:37",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-52d49f67d32016c9"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 08.23.02",
+      "source_file": "WhatsApp Image 2026-05-15 at 08.23.02 (1).jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.23.02 (1).jpeg",
+      "modified": "2026-05-24 14:37",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-9dc779dd300e4ad0"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-15 at 14.15.42",
+      "source_file": "WhatsApp Image 2026-05-15 at 14.15.42.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-15 at 14.15.42.jpeg",
+      "modified": "2026-05-24 14:37",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-e680a1dff629d9c3"
+    },
+    {
+      "content_key": "ocr_synthesis|file:WhatsApp Image 2026-05-16 at 12.00.09",
+      "source_file": "WhatsApp Image 2026-05-16 at 12.00.09.jpeg",
+      "path": "Starter Docs/WhatsApp Image 2026-05-16 at 12.00.09.jpeg",
+      "modified": "2026-05-24 14:37",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-b9e5855dfde3a8f9"
+    },
+    {
+      "content_key": "ocr_synthesis|file:deepseek_text_20260524_26b077",
+      "source_file": "deepseek_text_20260524_26b077.txt",
+      "path": "Starter Docs/deepseek_text_20260524_26b077.txt",
+      "modified": "2026-05-24 14:52",
+      "summary": {
+        "report_type": "ocr_synthesis"
+      },
+      "ingest_id": "20260525-f5405f7f66b68219"
+    }
+  ]
+}

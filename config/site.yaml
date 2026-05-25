@@ -1,0 +1,29 @@
+# ENGEN Jet Park — site configuration
+# Update nominated_account before live payroll import.
+
+site:
+  name: "ENGEN JET PARK SERVICE STATION"
+  legal_entity: "Fuel Rock (Pty) Ltd"
+  currency: "ZAR"
+
+banking:
+  # Nominated (debit) account for bulk payroll — replace with your live account
+  nominated_account: "62848015857"
+  payroll:
+    own_reference: "FuelRock Payroll"
+    recipient_reference_prefix: "Salary"
+    # FNB account types: 1=Current, 2=Savings, 3=Transmission
+    default_account_type: "2"
+    bank_account_types:
+      Capitec Bank: "2"
+      "First National Bank South Africa": "1"
+      "Nedbank South Africa": "1"
+      "African Bank": "2"
+
+inputs:
+  directory: "docs/_ai_context/inputs/Starter Docs"
+
+outputs:
+  dashboard: "reports/management-dashboard.html"
+  canonical_json: "reports/data/canonical-latest.json"
+  payroll_dir: "reports/payroll"

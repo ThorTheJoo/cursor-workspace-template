@@ -9,12 +9,58 @@ traceability_id: "WS-001-cursor-workspace-starter"
 
 # MASTER_STATE.md
 
-**Last Updated:** 2026-03-31
-**Version:** 2.6.0
+**Last Updated:** 2026-05-25  
+**Version:** 1.5.0
 
 ## Current Workspace State
 
-**Cursor Workspace Starter** template repository (v2.6.0). Portable, zero-global-pollution foundation for Cursor IDE workspaces. Powered by MDD V1.4 (fat router + skills) with full artifact suite, continuous improvement loop, 8 curated agent skills, 9 portable MDD methodology skills, and zero-trust security hardening.
+**Experiment JP** — ENGEN Jet Park fuel & convenience operations. Management reporting pipeline active with source-classified inputs (POS, payroll, bank, manual recon).
+
+### Input Source Layers
+
+| Layer | Type | Files | Purpose |
+|-------|------|-------|---------|
+| POS System | auto-generated | `Starter Docs/`, `Refresh/`, `Additional/*.TXT` | Daily/monthly sales, wet stock, EFT |
+| Inventory | auto-generated | `Additional/*Stock*`, shrinkage, purchases | Stock take, shrink, COGS |
+| Accounting | auto-generated | `Additional/*Debtors*`, creditors, levy | AR/AP, franchise reporting |
+| Payroll System | auto-generated | `Nett Pay List*.xls*` | Weekly net pay → FNB CSV |
+| Bank Feed | auto-generated | `62848015857.ofx`, `*.ofx` | FNB account 62848015857 — Apr 2026: 327 trx |
+| Manual Recon | human-maintained | `CASH UP APRIL 26.xlsx`, `Schedule of Accounts*.xlsx` | Petty cash, supplier invoices |
+| OCR / WhatsApp | photo → OCR synthesis | `deepseek_text_*.txt` | ATG dips, CIT, EOD screenshots — confirm vs POS |
+
+Registry: `docs/_ai_context/knowledge/reference/input-source-registry.yaml`  
+File catalog: `docs/_ai_context/knowledge/reference/file-type-catalog.yaml`  
+Architecture: `docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md`  
+Guides: `docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md` · `MANAGEMENT_DASHBOARD_SPECIFICATION.md`  
+Analysis: `2026-05-24_ADDITIONAL_FOLDER_AND_FILE_REPO.md` · `2026-05-24_OCR_WHATSAPP_DISCOVERY.md` · `2026-05-24_REFRESH_POS_DROP.md` · `2026-05-24_BANK_OFX_REFRESH.md`
+
+### Reporting Pipeline
+
+| Output | Script |
+|--------|--------|
+| `reports/management-dashboard.html` | `scripts/management/generate_dashboard.py` |
+| `reports/file-views/index.html` | `scripts/management/generate_file_views.py` |
+| `reports/file-views/{report_type}.html` | `scripts/management/generate_file_views.py` |
+| `reports/help/*.html` | `scripts/management/generate_file_views.py` |
+| `reports/data/canonical-latest.json` | `scripts/management/parse_reports.py` |
+| `reports/data/ingest-ledger.json` | `scripts/management/build_file_repo.py` |
+| `reports/data/series/*.json` | `scripts/management/build_file_repo.py` |
+| `reports/data/file-repo-index.json` | `scripts/management/build_file_repo.py` |
+| `reports/payroll/Payment_*.csv` | `scripts/payroll/netpay_to_payment_csv.py --all` |
+| `docs/_ai_context/prompts/HANDOFF_OPTIMIZATION_REFACTOR.md` | Optimization handoff for external models |
+
+### Domain Skills (2026-05-24)
+
+| Category | Count | Index |
+|----------|-------|-------|
+| Custom fuel/C-store | 3 | `fuel-station-operations`, `convenience-store-operations`, `fuel-petrochemical-inventory` |
+| Retail inventory | 10 | See `.cursor/skills/DOMAIN_SKILLS_INDEX.md` |
+| Finance & P&L | 6 | Same |
+| Ops capabilities | 3 | inventory-demand-planning, energy-procurement, returns-reverse-logistics |
+| E-commerce retail | 1 suite | `ecommerce-retail` (10 commands) |
+| MDD portable | 9+ | Built-in template skills |
+
+**Total skills with SKILL.md:** 40
 
 ### Core Components
 

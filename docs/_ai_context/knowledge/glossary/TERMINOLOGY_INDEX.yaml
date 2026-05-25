@@ -1,0 +1,53 @@
+# Terminology Index Template
+# A glossary of canonical terms for your domain.
+# Customize the domains and terms for your project.
+
+version: "1.0.0"
+last_updated: "[YYYY-MM-DD]"
+domain: "[YOUR_DOMAIN]"
+
+architecture_terms:
+  # Terms related to system architecture, components, and infrastructure.
+  # Add your project-specific architecture terms here.
+
+  - name: "[Term Name]"
+    definition: "[Clear, concise definition of the term]"
+    synonyms: ["[alias1]", "[alias2]"]
+    domain: "architecture"
+    source: "[Where this definition comes from]"
+
+  # Example:
+  # - name: "Load Balancer"
+  #   definition: "Network device that distributes incoming traffic across multiple servers"
+  #   synonyms: ["LB", "traffic distributor"]
+  #   domain: "infrastructure"
+  #   source: "Architecture Decision Record ADR-042"
+
+domain_terms:
+  # Terms specific to your business domain.
+  # Add your project-specific domain terms here.
+
+  - name: "[Term Name]"
+    definition: "[Clear, concise definition of the term]"
+    synonyms: ["[alias1]", "[alias2]"]
+    domain: "[subdomain]"
+    source: "[Where this definition comes from]"
+
+  # Example:
+  # - name: "Customer Lifetime Value"
+  #   definition: "Predicted net profit attributed to the entire future relationship with a customer"
+  #   synonyms: ["CLV", "LTV", "lifetime value"]
+  #   domain: "analytics"
+  #   source: "Marketing Analytics Handbook v3"
+
+abbreviations:
+  # Common abbreviations used in the project.
+
+  - abbreviation: "[ABBR]"
+    expansion: "[Full expansion]"
+    context: "[When this abbreviation is used]"
+
+  # Example:
+  # - abbreviation: "API"
+  #   expansion: "Application Programming Interface"
+  #   context: "General software engineering"

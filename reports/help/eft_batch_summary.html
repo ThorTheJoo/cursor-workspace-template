@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><title>Help — eft_batch_summary</title>
+<link rel="stylesheet" href="../assets/site.css"/></head>
+<body>
+<nav class="top-nav">
+  <a href="../management-dashboard.html">Dashboard</a>
+  <a href="../file-views/eft_batch_summary.html">Dataset</a>
+  <strong>Help</strong>
+</nav>
+<div class="wrap"><div class="card"><h3>EFT Batch Summary By EFT Batch Date</h3>
+<p><strong>Frequency:</strong> Daily · <strong>Parser:</strong> <span class="badge-integrated">integrated</span></p>
+<p>Card payments batched for bank settlement on EFT batch date (Forecourt + Retail + General).
+</p>
+<dl><dt>Key fields</dt><dd><ul>
+<li><code>batch_date</code></li>
+<li><code>total_trx</code></li>
+<li><code>total_amount</code></li>
+<li><code>forecourt_amount</code></li>
+<li><code>retail_amount</code></li>
+</ul></dd></dl>
+<div class='callout'><strong>Owner callouts</strong><ul>
+<li>Match Speedpoint bank credit T+0 to T+2 after batch date</li>
+<li>Large gap vs Day End card tender — timing or missing batch</li>
+</ul></div>
+<p><strong>Reconciles with:</strong> bank_feed.speedpoint_daily</p>
+<p class="meta">Catalog: file-type-catalog.yaml#eft_batch_summary</p></div></div>
+</body></html>
