@@ -17,7 +17,7 @@
       <p class="meta"><span class="tag tag-pos_system">Pos System</span>
         Frequency: <strong>Daily</strong> ·
         <span class="badge-pending">classified only</span> ·
-        1 period(s) in series · 10 file(s) on disk
+        5 period(s) in series · 10 file(s) on disk
       </p>
       <div class="toolbar">
         <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
@@ -37,8 +37,12 @@
       <h2>Historic trend (Daily)</h2>
       <p class="meta">One row per business period (batch/date). Parentheses show change vs previous row. Click a row to inspect that file.</p>
       <table id="trendTable">
-        <thead><tr><th>Period</th><th>Batch</th><th>Source file</th></tr></thead>
-        <tbody><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier.TXT'><td class='nowrap'><strong>—</strong></td><td>—</td><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td></tr></tbody>
+        <thead><tr><th>Period</th><th>Batch</th><th class='num'>Total Variance</th><th class='num'>Cash Variance</th><th class='num'>Shift Count</th><th class='num'>Cashier Count</th><th>Source file</th></tr></thead>
+        <tbody><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT'><td class='nowrap'><strong>18/05/2026</strong></td><td>B141</td><td class='num'>R 3.06</td><td class='num'>R 3.06</td><td class='num'>5</td><td class='num'>4</td><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT'><td class='nowrap'><strong>19/05/2026</strong></td><td>B142</td><td class='num'>R 1,120.60 <span class='up'>(+1,117.54)</span></td><td class='num'>R 1,120.60 <span class='up'>(+1,117.54)</span></td><td class='num'>6 <span class='up'>(+1.00)</span></td><td class='num'>5 <span class='up'>(+1.00)</span></td><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td></tr>
+<tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (5).TXT'><td class='nowrap'><strong>20/05/2026</strong></td><td>B143</td><td class='num'>R 0.00 <span class='down'>(-1,120.60)</span></td><td class='num'>R 0.00 <span class='down'>(-1,120.60)</span></td><td class='num'>6 <span class=''>(+0.00)</span></td><td class='num'>5 <span class=''>(+0.00)</span></td><td><code>Cash Variance - Selected EOD by Cashier (5).TXT</code></td></tr>
+<tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier.TXT'><td class='nowrap'><strong>22/05/2026</strong></td><td>B145</td><td class='num'>R 19.56 <span class='up'>(+19.56)</span></td><td class='num'>R 19.56 <span class='up'>(+19.56)</span></td><td class='num'>5 <span class='down'>(-1.00)</span></td><td class='num'>4 <span class='down'>(-1.00)</span></td><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td></tr>
+<tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (2).TXT'><td class='nowrap'><strong>24/05/2026</strong></td><td>B147</td><td class='num'>R -195.65 <span class='down'>(-215.21)</span></td><td class='num'>R 4.35 <span class='down'>(-15.21)</span></td><td class='num'>4 <span class='down'>(-1.00)</span></td><td class='num'>3 <span class='down'>(-1.00)</span></td><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td></tr></tbody>
       </table>
     </div>
 
@@ -47,7 +51,7 @@
       <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
       <table id="filesTable">
         <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
-        <tbody><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (4).TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier (4).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (5).TXT' data-ingest='20260525-6504486694fac326'><td><code>Cash Variance - Selected EOD by Cashier (5).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>19,220</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (3).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (2).TXT' data-ingest='20260525-2ce1bc99613b79f5'><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-25 13:05</td><td class='num'>13,027</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-24 16:40</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier (1).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>dup</td><td>2026-05-24 16:40</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (1).TXT' data-ingest='20260525-6504486694fac326'><td><code>Cash Variance - Selected EOD by Cashier (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>19,220</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier.TXT' data-ingest='20260525-0d56c09e2c534596'><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier</td><td>primary</td><td>2026-05-23 11:17</td><td class='num'>16,330</td></tr></tbody>
+        <tbody><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (4).TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier (4).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance|batch:142|date:19/05/2026</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (5).TXT' data-ingest='20260525-6504486694fac326'><td><code>Cash Variance - Selected EOD by Cashier (5).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance|batch:143|date:20/05/2026</td><td>primary</td><td>2026-05-25 13:08</td><td class='num'>19,220</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (3).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance|batch:141|date:18/05/2026</td><td>primary</td><td>2026-05-25 13:07</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Additional/Cash Variance - Selected EOD by Cashier (2).TXT' data-ingest='20260525-2ce1bc99613b79f5'><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td><td>Additional</td><td class='nowrap'>cash_variance|batch:147|date:24/05/2026</td><td>primary</td><td>2026-05-25 13:05</td><td class='num'>13,027</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (2).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance|batch:141|date:18/05/2026</td><td>primary</td><td>2026-05-24 16:40</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier (1).TXT' data-ingest='20260525-7029f6b4b6eac837'><td><code>Cash Variance - Selected EOD by Cashier (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance|batch:141|date:18/05/2026</td><td>dup</td><td>2026-05-24 16:40</td><td class='num'>16,328</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier (3).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance|batch:142|date:19/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT' data-ingest='20260525-3b447b0bb656da06'><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance|batch:142|date:19/05/2026</td><td>primary</td><td>2026-05-24 16:39</td><td class='num'>19,217</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier (1).TXT' data-ingest='20260525-6504486694fac326'><td><code>Cash Variance - Selected EOD by Cashier (1).TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance|batch:143|date:20/05/2026</td><td>dup</td><td>2026-05-24 12:28</td><td class='num'>19,220</td></tr><tr class='clickable' data-path='Starter Docs/Cash Variance - Selected EOD by Cashier.TXT' data-ingest='20260525-0d56c09e2c534596'><td><code>Cash Variance - Selected EOD by Cashier.TXT</code></td><td>Starter Docs</td><td class='nowrap'>cash_variance|batch:145|date:22/05/2026</td><td>primary</td><td>2026-05-23 11:17</td><td class='num'>16,330</td></tr></tbody>
       </table>
     </div>
 
@@ -67,13 +71,104 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:147|date:24/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 13027,
     "modified": "2026-05-25 13:05",
     "sha256_prefix": "2ce1bc99613b79f5",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (2).TXT",
+      "batch": 147,
+      "batch_date": "24/05/2026",
+      "shift_count": 4,
+      "cashier_count": 3,
+      "total_actual": 71699.4,
+      "total_theoretical": 71895.05,
+      "total_variance": -195.65,
+      "cash_variance": 4.35,
+      "largest_variance_cashier": "CAROLI",
+      "largest_variance_amount": -195.65,
+      "by_cashier": [
+        {
+          "cashier": "CAROLI",
+          "shift_count": 1,
+          "actual": 22471.5,
+          "theoretical": 22667.15,
+          "variance": -195.65,
+          "cash_variance": 4.35
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 11078.85,
+          "theoretical": 11078.85,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 38149.05,
+          "theoretical": 38149.05,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "CAROLI",
+          "shift_no": "00278",
+          "start": "24/05/2026 05:53:27",
+          "end": "24/05/2026 17:03:12",
+          "actual": 22471.5,
+          "theoretical": 22667.15,
+          "variance": -195.65,
+          "cash_actual": 10425.7,
+          "cash_theoretical": 10421.35,
+          "cash_variance": 4.35
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00279",
+          "start": "24/05/2026 17:03:43",
+          "end": "25/05/2026 06:15:05",
+          "actual": 11078.85,
+          "theoretical": 11078.85,
+          "variance": 0.0,
+          "cash_actual": 9305.8,
+          "cash_theoretical": 9305.8,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00278",
+          "start": "24/05/2026 05:49:05",
+          "end": "24/05/2026 17:03:07",
+          "actual": 23788.2,
+          "theoretical": 23788.2,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00279",
+          "start": "24/05/2026 17:03:30",
+          "end": "25/05/2026 06:15:00",
+          "actual": 14360.85,
+          "theoretical": 14360.85,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -85,13 +180,125 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:141|date:18/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 16328,
     "modified": "2026-05-25 13:07",
     "sha256_prefix": "7029f6b4b6eac837",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (3).TXT",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "shift_count": 5,
+      "cashier_count": 4,
+      "total_actual": 185827.05,
+      "total_theoretical": 185823.99,
+      "total_variance": 3.06,
+      "cash_variance": 3.06,
+      "largest_variance_cashier": "SIA",
+      "largest_variance_amount": 2.61,
+      "by_cashier": [
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_variance": 2.61
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_variance": 0.35
+        },
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 125957.1,
+          "theoretical": 125957.1,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:25:15",
+          "end": "18/05/2026 17:25:08",
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_actual": 28677.3,
+          "cash_theoretical": 28674.69,
+          "cash_variance": 2.61
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:55",
+          "end": "19/05/2026 05:21:16",
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_actual": 9883.0,
+          "cash_theoretical": 9882.65,
+          "cash_variance": 0.35
+        },
+        {
+          "till": 2,
+          "cashier": "SPHA",
+          "shift_no": "00078",
+          "start": "18/05/2026 05:24:20",
+          "end": "18/05/2026 15:56:54",
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_actual": 1418.8,
+          "cash_theoretical": 1418.7,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:24:54",
+          "end": "18/05/2026 17:25:03",
+          "actual": 114729.95,
+          "theoretical": 114729.95,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:17",
+          "end": "19/05/2026 05:21:10",
+          "actual": 11227.15,
+          "theoretical": 11227.15,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -103,13 +310,146 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:142|date:19/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 19217,
     "modified": "2026-05-25 13:08",
     "sha256_prefix": "3b447b0bb656da06",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (4).TXT",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 105911.05,
+      "total_theoretical": 104790.45,
+      "total_variance": 1120.6,
+      "cash_variance": 1120.6,
+      "largest_variance_cashier": "SPHA",
+      "largest_variance_amount": 1110.25,
+      "by_cashier": [
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_variance": 1110.25
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_variance": 10.25
+        },
+        {
+          "cashier": "DINA",
+          "shift_count": 1,
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "MADI",
+          "shift_count": 1,
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 55913.25,
+          "theoretical": 55913.25,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "MADI",
+          "shift_no": "00268",
+          "start": "19/05/2026 13:38:54",
+          "end": "19/05/2026 17:34:11",
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_actual": 1171.15,
+          "cash_theoretical": 1171.15,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SPHA",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:57",
+          "end": "19/05/2026 17:34:11",
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_actual": 24958.0,
+          "cash_theoretical": 23847.75,
+          "cash_variance": 1110.25
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:30",
+          "end": "20/05/2026 05:42:09",
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_actual": 7488.9,
+          "cash_theoretical": 7478.65,
+          "cash_variance": 10.25
+        },
+        {
+          "till": 2,
+          "cashier": "DINA",
+          "shift_no": "00079",
+          "start": "19/05/2026 06:22:35",
+          "end": "19/05/2026 15:54:11",
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_actual": 692.4,
+          "cash_theoretical": 692.3,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:24",
+          "end": "19/05/2026 17:34:06",
+          "actual": 45188.65,
+          "theoretical": 45188.65,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:20",
+          "end": "20/05/2026 05:42:03",
+          "actual": 10724.6,
+          "theoretical": 10724.6,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -121,13 +461,146 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:143|date:20/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 19220,
     "modified": "2026-05-25 13:08",
     "sha256_prefix": "6504486694fac326",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (5).TXT",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 162197.44,
+      "total_theoretical": 162197.44,
+      "total_variance": 0.0,
+      "cash_variance": 0.0,
+      "largest_variance_cashier": "PULEDI",
+      "largest_variance_amount": 0.0,
+      "by_cashier": [
+        {
+          "cashier": "PULEDI",
+          "shift_count": 1,
+          "actual": 842.0,
+          "theoretical": 842.0,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 42705.94,
+          "theoretical": 42705.94,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 12195.65,
+          "theoretical": 12195.65,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "LOI",
+          "shift_count": 1,
+          "actual": 581.2,
+          "theoretical": 581.2,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 105872.65,
+          "theoretical": 105872.65,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "PULEDI",
+          "shift_no": "00270",
+          "start": "20/05/2026 14:16:11",
+          "end": "20/05/2026 17:25:40",
+          "actual": 842.0,
+          "theoretical": 842.0,
+          "variance": 0.0,
+          "cash_actual": 400.0,
+          "cash_theoretical": 400.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00270",
+          "start": "20/05/2026 05:42:33",
+          "end": "20/05/2026 17:25:40",
+          "actual": 42705.94,
+          "theoretical": 42705.94,
+          "variance": 0.0,
+          "cash_actual": 28222.24,
+          "cash_theoretical": 28222.24,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00271",
+          "start": "20/05/2026 17:26:13",
+          "end": "21/05/2026 05:37:47",
+          "actual": 12195.65,
+          "theoretical": 12195.65,
+          "variance": 0.0,
+          "cash_actual": 9994.85,
+          "cash_theoretical": 9994.85,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 2,
+          "cashier": "LOI",
+          "shift_no": "00080",
+          "start": "20/05/2026 12:57:03",
+          "end": "21/05/2026 06:01:46",
+          "actual": 581.2,
+          "theoretical": 581.2,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00270",
+          "start": "20/05/2026 05:42:17",
+          "end": "20/05/2026 17:25:34",
+          "actual": 90731.8,
+          "theoretical": 90731.8,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00271",
+          "start": "20/05/2026 17:25:58",
+          "end": "21/05/2026 05:37:42",
+          "actual": 15140.85,
+          "theoretical": 15140.85,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -139,13 +612,146 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:143|date:20/05/2026",
     "is_duplicate_copy": true,
     "size_bytes": 19220,
     "modified": "2026-05-24 12:28",
     "sha256_prefix": "6504486694fac326",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (1).TXT",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 162197.44,
+      "total_theoretical": 162197.44,
+      "total_variance": 0.0,
+      "cash_variance": 0.0,
+      "largest_variance_cashier": "PULEDI",
+      "largest_variance_amount": 0.0,
+      "by_cashier": [
+        {
+          "cashier": "PULEDI",
+          "shift_count": 1,
+          "actual": 842.0,
+          "theoretical": 842.0,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 42705.94,
+          "theoretical": 42705.94,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 12195.65,
+          "theoretical": 12195.65,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "LOI",
+          "shift_count": 1,
+          "actual": 581.2,
+          "theoretical": 581.2,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 105872.65,
+          "theoretical": 105872.65,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "PULEDI",
+          "shift_no": "00270",
+          "start": "20/05/2026 14:16:11",
+          "end": "20/05/2026 17:25:40",
+          "actual": 842.0,
+          "theoretical": 842.0,
+          "variance": 0.0,
+          "cash_actual": 400.0,
+          "cash_theoretical": 400.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00270",
+          "start": "20/05/2026 05:42:33",
+          "end": "20/05/2026 17:25:40",
+          "actual": 42705.94,
+          "theoretical": 42705.94,
+          "variance": 0.0,
+          "cash_actual": 28222.24,
+          "cash_theoretical": 28222.24,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00271",
+          "start": "20/05/2026 17:26:13",
+          "end": "21/05/2026 05:37:47",
+          "actual": 12195.65,
+          "theoretical": 12195.65,
+          "variance": 0.0,
+          "cash_actual": 9994.85,
+          "cash_theoretical": 9994.85,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 2,
+          "cashier": "LOI",
+          "shift_no": "00080",
+          "start": "20/05/2026 12:57:03",
+          "end": "21/05/2026 06:01:46",
+          "actual": 581.2,
+          "theoretical": 581.2,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00270",
+          "start": "20/05/2026 05:42:17",
+          "end": "20/05/2026 17:25:34",
+          "actual": 90731.8,
+          "theoretical": 90731.8,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00271",
+          "start": "20/05/2026 17:25:58",
+          "end": "21/05/2026 05:37:42",
+          "actual": 15140.85,
+          "theoretical": 15140.85,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -157,13 +763,125 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:141|date:18/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 16328,
     "modified": "2026-05-24 16:40",
     "sha256_prefix": "7029f6b4b6eac837",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (2).TXT",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "shift_count": 5,
+      "cashier_count": 4,
+      "total_actual": 185827.05,
+      "total_theoretical": 185823.99,
+      "total_variance": 3.06,
+      "cash_variance": 3.06,
+      "largest_variance_cashier": "SIA",
+      "largest_variance_amount": 2.61,
+      "by_cashier": [
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_variance": 2.61
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_variance": 0.35
+        },
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 125957.1,
+          "theoretical": 125957.1,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:25:15",
+          "end": "18/05/2026 17:25:08",
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_actual": 28677.3,
+          "cash_theoretical": 28674.69,
+          "cash_variance": 2.61
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:55",
+          "end": "19/05/2026 05:21:16",
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_actual": 9883.0,
+          "cash_theoretical": 9882.65,
+          "cash_variance": 0.35
+        },
+        {
+          "till": 2,
+          "cashier": "SPHA",
+          "shift_no": "00078",
+          "start": "18/05/2026 05:24:20",
+          "end": "18/05/2026 15:56:54",
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_actual": 1418.8,
+          "cash_theoretical": 1418.7,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:24:54",
+          "end": "18/05/2026 17:25:03",
+          "actual": 114729.95,
+          "theoretical": 114729.95,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:17",
+          "end": "19/05/2026 05:21:10",
+          "actual": 11227.15,
+          "theoretical": 11227.15,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -175,13 +893,146 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:142|date:19/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 19217,
     "modified": "2026-05-24 16:39",
     "sha256_prefix": "3b447b0bb656da06",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (3).TXT",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 105911.05,
+      "total_theoretical": 104790.45,
+      "total_variance": 1120.6,
+      "cash_variance": 1120.6,
+      "largest_variance_cashier": "SPHA",
+      "largest_variance_amount": 1110.25,
+      "by_cashier": [
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_variance": 1110.25
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_variance": 10.25
+        },
+        {
+          "cashier": "DINA",
+          "shift_count": 1,
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "MADI",
+          "shift_count": 1,
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 55913.25,
+          "theoretical": 55913.25,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "MADI",
+          "shift_no": "00268",
+          "start": "19/05/2026 13:38:54",
+          "end": "19/05/2026 17:34:11",
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_actual": 1171.15,
+          "cash_theoretical": 1171.15,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SPHA",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:57",
+          "end": "19/05/2026 17:34:11",
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_actual": 24958.0,
+          "cash_theoretical": 23847.75,
+          "cash_variance": 1110.25
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:30",
+          "end": "20/05/2026 05:42:09",
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_actual": 7488.9,
+          "cash_theoretical": 7478.65,
+          "cash_variance": 10.25
+        },
+        {
+          "till": 2,
+          "cashier": "DINA",
+          "shift_no": "00079",
+          "start": "19/05/2026 06:22:35",
+          "end": "19/05/2026 15:54:11",
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_actual": 692.4,
+          "cash_theoretical": 692.3,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:24",
+          "end": "19/05/2026 17:34:06",
+          "actual": 45188.65,
+          "theoretical": 45188.65,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:20",
+          "end": "20/05/2026 05:42:03",
+          "actual": 10724.6,
+          "theoretical": 10724.6,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -193,13 +1044,125 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:145|date:22/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 16330,
     "modified": "2026-05-23 11:17",
     "sha256_prefix": "0d56c09e2c534596",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier.TXT",
+      "batch": 145,
+      "batch_date": "22/05/2026",
+      "shift_count": 5,
+      "cashier_count": 4,
+      "total_actual": 183824.8,
+      "total_theoretical": 183805.24,
+      "total_variance": 19.56,
+      "cash_variance": 19.56,
+      "largest_variance_cashier": "CAROLI",
+      "largest_variance_amount": 16.75,
+      "by_cashier": [
+        {
+          "cashier": "CAROLI",
+          "shift_count": 1,
+          "actual": 21118.85,
+          "theoretical": 21102.1,
+          "variance": 16.75,
+          "cash_variance": 16.75
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 40778.35,
+          "theoretical": 40775.59,
+          "variance": 2.76,
+          "cash_variance": 2.76
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 14963.9,
+          "theoretical": 14963.85,
+          "variance": 0.05,
+          "cash_variance": 0.05
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 106963.7,
+          "theoretical": 106963.7,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00274",
+          "start": "22/05/2026 05:38:22",
+          "end": "22/05/2026 17:28:15",
+          "actual": 40778.35,
+          "theoretical": 40775.59,
+          "variance": 2.76,
+          "cash_actual": 24911.7,
+          "cash_theoretical": 24908.94,
+          "cash_variance": 2.76
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00275",
+          "start": "22/05/2026 17:33:01",
+          "end": "23/05/2026 05:36:54",
+          "actual": 14963.9,
+          "theoretical": 14963.85,
+          "variance": 0.05,
+          "cash_actual": 11208.8,
+          "cash_theoretical": 11208.75,
+          "cash_variance": 0.05
+        },
+        {
+          "till": 2,
+          "cashier": "CAROLI",
+          "shift_no": "00082",
+          "start": "22/05/2026 05:40:43",
+          "end": "22/05/2026 17:18:03",
+          "actual": 21118.85,
+          "theoretical": 21102.1,
+          "variance": 16.75,
+          "cash_actual": 11448.7,
+          "cash_theoretical": 11431.95,
+          "cash_variance": 16.75
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00274",
+          "start": "22/05/2026 05:38:05",
+          "end": "22/05/2026 17:28:10",
+          "actual": 95752.15,
+          "theoretical": 95752.15,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00275",
+          "start": "22/05/2026 17:28:34",
+          "end": "23/05/2026 05:36:49",
+          "actual": 11211.55,
+          "theoretical": 11211.55,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -211,13 +1174,125 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:141|date:18/05/2026",
     "is_duplicate_copy": true,
     "size_bytes": 16328,
     "modified": "2026-05-24 16:40",
     "sha256_prefix": "7029f6b4b6eac837",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (1).TXT",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "shift_count": 5,
+      "cashier_count": 4,
+      "total_actual": 185827.05,
+      "total_theoretical": 185823.99,
+      "total_variance": 3.06,
+      "cash_variance": 3.06,
+      "largest_variance_cashier": "SIA",
+      "largest_variance_amount": 2.61,
+      "by_cashier": [
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_variance": 2.61
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_variance": 0.35
+        },
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 125957.1,
+          "theoretical": 125957.1,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:25:15",
+          "end": "18/05/2026 17:25:08",
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_actual": 28677.3,
+          "cash_theoretical": 28674.69,
+          "cash_variance": 2.61
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:55",
+          "end": "19/05/2026 05:21:16",
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_actual": 9883.0,
+          "cash_theoretical": 9882.65,
+          "cash_variance": 0.35
+        },
+        {
+          "till": 2,
+          "cashier": "SPHA",
+          "shift_no": "00078",
+          "start": "18/05/2026 05:24:20",
+          "end": "18/05/2026 15:56:54",
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_actual": 1418.8,
+          "cash_theoretical": 1418.7,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:24:54",
+          "end": "18/05/2026 17:25:03",
+          "actual": 114729.95,
+          "theoretical": 114729.95,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:17",
+          "end": "19/05/2026 05:21:10",
+          "actual": 11227.15,
+          "theoretical": 11227.15,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   },
@@ -229,27 +1304,781 @@
     "pattern_name": "Cash Variance - Selected EOD by Cashier",
     "report_type": "cash_variance_by_cashier",
     "source_type": "pos_system",
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:142|date:19/05/2026",
     "is_duplicate_copy": false,
     "size_bytes": 19217,
     "modified": "2026-05-24 16:39",
     "sha256_prefix": "3b447b0bb656da06",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier.TXT",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 105911.05,
+      "total_theoretical": 104790.45,
+      "total_variance": 1120.6,
+      "cash_variance": 1120.6,
+      "largest_variance_cashier": "SPHA",
+      "largest_variance_amount": 1110.25,
+      "by_cashier": [
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_variance": 1110.25
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_variance": 10.25
+        },
+        {
+          "cashier": "DINA",
+          "shift_count": 1,
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "MADI",
+          "shift_count": 1,
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 55913.25,
+          "theoretical": 55913.25,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "MADI",
+          "shift_no": "00268",
+          "start": "19/05/2026 13:38:54",
+          "end": "19/05/2026 17:34:11",
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_actual": 1171.15,
+          "cash_theoretical": 1171.15,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SPHA",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:57",
+          "end": "19/05/2026 17:34:11",
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_actual": 24958.0,
+          "cash_theoretical": 23847.75,
+          "cash_variance": 1110.25
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:30",
+          "end": "20/05/2026 05:42:09",
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_actual": 7488.9,
+          "cash_theoretical": 7478.65,
+          "cash_variance": 10.25
+        },
+        {
+          "till": 2,
+          "cashier": "DINA",
+          "shift_no": "00079",
+          "start": "19/05/2026 06:22:35",
+          "end": "19/05/2026 15:54:11",
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_actual": 692.4,
+          "cash_theoretical": 692.3,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:24",
+          "end": "19/05/2026 17:34:06",
+          "actual": 45188.65,
+          "theoretical": 45188.65,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:20",
+          "end": "20/05/2026 05:42:03",
+          "actual": 10724.6,
+          "theoretical": 10724.6,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier"
   }
 ];
     const SERIES = [
   {
-    "content_key": "cash_variance_by_cashier|file:Cash Variance - Selected EOD by Cashier",
+    "content_key": "cash_variance|batch:141|date:18/05/2026",
+    "source_file": "Cash Variance - Selected EOD by Cashier (2).TXT",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT",
+    "modified": "2026-05-24 16:40",
+    "summary": {
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (2).TXT",
+      "batch": 141,
+      "batch_date": "18/05/2026",
+      "shift_count": 5,
+      "cashier_count": 4,
+      "total_actual": 185827.05,
+      "total_theoretical": 185823.99,
+      "total_variance": 3.06,
+      "cash_variance": 3.06,
+      "largest_variance_cashier": "SIA",
+      "largest_variance_amount": 2.61,
+      "by_cashier": [
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_variance": 2.61
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_variance": 0.35
+        },
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 125957.1,
+          "theoretical": 125957.1,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:25:15",
+          "end": "18/05/2026 17:25:08",
+          "actual": 44140.35,
+          "theoretical": 44137.74,
+          "variance": 2.61,
+          "cash_actual": 28677.3,
+          "cash_theoretical": 28674.69,
+          "cash_variance": 2.61
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:55",
+          "end": "19/05/2026 05:21:16",
+          "actual": 11127.1,
+          "theoretical": 11126.75,
+          "variance": 0.35,
+          "cash_actual": 9883.0,
+          "cash_theoretical": 9882.65,
+          "cash_variance": 0.35
+        },
+        {
+          "till": 2,
+          "cashier": "SPHA",
+          "shift_no": "00078",
+          "start": "18/05/2026 05:24:20",
+          "end": "18/05/2026 15:56:54",
+          "actual": 4602.5,
+          "theoretical": 4602.4,
+          "variance": 0.1,
+          "cash_actual": 1418.8,
+          "cash_theoretical": 1418.7,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00266",
+          "start": "18/05/2026 05:24:54",
+          "end": "18/05/2026 17:25:03",
+          "actual": 114729.95,
+          "theoretical": 114729.95,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00267",
+          "start": "18/05/2026 17:25:17",
+          "end": "19/05/2026 05:21:10",
+          "actual": 11227.15,
+          "theoretical": 11227.15,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
+    },
+    "ingest_id": "20260525-7029f6b4b6eac837"
+  },
+  {
+    "content_key": "cash_variance|batch:142|date:19/05/2026",
+    "source_file": "Cash Variance - Selected EOD by Cashier (3).TXT",
+    "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT",
+    "modified": "2026-05-24 16:39",
+    "summary": {
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (3).TXT",
+      "batch": 142,
+      "batch_date": "19/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 105911.05,
+      "total_theoretical": 104790.45,
+      "total_variance": 1120.6,
+      "cash_variance": 1120.6,
+      "largest_variance_cashier": "SPHA",
+      "largest_variance_amount": 1110.25,
+      "by_cashier": [
+        {
+          "cashier": "SPHA",
+          "shift_count": 1,
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_variance": 1110.25
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_variance": 10.25
+        },
+        {
+          "cashier": "DINA",
+          "shift_count": 1,
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_variance": 0.1
+        },
+        {
+          "cashier": "MADI",
+          "shift_count": 1,
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 55913.25,
+          "theoretical": 55913.25,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "MADI",
+          "shift_no": "00268",
+          "start": "19/05/2026 13:38:54",
+          "end": "19/05/2026 17:34:11",
+          "actual": 1321.95,
+          "theoretical": 1321.95,
+          "variance": 0.0,
+          "cash_actual": 1171.15,
+          "cash_theoretical": 1171.15,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SPHA",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:57",
+          "end": "19/05/2026 17:34:11",
+          "actual": 39338.25,
+          "theoretical": 38228.0,
+          "variance": 1110.25,
+          "cash_actual": 24958.0,
+          "cash_theoretical": 23847.75,
+          "cash_variance": 1110.25
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:30",
+          "end": "20/05/2026 05:42:09",
+          "actual": 8125.8,
+          "theoretical": 8115.55,
+          "variance": 10.25,
+          "cash_actual": 7488.9,
+          "cash_theoretical": 7478.65,
+          "cash_variance": 10.25
+        },
+        {
+          "till": 2,
+          "cashier": "DINA",
+          "shift_no": "00079",
+          "start": "19/05/2026 06:22:35",
+          "end": "19/05/2026 15:54:11",
+          "actual": 1211.8,
+          "theoretical": 1211.7,
+          "variance": 0.1,
+          "cash_actual": 692.4,
+          "cash_theoretical": 692.3,
+          "cash_variance": 0.1
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00268",
+          "start": "19/05/2026 05:21:24",
+          "end": "19/05/2026 17:34:06",
+          "actual": 45188.65,
+          "theoretical": 45188.65,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00269",
+          "start": "19/05/2026 17:34:20",
+          "end": "20/05/2026 05:42:03",
+          "actual": 10724.6,
+          "theoretical": 10724.6,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
+    },
+    "ingest_id": "20260525-3b447b0bb656da06"
+  },
+  {
+    "content_key": "cash_variance|batch:143|date:20/05/2026",
+    "source_file": "Cash Variance - Selected EOD by Cashier (5).TXT",
+    "path": "Additional/Cash Variance - Selected EOD by Cashier (5).TXT",
+    "modified": "2026-05-25 13:08",
+    "summary": {
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (5).TXT",
+      "batch": 143,
+      "batch_date": "20/05/2026",
+      "shift_count": 6,
+      "cashier_count": 5,
+      "total_actual": 162197.44,
+      "total_theoretical": 162197.44,
+      "total_variance": 0.0,
+      "cash_variance": 0.0,
+      "largest_variance_cashier": "PULEDI",
+      "largest_variance_amount": 0.0,
+      "by_cashier": [
+        {
+          "cashier": "PULEDI",
+          "shift_count": 1,
+          "actual": 842.0,
+          "theoretical": 842.0,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 42705.94,
+          "theoretical": 42705.94,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 12195.65,
+          "theoretical": 12195.65,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "LOI",
+          "shift_count": 1,
+          "actual": 581.2,
+          "theoretical": 581.2,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 105872.65,
+          "theoretical": 105872.65,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "PULEDI",
+          "shift_no": "00270",
+          "start": "20/05/2026 14:16:11",
+          "end": "20/05/2026 17:25:40",
+          "actual": 842.0,
+          "theoretical": 842.0,
+          "variance": 0.0,
+          "cash_actual": 400.0,
+          "cash_theoretical": 400.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00270",
+          "start": "20/05/2026 05:42:33",
+          "end": "20/05/2026 17:25:40",
+          "actual": 42705.94,
+          "theoretical": 42705.94,
+          "variance": 0.0,
+          "cash_actual": 28222.24,
+          "cash_theoretical": 28222.24,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00271",
+          "start": "20/05/2026 17:26:13",
+          "end": "21/05/2026 05:37:47",
+          "actual": 12195.65,
+          "theoretical": 12195.65,
+          "variance": 0.0,
+          "cash_actual": 9994.85,
+          "cash_theoretical": 9994.85,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 2,
+          "cashier": "LOI",
+          "shift_no": "00080",
+          "start": "20/05/2026 12:57:03",
+          "end": "21/05/2026 06:01:46",
+          "actual": 581.2,
+          "theoretical": 581.2,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00270",
+          "start": "20/05/2026 05:42:17",
+          "end": "20/05/2026 17:25:34",
+          "actual": 90731.8,
+          "theoretical": 90731.8,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00271",
+          "start": "20/05/2026 17:25:58",
+          "end": "21/05/2026 05:37:42",
+          "actual": 15140.85,
+          "theoretical": 15140.85,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
+    },
+    "ingest_id": "20260525-6504486694fac326"
+  },
+  {
+    "content_key": "cash_variance|batch:145|date:22/05/2026",
     "source_file": "Cash Variance - Selected EOD by Cashier.TXT",
     "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
     "modified": "2026-05-23 11:17",
     "summary": {
-      "report_type": "cash_variance_by_cashier"
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier.TXT",
+      "batch": 145,
+      "batch_date": "22/05/2026",
+      "shift_count": 5,
+      "cashier_count": 4,
+      "total_actual": 183824.8,
+      "total_theoretical": 183805.24,
+      "total_variance": 19.56,
+      "cash_variance": 19.56,
+      "largest_variance_cashier": "CAROLI",
+      "largest_variance_amount": 16.75,
+      "by_cashier": [
+        {
+          "cashier": "CAROLI",
+          "shift_count": 1,
+          "actual": 21118.85,
+          "theoretical": 21102.1,
+          "variance": 16.75,
+          "cash_variance": 16.75
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 40778.35,
+          "theoretical": 40775.59,
+          "variance": 2.76,
+          "cash_variance": 2.76
+        },
+        {
+          "cashier": "TUMELO",
+          "shift_count": 1,
+          "actual": 14963.9,
+          "theoretical": 14963.85,
+          "variance": 0.05,
+          "cash_variance": 0.05
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 106963.7,
+          "theoretical": 106963.7,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00274",
+          "start": "22/05/2026 05:38:22",
+          "end": "22/05/2026 17:28:15",
+          "actual": 40778.35,
+          "theoretical": 40775.59,
+          "variance": 2.76,
+          "cash_actual": 24911.7,
+          "cash_theoretical": 24908.94,
+          "cash_variance": 2.76
+        },
+        {
+          "till": 1,
+          "cashier": "TUMELO",
+          "shift_no": "00275",
+          "start": "22/05/2026 17:33:01",
+          "end": "23/05/2026 05:36:54",
+          "actual": 14963.9,
+          "theoretical": 14963.85,
+          "variance": 0.05,
+          "cash_actual": 11208.8,
+          "cash_theoretical": 11208.75,
+          "cash_variance": 0.05
+        },
+        {
+          "till": 2,
+          "cashier": "CAROLI",
+          "shift_no": "00082",
+          "start": "22/05/2026 05:40:43",
+          "end": "22/05/2026 17:18:03",
+          "actual": 21118.85,
+          "theoretical": 21102.1,
+          "variance": 16.75,
+          "cash_actual": 11448.7,
+          "cash_theoretical": 11431.95,
+          "cash_variance": 16.75
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00274",
+          "start": "22/05/2026 05:38:05",
+          "end": "22/05/2026 17:28:10",
+          "actual": 95752.15,
+          "theoretical": 95752.15,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00275",
+          "start": "22/05/2026 17:28:34",
+          "end": "23/05/2026 05:36:49",
+          "actual": 11211.55,
+          "theoretical": 11211.55,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
     },
     "ingest_id": "20260525-0d56c09e2c534596"
+  },
+  {
+    "content_key": "cash_variance|batch:147|date:24/05/2026",
+    "source_file": "Cash Variance - Selected EOD by Cashier (2).TXT",
+    "path": "Additional/Cash Variance - Selected EOD by Cashier (2).TXT",
+    "modified": "2026-05-25 13:05",
+    "summary": {
+      "report_type": "cash_variance_by_cashier",
+      "source_file": "Cash Variance - Selected EOD by Cashier (2).TXT",
+      "batch": 147,
+      "batch_date": "24/05/2026",
+      "shift_count": 4,
+      "cashier_count": 3,
+      "total_actual": 71699.4,
+      "total_theoretical": 71895.05,
+      "total_variance": -195.65,
+      "cash_variance": 4.35,
+      "largest_variance_cashier": "CAROLI",
+      "largest_variance_amount": -195.65,
+      "by_cashier": [
+        {
+          "cashier": "CAROLI",
+          "shift_count": 1,
+          "actual": 22471.5,
+          "theoretical": 22667.15,
+          "variance": -195.65,
+          "cash_variance": 4.35
+        },
+        {
+          "cashier": "SIA",
+          "shift_count": 1,
+          "actual": 11078.85,
+          "theoretical": 11078.85,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "cashier": "OPT",
+          "shift_count": 2,
+          "actual": 38149.05,
+          "theoretical": 38149.05,
+          "variance": 0.0,
+          "cash_variance": 0.0
+        }
+      ],
+      "shifts": [
+        {
+          "till": 1,
+          "cashier": "CAROLI",
+          "shift_no": "00278",
+          "start": "24/05/2026 05:53:27",
+          "end": "24/05/2026 17:03:12",
+          "actual": 22471.5,
+          "theoretical": 22667.15,
+          "variance": -195.65,
+          "cash_actual": 10425.7,
+          "cash_theoretical": 10421.35,
+          "cash_variance": 4.35
+        },
+        {
+          "till": 1,
+          "cashier": "SIA",
+          "shift_no": "00279",
+          "start": "24/05/2026 17:03:43",
+          "end": "25/05/2026 06:15:05",
+          "actual": 11078.85,
+          "theoretical": 11078.85,
+          "variance": 0.0,
+          "cash_actual": 9305.8,
+          "cash_theoretical": 9305.8,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00278",
+          "start": "24/05/2026 05:49:05",
+          "end": "24/05/2026 17:03:07",
+          "actual": 23788.2,
+          "theoretical": 23788.2,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        },
+        {
+          "till": 31,
+          "cashier": "OPT",
+          "shift_no": "00279",
+          "start": "24/05/2026 17:03:30",
+          "end": "25/05/2026 06:15:00",
+          "actual": 14360.85,
+          "theoretical": 14360.85,
+          "variance": 0.0,
+          "cash_actual": 0.0,
+          "cash_theoretical": 0.0,
+          "cash_variance": 0.0
+        }
+      ]
+    },
+    "ingest_id": "20260525-2ce1bc99613b79f5"
   }
 ];
     function toggleHelp() {

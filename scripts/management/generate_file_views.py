@@ -164,6 +164,7 @@ def trend_rows(points: list[dict], metric_keys: list[str]) -> str:
 def default_metrics(report_type: str) -> list[str]:
     return {
         "day_end_summary": ["nett_takings", "fuel_volume", "cash_variance", "shop_total_incl"],
+        "cash_variance_by_cashier": ["total_variance", "cash_variance", "shift_count", "cashier_count"],
         "eft_batch_summary": ["total_amount", "total_trx"],
         "eft_pending": ["pending_total"],
         "bank_statement": ["ledger_balance", "total_credits", "total_debits"],

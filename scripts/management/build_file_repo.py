@@ -46,6 +46,11 @@ def extract_content_key(path: Path, meta: dict[str, str], text: str | None) -> s
         d = re.search(r"From EFT Batch Date\s+(\d{2}/\d{2}/\d{4})", text)
         if d:
             return f"eft_batch|date:{d.group(1)}"
+    if rt == "cash_variance_by_cashier" and text:
+        b = re.search(r"Batch No\s*:\s*(\d+)", text)
+        d = re.search(r"Batch Date\s*:\s*(\d{2}/\d{2}/\d{4})", text)
+        if b and d:
+            return f"cash_variance|batch:{b.group(1)}|date:{d.group(1)}"
     if rt == "bank_statement":
         return f"bank|account:62848015857|file:{path.name}"
     if rt == "nett_pay_list":
@@ -83,6 +88,10 @@ def extract_summary(path: Path, meta: dict[str, str], text: str | None) -> dict[
         from parse_reports import parse_eft_batch_summary
 
         summary.update(parse_eft_batch_summary(path))
+    elif rt == "cash_variance_by_cashier":
+        from parse_reports import parse_cash_variance_by_cashier
+
+        summary.update(parse_cash_variance_by_cashier(path))
     elif rt == "eft_pending":
         from parse_reports import parse_eft_pending
 

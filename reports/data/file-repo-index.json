@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T12:18:56+00:00",
+  "generated_at": "2026-05-25T12:26:17+00:00",
   "inputs_root": "C:\\Temp\\Experiment JP\\docs\\_ai_context\\inputs",
   "catalog_path": "docs/_ai_context/knowledge/reference/file-type-catalog.yaml",
   "architecture_doc": "docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md",
@@ -37,7 +37,7 @@
       "catalog_ref": "file-type-catalog.yaml#cash_variance_by_cashier",
       "file_count": 10,
       "primary_count": 8,
-      "series_points": 1,
+      "series_points": 5,
       "folders": [
         "Additional",
         "Starter Docs"

@@ -10,7 +10,7 @@ traceability_id: "WS-001-cursor-workspace-starter"
 # MASTER_STATE.md
 
 **Last Updated:** 2026-05-25  
-**Version:** 1.5.0
+**Version:** 1.5.1
 
 ## Current Workspace State
 
@@ -32,7 +32,7 @@ Registry: `docs/_ai_context/knowledge/reference/input-source-registry.yaml`
 File catalog: `docs/_ai_context/knowledge/reference/file-type-catalog.yaml`  
 Architecture: `docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md`  
 Guides: `docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md` · `MANAGEMENT_DASHBOARD_SPECIFICATION.md`  
-Analysis: `2026-05-24_ADDITIONAL_FOLDER_AND_FILE_REPO.md` · `2026-05-24_OCR_WHATSAPP_DISCOVERY.md` · `2026-05-24_REFRESH_POS_DROP.md` · `2026-05-24_BANK_OFX_REFRESH.md`
+Analysis: `2026-05-24_ADDITIONAL_FOLDER_AND_FILE_REPO.md` · `2026-05-24_OCR_WHATSAPP_DISCOVERY.md` · `2026-05-24_REFRESH_POS_DROP.md` · `2026-05-24_BANK_OFX_REFRESH.md` · `2026-05-25_OPTIMIZATION_SESSION.md`
 
 ### Reporting Pipeline
 
@@ -48,6 +48,8 @@ Analysis: `2026-05-24_ADDITIONAL_FOLDER_AND_FILE_REPO.md` · `2026-05-24_OCR_WHA
 | `reports/data/file-repo-index.json` | `scripts/management/build_file_repo.py` |
 | `reports/payroll/Payment_*.csv` | `scripts/payroll/netpay_to_payment_csv.py --all` |
 | `docs/_ai_context/prompts/HANDOFF_OPTIMIZATION_REFACTOR.md` | Optimization handoff for external models |
+
+Latest optimization: `cash_variance_by_cashier` now parses cashier/shift variance summaries and uses batch/date content keys; the rank-1 catalog metadata update is tracked in `BACKLOG.md` pending human approval.
 
 ### Domain Skills (2026-05-24)
 

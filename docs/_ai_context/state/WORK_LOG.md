@@ -13,6 +13,38 @@ Chronological record of all significant workspace changes.
 
 ---
 
+## 2026-05-25 — Optimization handoff: cash variance parser
+
+* **Scope:** Executed `HANDOFF_OPTIMIZATION_REFACTOR.md`: baseline refresh, top-refactor assessment, high-ROI parser implementation, validation, and MDD logging.
+* **Status:** COMPLETE
+* **Duration:** ~45 min
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `scripts/management/parse_reports.py` | Added `parse_cash_variance_by_cashier()` with batch/date metadata, shift rows, cashier aggregates, and variance totals |
+| `scripts/management/build_file_repo.py` | Added cash-variance business `content_key` and parser dispatch |
+| `scripts/management/generate_file_views.py` | Added cash-variance trend metrics |
+| `reports/data/series/cash_variance_by_cashier.json` | Regenerated from 1 collapsed filename point to 5 batch/date points |
+| `reports/data/file-repo-index.json` and `reports/file-views/` | Regenerated drill-down outputs |
+| `docs/_ai_context/analysis/2026-05-25_OPTIMIZATION_SESSION.md` | Findings, trade-offs, validation, and governance notes |
+| `docs/_ai_context/state/BACKLOG.md` | Resolved cash-variance parser P1; deferred catalog metadata update pending human approval |
+
+* **Validation Results:**
+  - Baseline refresh before edits PASS: 145 ledger files, 28 series types, 29 file-view pages, dashboard, canonical JSON, payroll CSVs.
+  - Parser smoke test PASS: 10 cash-variance files parsed.
+  - Full refresh after edits PASS: same output counts as baseline.
+  - Payroll generation PASS: R 32,095.27 and R 31,449.03 regenerated.
+  - Note: existing MATCH reconciliation rows are not currently emitted in `canonical-latest.json`; no parser regression found.
+* **Regression Risk:** LOW-MEDIUM — scoped to one report type, but parser dispatch/content-key logic is shared by the file repository.
+* **Lessons Learned:**
+  - Filename normalization alone is unsafe for daily operational reports; business-period keys must come from report metadata.
+  - The next highest-risk gap is lack of parser contract tests around `content_key` and summary fields.
+  - Rank-1 catalog metadata updates need explicit human approval even when code implementation is complete.
+* **Next Steps:** Add parser contract tests; request approval to update `file-type-catalog.yaml` for `cash_variance_by_cashier`.
+
+---
+
 ## 2026-05-25 — Phase 2: file drill-down pages + help guides
 
 * **Scope:** Per-report-type HTML views with history/trends/file detail; help from catalog; dashboard links; series dedupe fix.

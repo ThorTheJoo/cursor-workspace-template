@@ -288,6 +288,117 @@ def parse_eft_batch_summary(path: Path) -> dict[str, Any]:
     }
 
 
+def _parse_cash_variance_amounts(line: str) -> list[float] | None:
+    values = re.findall(r"-?\d[\d,]*\.\d{2}", line)
+    if len(values) != 7:
+        return None
+    return [parse_money(value) for value in values]
+
+
+def parse_cash_variance_by_cashier(path: Path) -> dict[str, Any]:
+    text = read_text(path)
+    batch = re.search(r"Batch No\s*:\s*(\d+)", text)
+    date = re.search(r"Batch Date\s*:\s*(\d{2}/\d{2}/\d{4})", text)
+    if not batch or not date:
+        raise ValueError(f"Cash variance report missing batch metadata: {path}")
+
+    blocks = re.finditer(
+        r"Till\s*:\s*(?P<till>\d+)\s*\n"
+        r"Cashier\s*:\s*(?P<cashier>[^\n]+)\n"
+        r"Start Date\s*:\s*(?P<start_date>\d{2}/\d{2}/\d{4})\n"
+        r"Start Time\s*:\s*(?P<start_time>\d{2}:\d{2}:\d{2})\n"
+        r"End Date\s*:\s*(?P<end_date>\d{2}/\d{2}/\d{4})\n"
+        r"End Time\s*:\s*(?P<end_time>\d{2}:\d{2}:\d{2})\n"
+        r"Shift No\s*:\s*(?P<shift_no>\d+)\n"
+        r"Batch Date\s*:\s*(?P<batch_date>\d{2}/\d{2}/\d{4})\n"
+        r"Batch No\s*:\s*(?P<batch_no>\d+)\n"
+        r"-+\n(?P<body>.*?)(?=\n-+\nTill\s*:|\Z)",
+        text,
+        re.S,
+    )
+
+    shifts: list[dict[str, Any]] = []
+    cashier_totals: dict[str, dict[str, Any]] = {}
+    for block in blocks:
+        body = block.group("body")
+        total_match = re.search(r"^Total OTHER\s+.*$", body, re.M)
+        if not total_match:
+            continue
+        total_values = _parse_cash_variance_amounts(total_match.group(0))
+        if not total_values:
+            continue
+
+        cash_match = re.search(r"^CASH\s+.*$", body, re.M)
+        cash_values = _parse_cash_variance_amounts(cash_match.group(0)) if cash_match else None
+        cashier = block.group("cashier").strip()
+        total_actual = total_values[4]
+        total_theoretical = total_values[5]
+        total_variance = total_values[6]
+        cash_actual = cash_values[4] if cash_values else 0.0
+        cash_theoretical = cash_values[5] if cash_values else 0.0
+        cash_variance = cash_values[6] if cash_values else 0.0
+
+        shifts.append({
+            "till": int(block.group("till")),
+            "cashier": cashier,
+            "shift_no": block.group("shift_no"),
+            "start": f"{block.group('start_date')} {block.group('start_time')}",
+            "end": f"{block.group('end_date')} {block.group('end_time')}",
+            "actual": round(total_actual, 2),
+            "theoretical": round(total_theoretical, 2),
+            "variance": round(total_variance, 2),
+            "cash_actual": round(cash_actual, 2),
+            "cash_theoretical": round(cash_theoretical, 2),
+            "cash_variance": round(cash_variance, 2),
+        })
+
+        totals = cashier_totals.setdefault(cashier, {
+            "cashier": cashier,
+            "shift_count": 0,
+            "actual": 0.0,
+            "theoretical": 0.0,
+            "variance": 0.0,
+            "cash_variance": 0.0,
+        })
+        totals["shift_count"] += 1
+        totals["actual"] += total_actual
+        totals["theoretical"] += total_theoretical
+        totals["variance"] += total_variance
+        totals["cash_variance"] += cash_variance
+
+    if not shifts:
+        raise ValueError(f"Cash variance report contained no cashier shift totals: {path}")
+
+    by_cashier = sorted(cashier_totals.values(), key=lambda row: abs(row["variance"]), reverse=True)
+    for row in by_cashier:
+        row["actual"] = round(row["actual"], 2)
+        row["theoretical"] = round(row["theoretical"], 2)
+        row["variance"] = round(row["variance"], 2)
+        row["cash_variance"] = round(row["cash_variance"], 2)
+
+    largest = by_cashier[0]
+    total_actual = round(sum(shift["actual"] for shift in shifts), 2)
+    total_theoretical = round(sum(shift["theoretical"] for shift in shifts), 2)
+    total_variance = round(sum(shift["variance"] for shift in shifts), 2)
+    cash_variance = round(sum(shift["cash_variance"] for shift in shifts), 2)
+
+    return {
+        "source_file": path.name,
+        "batch": int(batch.group(1)),
+        "batch_date": date.group(1),
+        "shift_count": len(shifts),
+        "cashier_count": len(by_cashier),
+        "total_actual": total_actual,
+        "total_theoretical": total_theoretical,
+        "total_variance": total_variance,
+        "cash_variance": cash_variance,
+        "largest_variance_cashier": largest["cashier"],
+        "largest_variance_amount": largest["variance"],
+        "by_cashier": by_cashier,
+        "shifts": shifts,
+    }
+
+
 def parse_stock_take_summary(path: Path) -> dict[str, Any]:
     text = read_text(path)
     date = re.search(r"Date:\s*(\d{2}/\d{2}/\d{4})", text)
