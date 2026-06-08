@@ -5,7 +5,11 @@
     "format": "xlsx",
     "pay_date": "2026-05-21",
     "employee_count": 16,
+    "source_employee_count": 16,
+    "excluded_employee_count": 0,
     "total_net_pay": 31449.03,
+    "source_total_net_pay": 31449.03,
+    "excluded_total_net_pay": 0,
     "hash_total": "062848016516",
     "output": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_210526.csv",
     "employees": [
@@ -153,7 +157,8 @@
         "branch": "470010",
         "net_pay": 1984.98
       }
-    ]
+    ],
+    "excluded_employees": []
   },
   {
     "source_file": "Nett Pay List - 140526.xls",
@@ -161,7 +166,11 @@
     "format": "xls",
     "pay_date": "2026-05-14",
     "employee_count": 16,
+    "source_employee_count": 16,
+    "excluded_employee_count": 0,
     "total_net_pay": 32095.27,
+    "source_total_net_pay": 32095.27,
+    "excluded_total_net_pay": 0,
     "hash_total": "062848016516",
     "output": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_140526.csv",
     "employees": [
@@ -308,6 +317,262 @@
         "account": "1504189785",
         "branch": "470010",
         "net_pay": 2020.62
+      }
+    ],
+    "excluded_employees": []
+  },
+  {
+    "source_file": "Nett Pay List - 060526.xlsx",
+    "source_type": "payroll_system",
+    "format": "xlsx",
+    "pay_date": "2026-05-06",
+    "employee_count": 24,
+    "source_employee_count": 27,
+    "excluded_employee_count": 3,
+    "total_net_pay": 56575.22,
+    "source_total_net_pay": 62703.7,
+    "excluded_total_net_pay": 6128.48,
+    "hash_total": "062848016885",
+    "output": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_060526.csv",
+    "employees": [
+      {
+        "code": "S0001",
+        "name": "NOSIBABALO WINNIE ZIDE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1349762286",
+        "branch": "470010",
+        "net_pay": 2134.94
+      },
+      {
+        "code": "S0002",
+        "name": "PHOMLA BOMVANA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1480840155",
+        "branch": "470010",
+        "net_pay": 2374.17
+      },
+      {
+        "code": "S0004",
+        "name": "SINELIZWI MAVUSO",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1733969738",
+        "branch": "470010",
+        "net_pay": 2270.49
+      },
+      {
+        "code": "S0005",
+        "name": "NWABISA ZOLAKAZI NGQOLOSI",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1293707730",
+        "branch": "470010",
+        "net_pay": 2342.28
+      },
+      {
+        "code": "S0006",
+        "name": "YOLISWA GOMO",
+        "pay_method": "ACB",
+        "bank": "Absa Bank",
+        "account": "9385719058",
+        "branch": "632005",
+        "net_pay": 2493.39
+      },
+      {
+        "code": "S0007",
+        "name": "VUYOLWETHU GADA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1645633193",
+        "branch": "470010",
+        "net_pay": 2994.62
+      },
+      {
+        "code": "S0008",
+        "name": "DARWINE BROWN KAMANGA",
+        "pay_method": "ACB",
+        "bank": "ACCESS BANK",
+        "account": "51120292682",
+        "branch": "410506",
+        "net_pay": 3188.05
+      },
+      {
+        "code": "S0009",
+        "name": "KHANYA NYAMA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1635469811",
+        "branch": "470010",
+        "net_pay": 3085.0
+      },
+      {
+        "code": "S0010",
+        "name": "LUNGILE BUSHULA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1524499585",
+        "branch": "470010",
+        "net_pay": 3054.63
+      },
+      {
+        "code": "S0011",
+        "name": "BYNE BANDA",
+        "pay_method": "ACB",
+        "bank": "Nedbank South Africa",
+        "account": "1323948317",
+        "branch": "198765",
+        "net_pay": 3030.77
+      },
+      {
+        "code": "S0012",
+        "name": "SIPHAMANDLA KEWUTHI",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "2228630280",
+        "branch": "470010",
+        "net_pay": 2512.64
+      },
+      {
+        "code": "S0013",
+        "name": "LAWRENCE FATYELA",
+        "pay_method": "ACB",
+        "bank": "Absa Bank",
+        "account": "9111241110",
+        "branch": "632005",
+        "net_pay": 2412.64
+      },
+      {
+        "code": "S0014",
+        "name": "AYANDA GAVIN SIFUBA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1376042493",
+        "branch": "470010",
+        "net_pay": 1027.31
+      },
+      {
+        "code": "S0015",
+        "name": "MVUYISI TETA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1141146795",
+        "branch": "470010",
+        "net_pay": 2387.64
+      },
+      {
+        "code": "S0016",
+        "name": "THANDANANI CHEMEGA",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1626343444",
+        "branch": "470010",
+        "net_pay": 2487.65
+      },
+      {
+        "code": "S0017",
+        "name": "FLOYD MANASHE",
+        "pay_method": "ACB",
+        "bank": "ACCESS BANK",
+        "account": "51080365331",
+        "branch": "410506",
+        "net_pay": 2067.5
+      },
+      {
+        "code": "S0018",
+        "name": "GABRIEL CHAWISE",
+        "pay_method": "ACB",
+        "bank": "ACCESS BANK",
+        "account": "51202277636",
+        "branch": "410506",
+        "net_pay": 1322.65
+      },
+      {
+        "code": "S0020",
+        "name": "GIFT MAZULU",
+        "pay_method": "ACB",
+        "bank": "ACCESS BANK",
+        "account": "51136188383",
+        "branch": "410506",
+        "net_pay": 3432.61
+      },
+      {
+        "code": "S0023",
+        "name": "NONTOBEKO STUURMAN",
+        "pay_method": "ACB",
+        "bank": "Nedbank South Africa",
+        "account": "1195595255",
+        "branch": "198765",
+        "net_pay": 1012.09
+      },
+      {
+        "code": "S0024",
+        "name": "SEPADI DIELAPANTSI",
+        "pay_method": "ACB",
+        "bank": "Nedbank South Africa",
+        "account": "1302725734",
+        "branch": "198765",
+        "net_pay": 1981.93
+      },
+      {
+        "code": "S0029",
+        "name": "BIBI BULAKATI",
+        "pay_method": "ACB",
+        "bank": "Standard Bank South Africa",
+        "account": "10087987838",
+        "branch": "051001",
+        "net_pay": 1801.75
+      },
+      {
+        "code": "S0026",
+        "name": "JOHN MARTIN",
+        "pay_method": "ACB",
+        "bank": "ACCESS BANK",
+        "account": "51588892372",
+        "branch": "410506",
+        "net_pay": 2352.91
+      },
+      {
+        "code": "S0027",
+        "name": "PALESA MPEHLE",
+        "pay_method": "ACB",
+        "bank": "Capitec Bank",
+        "account": "1648614165",
+        "branch": "470010",
+        "net_pay": 2314.17
+      },
+      {
+        "code": "S0028",
+        "name": "NODUMISO YASO",
+        "pay_method": "ACB",
+        "bank": "First National Bank South Africa",
+        "account": "63184226554",
+        "branch": "250655",
+        "net_pay": 2493.39
+      }
+    ],
+    "excluded_employees": [
+      {
+        "code": "S0032",
+        "name": "NWABISA FRANCE",
+        "pay_method": "Cash",
+        "net_pay": 1621.58,
+        "reason": "Non-ACB pay method is excluded from bank payment CSV"
+      },
+      {
+        "code": "S0033",
+        "name": "SINOVUYO SINOVUYO",
+        "pay_method": "Cash",
+        "net_pay": 1981.93,
+        "reason": "Non-ACB pay method is excluded from bank payment CSV"
+      },
+      {
+        "code": "S0034",
+        "name": "FEZILE FEZILE",
+        "pay_method": "Cash",
+        "net_pay": 2524.97,
+        "reason": "Non-ACB pay method is excluded from bank payment CSV"
       }
     ]
   }

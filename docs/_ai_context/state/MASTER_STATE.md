@@ -9,12 +9,14 @@ traceability_id: "WS-001-cursor-workspace-starter"
 
 # MASTER_STATE.md
 
-**Last Updated:** 2026-05-25  
-**Version:** 1.5.1
+**Last Updated:** 2026-06-08  
+**Version:** 1.6.0
 
 ## Current Workspace State
 
 **Experiment JP** — ENGEN Jet Park fuel & convenience operations. Management reporting pipeline active with source-classified inputs (POS, payroll, bank, manual recon).
+
+Latest update: agent-OS handoff layer added for Hermes Desktop / Open Claw-style local agents. Primary command is `python scripts/management/refresh_all.py --own-account 62848015857`; status output is `reports/data/agent-refresh-status.json`.
 
 ### Input Source Layers
 
@@ -27,6 +29,7 @@ traceability_id: "WS-001-cursor-workspace-starter"
 | Bank Feed | auto-generated | `62848015857.ofx`, `*.ofx` | FNB account 62848015857 — Apr 2026: 327 trx |
 | Manual Recon | human-maintained | `CASH UP APRIL 26.xlsx`, `Schedule of Accounts*.xlsx` | Petty cash, supplier invoices |
 | OCR / WhatsApp | photo → OCR synthesis | `deepseek_text_*.txt` | ATG dips, CIT, EOD screenshots — confirm vs POS |
+| Agent Inbox | email / OneDrive / manual | `inputs/inbox/{email,onedrive,manual}/` | Agent OS staging folders with ledger `ingest_channel` metadata |
 
 Registry: `docs/_ai_context/knowledge/reference/input-source-registry.yaml`  
 File catalog: `docs/_ai_context/knowledge/reference/file-type-catalog.yaml`  
@@ -47,9 +50,21 @@ Analysis: `2026-05-24_ADDITIONAL_FOLDER_AND_FILE_REPO.md` · `2026-05-24_OCR_WHA
 | `reports/data/series/*.json` | `scripts/management/build_file_repo.py` |
 | `reports/data/file-repo-index.json` | `scripts/management/build_file_repo.py` |
 | `reports/payroll/Payment_*.csv` | `scripts/payroll/netpay_to_payment_csv.py --all` |
+| `reports/data/agent-refresh-status.json` | `scripts/management/refresh_all.py --own-account 62848015857` |
 | `docs/_ai_context/prompts/HANDOFF_OPTIMIZATION_REFACTOR.md` | Optimization handoff for external models |
+| `docs/_ai_context/prompts/AGENT_OS_HANDOFF.md` | Runtime handoff for Hermes/Open Claw-style agents |
 
 Latest optimization: `cash_variance_by_cashier` now parses cashier/shift variance summaries and uses batch/date content keys; the rank-1 catalog metadata update is tracked in `BACKLOG.md` pending human approval.
+
+Payroll validation anchors:
+
+| Source file | ACB rows | Excluded rows | CSV total | Hash |
+|---|---:|---:|---:|---|
+| `Nett Pay List - 140526.xls` | 16 | 0 | R 32,095.27 | `062848016516` |
+| `Nett Pay List - 210526.xlsx` | 16 | 0 | R 31,449.03 | `062848016516` |
+| `Nett Pay List - 060526.xlsx` | 24 | 3 | R 56,575.22 | `062848016885` |
+
+Git remote note: `gh` CLI is not installed and `ThorTheJoo/Experiment-JP` was not reachable on 2026-06-08. Local commits are ready; final push requires creating/providing the private GitHub repo URL.
 
 ### Domain Skills (2026-05-24)
 
@@ -82,6 +97,8 @@ Latest optimization: `cash_variance_by_cashier` now parses cashier/shift varianc
 | `CONTRIBUTING.md` | Active | - | How to add tools and security checks |
 | `docs/MCP.md` | Active | - | MCP server conventions and capability gating |
 | `.devcontainer/devcontainer.no-net.json` | Active | - | Air-gapped dev container (--network=none) |
+| `scripts/management/refresh_all.py` | Active | 1.0.0 | Agent OS orchestration + JSON status |
+| `scripts/payroll/validate_payment_csv.py` | Active | 1.0.0 | FNB payment CSV validator |
 
 ### Rule Hierarchy (Zero Duplication)
 

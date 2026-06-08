@@ -15,10 +15,13 @@ banking:
     # FNB account types: 1=Current, 2=Savings, 3=Transmission
     default_account_type: "2"
     bank_account_types:
+      ABSA: "1"
+      ACCESS BANK: "2"
       Capitec Bank: "2"
       "First National Bank South Africa": "1"
       "Nedbank South Africa": "1"
       "African Bank": "2"
+      Standard Bank: "1"
 
 inputs:
   directory: "docs/_ai_context/inputs/Starter Docs"

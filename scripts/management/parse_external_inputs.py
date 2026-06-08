@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import re
 from collections import defaultdict
 from datetime import datetime, timedelta
@@ -13,6 +14,11 @@ try:
     import openpyxl
 except ImportError:
     openpyxl = None
+
+try:
+    from file_classifier import classify_report
+except ImportError:
+    classify_report = None
 
 # Non-operational files to exclude from input inventory (templates, archives, docs)
 INVENTORY_SKIP_SUFFIXES = {".md", ".pdf", ".tar.gz", ".gz", ".zip"}
@@ -33,6 +39,10 @@ def should_skip_inventory_file(path: Path) -> bool:
 
 
 def classify_file(path: Path) -> dict[str, str]:
+    if classify_report:
+        meta = classify_report(path)
+        return {"source_type": meta["source_type"], "report": meta["report_type"]}
+
     name = path.name.lower()
     if path.suffix.upper() == ".TXT" and "day end" in name:
         return {"source_type": "pos_system", "report": "day_end_summary"}
@@ -78,8 +88,8 @@ def scan_input_inventory(inputs_root: Path) -> list[dict[str, Any]]:
 
 
 def find_ofx_file(inputs_root: Path) -> Path | None:
-    """Prefer newest OFX by statement end date (inputs root or Refresh/)."""
-    candidates = list(inputs_root.glob("*.ofx")) + list(inputs_root.glob("Refresh/*.ofx"))
+    """Prefer newest OFX by statement end date anywhere under the inputs root."""
+    candidates = [p for p in inputs_root.rglob("*.ofx") if p.is_file() and "(1)" not in p.name]
     if not candidates:
         return None
 
@@ -201,22 +211,26 @@ def load_payment_csv_totals(payroll_dir: Path) -> list[dict[str, Any]]:
     for path in sorted(payroll_dir.glob("Payment_*.csv")):
         if " (1)" in path.name or " (2)" in path.name:
             continue
-        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-        if len(lines) < 4:
+        with path.open(newline="", encoding="utf-8") as f:
+            rows = list(csv.reader(f))
+        if len(rows) < 4:
             continue
-        pay_raw = lines[1].split(",")[0].strip()
+        pay_raw = rows[1][0].strip() if rows[1] else ""
         parts = pay_raw.split("-")
         if len(parts) != 3:
             continue
         pay_date = f"{parts[0]}/{parts[1]}/{parts[2]}"
         total = 0.0
-        for line in lines[4:]:
-            cols = line.split(",")
-            if len(cols) > 4:
-                try:
-                    total += float(cols[4])
-                except ValueError:
-                    pass
+        for row in rows[4:]:
+            if len(row) <= 4:
+                continue
+            amount = row[4].strip()
+            if not amount:
+                continue
+            try:
+                total += float(amount)
+            except ValueError as exc:
+                raise ValueError(f"Invalid payment amount in {path}: {amount}") from exc
         results.append({
             "file": path.name,
             "pay_date": pay_date,
@@ -405,15 +419,15 @@ def build_external_context(
     if ofx_path:
         ctx["bank_statement"] = parse_ofx(ofx_path)
 
-    sched = [p for p in inputs_root.glob("Schedule of Accounts*.xlsx") if "(1)" not in p.name]
+    sched = [p for p in inputs_root.rglob("Schedule of Accounts*.xlsx") if "(1)" not in p.name]
     if sched:
-        ctx["supplier_schedule"] = parse_schedule_of_accounts(sched[0])
+        ctx["supplier_schedule"] = parse_schedule_of_accounts(max(sched, key=lambda p: p.stat().st_mtime))
 
-    cash_up = list(inputs_root.glob("CASH UP*.xlsx"))
+    cash_up = [p for p in inputs_root.rglob("CASH UP*.xlsx") if "(1)" not in p.name]
     if cash_up:
-        ctx["cash_up"] = parse_cash_up(cash_up[0])
+        ctx["cash_up"] = parse_cash_up(max(cash_up, key=lambda p: p.stat().st_mtime))
 
-    payroll_files = sorted(inputs_root.glob("Nett Pay List*.xls*"))
+    payroll_files = sorted(p for p in inputs_root.rglob("Nett Pay List*.xls*") if "(1)" not in p.name)
     ctx["payroll_files"] = [
         {"file": p.name, **classify_file(p), "modified": datetime.fromtimestamp(p.stat().st_mtime).isoformat()[:10]}
         for p in payroll_files
@@ -422,8 +436,8 @@ def build_external_context(
     try:
         from parse_ocr_whatsapp import build_ocr_context
         ctx.update(build_ocr_context(inputs_root, canonical))
-    except ImportError:
-        pass
+    except ImportError as exc:
+        ctx["ocr_error"] = f"OCR parser unavailable: {exc}"
 
     bank = ctx.get("bank_statement", {})
     if bank and payroll_dir:

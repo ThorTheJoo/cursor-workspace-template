@@ -9,7 +9,7 @@
       "summary": {
         "report_type": "nett_pay_list"
       },
-      "ingest_id": "20260525-765b25db1d4bcd33"
+      "ingest_id": "20260608-765b25db1d4bcd33"
     },
     {
       "content_key": "payroll|period:210526",
@@ -19,7 +19,17 @@
       "summary": {
         "report_type": "nett_pay_list"
       },
-      "ingest_id": "20260525-7b22d00076b1a38b"
+      "ingest_id": "20260608-7b22d00076b1a38b"
+    },
+    {
+      "content_key": "payroll|period:060526",
+      "source_file": "Nett Pay List - 060526.xlsx",
+      "path": "08062026/Nett Pay List - 060526.xlsx",
+      "modified": "2026-06-08 16:25",
+      "summary": {
+        "report_type": "nett_pay_list"
+      },
+      "ingest_id": "20260608-3a4d7b9256bdef35"
     }
   ]
 }

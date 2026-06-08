@@ -28,6 +28,9 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CONFIG = ROOT / "config" / "site.yaml"
 INPUTS_ROOT = ROOT / "docs" / "_ai_context" / "inputs"
+EMPLOYEE_CODE_RE = re.compile(r"^[A-Z]\d+")
+BANKABLE_PAY_METHODS = {"ACB"}
+VALID_ACCOUNT_TYPES = {"0", "1", "2", "3", "4", "6", "D", "F", "W"}
 
 CSV_HEADER = [
     "RECIPIENT NAME", "RECIPIENT ACCOUNT", "RECIPIENT ACCOUNT TYPE", "BRANCHCODE",
@@ -87,8 +90,12 @@ def parse_employees_from_rows(rows: list[tuple]) -> list[dict]:
         if not row:
             continue
         code = str(row[0] or "").strip()
-        if not re.match(r"^F\d+", code):
+        if not EMPLOYEE_CODE_RE.match(code):
             continue
+        try:
+            net_pay = float(row[8] or 0)
+        except (TypeError, ValueError) as exc:
+            raise ValueError(f"Invalid net pay for employee {code}: {row[8]}") from exc
         employees.append({
             "code": code,
             "name": str(row[1] or "").strip().upper(),
@@ -96,9 +103,27 @@ def parse_employees_from_rows(rows: list[tuple]) -> list[dict]:
             "bank": str(row[4] or "").strip(),
             "account": normalize_account(row[5]),
             "branch": normalize_account(row[7]),
-            "net_pay": float(row[8] or 0),
+            "net_pay": net_pay,
         })
     return employees
+
+
+def split_bankable_employees(employees: list[dict]) -> tuple[list[dict], list[dict]]:
+    bankable: list[dict] = []
+    excluded: list[dict] = []
+    for employee in employees:
+        method = employee.get("pay_method", "").strip().upper()
+        if method in BANKABLE_PAY_METHODS:
+            bankable.append(employee)
+        else:
+            excluded.append({
+                "code": employee.get("code", ""),
+                "name": employee.get("name", ""),
+                "pay_method": employee.get("pay_method", ""),
+                "net_pay": employee.get("net_pay", 0.0),
+                "reason": "Non-ACB pay method is excluded from bank payment CSV",
+            })
+    return bankable, excluded
 
 
 def load_payroll_rows(path: Path) -> tuple[list[tuple], str]:
@@ -135,11 +160,29 @@ def calc_hash_total(own_account: str, recipient_accounts: list[str]) -> str:
 def account_type_for(bank: str, cfg: dict) -> str:
     payroll_cfg = cfg.get("banking", {}).get("payroll", {})
     mapping = payroll_cfg.get("bank_account_types", {})
-    return str(mapping.get(bank, payroll_cfg.get("default_account_type", "2")))
+    normalized = {str(k).strip().lower(): str(v).strip() for k, v in mapping.items()}
+    return normalized.get(bank.strip().lower(), str(payroll_cfg.get("default_account_type", "2")))
 
 
 def format_amount(amount: float) -> str:
     return f"{amount:.2f}"
+
+
+def validate_employee_for_payment(emp: dict, cfg_stub: dict) -> None:
+    code = emp.get("code", "")
+    if not emp.get("name"):
+        raise ValueError(f"Employee {code} has no recipient name")
+    if not emp.get("account"):
+        raise ValueError(f"Employee {code} has no recipient account")
+    if len(emp["account"]) > 20:
+        raise ValueError(f"Employee {code} account exceeds 20 characters")
+    if len(emp.get("branch", "")) != 6:
+        raise ValueError(f"Employee {code} branch code must be 6 digits")
+    if emp.get("net_pay", 0) <= 0:
+        raise ValueError(f"Employee {code} must have a positive net pay amount")
+    account_type = account_type_for(emp.get("bank", ""), cfg_stub)
+    if account_type not in VALID_ACCOUNT_TYPES:
+        raise ValueError(f"Employee {code} has invalid account type {account_type}")
 
 
 def build_payment_csv(
@@ -164,6 +207,7 @@ def build_payment_csv(
     cfg_stub = {"banking": {"payroll": {"bank_account_types": account_type_map, "default_account_type": "2"}}}
     ref_suffix = pay_date.strftime("%y%m%d")
     for emp in employees:
+        validate_employee_for_payment(emp, cfg_stub)
         rows.append([
             emp["name"][:20],
             emp["account"],
@@ -193,9 +237,12 @@ def convert(input_path: Path, output_path: Path, config_path: Path) -> dict:
 
     rows, fmt = load_payroll_rows(input_path)
     pay_date = parse_pay_date_from_rows(rows) or datetime.now()
-    employees = parse_employees_from_rows(rows)
-    if not employees:
+    all_employees = parse_employees_from_rows(rows)
+    if not all_employees:
         raise ValueError(f"No employees found in {input_path}")
+    employees, excluded_employees = split_bankable_employees(all_employees)
+    if not employees:
+        raise ValueError(f"No ACB employees found in {input_path}")
 
     csv_rows = build_payment_csv(
         employees=employees,
@@ -213,16 +260,24 @@ def convert(input_path: Path, output_path: Path, config_path: Path) -> dict:
         "format": fmt,
         "pay_date": pay_date.strftime("%Y-%m-%d"),
         "employee_count": len(employees),
+        "source_employee_count": len(all_employees),
+        "excluded_employee_count": len(excluded_employees),
         "total_net_pay": round(sum(e["net_pay"] for e in employees), 2),
+        "source_total_net_pay": round(sum(e["net_pay"] for e in all_employees), 2),
+        "excluded_total_net_pay": round(sum(e["net_pay"] for e in excluded_employees), 2),
         "hash_total": csv_rows[2][1],
         "output": str(output_path),
         "employees": employees,
+        "excluded_employees": excluded_employees,
     }
 
 
 def find_payroll_files(directory: Path) -> list[Path]:
-    files = list(directory.glob("Nett Pay List*.xls")) + list(directory.glob("Nett Pay List*.xlsx"))
-    return sorted({p.resolve() for p in files if "(1)" not in p.name}, key=lambda p: p.name)
+    files = list(directory.rglob("Nett Pay List*.xls")) + list(directory.rglob("Nett Pay List*.xlsx"))
+    return sorted(
+        {p.resolve() for p in files if not re.search(r"\s\(\d+\)", p.stem)},
+        key=lambda p: p.name,
+    )
 
 
 def main() -> None:

@@ -17,7 +17,7 @@
       <p class="meta"><span class="tag tag-payroll_system">Payroll System</span>
         Frequency: <strong>Weekly</strong> ·
         <span class="badge-integrated">integrated</span> ·
-        2 period(s) in series · 4 file(s) on disk
+        3 period(s) in series · 5 file(s) on disk
       </p>
       <div class="toolbar">
         <button type="button" class="btn btn-primary" onclick="toggleHelp()">Help — what is this file?</button>
@@ -44,7 +44,8 @@
       <table id="trendTable">
         <thead><tr><th>Period</th><th>Batch</th><th class='num'>Total Net Pay</th><th>Source file</th></tr></thead>
         <tbody><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526.xls'><td class='nowrap'><strong>—</strong></td><td>—</td><td></td><td><code>Nett Pay List - 140526.xls</code></td></tr>
-<tr class='clickable' data-path='Starter Docs/Nett Pay List - 210526.xlsx'><td class='nowrap'><strong>—</strong></td><td>—</td><td></td><td><code>Nett Pay List - 210526.xlsx</code></td></tr></tbody>
+<tr class='clickable' data-path='Starter Docs/Nett Pay List - 210526.xlsx'><td class='nowrap'><strong>—</strong></td><td>—</td><td></td><td><code>Nett Pay List - 210526.xlsx</code></td></tr>
+<tr class='clickable' data-path='08062026/Nett Pay List - 060526.xlsx'><td class='nowrap'><strong>—</strong></td><td>—</td><td></td><td><code>Nett Pay List - 060526.xlsx</code></td></tr></tbody>
       </table>
     </div>
 
@@ -53,7 +54,7 @@
       <p class="meta">Every drop in inputs/ for this report type — includes duplicate copies marked (1).</p>
       <table id="filesTable">
         <thead><tr><th>Filename</th><th>Folder</th><th>Content key</th><th>Role</th><th>Modified</th><th class="num">Size</th></tr></thead>
-        <tbody><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526 (2).xls' data-ingest='20260525-a8074b476a40832a'><td><code>Nett Pay List - 140526 (2).xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>60,416</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 210526.xlsx' data-ingest='20260525-7b22d00076b1a38b'><td><code>Nett Pay List - 210526.xlsx</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:210526</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>25,009</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526 (1).xls' data-ingest='20260525-765b25db1d4bcd33'><td><code>Nett Pay List - 140526 (1).xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>dup</td><td>2026-05-23 11:26</td><td class='num'>33,280</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526.xls' data-ingest='20260525-765b25db1d4bcd33'><td><code>Nett Pay List - 140526.xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>primary</td><td>2026-05-15 15:52</td><td class='num'>33,280</td></tr></tbody>
+        <tbody><tr class='clickable' data-path='08062026/Nett Pay List - 060526.xlsx' data-ingest='20260608-3a4d7b9256bdef35'><td><code>Nett Pay List - 060526.xlsx</code></td><td>08062026</td><td class='nowrap'>payroll|period:060526</td><td>primary</td><td>2026-06-08 16:25</td><td class='num'>17,907</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526 (2).xls' data-ingest='20260608-a8074b476a40832a'><td><code>Nett Pay List - 140526 (2).xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>60,416</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 210526.xlsx' data-ingest='20260608-7b22d00076b1a38b'><td><code>Nett Pay List - 210526.xlsx</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:210526</td><td>primary</td><td>2026-05-24 12:44</td><td class='num'>25,009</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526 (1).xls' data-ingest='20260608-765b25db1d4bcd33'><td><code>Nett Pay List - 140526 (1).xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>dup</td><td>2026-05-23 11:26</td><td class='num'>33,280</td></tr><tr class='clickable' data-path='Starter Docs/Nett Pay List - 140526.xls' data-ingest='20260608-765b25db1d4bcd33'><td><code>Nett Pay List - 140526.xls</code></td><td>Starter Docs</td><td class='nowrap'>payroll|period:140526</td><td>primary</td><td>2026-05-15 15:52</td><td class='num'>33,280</td></tr></tbody>
       </table>
     </div>
 
@@ -66,10 +67,30 @@
   <script>
     const LEDGER = [
   {
-    "ingest_id": "20260525-765b25db1d4bcd33",
+    "ingest_id": "20260608-3a4d7b9256bdef35",
+    "path": "08062026/Nett Pay List - 060526.xlsx",
+    "filename": "Nett Pay List - 060526.xlsx",
+    "folder": "08062026",
+    "ingest_channel": "local_drop",
+    "pattern_name": "Nett Pay List - 060526",
+    "report_type": "nett_pay_list",
+    "source_type": "payroll_system",
+    "content_key": "payroll|period:060526",
+    "is_duplicate_copy": false,
+    "size_bytes": 17907,
+    "modified": "2026-06-08 16:25",
+    "sha256_prefix": "3a4d7b9256bdef35",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
+  },
+  {
+    "ingest_id": "20260608-765b25db1d4bcd33",
     "path": "Starter Docs/Nett Pay List - 140526 (1).xls",
     "filename": "Nett Pay List - 140526 (1).xls",
     "folder": "Starter Docs",
+    "ingest_channel": "local_drop",
     "pattern_name": "Nett Pay List - 140526",
     "report_type": "nett_pay_list",
     "source_type": "payroll_system",
@@ -84,10 +105,11 @@
     "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
   },
   {
-    "ingest_id": "20260525-a8074b476a40832a",
+    "ingest_id": "20260608-a8074b476a40832a",
     "path": "Starter Docs/Nett Pay List - 140526 (2).xls",
     "filename": "Nett Pay List - 140526 (2).xls",
     "folder": "Starter Docs",
+    "ingest_channel": "local_drop",
     "pattern_name": "Nett Pay List - 140526",
     "report_type": "nett_pay_list",
     "source_type": "payroll_system",
@@ -102,10 +124,11 @@
     "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
   },
   {
-    "ingest_id": "20260525-765b25db1d4bcd33",
+    "ingest_id": "20260608-765b25db1d4bcd33",
     "path": "Starter Docs/Nett Pay List - 140526.xls",
     "filename": "Nett Pay List - 140526.xls",
     "folder": "Starter Docs",
+    "ingest_channel": "local_drop",
     "pattern_name": "Nett Pay List - 140526",
     "report_type": "nett_pay_list",
     "source_type": "payroll_system",
@@ -120,10 +143,11 @@
     "catalog_ref": "file-type-catalog.yaml#nett_pay_list"
   },
   {
-    "ingest_id": "20260525-7b22d00076b1a38b",
+    "ingest_id": "20260608-7b22d00076b1a38b",
     "path": "Starter Docs/Nett Pay List - 210526.xlsx",
     "filename": "Nett Pay List - 210526.xlsx",
     "folder": "Starter Docs",
+    "ingest_channel": "local_drop",
     "pattern_name": "Nett Pay List - 210526",
     "report_type": "nett_pay_list",
     "source_type": "payroll_system",
@@ -147,7 +171,7 @@
     "summary": {
       "report_type": "nett_pay_list"
     },
-    "ingest_id": "20260525-765b25db1d4bcd33"
+    "ingest_id": "20260608-765b25db1d4bcd33"
   },
   {
     "content_key": "payroll|period:210526",
@@ -157,7 +181,17 @@
     "summary": {
       "report_type": "nett_pay_list"
     },
-    "ingest_id": "20260525-7b22d00076b1a38b"
+    "ingest_id": "20260608-7b22d00076b1a38b"
+  },
+  {
+    "content_key": "payroll|period:060526",
+    "source_file": "Nett Pay List - 060526.xlsx",
+    "path": "08062026/Nett Pay List - 060526.xlsx",
+    "modified": "2026-06-08 16:25",
+    "summary": {
+      "report_type": "nett_pay_list"
+    },
+    "ingest_id": "20260608-3a4d7b9256bdef35"
   }
 ];
     function toggleHelp() {

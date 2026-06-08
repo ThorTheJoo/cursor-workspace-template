@@ -240,12 +240,20 @@
   "external": {
     "input_inventory": [
       {
+        "path": "08062026/Nett Pay List - 060526.xlsx",
+        "name": "Nett Pay List - 060526.xlsx",
+        "size_bytes": 17907,
+        "modified": "2026-06-08 16:25",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list"
+      },
+      {
         "path": "Additional/Cash Variance - Selected EOD by Cashier (2).TXT",
         "name": "Cash Variance - Selected EOD by Cashier (2).TXT",
         "size_bytes": 13027,
         "modified": "2026-05-25 13:05",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Additional/Cash Variance - Selected EOD by Cashier (3).TXT",
@@ -253,7 +261,7 @@
         "size_bytes": 16328,
         "modified": "2026-05-25 13:07",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Additional/Cash Variance - Selected EOD by Cashier (4).TXT",
@@ -261,7 +269,7 @@
         "size_bytes": 19217,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Additional/Cash Variance - Selected EOD by Cashier (5).TXT",
@@ -269,15 +277,15 @@
         "size_bytes": 19220,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Additional/Creditors Purchases - Detail by AC Name.TXT",
         "name": "Creditors Purchases - Detail by AC Name.TXT",
         "size_bytes": 253750,
         "modified": "2026-05-25 13:07",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "accounting",
+        "report": "creditors_purchases_detail"
       },
       {
         "path": "Additional/Day End Summary (2).TXT",
@@ -324,16 +332,16 @@
         "name": "Debtors Age Analysis - By AC Name with Deposits (1).TXT",
         "size_bytes": 2164,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "accounting",
+        "report": "debtors_age_analysis"
       },
       {
         "path": "Additional/Debtors Age Analysis - By AC Name with Deposits.TXT",
         "name": "Debtors Age Analysis - By AC Name with Deposits.TXT",
         "size_bytes": 2164,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "accounting",
+        "report": "debtors_age_analysis"
       },
       {
         "path": "Additional/EFT Batch Summary By EFT Batch Date (1).TXT",
@@ -341,7 +349,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-25 13:05",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Additional/EFT Batch Summary By EFT Batch Date (2).TXT",
@@ -349,7 +357,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-25 13:07",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Additional/EFT Batch Summary By EFT Batch Date (3).TXT",
@@ -357,7 +365,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Additional/EFT Detail - By EOD Batch Number & Shift (2).TXT",
@@ -365,7 +373,7 @@
         "size_bytes": 21646,
         "modified": "2026-05-25 13:05",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Additional/EFT Detail - By EOD Batch Number & Shift (3).TXT",
@@ -373,7 +381,7 @@
         "size_bytes": 59106,
         "modified": "2026-05-25 13:07",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Additional/EFT Detail - By EOD Batch Number & Shift (4).TXT",
@@ -381,7 +389,7 @@
         "size_bytes": 43818,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Additional/EFT Detail - By EOD Batch Number & Shift (5).TXT",
@@ -389,7 +397,7 @@
         "size_bytes": 57010,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Additional/EFT Summary By EOD Batch & Shift (2).TXT",
@@ -397,7 +405,7 @@
         "size_bytes": 2031,
         "modified": "2026-05-25 13:05",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Additional/EFT Summary By EOD Batch & Shift (3).TXT",
@@ -405,7 +413,7 @@
         "size_bytes": 2096,
         "modified": "2026-05-25 13:07",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Additional/EFT Summary By EOD Batch & Shift (4).TXT",
@@ -413,7 +421,7 @@
         "size_bytes": 1901,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Additional/EFT Summary By EOD Batch & Shift (5).TXT",
@@ -421,7 +429,7 @@
         "size_bytes": 2096,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Additional/EFT Transactions Not Yet Sent to Bank (1).TXT",
@@ -429,7 +437,7 @@
         "size_bytes": 3523,
         "modified": "2026-05-25 13:04",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Additional/EFT Transactions Not Yet Sent to Bank (2).TXT",
@@ -437,7 +445,7 @@
         "size_bytes": 2698,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Additional/EFT Transactions Not Yet Sent to Bank (3).TXT",
@@ -445,39 +453,39 @@
         "size_bytes": 2834,
         "modified": "2026-05-25 13:08",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Additional/EOM By Category & Sub-Category Detail (Std Report).TXT",
         "name": "EOM By Category & Sub-Category Detail (Std Report).TXT",
         "size_bytes": 2667,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "pos_system",
+        "report": "eom_category_detail"
       },
       {
         "path": "Additional/Fuel Sales Control - Control Report - ATG.TXT",
         "name": "Fuel Sales Control - Control Report - ATG.TXT",
         "size_bytes": 11217,
         "modified": "2026-05-25 13:07",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "pos_system",
+        "report": "fuel_control_atg"
       },
       {
         "path": "Additional/Fuel Sales Control - MTD By Product.TXT",
         "name": "Fuel Sales Control - MTD By Product.TXT",
         "size_bytes": 12840,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "pos_system",
+        "report": "fuel_control_mtd_by_product"
       },
       {
         "path": "Additional/Fuel Sales Control - MTD Summary.TXT",
         "name": "Fuel Sales Control - MTD Summary.TXT",
         "size_bytes": 16975,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "pos_system",
+        "report": "fuel_control_mtd_summary"
       },
       {
         "path": "Additional/Month End Detail.TXT",
@@ -485,7 +493,7 @@
         "size_bytes": 158204,
         "modified": "2026-05-25 13:06",
         "source_type": "pos_system",
-        "report": "month_end_summary"
+        "report": "month_end_detail"
       },
       {
         "path": "Additional/Month End Summary (1).TXT",
@@ -508,80 +516,80 @@
         "name": "Monthly Summary Forecourt & Shop - By Category.TXT",
         "size_bytes": 5832,
         "modified": "2026-05-25 13:07",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "pos_system",
+        "report": "monthly_category_summary"
       },
       {
         "path": "Additional/Stock Cost & Selling Price Listing  - By Category (1).TXT",
         "name": "Stock Cost & Selling Price Listing  - By Category (1).TXT",
         "size_bytes": 237792,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_cost_sell_price"
       },
       {
         "path": "Additional/Stock Cost & Selling Price Listing  - By Category (2).TXT",
         "name": "Stock Cost & Selling Price Listing  - By Category (2).TXT",
         "size_bytes": 237787,
         "modified": "2026-05-25 13:07",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_cost_sell_price"
       },
       {
         "path": "Additional/Stock Cost & Selling Price Listing  - By Category.TXT",
         "name": "Stock Cost & Selling Price Listing  - By Category.TXT",
         "size_bytes": 1558,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_cost_sell_price"
       },
       {
         "path": "Additional/Stock On Hand with Unit Cost - by Category.TXT",
         "name": "Stock On Hand with Unit Cost - by Category.TXT",
         "size_bytes": 137020,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_on_hand"
       },
       {
         "path": "Additional/Stock Purchases Summary - By Category Summarized.TXT",
         "name": "Stock Purchases Summary - By Category Summarized.TXT",
         "size_bytes": 3895,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_purchases_summarized"
       },
       {
         "path": "Additional/Stock Purchases Summary - By Category.TXT",
         "name": "Stock Purchases Summary - By Category.TXT",
         "size_bytes": 72478,
         "modified": "2026-05-25 13:07",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_purchases_by_category"
       },
       {
         "path": "Additional/Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
         "name": "Stock Shrinkage Analysis - MTD by Category @ Latest Cost.TXT",
         "size_bytes": 5994,
         "modified": "2026-05-25 13:07",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "inventory",
+        "report": "stock_shrinkage_mtd"
       },
       {
         "path": "Additional/Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
         "name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
         "size_bytes": 37706,
         "modified": "2026-05-25 13:08",
-        "source_type": "pos_system",
-        "report": "stock_take"
+        "source_type": "inventory",
+        "report": "stock_take_variance"
       },
       {
         "path": "Additional/Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
         "name": "Turnover Levy Report (1 Apr - 30 Apr) by Head Office Categories.TXT",
         "size_bytes": 13453,
         "modified": "2026-05-25 13:06",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "accounting",
+        "report": "turnover_levy"
       },
       {
         "path": "Starter Docs/62848015857.ofx",
@@ -605,7 +613,7 @@
         "size_bytes": 19220,
         "modified": "2026-05-24 12:28",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (2).TXT",
@@ -613,7 +621,7 @@
         "size_bytes": 16328,
         "modified": "2026-05-24 16:40",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Starter Docs/Cash Variance - Selected EOD by Cashier (3).TXT",
@@ -621,7 +629,7 @@
         "size_bytes": 19217,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Starter Docs/Cash Variance - Selected EOD by Cashier.TXT",
@@ -629,7 +637,7 @@
         "size_bytes": 16330,
         "modified": "2026-05-23 11:17",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Starter Docs/Day End Summary (1).TXT",
@@ -685,7 +693,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-24 12:28",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Starter Docs/EFT Batch Summary By EFT Batch Date (2).TXT",
@@ -693,7 +701,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Starter Docs/EFT Batch Summary By EFT Batch Date.TXT",
@@ -701,7 +709,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-23 11:15",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (1).TXT",
@@ -709,7 +717,7 @@
         "size_bytes": 57010,
         "modified": "2026-05-24 12:28",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (2).TXT",
@@ -717,7 +725,7 @@
         "size_bytes": 59106,
         "modified": "2026-05-24 16:40",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift (3).TXT",
@@ -725,7 +733,7 @@
         "size_bytes": 43818,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Starter Docs/EFT Detail - By EOD Batch Number & Shift.TXT",
@@ -733,7 +741,7 @@
         "size_bytes": 65426,
         "modified": "2026-05-23 11:16",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Starter Docs/EFT Summary By EOD Batch & Shift (1).TXT",
@@ -741,7 +749,7 @@
         "size_bytes": 2096,
         "modified": "2026-05-24 12:28",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Starter Docs/EFT Summary By EOD Batch & Shift (2).TXT",
@@ -749,7 +757,7 @@
         "size_bytes": 2096,
         "modified": "2026-05-24 16:40",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Starter Docs/EFT Summary By EOD Batch & Shift (3).TXT",
@@ -757,7 +765,7 @@
         "size_bytes": 1901,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Starter Docs/EFT Summary By EOD Batch & Shift.TXT",
@@ -765,7 +773,7 @@
         "size_bytes": 2356,
         "modified": "2026-05-23 11:16",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (1).TXT",
@@ -773,7 +781,7 @@
         "size_bytes": 2834,
         "modified": "2026-05-24 12:28",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank (2).TXT",
@@ -781,7 +789,7 @@
         "size_bytes": 2698,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Starter Docs/EFT Transactions Not Yet Sent to Bank.TXT",
@@ -789,15 +797,15 @@
         "size_bytes": 2698,
         "modified": "2026-05-23 11:15",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Starter Docs/invoice_ledger.xlsx",
         "name": "invoice_ledger.xlsx",
         "size_bytes": 6809,
         "modified": "2026-05-24 17:21",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "manual_recon",
+        "report": "spreadsheet_unknown"
       },
       {
         "path": "Starter Docs/Month End Summary.TXT",
@@ -812,8 +820,8 @@
         "name": "Monthly Summary Forecourt & Shop - By Category.TXT",
         "size_bytes": 5832,
         "modified": "2026-05-24 12:28",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "pos_system",
+        "report": "monthly_category_summary"
       },
       {
         "path": "Starter Docs/Nett Pay List - 140526 (1).xls",
@@ -861,7 +869,7 @@
         "size_bytes": 16328,
         "modified": "2026-05-24 16:40",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Starter Docs/Refresh/Cash Variance - Selected EOD by Cashier.TXT",
@@ -869,7 +877,7 @@
         "size_bytes": 19217,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "cash_variance"
+        "report": "cash_variance_by_cashier"
       },
       {
         "path": "Starter Docs/Refresh/Day End Summary (1).TXT",
@@ -893,7 +901,7 @@
         "size_bytes": 2000,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_batch_summary"
       },
       {
         "path": "Starter Docs/Refresh/EFT Detail - By EOD Batch Number & Shift (1).TXT",
@@ -901,7 +909,7 @@
         "size_bytes": 59106,
         "modified": "2026-05-24 16:40",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Starter Docs/Refresh/EFT Detail - By EOD Batch Number & Shift.TXT",
@@ -909,7 +917,7 @@
         "size_bytes": 43818,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_detail_by_shift"
       },
       {
         "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift (1).TXT",
@@ -917,7 +925,7 @@
         "size_bytes": 2096,
         "modified": "2026-05-24 16:40",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Starter Docs/Refresh/EFT Summary By EOD Batch & Shift.TXT",
@@ -925,7 +933,7 @@
         "size_bytes": 1901,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_summary_by_shift"
       },
       {
         "path": "Starter Docs/Refresh/EFT Transactions Not Yet Sent to Bank.TXT",
@@ -933,15 +941,15 @@
         "size_bytes": 2698,
         "modified": "2026-05-24 16:39",
         "source_type": "pos_system",
-        "report": "eft"
+        "report": "eft_pending"
       },
       {
         "path": "Starter Docs/Refresh/invoice_ledger.xlsx",
         "name": "invoice_ledger.xlsx",
         "size_bytes": 6809,
         "modified": "2026-05-24 17:21",
-        "source_type": "unknown",
-        "report": "unknown"
+        "source_type": "manual_recon",
+        "report": "spreadsheet_unknown"
       },
       {
         "path": "Starter Docs/Schedule of Accounts Invoice T (1).xlsx",
@@ -972,8 +980,8 @@
         "name": "Stock Take Variance - For Date  By Category & Stock Code w POS Sales.TXT",
         "size_bytes": 37706,
         "modified": "2026-05-24 12:29",
-        "source_type": "pos_system",
-        "report": "stock_take"
+        "source_type": "inventory",
+        "report": "stock_take_variance"
       },
       {
         "path": "Starter Docs/WhatsApp Image 2026-05-15 at 08.22.51.jpeg",
@@ -1400,6 +1408,790 @@
         "report": "ocr_synthesis"
       }
     ],
-    "payroll_files": []
+    "bank_statement": {
+      "source_file": "62848015857.ofx",
+      "source_path": "C:/Temp/Experiment JP/docs/_ai_context/inputs/Starter Docs/62848015857.ofx",
+      "source_type": "bank_feed",
+      "account_id": "62848015857",
+      "period_start": "30/04/2026",
+      "period_end": "25/05/2026",
+      "ledger_balance": 256236.86,
+      "ledger_balance_date": "25/05/2026",
+      "transaction_count": 260,
+      "total_credits": 3529744.7,
+      "total_debits": 3301258.67,
+      "net_movement": 228486.03,
+      "by_category": {
+        "other": -2267457.85,
+        "speedpoint": 2612360.7,
+        "wages": -116416.82
+      },
+      "speedpoint_daily": [
+        {
+          "date": "30/04/2026",
+          "total": 108273.6
+        },
+        {
+          "date": "02/05/2026",
+          "total": 186479.05
+        },
+        {
+          "date": "04/05/2026",
+          "total": 71828.25
+        },
+        {
+          "date": "05/05/2026",
+          "total": 162864.15
+        },
+        {
+          "date": "06/05/2026",
+          "total": 260050.55
+        },
+        {
+          "date": "07/05/2026",
+          "total": 103333.05
+        },
+        {
+          "date": "08/05/2026",
+          "total": 92172.15
+        },
+        {
+          "date": "09/05/2026",
+          "total": 166792.95
+        },
+        {
+          "date": "11/05/2026",
+          "total": 82014.5
+        },
+        {
+          "date": "12/05/2026",
+          "total": 108581.05
+        },
+        {
+          "date": "13/05/2026",
+          "total": 127137.85
+        },
+        {
+          "date": "14/05/2026",
+          "total": 117838.55
+        },
+        {
+          "date": "15/05/2026",
+          "total": 133150.1
+        },
+        {
+          "date": "16/05/2026",
+          "total": 141454.75
+        },
+        {
+          "date": "18/05/2026",
+          "total": 84012.1
+        },
+        {
+          "date": "19/05/2026",
+          "total": 143267.2
+        },
+        {
+          "date": "20/05/2026",
+          "total": 73434.9
+        },
+        {
+          "date": "21/05/2026",
+          "total": 121361.05
+        },
+        {
+          "date": "22/05/2026",
+          "total": 137933.4
+        },
+        {
+          "date": "23/05/2026",
+          "total": 134855.45
+        },
+        {
+          "date": "25/05/2026",
+          "total": 55526.05
+        }
+      ],
+      "wage_runs": [
+        {
+          "date": "22/05/2026",
+          "total": 31449.03,
+          "employee_count": 16
+        },
+        {
+          "date": "16/05/2026",
+          "total": 32095.27,
+          "employee_count": 16
+        },
+        {
+          "date": "08/05/2026",
+          "total": 20772.12,
+          "employee_count": 15
+        },
+        {
+          "date": "04/05/2026",
+          "total": 32100.4,
+          "employee_count": 15
+        }
+      ],
+      "sample_memos": [
+        "SPEEDPOINT00201416FNB",
+        "SPEEDPOINT00201416FNB",
+        "SPEEDPOINT00201418FNB",
+        "SPEEDPOINT00201418FNB",
+        "FNB OB PMT            30260003C117",
+        "SPEEDPOINT00201416FNB",
+        "SPEEDPOINT00201416FNB",
+        "SPEEDPOINT00201418FNB"
+      ]
+    },
+    "supplier_schedule": {
+      "source_file": "Schedule of Accounts Invoice T (2).xlsx",
+      "source_type": "manual_recon",
+      "invoice_count": 25,
+      "total_incl": 15636.85,
+      "by_department": {
+        "BAKERY": 5702.14,
+        "OFFICE": 3933.0,
+        "STAFF": 2307.5,
+        "BAKERY/SHOP": 1732.4,
+        "CLEANING/STAFF": 1296.6,
+        "SHOP": 665.21
+      },
+      "recent": [
+        {
+          "date": "01/05/2026",
+          "supplier": "SASKO",
+          "department": "BAKERY",
+          "amount_incl": 136.0,
+          "paid": "PAID AT TILL"
+        },
+        {
+          "date": "05/05/2026",
+          "supplier": "SASKO",
+          "department": "BAKERY",
+          "amount_incl": 125.5,
+          "paid": "PAID AT TILL"
+        },
+        {
+          "date": "04/05/2026",
+          "supplier": "SASKO",
+          "department": "BAKERY",
+          "amount_incl": 224.5,
+          "paid": "PAID AT TILL"
+        },
+        {
+          "date": "05/05/2026",
+          "supplier": "JM FOODS",
+          "department": "BAKERY",
+          "amount_incl": 540.0,
+          "paid": "PAID AT TILL"
+        },
+        {
+          "date": "05/05/2026",
+          "supplier": "BLUE RIBBON",
+          "department": "BAKERY",
+          "amount_incl": 485.74,
+          "paid": "PAID AT TILL"
+        }
+      ]
+    },
+    "cash_up": {
+      "source_file": "CASH UP APRIL 26.xlsx",
+      "source_type": "manual_recon",
+      "sheet_count": 42,
+      "sheet_names": [
+        "Input",
+        "Summary",
+        "Dashboard-Performance",
+        "Dashboard-Fuel",
+        "Dashboard-Retail",
+        "Cashiers Report",
+        "Petty Cash Report",
+        "Bank",
+        "SS26",
+        "Daily Template",
+        "1",
+        "2"
+      ],
+      "site_title": null
+    },
+    "payroll_files": [
+      {
+        "file": "Nett Pay List - 060526.xlsx",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list",
+        "modified": "2026-06-08"
+      },
+      {
+        "file": "Nett Pay List - 140526 (2).xls",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list",
+        "modified": "2026-05-24"
+      },
+      {
+        "file": "Nett Pay List - 140526.xls",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list",
+        "modified": "2026-05-15"
+      },
+      {
+        "file": "Nett Pay List - 210526.xlsx",
+        "source_type": "payroll_system",
+        "report": "nett_pay_list",
+        "modified": "2026-05-24"
+      }
+    ],
+    "ocr_whatsapp": {
+      "source_file": "deepseek_text_20260524_26b077.txt",
+      "source_type": "ocr_whatsapp",
+      "channel": "WhatsApp JPEG images \u2192 OCR synthesis (DeepSeek)",
+      "trust": "reference_pending_pos_confirmation",
+      "atg_dips": [
+        {
+          "date": "2026-05-20",
+          "products": [
+            {
+              "product": "ULP95",
+              "litres": 10650.0,
+              "reserve": 1000,
+              "available": 9650.0
+            },
+            {
+              "product": "Diesel50",
+              "litres": 9523.0,
+              "reserve": 1000,
+              "available": 8523.0
+            },
+            {
+              "product": "ULP93",
+              "litres": 2256.0,
+              "reserve": 1000,
+              "available": 1256.0
+            }
+          ],
+          "source_image": "File: WhatsApp Image 2026-05-20 at 07.51.26.jpeg (20 May 2026 06:00)"
+        },
+        {
+          "date": "2026-05-21",
+          "products": [
+            {
+              "product": "ULP95",
+              "litres": 17885.0,
+              "reserve": 1000,
+              "available": 16885.0
+            },
+            {
+              "product": "Diesel50",
+              "litres": 13676.0,
+              "reserve": 1000,
+              "available": 12676.0
+            },
+            {
+              "product": "ULP93",
+              "litres": 6679.0,
+              "reserve": 1000,
+              "available": 5679.0
+            }
+          ],
+          "source_image": "File: WhatsApp Image 2026-05-21 at 06.40.39.jpeg (21 May 2026)"
+        },
+        {
+          "date": "2026-05-22",
+          "products": [
+            {
+              "product": "ULP95",
+              "litres": 15288.0,
+              "reserve": 1000,
+              "available": 14288.0
+            },
+            {
+              "product": "Diesel50",
+              "litres": 11403.0,
+              "reserve": 1000,
+              "available": 10403.0
+            },
+            {
+              "product": "ULP93",
+              "litres": 6238.0,
+              "reserve": 1000,
+              "available": 5238.0
+            }
+          ],
+          "source_image": "File: WhatsApp Image 2026-05-22 at 06.17.14.jpeg (22 May 2026)"
+        },
+        {
+          "date": "2026-05-23",
+          "products": [
+            {
+              "product": "ULP95",
+              "litres": 12325.0,
+              "reserve": 1000,
+              "available": 11325.0
+            },
+            {
+              "product": "Diesel50",
+              "litres": 9359.0,
+              "reserve": 1000,
+              "available": 8359.0
+            },
+            {
+              "product": "ULP93",
+              "litres": 5789.0,
+              "reserve": 1000,
+              "available": 4789.0
+            }
+          ],
+          "source_image": "File: WhatsApp Image 2026-05-23 at 07.09.39.jpeg (23 May 2026)"
+        },
+        {
+          "date": "2026-05-24",
+          "products": [
+            {
+              "product": "ULP95",
+              "litres": 10637.0,
+              "reserve": 1000,
+              "available": 9637.0
+            },
+            {
+              "product": "Diesel50",
+              "litres": 8952.0,
+              "reserve": 1000,
+              "available": 7952.0
+            },
+            {
+              "product": "ULP93",
+              "litres": 5515.0,
+              "reserve": 1000,
+              "available": 4515.0
+            }
+          ],
+          "source_image": "File: WhatsApp Image 2026-05-24 at 07.35.12.jpeg (24 May 2026)"
+        }
+      ],
+      "fuel_volume_daily": [
+        {
+          "date": "2026-05-18",
+          "ulp95": 3176.09,
+          "ulp93": 606.65,
+          "diesel": 2005.77,
+          "total_litres": 5788.51
+        },
+        {
+          "date": "2026-05-19",
+          "ulp95": 2234.77,
+          "ulp93": 450.26,
+          "diesel": 506.2,
+          "total_litres": 3191.23
+        },
+        {
+          "date": "2026-05-20",
+          "ulp95": 2759.53,
+          "ulp93": 589.66,
+          "diesel": 1651.48,
+          "total_litres": 5000.67
+        },
+        {
+          "date": "2026-05-21",
+          "ulp95": 2610.51,
+          "ulp93": 444.86,
+          "diesel": 2305.69,
+          "total_litres": 5361.06
+        }
+      ],
+      "pump_tank_eod": [
+        {
+          "batch": 141,
+          "date": "2026-05-18",
+          "pump_litres": 5788.51,
+          "tank_litres": 5764.0,
+          "variance_litres": 24.51,
+          "status": "ok",
+          "note": "acceptable."
+        },
+        {
+          "batch": 144,
+          "date": "2026-05-21",
+          "pump_litres": 5361.06,
+          "tank_litres": 5401.0,
+          "variance_litres": -39.94,
+          "status": "review",
+          "note": "investigate possible dip error or theft."
+        }
+      ],
+      "shop_daily": [
+        {
+          "date": "2026-05-18",
+          "shop_total": 13194.98,
+          "dry_stock_total": 16639.4,
+          "bakery": 4272.6
+        },
+        {
+          "date": "2026-05-19",
+          "shop_total": 12435.58,
+          "dry_stock_total": 15793.95,
+          "bakery": 3838.7
+        },
+        {
+          "date": "2026-05-20",
+          "shop_total": 12588.83,
+          "dry_stock_total": 16754.8,
+          "bakery": 4957.5
+        },
+        {
+          "date": "2026-05-21",
+          "shop_total": 14326.68,
+          "dry_stock_total": 19057.3,
+          "bakery": 5597.22
+        }
+      ],
+      "cit_pickups": [
+        {
+          "date": "2026-05-15",
+          "amount": 35140.0
+        },
+        {
+          "date": "2026-05-18",
+          "amount": 52900.0
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 30720.0
+        },
+        {
+          "date": "2026-05-21",
+          "amount": 37900.0
+        },
+        {
+          "date": "2026-05-23",
+          "amount": 42940.0
+        },
+        {
+          "date": "2026-05-15",
+          "amount": 420.0,
+          "type": "cash_drop",
+          "operator": "CAROLINE"
+        }
+      ],
+      "staff_exceptions": [
+        {
+          "operator": "SIA",
+          "date": "2026-05-18",
+          "variance": 1110.25,
+          "direction": "over",
+          "status": "investigate"
+        }
+      ],
+      "fuel_margins": {
+        "ULP95": {
+          "sell_per_l": 26.63,
+          "cost_per_l": 24.47,
+          "margin_pct": 8.1
+        },
+        "ULP93": {
+          "sell_per_l": 26.52,
+          "cost_per_l": 24.36,
+          "margin_pct": 8.1
+        },
+        "Diesel50": {
+          "sell_per_l": 34.47,
+          "cost_per_l": 32.05,
+          "margin_pct": 7.0
+        }
+      },
+      "alerts": [
+        {
+          "type": "delivery_needed",
+          "product": "ULP95",
+          "date": "2026-05-16",
+          "message": "ATG alarm \u2014 ULP95 tank below reorder level"
+        },
+        {
+          "type": "low_days_stock",
+          "product": "ULP95",
+          "days": 3.45,
+          "message": "ULP95 at 3.5 days \u2014 below 5-day safety target"
+        },
+        {
+          "type": "low_days_stock",
+          "product": "Diesel50",
+          "days": 4.57,
+          "message": "Diesel50 at 4.6 days \u2014 below 5-day safety target"
+        }
+      ],
+      "thresholds": {
+        "reserve_litres": 1000,
+        "min_days_stock": 5,
+        "max_pump_tank_variance_litres": 25
+      },
+      "days_of_stock": [
+        {
+          "product": "ULP95",
+          "avg_daily_litres": 2500.0,
+          "days_stock_24may": 3.45,
+          "below_threshold": true
+        },
+        {
+          "product": "Diesel50",
+          "avg_daily_litres": 1522.0,
+          "days_stock_24may": 4.57,
+          "below_threshold": true
+        },
+        {
+          "product": "ULP93",
+          "avg_daily_litres": 376.0,
+          "days_stock_24may": 12.01,
+          "below_threshold": false
+        }
+      ]
+    },
+    "reconciliations": [
+      {
+        "check": "Daily fuel volume (L)",
+        "date": "2026-05-18",
+        "source_a": "ocr_whatsapp",
+        "value_a": 5788.51,
+        "label_a": "OCR WhatsApp report",
+        "source_b": "pos_system",
+        "value_b": 5788.51,
+        "label_b": "POS Batch 141",
+        "variance": 0.0,
+        "unit": "L",
+        "status": "match"
+      },
+      {
+        "check": "Daily fuel volume (L)",
+        "date": "2026-05-19",
+        "source_a": "ocr_whatsapp",
+        "value_a": 3191.23,
+        "label_a": "OCR WhatsApp report",
+        "source_b": "pos_system",
+        "value_b": 3191.23,
+        "label_b": "POS Batch 142",
+        "variance": 0.0,
+        "unit": "L",
+        "status": "match"
+      },
+      {
+        "check": "Daily fuel volume (L)",
+        "date": "2026-05-20",
+        "source_a": "ocr_whatsapp",
+        "value_a": 5000.67,
+        "label_a": "OCR WhatsApp report",
+        "source_b": "pos_system",
+        "value_b": 5000.67,
+        "label_b": "POS Batch 143",
+        "variance": 0.0,
+        "unit": "L",
+        "status": "match"
+      },
+      {
+        "check": "Shop sales (incl VAT)",
+        "date": "2026-05-18",
+        "source_a": "ocr_whatsapp",
+        "value_a": 16639.4,
+        "label_a": "OCR Dry Stock Total",
+        "source_b": "pos_system",
+        "value_b": 16690.4,
+        "label_b": "POS Shop Incl (Batch 141)",
+        "variance": -51.0,
+        "unit": "R",
+        "status": "review"
+      },
+      {
+        "check": "Shop sales (incl VAT)",
+        "date": "2026-05-19",
+        "source_a": "ocr_whatsapp",
+        "value_a": 15793.95,
+        "label_a": "OCR Dry Stock Total",
+        "source_b": "pos_system",
+        "value_b": 15794.85,
+        "label_b": "POS Shop Incl (Batch 142)",
+        "variance": -0.9,
+        "unit": "R",
+        "status": "match"
+      },
+      {
+        "check": "Shop sales (incl VAT)",
+        "date": "2026-05-20",
+        "source_a": "ocr_whatsapp",
+        "value_a": 16754.8,
+        "label_a": "OCR Dry Stock Total",
+        "source_b": "pos_system",
+        "value_b": 16754.8,
+        "label_b": "POS Shop Incl (Batch 143)",
+        "variance": 0.0,
+        "unit": "R",
+        "status": "match"
+      },
+      {
+        "check": "Pump vs tank variance (EOD)",
+        "date": "2026-05-18",
+        "source_a": "ocr_whatsapp",
+        "value_a": 5788.51,
+        "label_a": "OCR pump meters (Batch 141)",
+        "source_b": "ocr_whatsapp",
+        "value_b": 5764.0,
+        "label_b": "OCR ATG dip (Batch 141)",
+        "variance": 24.51,
+        "unit": "L",
+        "status": "ok",
+        "note": "acceptable."
+      },
+      {
+        "check": "Pump vs tank variance (EOD)",
+        "date": "2026-05-21",
+        "source_a": "ocr_whatsapp",
+        "value_a": 5361.06,
+        "label_a": "OCR pump meters (Batch 144)",
+        "source_b": "ocr_whatsapp",
+        "value_b": 5401.0,
+        "label_b": "OCR ATG dip (Batch 144)",
+        "variance": -39.94,
+        "unit": "L",
+        "status": "review",
+        "note": "investigate possible dip error or theft."
+      },
+      {
+        "check": "Wet stock \u2014 UNLEADED 93",
+        "date": "24/05/2026",
+        "source_a": "pos_system",
+        "value_a": 155.11,
+        "label_a": "POS pump volume",
+        "source_b": "pos_system",
+        "value_b": 155.0,
+        "label_b": "POS tank dip",
+        "variance": 0.11,
+        "unit": "L",
+        "status": "ok",
+        "note": "Target \u00b125 L per grade per day"
+      },
+      {
+        "check": "Wet stock \u2014 UNLEADED 95",
+        "date": "24/05/2026",
+        "source_a": "pos_system",
+        "value_a": 1525.51,
+        "label_a": "POS pump volume",
+        "source_b": "pos_system",
+        "value_b": 1484.0,
+        "label_b": "POS tank dip",
+        "variance": 41.51,
+        "unit": "L",
+        "status": "review",
+        "note": "Target \u00b125 L per grade per day"
+      },
+      {
+        "check": "Wet stock \u2014 DSL 50PPM",
+        "date": "24/05/2026",
+        "source_a": "pos_system",
+        "value_a": 606.65,
+        "label_a": "POS pump volume",
+        "source_b": "pos_system",
+        "value_b": 600.0,
+        "label_b": "POS tank dip",
+        "variance": 6.65,
+        "unit": "L",
+        "status": "ok",
+        "note": "Target \u00b125 L per grade per day"
+      },
+      {
+        "check": "CIT pickup vs shop turnover",
+        "date": "2026-05-18",
+        "source_a": "ocr_whatsapp",
+        "value_a": 52900.0,
+        "label_a": "CIT bag removal (camera/OCR)",
+        "source_b": "ocr_whatsapp",
+        "value_b": 16639.4,
+        "label_b": "OCR shop sales (excl fuel rand)",
+        "variance": 36260.6,
+        "unit": "R",
+        "status": "info",
+        "note": "CIT is cash-only; shop figure excludes fuel and cards \u2014 low CIT vs total sales is normal"
+      },
+      {
+        "check": "CIT pickup vs shop turnover",
+        "date": "2026-05-20",
+        "source_a": "ocr_whatsapp",
+        "value_a": 30720.0,
+        "label_a": "CIT bag removal (camera/OCR)",
+        "source_b": "ocr_whatsapp",
+        "value_b": 16754.8,
+        "label_b": "OCR shop sales (excl fuel rand)",
+        "variance": 13965.2,
+        "unit": "R",
+        "status": "info",
+        "note": "CIT is cash-only; shop figure excludes fuel and cards \u2014 low CIT vs total sales is normal"
+      },
+      {
+        "check": "CIT pickup vs shop turnover",
+        "date": "2026-05-21",
+        "source_a": "ocr_whatsapp",
+        "value_a": 37900.0,
+        "label_a": "CIT bag removal (camera/OCR)",
+        "source_b": "ocr_whatsapp",
+        "value_b": 19057.3,
+        "label_b": "OCR shop sales (excl fuel rand)",
+        "variance": 18842.7,
+        "unit": "R",
+        "status": "info",
+        "note": "CIT is cash-only; shop figure excludes fuel and cards \u2014 low CIT vs total sales is normal"
+      },
+      {
+        "check": "Payroll run 06/05/2026",
+        "date": "06/05/2026",
+        "source_a": "payroll_system",
+        "value_a": 56575.22,
+        "label_a": "Payment_060526.csv",
+        "source_b": "bank_feed",
+        "value_b": 20772.12,
+        "label_b": "Bank debits 08/05/2026 (15 lines)",
+        "variance": 35803.1,
+        "unit": "R",
+        "status": "review",
+        "note": ""
+      },
+      {
+        "check": "Payroll run 14/05/2026",
+        "date": "14/05/2026",
+        "source_a": "payroll_system",
+        "value_a": 32095.27,
+        "label_a": "Payment_140526.csv",
+        "source_b": "bank_feed",
+        "value_b": 32095.27,
+        "label_b": "Bank debits 16/05/2026 (16 lines)",
+        "variance": 0.0,
+        "unit": "R",
+        "status": "match",
+        "note": ""
+      },
+      {
+        "check": "Payroll run 21/05/2026",
+        "date": "21/05/2026",
+        "source_a": "payroll_system",
+        "value_a": 31449.03,
+        "label_a": "Payment_210526.csv",
+        "source_b": "bank_feed",
+        "value_b": 31449.03,
+        "label_b": "Bank debits 22/05/2026 (16 lines)",
+        "variance": 0.0,
+        "unit": "R",
+        "status": "match",
+        "note": ""
+      },
+      {
+        "check": "POS EFT batch vs bank Speedpoint",
+        "date": "20/05/2026",
+        "source_a": "pos_system",
+        "value_a": 121361.05,
+        "label_a": "EFT batch 20/05/2026 (374 trx)",
+        "source_b": "bank_feed",
+        "value_b": 121361.05,
+        "label_b": "Speedpoint credit 21/05/2026",
+        "variance": 0.0,
+        "unit": "R",
+        "status": "match",
+        "note": "Settlement typically posts T+1"
+      }
+    ]
   }
 }

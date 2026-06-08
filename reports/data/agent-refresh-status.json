@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "generated_at": "2026-06-08T15:33:47+00:00",
+  "workspace": "C:\\Temp\\Experiment JP",
+  "steps": [
+    {
+      "name": "generate_dashboard",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/management/generate_dashboard.py"
+      ],
+      "started_at": "2026-06-08T15:33:44+00:00",
+      "returncode": 0,
+      "ok": true,
+      "stdout": "Ledger: 146 files -> C:\\Temp\\Experiment JP\\reports\\data\\ingest-ledger.json\nSeries: 28 report types -> C:\\Temp\\Experiment JP\\reports\\data\\series/\nIndex: 129 primary -> C:\\Temp\\Experiment JP\\reports\\data\\file-repo-index.json\nFile views: C:\\Temp\\Experiment JP\\reports\\file-views/ (29 pages)\nHelp guides: C:\\Temp\\Experiment JP\\reports\\help/\nWrote C:\\Temp\\Experiment JP\\reports\\data\\canonical-latest.json\nDashboard: C:\\Temp\\Experiment JP\\reports\\management-dashboard.html\nCanonical: C:\\Temp\\Experiment JP\\reports\\data\\canonical-latest.json\nPayroll: Nett Pay List - 210526.xlsx -> Payment_210526.csv (R 31,449.03)\nPayroll: Nett Pay List - 140526.xls -> Payment_140526.csv (R 32,095.27)\nPayroll: Nett Pay List - 060526.xlsx -> Payment_060526.csv (R 56,575.22)",
+      "stderr": "C:\\Users\\thagra01\\AppData\\Roaming\\Python\\Python314\\site-packages\\openpyxl\\styles\\stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default\n  warn(\"Workbook contains no default style, apply openpyxl's default\")"
+    }
+  ],
+  "payment_csv_validations": [
+    {
+      "file": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_060526.csv",
+      "valid": true,
+      "errors": [],
+      "recipient_count": 24,
+      "total_amount": 56575.22,
+      "hash_total": "062848016885"
+    },
+    {
+      "file": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_140526.csv",
+      "valid": true,
+      "errors": [],
+      "recipient_count": 16,
+      "total_amount": 32095.27,
+      "hash_total": "062848016516"
+    },
+    {
+      "file": "C:\\Temp\\Experiment JP\\reports\\payroll\\Payment_210526.csv",
+      "valid": true,
+      "errors": [],
+      "recipient_count": 16,
+      "total_amount": 31449.03,
+      "hash_total": "062848016516"
+    }
+  ],
+  "outputs": {
+    "dashboard": "reports/management-dashboard.html",
+    "canonical": "reports/data/canonical-latest.json",
+    "ledger": "reports/data/ingest-ledger.json",
+    "file_repo_index": "reports/file-views/index.html",
+    "payroll_dir": "reports/payroll"
+  },
+  "missing_outputs": [],
+  "agent_next_action": "review_dashboard"
+}

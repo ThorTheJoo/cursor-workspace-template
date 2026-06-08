@@ -13,6 +13,44 @@ Chronological record of all significant workspace changes.
 
 ---
 
+## 2026-06-08 — Agent OS handoff, recursive ingest, payroll validation
+
+* **Scope:** Prepared Experiment JP for local agent OS operation (Hermes/Open Claw style), added one-command refresh/status output, hardened recursive input discovery, supported the new `060526` payroll sample, and documented AP/payroll orchestration.
+* **Status:** COMPLETE LOCALLY / REMOTE PUSH BLOCKED
+* **Duration:** ~1.5 hr
+* **Changes Made:**
+
+| File/Area | Change |
+|---|---|
+| `docs/_ai_context/inputs/08062026/` | Committed approved raw payroll/payment-import reference files |
+| `scripts/management/refresh_all.py` | New agent entry point with machine-readable `agent-refresh-status.json` |
+| `scripts/management/parse_external_inputs.py` | Recursive OFX/schedule/cash-up/payroll discovery; inventory classification delegates to `file_classifier.py`; CSV payment totals use `csv.reader` |
+| `scripts/management/parse_ocr_whatsapp.py` | Recursive OCR synthesis text discovery |
+| `scripts/management/build_file_repo.py` | Added path-derived `ingest_channel` ledger metadata |
+| `scripts/payroll/netpay_to_payment_csv.py` | Entity-neutral employee codes, ACB-only CSV rows, non-ACB exclusion metadata, recursive payroll discovery with duplicate-copy suppression |
+| `scripts/payroll/validate_payment_csv.py` | New FNB payment CSV validator |
+| `tests/test_netpay_to_payment_csv.py` | Payroll regression tests for 140526, 210526, and 060526 |
+| `reports/management-dashboard.html` | Refreshed with payroll exclusion counts and AP/payroll workflow status |
+| `docs/_ai_context/prompts/AGENT_OS_HANDOFF.md` | Runtime handoff guide for external agent OS workspaces |
+| `docs/_ai_context/analysis/2026-06-08_AGENT_OS_REFACTOR_PLAN.md` | Execution notes, findings, validation, and deferred work |
+| `docs/_ai_context/state/repo-manifest.json` / `MASTER_STATE.md` / `BACKLOG.md` | Updated capabilities, state, validation anchors, and blockers |
+
+* **Validation Results:**
+  - `python -m unittest tests.test_netpay_to_payment_csv` PASS — 4 tests.
+  - `python scripts/management/refresh_all.py --own-account 62848015857` PASS — `ok: true`.
+  - Payment CSV validation PASS for `Payment_060526.csv`, `Payment_140526.csv`, and `Payment_210526.csv`.
+  - Ledger refresh PASS — 146 files, 129 primary, 28 report types.
+  - Targeted secret-pattern search over `docs/_ai_context/inputs/08062026` PASS — no common key/token patterns found.
+  - Full `bin/scan-secrets.sh` not run because Bash is unavailable in this Windows shell.
+* **Regression Risk:** LOW-MEDIUM — recursive discovery intentionally exposes more files; payroll logic now excludes duplicate parenthesized payroll files and non-ACB cash rows from bank CSVs.
+* **Lessons Learned:**
+  - Agent OS integration should start with a portable CLI/status contract before binding to a specific desktop agent runtime.
+  - Payment generation must fail before bank import, not after; validator output is now the control point.
+  - Invoice/AP matching must remain pending until real samples validate schedule, invoice, and bank-statement joins.
+* **Next Steps:** Create/provide private `Experiment-JP` GitHub repo URL; push local commits. Drop supplier invoice/account schedule samples to implement AP parser.
+
+---
+
 ## 2026-05-25 — Optimization handoff: cash variance parser
 
 * **Scope:** Executed `HANDOFF_OPTIMIZATION_REFACTOR.md`: baseline refresh, top-refactor assessment, high-ROI parser implementation, validation, and MDD logging.

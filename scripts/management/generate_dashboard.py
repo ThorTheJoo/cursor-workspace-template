@@ -134,6 +134,7 @@ def build_html(data: dict, payroll_runs: list[dict], file_repo: dict | None = No
 
     file_repo = file_repo or {}
     repo_types = file_repo.get("report_types", [])
+    repo_type_ids = {t.get("report_type") for t in repo_types}
     repo_rows = "".join(
         f"<tr><td><a href='file-views/{t['report_type']}.html'><code>{t['report_type']}</code></a></td>"
         f"<td>{src_badge(t.get('source_type', ''))}</td>"
@@ -272,9 +273,12 @@ def build_html(data: dict, payroll_runs: list[dict], file_repo: dict | None = No
             f"<tr><td>{e['code']}</td><td>{e['name']}</td><td class='num'>{fmt_zar(e['net_pay'])}</td></tr>"
             for e in latest.get("employees", [])
         )
+        excluded_count = latest.get("excluded_employee_count", 0)
+        excluded_total = latest.get("excluded_total_net_pay", 0)
         all_runs = "".join(
             f"<li><strong>{r['source_file']}</strong> — {normalize_date(r['pay_date'])} — "
-            f"{r['employee_count']} staff — {fmt_zar(r['total_net_pay'])} — "
+            f"{r['employee_count']} ACB staff — {fmt_zar(r['total_net_pay'])} — "
+            f"{r.get('excluded_employee_count', 0)} excluded — "
             f"<code>{Path(r['output']).name}</code></li>"
             for r in payroll_runs
         )
@@ -282,8 +286,9 @@ def build_html(data: dict, payroll_runs: list[dict], file_repo: dict | None = No
   <section class="card">
     {h2(f"Payroll — latest {normalize_date(latest.get('pay_date', ''))}", 'payroll', 'payroll_system')}
     <div class="kpi-row">
-      <div class="kpi"><span class="label">Employees</span><span class="value">{latest['employee_count']}</span></div>
-      <div class="kpi"><span class="label">Total Net Pay</span><span class="value">{fmt_zar(latest['total_net_pay'])}</span></div>
+      <div class="kpi"><span class="label">ACB Employees</span><span class="value">{latest['employee_count']}</span></div>
+      <div class="kpi"><span class="label">ACB Payment Total</span><span class="value">{fmt_zar(latest['total_net_pay'])}</span></div>
+      <div class="kpi"><span class="label">Excluded Non-ACB</span><span class="value {'warn' if excluded_count else ''}">{excluded_count}</span><span class="label">{fmt_zar(excluded_total)}</span></div>
       <div class="kpi"><span class="label">CSV Ready</span><span class="value small">{Path(latest['output']).name}</span></div>
     </div>
     <table><thead><tr><th>Code</th><th>Name</th><th class="num">Net Pay</th></tr></thead>
@@ -342,6 +347,19 @@ def build_html(data: dict, payroll_runs: list[dict], file_repo: dict | None = No
       <div class="kpi"><span class="label">Total Incl VAT</span><span class="value">{fmt_zar(supplier['total_incl'])}</span></div>
     </div>
     <table><thead><tr><th>Department</th><th class="num">Spend</th></tr></thead><tbody>{dept_rows}</tbody></table>
+  </section>"""
+
+    ap_workflow_rows = "".join([
+        f"<tr><td>Supplier account schedule</td><td>{'Loaded' if supplier else 'Pending file'}</td><td><code>supplier_schedule</code></td></tr>",
+        f"<tr><td>Supplier invoice / creditors detail</td><td>{'Classified' if 'creditors_purchases_detail' in repo_type_ids else 'Pending sample'}</td><td><code>creditors_purchases_detail</code></td></tr>",
+        f"<tr><td>Bank payment verification</td><td>{'Loaded' if bank else 'Pending OFX'}</td><td><code>bank_statement</code></td></tr>",
+        f"<tr><td>Payroll payment file</td><td>{'Generated' if payroll_runs else 'Pending Nett Pay List'}</td><td><code>payment_csv</code></td></tr>",
+    ])
+    ap_workflow_section = f"""
+  <section class="card">
+    {h2('Agent AP / Payroll Workflow Status', 'reconciliation_matrix')}
+    <p class="note">Agent OS contract: email, OneDrive, or manual uploads land under <code>docs/_ai_context/inputs/</code>, then <code>scripts/management/refresh_all.py</code> classifies, reconciles where parsers exist, and refreshes the dashboard. Invoice matching remains human-review until real invoice samples validate the parser.</p>
+    <table><thead><tr><th>Workflow input</th><th>Status</th><th>Report contract</th></tr></thead><tbody>{ap_workflow_rows}</tbody></table>
   </section>"""
 
     cash_up_section = ""
@@ -537,6 +555,7 @@ def build_html(data: dict, payroll_runs: list[dict], file_repo: dict | None = No
 
   {bank_section}
   {supplier_section}
+  {ap_workflow_section}
   {cash_up_section}
   {ocr_section}
 

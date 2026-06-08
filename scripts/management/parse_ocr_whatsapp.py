@@ -357,7 +357,7 @@ def find_ocr_files(inputs_root: Path) -> list[Path]:
     patterns = ["deepseek*.txt", "*ocr*.txt", "*whatsapp*.txt"]
     found: list[Path] = []
     for pat in patterns:
-        found.extend(inputs_root.glob(pat))
+        found.extend(inputs_root.rglob(pat))
     return sorted(set(found), key=lambda p: p.stat().st_mtime, reverse=True)
 
 

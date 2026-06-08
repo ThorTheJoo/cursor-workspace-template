@@ -27,6 +27,20 @@ INPUTS_ROOT = ROOT / "docs" / "_ai_context" / "inputs"
 CATALOG_PATH = ROOT / "docs" / "_ai_context" / "knowledge" / "reference" / "file-type-catalog.yaml"
 
 
+def infer_ingest_channel(rel_path: str) -> str:
+    """Infer the agent intake channel from the path under docs/_ai_context/inputs."""
+    parts = [part.lower() for part in rel_path.split("/")]
+    if "email" in parts:
+        return "email"
+    if "onedrive" in parts:
+        return "onedrive"
+    if "manual" in parts:
+        return "manual_upload"
+    if "inbox" in parts:
+        return "agent_inbox"
+    return "local_drop"
+
+
 def file_sha256(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -126,6 +140,7 @@ def scan_all_inputs() -> list[dict[str, Any]]:
             "path": rel,
             "filename": path.name,
             "folder": rel.split("/")[0] if "/" in rel else ".",
+            "ingest_channel": infer_ingest_channel(rel),
             "pattern_name": meta["pattern_name"],
             "report_type": meta["report_type"],
             "source_type": meta["source_type"],

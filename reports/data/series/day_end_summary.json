@@ -16,7 +16,7 @@
         "fuel_volume": 5788.51,
         "cash_variance": 0.0
       },
-      "ingest_id": "20260525-2a17fb67760eda32"
+      "ingest_id": "20260608-2a17fb67760eda32"
     },
     {
       "content_key": "day_end|batch:142|date:19/05/2026",
@@ -33,7 +33,7 @@
         "fuel_volume": 3191.23,
         "cash_variance": 0.0
       },
-      "ingest_id": "20260525-4828f159bf3b703f"
+      "ingest_id": "20260608-4828f159bf3b703f"
     },
     {
       "content_key": "day_end|batch:143|date:20/05/2026",
@@ -50,7 +50,7 @@
         "fuel_volume": 5000.67,
         "cash_variance": 0.0
       },
-      "ingest_id": "20260525-e39ead78c622bdfe"
+      "ingest_id": "20260608-e39ead78c622bdfe"
     },
     {
       "content_key": "day_end|batch:145|date:22/05/2026",
@@ -67,7 +67,7 @@
         "fuel_volume": 5479.85,
         "cash_variance": 19.56
       },
-      "ingest_id": "20260525-b05a8274f9bca9dd"
+      "ingest_id": "20260608-b05a8274f9bca9dd"
     },
     {
       "content_key": "day_end|batch:147|date:24/05/2026",
@@ -84,7 +84,7 @@
         "fuel_volume": 2287.27,
         "cash_variance": 0.0
       },
-      "ingest_id": "20260525-f7333e236acd4d86"
+      "ingest_id": "20260608-f7333e236acd4d86"
     }
   ]
 }

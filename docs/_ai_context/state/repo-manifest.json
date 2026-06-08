@@ -1,8 +1,8 @@
 ﻿{
   "project": "Experiment JP",
   "site": "ENGEN JET PARK SERVICE STATION",
-  "updated": "2026-05-25",
-  "version": "1.4.0",
+  "updated": "2026-06-08",
+  "version": "1.5.0",
   "capabilities": [
     "pos_day_end_parse",
     "pos_month_end_parse",
@@ -15,7 +15,11 @@
     "file_repo_ledger",
     "file_series_history",
     "file_views_drill_down",
-    "help_guides_per_report_type"
+    "help_guides_per_report_type",
+    "agent_os_refresh_orchestration",
+    "recursive_input_discovery",
+    "fnb_payment_csv_validation",
+    "agent_inbox_channel_metadata"
   ],
   "scripts": {
     "management": [
@@ -25,13 +29,15 @@
       "scripts/management/build_file_repo.py",
       "scripts/management/generate_file_views.py",
       "scripts/management/generate_dashboard.py",
+      "scripts/management/refresh_all.py",
       "scripts/management/file_classifier.py",
       "scripts/management/catalog_loader.py",
       "scripts/management/format_utils.py",
       "scripts/management/kpi_tooltips.py"
     ],
     "payroll": [
-      "scripts/payroll/netpay_to_payment_csv.py"
+      "scripts/payroll/netpay_to_payment_csv.py",
+      "scripts/payroll/validate_payment_csv.py"
     ]
   },
   "outputs": {
@@ -40,24 +46,28 @@
     "canonical": "reports/data/canonical-latest.json",
     "ledger": "reports/data/ingest-ledger.json",
     "series_dir": "reports/data/series/",
-    "help_dir": "reports/help/"
+    "help_dir": "reports/help/",
+    "agent_refresh_status": "reports/data/agent-refresh-status.json"
   },
   "knowledge": {
     "catalog": "docs/_ai_context/knowledge/reference/file-type-catalog.yaml",
     "registry": "docs/_ai_context/knowledge/reference/input-source-registry.yaml",
     "dashboard_spec": "docs/_ai_context/knowledge/MANAGEMENT_DASHBOARD_SPECIFICATION.md",
     "architecture": "docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md",
-    "interpretation_guide": "docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md"
+    "interpretation_guide": "docs/_ai_context/guides/DATA_INTERPRETATION_GUIDE.md",
+    "agent_os_handoff": "docs/_ai_context/prompts/AGENT_OS_HANDOFF.md"
   },
   "input_folders": [
     "docs/_ai_context/inputs/Starter Docs",
     "docs/_ai_context/inputs/Refresh",
-    "docs/_ai_context/inputs/Additional"
+    "docs/_ai_context/inputs/Additional",
+    "docs/_ai_context/inputs/08062026",
+    "docs/_ai_context/inputs/inbox/email",
+    "docs/_ai_context/inputs/inbox/onedrive",
+    "docs/_ai_context/inputs/inbox/manual"
   ],
   "refresh_commands": [
-    "python scripts/management/build_file_repo.py",
-    "python scripts/management/generate_file_views.py",
-    "python scripts/management/generate_dashboard.py",
+    "python scripts/management/refresh_all.py --own-account 62848015857",
     "python scripts/payroll/netpay_to_payment_csv.py --all"
   ]
 }

@@ -15,7 +15,7 @@
         "forecourt_amount": 133161.4,
         "retail_amount": 9989.3
       },
-      "ingest_id": "20260525-12d8b8e391952535"
+      "ingest_id": "20260608-12d8b8e391952535"
     },
     {
       "content_key": "eft_batch|date:20/05/2026",
@@ -31,7 +31,7 @@
         "forecourt_amount": 110120.65,
         "retail_amount": 10617.0
       },
-      "ingest_id": "20260525-54035db78e8dbf10"
+      "ingest_id": "20260608-54035db78e8dbf10"
     },
     {
       "content_key": "eft_batch|date:22/05/2026",
@@ -47,7 +47,7 @@
         "forecourt_amount": 119978.45,
         "retail_amount": 14704.0
       },
-      "ingest_id": "20260525-f82b985c372633a4"
+      "ingest_id": "20260608-f82b985c372633a4"
     },
     {
       "content_key": "eft_batch|date:24/05/2026",
@@ -63,7 +63,7 @@
         "forecourt_amount": 49143.95,
         "retail_amount": 2267.55
       },
-      "ingest_id": "20260525-2edc9a6e633c8c6d"
+      "ingest_id": "20260608-2edc9a6e633c8c6d"
     }
   ]
 }

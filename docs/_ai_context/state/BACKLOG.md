@@ -9,9 +9,10 @@ last_groomed: 2026-03-29
 ## Open Items
 
 ### P0 - Blocking
-(none)
+- [ ] Create or provide private GitHub remote `Experiment-JP` and push local commits – `gh` is unavailable and `https://github.com/ThorTheJoo/Experiment-JP.git` returned repository not found. (source: AGENT-OS-HANDOFF-2026-06-08).
 
 ### P1 - Next Sprint
+- [ ] Parser: Supplier invoice/AP reconciliation using real invoice + schedule + bank samples – implement only after sample-backed schema verification. (source: AGENT-OS-HANDOFF-2026-06-08).
 - [ ] Parser: Fuel Sales Control MTD + ATG → wet-stock trend series. (source: same).
 - [ ] Parser: Stock Shrinkage MTD + Purchases → inventory KPI section. (source: same).
 - [ ] Parser: EFT Summary/Detail by shift — optional txn-level audit. (source: same).
@@ -20,6 +21,7 @@ last_groomed: 2026-03-29
 - [ ] Create repo-manifest.json generator script per V1.3 Sniper Mode. (source: MDD V1.3 Section 1.4).
 
 ### P2 - Backlog
+- [ ] Governance: Promote agent OS workflow contract into Rank-1 knowledge docs after human review. (source: AGENT-OS-HANDOFF-2026-06-08).
 - [ ] Knowledge catalog approval: update `cash_variance_by_cashier` parser metadata/key fields after human review. (source: 2026-05-25_OPTIMIZATION_SESSION.md).
 - [ ] Create .cursor/settings.json with recommended Cursor preferences. (source: improvement plan WS-002).
 - [ ] Add V1.3 migration guide for V1.2 workspaces. (source: WORK_LOG v2.0.0 lessons).

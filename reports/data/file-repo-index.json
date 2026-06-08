@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T12:26:17+00:00",
+  "generated_at": "2026-06-08T15:33:45+00:00",
   "inputs_root": "C:\\Temp\\Experiment JP\\docs\\_ai_context\\inputs",
   "catalog_path": "docs/_ai_context/knowledge/reference/file-type-catalog.yaml",
   "architecture_doc": "docs/_ai_context/knowledge/FILE_INGESTION_ARCHITECTURE.md",
@@ -221,12 +221,13 @@
     {
       "report_type": "nett_pay_list",
       "source_type": "payroll_system",
-      "pattern_name": "Nett Pay List - 140526",
+      "pattern_name": "Nett Pay List - 060526",
       "catalog_ref": "file-type-catalog.yaml#nett_pay_list",
-      "file_count": 4,
-      "primary_count": 3,
-      "series_points": 2,
+      "file_count": 5,
+      "primary_count": 4,
+      "series_points": 3,
       "folders": [
+        "08062026",
         "Starter Docs"
       ]
     },
@@ -352,6 +353,6 @@
       ]
     }
   ],
-  "total_files": 145,
-  "total_primary": 128
+  "total_files": 146,
+  "total_primary": 129
 }

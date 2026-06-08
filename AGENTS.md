@@ -188,3 +188,15 @@ MDD_ROOT: `docs/_ai_context/` — changeable via `.cursor/skills/scripts/set-mdd
 * Code follows Intentional Minimalism + Full-Stack conventions.
 * Security baked in: 14 agent security rules (7d), 10 security anti-patterns, 5-layer defense-in-depth for secrets.
 * Bootstrappers hardened: install command allowlist + commit pinning for supply chain security.
+
+## Experiment JP Agent OS Entry Point
+
+For Hermes Desktop, Open Claw, or another local agent OS, read `docs/_ai_context/prompts/AGENT_OS_HANDOFF.md` after the standard MDD context load.
+
+Primary refresh command:
+
+```powershell
+python scripts/management/refresh_all.py --own-account 62848015857
+```
+
+The command writes machine-readable status to `reports/data/agent-refresh-status.json` and refreshes `reports/management-dashboard.html`. Agent inbox drops should land under `docs/_ai_context/inputs/inbox/email/`, `docs/_ai_context/inputs/inbox/onedrive/`, or `docs/_ai_context/inputs/inbox/manual/`.
