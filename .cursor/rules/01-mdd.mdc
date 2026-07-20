@@ -36,17 +36,25 @@ If a skill says "term X means Y" but a knowledge file says "term X means Z," the
 **Every session MUST begin with context loading.** Do not answer questions or write code
 until you have loaded the minimum context for the task.
 
+Prefer `repo-manifest.json` → `sniper_context_loading.priority_files` when present.
+Default 5-file stack (Cutover-proven):
+
 | Priority | File | When to Read |
 |----------|------|-------------|
-| 1 | `docs/_ai_context/state/repo-manifest.json` | Every session — file/function lookup |
-| 2 | `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Every session — project identity |
-| 3 | `docs/_ai_context/state/MASTER_STATE.md` | When implementing or investigating |
-| 4 | Target-specific files (on-demand) | Only what the current task needs |
+| 1 | `docs/_ai_context/state/repo-manifest.json` | Every session — machine index |
+| 2 | `docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md` | Every session — navigation + agent contract |
+| 3 | `docs/_ai_context/prompts/PROMPT_INDEX.md` | Every session — workflow / prompt routing |
+| 4 | `docs/_ai_context/state/MASTER_STATE.md` | Implementing or investigating |
+| 5 | `docs/_ai_context/state/WORK_LOG.md` | Handoff / recent lessons |
+| 6 | Target-specific files (on-demand) | Only what the current task needs |
 
 **Rules:**
 - NEVER read files over 500 lines without targeting a specific section
 - NEVER guess file paths — use the manifest or search tools
 - NEVER reinvent functionality — check existing capabilities first
+- Do NOT assume legacy root keys `files[]`, `state_files[]`, or `capabilities{}` exist — modern manifests use `sniper_context_loading` + `sub_projects` (seed: `docs/_ai_context/templates/REPO_MANIFEST_V2.template.json`)
+- Keep `CONTEXT_MANIFEST` `manifest_lockstep` equal to `repo-manifest.json` `version`
+- After Script Registry edits: `node scripts/verify_script_registry.js`
 
 For the full context loading protocol: read `.cursor/skills/context-loading/SKILL.md`
 

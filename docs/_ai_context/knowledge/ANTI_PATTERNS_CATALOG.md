@@ -40,7 +40,10 @@ Consult this catalog when debugging failures, reviewing plans, or onboarding new
 | 5 | **Silent Fallback** | System degrades to lower-quality path without warning | Uses cached/stale data instead of fresh API call | Source field validation in output | Fail loud, not silent; validate `source` field; never degrade without explicit flag |
 | 6 | **Phantom Dependency** | Code depends on file/function that was renamed or deleted | Import references deleted module | Static analysis / test run | Run tests before and after changes; check imports |
 | 7 | **Cascade Failure** | Change to file A requires changes to B, C, D but only A is updated | Schema change without consumer updates | Dependency tracing | Follow cascade rule; trace all dependents |
-| 8 | **Stale Index** | Navigation index (manifest, phase index) does not reflect actual state | Manifest lists deleted file | Drift check | Run manifest generator after changes |
+| 8 | **Stale Index** | Navigation index (manifest, phase index) does not reflect actual state | Manifest lists deleted file | Drift check | Run manifest generator after changes; check imports |
+| 9 | **Manifest Lockstep Drift** | `CONTEXT_MANIFEST` version / `manifest_lockstep` ≠ `repo-manifest.json` version | Agents load stale contract; sniper stack diverges | Diff version fields at session start | Bump both in the same MDD cascade; fail review if mismatch |
+| 10 | **Invented Handoff Counts** | Agent invents workflow metrics or Gate 0 inputs when files missing | False confidence, wrong decisions | Gate 0 hard stop | Handoff template: stop and list missing paths |
+| 11 | **Legacy Manifest Assumptions** | Agent requires root `files[]` / `capabilities{}` on modern manifests | Failed lookups, reinvented indexes | Schema check | Use `sniper_context_loading` + `sub_projects`; see REPO_MANIFEST_V2.template.json |
 
 ---
 
@@ -54,6 +57,8 @@ Consult this catalog when debugging failures, reviewing plans, or onboarding new
 | 4 | Backlog items added but never reviewed | Silent accumulation of deferred debt | Backlog grooming protocol |
 | 5 | Analysis files accumulating without archival | Context directory becomes unnavigable | Archival policy |
 | 6 | Phase completion without completion doc | No record of what was done or learned | Mandatory completion docs |
+| 7 | External write without chat consent | Irreversible remote mutations | `external-write-guard` + dry-run + env flag |
+| 8 | Seeding new repos from polluted template `state/` | Domain project bleeds into fresh workspaces | Seed from `templates/REPO_MANIFEST_V2.template.json`, not live state |
 
 ---
 

@@ -1,0 +1,52 @@
+{
+  "generated_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "last_updated": "YYYY-MM-DDTHH:MM:SSZ",
+  "repo_root_note": "Agents resolve paths from workspace root. Absolute repo_root is optional traceability only.",
+  "version": "0.1.0",
+  "note": "Bump version + last_updated on every MDD cascade. Keep CONTEXT_MANIFEST manifest_lockstep in sync.",
+  "sniper_context_loading": {
+    "description": "Read these files FIRST in every new session, in order",
+    "priority_files": [
+      {
+        "priority": 1,
+        "path": "docs/_ai_context/state/repo-manifest.json",
+        "purpose": "Machine-readable index (THIS FILE)"
+      },
+      {
+        "priority": 2,
+        "path": "docs/_ai_context/prompts/phases/CONTEXT_MANIFEST.md",
+        "purpose": "Navigation, capability index, agent contract"
+      },
+      {
+        "priority": 3,
+        "path": "docs/_ai_context/prompts/PROMPT_INDEX.md",
+        "purpose": "Which master prompt / workflow to use"
+      },
+      {
+        "priority": 4,
+        "path": "docs/_ai_context/state/MASTER_STATE.md",
+        "purpose": "Global project state, Script Registry, deliverables"
+      },
+      {
+        "priority": 5,
+        "path": "docs/_ai_context/state/WORK_LOG.md",
+        "purpose": "Recent activity, last changes, lessons learned"
+      }
+    ]
+  },
+  "sub_projects": {
+    "_example": {
+      "root": "path/to/subproject/",
+      "purpose": "Short purpose",
+      "status": "ACTIVE",
+      "key_files": {
+        "readme": "path/to/subproject/README.md"
+      }
+    }
+  },
+  "_legacy_keys_do_not_require": {
+    "files": "DEPRECATED — use sub_projects + sniper_context_loading",
+    "capabilities": "DEPRECATED — put commands in CONTEXT_MANIFEST capability tables",
+    "state_files": "DEPRECATED — listed via sniper_context_loading"
+  }
+}

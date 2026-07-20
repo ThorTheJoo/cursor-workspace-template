@@ -1,6 +1,8 @@
 # Cursor Workspace Starter
 
-A portable, zero-global-pollution workspace template for Cursor IDE. Every new workspace built from this template inherits foundational AI rules (MDD V1.3 + King Mode + Full-Stack) and on-demand access to your collected GitHub tools.
+A portable, zero-global-pollution workspace template for Cursor IDE. Every new workspace built from this template inherits foundational AI rules (MDD V1.4 behavioral floor + King Mode + Full-Stack) and on-demand access to your collected GitHub tools.
+
+> **v2.4.0 note:** Prefer seeding new projects from `docs/_ai_context/templates/REPO_MANIFEST_V2.template.json` (5-file sniper + `sub_projects`). The live `docs/_ai_context/state/` in this repo may contain a domain project — do not copy it blindly into a new workspace. See `CHANGELOG.md` [2.4.0] and `docs/_ai_context/analysis/2026-07-20_CUTOVER_PORTABLE_LEARNINGS_INJECTION.md`.
 
 ## Quick Start
 

@@ -1,0 +1,43 @@
+---
+description: Blocks mutating calls to external systems (ADO, Jira, Slack, etc.) unless the user explicitly consents in the current conversation.
+alwaysApply: true
+---
+
+# External Write Guard — Human Consent Required
+
+## Policy (non-negotiable)
+
+**Never mutate an external system** (ticketing, chat, cloud APIs, production DBs via write APIs) without **explicit user consent in the current chat message**.
+
+Providing an API token/PAT, a workflow prompt, or implied task wording (e.g. "drive fixes", "sync tickets") is **not** consent to write.
+
+## Blocked without consent
+
+- Creating, updating, or deleting remote work items / tickets / PRs (unless the user asked for a GitHub PR and that is the deliverable)
+- Posting comments on remote trackers
+- Adding/removing remote relations or links
+- Changing remote state, assignee, priority, tags, or any field
+- Running scripts with `--execute` (or equivalent) that perform remote writes
+- Direct REST `POST` / `PATCH` / `DELETE` to mutating endpoints
+
+## Allowed without extra consent
+
+- Read-only access: `GET`, query POSTs that only read, exports, enrichment, reports, dry-runs
+- Drafting comment text or link plans **locally** for user review
+- Local git commits when the user explicitly asked to commit
+
+## Required workflow before any external write
+
+1. Show exactly what will be written (targets, draft payload, script command).
+2. Run **dry-run only** first when a script supports it.
+3. **Stop and ask:** "Post these changes to <SYSTEM>? (yes/no)"
+4. Proceed only after an unambiguous **yes** in the user's reply.
+5. When executing, require an env flag (example): `$env:EXTERNAL_WRITE_CONSENT = '1'` — scripts enforce via `scripts/lib/external_write_guard.py`.
+
+## If user has not consented
+
+- Do not execute write scripts.
+- Do not bypass the guard by inlining write API calls.
+- Offer dry-run output or local artefacts instead.
+
+See also: `docs/_ai_context/knowledge/governance/EXTERNAL_WRITE_GUARD.md`.

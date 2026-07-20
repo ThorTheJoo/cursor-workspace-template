@@ -24,6 +24,8 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 |   +-- 02-kingmode.mdc           # King Mode (ULTRATHINK, intentional minimalism)
 |   +-- 03-frontend-fullstack.mdc # Next.js/tRPC/Shadcn/Tailwind/Zod conventions
 |   +-- 04-security-policy.mdc    # Zero-trust: prompt injection, supply chain, MCP gating
+|   +-- governance/
+|       +-- external-write-guard.mdc  # Consent before remote mutations
 +-- .cursor/bin/                   # Tool binaries (populated by bootstrapper)
 +-- .cursor/skills/                # Curated agent skills (committed, available on clone)
 |   +-- skill-creator/SKILL.md    # Create and iterate on new skills
@@ -31,6 +33,7 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 |   +-- frontend-design/SKILL.md  # Distinctive, production-grade UI design
 |   +-- webapp-testing/SKILL.md   # Playwright-based web app testing
 |   +-- mcp-builder/SKILL.md      # MCP server development guide
+|   +-- context-loading/SKILL.md  # 5-file sniper protocol
 |   +-- docx/SKILL.md             # Word document creation/editing
 |   +-- pdf/SKILL.md              # PDF processing and manipulation
 |   +-- xlsx/SKILL.md             # Excel/spreadsheet operations
@@ -38,6 +41,9 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 +-- bin/                           # Security scripts
 |   +-- skill-scan.sh             # Static pattern scanner for tools/skills
 |   +-- scan-secrets.sh           # Secret detection (gitleaks/trufflehog/grep)
++-- scripts/
+|   +-- verify_script_registry.js # MASTER_STATE Script Registry path check
+|   +-- lib/external_write_guard.py
 +-- tools/manifest.json            # SSOT: all GitHub tools available for install
 +-- .tools-cache/                  # Cloned tool repos (gitignored)
 +-- setup-tools.ps1                # Windows/PowerShell bootstrapper
@@ -45,6 +51,9 @@ A portable, zero-global-pollution workspace template for Cursor IDE. Every new w
 +-- .devcontainer/devcontainer.json        # Default dev container
 +-- .devcontainer/devcontainer.no-net.json # Air-gapped dev container (--network=none)
 +-- docs/MCP.md                    # MCP server conventions and capability gating
++-- docs/_ai_context/templates/
+|   +-- REPO_MANIFEST_V2.template.json  # Seed for new projects (prefer over live state/)
+|   +-- HANDOFF_PROMPT_TEMPLATE.md
 +-- .env.example                   # Env var template (no secrets)
 +-- sample.envrc                   # direnv template for secret manager integration
 +-- SECURITY.md                    # Security policy + disclosure

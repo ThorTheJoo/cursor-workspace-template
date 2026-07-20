@@ -11,8 +11,19 @@ Single entry point for discovering all reusable prompts, phase plans, and mode-s
 
 | Prompt | File | When to Use |
 |---|---|---|
-| Session Start | `SESSION_START.md` | Copy-paste into a new session to initialize MDD context loading |
+| Agent Initial Preloader | `AGENT_INITIAL_PRELOADER.md` | Dense 5-file sniper preloader (preferred for new chats) |
+| Session Start | `SESSION_START.md` | Shorter copy-paste variants (standard / resume / ask / quick) |
+| Handoff template | `../templates/HANDOFF_PROMPT_TEMPLATE.md` | Author a Gate-0 + triple-index handoff prompt |
 | Optimization handoff | `HANDOFF_OPTIMIZATION_REFACTOR.md` | Give Opus/GPT-5+ full context to refactor/optimize the reporting stack |
+
+## Workflow routing (letter pattern)
+
+Use lettered workflows for repeatable ops. Each workflow should list: when to use, primary prompt, always-read files, and a copy-paste sniper block. Register new handoffs in **PROMPT_INDEX + CONTEXT_MANIFEST + repo-manifest** (triple-index).
+
+| Workflow | When | Primary prompt |
+|---|---|---|
+| A | Session bootstrap / unfamiliar agent | `AGENT_INITIAL_PRELOADER.md` |
+| … | Add project-specific letters here | `*_HANDOFF_PROMPT.md` |
 
 ## Phase Plans
 

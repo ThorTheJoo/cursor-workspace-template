@@ -22,40 +22,54 @@ A manifest is a machine-readable index of your project's files, capabilities, an
 ## Priority Loading Protocol
 
 Load context in this order. Stop as soon as you have what you need.
+If `repo-manifest.json` contains `sniper_context_loading.priority_files`, follow that list exactly.
 
 | Priority | File | What You Get | When to Read |
 |----------|------|-------------|--------------|
-| 1 | `repo-manifest.json` | File paths, function locations, capability index | Every session start |
+| 1 | `repo-manifest.json` | Machine index (`sniper_context_loading`, `sub_projects`) | Every session start |
 | 2 | `CONTEXT_MANIFEST.md` | Project identity, metrics, agent contract, phase status | Every session start |
-| 3 | `MASTER_STATE.md` | Current phase, recent decisions, architecture overview | When implementing or investigating |
-| 4 | Target-specific files | Only the relevant sections of files your task needs | On-demand during task execution |
+| 3 | `PROMPT_INDEX.md` | Workflow / master-prompt routing | Every session start |
+| 4 | `MASTER_STATE.md` | Current phase, Script Registry, architecture overview | When implementing or investigating |
+| 5 | `WORK_LOG.md` | Recent handoff, lessons, regression risks | Non-trivial / resume sessions |
+| 6 | Target-specific files | Only the relevant sections of files your task needs | On-demand during task execution |
 
 ### Priority 1: repo-manifest.json
 
-A JSON file listing every significant file in the project with its purpose, key functions, and type. Use this as your file system index.
+Prefer the **v2** shape (seed: `docs/_ai_context/templates/REPO_MANIFEST_V2.template.json`):
 
 ```json
 {
-  "files": [
-    {"path": "src/auth/login.py", "type": "script", "purpose": "User authentication"},
-    {"path": "src/models/user.py", "type": "model", "purpose": "User data model"}
-  ],
-  "capabilities": {
-    "tests": {"command": "python -m pytest tests/ -v"},
-    "lint": {"command": "ruff check src/"}
+  "version": "0.1.0",
+  "sniper_context_loading": {
+    "priority_files": [
+      {"priority": 1, "path": "docs/_ai_context/state/repo-manifest.json", "purpose": "Machine index"}
+    ]
+  },
+  "sub_projects": {
+    "example": {"root": "packages/example/", "purpose": "…", "status": "ACTIVE", "key_files": {}}
   }
 }
 ```
 
+**Legacy keys** (`files[]`, `capabilities{}`, `state_files[]`) may appear in older workspaces — do not require them; do not invent them on modern manifests. Commands belong in CONTEXT_MANIFEST capability tables / MASTER_STATE Script Registry.
+
 ### Priority 2: CONTEXT_MANIFEST.md
 
-A human-readable manifest with project identity, authority hierarchy, agent contract (what to do before/during/after work), current metrics, and phase status. Read sections 1-4 for investigation, full file for implementation.
+A human-readable manifest with project identity, authority hierarchy, agent contract, current metrics, and phase status. Keep `manifest_lockstep` equal to `repo-manifest.json` `version`.
 
-### Priority 3: MASTER_STATE.md
+### Priority 3: PROMPT_INDEX.md
 
-The global state document. Contains current phase, architecture overview, recent changes, and cross-cutting concerns. For large state files (1000+ lines), read only the section relevant to your task — do not load the full file.
+Single entry point for workflow letters and handoff prompts. Prefer copy-paste sniper blocks when present.
 
-### Priority 4: Target Files
+### Priority 4: MASTER_STATE.md
+
+Global state + Script Registry. For large files, read only the relevant section. After registry edits: `node scripts/verify_script_registry.js`.
+
+### Priority 5: WORK_LOG.md
+
+Recent Duration / Validation / Regression Risk / Lessons — prevents "continue from where we left off" without evidence.
+
+### Priority 6: Target Files
 
 Once you know which file you need (from the manifest), read only the relevant section. If a function is at line 450, read lines 440-480, not the entire 2000-line file.
 

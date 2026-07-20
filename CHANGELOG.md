@@ -2,6 +2,22 @@
 
 All notable changes to the Cursor Workspace Starter template.
 
+## [2.4.0] - 2026-07-20
+
+### Added (portable learnings from Cutover workspace)
+* **5-file sniper stack** in `01-mdd.mdc` + `context-loading` skill: repo-manifest → CONTEXT_MANIFEST → PROMPT_INDEX → MASTER_STATE → WORK_LOG.
+* **`REPO_MANIFEST_V2.template.json`**: `sniper_context_loading` + `sub_projects`; legacy `files[]`/`capabilities{}` deprecated.
+* **External write guard**: `.cursor/rules/governance/external-write-guard.mdc` + `scripts/lib/external_write_guard.py` + governance doc.
+* **`scripts/verify_script_registry.js`**: validates MASTER_STATE Script Registry paths.
+* **`HANDOFF_PROMPT_TEMPLATE.md`**: Gate 0 + triple-index registration.
+* **`AGENT_INITIAL_PRELOADER.md`**: dense session preloader.
+* Anti-patterns: manifest lockstep drift, invented handoff counts, legacy manifest assumptions, external write without consent, polluted template state seeding.
+* Analysis note: `2026-07-20_CUTOVER_PORTABLE_LEARNINGS_INJECTION.md` (this repo's `state/` is currently Engen JP — see recommendation).
+
+### Changed
+* `SESSION_START.md` / `PROMPT_INDEX.md` / `AGENTS.md` updated for 5-file stack and write guard.
+* README version alignment note: MDD behavioral floor is V1.4 (`01-mdd.mdc`); docs may still say V1.3 historically.
+
 ## [2.3.0] - 2026-03-29
 
 ### Added
